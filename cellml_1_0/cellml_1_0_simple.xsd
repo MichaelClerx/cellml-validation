@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+FILE : cellml_1_0_simple.xsd
+
+CREATED : 15 May 2002
+
+LAST MODIFIED : 15 May 2002
+
+AUTHOR : Autumn A. Cuellar (a.cuellar@auckland.ac.nz)
+         The Bioengineering Institute
+         The University of Auckland
+
+DESCRIPTION : This document contains an XML Schema corresponding to the syntax
+  rules defined in the 10 August 2001 Specification for CellML 1.0. This
+  specification is available at
+    http://www.cellml.org/public/specification/20010810/index.html
+  
+  This is the simplest possible version of the XML Schema and it does not refer 
+  to any elements outside the CellML namespace. 
+
+SYSTEM IDENTIFIER : http://www.cellml.org/cellml/cellml_1_0.xsd
+
+COPYRIGHT : (2002) Bioengineering Institute, University of Auckland.
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      CellML 1.0 Schema for cellml.org.
+      Copyright 2002 Bioengineering Institute, University of Auckland.
+    </xsd:documentation>
+  </xsd:annotation>
+  
+  <xsd:element name="model" type="model_type">
+    <xsd:key name="component_name">
+      <xsd:selector xpath="./component" />
+      <xsd:field xpath="@name" />
+    </xsd:key>
+    
+    <xsd:unique name="units_name">
+      <xsd:selector xpath="./units" />
+      <xsd:field xpath="@name" />
+    </xsd:unique>
+  
+    <xsd:keyref name="connect_component_1" refer="component_name">
+      <xsd:selector xpath="./connection/map_components" />
+      <xsd:field xpath="@component_1" />
+    </xsd:keyref> 
+    
+    <xsd:keyref name="connect_component_2" refer="component_name">
+      <xsd:selector xpath="./connection/map_components" />
+      <xsd:field xpath="@component_2" />
+    </xsd:keyref> 
+    
+    <xsd:keyref name="group_components" refer="component_name">
+      <xsd:selector xpath="./group/component_ref" />
+      <xsd:field xpath="@component" />
+    </xsd:keyref>  
+
+  </xsd:element>
+  
+  <xsd:element name="units" type="units_type" />
+  <xsd:element name="component" type="component_type">
+    <xsd:key name="component_units_name">
+      <xsd:selector xpath="./units" />
+      <xsd:field xpath="@name" />
+    </xsd:key>
+
+    <xsd:key name="variable_name">
+      <xsd:selector xpath="./variable" />
+      <xsd:field xpath="@name" />
+    </xsd:key>
+
+    <xsd:keyref name="rxn_variables" refer="variable_name">
+      <xsd:selector xpath="./reaction/variable_ref" />
+      <xsd:field xpath="@variable" />
+    </xsd:keyref>
+    
+    <xsd:keyref name="delta_variables" refer="variable_name">
+      <xsd:selector xpath="./reaction/variable_ref/role" />
+      <xsd:field xpath="@delta_variable" />
+    </xsd:keyref>
+  </xsd:element>
+
+  <xsd:element name="group" type="group_type" />
+  <xsd:element name="connection" type="connection_type" />
+  
+  <xsd:element name="unit" type="unit_type" />
+
+  <xsd:element name="variable" type="variable_type" />
+  <xsd:element name="reaction" type="reaction_type">
+    <xsd:unique name="rxn_variable">
+      <xsd:selector xpath="./variable_ref" />
+      <xsd:field xpath="@variable" />
+    </xsd:unique>
+    
+    <xsd:unique name="delta_variable">
+      <xsd:selector xpath=".//role" />
+      <xsd:field xpath="@delta_variable" />
+    </xsd:unique>
+  </xsd:element>
+
+  <xsd:element name="variable_ref" type="variable_ref_type" />
+
+  <xsd:element name="role" type="role_type" />
+  
+  <xsd:element name="relationship_ref" type="relationship_ref_type" />
+  <xsd:element name="component_ref" type="component_ref_type" />
+  
+  <xsd:element name="map_components" type="map_components_type" />
+  <xsd:element name="map_variables" type="map_variables_type" />
+  
+  <xsd:attribute name="name" type="cellml_identifier" />
+  
+<!--===================================================================================                       Root: Model Type                           =======
+=============================================================================-->
+  <xsd:complexType name="model_type">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="units" />
+      <xsd:element ref="component" />
+      <xsd:element ref="group" />
+      <xsd:element ref="connection" />
+    </xsd:choice>
+    <xsd:attribute ref="name" use="required" />
+  </xsd:complexType>
+  
+<!--===========================  Units Type  ================================-->
+  <xsd:complexType name="units_type">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="unit" />
+    </xsd:choice>
+    <xsd:attribute ref="name" use="required" />
+    <xsd:attribute name="base_units" type="yes_no" use="optional" 
+        default="no" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="unit_type">
+    <xsd:attribute name="multiplier" type="xsd:double" use="optional" 
+      default="1.0" />
+    <xsd:attribute name="prefix" type="unit_prefix" use="optional" 
+      default="0" />
+    <xsd:attribute name="units" type="xsd:string" use="required" />
+    <xsd:attribute name="exponent" type="xsd:double" use="optional" 
+      default="1.0" />
+    <xsd:attribute name="offset" type="xsd:double" use="optional"   
+      default="0.0" />
+  </xsd:complexType>
+  
+<!--==========================  Component Type  =============================-->
+  <xsd:complexType name="component_type">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="units" />
+      <xsd:element ref="variable" />
+      <xsd:element ref="reaction" />
+    </xsd:choice>
+    <xsd:attribute ref="name" use="required" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="variable_type">
+    <xsd:attribute ref="name" use="required" />
+    <xsd:attribute name="public_interface" type="in_out" use="optional" 
+      default="none" />
+    <xsd:attribute name="private_interface" type="in_out" 
+      use="optional" default="none" />
+    <xsd:attribute name="units" type="xsd:string" use="required" />
+    <xsd:attribute name="initial_value" type="xsd:double" 
+      use="optional" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="reaction_type">
+    <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="variable_ref" />
+    </xsd:choice>
+    <xsd:attribute name="reversible" type="yes_no" use="optional" 
+      default="yes" />
+  </xsd:complexType>
+
+  <xsd:complexType name="variable_ref_type">
+    <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="role" />
+    </xsd:choice>
+    <xsd:attribute name="variable" type="xsd:string" use="required" />
+  </xsd:complexType>
+
+  <xsd:complexType name="role_type">
+    <xsd:attribute name="role" type="species_role" 
+      use="required" />
+    <xsd:attribute name="direction" type="rxn_direction" 
+      use="optional" default="forward" />
+    <xsd:attribute name="delta_variable" type="xsd:string" use="optional" />
+    <xsd:attribute name="stoichiometry" type="xsd:double" use="optional" />
+  </xsd:complexType>
+
+<!--===========================  Group Type  ================================-->
+  <xsd:complexType name="group_type">
+    <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="relationship_ref" />
+      <xsd:element ref="component_ref" />
+    </xsd:choice>
+  </xsd:complexType>
+  
+  <xsd:complexType name="relationship_ref_type">
+    <xsd:attribute name="relationship" type="cellml_relationship" 
+      use="required" />
+    <xsd:attribute ref="name" use="optional" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="component_ref_type">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="component_ref" />
+    </xsd:choice>
+    <xsd:attribute name="component" type="xsd:string" use="required" />
+  </xsd:complexType>
+  
+<!--=========================  Connection Type  =============================-->
+  <xsd:complexType name="connection_type">
+    <xsd:choice  maxOccurs="unbounded" >
+      <xsd:element ref="map_components" />
+      <xsd:element ref="map_variables" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="map_components_type">
+    <xsd:attribute name="component_1" type="xsd:string" use="required" />
+    <xsd:attribute name="component_2" type="xsd:string" use="required" />
+  </xsd:complexType>
+  
+  <xsd:complexType name="map_variables_type">
+    <xsd:attribute name="variable_1" type="xsd:string" use="required" />
+    <xsd:attribute name="variable_2" type="xsd:string" use="required" />
+  </xsd:complexType>
+  
+<!--===========================  Simple Type  ===============================-->
+  <xsd:simpleType name="cellml_identifier">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(_)*\w(\w|_)*" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="yes_no">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="yes" />
+      <xsd:enumeration value="no" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="in_out">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="in" />
+      <xsd:enumeration value="out" />
+      <xsd:enumeration value="none" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="cellml_relationship">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="containment" />
+      <xsd:enumeration value="encapsulation" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="unit_prefix">
+    <xsd:union memberTypes="string_prefix xsd:integer" />
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="string_prefix">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="yotta" />
+      <xsd:enumeration value="zetta" />
+      <xsd:enumeration value="exa" />
+      <xsd:enumeration value="peta" />
+      <xsd:enumeration value="tera" />
+      <xsd:enumeration value="giga" />
+      <xsd:enumeration value="mega" />
+      <xsd:enumeration value="kilo" />
+      <xsd:enumeration value="hecta" />
+      <xsd:enumeration value="deka" />
+      <xsd:enumeration value="deci" />
+      <xsd:enumeration value="centi" />
+      <xsd:enumeration value="milli" />
+      <xsd:enumeration value="micro" />
+      <xsd:enumeration value="nano" />
+      <xsd:enumeration value="pico" />
+      <xsd:enumeration value="femto" />
+      <xsd:enumeration value="atto" />
+      <xsd:enumeration value="zepto" />
+      <xsd:enumeration value="yocto" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="standard_units">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ampere" />
+      <xsd:enumeration value="becquerel" />
+      <xsd:enumeration value="candela" />
+      <xsd:enumeration value="celsius" />
+      <xsd:enumeration value="coulomb" />
+      <xsd:enumeration value="dimensionless" />
+      <xsd:enumeration value="farad" />
+      <xsd:enumeration value="gram" />
+      <xsd:enumeration value="gray" />
+      <xsd:enumeration value="henry" />
+      <xsd:enumeration value="hertz" />
+      <xsd:enumeration value="joule" />
+      <xsd:enumeration value="katal" />
+      <xsd:enumeration value="kelvin" />
+      <xsd:enumeration value="kilogram" />
+      <xsd:enumeration value="liter" />
+      <xsd:enumeration value="litre" />
+      <xsd:enumeration value="lumen" />
+      <xsd:enumeration value="lux" />
+      <xsd:enumeration value="meter" />
+      <xsd:enumeration value="metre" />
+      <xsd:enumeration value="mole" />
+      <xsd:enumeration value="newton" />
+      <xsd:enumeration value="ohm" />
+      <xsd:enumeration value="pascal" />
+      <xsd:enumeration value="radian" />
+      <xsd:enumeration value="second" />
+      <xsd:enumeration value="siemens" />
+      <xsd:enumeration value="sievert" />
+      <xsd:enumeration value="steradian" />
+      <xsd:enumeration value="tesla" />
+      <xsd:enumeration value="volt" />
+      <xsd:enumeration value="watt" />
+      <xsd:enumeration value="weber" />
+   </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="species_role">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="reactant" />
+      <xsd:enumeration value="product" />
+      <xsd:enumeration value="activator" />
+      <xsd:enumeration value="catalyst" />
+      <xsd:enumeration value="inhibitor" />
+      <xsd:enumeration value="modifier" />
+      <xsd:enumeration value="rate" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="rxn_direction">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="forward" />
+      <xsd:enumeration value="backward" />
+      <xsd:enumeration value="both" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>
