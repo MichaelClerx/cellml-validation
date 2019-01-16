@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+Rewrite of the CellML 1.0 schema
+
+Notes:
+ - Unlike the spec, this schema allows the presence of a <documentation>
+   element from the "http://cellml.org/tmp-documentation" namespace. This is
+   non-standard but used throughout the physiome model repository
+
+Limitations:
+ - <unit> must name either a local unit or a base unit, there is no way to
+   specify this constraint (a mixture between an enumeration-string-type and a
+   keyref) in XML Schema.
+ - More!
+
+
+-->
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:cellml="http://www.cellml.org/cellml/1.0#"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    targetNamespace="http://www.cellml.org/cellml/1.0#"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+  <xs:import namespace="http://www.w3.org/1998/Math/MathML"
+             schemaLocation="../catalog/mathml2/mathml2.xsd" />
+
+  <!-- Model element -->
+  <xs:element name="model" type="cellml:model_type">
+    <!-- Model keys -->
+    <!-- Unique component names -->
+    <xs:key name="component_name">
+      <xs:selector xpath="./component" />
+      <xs:field xpath="@name" />
+    </xs:key>
+    <!-- Unique model units names -->
+    <xs:unique name="units_name">
+      <xs:selector xpath="./units" />
+      <xs:field xpath="@name" />
+    </xs:unique>
+    <!-- Component connections must name components -->
+    <xs:keyref name="connect_component_1" refer="cellml:component_name">
+      <xs:selector xpath="./connection/map_components" />
+      <xs:field xpath="@component_1" />
+    </xs:keyref>
+    <xs:keyref name="connect_component_2" refer="cellml:component_name">
+      <xs:selector xpath="./connection/map_components" />
+      <xs:field xpath="@component_2" />
+    </xs:keyref>
+    <!-- Groups must name components -->
+    <xs:keyref name="group_components" refer="cellml:component_name">
+      <xs:selector xpath="./group/component_ref" />
+      <xs:field xpath="@component" />
+    </xs:keyref>
+  </xs:element>
+
+  <!-- Model type -->
+  <xs:complexType name="model_type">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+
+      <xs:element name="component" type="cellml:component_type">
+        <!-- Component keys -->
+        <!-- Unique variable names within component -->
+        <xs:key name="variable_name">
+          <xs:selector xpath="./variable" />
+          <xs:field xpath="@name" />
+        </xs:key>
+        <!-- Unique reaction variable names within component -->
+        <xs:keyref name="reaction_variables" refer="cellml:variable_name">
+          <xs:selector xpath="./reaction/variable_ref" />
+          <xs:field xpath="@variable" />
+        </xs:keyref>
+        <xs:keyref name="delta_variables" refer="cellml:variable_name">
+          <xs:selector xpath="./reaction/variable_ref/role" />
+          <xs:field xpath="@delta_variable" />
+        </xs:keyref>
+        <!-- Unique component units names -->
+        <!-- Note: This is not a key, since the unit fields can refer to either
+             a model or component unit, or a predefined base unit. -->
+        <xs:unique name="component_units_name">
+          <xs:selector xpath="./units" />
+          <xs:field xpath="@name" />
+        </xs:unique>
+
+      </xs:element>
+
+      <xs:element name="units" type="cellml:units_type"/>
+      <xs:element name="group" type="cellml:group_type"/>
+      <xs:element name="connection" type="cellml:connection_type"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+      <!-- Allow <documentation> element -->
+      <xs:any namespace="http://cellml.org/tmp-documentation" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="name" type="cellml:identifier" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <!-- Component type -->
+  <xs:complexType name="component_type">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+
+      <!-- Reaction keys -->
+      <xs:element name="reaction" type="cellml:reaction_type">
+        <xs:unique name="reaction_variable">
+          <xs:selector xpath="./variable_ref" />
+          <xs:field xpath="@variable" />
+        </xs:unique>
+
+        <xs:unique name="delta_variable">
+          <xs:selector xpath=".//role" />
+          <xs:field xpath="@delta_variable" />
+        </xs:unique>
+      </xs:element>
+
+      <xs:element ref="mathml:math"/>
+      <xs:element name="units" type="cellml:units_type" />
+      <xs:element name="variable" type="cellml:variable_type" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="name" type="cellml:identifier" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <!-- Variable type -->
+  <xs:complexType name="variable_type">
+    <xs:choice minOccurs="0">
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="name" type="cellml:identifier" use="required" />
+    <xs:attribute name="units" type="xs:string" use="required" />
+    <xs:attribute name="initial_value" type="xs:double" use="optional" />
+    <xs:attribute name="public_interface" type="cellml:interface" use="optional" default="none" />
+    <xs:attribute name="private_interface" type="cellml:interface" use="optional" default="none" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:simpleType name="interface">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="in" />
+      <xs:enumeration value="out" />
+      <xs:enumeration value="none" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Connection and mapping types -->
+  <xs:complexType name="connection_type">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="map_components" type="cellml:map_components_type" minOccurs="1" maxOccurs="1" />
+      <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="map_components_type">
+    <xs:attribute name="component_1" type="cellml:identifier" use="required" />
+    <xs:attribute name="component_2" type="cellml:identifier" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="map_variables_type">
+    <xs:attribute name="variable_1" type="cellml:identifier" use="required" />
+    <xs:attribute name="variable_2" type="cellml:identifier" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <!-- Unit types -->
+  <xs:complexType name="units_type">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="unit" type="cellml:unit_type" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="name" type="cellml:identifier" use="required" />
+    <xs:attribute name="base_units" type="cellml:yes_no" use="optional" default="no" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="unit_type">
+    <xs:attribute name="multiplier" type="xs:double" use="optional" default="1.0" />
+    <xs:attribute name="prefix" type="cellml:unit_prefix" use="optional" default="0" />
+    <xs:attribute name="units" type="xs:string" use="required" />
+    <xs:attribute name="exponent" type="xs:double" use="optional" default="1.0" />
+    <xs:attribute name="offset" type="xs:double" use="optional" default="0.0" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:simpleType name="unit_prefix">
+    <xs:union memberTypes="cellml:unit_prefix_string xs:integer" />
+  </xs:simpleType>
+
+  <xs:simpleType name="unit_prefix_string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yotta" />
+      <xs:enumeration value="zetta" />
+      <xs:enumeration value="exa" />
+      <xs:enumeration value="peta" />
+      <xs:enumeration value="tera" />
+      <xs:enumeration value="giga" />
+      <xs:enumeration value="mega" />
+      <xs:enumeration value="kilo" />
+      <xs:enumeration value="hecta" />
+      <xs:enumeration value="deka" />
+      <xs:enumeration value="deci" />
+      <xs:enumeration value="centi" />
+      <xs:enumeration value="milli" />
+      <xs:enumeration value="micro" />
+      <xs:enumeration value="nano" />
+      <xs:enumeration value="pico" />
+      <xs:enumeration value="femto" />
+      <xs:enumeration value="atto" />
+      <xs:enumeration value="zepto" />
+      <xs:enumeration value="yocto" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Group and relationship types -->
+  <xs:complexType name="group_type">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="relationship_ref" type="cellml:relationship_ref_type" minOccurs="1" />
+      <xs:element name="component_ref" type="cellml:component_ref_type" minOccurs="1" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="relationship_ref_type">
+    <xs:attribute name="relationship" type="cellml:relationship" use="required" />
+    <xs:attribute name="name" type="cellml:identifier" use="optional" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="component_ref_type">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="component_ref" type="cellml:component_ref_type" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="component" type="xs:string" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:simpleType name="relationship">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="containment" />
+      <xs:enumeration value="encapsulation" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Reaction types -->
+  <xs:complexType name="reaction_type">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="variable_ref" type="cellml:variable_ref_type" minOccurs="1" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="reversible" type="cellml:yes_no" use="optional" default="yes" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="variable_ref_type">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="role" type="cellml:role_type" minOccurs="1" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+    </xs:choice>
+    <xs:attribute name="variable" type="xs:string" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="role_type">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="mathml:math"/>
+    </xs:choice>
+    <xs:attribute name="role" type="cellml:species_role" use="required" />
+    <xs:attribute name="direction" type="cellml:reaction_direction" use="optional" default="forward" />
+    <xs:attribute name="delta_variable" type="xs:string" use="optional" />
+    <xs:attribute name="stoichiometry" type="xs:double" use="optional" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+
+  <xs:simpleType name="species_role">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="reactant" />
+      <xs:enumeration value="product" />
+      <xs:enumeration value="activator" />
+      <xs:enumeration value="catalyst" />
+      <xs:enumeration value="inhibitor" />
+      <xs:enumeration value="modifier" />
+      <xs:enumeration value="rate" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="reaction_direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="forward" />
+      <xs:enumeration value="backward" />
+      <xs:enumeration value="both" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Multi-purpose simple types -->
+  <xs:simpleType name="identifier">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(_[0-9_]*)?[a-zA-Z][a-zA-Z0-9_]*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="yes_no">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes" />
+      <xs:enumeration value="no" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
