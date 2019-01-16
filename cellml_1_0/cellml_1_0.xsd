@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!--
-Rewrite of the CellML 1.0 schema
-
-Notes:
- - Unlike the spec, this schema allows the presence of a <documentation>
-   element from the "http://cellml.org/tmp-documentation" namespace. This is
-   non-standard but used throughout the physiome model repository
-
-Limitations:
- - <unit> must name either a local unit or a base unit, there is no way to
-   specify this constraint (a mixture between an enumeration-string-type and a
-   keyref) in XML Schema.
- - More!
-
-
--->
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:cellml="http://www.cellml.org/cellml/1.0#"
@@ -23,6 +7,25 @@ Limitations:
     targetNamespace="http://www.cellml.org/cellml/1.0#"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
+   <xs:annotation>
+    <xs:documentation>
+This schema document provides partial validation of CellML 1.0 documents.
+
+Notes:
+ - Unlike the spec, this schema allows the presence of a &lt;documentation&gt;
+   element from the "http://cellml.org/tmp-documentation" namespace. This is
+   non-standard but used throughout the physiome model repository
+
+Limitations:
+ - &lt;unit&gt; must name either a local unit or a base unit, there is no way
+   to specify this constraint (a mixture between an enumeration-string-type and
+    a keyref) in XML Schema.
+ - More!
+
+    </xs:documentation>
+  </xs:annotation>
+
+  <!-- External schemas for MathML and cmeta:id -->
   <xs:import namespace="http://www.w3.org/1998/Math/MathML"
              schemaLocation="http://www.w3.org/Math/XMLSchema/mathml2/mathml2.xsd" />
   <xs:import namespace="http://www.cellml.org/metadata/1.0#"
