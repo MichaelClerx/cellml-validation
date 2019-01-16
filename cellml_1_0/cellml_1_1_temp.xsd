@@ -2,6 +2,8 @@
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:cellml="http://www.cellml.org/cellml/1.0#"
+    xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
     targetNamespace="http://www.cellml.org/cellml/1.0#"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
@@ -20,6 +22,15 @@ Notes:
 
 Limitations:
 
+ - A CellML units attribute must name either a local unit or a base unit, there
+   is no way to specify this constraint (a mixture between an enumeration
+   string-type and a keyref) in XML Schema.
+
+ - CellML defines a limited subset of allowed MathML, this schema tests against
+   the full MathML2 schema. This means the validation here is for the "valid
+   CellML document" style, not the "valid CellML subset document" style listed
+   in the spec (CellML 1.0, section 1.1).
+
  - CellML 1.0 defines "extension elements" and "extension attributes" as
    elements and attributes that are not in the following namespaces:
     - CellML "http://www.cellml.org/cellml/1.0#" cellml
@@ -32,26 +43,14 @@ Limitations:
    "anyAttribute" elemements; which allow whitelisting namespaces, but not
    blacklisting them.
    Instead, this schema just allows any elements/attributes from namespaces
-   other than the CellML namespace. "Lax processing" is used, meaning elements
-   and attributes from MathML, and cmeta will still be validated (if the
-   schema can be found - there is no schema for rdf/xml), but no restrictions
-   (e.g. only a cmeta:id is allowed) are implemented in this schema.
-
- - CellML defines a limited subset of allowed MathML, this schema imports the
-   full MathML2 schema. This means the validation here is for the "valid CellML
-   document" style, not the "valid CellML subset document" style listed in the
-   spec (CellML 1.0, section 1.1).
-
- - A CellML units attribute must name either a local unit or a base unit, there
-   is no way to specify this constraint (a mixture between an enumeration
-   string-type and a keyref) in XML Schema.
+   other than the CellML namespace.
 
  - More!
 
     </xs:documentation>
   </xs:annotation>
 
-  <!-- External schemas for MathML, RDF, and cmeta:id, used in lax validation -->
+  <!-- External schemas for MathML and cmeta:id -->
   <xs:import namespace="http://www.w3.org/1998/Math/MathML"
              schemaLocation="http://www.w3.org/Math/XMLSchema/mathml2/mathml2.xsd" />
   <xs:import namespace="http://www.cellml.org/metadata/1.0#"
@@ -134,12 +133,14 @@ Limitations:
       <xs:element name="units" type="cellml:units_type"/>
       <xs:element name="group" type="cellml:group_type"/>
       <xs:element name="connection" type="cellml:connection_type"/>
-      <!-- Allow any elements not in CellML (including tmp-documentation and rdf) -->
+      <!-- Allow any rdf elements -->
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+      <!-- Allow any extension elements -->
       <xs:any namespace="##other" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
-    <!-- Allow any attributes not in CellML (including cmeta:id) -->
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <!-- Allow cmeta id -->
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <!-- Component type -->
@@ -159,28 +160,27 @@ Limitations:
         </xs:unique>
       </xs:element>
 
+      <xs:element ref="mathml:math"/>
       <xs:element name="units" type="cellml:units_type" />
       <xs:element name="variable" type="cellml:variable_type" />
-
-      <!-- Allow other namespaces, including MathML. Use lax processing so that
-           MathML might still be validated. -->
-      <xs:any namespace="##other" processContents="lax" />
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <!-- Variable type -->
   <xs:complexType name="variable_type">
     <xs:choice minOccurs="0">
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <xs:attribute name="units" type="xs:string" use="required" />
     <xs:attribute name="initial_value" type="xs:double" use="optional" />
     <xs:attribute name="public_interface" type="cellml:interface" use="optional" default="none" />
     <xs:attribute name="private_interface" type="cellml:interface" use="optional" default="none" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="interface">
@@ -196,50 +196,41 @@ Limitations:
     <xs:choice maxOccurs="unbounded">
       <xs:element name="map_components" type="cellml:map_components_type" minOccurs="1" maxOccurs="1" />
       <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="map_components_type">
-    <xs:choice minOccurs="0">
-      <xs:any namespace="##other" processContents="skip"/>
-    </xs:choice>
     <xs:attribute name="component_1" type="cellml:identifier" use="required" />
     <xs:attribute name="component_2" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="map_variables_type">
-    <xs:choice minOccurs="0">
-      <xs:any namespace="##other" processContents="skip"/>
-    </xs:choice>
     <xs:attribute name="variable_1" type="cellml:identifier" use="required" />
     <xs:attribute name="variable_2" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <!-- Unit types -->
   <xs:complexType name="units_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="unit" type="cellml:unit_type" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <xs:attribute name="base_units" type="cellml:yes_no" use="optional" default="no" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="unit_type">
-    <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:any namespace="##other" processContents="skip"/>
-    </xs:choice>
     <xs:attribute name="multiplier" type="xs:double" use="optional" default="1.0" />
     <xs:attribute name="prefix" type="cellml:unit_prefix" use="optional" default="0" />
     <xs:attribute name="units" type="xs:string" use="required" />
     <xs:attribute name="exponent" type="xs:double" use="optional" default="1.0" />
     <xs:attribute name="offset" type="xs:double" use="optional" default="0.0" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="unit_prefix">
@@ -276,27 +267,24 @@ Limitations:
     <xs:choice maxOccurs="unbounded">
       <xs:element name="relationship_ref" type="cellml:relationship_ref_type" minOccurs="1" />
       <xs:element name="component_ref" type="cellml:component_ref_type" minOccurs="1" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="relationship_ref_type">
-    <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:any namespace="##other" processContents="skip"/>
-    </xs:choice>
     <xs:attribute name="relationship" type="cellml:relationship" use="required" />
     <xs:attribute name="name" type="cellml:identifier" use="optional" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="component_ref_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="component_ref" type="cellml:component_ref_type" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="component" type="xs:string" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="relationship">
@@ -310,31 +298,30 @@ Limitations:
   <xs:complexType name="reaction_type">
     <xs:choice maxOccurs="unbounded">
       <xs:element name="variable_ref" type="cellml:variable_ref_type" minOccurs="1" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="reversible" type="cellml:yes_no" use="optional" default="yes" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="variable_ref_type">
     <xs:choice maxOccurs="unbounded">
       <xs:element name="role" type="cellml:role_type" minOccurs="1" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="variable" type="xs:string" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="role_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <!-- Use lax processing for MathML validation -->
-      <xs:any namespace="##other" processContents="lax"/>
+      <xs:element ref="mathml:math"/>
     </xs:choice>
     <xs:attribute name="role" type="cellml:species_role" use="required" />
     <xs:attribute name="direction" type="cellml:reaction_direction" use="optional" default="forward" />
     <xs:attribute name="delta_variable" type="xs:string" use="optional" />
     <xs:attribute name="stoichiometry" type="xs:double" use="optional" />
-    <xs:anyAttribute namespace="##other" processContents="lax" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="species_role">
