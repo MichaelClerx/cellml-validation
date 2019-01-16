@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<xs:schema targetNamespace="http://www.cellml.org/metadata/1.0#"
+        xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:attribute name="id" type="xs:ID"/>
+</xs:schema>

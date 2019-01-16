@@ -80,6 +80,12 @@ def validation_2_0(filename):
 # Map common schemas to local copies
 CATALOG_DIR = os.path.join(MODULE_DIR, '..', 'catalog')
 catalog = {
+    # CellML 1.0
+    'http://www.cellml.org/tools/cellml_1_0_schema/mathml2.xsd':
+        os.path.join(CATALOG_DIR, 'mathml2', 'mathml2.xsd'),
+    'http://www.cellml.org/tools/cellml_1_0_schema/cmeta_1_0.xsd':
+        os.path.join(CATALOG_DIR, 'cmeta', 'cmeta_1_0.xsd'),
+    # CellML 1.1
     'http://www.cellml.org/tools/cellml_1_1_schema/mathml2.xsd':
         os.path.join(CATALOG_DIR, 'mathml2', 'mathml2.xsd'),
 # <import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.cellml.org/tools/cellml_1_1_schema/common/xlink-href.xsd

@@ -18,12 +18,15 @@ Limitations:
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:cellml="http://www.cellml.org/cellml/1.0#"
+    xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
     xmlns:mathml="http://www.w3.org/1998/Math/MathML"
     targetNamespace="http://www.cellml.org/cellml/1.0#"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
   <xs:import namespace="http://www.w3.org/1998/Math/MathML"
-             schemaLocation="../catalog/mathml2/mathml2.xsd" />
+             schemaLocation="http://www.cellml.org/tools/cellml_1_0_schema/mathml2.xsd" />
+  <xs:import namespace="http://www.cellml.org/metadata/1.0#"
+             schemaLocation="http://www.cellml.org/tools/cellml_1_0_schema/cmeta_1_0.xsd" />
 
   <!-- Model element -->
   <xs:element name="model" type="cellml:model_type">
@@ -87,12 +90,14 @@ Limitations:
       <xs:element name="units" type="cellml:units_type"/>
       <xs:element name="group" type="cellml:group_type"/>
       <xs:element name="connection" type="cellml:connection_type"/>
+      <!-- Allow any rdf elements -->
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
-      <!-- Allow <documentation> element -->
+      <!-- Allow tmp-documentation <documentation> element -->
       <xs:any namespace="http://cellml.org/tmp-documentation" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <!-- Allow cmeta id -->
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <!-- Component type -->
@@ -118,7 +123,7 @@ Limitations:
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <!-- Variable type -->
@@ -131,7 +136,7 @@ Limitations:
     <xs:attribute name="initial_value" type="xs:double" use="optional" />
     <xs:attribute name="public_interface" type="cellml:interface" use="optional" default="none" />
     <xs:attribute name="private_interface" type="cellml:interface" use="optional" default="none" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="interface">
@@ -149,19 +154,19 @@ Limitations:
       <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded" />
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="map_components_type">
     <xs:attribute name="component_1" type="cellml:identifier" use="required" />
     <xs:attribute name="component_2" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="map_variables_type">
     <xs:attribute name="variable_1" type="cellml:identifier" use="required" />
     <xs:attribute name="variable_2" type="cellml:identifier" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <!-- Unit types -->
@@ -172,7 +177,7 @@ Limitations:
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <xs:attribute name="base_units" type="cellml:yes_no" use="optional" default="no" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="unit_type">
@@ -181,7 +186,7 @@ Limitations:
     <xs:attribute name="units" type="xs:string" use="required" />
     <xs:attribute name="exponent" type="xs:double" use="optional" default="1.0" />
     <xs:attribute name="offset" type="xs:double" use="optional" default="0.0" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="unit_prefix">
@@ -220,12 +225,13 @@ Limitations:
       <xs:element name="component_ref" type="cellml:component_ref_type" minOccurs="1" />
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="relationship_ref_type">
     <xs:attribute name="relationship" type="cellml:relationship" use="required" />
     <xs:attribute name="name" type="cellml:identifier" use="optional" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="component_ref_type">
@@ -234,7 +240,7 @@ Limitations:
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="component" type="xs:string" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="relationship">
@@ -251,7 +257,7 @@ Limitations:
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="reversible" type="cellml:yes_no" use="optional" default="yes" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="variable_ref_type">
@@ -260,7 +266,7 @@ Limitations:
       <xs:any namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" processContents="skip"/>
     </xs:choice>
     <xs:attribute name="variable" type="xs:string" use="required" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:complexType name="role_type">
@@ -271,7 +277,7 @@ Limitations:
     <xs:attribute name="direction" type="cellml:reaction_direction" use="optional" default="forward" />
     <xs:attribute name="delta_variable" type="xs:string" use="optional" />
     <xs:attribute name="stoichiometry" type="xs:double" use="optional" />
-    <xs:anyAttribute namespace="##other" processContents="skip" />
+    <xs:attribute ref="cmeta:id" />
   </xs:complexType>
 
   <xs:simpleType name="species_role">
