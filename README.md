@@ -30,3 +30,5 @@ The validation files themselves can be tested using the following steps:
 1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venc/bin/activate`
 2. Install the requirements using pip: `$p ip install -r requirements.txt`
 3. Run the tests using pytest: `$ pytest`
+
+To get more test output, use `$ pytest -s --log-cli-level=INFO`

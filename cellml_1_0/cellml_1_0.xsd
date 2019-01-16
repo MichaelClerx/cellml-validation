@@ -24,9 +24,9 @@ Limitations:
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
   <xs:import namespace="http://www.w3.org/1998/Math/MathML"
-             schemaLocation="http://www.cellml.org/tools/cellml_1_0_schema/mathml2.xsd" />
+             schemaLocation="http://www.w3.org/Math/XMLSchema/mathml2/mathml2.xsd" />
   <xs:import namespace="http://www.cellml.org/metadata/1.0#"
-             schemaLocation="http://www.cellml.org/tools/cellml_1_0_schema/cmeta_1_0.xsd" />
+             schemaLocation="http://cellml.org/specifications/xsd/cmeta-id.xsd" />
 
   <!-- Model element -->
   <xs:element name="model" type="cellml:model_type">
