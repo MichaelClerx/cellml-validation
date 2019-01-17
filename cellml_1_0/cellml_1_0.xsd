@@ -20,33 +20,77 @@ Notes:
 
 Limitations:
 
- - CellML 1.0 defines "extension elements" and "extension attributes" as
-   elements and attributes that are not in the following namespaces:
-    - CellML "http://www.cellml.org/cellml/1.0#" cellml
-    - CellML Metadata "http://www.cellml.org/metadata/1.0#" cmeta
-    - MathML "http://www.w3.org/1998/Math/MathML" mathml
-    - RDF "http://www.w3.org/1999/02/22-rdf-syntax-ns#"rdf
-   Note that following this rule strictly, all the attributes found in cellml
-   elements (which have no namespace) are extension attributes.
-   Secondly, there is no way to define this rule in the Schema "any" or
-   "anyAttribute" elemements; which allow whitelisting namespaces, but not
-   blacklisting them.
-   Instead, this schema just allows any elements/attributes from namespaces
-   other than the CellML namespace. "Lax processing" is used, meaning elements
-   and attributes from MathML, and cmeta will still be validated (if the
-   schema can be found - there is no schema for rdf/xml), but no restrictions
-   (e.g. only a cmeta:id is allowed) are implemented in this schema.
+ - Rules regarding to maths are not validated by this schema.
 
- - CellML defines a limited subset of allowed MathML, this schema imports the
-   full MathML2 schema. This means the validation here is for the "valid CellML
-   document" style, not the "valid CellML subset document" style listed in the
-   spec (CellML 1.0, section 1.1).
+ - The schema does not check if MathML is limited to the "CellML subset". In
+   other words; the validation here is for the "valid CellML document" style,
+   rather than the "valid CellML subset document" style (see CellML 1.0,
+   section 1.1).
 
- - A CellML units attribute must name either a local unit or a base unit, there
-   is no way to specify this constraint (a mixture between an enumeration
-   string-type and a keyref) in XML Schema.
+ - The schema does not check if `units` attributes point to a valid unit. A
+   valid unit is either a local unit (which could be implemented with a key and
+   keyref) or one of a list of standard units (which could be implemented with
+   a string and enumeration), there is no way of simultaneously allowing both
+   in an XML schema.
+
+ - The schema does not detect variables with both public and private interface
+   set to "in" (see CellML 1.0, 3.4.3.6).
+
+ - The schema does not detect variables with both an initial value and a
+   (public or private) interface set to "in" (see CellML 1.0, 3.4.3.8)
+
+
+
 
  - More!
+
+Limitations related to extensions and namespaces:
+
+ - CellML 1.0 states that "attributes without an explicit prefix declaration
+   are assumed to be in the same namespace as their parent element". This
+   changes the rules of XML (which says that attributes without a prefix are
+   never in a namespace), and so cannot be implemented with XML compliant
+   technology e.g. schemas.
+
+ - CellML 1.0 defines "extension elements" and "extension attributes" as
+   elements and attributes that are not in the following namespaces:
+
+   - CellML "http://www.cellml.org/cellml/1.0#" cellml
+   - CellML Metadata "http://www.cellml.org/metadata/1.0#" cmeta
+   - MathML "http://www.w3.org/1998/Math/MathML" mathml
+   -  RDF "http://www.w3.org/1999/02/22-rdf-syntax-ns#"rdf
+
+   Note that following this rule strictly, all the attributes found in
+   cellml elements (which have no namespace, see above) are extension
+   attributes. In this schema, we instead assume that unnamespaced attributes
+   defined in the cellml spec are not extension attributes.
+
+ - Extension elements and attributes are allowed everywhere: "Although not
+   explicitly stated throughout this specification, a document author may add
+   extension elements and extension attributes to any CellML element in a
+   CellML document without affecting the validity of the document." (CellML
+   1.0, 2.4.3). This rule cannot be implemented using Schema `any` and
+   `anyAttribute` elemements, because they allow whitelisting namespaces, but
+   not blacklisting them. The only way to implement this rule then, is to use
+   the `##other` qualifier, which selects all namespaces except the target
+   namespace (CellML) - including RDF, MathML and CellML Metadata.
+
+ - Using `any` with `##other` introduces a new problem for `mathml:math`
+   elements: because these are matched both by a `element ref="mathml:math` and
+   by `any namespace="##other" the schema becomes non-deterministic (according
+   to the rules of Schema 1.0) and no longer validates. As a result, we have to
+   handle the `mathml` elements using the `any` selector. To still get MathML
+   validation therefore, we set the `processing` attribute of `any` to "lax".
+   This means that MathML will be validated if the schema can be found, but no
+   error will be raised if the schema cannot be found.
+
+ - Using `anyAttribute` with `##other` allows all attributes from cmeta, so
+   this schema cannot check that only the `cmeta:id` attribute is used.
+
+ - CellML 1.0 states that "For interoperability, elements in the CellML
+   namespace should not be defined inside extension elements" (CellML 1.0,
+   2.4.3). This schema does not validate the contents of any extension
+   elements, and so this rule cannot be implemented.
 
     </xs:documentation>
   </xs:annotation>
@@ -61,6 +105,14 @@ Limitations:
   <xs:simpleType name="identifier">
     <xs:restriction base="xs:string">
       <xs:pattern value="(_[0-9_]*)?[a-zA-Z][a-zA-Z0-9_]*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Type for real number strings -->
+  <!-- We could use `double` for this, but there is no number type defined in CellML -->
+  <xs:simpleType name="real_number">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)*" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -101,10 +153,10 @@ Limitations:
     </xs:keyref>
   </xs:element>
 
-  <!-- Model type -->
+  <!-- Model type and component keys/keyrefs -->
   <xs:complexType name="model_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-
+      <xs:element name="units" type="cellml:units_type"/>
       <xs:element name="component" type="cellml:component_type">
         <!-- Component keys -->
         <!-- Unique variable names within component -->
@@ -128,10 +180,7 @@ Limitations:
           <xs:selector xpath="./units" />
           <xs:field xpath="@name" />
         </xs:unique>
-
       </xs:element>
-
-      <xs:element name="units" type="cellml:units_type"/>
       <xs:element name="group" type="cellml:group_type"/>
       <xs:element name="connection" type="cellml:connection_type"/>
       <!-- Allow any elements not in CellML (including tmp-documentation and rdf) -->
@@ -145,25 +194,21 @@ Limitations:
   <!-- Component type -->
   <xs:complexType name="component_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-
-      <!-- Reaction keys -->
+      <xs:element name="units" type="cellml:units_type" />
+      <xs:element name="variable" type="cellml:variable_type" />
       <xs:element name="reaction" type="cellml:reaction_type">
+        <!-- Reaction keys -->
         <xs:unique name="reaction_variable">
           <xs:selector xpath="./variable_ref" />
           <xs:field xpath="@variable" />
         </xs:unique>
-
         <xs:unique name="delta_variable">
           <xs:selector xpath=".//role" />
           <xs:field xpath="@delta_variable" />
         </xs:unique>
       </xs:element>
-
-      <xs:element name="units" type="cellml:units_type" />
-      <xs:element name="variable" type="cellml:variable_type" />
-
-      <!-- Allow other namespaces, including MathML. Use lax processing so that
-           MathML might still be validated. -->
+      <!-- Allow elements from other namespaces, including MathML. Use lax
+           processing so that MathML might still be validated. -->
       <xs:any namespace="##other" processContents="lax" />
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
@@ -177,7 +222,7 @@ Limitations:
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <xs:attribute name="units" type="xs:string" use="required" />
-    <xs:attribute name="initial_value" type="xs:double" use="optional" />
+    <xs:attribute name="initial_value" type="cellml:real_number" use="optional" />
     <xs:attribute name="public_interface" type="cellml:interface" use="optional" default="none" />
     <xs:attribute name="private_interface" type="cellml:interface" use="optional" default="none" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
@@ -190,6 +235,9 @@ Limitations:
       <xs:enumeration value="none" />
     </xs:restriction>
   </xs:simpleType>
+
+
+
 
   <!-- Connection and mapping types -->
   <xs:complexType name="connection_type">

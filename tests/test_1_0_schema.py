@@ -18,7 +18,7 @@ from .shared import (
 
 def test_a_model():
     # Create parser that can resolve URLs
-    p = etree.XMLParser()
+    p = etree.XMLParser(no_network=True)
     p.resolvers.add(SchemaResolver())
 
     # Load schema
@@ -36,7 +36,7 @@ def test_a_model():
     #f = cellml('noble_varghese_kohl_noble_1998_c.cellml')
     #f = cellml('test_simple_odes.cellml')
     assert os.path.isfile(f)
-    x = etree.parse(f)
+    x = etree.parse(f, p)
 
     # Check if namespace set
     tag = etree.QName(x.getroot().tag)
