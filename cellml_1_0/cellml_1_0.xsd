@@ -10,22 +10,28 @@
 This schema document provides partial validation of CellML 1.0 documents.
 
 Notes:
- - Unlike the spec, this schema allows the presence of a &lt;documentation&gt;
-   element from the "http://cellml.org/tmp-documentation" namespace. This is
-   non-standard but used throughout the physiome model repository
+
  - Unlike the spec, this schema places an additional restriction on cellml
    identifiers, insisting that they do not start with a numerical character. As
    a result, expressions such as 1e12 are valid according to the spec, but do
    not pass validation with this schema.
 
+    TODO: Just to what the spec says
+
 Limitations:
 
- - Rules regarding to maths are not validated by this schema.
+ - Rules regarding to maths are not validated by this schema. For example, the
+   schema does not detect if MathML `ci` elements name existing variables
+   (CellML 1.0, 4.4.2), if `cn` elements have valid `cellml:units` attributes
+   (CellML 1.0, 4.4.3), or if the maths in a component defines values for
+   variables not owned by the component (CellML 1.0, 4.4.4).
 
- - The schema does not check if MathML is limited to the "CellML subset". In
-   other words; the validation here is for the "valid CellML document" style,
-   rather than the "valid CellML subset document" style (see CellML 1.0,
-   section 1.1).
+ - The schema does not check if MathML is limited to the "CellML subset" (for
+   "valid CellML subset documents") or even if MathML is limited to content
+   MathML (for "valid CellML documents"; see CellML 1.0, section 4.2.3).
+
+    TODO: This could be implemented by creating a schema containing only
+          content MathML definitions.
 
  - The schema does not check if `units` attributes point to a valid unit. A
    valid unit is either a local unit (which could be implemented with a key and
@@ -37,7 +43,21 @@ Limitations:
    set to "in" (see CellML 1.0, 3.4.3.6).
 
  - The schema does not detect variables with both an initial value and a
-   (public or private) interface set to "in" (see CellML 1.0, 3.4.3.8)
+   (public or private) interface set to "in" (see CellML 1.0, 3.4.3.8).
+
+ - The schema does not detect when a `map_components` lists the same component
+   as `component_1` and `component_2` (see CellML 1.0, 3.4.5.4). This can be
+   done with elements in XML Schema, but not with attributes.
+
+ - The schema can not detect duplicate connections when connection_1 in one
+   connection equals connection_2 in the other.
+
+ - The schema does not detect when a `map_variables` violates the rules for
+   public and private interfaces (see CellML 1.0, 3.4.6.4).
+
+ - The schema does not detect when a `map_variables` is defined for variables
+   with incompatible units.
+
 
 
 
@@ -112,7 +132,7 @@ Limitations related to extensions and namespaces:
   <!-- We could use `double` for this, but there is no number type defined in CellML -->
   <xs:simpleType name="real_number">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)*" />
+      <xs:pattern value="[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -129,26 +149,26 @@ Limitations related to extensions and namespaces:
     <!-- Model keys -->
     <!-- Unique component names -->
     <xs:key name="component_name">
-      <xs:selector xpath="./component" />
+      <xs:selector xpath="component" />
       <xs:field xpath="@name" />
     </xs:key>
     <!-- Unique model units names -->
     <xs:unique name="units_name">
-      <xs:selector xpath="./units" />
+      <xs:selector xpath="units" />
       <xs:field xpath="@name" />
     </xs:unique>
     <!-- Component connections must name components -->
     <xs:keyref name="connect_component_1" refer="cellml:component_name">
-      <xs:selector xpath="./connection/map_components" />
+      <xs:selector xpath="connection/map_components" />
       <xs:field xpath="@component_1" />
     </xs:keyref>
     <xs:keyref name="connect_component_2" refer="cellml:component_name">
-      <xs:selector xpath="./connection/map_components" />
+      <xs:selector xpath="connection/map_components" />
       <xs:field xpath="@component_2" />
     </xs:keyref>
     <!-- Groups must name components -->
     <xs:keyref name="group_components" refer="cellml:component_name">
-      <xs:selector xpath="./group/component_ref" />
+      <xs:selector xpath="group/component_ref" />
       <xs:field xpath="@component" />
     </xs:keyref>
   </xs:element>
@@ -156,35 +176,42 @@ Limitations related to extensions and namespaces:
   <!-- Model type and component keys/keyrefs -->
   <xs:complexType name="model_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:element name="units" type="cellml:units_type"/>
+      <xs:element name="units" type="cellml:units_type" />
       <xs:element name="component" type="cellml:component_type">
         <!-- Component keys -->
         <!-- Unique variable names within component -->
         <xs:key name="variable_name">
-          <xs:selector xpath="./variable" />
+          <xs:selector xpath="variable" />
           <xs:field xpath="@name" />
         </xs:key>
         <!-- Unique reaction variable names within component -->
         <xs:keyref name="reaction_variables" refer="cellml:variable_name">
-          <xs:selector xpath="./reaction/variable_ref" />
+          <xs:selector xpath="reaction/variable_ref" />
           <xs:field xpath="@variable" />
         </xs:keyref>
         <xs:keyref name="delta_variables" refer="cellml:variable_name">
-          <xs:selector xpath="./reaction/variable_ref/role" />
+          <xs:selector xpath="reaction/variable_ref/role" />
           <xs:field xpath="@delta_variable" />
         </xs:keyref>
         <!-- Unique component units names -->
         <!-- Note: This is not a key, since the unit fields can refer to either
              a model or component unit, or a predefined base unit. -->
         <xs:unique name="component_units_name">
-          <xs:selector xpath="./units" />
+          <xs:selector xpath="units" />
           <xs:field xpath="@name" />
         </xs:unique>
       </xs:element>
-      <xs:element name="group" type="cellml:group_type"/>
-      <xs:element name="connection" type="cellml:connection_type"/>
+      <xs:element name="group" type="cellml:group_type" />
+      <xs:element name="connection" type="cellml:connection_type">
+        <!-- Component connections must be unique (partial check) -->
+        <xs:unique name="unique_connections">
+          <xs:selector xpath="connection/map_components" />
+          <xs:field xpath="component_1" />
+          <xs:field xpath="component_2" />
+        </xs:unique>
+      </xs:element>
       <!-- Allow any elements not in CellML (including tmp-documentation and rdf) -->
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <!-- Allow any attributes not in CellML (including cmeta:id) -->
@@ -199,11 +226,11 @@ Limitations related to extensions and namespaces:
       <xs:element name="reaction" type="cellml:reaction_type">
         <!-- Reaction keys -->
         <xs:unique name="reaction_variable">
-          <xs:selector xpath="./variable_ref" />
+          <xs:selector xpath="variable_ref" />
           <xs:field xpath="@variable" />
         </xs:unique>
         <xs:unique name="delta_variable">
-          <xs:selector xpath=".//role" />
+          <xs:selector xpath="role" />
           <xs:field xpath="@delta_variable" />
         </xs:unique>
       </xs:element>
@@ -218,7 +245,7 @@ Limitations related to extensions and namespaces:
   <!-- Variable type -->
   <xs:complexType name="variable_type">
     <xs:choice minOccurs="0">
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <xs:attribute name="units" type="xs:string" use="required" />
@@ -236,22 +263,27 @@ Limitations related to extensions and namespaces:
     </xs:restriction>
   </xs:simpleType>
 
-
-
-
   <!-- Connection and mapping types -->
   <xs:complexType name="connection_type">
     <xs:choice maxOccurs="unbounded">
-      <xs:element name="map_components" type="cellml:map_components_type" minOccurs="1" maxOccurs="1" />
-      <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:element name="map_components" type="cellml:map_components_type" minOccurs="1" maxOccurs="1">
+        <!--
+        <xs:unique name="component_1_is_not_component_2">
+          <xs:selector xpath="." />
+          <xs:field xpath="@component_1|@component_2" />
+        </xs:unique>
+        -->
+      </xs:element>
+      <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded">
+      </xs:element>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>
 
   <xs:complexType name="map_components_type">
     <xs:choice minOccurs="0">
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="component_1" type="cellml:identifier" use="required" />
     <xs:attribute name="component_2" type="cellml:identifier" use="required" />
@@ -260,7 +292,7 @@ Limitations related to extensions and namespaces:
 
   <xs:complexType name="map_variables_type">
     <xs:choice minOccurs="0">
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="variable_1" type="cellml:identifier" use="required" />
     <xs:attribute name="variable_2" type="cellml:identifier" use="required" />
@@ -271,7 +303,7 @@ Limitations related to extensions and namespaces:
   <xs:complexType name="units_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="unit" type="cellml:unit_type" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
     <xs:attribute name="base_units" type="cellml:yes_no" use="optional" default="no" />
@@ -280,7 +312,7 @@ Limitations related to extensions and namespaces:
 
   <xs:complexType name="unit_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="multiplier" type="xs:double" use="optional" default="1.0" />
     <xs:attribute name="prefix" type="cellml:unit_prefix" use="optional" default="0" />
@@ -324,14 +356,14 @@ Limitations related to extensions and namespaces:
     <xs:choice maxOccurs="unbounded">
       <xs:element name="relationship_ref" type="cellml:relationship_ref_type" minOccurs="1" />
       <xs:element name="component_ref" type="cellml:component_ref_type" minOccurs="1" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>
 
   <xs:complexType name="relationship_ref_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="relationship" type="cellml:relationship" use="required" />
     <xs:attribute name="name" type="cellml:identifier" use="optional" />
@@ -341,7 +373,7 @@ Limitations related to extensions and namespaces:
   <xs:complexType name="component_ref_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="component_ref" type="cellml:component_ref_type" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="component" type="xs:string" use="required" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
@@ -358,7 +390,7 @@ Limitations related to extensions and namespaces:
   <xs:complexType name="reaction_type">
     <xs:choice maxOccurs="unbounded">
       <xs:element name="variable_ref" type="cellml:variable_ref_type" minOccurs="1" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="reversible" type="cellml:yes_no" use="optional" default="yes" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
@@ -367,7 +399,7 @@ Limitations related to extensions and namespaces:
   <xs:complexType name="variable_ref_type">
     <xs:choice maxOccurs="unbounded">
       <xs:element name="role" type="cellml:role_type" minOccurs="1" />
-      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="variable" type="xs:string" use="required" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
@@ -376,7 +408,7 @@ Limitations related to extensions and namespaces:
   <xs:complexType name="role_type">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <!-- Use lax processing for MathML validation -->
-      <xs:any namespace="##other" processContents="lax"/>
+      <xs:any namespace="##other" processContents="lax" />
     </xs:choice>
     <xs:attribute name="role" type="cellml:species_role" use="required" />
     <xs:attribute name="direction" type="cellml:reaction_direction" use="optional" default="forward" />
