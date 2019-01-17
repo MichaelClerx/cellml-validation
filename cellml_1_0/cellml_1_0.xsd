@@ -18,26 +18,7 @@ Notes:
 
     TODO: Just to what the spec says
 
-Limitations:
-
- - Rules regarding to maths are not validated by this schema. For example, the
-   schema does not detect if MathML `ci` elements name existing variables
-   (CellML 1.0, 4.4.2), if `cn` elements have valid `cellml:units` attributes
-   (CellML 1.0, 4.4.3), or if the maths in a component defines values for
-   variables not owned by the component (CellML 1.0, 4.4.4).
-
- - The schema does not check if MathML is limited to the "CellML subset" (for
-   "valid CellML subset documents") or even if MathML is limited to content
-   MathML (for "valid CellML documents"; see CellML 1.0, section 4.2.3).
-
-    TODO: This could be implemented by creating a schema containing only
-          content MathML definitions.
-
- - The schema does not check if `units` attributes point to a valid unit. A
-   valid unit is either a local unit (which could be implemented with a key and
-   keyref) or one of a list of standard units (which could be implemented with
-   a string and enumeration), there is no way of simultaneously allowing both
-   in an XML schema.
+Limitations related to model structure:
 
  - The schema does not detect variables with both public and private interface
    set to "in" (see CellML 1.0, 3.4.3.6).
@@ -58,6 +39,43 @@ Limitations:
  - The schema does not detect when a `map_variables` is defined for variables
    with incompatible units.
 
+Limitations related to maths:
+
+ - Rules regarding to maths are not validated by this schema. For example, the
+   schema does not detect if MathML `ci` elements name existing variables
+   (CellML 1.0, 4.4.2), if `cn` elements have valid `cellml:units` attributes
+   (CellML 1.0, 4.4.3), or if the maths in a component defines values for
+   variables not owned by the component (CellML 1.0, 4.4.4).
+
+ - The schema does not check if MathML is limited to the "CellML subset" (for
+   "valid CellML subset documents") or even if MathML is limited to content
+   MathML (for "valid CellML documents"; see CellML 1.0, section 4.2.3).
+
+    TODO: This could be implemented by creating a schema containing only
+          content MathML definitions.
+
+Limitations related to units:
+
+ - The schema does not check if `units` attributes point to a valid unit. A
+   valid unit is either a local unit (which could be implemented with a key and
+   keyref) or one of a list of standard units (which could be implemented with
+   a string and enumeration), there is no way of simultaneously allowing both
+   in an XML schema.
+
+ - The schema does not detect when a `units` with `base_units="yes"` includes
+   a `unit` element (disallowed by CellML 1.0, 5.4.1.1).
+
+ - The schema does not detect when a `units` name overlaps with a predefined
+   unit from CellML 1.0 table 2.
+
+ - The schema does not detect when a `units` element contains multiple `unit`
+   elements, one of which defines a non-zero offset (CellML 1.0, 5.4.2.7).
+
+ - The schema does not detect when a `unit` element with a non-zero offset has
+   an exponent other than "1.0" (CellML 1.0, 5.4.2.7).
+
+
+GOT UP TO BUT NOT INCLUDING 5.5
 
 
 
@@ -314,11 +332,11 @@ Limitations related to extensions and namespaces:
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
-    <xs:attribute name="multiplier" type="xs:double" use="optional" default="1.0" />
-    <xs:attribute name="prefix" type="cellml:unit_prefix" use="optional" default="0" />
     <xs:attribute name="units" type="xs:string" use="required" />
-    <xs:attribute name="exponent" type="xs:double" use="optional" default="1.0" />
-    <xs:attribute name="offset" type="xs:double" use="optional" default="0.0" />
+    <xs:attribute name="prefix" type="cellml:unit_prefix" use="optional" default="0" />
+    <xs:attribute name="exponent" type="cellml:real_number" use="optional" default="1.0" />
+    <xs:attribute name="multiplier" type="cellml:real_number" use="optional" default="1.0" />
+    <xs:attribute name="offset" type="cellml:real_number" use="optional" default="0.0" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>
 
