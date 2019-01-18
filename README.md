@@ -14,15 +14,15 @@ Disclaimers:
 ## CellML 1.1
 
 * Older files:
-  * [CellML 1.1 Schema](cellml_1_1/cellml_1_1.xsd) by Andrew Miller, Auckland Bioengineering Institute
+  * [CellML 1.1 Schema](cellml_1_1/todo/cellml_1_1.xsd) by Andrew Miller, Auckland Bioengineering Institute
 
 ## CellML 1.0
 
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
 * Older files:
-  * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
-  * [CellML 1.0 DTD](cellml_1_0/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
-  * [RELAX NG schema](cellml_1_0/cellml1.0.rnc) for CellML 1.0 written by Jonathan Cooper
+  * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
+  * [CellML 1.0 DTD](cellml_1_0/todo/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
+  * [RELAX NG schema](cellml_1_0/todo/cellml1.0.rnc) for CellML 1.0 written by Jonathan Cooper
 
 ## Tests
 
