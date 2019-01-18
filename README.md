@@ -32,4 +32,4 @@ The validation files themselves can be tested using the following steps:
 2. Install the requirements using pip: `$p ip install -r requirements.txt`
 3. Run the tests using pytest: `$ pytest`
 
-To get more test output, use `$ pytest -s --log-cli-level=INFO`
+To get more test output, use `pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.

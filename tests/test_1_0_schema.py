@@ -81,27 +81,33 @@ def valid_models():
     return models
 
 
+def valid_models():
+    """ Returns a list of filenames for models that should validate. """
+    # Note: Returning filename rather than path, so that the test output is
+    # e.g. test_valid_models[empty-model.cellml] instead of something
+    # containing the absolute path.
+    return [
+        x for x in os.listdir(model('valid'))
+        if os.path.splitext(x)[1] == '.cellml']
+
+
 def invalid_models():
     """ Returns a list of filenames for models that should not validate. """
-    models = []
-    root = model('invalid')
-    for fname in os.listdir(root):
-        fname = os.path.join(root, fname)
-        if os.path.isfile(fname):
-            if os.path.splitext(fname)[1] == '.cellml':
-                models.append(fname)
-    models.sort()
-    return models
+    return [
+        x for x in os.listdir(model('invalid'))
+        if os.path.splitext(x)[1] == '.cellml']
 
 
 @pytest.mark.parametrize('filename', valid_models())
 def test_valid_models(filename, schema, schema_parser):
     """ Tests if all valid models validate. """
+    filename = model('valid', filename)
     assert_valid_with_schema(filename, schema, schema_parser)
 
 
 @pytest.mark.parametrize('filename', invalid_models())
 def test_invalid_models(filename, schema, schema_parser):
     """ Checks that no invalid models validate. """
+    filename = model('invalid', filename)
     assert_invalid_with_schema(filename, schema, schema_parser)
 
