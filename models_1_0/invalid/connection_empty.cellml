@@ -2,7 +2,5 @@
 <!-- CellML 1.0, 3.4.4.1: Connections can not be empty -->
 <model name="connection_empty"
        xmlns="http://www.cellml.org/cellml/1.0#">
-
   <connection />
-
 </model>

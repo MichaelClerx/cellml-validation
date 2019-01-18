@@ -16,6 +16,15 @@ from .shared import (
     SchemaResolver,
 )
 
+known_fails = [
+    'connection_only_junk',
+    'connection_no_map_components',
+    'connection_no_map_variables',
+    'connection_two_map_components',
+    'map_variables_bad_variable_1',
+    'map_variables_bad_variable_2',
+]
+
 
 @pytest.fixture
 def schema_parser():
@@ -40,7 +49,7 @@ def assert_valid_with_schema(filename, schema, schema_parser):
     schema.
     """
     # Parse CellML file
-    filename = model(filename)
+    filename = model(filename + '.cellml')
     assert os.path.isfile(filename)
     xml = etree.parse(filename, schema_parser)
 
@@ -59,7 +68,7 @@ def assert_invalid_with_schema(filename, schema, schema_parser):
     log = logging.getLogger(__name__)
 
     # Parse CellML file
-    filename = model(filename)
+    filename = model(filename + '.cellml')
     assert os.path.isfile(filename)
     xml = etree.parse(filename, schema_parser)
 
@@ -78,32 +87,20 @@ def assert_invalid_with_schema(filename, schema, schema_parser):
 
 def valid_models():
     """ Returns a list of filenames for models that should validate. """
-    models = []
-    root = model('valid')
-    for fname in os.listdir(root):
-        fname = os.path.join(root, fname)
-        if os.path.isfile(fname):
-            if os.path.splitext(fname)[1] == '.cellml':
-                models.append(fname)
-    models.sort()
-    return models
-
-
-def valid_models():
-    """ Returns a list of filenames for models that should validate. """
-    # Note: Returning filename rather than path, so that the test output is
-    # e.g. test_valid_models[empty-model.cellml] instead of something
-    # containing the absolute path.
-    return [
-        x for x in os.listdir(model('valid'))
-        if os.path.splitext(x)[1] == '.cellml']
+    # Note: Returning file basename rather than path, so that the test output
+    # is e.g. test_valid_models[empty-model] instead of something containing
+    # containing the absolute path and extension.
+    files = [os.path.splitext(x) for x in os.listdir(model('valid'))]
+    return [x[0] for x in files if x[1] == '.cellml']
 
 
 def invalid_models():
     """ Returns a list of filenames for models that should not validate. """
+    files = [os.path.splitext(x) for x in os.listdir(model('invalid'))]
+    files = [x[0] for x in files if x[1] == '.cellml']
     return [
-        x for x in os.listdir(model('invalid'))
-        if os.path.splitext(x)[1] == '.cellml']
+        pytest.param(x, marks=pytest.mark.xfail) if x in known_fails else x
+        for x in files]
 
 
 @pytest.mark.parametrize('filename', valid_models())

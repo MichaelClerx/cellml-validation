@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.4.1: Connections must have map_components and map_variables -->
+<model name="connection_empty"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:junk="http://example.org">
+  <connection>
+    <junk:one />
+    <junk:two />
+  </connection>
+</model>

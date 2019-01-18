@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Contrary to CellML 1.0, 3.2.1, we insist that the root node is a <model> -->
-<componnt name="component_as_root_node"
+<component name="component_as_root_node"
           xmlns="http://www.cellml.org/cellml/1.0#" />

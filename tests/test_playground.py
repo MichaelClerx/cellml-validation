@@ -10,7 +10,6 @@ import os
 from lxml import etree
 
 from .shared import (
-    CELLML_1_0_NS,
     cellml_1_0 as cellml,
     model_1_0 as model,
     SchemaResolver,

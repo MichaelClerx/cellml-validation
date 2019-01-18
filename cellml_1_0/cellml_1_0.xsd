@@ -8,6 +8,8 @@
    <xs:annotation>
     <xs:documentation>
 
+TO-DO: THIS LIST MUST BE UPDATED WITH THE NEW FAILS, SEE SCHEMA 1_0 TEST
+
 This schema document provides partial validation of CellML 1.0 documents. An
 extensive (and hopefully exhaustive) list of limitations is provided below.
 

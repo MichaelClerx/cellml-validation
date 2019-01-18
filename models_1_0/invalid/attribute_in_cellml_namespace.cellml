@@ -2,5 +2,4 @@
 <!-- Contrary to the spec, attributes don't live in the CellML namespace -->
 <model cellml:name="model_wrong_namespace"
        xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:cellml="http://www.cellml.org/cellml/1.0#"
-       />
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#"/>
