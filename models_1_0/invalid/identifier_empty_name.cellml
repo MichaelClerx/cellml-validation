@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.1.1: A model _may_ have children -->
-<model name="empty_model"
+<!-- CellML 1.0, 2.4.1: Identifier cannot be empty -->
+<model name=""
        xmlns="http://www.cellml.org/cellml/1.0#"/>

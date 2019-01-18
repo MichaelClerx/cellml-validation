@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 2.4.1: Identifier is not allowed use simple characters from "extended ascii" codepages -->
+<model name="identifier_unexpected_character_2"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="HelloJosé" />
+</model>

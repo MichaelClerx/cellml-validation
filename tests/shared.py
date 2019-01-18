@@ -108,7 +108,7 @@ class SchemaResolver(etree.Resolver):
         log = logging.getLogger(__name__)
         filename = catalog.get(url, None)
         if filename is not None:
-            log.info('Resolving ' + url + ' to local file ' + filename)
+            log.debug('Resolving ' + url + ' to local file ' + filename)
             if not os.path.exists(filename) and os.path.isfile(filename):
                 raise Exception('Catalog path does not exist: ' + filename)
             return self.resolve_filename(filename, context)

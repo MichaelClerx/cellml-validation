@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.6.2: Map_variables variable_1 must map to a variable -->
+<model name="map_variables_bad_variable_1"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+
+  <component name="c1" />
+  <component name="c2">
+    <variable name="b" />
+  </component>
+
+  <connection>
+    <map_components component_1="c1" component_2="c2" />
+    <map_variables variable_1="a" variable_2="b" />
+  </connection>
+
+</model>

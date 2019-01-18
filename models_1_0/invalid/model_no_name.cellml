@@ -1,2 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.1: A model must have a name -->
 <model xmlns="http://www.cellml.org/cellml/1.0#" />

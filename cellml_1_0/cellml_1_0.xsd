@@ -318,16 +318,8 @@ Limitations related to extensions and namespaces:
   <!-- Connection and mapping types -->
   <xs:complexType name="connection_type">
     <xs:choice maxOccurs="unbounded">
-      <xs:element name="map_components" type="cellml:map_components_type" minOccurs="1" maxOccurs="1">
-        <!--
-        <xs:unique name="component_1_is_not_component_2">
-          <xs:selector xpath="." />
-          <xs:field xpath="@component_1|@component_2" />
-        </xs:unique>
-        -->
-      </xs:element>
-      <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded">
-      </xs:element>
+      <xs:element name="map_components" type="cellml:map_components_type" minOccurs="1" maxOccurs="1" />
+      <xs:element name="map_variables" type="cellml:map_variables_type" minOccurs="1" maxOccurs="unbounded" />
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:anyAttribute namespace="##other" processContents="lax" />

@@ -4,6 +4,7 @@
 from __future__ import absolute_import, division
 from __future__ import print_function, unicode_literals
 
+import logging
 import os
 import pytest
 from lxml import etree
@@ -55,6 +56,8 @@ def assert_invalid_with_schema(filename, schema, schema_parser):
     """
     Asserts that a model does not pass schema validation.
     """
+    log = logging.getLogger(__name__)
+
     # Parse CellML file
     filename = model(filename)
     assert os.path.isfile(filename)
@@ -62,10 +65,15 @@ def assert_invalid_with_schema(filename, schema, schema_parser):
 
     # Check if namespace is set correctly (for a nicer error message)
     tag = etree.QName(xml.getroot().tag)
-    assert tag.namespace == CELLML_1_0_NS
+    if tag.namespace != CELLML_1_0_NS:
+        log.info('Model in wrong namespace')
+        return
 
     # Validate
     assert not schema.validate(xml)
+
+    # Show detected error
+    log.info(schema.error_log.last_error)
 
 
 def valid_models():

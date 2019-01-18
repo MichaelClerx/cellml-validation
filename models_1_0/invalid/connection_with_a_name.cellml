@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.4.1: Connections don't have a name -->
+<model name="connection_with_a_name"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+
+  <connection name="hello" />
+
+</model>
