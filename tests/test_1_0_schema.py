@@ -9,9 +9,9 @@ import os
 from lxml import etree
 
 from .shared import (
-    CELLML_1_0_NS as cellml_ns,
-    file_1_0 as cellml,
-    validation_1_0 as validation,
+    CELLML_1_0_NS,
+    cellml_1_0 as cellml,
+    model_1_0 as model,
     SchemaResolver,
 )
 
@@ -22,13 +22,13 @@ def test_a_model():
     p.resolvers.add(SchemaResolver())
 
     # Load schema
-    f = validation('cellml_1_0.xsd')
+    f = cellml('cellml_1_0.xsd')
     assert os.path.isfile(f)
     schema = etree.parse(f, p)
     schema = etree.XMLSchema(schema)
 
     # Parse CellML file
-    f = cellml('aslanidi_atrial_model_2009_LindbladCa_corrected.cellml')
+    f = model('aslanidi_atrial_model_2009_LindbladCa_corrected.cellml')
     #f = cellml('beeler_reuter_1977.cellml')
     #f = cellml('espinosa_1998_hypertrophic.cellml')
     #f = cellml('vanderpol_vandermark_1928.cellml')
@@ -40,7 +40,7 @@ def test_a_model():
 
     # Check if namespace set
     tag = etree.QName(x.getroot().tag)
-    assert tag.namespace == cellml_ns
+    assert tag.namespace == CELLML_1_0_NS
 
     # Validate
     schema.assertValid(x)

@@ -1,5 +1,6 @@
 #
-# Tests CellML 1.1 schema validation
+# Parses and validates "playground" files to let you experiment with
+# validation.
 #
 from __future__ import absolute_import, division
 from __future__ import print_function, unicode_literals
@@ -9,34 +10,29 @@ import os
 from lxml import etree
 
 from .shared import (
-    CELLML_1_1_NS as cellml_ns,
-    file_1_1 as cellml,
-    validation_1_1 as validation,
+    CELLML_1_0_NS,
+    cellml_1_0 as cellml,
+    model_1_0 as model,
     SchemaResolver,
 )
 
 
-'''
-def test_a_model():
+def test_schema_validation():
     # Create parser that can resolve URLs
-    p = etree.XMLParser()
+    p = etree.XMLParser(no_network=True)
     p.resolvers.add(SchemaResolver())
 
     # Load schema
-    f = validation('cellml_1_0.xsd')
+    f = cellml('playground.xsd')
     assert os.path.isfile(f)
     schema = etree.parse(f, p)
     schema = etree.XMLSchema(schema)
 
     # Parse CellML file
-    f = cellml('???.cellml')
+    f = model('playground.xml')
     assert os.path.isfile(f)
-    x = etree.parse(f)
-
-    # Check if namespace set
-    tag = etree.QName(x.getroot().tag)
-    assert tag.namespace == cellml_ns
+    x = etree.parse(f, p)
 
     # Validate
     schema.assertValid(x)
-'''
+
