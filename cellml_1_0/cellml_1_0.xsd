@@ -11,6 +11,12 @@
 This schema document provides partial validation of CellML 1.0 documents. An
 extensive (and hopefully exhaustive) list of limitations is provided below.
 
+Notes:
+
+ - While CellML 1.0 only declares that "a `model` element [..] is the usual
+   root element for a CellML document", this schema insists that CellML
+   documents have a `model` as their root (see CellML 1.0, 3.2.1).
+
 Limitations related to model structure:
 
  - The schema does not detect variables with both public and private interface

@@ -51,16 +51,57 @@ def assert_valid_with_schema(filename, schema, schema_parser):
     schema.assertValid(xml)
 
 
-def test_a_model(schema, schema_parser):
-    assert_valid_with_schema(
-        'aslanidi_atrial_model_2009_LindbladCa_corrected.cellml',
-        schema,
-        schema_parser
-    )
-    #f = cellml('beeler_reuter_1977.cellml')
-    #f = cellml('espinosa_1998_hypertrophic.cellml')
-    #f = cellml('vanderpol_vandermark_1928.cellml')
-    #f = cellml('ohara_rudy_cipa_v1_2017.cellml')
-    #f = cellml('noble_varghese_kohl_noble_1998_c.cellml')
-    #f = cellml('test_simple_odes.cellml')
+def assert_invalid_with_schema(filename, schema, schema_parser):
+    """
+    Asserts that a model does not pass schema validation.
+    """
+    # Parse CellML file
+    filename = model(filename)
+    assert os.path.isfile(filename)
+    xml = etree.parse(filename, schema_parser)
+
+    # Check if namespace is set correctly (for a nicer error message)
+    tag = etree.QName(xml.getroot().tag)
+    assert tag.namespace == CELLML_1_0_NS
+
+    # Validate
+    assert not schema.validate(xml)
+
+
+def valid_models():
+    """ Returns a list of filenames for models that should validate. """
+    models = []
+    root = model('valid')
+    for fname in os.listdir(root):
+        fname = os.path.join(root, fname)
+        if os.path.isfile(fname):
+            if os.path.splitext(fname)[1] == '.cellml':
+                models.append(fname)
+    models.sort()
+    return models
+
+
+def invalid_models():
+    """ Returns a list of filenames for models that should not validate. """
+    models = []
+    root = model('invalid')
+    for fname in os.listdir(root):
+        fname = os.path.join(root, fname)
+        if os.path.isfile(fname):
+            if os.path.splitext(fname)[1] == '.cellml':
+                models.append(fname)
+    models.sort()
+    return models
+
+
+@pytest.mark.parametrize('filename', valid_models())
+def test_valid_models(filename, schema, schema_parser):
+    """ Tests if all valid models validate. """
+    assert_valid_with_schema(filename, schema, schema_parser)
+
+
+@pytest.mark.parametrize('filename', invalid_models())
+def test_invalid_models(filename, schema, schema_parser):
+    """ Checks that no invalid models validate. """
+    assert_invalid_with_schema(filename, schema, schema_parser)
 
