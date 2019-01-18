@@ -7,16 +7,9 @@
     attributeFormDefault="unqualified">
    <xs:annotation>
     <xs:documentation>
-This schema document provides partial validation of CellML 1.0 documents.
 
-Notes:
-
- - Unlike the spec, this schema places an additional restriction on cellml
-   identifiers, insisting that they do not start with a numerical character. As
-   a result, expressions such as 1e12 are valid according to the spec, but do
-   not pass validation with this schema.
-
-    TODO: Just to what the spec says
+This schema document provides partial validation of CellML 1.0 documents. An
+extensive (and hopefully exhaustive) list of limitations is provided below.
 
 Limitations related to model structure:
 
@@ -74,13 +67,39 @@ Limitations related to units:
  - The schema does not detect when a `unit` element with a non-zero offset has
    an exponent other than "1.0" (CellML 1.0, 5.4.2.7).
 
+Limitations related to grouping:
 
-GOT UP TO BUT NOT INCLUDING 5.5
+ - CellML 1.0 specifies that a `relationship_ref` element must contain a
+   `relationship` attribute either in the CellML namespace or in an extension
+   namespace (see 6.4.2.1). However, all examples and all CellML handling
+   software so far use a relationship attribute without any namespace. This
+   schema assumes the `relationship` attribute is not in any namespace, and can
+   only have the values "containment" or "encapsulation".
 
+ - The schema does not detect when there are two unnamed `relationship_ref`
+   elements with the same `relationship` in a single group, although it does
+   detect if there are two with the same relationship and the same name (see
+   CellML 1.0, 6.4.2.5).
 
+ - The schema does not check any of the rules about component_ref hierarchies
+   defined in CellML 1.0, 6.4.3.2.
 
+Limitations related to reactions:
 
- - More!
+ - The schema does not check the proper use of `reaction` in encapsulation
+   components, defined in CellML 1.0, 7.4.1.3.
+
+ - The schema does not check the proper use of `role` element `role` attributes
+   defined in CellML 1.0, 7.4.3.3.
+
+ - The schema does not check the first two rules of proper use of `role`
+   element `direction` attributes defined in CellML 1.0, 7.4.3.5.
+
+ - The schema does not check the proper use of `role` element `delta_variable`
+   attributes defined in CellML 1.0, 7.4.3.8.
+
+ - The schema can not check if the `math` in a `role` is "relevant to the
+   variable reference by the containing `variable_ref` element".
 
 Limitations related to extensions and namespaces:
 
@@ -142,7 +161,7 @@ Limitations related to extensions and namespaces:
   <!-- CellML Identifiers -->
   <xs:simpleType name="identifier">
     <xs:restriction base="xs:string">
-      <xs:pattern value="(_[0-9_]*)?[a-zA-Z][a-zA-Z0-9_]*" />
+      <xs:pattern value="_*[a-zA-Z0-9][a-zA-Z0-9_]*" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -167,26 +186,26 @@ Limitations related to extensions and namespaces:
     <!-- Model keys -->
     <!-- Unique component names -->
     <xs:key name="component_name">
-      <xs:selector xpath="component" />
+      <xs:selector xpath="cellml:component" />
       <xs:field xpath="@name" />
     </xs:key>
     <!-- Unique model units names -->
     <xs:unique name="units_name">
-      <xs:selector xpath="units" />
+      <xs:selector xpath="cellml:units" />
       <xs:field xpath="@name" />
     </xs:unique>
     <!-- Component connections must name components -->
     <xs:keyref name="connect_component_1" refer="cellml:component_name">
-      <xs:selector xpath="connection/map_components" />
+      <xs:selector xpath="cellml:connection/cellml:map_components" />
       <xs:field xpath="@component_1" />
     </xs:keyref>
     <xs:keyref name="connect_component_2" refer="cellml:component_name">
-      <xs:selector xpath="connection/map_components" />
+      <xs:selector xpath="cellml:connection/cellml:map_components" />
       <xs:field xpath="@component_2" />
     </xs:keyref>
-    <!-- Groups must name components -->
+    <!-- Group component_refs must name components -->
     <xs:keyref name="group_components" refer="cellml:component_name">
-      <xs:selector xpath="group/component_ref" />
+      <xs:selector xpath="cellml:group/cellml:component_ref" />
       <xs:field xpath="@component" />
     </xs:keyref>
   </xs:element>
@@ -199,31 +218,39 @@ Limitations related to extensions and namespaces:
         <!-- Component keys -->
         <!-- Unique variable names within component -->
         <xs:key name="variable_name">
-          <xs:selector xpath="variable" />
+          <xs:selector xpath="cellml:variable" />
           <xs:field xpath="@name" />
         </xs:key>
-        <!-- Unique reaction variable names within component -->
+        <!-- Variable_ref must name a variable from the same component -->
         <xs:keyref name="reaction_variables" refer="cellml:variable_name">
-          <xs:selector xpath="reaction/variable_ref" />
+          <xs:selector xpath="cellml:reaction/cellml:variable_ref" />
           <xs:field xpath="@variable" />
         </xs:keyref>
+        <!-- Role delta_variable must name a variable from the same component -->
         <xs:keyref name="delta_variables" refer="cellml:variable_name">
-          <xs:selector xpath="reaction/variable_ref/role" />
+          <xs:selector xpath="cellml:reaction/cellml:variable_ref/cellml:role" />
           <xs:field xpath="@delta_variable" />
         </xs:keyref>
         <!-- Unique component units names -->
         <!-- Note: This is not a key, since the unit fields can refer to either
              a model or component unit, or a predefined base unit. -->
         <xs:unique name="component_units_name">
-          <xs:selector xpath="units" />
+          <xs:selector xpath="cellml:units" />
           <xs:field xpath="@name" />
         </xs:unique>
       </xs:element>
-      <xs:element name="group" type="cellml:group_type" />
+      <xs:element name="group" type="cellml:group_type">
+        <!-- Named relationship_refs must be unique within a group -->
+        <xs:unique name="named_relationships_within_a_group">
+          <xs:selector xpath="cellml:relationship_ref" />
+          <xs:field xpath="@relationship" />
+          <xs:field xpath="@name" />
+        </xs:unique>
+      </xs:element>
       <xs:element name="connection" type="cellml:connection_type">
         <!-- Component connections must be unique (partial check) -->
         <xs:unique name="unique_connections">
-          <xs:selector xpath="connection/map_components" />
+          <xs:selector xpath="cellml:connection/cellml:map_components" />
           <xs:field xpath="component_1" />
           <xs:field xpath="component_2" />
         </xs:unique>
@@ -242,13 +269,14 @@ Limitations related to extensions and namespaces:
       <xs:element name="units" type="cellml:units_type" />
       <xs:element name="variable" type="cellml:variable_type" />
       <xs:element name="reaction" type="cellml:reaction_type">
-        <!-- Reaction keys -->
+        <!-- Reaction variables can only be defined once -->
         <xs:unique name="reaction_variable">
-          <xs:selector xpath="variable_ref" />
+          <xs:selector xpath="cellml:variable_ref" />
           <xs:field xpath="@variable" />
         </xs:unique>
+        <!-- Reaction delta_variables can only be used once -->
         <xs:unique name="delta_variable">
-          <xs:selector xpath="role" />
+          <xs:selector xpath="cellml:variable_ref/cellml:role" />
           <xs:field xpath="@delta_variable" />
         </xs:unique>
       </xs:element>
@@ -393,7 +421,7 @@ Limitations related to extensions and namespaces:
       <xs:element name="component_ref" type="cellml:component_ref_type" />
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
-    <xs:attribute name="component" type="xs:string" use="required" />
+    <xs:attribute name="component" type="cellml:identifier" use="required" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>
 
@@ -407,7 +435,13 @@ Limitations related to extensions and namespaces:
   <!-- Reaction types -->
   <xs:complexType name="reaction_type">
     <xs:choice maxOccurs="unbounded">
-      <xs:element name="variable_ref" type="cellml:variable_ref_type" minOccurs="1" />
+      <xs:element name="variable_ref" type="cellml:variable_ref_type" minOccurs="1">
+        <xs:unique name="unique_role_direction_pairs">
+          <xs:selector xpath="cellml:role" />
+          <xs:field xpath="@role" />
+          <xs:field xpath="@direction" />
+        </xs:unique>
+      </xs:element>
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="reversible" type="cellml:yes_no" use="optional" default="yes" />
@@ -419,7 +453,7 @@ Limitations related to extensions and namespaces:
       <xs:element name="role" type="cellml:role_type" minOccurs="1" />
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
-    <xs:attribute name="variable" type="xs:string" use="required" />
+    <xs:attribute name="variable" type="cellml:identifier" use="required" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>
 
@@ -429,9 +463,9 @@ Limitations related to extensions and namespaces:
       <xs:any namespace="##other" processContents="lax" />
     </xs:choice>
     <xs:attribute name="role" type="cellml:species_role" use="required" />
+    <xs:attribute name="delta_variable" type="cellml:identifier" use="optional" />
     <xs:attribute name="direction" type="cellml:reaction_direction" use="optional" default="forward" />
-    <xs:attribute name="delta_variable" type="xs:string" use="optional" />
-    <xs:attribute name="stoichiometry" type="xs:double" use="optional" />
+    <xs:attribute name="stoichiometry" type="cellml:real_number" use="optional" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>
 
@@ -439,8 +473,8 @@ Limitations related to extensions and namespaces:
     <xs:restriction base="xs:string">
       <xs:enumeration value="reactant" />
       <xs:enumeration value="product" />
-      <xs:enumeration value="activator" />
       <xs:enumeration value="catalyst" />
+      <xs:enumeration value="activator" />
       <xs:enumeration value="inhibitor" />
       <xs:enumeration value="modifier" />
       <xs:enumeration value="rate" />
@@ -450,7 +484,7 @@ Limitations related to extensions and namespaces:
   <xs:simpleType name="reaction_direction">
     <xs:restriction base="xs:string">
       <xs:enumeration value="forward" />
-      <xs:enumeration value="backward" />
+      <xs:enumeration value="reverse" />
       <xs:enumeration value="both" />
     </xs:restriction>
   </xs:simpleType>
