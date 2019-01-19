@@ -7,6 +7,17 @@ from lxml import etree
 import check
 
 
+def colored(color, text):
+    colors = {
+        'normal': '\033[0m',
+        'warning': '\033[93m',
+        'fail': '\033[91m',
+        'bold': '\033[1m',
+        'underline': '\033[4m',
+    }
+    return colors[color] + str(text) + colors['normal']
+
+
 def schema_1_0(filename):
     """
     Validates ``filename`` against the CellML 1.0 schema, prints the result and
@@ -25,7 +36,9 @@ def schema_1_0(filename):
 
     # Validate
     if schema.validate(xml):
-        print('[pass] This file validates against the schema.')
+        print(
+            colored('warning', '[pass]')
+            + ' This file validates against the schema.')
         sys.exit(0)
     else:
         print('[fail] This file does not validate against the schema.')

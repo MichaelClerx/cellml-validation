@@ -16,8 +16,7 @@ CELLML_2_0_NS = 'http://www.cellml.org/cellml/2.0#'
 #
 # Paths to validation and model files
 #
-import os
-import inspect
+import os, inspect   # noqa
 try:
     frame = inspect.currentframe()
     MODULE_DIR = os.path.dirname(inspect.getfile(frame))
@@ -43,8 +42,8 @@ del(os)
 #
 # Import functions
 #
-from ._schema_resolver import SchemaResolver
-from ._loaders import (
+from ._schema_resolver import SchemaResolver    # noqa
+from ._loaders import (     # noqa
     cellml_1_0,
     cellml_1_1,
     cellml_2_0,
@@ -52,7 +51,7 @@ from ._loaders import (
     model_1_1,
     model_2_0,
 )
-from ._validation import (
+from ._validation import (  # noqa
     schema_1_0,
 )
 

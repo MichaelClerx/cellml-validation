@@ -9,6 +9,7 @@ import os
 import pytest
 from lxml import etree
 
+
 from check import (
     CELLML_1_0_NS,
     cellml_1_0 as cellml,
