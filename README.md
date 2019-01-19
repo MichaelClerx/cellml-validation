@@ -29,7 +29,9 @@ Disclaimers:
 The validation files themselves can be tested using the following steps:
 
 1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venc/bin/activate`
-2. Install the requirements using pip: `$p ip install -r requirements.txt`
+2. Install the requirements using pip: `$ pip install -r requirements.txt`
 3. Run the tests using pytest: `$ pytest`
 
-To get more test output, use `pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
+To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
+
+To validate a single file, use e.g. `$ python -m check schema_1_0 models_1_0/valid/empty-model.cellml`.
