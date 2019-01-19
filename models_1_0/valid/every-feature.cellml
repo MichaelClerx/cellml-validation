@@ -40,19 +40,33 @@
   <component name="c1">
     <!-- Tests having a component level unit -->
     <units name="component_dimensionless" />
+    <units name="special_volts" />
+    <variable name="a" units="component_dimensionless" />
+    <variable name="b" units="special_volts" />
 
-    <!-- TODO -->
-
-
-
-
+    <!-- TODO
+    <reaction>
+      <variable_ref>
+        <role role="" />
+      </variable_ref>
+    </reaction>
+    <reaction>
+      <variable_ref>
+        <role role="" />
+      </variable_ref>
+    </reaction>
+    -->
   </component>
+
   <component name="c2">
     <!-- TODO -->
   </component>
+
   <component name="c2b">
     <!-- TODO -->
   </component>
+
+  <component name="c3" />
 
   <!--
   <group>

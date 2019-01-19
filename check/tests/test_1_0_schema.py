@@ -27,6 +27,8 @@ known_fails = [
     'group_only_junk',
     'map_variables_bad_variable_1',
     'map_variables_bad_variable_2',
+    'component_math_does_not_define_variable',
+    'variable_with_math',
 ]
 
 expected_errors = {
@@ -34,8 +36,16 @@ expected_errors = {
         "Element 'cellml:model': The attribute 'name' is required",
     'component_as_root_node':
         "No matching global declaration available for the validation root",
+    'component_invalid_name':
+        "Not all fields of key identity-constraint 'cellml:component_name'",
+    'component_with_same_name':
+        "Duplicate key-sequence ['c1']",
     'component_no_name':
         "Element 'cellml:component': Not all fields of key",
+    'component_with_component':
+        "Element 'cellml:component': This element is not expected",
+    'component_with_model':
+        "Element 'cellml:model': This element is not expected",
     'component_with_text':
         "Element 'cellml:component': Character content other than white",
     'connection_empty':
@@ -61,12 +71,14 @@ expected_errors = {
         "Element 'cellml:map_components': Character content other than white",
     'map_variables_with_text':
         "Element 'cellml:map_variables': Character content other than white",
+    'model_invalid_name':
+        "Element 'cellml:model', attribute 'name': '___' is not a valid value",
     'model_no_name':
         "Element 'cellml:model': The attribute 'name' is required",
     'model_with_text':
         "Element 'cellml:model': Character content other than white",
     'model_wrong_namespace':
-        "",
+        "No matching global declaration available for the validation root",
     'variable_with_text':
         "Element 'cellml:variable': Character content other than white",
 }
@@ -145,12 +157,6 @@ def test_invalid_models(filename, schema, schema_parser):
     path = model(rel_path)
     assert os.path.isfile(path)
     xml = etree.parse(path, schema_parser)
-
-    # Check if namespace is set correctly (for a nicer error message)
-    tag = etree.QName(xml.getroot().tag)
-    if tag.namespace != CELLML_1_0_NS:
-        log.info('Model in wrong namespace')
-        return
 
     # Validate
     assert not schema.validate(xml)

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3: A variable cannot have MathML:math -->
+<model name="variable_with_math"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="c1">
+    <variable name="a" cellml:units="dimensionless">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <eq/>
+          <ci>a</ci>
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </math>
+    </variable>
+  </component>
+</model>

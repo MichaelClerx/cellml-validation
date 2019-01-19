@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.2.2: Component names must be unique -->
+<model name="component_with_same_name"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c1" />
+  <component name="c1" />
+</model>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.2.2: A component name must be an identifier -->
+<model name="component_invalid_name"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="___" />
+</model>
