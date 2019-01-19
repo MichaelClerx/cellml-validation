@@ -3,6 +3,63 @@
 <model name="empty_model"
        xmlns="http://www.cellml.org/cellml/1.0#">
 
-  <!-- TODO -->
+  <!-- Tests copying a unit without modifying -->
+  <units name="happyvolt">
+    <!-- Just volt -->
+  </units>
+
+  <!-- Tests adding a prefix -->
+  <units name="millivolt">
+    <!-- TODO -->
+  </units>
+
+  <!-- Tests adding an exponent -->
+  <!-- Tests referencing a local unit -->
+  <units name="millivolt_squared">
+    <!-- TODO -->
+  </units>
+
+  <!-- Tests adding a multiplier -->
+  <units name="mile">
+    <!-- TODO -->
+  </units>
+
+  <!-- Tests having an offset -->
+  <units name="deg_celsius">
+    <!-- TODO -->
+  </units>
+
+  <!-- Tests having everything together -->
+  <units name="crazy">
+    <!-- TODO -->
+  </units>
+
+  <component name="c1">
+    <!-- TODO -->
+  </component>
+  <component name="c2">
+    <!-- TODO -->
+  </component>
+  <component name="c2b">
+    <!-- TODO -->
+  </component>
+
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component_1="c1" component_2="c2" />
+  </group>
+  <group>
+    <!-- TODO -->
+  </group>
+
+  <connection>
+    <map_components component_1="c1" component_2="c2" />
+    <map_variables variable_1="c1_1" variable_2="c2_1" />
+  </connection>
+  <connection>
+    <map_components component_1="c2" component_2="c2b" />
+    <map_variables variable_1="c2_1" variable_2="c2b_1" />
+    <map_variables variable_1="c2_2" variable_2="c2b_2" />
+  </connection>
 
 </model>

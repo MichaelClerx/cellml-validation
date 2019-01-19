@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.1: Groups must contain relationship_ref and component_ref attributes -->
+<model name="group_empty"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:hi="http://hello.com"
+       >
+  <group>
+    <hi:bonjour name="du monde" />
+    <hi:hola />
+    <hi:hallo />
+  </group>
+</model>

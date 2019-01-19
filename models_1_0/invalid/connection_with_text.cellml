@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.4.1: Connections don't have a name -->
-<model name="connection_with_a_name"
+<!-- CellML 1.0, 2.4.4: A connection cannot have text -->
+<model name="connection_with_text"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
-    <variable name="a" />
+    <variable name="a" units="volt" />
   </component>
   <component name="c2">
-    <variable name="b" />
+    <variable name="b" units="volt" />
   </component>
-  <connection name="hello">
+  <connection>
     <map_components component_1="c1" component_2="c2" />
     <map_variables variable_1="a" variable_2="b" />
+    Hello there
   </connection>
 </model>

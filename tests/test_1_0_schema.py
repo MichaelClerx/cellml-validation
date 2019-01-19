@@ -21,6 +21,8 @@ known_fails = [
     'connection_no_map_components',
     'connection_no_map_variables',
     'connection_two_map_components',
+    'group_no_component_ref',
+    'group_only_junk',
     'map_variables_bad_variable_1',
     'map_variables_bad_variable_2',
 ]
