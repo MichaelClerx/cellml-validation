@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 2.4.1: Identifier cannot be empty -->
-<model name=""
-       xmlns="http://www.cellml.org/cellml/1.0#"/>
+<model name="identifier_empty_name"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="" />
+</model>

@@ -7,8 +7,8 @@ from __future__ import print_function, unicode_literals
 import logging
 import os
 import pytest
+import re
 from lxml import etree
-
 
 from check import (
     CELLML_1_0_NS,
@@ -17,16 +17,59 @@ from check import (
     SchemaResolver,
 )
 
+
 known_fails = [
-    'connection_only_junk',
     'connection_no_map_components',
     'connection_no_map_variables',
+    'connection_only_junk',
     'connection_two_map_components',
     'group_no_component_ref',
     'group_only_junk',
     'map_variables_bad_variable_1',
     'map_variables_bad_variable_2',
 ]
+
+expected_errors = {
+    'attribute_in_cellml_namespace':
+        "Element 'cellml:model': The attribute 'name' is required",
+    'component_as_root_node':
+        "No matching global declaration available for the validation root",
+    'component_no_name':
+        "Element 'cellml:component': Not all fields of key",
+    'component_with_text':
+        "Element 'cellml:component': Character content other than white",
+    'connection_empty':
+        "Element 'cellml:connection': Missing child element(s).",
+    'connection_with_a_name':
+        "Element 'cellml:connection', attribute 'name'",
+    'connection_with_text':
+        "Element 'cellml:connection': Character content other than white",
+    'group_empty':
+        "Element 'cellml:group': Missing child element(s).",
+    'identifier_empty_name':
+        #"'name': '' is not a valid value",
+        "Element 'cellml:units', attribute 'name'",
+    'identifier_only_underscore':
+        "Element 'cellml:units', attribute 'name'",
+    'identifier_unexpected_character':
+        "Element 'cellml:units', attribute 'name'",
+    'identifier_unexpected_character_2':
+        "Element 'cellml:units', attribute 'name'",
+    'identifier_unexpected_character_unicode':
+        "Element 'cellml:units', attribute 'name'",
+    'map_components_with_text':
+        "Element 'cellml:map_components': Character content other than white",
+    'map_variables_with_text':
+        "Element 'cellml:map_variables': Character content other than white",
+    'model_no_name':
+        "Element 'cellml:model': The attribute 'name' is required",
+    'model_with_text':
+        "Element 'cellml:model': Character content other than white",
+    'model_wrong_namespace':
+        "",
+    'variable_with_text':
+        "Element 'cellml:variable': Character content other than white",
+}
 
 
 @pytest.fixture
@@ -45,54 +88,12 @@ def schema(schema_parser):
     return etree.XMLSchema(etree.parse(filename, schema_parser))
 
 
-def assert_valid_with_schema(filename, schema, schema_parser):
-    """
-    Parses a model and a schema, asserting the model is valid against the
-    schema.
-    """
-    # Parse CellML file
-    filename = model(filename + '.cellml')
-    assert os.path.isfile(filename)
-    xml = etree.parse(filename, schema_parser)
-
-    # Check if namespace is set correctly (for a nicer error message)
-    tag = etree.QName(xml.getroot().tag)
-    assert tag.namespace == CELLML_1_0_NS
-
-    # Validate
-    schema.assertValid(xml)
-
-
 def schema_1_0(filename):
     """
     Checks a file against the schema, outside of the test framework.
     """
     parser = schema_parser()
     assert_valid_with_schema(filename, schema(parser), parser)
-
-
-def assert_invalid_with_schema(filename, schema, schema_parser):
-    """
-    Asserts that a model does not pass schema validation.
-    """
-    log = logging.getLogger(__name__)
-
-    # Parse CellML file
-    filename = model(filename + '.cellml')
-    assert os.path.isfile(filename)
-    xml = etree.parse(filename, schema_parser)
-
-    # Check if namespace is set correctly (for a nicer error message)
-    tag = etree.QName(xml.getroot().tag)
-    if tag.namespace != CELLML_1_0_NS:
-        log.info('Model in wrong namespace')
-        return
-
-    # Validate
-    assert not schema.validate(xml)
-
-    # Show detected error
-    log.info(schema.error_log.last_error)
 
 
 def valid_models():
@@ -115,14 +116,61 @@ def invalid_models():
 
 @pytest.mark.parametrize('filename', valid_models())
 def test_valid_models(filename, schema, schema_parser):
-    """ Tests if all valid models validate. """
-    filename = model('valid', filename)
-    assert_valid_with_schema(filename, schema, schema_parser)
+    """
+    Tests if all valid models validate.
+    """
+    # Parse CellML file
+    filename = os.path.join('valid', filename + '.cellml')
+    path = model(filename)
+    assert os.path.isfile(path)
+    xml = etree.parse(path, schema_parser)
+
+    # Check if namespace is set correctly (for a nicer error message)
+    tag = etree.QName(xml.getroot().tag)
+    assert tag.namespace == CELLML_1_0_NS
+
+    # Validate
+    schema.assertValid(xml)
 
 
 @pytest.mark.parametrize('filename', invalid_models())
 def test_invalid_models(filename, schema, schema_parser):
-    """ Checks that no invalid models validate. """
-    filename = model('invalid', filename)
-    assert_invalid_with_schema(filename, schema, schema_parser)
+    """
+    Checks that no invalid models validate.
+    """
+    log = logging.getLogger(__name__)
+
+    # Parse CellML file
+    rel_path = os.path.join('invalid', filename + '.cellml')
+    path = model(rel_path)
+    assert os.path.isfile(path)
+    xml = etree.parse(path, schema_parser)
+
+    # Check if namespace is set correctly (for a nicer error message)
+    tag = etree.QName(xml.getroot().tag)
+    if tag.namespace != CELLML_1_0_NS:
+        log.info('Model in wrong namespace')
+        return
+
+    # Validate
+    assert not schema.validate(xml)
+
+    # Log detected error
+    e = schema.error_log.last_error
+    r = re.compile(re.escape('{' + CELLML_1_0_NS + '}'))
+    error = r.sub('cellml:', e.message)
+    log.info('Error on line ' + str(e.line) + ': ' + error)
+
+    # Test correct error was raised
+    expected = expected_errors.get(filename, '')
+    print(expected)
+    if expected == '':
+        expected = 'No expected error set'
+    log.info('Expected error: ' + expected)
+    r = re.compile(re.escape(expected))
+    if r.search(error) is None:
+        log.error('Unexpected error in ' + filename)
+        log.error('Expected: ' + expected)
+        log.error('Returned: ' + error)
+        pytest.fail()
 

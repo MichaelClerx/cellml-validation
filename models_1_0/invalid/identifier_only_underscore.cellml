@@ -2,5 +2,5 @@
 <!-- CellML 1.0, 2.4.1: Identifier must include at least one letter or number -->
 <model name="identifier_only_underscore"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  <component name="_" />
+  <units name="_" />
 </model>

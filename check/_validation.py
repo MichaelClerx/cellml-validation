@@ -1,6 +1,7 @@
 #
 # Validation methods
 #
+import re
 import sys
 from lxml import etree
 
@@ -41,9 +42,10 @@ def schema_1_0(filename):
             + ' This file validates against the schema.')
         sys.exit(0)
     else:
-        print('[fail] This file does not validate against the schema.')
-        print()
-        print(schema.error_log.last_error)
+        e = schema.error_log.last_error
+        r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
+        print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
+        print(r.sub('cellml:', e.message))
         print()
         sys.exit(1)
 
