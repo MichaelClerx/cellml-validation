@@ -9,7 +9,7 @@ import os
 import pytest
 from lxml import etree
 
-from .shared import (
+from check import (
     CELLML_1_0_NS,
     cellml_1_0 as cellml,
     model_1_0 as model,
@@ -42,7 +42,6 @@ def schema(schema_parser):
     filename = cellml('cellml_1_0.xsd')
     assert os.path.isfile(filename)
     return etree.XMLSchema(etree.parse(filename, schema_parser))
-    return schema
 
 
 def assert_valid_with_schema(filename, schema, schema_parser):
@@ -61,6 +60,14 @@ def assert_valid_with_schema(filename, schema, schema_parser):
 
     # Validate
     schema.assertValid(xml)
+
+
+def schema_1_0(filename):
+    """
+    Checks a file against the schema, outside of the test framework.
+    """
+    parser = schema_parser()
+    assert_valid_with_schema(filename, schema(parser), parser)
 
 
 def assert_invalid_with_schema(filename, schema, schema_parser):

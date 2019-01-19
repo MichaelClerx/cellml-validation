@@ -9,7 +9,7 @@ from __future__ import print_function, unicode_literals
 import os
 from lxml import etree
 
-from .shared import (
+from check import (
     cellml_1_0 as cellml,
     model_1_0 as model,
     SchemaResolver,
