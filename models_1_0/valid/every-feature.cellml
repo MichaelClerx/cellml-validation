@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- All features except extensions -->
-<model name="empty_model"
+<model name="every_feature"
        xmlns="http://www.cellml.org/cellml/1.0#">
 
   <!-- Test having a new dimensionless unit -->
@@ -66,7 +66,14 @@
     <!-- TODO -->
   </component>
 
+  <!-- Components may be empty -->
   <component name="c3" />
+
+  <!-- Component and model names may overlap -->
+  <component name="every_feature">
+    <!-- Component and variable names may overlap -->
+    <variable name="every_feature" units="crazy" intial_value="1" />
+  </component>
 
   <!--
   <group>
