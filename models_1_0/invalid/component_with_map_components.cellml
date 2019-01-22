@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.2.1: A component cannot contain a map_components -->
+<model name="component_with_map_components"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c1">
+    <map_components component_1="c1" component_2="c2" />
+  </component>
+  <component name="c2" />
+</model>

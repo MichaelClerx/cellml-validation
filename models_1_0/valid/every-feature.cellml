@@ -72,7 +72,7 @@
   <!-- Component and model names may overlap -->
   <component name="every_feature">
     <!-- Component and variable names may overlap -->
-    <variable name="every_feature" units="crazy" intial_value="1" />
+    <variable name="every_feature" units="crazy" initial_value="1" />
   </component>
 
   <!--

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.2.1: A component cannot contain a component_ref -->
+<model name="component_with_component_ref"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="component">
+    <component_ref component="component" />
+  </component>
+</model>

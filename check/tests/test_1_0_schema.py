@@ -44,10 +44,28 @@ expected_errors = {
         "Element 'cellml:component': Not all fields of key",
     'component_with_component':
         "Element 'cellml:component': This element is not expected",
+    'component_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    'component_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    'component_with_group':
+        "Element 'cellml:group': This element is not expected",
+    'component_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    'component_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
     'component_with_model':
         "Element 'cellml:model': This element is not expected",
+    'component_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    'component_with_role':
+        "Element 'cellml:role': This element is not expected",
     'component_with_text':
         "Element 'cellml:component': Character content other than white",
+    'component_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    'component_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
     'connection_empty':
         "Element 'cellml:connection': Missing child element(s).",
     'connection_with_a_name':
