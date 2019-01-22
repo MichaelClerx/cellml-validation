@@ -44,7 +44,7 @@ Required elements/attributes are indicated in italics.
 - model(*name*)
   - units(*name*,base_units)
     - unit(*units*,prefix,exponent,multiplier,offset)
-  - component(name)
+  - component(*name*)
     - units --> see above
     - variable(*name*,*units*,(initial_value,public_interface,private_interface)
     - reaction(reversible)
