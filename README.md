@@ -35,3 +35,25 @@ The validation files themselves can be tested using the following steps:
 To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
 
 To validate a single file, use e.g. `$ python -m check schema_1_0 models_1_0/valid/empty-model.cellml`.
+
+## CellML 1.0 document structure
+
+- model(name)
+  - units(name,base_units)
+    - unit(units,prefix,exponent,multiplier,offset)
+  - component(name)
+    - units --> see above
+    - variable(name,units,(initial_value,public_interface,private_interface)
+    - reaction(reversible)
+      - variable_ref(variable)
+        - role(role,delta_variable,direction_stoichiometry)
+          - mathml
+    - mathml
+  - group()
+    - relationship_ref(relationship,name)
+    - component_ref(component)
+      - component_ref --> see above
+  - connection()
+    - map_components(component_1,component_2)
+    - map_variables(variable_1,variable_2)
+    
