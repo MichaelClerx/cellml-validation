@@ -38,22 +38,26 @@ To validate a single file, use e.g. `$ python -m check schema_1_0 models_1_0/val
 
 ## CellML 1.0 document structure
 
-- model(name)
-  - units(name,base_units)
-    - unit(units,prefix,exponent,multiplier,offset)
+Elements are shown with their attributes in brackets.
+Required elements/attributes are indicated in italics.
+
+- model(*name*)
+  - units(*name*,base_units)
+    - unit(*units*,prefix,exponent,multiplier,offset)
   - component(name)
     - units --> see above
-    - variable(name,units,(initial_value,public_interface,private_interface)
+    - variable(*name*,*units*,(initial_value,public_interface,private_interface)
     - reaction(reversible)
-      - variable_ref(variable)
-        - role(role,delta_variable,direction_stoichiometry)
-          - mathml
-    - mathml
+      - *variable_ref*(*variable*)
+        - *role*(*role*,delta_variable,direction_stoichiometry)
+          - mathml:math
+    - mathml:math
   - group()
-    - relationship_ref(relationship,name)
-    - component_ref(component)
+    - *relationship_ref*(*relationship*,name)
+    - *component_ref*(*component*)
       - component_ref --> see above
   - connection()
-    - map_components(component_1,component_2)
+    - *map_components*(*component_1*,*component_2*)
+    - *map_variables*(*variable_1*,*variable_2*)
     - map_variables(variable_1,variable_2)
     
