@@ -59,5 +59,4 @@ Required elements/attributes are indicated in italics.
   - connection()
     - *map_components*(*component_1*,*component_2*)
     - *map_variables*(*variable_1*,*variable_2*)
-    - map_variables(variable_1,variable_2)
-    
+
