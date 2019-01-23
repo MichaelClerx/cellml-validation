@@ -19,6 +19,7 @@ Disclaimers:
 ## CellML 1.0
 
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
+* [List of CellML 1.0 elements and attributes](cellml_1_0/README.md)
 * Older files:
   * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
   * [CellML 1.0 DTD](cellml_1_0/todo/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
