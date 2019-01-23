@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Contrary to CellML 1.0, 3.2.1 we insist that the root node is in the CellML namespace -->
-<model name="root_node_wrong_namespace"
+<model name="root_node_namespace_wrong"
        xmlns="http://www.wellml.org/wellml/1.0#" />

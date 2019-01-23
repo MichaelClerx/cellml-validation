@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.1.1: A model cannot contain a role -->
+<model name="model_with_role"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <role role="reactant" />
+</model>

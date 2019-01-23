@@ -19,26 +19,26 @@ from check import (
 
 
 known_fails = [
-    'connection_no_map_components',
-    'connection_no_map_variables',
+    'connection_map_components_missing',
+    'connection_map_variables_missing',
     'connection_only_junk',
     'connection_two_map_components',
     'group_no_component_ref',
     'group_only_junk',
-    'map_variables_bad_variable_1',
-    'map_variables_bad_variable_2',
+    'map_variables_variable_1_nonexistent',
+    'map_variables_variable_2_nonexistent',
+    'model_with_math',
     'component_math_does_not_define_variable',
     'variable_with_math',
 ]
 
 expected_errors = {
-    'attribute_in_cellml_namespace':
-        "Element 'cellml:model': The attribute 'name' is required",
-    'component_invalid_name':
-        "Not all fields of key identity-constraint 'cellml:component_name'",
-    'component_with_same_name':
+    # Component element
+    'component_name_duplicate':
         "Duplicate key-sequence ['c1']",
-    'component_no_name':
+    'component_name_invalid':
+        "Not all fields of key identity-constraint 'cellml:component_name'",
+    'component_name_missing':
         "Element 'cellml:component': Not all fields of key",
     'component_with_component':
         "Element 'cellml:component': This element is not expected",
@@ -64,14 +64,20 @@ expected_errors = {
         "Element 'cellml:unit': This element is not expected",
     'component_with_variable_ref':
         "Element 'cellml:variable_ref': This element is not expected",
+
+    # Connection elements
     'connection_empty':
         "Element 'cellml:connection': Missing child element(s).",
-    'connection_with_a_name':
+    'connection_with_name_attribute':
         "Element 'cellml:connection', attribute 'name'",
     'connection_with_text':
         "Element 'cellml:connection': Character content other than white",
+
+    # Group elements
     'group_empty':
         "Element 'cellml:group': Missing child element(s).",
+
+    # CellML Identifiers
     'identifier_empty_name':
         #"'name': '' is not a valid value",
         "Element 'cellml:units', attribute 'name'",
@@ -83,31 +89,62 @@ expected_errors = {
         "Element 'cellml:units', attribute 'name'",
     'identifier_unexpected_character_unicode':
         "Element 'cellml:units', attribute 'name'",
+
+    # Map_components elements
     'map_components_with_text':
         "Element 'cellml:map_components': Character content other than white",
+
+    # Map_variables elements
     'map_variables_with_text':
         "Element 'cellml:map_variables': Character content other than white",
-    'model_invalid_name':
-        "Element 'cellml:model', attribute 'name': '___' is not a valid value",
-    'model_no_name':
+
+    # Model elements
+    'model_name_in_cellml_namespace':
         "Element 'cellml:model': The attribute 'name' is required",
+    'model_name_invalid':
+        "Element 'cellml:model', attribute 'name': '___' is not a valid value",
+    'model_name_missing':
+        "Element 'cellml:model': The attribute 'name' is required",
+    'model_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    'model_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    'model_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    'model_with_model':
+        "Element 'cellml:model': This element is not expected",
+    'model_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    'model_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    'model_with_role':
+        "Element 'cellml:role': This element is not expected",
     'model_with_text':
         "Element 'cellml:model': Character content other than white",
+    'model_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    'model_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    'model_with_variable':
+        "Element 'cellml:variable': This element is not expected",
 
+    # Root node
     'root_node_not_model':
         "No matching global declaration available for the validation root",
     'root_node_two_elements':
         "Extra content at the end of the document",
     'root_node_two_models':
         "Extra content at the end of the document",
-    'root_node_wrong_namespace':
+    'root_node_namespace_wrong':
         "No matching global declaration available for the validation root",
 
-
-
-
+    # Variable elements
     'variable_with_text':
         "Element 'cellml:variable': Character content other than white",
+    'variable_name_invalid':
+        "Not all fields of key identity-constraint 'cellml:variable_name'",
+    'variable_name_missing':
+        "Element 'cellml:variable': The attribute 'name' is required",
 }
 
 
@@ -192,6 +229,7 @@ def test_invalid_models(filename, schema, schema_parser):
         # Log detected error
         error = str(e)
         log.info('Error during parsing: ' + error)
+        assert True
 
     else:
         # Validate

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 3.4.4.1: Connection must have 1 map_variables -->
-<model name="connection_no_map_variables"
+<model name="connection_map_variables_missing"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:ex="http://example.org">
   <component name="c1" />
