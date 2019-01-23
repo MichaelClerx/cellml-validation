@@ -145,6 +145,36 @@ expected_errors = {
         "Not all fields of key identity-constraint 'cellml:variable_name'",
     'variable_name_missing':
         "Element 'cellml:variable': The attribute 'name' is required",
+    'variable_with_component':
+        "Element 'cellml:component': This element is not expected",
+    'variable_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    'variable_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    'variable_with_group':
+        "Element 'cellml:group': This element is not expected",
+    'variable_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    'variable_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    'variable_with_model':
+        "Element 'cellml:model': This element is not expected",
+    'variable_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    'variable_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    'variable_with_role':
+        "Element 'cellml:role': This element is not expected",
+    'variable_with_text':
+        "Element 'cellml:variable': Character content other than white",
+    'variable_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    'variable_with_units':
+        "Element 'cellml:units': This element is not expected",
+    'variable_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    'variable_with_variable':
+        "Element 'cellml:variable': This element is not expected",
 }
 
 

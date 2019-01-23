@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.1: A variable cannot contain a units element -->
+<model name="variable_with_units"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="c1">
+    <variable name="x" cellml:units="dimensionless">
+      <units name="dimensionless" />
+    </variable>
+  </component>
+</model>
