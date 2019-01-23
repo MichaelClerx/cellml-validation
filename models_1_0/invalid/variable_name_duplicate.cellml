@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.2: A variable name must be unique within the component -->
+<model name="variable_name_duplicate"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c">
+    <variable name="x" units="dimensionless" />
+    <variable name="x" units="dimensionless" />
+  </component>
+</model>

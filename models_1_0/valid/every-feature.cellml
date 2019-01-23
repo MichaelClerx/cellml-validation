@@ -44,6 +44,8 @@
     <variable name="a" units="component_dimensionless" />
     <variable name="b" units="special_volts" />
 
+    <!-- TODO public_interface and private_interface" -->
+
     <!-- TODO
     <reaction>
       <variable_ref>
@@ -59,7 +61,8 @@
   </component>
 
   <component name="c2">
-    <!-- TODO -->
+    <!-- Different components can have a variable with the same name -->
+    <variable name="a" units="component_dimensionless" />
   </component>
 
   <component name="c2b">
@@ -73,6 +76,19 @@
   <component name="every_feature">
     <!-- Component and variable names may overlap -->
     <variable name="every_feature" units="crazy" initial_value="1" />
+  </component>
+
+  <component name="real_numbers">
+    <!-- Real numbers can be specified in several ways -->
+    <variable name="real_1" units="dimensionless" initial_value="1" />
+    <variable name="real_2" units="dimensionless" initial_value="+1" />
+    <variable name="real_3" units="dimensionless" initial_value="-1" />
+    <variable name="real_4" units="dimensionless" initial_value="1.0" />
+    <variable name="real_5" units="dimensionless" initial_value="-1.0" />
+    <variable name="real_6" units="dimensionless" initial_value="1e2" />
+    <variable name="real_7" units="dimensionless" initial_value="-1e2" />
+    <variable name="real_8" units="dimensionless" initial_value="-1.2e2" />
+    <variable name="real_9" units="dimensionless" initial_value="-12.34e256" />
   </component>
 
   <!--

@@ -29,6 +29,8 @@ known_fails = [
     'map_variables_variable_2_nonexistent',
     'model_with_math',
     'component_math_does_not_define_variable',
+    'variable_interfaces_both_in',
+    'variable_units_nonexistent',
     'variable_with_math',
 ]
 
@@ -139,12 +141,33 @@ expected_errors = {
         "No matching global declaration available for the validation root",
 
     # Variable elements
-    'variable_with_text':
-        "Element 'cellml:variable': Character content other than white",
+    'variable_initial_value_invalid_1':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    'variable_initial_value_invalid_2':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    'variable_initial_value_invalid_3':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    'variable_initial_value_invalid_4':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    'variable_initial_value_invalid_5':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    'variable_initial_value_invalid_6':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+
+    'variable_interfaces_private_invalid':
+        "is not a valid value of the atomic type 'cellml:interface'",
+    'variable_interfaces_public_invalid':
+        "is not a valid value of the atomic type 'cellml:interface'",
+
     'variable_name_invalid':
         "Not all fields of key identity-constraint 'cellml:variable_name'",
+    'variable_name_duplicate':
+        "Element 'cellml:variable': Duplicate key-sequence",
     'variable_name_missing':
-        "Element 'cellml:variable': The attribute 'name' is required",
+        "Not all fields of key identity-constraint 'cellml:variable_name'",
+
+    'variable_units_missing':
+        "Element 'cellml:variable': The attribute 'units' is required",
     'variable_with_component':
         "Element 'cellml:component': This element is not expected",
     'variable_with_component_ref':

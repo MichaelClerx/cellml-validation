@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.6: A variable's public and private interface can't both be in -->
+<model name="variable_interfaces_both_in"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c">
+    <variable name="x" units="dimensionless"
+              private_interface="in"
+              public_interface="in"
+    />
+  </component>
+</model>

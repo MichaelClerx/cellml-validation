@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.1: A variable must have a units attribute -->
+<model name="variable_units_missing"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c">
+    <variable name="x" />
+  </component>
+</model>
