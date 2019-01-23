@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- We can't have two models in one document -->
+<model name="root_node_two_models"
+       xmlns="http://www.cellml.org/cellml/1.0#" />
+<model name="root_node_two_models_2"
+       xmlns="http://www.cellml.org/cellml/1.0#" />

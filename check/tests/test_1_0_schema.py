@@ -34,8 +34,6 @@ known_fails = [
 expected_errors = {
     'attribute_in_cellml_namespace':
         "Element 'cellml:model': The attribute 'name' is required",
-    'component_as_root_node':
-        "No matching global declaration available for the validation root",
     'component_invalid_name':
         "Not all fields of key identity-constraint 'cellml:component_name'",
     'component_with_same_name':
@@ -95,8 +93,19 @@ expected_errors = {
         "Element 'cellml:model': The attribute 'name' is required",
     'model_with_text':
         "Element 'cellml:model': Character content other than white",
-    'model_wrong_namespace':
+
+    'root_node_not_model':
         "No matching global declaration available for the validation root",
+    'root_node_two_elements':
+        "Extra content at the end of the document",
+    'root_node_two_models':
+        "Extra content at the end of the document",
+    'root_node_wrong_namespace':
+        "No matching global declaration available for the validation root",
+
+
+
+
     'variable_with_text':
         "Element 'cellml:variable': Character content other than white",
 }
@@ -170,20 +179,29 @@ def test_invalid_models(filename, schema, schema_parser):
     """
     log = logging.getLogger(__name__)
 
-    # Parse CellML file
+    # Check file exists
     rel_path = os.path.join('invalid', filename + '.cellml')
     path = model(rel_path)
     assert os.path.isfile(path)
-    xml = etree.parse(path, schema_parser)
 
-    # Validate
-    assert not schema.validate(xml)
+    # Parse and validate
+    try:
+        xml = etree.parse(path, schema_parser)
+    except etree.XMLSyntaxError as e:
 
-    # Log detected error
-    e = schema.error_log.last_error
-    r = re.compile(re.escape('{' + CELLML_1_0_NS + '}'))
-    error = r.sub('cellml:', e.message)
-    log.info('Error on line ' + str(e.line) + ': ' + error)
+        # Log detected error
+        error = str(e)
+        log.info('Error during parsing: ' + error)
+
+    else:
+        # Validate
+        assert not schema.validate(xml)
+
+        # Log detected error
+        e = schema.error_log.last_error
+        r = re.compile(re.escape('{' + CELLML_1_0_NS + '}'))
+        error = r.sub('cellml:', e.message)
+        log.info('Error on line ' + str(e.line) + ': ' + error)
 
     # Test correct error was raised
     expected = expected_errors.get(filename, '')
