@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.8: A variable cannot have private_interface=in and an
+     initial value -->
+<model name="variable_interfaces_private_in_and_initial"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c">
+    <variable name="x"
+              units="dimensionless"
+              private_interface="in"
+              initial_value="2"/>
+  </component>
+</model>

@@ -20,9 +20,10 @@ from check import (
 
 known_fails = [
     'connection_map_components_missing',
+    'connection_map_components_multiple',
     'connection_map_variables_missing',
     'connection_only_junk',
-    'connection_two_map_components',
+    'connection_with_math',
     'group_no_component_ref',
     'group_only_junk',
     'map_variables_variable_1_nonexistent',
@@ -30,6 +31,8 @@ known_fails = [
     'model_with_math',
     'component_math_does_not_define_variable',
     'variable_interfaces_both_in',
+    'variable_interfaces_private_in_and_initial',
+    'variable_interfaces_public_in_and_initial',
     'variable_units_nonexistent',
     'variable_with_math',
 ]
@@ -70,10 +73,39 @@ expected_errors = {
     # Connection elements
     'connection_empty':
         "Element 'cellml:connection': Missing child element(s).",
+
+    'connection_with_component':
+        "Element 'cellml:component': This element is not expected",
+    'connection_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    'connection_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    'connection_with_group':
+        "Element 'cellml:group': This element is not expected",
+    'connection_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    'connection_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    'connection_with_model':
+        "Element 'cellml:model': This element is not expected",
     'connection_with_name_attribute':
         "Element 'cellml:connection', attribute 'name'",
+    'connection_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    'connection_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    'connection_with_role':
+        "Element 'cellml:role': This element is not expected",
     'connection_with_text':
         "Element 'cellml:connection': Character content other than white",
+    'connection_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    'connection_with_units':
+        "Element 'cellml:units': This element is not expected",
+    'connection_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    'connection_with_variable':
+        "Element 'cellml:variable': This element is not expected",
 
     # Group elements
     'group_empty':

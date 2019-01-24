@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.4.1: A connection cannot contain a variable -->
+<model name="connection_with_variable"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="c1">
+    <variable name="a" units="volt" />
+  </component>
+  <component name="c2">
+    <variable name="b" units="volt" />
+  </component>
+  <connection>
+    <map_components component_1="c1" component_2="c2" />
+    <map_variables variable_1="a" variable_2="b" />
+    <variable name="c" units="dimensionless" />
+  </connection>
+</model>

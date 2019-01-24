@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 3.4.4.1: Connection must have only 1 map_components -->
-<model name="connection_two_map_components"
+<model name="connection_map_components_multiple"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
     <variable name="a" units="volt" />
