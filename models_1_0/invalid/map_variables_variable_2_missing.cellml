@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.6.1: Map_variables must have an attribute variable_2 -->
+<model name="map_variables_variable_2_missing"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="c1">
+    <variable name="a" units="volt" public_interface="out" />
+  </component>
+  <component name="c2">
+    <variable name="a" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="c1" component_2="c2" />
+    <map_variables variable_1="a" />
+  </connection>
+</model>

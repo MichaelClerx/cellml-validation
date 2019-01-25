@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.6.1: A map_variables cannot contain a map_components -->
+<model name="map_variables_with_map_components"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <connection>
+    <map_components component_1="a" component_2="b" />
+    <map_variables variable_1="x" variable_2="x">
+      <map_components component_1="a" component_2="c" />
+    </map_variables>
+  </connection>
+  <component name="a">
+    <variable name="x" units="newton" public_interface="out" />
+  </component>
+  <component name="b">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+  <component name="c">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+</model>

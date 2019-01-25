@@ -3,7 +3,7 @@
 <model name="map_variables_variable_2_nonexistent"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
-    <variable name="a" units="volt" />
+    <variable name="a" units="volt" public_interface="out" />
   </component>
   <component name="c2" />
   <connection>

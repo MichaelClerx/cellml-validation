@@ -170,6 +170,10 @@ expected_errors = {
         "Element 'cellml:variable': This element is not expected",
 
     # Map_variables elements
+    'map_variables_variable_1_missing':
+        "Element 'cellml:map_variables': The attribute 'variable_1' is req",
+    'map_variables_variable_2_missing':
+        "Element 'cellml:map_variables': The attribute 'variable_2' is req",
     'map_variables_with_component':
         "Element 'cellml:component': This element is not expected",
     'map_variables_with_component_ref':

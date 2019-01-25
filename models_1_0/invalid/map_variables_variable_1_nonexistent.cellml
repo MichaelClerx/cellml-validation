@@ -4,7 +4,7 @@
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1" />
   <component name="c2">
-    <variable name="b" units="volt" />
+    <variable name="b" units="volt" public_interface="out" />
   </component>
   <connection>
     <map_components component_1="c1" component_2="c2" />

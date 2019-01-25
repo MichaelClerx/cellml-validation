@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.5.1: A map_components cannot contain a model -->
-<model name="map_components_with_model"
+<!-- CellML 1.0, 3.4.6.1: A map_variables cannot contain a units -->
+<model name="map_variables_with_units"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <connection>
-    <map_components component_1="a" component_2="b">
-      <model name="howdy" />
-    </map_components>
-    <map_variables variable_1="x" variable_2="x" />
+    <map_components component_1="a" component_2="b" />
+    <map_variables variable_1="x" variable_2="x">
+      <units name="terry" />
+    </map_variables>
   </connection>
   <component name="a">
     <variable name="x" units="newton" public_interface="out" />
