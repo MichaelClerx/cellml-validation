@@ -4,7 +4,7 @@ This repository is intended to host tests for the various validation tools for C
 
 Disclaimers:
 
-1. Schema/DTD/RelaxNG can only provide *partial* validation for CellML files.
+1. XML tehcnologies like Schema, DTD, RelaxNG, and Schematron can only provide *partial* validation for CellML files.
 2. This repo is still under development, meaning the validation tools have not yet been fully tested.
 
 ## CellML 2.0 (Draft)
@@ -18,8 +18,8 @@ Disclaimers:
 
 ## CellML 1.0
 
+* [Overview page](cellml_1_0/README.md)
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
-* [List of CellML 1.0 elements and attributes](cellml_1_0/README.md)
 * Older files:
   * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
   * [CellML 1.0 DTD](cellml_1_0/todo/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
