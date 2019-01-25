@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 2.4.4: A map_components cannot have text -->
-<model name="map_components_with_text"
+<!-- CellML 1.0, 3.4.5.1: A map_components cannot contain mathml:math -->
+<model name="map_components_with_math"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <connection>
     <map_components component_1="a" component_2="b">
-      HelloThere
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <eq/>
+          <ci>x</ci>
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </math>
     </map_components>
     <map_variables variable_1="x" variable_2="x" />
   </connection>

@@ -31,8 +31,8 @@ Limitations related to model structure:
    as `component_1` and `component_2` (see CellML 1.0, 3.4.5.4). This can be
    done with elements in XML Schema, but not with attributes.
 
- - The schema can not detect duplicate connections when connection_1 in one
-   connection equals connection_2 in the other.
+ - The schema can not detect duplicate connections when component_1 in one
+   connection equals component_2 in the other.
 
  - The schema does not detect when a `map_variables` violates the rules for
    public and private interfaces (see CellML 1.0, 3.4.6.4).
@@ -211,6 +211,12 @@ Limitations related to extensions and namespaces:
       <xs:selector xpath="cellml:connection/cellml:map_components" />
       <xs:field xpath="@component_2" />
     </xs:keyref>
+    <!-- Component connections can only be defined once (partial check) -->
+    <xs:unique name="map_components">
+      <xs:selector xpath="cellml:connection/cellml:map_components" />
+      <xs:field xpath="@component_1" />
+      <xs:field xpath="@component_2" />
+    </xs:unique>
     <!-- Group component_refs must name components -->
     <xs:keyref name="group_components" refer="cellml:component_name">
       <xs:selector xpath="cellml:group/cellml:component_ref" />
@@ -255,14 +261,7 @@ Limitations related to extensions and namespaces:
           <xs:field xpath="@name" />
         </xs:unique>
       </xs:element>
-      <xs:element name="connection" type="cellml:connection_type">
-        <!-- Component connections must be unique (partial check) -->
-        <xs:unique name="unique_connections">
-          <xs:selector xpath="cellml:connection/cellml:map_components" />
-          <xs:field xpath="component_1" />
-          <xs:field xpath="component_2" />
-        </xs:unique>
-      </xs:element>
+      <xs:element name="connection" type="cellml:connection_type" />
       <!-- Allow any elements not in CellML (including tmp-documentation and rdf) -->
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>

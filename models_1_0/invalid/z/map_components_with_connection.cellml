@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 2.4.4: A map_components cannot have text -->
-<model name="map_components_with_text"
+<!-- CellML 1.0, 3.4.5.1: A map_components cannot contain a connection -->
+<model name="map_components_with_connection"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <connection>
     <map_components component_1="a" component_2="b">
-      HelloThere
+      <connection>
+        <map_components component_1="a" component_2="c" />
+        <map_variables variable_1="x" variable_2="x" />
+      </connection>
     </map_components>
     <map_variables variable_1="x" variable_2="x" />
   </connection>
@@ -12,6 +15,9 @@
     <variable name="x" units="newton" public_interface="out" />
   </component>
   <component name="b">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+  <component name="c">
     <variable name="x" units="newton" public_interface="in" />
   </component>
 </model>
