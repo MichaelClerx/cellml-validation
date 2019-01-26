@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.2.1: Component children can come in any order. Although
+                          units, variable, reaction, math is preferred. -->
+<model name="component_child_order_2"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="e" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="d">
+        <role role="reactant" />
+      </variable_ref>
+    </reaction>
+    <variable name="d" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>a</ci>
+        <cn cellml:units="dimensionless">1</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>b</ci>
+        <cn cellml:units="dimensionless">2</cn>
+      </apply>
+    </math>
+    <variable name="c" units="dimensionless" />
+    <units name="a" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>c</ci>
+        <cn cellml:units="dimensionless">3</cn>
+      </apply>
+    </math>
+    <reaction>
+      <variable_ref variable="e">
+        <role role="reactant" />
+      </variable_ref>
+    </reaction>
+    <variable name="b" units="dimensionless" />
+    <units name="b" />
+    <variable name="a" units="dimensionless" />
+  </component>
+</model>

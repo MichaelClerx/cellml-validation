@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.2.1: Components can contain units -->
+<model name="component_with_one_units"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <units name="a" />
+  </component>
+</model>

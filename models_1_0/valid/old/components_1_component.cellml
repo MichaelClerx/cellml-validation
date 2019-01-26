@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Model with one component, one variable -->
-<model name="one_component_one_variable"
-       xmlns="http://www.cellml.org/cellml/1.0#">
-  <component name="A">
-    <variable name="a" units="dimensionless" initial_value="1" />
-  </component>
-</model>

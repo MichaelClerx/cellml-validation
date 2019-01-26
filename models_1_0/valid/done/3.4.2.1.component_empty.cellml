@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.2: Not mentioned explicitly, but components can be empty -->
+<!-- CellML 1.0, 3.4.2.1: Not mentioned explicitly, but components can be empty -->
 <model name="component_empty"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  <component name="component" />
+  <component name="A" />
 </model>
