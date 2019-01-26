@@ -84,10 +84,10 @@ expected_errors = {
         "Element 'cellml:variable': Character content other than white",
     '2.4.4.text_in_variable_ref':
         "Element 'cellml:variable_ref': Character content other than white",
-    # 2.4.5
-
-
-
+    # 2.5.1 Identifiers are case sensitive
+    '2.5.1.identifiers_are_case_sensitive':
+        "No match found for key-sequence",
+    # 2.5.2 There are no attributes in the CellML namespace
     '2.5.2.attribute_in_cellml_namespace':
         "Element 'cellml:model': The attribute 'name' is required",
 

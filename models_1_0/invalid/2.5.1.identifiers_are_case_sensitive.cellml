@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 2.5.1 Identifiers are case sensitive -->
+<model name="text_in_connection"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="volt" />
+  </component>
+  <component name="B">
+    <variable name="x" units="volt" />
+  </component>
+  <connection>
+    <map_components component_1="a" component_2="B" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+</model>
