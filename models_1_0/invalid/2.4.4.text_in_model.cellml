@@ -2,5 +2,5 @@
 <!-- CellML 1.0, 2.4.4: A model cannot have text -->
 <model name="text_in_model"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  This is a model
+  This is a model with text. It isn't valid.
 </model>

@@ -3,6 +3,6 @@
 <model name="text_in_component"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
-    Yes
+    Fruit
   </component>
 </model>

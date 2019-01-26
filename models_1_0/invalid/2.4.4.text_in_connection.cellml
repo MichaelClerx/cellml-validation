@@ -11,6 +11,6 @@
   <connection>
     <map_components component_1="c1" component_2="c2" />
     <map_variables variable_1="a" variable_2="b" />
-    Hello there
+    Star fruit
   </connection>
 </model>

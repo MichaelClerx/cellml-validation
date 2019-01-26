@@ -56,16 +56,35 @@ expected_errors = {
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         "Element 'cellml:component': Character content other than white",
+    '2.4.4.text_in_component_ref':
+        "Element 'cellml:component_ref': Character content other than white",
     '2.4.4.text_in_connection':
         "Element 'cellml:connection': Character content other than white",
+    '2.4.4.text_in_group':
+        "Element 'cellml:group': Character content other than white",
     '2.4.4.text_in_map_components':
         "Element 'cellml:map_components': Character content other than white",
     '2.4.4.text_in_map_variables':
         "Element 'cellml:map_variables': Character content other than white",
     '2.4.4.text_in_model':
         "Element 'cellml:model': Character content other than white",
+    '2.4.4.text_in_reaction':
+        "Element 'cellml:reaction': Character content other than white",
+    '2.4.4.text_in_relationship_ref':
+        "Element 'cellml:relationship_ref': Character content other than",
+    '2.4.4.text_in_role':
+        "Element 'cellml:role': Character content other than white",
+    '2.4.4.text_in_unit':
+        "Element 'cellml:unit': Character content other than white",
+    '2.4.4.text_in_units_1':
+        "Element 'cellml:units': Character content other than white",
+    '2.4.4.text_in_units_2':
+        "Element 'cellml:units': Character content other than white",
     '2.4.4.text_in_variable':
         "Element 'cellml:variable': Character content other than white",
+    '2.4.4.text_in_variable_ref':
+        "Element 'cellml:variable_ref': Character content other than white",
+    # 2.4.5
 
 
 

@@ -4,7 +4,7 @@
        xmlns="http://www.cellml.org/cellml/1.0#">
   <connection>
     <map_components component_1="a" component_2="b">
-      HelloThere
+      Fruit
     </map_components>
     <map_variables variable_1="x" variable_2="x" />
   </connection>
