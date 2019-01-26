@@ -4,7 +4,7 @@ This directory contains validation files for CellML 1.0.
 
 A quick-and-dirty reference is given below.
 
-## These things exist in CellML:
+## These things exist in CellML 1.0:
 
 Elements are shown with their attributes in brackets.
 Required elements/attributes are indicated in italics.
@@ -29,7 +29,7 @@ Required elements/attributes are indicated in italics.
     - *map_variables*(*variable_1*,*variable_2*)
 
 In addition, the document can contain any element from the `rdf` namespace, and all elements are allowed to have a `cmeta:id` attribute.
-Finally, all CellML elements are allowed contain _any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
+Finally, all CellML 1.0 elements are allowed to contain _any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
 
 ## Grouping & public/private interfaces
 
@@ -38,21 +38,21 @@ Finally, all CellML elements are allowed contain _any elements and attributes fr
 
 ![Encapsulation example](encapsulation.svg)
 
-In CellML, components can't refer to each other's values.
+In CellML 1.0, components can't refer to each other's values.
 Instead, if a component X wants to use a value from Y, it defines a _new variable_ in X and gives it an interface of "in". It then makes a _connection_ to the variable in Y, which must have an interface of "out".
 
 - Connections can only be made between siblings, or between parent and child.
 - Sibling connections are governed by the _public_ interfaces.
 - Parent-child relationships are defined by the _parent's private_ interface, and the _child's public interface_.
 
-Note that CellML refers to children as "components in the encapsulated set".
+Note that CellML 1.0 refers to children as "components in the encapsulated set".
 The following things follow from the rules above:
 
 - There are no relationsips that are private on both ends.
 - A parent can obtain a variable from a child (via the parent's private interface "in") and then share it with a sibling (via the parent's public interface "out").
 - A parent can obtain a variable from a sibling (via the parent's public interface "in") and then share it with its children (via the parent's private interface "out").
 
-Because a variable can only get its value from one source, CellML has additional rules saying:
+Because a variable can only get its value from one source, CellML 1.0 has additional rules saying:
 
 - A variable with an "in" interface can't be changed by its component's maths (or reactions).
 - A variable with an "in" interface can only be mapped to a single other variable with an "out" interface.
@@ -106,16 +106,16 @@ The third rule doesn't seem strictly necessary (as the second rule already preve
 - variable_1
 - variable_2
 
-### Relationship types
+## Namespaces
 
-- containment
-- encapsulation
+```
+cellml="http://www.cellml.org/cellml/1.0#"
+cmeta="http://www.cellml.org/metadata/1.0#"
+mathml="http://www.w3.org/1998/Math/MathML" 
+rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+```
 
-### Interface types
-
-- in
-- out
-- none
+The hash characters at the end seem to be so that [you can identify elements e.g. `rdf:type` as `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`](https://www.w3.org/TR/REC-rdf-syntax/#section-Namespace).
 
 ### Predefined units
 
@@ -176,6 +176,17 @@ The third rule doesn't seem strictly necessary (as the second rule already preve
 - atto
 - zepto
 - yocto
+
+### Relationship types
+
+- containment
+- encapsulation
+
+### Interface types
+
+- in
+- out
+- none
 
 ### Reaction directions
 
