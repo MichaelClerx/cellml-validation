@@ -90,8 +90,35 @@ expected_errors = {
     # 2.5.2 There are no attributes in the CellML namespace
     '2.5.2.attribute_in_cellml_namespace':
         "Element 'cellml:model': The attribute 'name' is required",
-
-
+    # 2.5.3 Extension namespaces again
+    # 3.4.1.1 Models contain only units, component, group, connection
+    '3.4.1.1.model_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '3.4.1.1.model_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '3.4.1.1.model_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '3.4.1.1.model_with_math': None,
+    '3.4.1.1.model_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '3.4.1.1.model_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '3.4.1.1.model_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '3.4.1.1.model_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '3.4.1.1.model_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '3.4.1.1.model_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '3.4.1.1.model_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+    # 3.4.1.1 Models must have a name
+    '3.4.1.1.model_name_missing':
+        "Element 'cellml:model': The attribute 'name' is required",
+    # 3.4.1.2 A model name must be a valid identifier
+    '3.4.1.2.model_name_invalid':
+        "Element 'cellml:model', attribute 'name': '___' is not a valid value",
 
 
 
@@ -261,33 +288,7 @@ expected_errors = {
     'map_variables_with_math': None,
     'map_variables_variable_1_nonexistent': None,
     'map_variables_variable_2_nonexistent': None,
-    # Model elements
-    'model_name_invalid':
-        "Element 'cellml:model', attribute 'name': '___' is not a valid value",
-    'model_name_missing':
-        "Element 'cellml:model': The attribute 'name' is required",
-    'model_with_component_ref':
-        "Element 'cellml:component_ref': This element is not expected",
-    'model_with_map_components':
-        "Element 'cellml:map_components': This element is not expected",
-    'model_with_map_variables':
-        "Element 'cellml:map_variables': This element is not expected",
-    'model_with_model':
-        "Element 'cellml:model': This element is not expected",
-    'model_with_reaction':
-        "Element 'cellml:reaction': This element is not expected",
-    'model_with_relationship_ref':
-        "Element 'cellml:relationship_ref': This element is not expected",
-    'model_with_role':
-        "Element 'cellml:role': This element is not expected",
-    'model_with_unit':
-        "Element 'cellml:unit': This element is not expected",
-    'model_with_variable_ref':
-        "Element 'cellml:variable_ref': This element is not expected",
-    'model_with_variable':
-        "Element 'cellml:variable': This element is not expected",
 
-    'model_with_math': None,
     # Variable elements
     'variable_initial_value_invalid_1':
         "is not a valid value of the atomic type 'cellml:real_number'",
