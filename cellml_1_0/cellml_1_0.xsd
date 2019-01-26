@@ -170,6 +170,7 @@ Limitations related to extensions and namespaces:
   <xs:simpleType name="identifier">
     <xs:restriction base="xs:string">
       <xs:pattern value="_*[a-zA-Z0-9][a-zA-Z0-9_]*" />
+      <!--<xs:pattern value="\s*_*[a-zA-Z0-9][a-zA-Z0-9_]*\s*" />-->
     </xs:restriction>
   </xs:simpleType>
 
@@ -178,6 +179,7 @@ Limitations related to extensions and namespaces:
   <xs:simpleType name="real_number">
     <xs:restriction base="xs:string">
       <xs:pattern value="[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?" />
+      <!--<xs:pattern value="\s*[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?\s*" />-->
     </xs:restriction>
   </xs:simpleType>
 

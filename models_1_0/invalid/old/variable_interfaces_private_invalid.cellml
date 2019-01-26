@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.3.5: A variable's public_interface must be in/out/none -->
-<model name="variable_interfaces_private_invalid"
-       xmlns="http://www.cellml.org/cellml/1.0#">
-  <component name="c">
-    <variable name="x" units="dimensionless" private_interface="yes" />
-  </component>
-</model>

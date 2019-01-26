@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The root element must be in the CellML namespace -->
+<cellml:model name="root_namespace_2"
+              xmlns:cellml="http://www.cellml.org/cellml/1.0#"/>

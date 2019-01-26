@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.1: A variable can have a public and a private interface -->
+<model name="variable_with_interfaces"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <!-- in/in isn't allowed -->
+    <variable name="a" public_interface="in" private_interface="out" units="dimensionless" />
+    <variable name="b" public_interface="in" private_interface="none" units="dimensionless" />
+    <variable name="c" public_interface="in" units="dimensionless" />
+    <variable name="d" public_interface="out" private_interface="in" units="dimensionless" />
+    <variable name="e" public_interface="out" private_interface="out" units="dimensionless" />
+    <variable name="f" public_interface="out" private_interface="none" units="dimensionless" />
+    <variable name="g" public_interface="out" units="dimensionless" />
+    <variable name="h" public_interface="none" private_interface="in" units="dimensionless" />
+    <variable name="i" public_interface="none" private_interface="out" units="dimensionless" />
+    <variable name="j" public_interface="none" private_interface="none" units="dimensionless" />
+    <variable name="k" public_interface="none" units="dimensionless" />
+    <variable name="l" private_interface="in" units="dimensionless" />
+    <variable name="m" private_interface="out" units="dimensionless" />
+    <variable name="n" private_interface="none" units="dimensionless" />
+    <variable name="o" units="dimensionless" />
+  </component>
+</model>

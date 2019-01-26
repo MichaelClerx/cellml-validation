@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.3.7: A variable's initial_value must be a real number -->
-<model name="variable_initial_value_invalid_3"
+<!-- CellML 1.0 does not define the format of a "real number" -->
+<model name="real_number_invalid_3"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c">
     <variable name="x" units="dimensionless" initial_value="1f12" />

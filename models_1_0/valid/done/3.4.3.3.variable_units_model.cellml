@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.3.3: A variable can have a model unit -->
+<model name="variable_units_model"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="oranges" />
+  <component name="A">
+    <variable name="a" units="oranges" />
+  </component>
+</model>

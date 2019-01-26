@@ -15,15 +15,28 @@ import check
 
 # Expected error messages and known fails
 expected_errors = {
-    # 0 Root node
-    '0.root_node_not_model':
+    # Not in spec: Root node
+    '0.0.root_node_not_model':
         "No matching global declaration available for the validation root",
-    '0.root_node_two_elements':
+    '0.0.root_node_two_elements':
         "Extra content at the end of the document",
-    '0.root_node_two_models':
+    '0.0.root_node_two_models':
         "Extra content at the end of the document",
-    '0.root_node_namespace_wrong':
+    '0.0.root_node_namespace_wrong':
         "No matching global declaration available for the validation root",
+    # Not in spec: Real number format
+    '0.1.real_number_invalid_1':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    '0.1.real_number_invalid_2':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    '0.1.real_number_invalid_3':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    '0.1.real_number_invalid_4':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    '0.1.real_number_invalid_5':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    '0.1.real_number_invalid_6':
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         #"'name': '' is not a valid value",
@@ -144,6 +157,68 @@ expected_errors = {
     # 3.4.2.2 Component names must be unique
     '3.4.2.2.component_name_duplicate':
         "Duplicate key-sequence ['c1']",
+    # 3.4.3.1 Variables can't contain any elements
+    '3.4.3.1.variable_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '3.4.3.1.variable_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '3.4.3.1.variable_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '3.4.3.1.variable_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '3.4.3.1.variable_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '3.4.3.1.variable_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '3.4.3.1.variable_with_math': None,
+    '3.4.3.1.variable_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '3.4.3.1.variable_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '3.4.3.1.variable_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '3.4.3.1.variable_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '3.4.3.1.variable_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '3.4.3.1.variable_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '3.4.3.1.variable_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '3.4.3.1.variable_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+    # 3.4.3.1 Variables must have a name attribute
+    '3.4.3.1.variable_name_missing':
+        "Not all fields of key identity-constraint 'cellml:variable_name'",
+    # 3.4.3.1 Variables must have a units attribute
+    '3.4.3.1.variable_units_missing':
+        "Element 'cellml:variable': The attribute 'units' is required",
+    # 3.4.3.2 A variable name must be an identifier
+    '3.4.3.2.variable_name_invalid':
+        "Not all fields of key identity-constraint 'cellml:variable_name'",
+    # 3.4.3.2 A variable name must be unique with the component
+    '3.4.3.2.variable_name_duplicate':
+        "Element 'cellml:variable': Duplicate key-sequence",
+    # 3.4.3.3 A variable must reference known units
+    '3.4.3.3.variable_units_unknown': None,
+    # 3.4.3.3 A variable cannot reference another component's units
+    '3.4.3.3.variable_units_other_component': None,
+    # 3.4.3.4 A public interface must be one of in/out/none
+    '3.4.3.4.variable_interface_public_invalid':
+        "is not a valid value of the atomic type 'cellml:interface'",
+    # 3.4.3.5 A private interface must be one of in/out/none
+    '3.4.3.5.variable_interface_private_invalid':
+        "is not a valid value of the atomic type 'cellml:interface'",
+    # 3.4.3.6 The private and public interface can't both be in
+    '3.4.3.6.variable_interfaces_both_in': None,
+    # 3.4.3.7 The initial value (if present) must be a real number
+    '3.4.3.7.variable_initial_value_empty':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    '3.4.3.7.variable_initial_value_invalid':
+        "is not a valid value of the atomic type 'cellml:real_number'",
+    # 3.4.3.8 A variable can't have an initial value and an "in" interface
+    '3.4.3.8.variable_interfaces_private_in_and_initial': None,
+    '3.4.3.8.variable_interfaces_public_in_and_initial': None,
 
 
 
@@ -285,66 +360,6 @@ expected_errors = {
     'map_variables_variable_1_nonexistent': None,
     'map_variables_variable_2_nonexistent': None,
 
-    # Variable elements
-    'variable_initial_value_invalid_1':
-        "is not a valid value of the atomic type 'cellml:real_number'",
-    'variable_initial_value_invalid_2':
-        "is not a valid value of the atomic type 'cellml:real_number'",
-    'variable_initial_value_invalid_3':
-        "is not a valid value of the atomic type 'cellml:real_number'",
-    'variable_initial_value_invalid_4':
-        "is not a valid value of the atomic type 'cellml:real_number'",
-    'variable_initial_value_invalid_5':
-        "is not a valid value of the atomic type 'cellml:real_number'",
-    'variable_initial_value_invalid_6':
-        "is not a valid value of the atomic type 'cellml:real_number'",
-    'variable_interfaces_private_invalid':
-        "is not a valid value of the atomic type 'cellml:interface'",
-    'variable_interfaces_public_invalid':
-        "is not a valid value of the atomic type 'cellml:interface'",
-    'variable_name_invalid':
-        "Not all fields of key identity-constraint 'cellml:variable_name'",
-    'variable_name_duplicate':
-        "Element 'cellml:variable': Duplicate key-sequence",
-    'variable_name_missing':
-        "Not all fields of key identity-constraint 'cellml:variable_name'",
-    'variable_units_missing':
-        "Element 'cellml:variable': The attribute 'units' is required",
-    'variable_with_component':
-        "Element 'cellml:component': This element is not expected",
-    'variable_with_component_ref':
-        "Element 'cellml:component_ref': This element is not expected",
-    'variable_with_connection':
-        "Element 'cellml:connection': This element is not expected",
-    'variable_with_group':
-        "Element 'cellml:group': This element is not expected",
-    'variable_with_map_components':
-        "Element 'cellml:map_components': This element is not expected",
-    'variable_with_map_variables':
-        "Element 'cellml:map_variables': This element is not expected",
-    'variable_with_model':
-        "Element 'cellml:model': This element is not expected",
-    'variable_with_reaction':
-        "Element 'cellml:reaction': This element is not expected",
-    'variable_with_relationship_ref':
-        "Element 'cellml:relationship_ref': This element is not expected",
-    'variable_with_role':
-        "Element 'cellml:role': This element is not expected",
-    'variable_with_unit':
-        "Element 'cellml:unit': This element is not expected",
-    'variable_with_units':
-        "Element 'cellml:units': This element is not expected",
-    'variable_with_variable_ref':
-        "Element 'cellml:variable_ref': This element is not expected",
-    'variable_with_variable':
-        "Element 'cellml:variable': This element is not expected",
-
-
-    'variable_interfaces_both_in': None,
-    'variable_interfaces_private_in_and_initial': None,
-    'variable_interfaces_public_in_and_initial': None,
-    'variable_units_nonexistent': None,
-    'variable_with_math': None,
 
     'component_math_does_not_define_variable': None,
 
