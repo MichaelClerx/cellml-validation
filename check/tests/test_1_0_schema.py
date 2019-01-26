@@ -10,18 +10,11 @@ import pytest
 import re
 from lxml import etree
 
-from check import (
-    CELLML_1_0_NS,
-    cellml_1_0 as cellml,
-    model_1_0 as model,
-    SchemaResolver,
-)
+import check
 
 
-
-# Expected error messages, or known fails
+# Expected error messages and known fails
 expected_errors = {
-
     # 0 Root node
     '0.root_node_not_model':
         "No matching global declaration available for the validation root",
@@ -119,42 +112,45 @@ expected_errors = {
     # 3.4.1.2 A model name must be a valid identifier
     '3.4.1.2.model_name_invalid':
         "Element 'cellml:model', attribute 'name': '___' is not a valid value",
-
-
-
-
-
-    # Component element
-    'component_name_duplicate':
-        "Duplicate key-sequence ['c1']",
-    'component_name_invalid':
-        "Not all fields of key identity-constraint 'cellml:component_name'",
-    'component_name_missing':
-        "Element 'cellml:component': Not all fields of key",
-    'component_with_component':
+    # 3.4.2.1 Components contain only units, variable, reaction, math
+    '3.4.2.1.component_with_component':
         "Element 'cellml:component': This element is not expected",
-    'component_with_component_ref':
+    '3.4.2.1.component_with_component_ref':
         "Element 'cellml:component_ref': This element is not expected",
-    'component_with_connection':
+    '3.4.2.1.component_with_connection':
         "Element 'cellml:connection': This element is not expected",
-    'component_with_group':
+    '3.4.2.1.component_with_group':
         "Element 'cellml:group': This element is not expected",
-    'component_with_map_components':
+    '3.4.2.1.component_with_map_components':
         "Element 'cellml:map_components': This element is not expected",
-    'component_with_map_variables':
+    '3.4.2.1.component_with_map_variables':
         "Element 'cellml:map_variables': This element is not expected",
-    'component_with_model':
+    '3.4.2.1.component_with_model':
         "Element 'cellml:model': This element is not expected",
-    'component_with_relationship_ref':
+    '3.4.2.1.component_with_relationship_ref':
         "Element 'cellml:relationship_ref': This element is not expected",
-    'component_with_role':
+    '3.4.2.1.component_with_role':
         "Element 'cellml:role': This element is not expected",
-    'component_with_unit':
+    '3.4.2.1.component_with_unit':
         "Element 'cellml:unit': This element is not expected",
-    'component_with_variable_ref':
+    '3.4.2.1.component_with_variable_ref':
         "Element 'cellml:variable_ref': This element is not expected",
+    # 3.4.2.1 Components must have a name
+    '3.4.2.1.component_name_missing':
+        "Element 'cellml:component': Not all fields of key",
+    # 3.4.2.2 A component name must be a valid identifier
+    '3.4.2.2.component_name_invalid':
+        "Not all fields of key identity-constraint 'cellml:component_name'",
+    # 3.4.2.2 Component names must be unique
+    '3.4.2.2.component_name_duplicate':
+        "Duplicate key-sequence ['c1']",
 
-    'component_math_does_not_define_variable': None,
+
+
+
+
+
+
 
     # Connection elements
     'connection_empty':
@@ -350,6 +346,7 @@ expected_errors = {
     'variable_units_nonexistent': None,
     'variable_with_math': None,
 
+    'component_math_does_not_define_variable': None,
 
 }
 
@@ -358,14 +355,14 @@ expected_errors = {
 def schema_parser():
     """ Returns a parser that can resolve schema locations. """
     parser = etree.XMLParser(no_network=True)
-    parser.resolvers.add(SchemaResolver())
+    parser.resolvers.add(check.SchemaResolver())
     return parser
 
 
 @pytest.fixture
 def schema(schema_parser):
     """ Returns a parsed schema object. """
-    filename = cellml('cellml_1_0.xsd')
+    filename = check.cellml_1_0('cellml_1_0.xsd')
     assert os.path.isfile(filename)
     return etree.XMLSchema(etree.parse(filename, schema_parser))
 
@@ -383,14 +380,14 @@ def valid_models():
     # Note: Returning file basename rather than path, so that the test output
     # is e.g. test_valid_models[empty-model] instead of something containing
     # containing the absolute path and extension.
-    files = [os.path.splitext(x) for x in os.listdir(model('valid'))]
+    files = [os.path.splitext(x) for x in os.listdir(check.model_1_0('valid'))]
     return [x[0] for x in files if x[1] == '.cellml']
 
 
 def invalid_models():
     """ Returns a list of filenames for models that should not validate. """
     files = []
-    for f in os.listdir(model('invalid')):
+    for f in os.listdir(check.model_1_0('invalid')):
         name, ext = os.path.splitext(f)
         if ext != '.cellml':
             continue
@@ -408,13 +405,13 @@ def test_valid_models(filename, schema, schema_parser):
     """
     # Parse CellML file
     filename = os.path.join('valid', filename + '.cellml')
-    path = model(filename)
+    path = check.model_1_0(filename)
     assert os.path.isfile(path)
     xml = etree.parse(path, schema_parser)
 
     # Check if namespace is set correctly (for a nicer error message)
     tag = etree.QName(xml.getroot().tag)
-    assert tag.namespace == CELLML_1_0_NS
+    assert tag.namespace == check.CELLML_1_0_NS
 
     # Validate
     schema.assertValid(xml)
@@ -429,7 +426,7 @@ def test_invalid_models(filename, schema, schema_parser):
 
     # Check file exists
     rel_path = os.path.join('invalid', filename + '.cellml')
-    path = model(rel_path)
+    path = check.model_1_0(rel_path)
     assert os.path.isfile(path)
 
     # Parse and validate
@@ -448,7 +445,7 @@ def test_invalid_models(filename, schema, schema_parser):
 
         # Log detected error
         e = schema.error_log.last_error
-        r = re.compile(re.escape('{' + CELLML_1_0_NS + '}'))
+        r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
         error = r.sub('cellml:', e.message)
         log.info('Error on line ' + str(e.line) + ': ' + error)
 
