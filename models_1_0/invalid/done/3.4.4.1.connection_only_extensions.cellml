@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 3.4.4.1: Connections must have map_components and map_variables -->
-<model name="connection_empty"
+<model name="connection_only_extensions"
        xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:junk="http://example.org">
+       xmlns:fruit="http://fruit.org">
   <connection>
-    <junk:one />
-    <junk:two />
+    <fruit:apple />
+    <fruit:banana />
+    <fruit:cherry />
   </connection>
 </model>

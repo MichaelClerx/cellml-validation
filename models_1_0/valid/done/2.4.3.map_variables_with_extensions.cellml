@@ -13,9 +13,9 @@
     </map_variables>
   </connection>
   <component name="A">
-    <variable name="a" units="dimensionless" />
+    <variable name="a" units="dimensionless" public_interface="out" />
   </component>
   <component name="B">
-    <variable name="a" units="dimensionless" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
 </model>

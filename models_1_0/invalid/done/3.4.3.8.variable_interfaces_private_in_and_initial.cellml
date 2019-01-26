@@ -3,8 +3,8 @@
      initial value -->
 <model name="variable_interfaces_private_in_and_initial"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  <component name="c">
-    <variable name="x"
+  <component name="A">
+    <variable name="a"
               units="dimensionless"
               private_interface="in"
               initial_value="2"/>

@@ -220,52 +220,55 @@ expected_errors = {
     '3.4.3.8.variable_interfaces_private_in_and_initial': None,
     '3.4.3.8.variable_interfaces_public_in_and_initial': None,
 
-
-
-
-
-
-
-
-    # Connection elements
-    'connection_empty':
+    # 3.4.4.1 A connection must contain exactly one map_components
+    '3.4.4.1.connection_map_components_missing': None,
+    '3.4.4.1.connection_map_components_multiple': None,
+    # 3.4.4.1 A component must contain at least one map_variables
+    '3.4.4.1.connection_map_variables_missing': None,
+    # 3.4.4.1 A connection must have map_components and map_variables
+    '3.4.4.1.connection_only_extensions': None,
+    '3.4.4.1.connection_with_math': None,
+    '3.4.4.1.connection_empty':
         "Element 'cellml:connection': Missing child element(s).",
-    'connection_with_component':
+    # 3.4.4.1 A connection can only contain map_components and map_variables
+    '3.4.4.1.connection_with_component':
         "Element 'cellml:component': This element is not expected",
-    'connection_with_component_ref':
+    '3.4.4.1.connection_with_component_ref':
         "Element 'cellml:component_ref': This element is not expected",
-    'connection_with_connection':
+    '3.4.4.1.connection_with_connection':
         "Element 'cellml:connection': This element is not expected",
-    'connection_with_group':
+    '3.4.4.1.connection_with_group':
         "Element 'cellml:group': This element is not expected",
-    'connection_with_map_components':
+    '3.4.4.1.connection_with_map_components':
         "Element 'cellml:map_components': This element is not expected",
-    'connection_with_map_variables':
+    '3.4.4.1.connection_with_map_variables':
         "Element 'cellml:map_variables': This element is not expected",
-    'connection_with_model':
+    '3.4.4.1.connection_with_model':
         "Element 'cellml:model': This element is not expected",
-    'connection_with_name_attribute':
+    '3.4.4.1.connection_with_name_attribute':
         "Element 'cellml:connection', attribute 'name'",
-    'connection_with_reaction':
+    '3.4.4.1.connection_with_reaction':
         "Element 'cellml:reaction': This element is not expected",
-    'connection_with_relationship_ref':
+    '3.4.4.1.connection_with_relationship_ref':
         "Element 'cellml:relationship_ref': This element is not expected",
-    'connection_with_role':
+    '3.4.4.1.connection_with_role':
         "Element 'cellml:role': This element is not expected",
-    'connection_with_unit':
+    '3.4.4.1.connection_with_unit':
         "Element 'cellml:unit': This element is not expected",
-    'connection_with_units':
+    '3.4.4.1.connection_with_units':
         "Element 'cellml:units': This element is not expected",
-    'connection_with_variable_ref':
+    '3.4.4.1.connection_with_variable_ref':
         "Element 'cellml:variable_ref': This element is not expected",
-    'connection_with_variable':
+    '3.4.4.1.connection_with_variable':
         "Element 'cellml:variable': This element is not expected",
 
-    'connection_map_components_missing': None,
-    'connection_map_components_multiple': None,
-    'connection_map_variables_missing': None,
-    'connection_only_junk': None,
-    'connection_with_math': None,
+
+
+
+
+
+
+
 
 
     # Group elements

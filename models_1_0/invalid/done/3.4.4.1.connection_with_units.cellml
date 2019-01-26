@@ -3,15 +3,15 @@
 <model name="connection_with_units"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
-  <component name="c1">
-    <variable name="a" units="volt" />
+  <component name="A">
+    <variable name="a" units="volt" public_interface="out" />
   </component>
-  <component name="c2">
-    <variable name="b" units="volt" />
+  <component name="B">
+    <variable name="a" units="volt" public_interface="in" />
   </component>
   <connection>
-    <map_components component_1="c1" component_2="c2" />
-    <map_variables variable_1="a" variable_2="b" />
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="a" />
     <units name="bertie" />
   </connection>
 </model>

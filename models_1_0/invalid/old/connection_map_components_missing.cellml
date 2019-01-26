@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 3.4.4.1: Connection must have 1 map_components -->
-<model name="connection_map_components_missing"
-       xmlns="http://www.cellml.org/cellml/1.0#">
-  <connection>
-    <map_variables variable_1="a" variable_2="b" />
-    <map_variables variable_1="c" variable_2="d" />
-  </connection>
-</model>
