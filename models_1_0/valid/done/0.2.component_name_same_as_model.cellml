@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Implied: A component name can be the same as the model name -->
+<model name="component_name_same_as_model"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="component_name_same_as_model" />
+</model>
