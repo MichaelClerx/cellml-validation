@@ -18,30 +18,66 @@ from check import (
 )
 
 
-known_fails = [
-    'component_math_does_not_define_variable',
-    'connection_map_components_missing',
-    'connection_map_components_multiple',
-    'connection_map_variables_missing',
-    'connection_only_junk',
-    'connection_with_math',
-    'group_no_component_ref',
-    'group_only_junk',
-    'map_components_component_1_equals_2',
-    'map_components_duplicate_mirrored',
-    'map_components_with_math',
-    'map_variables_with_math',
-    'map_variables_variable_1_nonexistent',
-    'map_variables_variable_2_nonexistent',
-    'model_with_math',
-    'variable_interfaces_both_in',
-    'variable_interfaces_private_in_and_initial',
-    'variable_interfaces_public_in_and_initial',
-    'variable_units_nonexistent',
-    'variable_with_math',
-]
 
+# Expected error messages, or known fails
 expected_errors = {
+
+    # 0 Root node
+    '0.root_node_not_model':
+        "No matching global declaration available for the validation root",
+    '0.root_node_two_elements':
+        "Extra content at the end of the document",
+    '0.root_node_two_models':
+        "Extra content at the end of the document",
+    '0.root_node_namespace_wrong':
+        "No matching global declaration available for the validation root",
+    # 2.4.1 CellML Identifiers
+    '2.4.1.identifier_empty':
+        #"'name': '' is not a valid value",
+        "Element 'cellml:units', attribute 'name'",
+    '2.4.1.identifier_only_underscore':
+        "Element 'cellml:units', attribute 'name'",
+    '2.4.1.identifier_unexpected_character':
+        "Element 'cellml:units', attribute 'name'",
+    '2.4.1.identifier_unexpected_character_2':
+        "Element 'cellml:units', attribute 'name'",
+    '2.4.1.identifier_unexpected_character_unicode':
+        "Element 'cellml:units', attribute 'name'",
+    # 2.4.2. Allowable CellML elements and attributes
+    '2.4.2.imaginary_attributes_1':
+        "The attribute 'fruit' is not allowed",
+    '2.4.2.imaginary_attributes_2':
+        "The attribute 'cellml:fruit' is not allowed",
+    '2.4.2.imaginary_elements':
+        "Element 'cellml:fruit': This element is not expected",
+    # 2.4.3 Elements/attributes in extension namespaces
+    '2.4.3.cellml_attributes_inside_extensions': None,
+    '2.4.3.cellml_elements_inside_extensions': None,
+    # 2.4.4 Text in CellML elements
+    '2.4.4.text_in_component':
+        "Element 'cellml:component': Character content other than white",
+    '2.4.4.text_in_connection':
+        "Element 'cellml:connection': Character content other than white",
+    '2.4.4.text_in_map_components':
+        "Element 'cellml:map_components': Character content other than white",
+    '2.4.4.text_in_map_variables':
+        "Element 'cellml:map_variables': Character content other than white",
+    '2.4.4.text_in_model':
+        "Element 'cellml:model': Character content other than white",
+    '2.4.4.text_in_variable':
+        "Element 'cellml:variable': Character content other than white",
+
+
+
+    '2.5.2.attribute_in_cellml_namespace':
+        "Element 'cellml:model': The attribute 'name' is required",
+
+
+
+
+
+
+
     # Component element
     'component_name_duplicate':
         "Duplicate key-sequence ['c1']",
@@ -67,12 +103,12 @@ expected_errors = {
         "Element 'cellml:relationship_ref': This element is not expected",
     'component_with_role':
         "Element 'cellml:role': This element is not expected",
-    'component_with_text':
-        "Element 'cellml:component': Character content other than white",
     'component_with_unit':
         "Element 'cellml:unit': This element is not expected",
     'component_with_variable_ref':
         "Element 'cellml:variable_ref': This element is not expected",
+
+    'component_math_does_not_define_variable': None,
 
     # Connection elements
     'connection_empty':
@@ -99,8 +135,6 @@ expected_errors = {
         "Element 'cellml:relationship_ref': This element is not expected",
     'connection_with_role':
         "Element 'cellml:role': This element is not expected",
-    'connection_with_text':
-        "Element 'cellml:connection': Character content other than white",
     'connection_with_unit':
         "Element 'cellml:unit': This element is not expected",
     'connection_with_units':
@@ -110,22 +144,21 @@ expected_errors = {
     'connection_with_variable':
         "Element 'cellml:variable': This element is not expected",
 
+    'connection_map_components_missing': None,
+    'connection_map_components_multiple': None,
+    'connection_map_variables_missing': None,
+    'connection_only_junk': None,
+    'connection_with_math': None,
+
+
     # Group elements
     'group_empty':
         "Element 'cellml:group': Missing child element(s).",
 
-    # CellML Identifiers
-    'identifier_empty_name':
-        #"'name': '' is not a valid value",
-        "Element 'cellml:units', attribute 'name'",
-    'identifier_only_underscore':
-        "Element 'cellml:units', attribute 'name'",
-    'identifier_unexpected_character':
-        "Element 'cellml:units', attribute 'name'",
-    'identifier_unexpected_character_2':
-        "Element 'cellml:units', attribute 'name'",
-    'identifier_unexpected_character_unicode':
-        "Element 'cellml:units', attribute 'name'",
+    'group_no_component_ref': None,
+    'group_only_junk': None,
+
+
 
     # Map_components elements
     'map_components_component_1_missing':
@@ -158,8 +191,6 @@ expected_errors = {
         "Element 'cellml:relationship_ref': This element is not expected",
     'map_components_with_role':
         "Element 'cellml:role': This element is not expected",
-    'map_components_with_text':
-        "Element 'cellml:map_components': Character content other than white",
     'map_components_with_unit':
         "Element 'cellml:unit': This element is not expected",
     'map_components_with_units':
@@ -168,6 +199,11 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     'map_components_with_variable':
         "Element 'cellml:variable': This element is not expected",
+
+    'map_components_component_1_equals_2': None,
+    'map_components_duplicate_mirrored': None,
+    'map_components_with_math': None,
+
 
     # Map_variables elements
     'map_variables_variable_1_missing':
@@ -194,8 +230,6 @@ expected_errors = {
         "Element 'cellml:relationship_ref': This element is not expected",
     'map_variables_with_role':
         "Element 'cellml:role': This element is not expected",
-    'map_variables_with_text':
-        "Element 'cellml:map_variables': Character content other than white",
     'map_variables_with_unit':
         "Element 'cellml:unit': This element is not expected",
     'map_variables_with_units':
@@ -205,9 +239,10 @@ expected_errors = {
     'map_variables_with_variable':
         "Element 'cellml:variable': This element is not expected",
 
+    'map_variables_with_math': None,
+    'map_variables_variable_1_nonexistent': None,
+    'map_variables_variable_2_nonexistent': None,
     # Model elements
-    'model_name_in_cellml_namespace':
-        "Element 'cellml:model': The attribute 'name' is required",
     'model_name_invalid':
         "Element 'cellml:model', attribute 'name': '___' is not a valid value",
     'model_name_missing':
@@ -226,8 +261,6 @@ expected_errors = {
         "Element 'cellml:relationship_ref': This element is not expected",
     'model_with_role':
         "Element 'cellml:role': This element is not expected",
-    'model_with_text':
-        "Element 'cellml:model': Character content other than white",
     'model_with_unit':
         "Element 'cellml:unit': This element is not expected",
     'model_with_variable_ref':
@@ -235,16 +268,7 @@ expected_errors = {
     'model_with_variable':
         "Element 'cellml:variable': This element is not expected",
 
-    # Root node
-    'root_node_not_model':
-        "No matching global declaration available for the validation root",
-    'root_node_two_elements':
-        "Extra content at the end of the document",
-    'root_node_two_models':
-        "Extra content at the end of the document",
-    'root_node_namespace_wrong':
-        "No matching global declaration available for the validation root",
-
+    'model_with_math': None,
     # Variable elements
     'variable_initial_value_invalid_1':
         "is not a valid value of the atomic type 'cellml:real_number'",
@@ -290,8 +314,6 @@ expected_errors = {
         "Element 'cellml:relationship_ref': This element is not expected",
     'variable_with_role':
         "Element 'cellml:role': This element is not expected",
-    'variable_with_text':
-        "Element 'cellml:variable': Character content other than white",
     'variable_with_unit':
         "Element 'cellml:unit': This element is not expected",
     'variable_with_units':
@@ -300,6 +322,15 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     'variable_with_variable':
         "Element 'cellml:variable': This element is not expected",
+
+
+    'variable_interfaces_both_in': None,
+    'variable_interfaces_private_in_and_initial': None,
+    'variable_interfaces_public_in_and_initial': None,
+    'variable_units_nonexistent': None,
+    'variable_with_math': None,
+
+
 }
 
 
@@ -338,11 +369,16 @@ def valid_models():
 
 def invalid_models():
     """ Returns a list of filenames for models that should not validate. """
-    files = [os.path.splitext(x) for x in os.listdir(model('invalid'))]
-    files = [x[0] for x in files if x[1] == '.cellml']
-    return [
-        pytest.param(x, marks=pytest.mark.xfail) if x in known_fails else x
-        for x in files]
+    files = []
+    for f in os.listdir(model('invalid')):
+        name, ext = os.path.splitext(f)
+        if ext != '.cellml':
+            continue
+        if expected_errors.get(name, '') is None:
+            files.append(pytest.param(name, marks=pytest.mark.xfail))
+        else:
+            files.append(name)
+    return files
 
 
 @pytest.mark.parametrize('filename', valid_models())
@@ -387,7 +423,7 @@ def test_invalid_models(filename, schema, schema_parser):
         assert True
 
     else:
-        # Validate
+        # Validate (known fails exit here)
         assert not schema.validate(xml)
 
         # Log detected error

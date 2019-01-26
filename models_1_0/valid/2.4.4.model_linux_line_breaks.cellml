@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 2.4.4 Models can contain line feeds -->
+<model name="model_linux_line_breaks"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+  </component>
+</model>

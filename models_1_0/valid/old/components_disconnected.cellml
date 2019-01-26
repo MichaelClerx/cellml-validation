@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Model with two component, two variables, no connections-->
+<model name="components_disconnected"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="dimensionless" initial_value="1" />
+  </component>
+  <component name="B">
+    <variable name="a" units="dimensionless" initial_value="1" />
+  </component>
+</model>

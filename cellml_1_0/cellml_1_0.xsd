@@ -297,7 +297,7 @@ Limitations related to extensions and namespaces:
 
   <!-- Variable type -->
   <xs:complexType name="variable_type">
-    <xs:choice minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="name" type="cellml:identifier" use="required" />
@@ -327,7 +327,7 @@ Limitations related to extensions and namespaces:
   </xs:complexType>
 
   <xs:complexType name="map_components_type">
-    <xs:choice minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="component_1" type="cellml:identifier" use="required" />
@@ -336,7 +336,7 @@ Limitations related to extensions and namespaces:
   </xs:complexType>
 
   <xs:complexType name="map_variables_type">
-    <xs:choice minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
     <xs:attribute name="variable_1" type="cellml:identifier" use="required" />

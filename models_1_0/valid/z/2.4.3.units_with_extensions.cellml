@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 2.4.3 Extension attributes & elements can go in a units element -->
+<model name="units_with_extensions"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:fruit="http://fruit.org">
+  <units name="wooster" fruit:x_a_day="5">
+    <fruit:orange peel="yes">
+      <fruit:clementine />
+    </fruit:orange>
+    <fruit:pear>Tinned</fruit:pear>
+  </units>
+  <component name="A">
+    <units name="worcester" fruit:x_a_day="5">
+      <fruit:orange peel="yes">
+        <fruit:clementine />
+      </fruit:orange>
+      <fruit:pear>Tinned</fruit:pear>
+    </units>
+  </component>
+</model>

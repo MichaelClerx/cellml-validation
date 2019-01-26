@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 2.4.2 we can't invent new elements -->
+<model name="imaginary_elements"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <fruit name="banana" />
+</model>

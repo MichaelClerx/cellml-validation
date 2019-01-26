@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 2.4.1: Valid identifier contain letters, numbers, underscores,
      but don't start with an underscore -->
-<model name="identifiers"
+<model name="valid_identifiers"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="HelloThere" />
   <component name="Hello123" />
