@@ -261,6 +261,53 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '3.4.4.1.connection_with_variable':
         "Element 'cellml:variable': This element is not expected",
+    # 3.4.5.1 A map_components must declare component_1 and component_2
+    '3.4.5.1.map_components_component_1_missing':
+        "Element 'cellml:map_components': The attribute 'component_1' is req",
+    '3.4.5.1.map_components_component_2_missing':
+        "Element 'cellml:map_components': The attribute 'component_2' is req",
+    # 3.4.5.1 A map_components cannot have cellml children or math
+    '3.4.5.1.map_components_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '3.4.5.1.map_components_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '3.4.5.1.map_components_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '3.4.5.1.map_components_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '3.4.5.1.map_components_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '3.4.5.1.map_components_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '3.4.5.1.map_components_with_math': None,
+    '3.4.5.1.map_components_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '3.4.5.1.map_components_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '3.4.5.1.map_components_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '3.4.5.1.map_components_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '3.4.5.1.map_components_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '3.4.5.1.map_components_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '3.4.5.1.map_components_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '3.4.5.1.map_components_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+    # 3.4.5.2 component_1 must refer to an existing component
+    '3.4.5.2.map_components_component_1_nonexistent':
+        "Element 'cellml:map_components': No match found for key-sequence",
+    # 3.4.5.3 component_2 must refer to an existing component
+    '3.4.5.3.map_components_component_2_nonexistent':
+        "Element 'cellml:map_components': No match found for key-sequence",
+    # 3.4.5.4 component_1 cannot match component_2
+    '3.4.5.4.map_components_component_1_equals_2': None,
+    # 3.4.5.4 Each map_components in a model must be unique
+    '3.4.5.4.map_components_duplicate_mirrored': None,
+    '3.4.5.4.map_components_duplicate':
+        "Element 'cellml:map_components': Duplicate key-sequence",
 
 
 
@@ -281,48 +328,6 @@ expected_errors = {
 
 
     # Map_components elements
-    'map_components_component_1_missing':
-        "Element 'cellml:map_components': The attribute 'component_1' is req",
-    'map_components_component_1_nonexistent':
-        "Element 'cellml:map_components': No match found for key-sequence",
-    'map_components_component_2_missing':
-        "Element 'cellml:map_components': The attribute 'component_2' is req",
-    'map_components_component_2_nonexistent':
-        "Element 'cellml:map_components': No match found for key-sequence",
-    'map_components_duplicate':
-        "Element 'cellml:map_components': Duplicate key-sequence",
-    'map_components_with_component':
-        "Element 'cellml:component': This element is not expected",
-    'map_components_with_component_ref':
-        "Element 'cellml:component_ref': This element is not expected",
-    'map_components_with_connection':
-        "Element 'cellml:connection': This element is not expected",
-    'map_components_with_group':
-        "Element 'cellml:group': This element is not expected",
-    'map_components_with_map_components':
-        "Element 'cellml:map_components': This element is not expected",
-    'map_components_with_map_variables':
-        "Element 'cellml:map_variables': This element is not expected",
-    'map_components_with_model':
-        "Element 'cellml:model': This element is not expected",
-    'map_components_with_reaction':
-        "Element 'cellml:reaction': This element is not expected",
-    'map_components_with_relationship_ref':
-        "Element 'cellml:relationship_ref': This element is not expected",
-    'map_components_with_role':
-        "Element 'cellml:role': This element is not expected",
-    'map_components_with_unit':
-        "Element 'cellml:unit': This element is not expected",
-    'map_components_with_units':
-        "Element 'cellml:units': This element is not expected",
-    'map_components_with_variable_ref':
-        "Element 'cellml:variable_ref': This element is not expected",
-    'map_components_with_variable':
-        "Element 'cellml:variable': This element is not expected",
-
-    'map_components_component_1_equals_2': None,
-    'map_components_duplicate_mirrored': None,
-    'map_components_with_math': None,
 
 
     # Map_variables elements

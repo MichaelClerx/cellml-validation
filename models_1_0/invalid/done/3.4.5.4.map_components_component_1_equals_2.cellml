@@ -3,13 +3,13 @@
 <model name="map_components_component_1_equals_2"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <connection>
-    <map_components component_1="a" component_2="a" />
-    <map_variables variable_1="x" variable_2="x" />
+    <map_components component_1="A" component_2="A" />
+    <map_variables variable_1="a" variable_2="a" />
   </connection>
-  <component name="a">
-    <variable name="x" units="newton" public_interface="out" />
+  <component name="A">
+    <variable name="a" units="newton" public_interface="out" />
   </component>
-  <component name="b">
-    <variable name="x" units="newton" public_interface="in" />
+  <component name="B">
+    <variable name="a" units="newton" public_interface="in" />
   </component>
 </model>
