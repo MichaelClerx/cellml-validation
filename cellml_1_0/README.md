@@ -38,7 +38,7 @@ Finally, all CellML 1.0 elements are allowed to contain _any elements and attrib
 
 ![Encapsulation example](encapsulation.svg)
 
-In CellML 1.0, components can't refer to each other's values.
+In CellML 1.0, components can't refer to each other's variables.
 Instead, if a component X wants to use a value from Y, it defines a _new variable_ in X and gives it an interface of "in". It then makes a _connection_ to the variable in Y, which must have an interface of "out".
 
 - Connections can only be made between siblings, or between parent and child.
