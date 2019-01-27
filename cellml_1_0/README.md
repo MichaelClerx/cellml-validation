@@ -66,6 +66,14 @@ Because a variable can only get its value from one source, CellML 1.0 has additi
   
 The third rule doesn't seem strictly necessary (as the second rule already prevents any abuse), but is present in CellML 1.0 anyway.
 
+## Identifiers
+
+CellML 1.0 defines identifiers as strings matching `('_')* ( letter | digit ) ( letter | '_' | digit )*`.
+Note that this includes strings such as "0" and "1e12".
+
+## Real numbers
+
+CellML 1.0 does not define a notation for real numbers.
 
 ## Lists
 
