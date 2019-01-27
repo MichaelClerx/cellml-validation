@@ -228,31 +228,63 @@ The hash characters at the end seem to be so that [you can identify elements e.g
 CellML documents can use all of content MathML's capabilities.
 However, CellML software only needs to be able to handle "the CellML subset".
 Documents using only this set are called "valid CellML subset documents".
-The following list is taken directly from the spec:
 
-- token elements
-  -`<cn>`, `<ci>`
-- basic content elements
-  - `<apply>`, `<piecewise>`, `<piece>`, `<otherwise>`
-- relational operators
-  - `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
-- arithmetic operators
-  - `<plus>`, `<minus>`, `<times>`, `<divide>`, `<power>`, `<root>`, `<abs>`, `<exp>`, `<ln>`, `<log>`, `<floor>`,
-  - `<ceiling>`, `<factorial>`
-- logical operators
-  - `<and>`, `<or>`, `<xor>`, `<not>`
-- calculus elements
-  - `<diff>`
-- qualifier elements
-  - `<degree>`, `<bvar>`, `<logbase>`
-- trigonometric operators
-  - `<sin>`, `<cos>`, `<tan>`, `<sec>`, `<csc>`, `<cot>`, `<sinh>`, `<cosh>`, `<tanh>`, `<sech>`, `<csch>`, `<coth>`,
-  - `<arcsin>`, `<arccos>`, `<arctan>`, `<arccosh>`, `<arccot>`, `<arccoth>`, `<arccsc>`, `<arccsch>`,
-  - `<arcsec>`, `<arcsech>`, `<arcsinh>`, `<arctanh>`
-- constants
-  - `<true>`, `<false>`, `<notanumber>`, `<pi>`, `<infinity>`, `<exponentiale>`
-- semantics and annotation elements
-  - `<semantics>`, `<annotation>`, `<annotation-xml>`
+#### MathML basics
+
+- `<cn>`, `<ci>`, `<apply>`, `<eq>`
+- CellML adds the rule that every `<cn>` must have a `cellml:units` attribute
+
+The Content MathML 2 spec has several types of number, which the CellML spec does not make any statements about.
+They are:
+- `real`, possibly in a non-decimal base.
+- `integer`, possibly in a non-decimal base.
+- `rational`, this uses the `<sep>` element and so is not in the CellML subset.
+- `complex-cartesian` and `complex-polar`, the spec makes no statements, but it seems unlikely CellML subset compliant software needs to handle these.
+- `constant`, this allows you to add unnamed constants.
+- `e-notation`, this was added in later versions, it uses the `<sep>` element and so is outside of the CellML subset but very useful!
+
+Going by the rules for `initial_value` attributes, it would seem CellML variables are real numbers.
+Presumably, integers should be treated as reals then.
+Although the spec makes no statement, it seems that `constant` introduces new variables and so shouldn't be allowed.
+Finally, `<cn>` has additional attributes `definitionURL` and `encoding`, which the spec makes no statement about but are presumably not part of the subset.
+
+The contents of a `<cn>` must be numbers, possibly a sign (`-`) and a period (`.`).
+The default type is real and 
+
+#### Conditions and piecewise
+- Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
+- Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
+- Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
+- Logical constants: `<true>`, `<false>`
+
+Note that `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
+
+#### Arithmetic
+- Basic 1: `<plus>`, `<minus>`, `<times>`, `<divide>`
+- Basic 2: `<power>`, `<root>`, `<exp>`, `<ln>`, `<log>`, `<logbase>`
+- Discontinuous: `<abs>`, `<floor>`, `<ceiling>`
+- Integer only: `<factorial>`
+
+Note that the factorial element is slightly troublesome for CellML: There is no concept of integers in CellML, yet factorial operates on integers exclusively.
+In addition, values for x factorial quickly become larger than fit in most number types.
+
+#### Calculus
+- First order: `<diff>`, `<bvar>`
+- Higher order: `<degree>`
+
+#### Trigonometry
+- Basic: `<sin>`, `<cos>`, `<tan>`, `<arcsin>`, `<arccos>`, `<arctan>`
+- Hyperbolic: `<sinh>`, `<cosh>`, `<tanh>`, `<arcsinh>`, `<arccosh>`, `<arctanh>`
+- Redundant `<sec>`, `<csc>`, `<cot>`, `<arcsec>`, `<arccsc>`, `<arccot>`
+- Hyperbolic redundant: `<sech>`, `<csch>`, `<coth>`, `<arcsech>`, `<arccsch>`, `<arccoth>`
+
+#### Constants
+- `<pi>`
+- `<exponentiale>`
+- `<notanumber>`, `<infinity>`
+
+### Semantics and annotation
+- `<semantics>`, `<annotation>`, `<annotation-xml>`
 
 
 
