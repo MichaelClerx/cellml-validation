@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.6.4: Siblings are connected via the public interface -->
+<!-- A.a to B.a: The ordering in map_components doesn't matter -->
+<model name="map_variables_sibling_connection_2"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="newton" public_interface="out" initial_value="1" />
+  </component>
+  <component name="B">
+    <variable name="a" units="newton" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="B" component_2="A" />
+    <map_variables variable_1="a" variable_2="a" />
+  </connection>
+</model>

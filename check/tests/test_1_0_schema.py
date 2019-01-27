@@ -308,9 +308,53 @@ expected_errors = {
     '3.4.5.4.map_components_duplicate_mirrored': None,
     '3.4.5.4.map_components_duplicate':
         "Element 'cellml:map_components': Duplicate key-sequence",
-
-
-
+    # 3.4.6.1 A map_variables must declare variable_1 and variable_2
+    '3.4.6.1.map_variables_variable_1_missing':
+        "Element 'cellml:map_variables': The attribute 'variable_1' is req",
+    '3.4.6.1.map_variables_variable_2_missing':
+        "Element 'cellml:map_variables': The attribute 'variable_2' is req",
+    # 3.4.6.1 A map_variables cannot have cellml children or math
+    '3.4.6.1.map_variables_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '3.4.6.1.map_variables_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '3.4.6.1.map_variables_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '3.4.6.1.map_variables_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '3.4.6.1.map_variables_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '3.4.6.1.map_variables_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '3.4.6.1.map_variables_with_math': None,
+    '3.4.6.1.map_variables_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '3.4.6.1.map_variables_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '3.4.6.1.map_variables_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '3.4.6.1.map_variables_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '3.4.6.1.map_variables_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '3.4.6.1.map_variables_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '3.4.6.1.map_variables_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '3.4.6.1.map_variables_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+    # 3.4.6.2 variable_1 must refer to an existing variable in component_1
+    '3.4.6.2.map_variables_variable_1_nonexistent': None,
+    # 3.4.6.3 variable_2 must refer to an existing variable in component_2
+    '3.4.6.3.map_variables_variable_2_nonexistent': None,
+    # 3.4.6.4 Interfaces and encapsulation
+    '3.4.6.4.map_variables_sibling_in_to_in': None,
+    '3.4.6.4.map_variables_sibling_out_to_out': None,
+    '3.4.6.4.map_variables_sibling_private_in_1': None,
+    '3.4.6.4.map_variables_sibling_private_in_2': None,
+    '3.4.6.4.map_variables_sibling_private_in_and_out': None,
+    '3.4.6.4.map_variables_sibling_private_out_1': None,
+    '3.4.6.4.map_variables_sibling_private_out_2': None,
 
 
 
@@ -321,54 +365,8 @@ expected_errors = {
     # Group elements
     'group_empty':
         "Element 'cellml:group': Missing child element(s).",
-
     'group_no_component_ref': None,
     'group_only_junk': None,
-
-
-
-    # Map_components elements
-
-
-    # Map_variables elements
-    'map_variables_variable_1_missing':
-        "Element 'cellml:map_variables': The attribute 'variable_1' is req",
-    'map_variables_variable_2_missing':
-        "Element 'cellml:map_variables': The attribute 'variable_2' is req",
-    'map_variables_with_component':
-        "Element 'cellml:component': This element is not expected",
-    'map_variables_with_component_ref':
-        "Element 'cellml:component_ref': This element is not expected",
-    'map_variables_with_connection':
-        "Element 'cellml:connection': This element is not expected",
-    'map_variables_with_group':
-        "Element 'cellml:group': This element is not expected",
-    'map_variables_with_map_components':
-        "Element 'cellml:map_components': This element is not expected",
-    'map_variables_with_map_variables':
-        "Element 'cellml:map_variables': This element is not expected",
-    'map_variables_with_model':
-        "Element 'cellml:model': This element is not expected",
-    'map_variables_with_reaction':
-        "Element 'cellml:reaction': This element is not expected",
-    'map_variables_with_relationship_ref':
-        "Element 'cellml:relationship_ref': This element is not expected",
-    'map_variables_with_role':
-        "Element 'cellml:role': This element is not expected",
-    'map_variables_with_unit':
-        "Element 'cellml:unit': This element is not expected",
-    'map_variables_with_units':
-        "Element 'cellml:units': This element is not expected",
-    'map_variables_with_variable_ref':
-        "Element 'cellml:variable_ref': This element is not expected",
-    'map_variables_with_variable':
-        "Element 'cellml:variable': This element is not expected",
-
-    'map_variables_with_math': None,
-    'map_variables_variable_1_nonexistent': None,
-    'map_variables_variable_2_nonexistent': None,
-
-
     'component_math_does_not_define_variable': None,
 
 }
