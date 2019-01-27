@@ -251,14 +251,6 @@ Finally, `<cn>` has additional attributes `definitionURL` and `encoding`, which 
 The contents of a `<cn>` must be numbers, possibly a sign (`-`) and a period (`.`).
 The default type is real and 
 
-#### Conditions and piecewise
-- Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
-- Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
-- Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
-- Logical constants: `<true>`, `<false>`
-
-Note that `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
-
 #### Arithmetic
 - Basic 1: `<plus>`, `<minus>`, `<times>`, `<divide>`
 - Basic 2: `<power>`, `<root>`, `<exp>`, `<ln>`, `<log>`, `<logbase>`
@@ -272,11 +264,19 @@ In addition, values for x factorial quickly become larger than fit in most numbe
 - First order: `<diff>`, `<bvar>`
 - Higher order: `<degree>`
 
-#### Trigonometry
+#### Trig functions
 - Basic: `<sin>`, `<cos>`, `<tan>`, `<arcsin>`, `<arccos>`, `<arctan>`
 - Hyperbolic: `<sinh>`, `<cosh>`, `<tanh>`, `<arcsinh>`, `<arccosh>`, `<arctanh>`
 - Redundant `<sec>`, `<csc>`, `<cot>`, `<arcsec>`, `<arccsc>`, `<arccot>`
 - Hyperbolic redundant: `<sech>`, `<csch>`, `<coth>`, `<arcsech>`, `<arccsch>`, `<arccoth>`
+
+#### Conditions and piecewise
+- Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
+- Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
+- Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
+- Logical constants: `<true>`, `<false>`
+
+Note that `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
 
 #### Constants
 - `<pi>`
@@ -286,5 +286,6 @@ In addition, values for x factorial quickly become larger than fit in most numbe
 ### Semantics and annotation
 - `<semantics>`, `<annotation>`, `<annotation-xml>`
 
+I have personally never seen these in a model.
 
 
