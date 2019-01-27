@@ -399,7 +399,13 @@ expected_errors = {
     '4.4.2.ci_non_local_niece': None,
     '4.4.2.ci_non_local_parent': None,
     '4.4.2.ci_non_local_sibling': None,
-
+    # 4.4.3.1 A cn must have a cellml:units
+    '4.4.3.1.cn_units_missing': None,
+    # 4.4.3.2 A cn unit attribute must refer to a model, local component, or
+    #         predefined unit
+    '4.4.3.2.cn_units_nonexistent_1': None,
+    '4.4.3.2.cn_units_nonexistent_2': None,
+    '4.4.3.2.cn_units_parent_component': None,
 
 
 

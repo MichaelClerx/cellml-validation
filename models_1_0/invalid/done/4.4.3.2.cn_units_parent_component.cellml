@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.4.3.2: Units are not inherited (only local component and
+                          model units can be used) -->
+<model name="cn_units_nonexistent_2"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <units name="wooster" />
+  </component>
+  <component name="B">
+    <variable name="a" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>a</ci>
+        <apply>
+          <divide />
+          <cn cellml:units="wooster">1</cn>
+          <cn cellml:units="wooster">2</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>
