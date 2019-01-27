@@ -385,6 +385,9 @@ expected_errors = {
     '3.4.6.4.map_variables_sibling_private_in_and_out': None,
     '3.4.6.4.map_variables_sibling_private_out_1': None,
     '3.4.6.4.map_variables_sibling_private_out_2': None,
+    # 4 Math can't be overdefined
+    '4.math_and_initial_value': None,
+    '4.math_overdefined': None,
     # 4.4.1 Bad math
     '4.4.1.math_not_math_component':
         "cake': This element is not expected.",
@@ -459,7 +462,15 @@ def valid_models():
     # Note: Returning file basename rather than path, so that the test output
     # is e.g. test_valid_models[empty-model] instead of something containing
     # containing the absolute path and extension.
-    files = [os.path.splitext(x) for x in os.listdir(check.model_1_0('valid'))]
+    files = os.listdir(check.model_1_0('valid'))
+    files = [os.path.splitext(x) for x in files]
+    return [x[0] for x in files if x[1] == '.cellml']
+
+
+def optional_models():
+    """ Returns a list of filenames for models that should validate. """
+    files = os.listdir(check.model_1_0('optional'))
+    files = [os.path.splitext(x) for x in files]
     return [x[0] for x in files if x[1] == '.cellml']
 
 
@@ -494,6 +505,26 @@ def test_valid_models(filename, schema, schema_parser):
 
     # Validate
     schema.assertValid(xml)
+
+
+@pytest.mark.parametrize('filename', optional_models())
+def test_optional_models(filename, schema, schema_parser):
+    """
+    Tests if all valid models with optional MathML validate.
+    """
+    # Parse CellML file
+    filename = os.path.join('optional', filename + '.cellml')
+    path = check.model_1_0(filename)
+    assert os.path.isfile(path)
+    xml = etree.parse(path, schema_parser)
+
+    # Check if namespace is set correctly (for a nicer error message)
+    tag = etree.QName(xml.getroot().tag)
+    assert tag.namespace == check.CELLML_1_0_NS
+
+    # Validate
+    schema.assertValid(xml)
+
 
 
 @pytest.mark.parametrize('filename', invalid_models())

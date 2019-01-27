@@ -1,0 +1,36 @@
+Valid tests to create
+
+- 1)Basic
+  - [x] cn, ci, apply, eq
+- 2)Numbers:
+  - [x] real, real-with-base, integer, integer-with-base
+  - [x] rational (uses sep)
+  - [x] complex-cartesian, complex-polar
+  - [x] e-notation: Optional! Uses <sep>
+- Arithmetic
+  - [ ] Basic 1: <plus>, <minus>, <times>, <divide>
+  - [ ] Basic 2: <power>, <root>, <exp>, <ln>, <log>, <logbase>
+  - [ ] Discontinuous: <abs>, <floor>, <ceiling>
+  - [ ] Integer only: <factorial>
+
+- Calculus
+  - [ ] Basic: <diff>, <bvar>
+  - [ ] Higher: <degree>
+- Trig
+  - [ ] Basic: <sin>, <cos>, <tan>, <arcsin>, <arccos>, <arctan>
+  - [ ] Redundant <sec>, <csc>, <cot>, <arcsec>, <arccsc>, <arccot>
+  - [ ] Hyperbolic: <sinh>, <cosh>, <tanh>, <arcsinh>, <arccosh>, <arctanh>
+  - [ ] Hyperbolic redundant: <sech>, <csch>, <coth>, <arcsech>, <arccsch>, <arccoth>
+- Conditions and relational
+  - [ ] <piecewise>, <piece>, <otherwise>, <eq>
+  - [ ] <eq>, <neq>, <gt>, <lt>, <geq>, <leq>
+  - [ ] <and>, <or>, <xor>, <not>
+  - [ ] <true>
+  - [ ] <false>
+- Constants
+  - [ ] <pi>
+  - [ ] <exponentiale>
+  - [ ] <notanumber>, <infinity>
+- Semantics and annotation elements
+  - [ ] <semantics>, <annotation>, <annotation-xml>
+

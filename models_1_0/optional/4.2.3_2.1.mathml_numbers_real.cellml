@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+Numbers: Real with type attribute -->
+<model name="mathml_numbers_real"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="real" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>real</ci>
+        <cn cellml:units="volt" type="real">1.2</cn>
+      </apply>
+    </math>
+  </component>
+</model>

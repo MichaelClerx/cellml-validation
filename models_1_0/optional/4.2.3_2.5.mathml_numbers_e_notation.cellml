@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+Numbers: E-notation -->
+<model name="mathml_numbers_e_notation"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="e_notation" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>e_notation</ci>
+        <cn cellml:units="volt" type="e-notation">1<sep />-2</cn>
+      </apply>
+    </math>
+  </component>
+</model>
