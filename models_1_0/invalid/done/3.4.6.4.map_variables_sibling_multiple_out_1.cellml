@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.6.4: A variable can only be connected to one "out" interface -->
+<model name="map_variables_sibling_multiple_out_1"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="newton" public_interface="out" initial_value="1" />
+    <variable name="b" units="newton" public_interface="out" initial_value="2" />
+  </component>
+  <component name="B">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="x" />
+    <map_variables variable_1="b" variable_2="x" />
+  </connection>
+</model>

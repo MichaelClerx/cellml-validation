@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.4.6.4: Parent-child relationships are defined by
+                          the parent's private interface, and
+                          the child's public interface. -->
+<model name="map_variables_parent_multiple_out"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A"> <!-- Parent -->
+    <variable name="a" units="newton" private_interface="out" initial_value="1" />
+    <variable name="b" units="newton" private_interface="out" initial_value="2" />
+  </component>
+  <component name="B"> <!-- Child -->
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="x" />
+    <map_variables variable_1="b" variable_2="x" />
+  </connection>
+</model>
