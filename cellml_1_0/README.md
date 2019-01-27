@@ -19,7 +19,8 @@ Required elements/attributes are indicated in italics.
       - *variable_ref*(*variable*)
         - *role*(*role*,delta_variable,direction,stoichiometry)
           - mathml:math
-    - mathml:math
+            - All mathml:cn's must have an attribute cellml:units
+    - mathml:math --> see above
   - group()
     - *relationship_ref*(*relationship*,name)
     - *component_ref*(*component*)
@@ -28,8 +29,13 @@ Required elements/attributes are indicated in italics.
     - *map_components*(*component_1*,*component_2*)
     - *map_variables*(*variable_1*,*variable_2*)
 
-In addition, the document can contain any element from the `rdf` namespace, and all elements are allowed to have a `cmeta:id` attribute.
-Finally, all CellML 1.0 elements are allowed to contain _any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
+Note that (contrary to what the spec says), most attributes listed above are _not_ in the CellML 1.0 namespace.
+The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.
+
+All CellML 1.0 elements can also contain:
+ - any element from the `rdf` namespace
+ - a `cmeta:id` attribute.
+ - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
 
 ## Grouping & public/private interfaces
 
