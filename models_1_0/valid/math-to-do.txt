@@ -13,26 +13,24 @@ Valid tests to create
 - 4 Functions
   - [x] Basic: <power>, <root>, <exp>, <ln>, <log>, <logbase>
   - [x] Non-smooth: <abs>, <floor>, <ceiling>
-  - [ ] Integer only: <factorial>
-
-- Calculus
-  - [ ] Basic: <diff>, <bvar>
-  - [ ] Higher: <degree>
-- Trig
-  - [ ] Basic: <sin>, <cos>, <tan>, <arcsin>, <arccos>, <arctan>
-  - [ ] Redundant <sec>, <csc>, <cot>, <arcsec>, <arccsc>, <arccot>
-  - [ ] Hyperbolic: <sinh>, <cosh>, <tanh>, <arcsinh>, <arccosh>, <arctanh>
-  - [ ] Hyperbolic redundant: <sech>, <csch>, <coth>, <arcsech>, <arccsch>, <arccoth>
-- Conditions and relational
-  - [ ] <piecewise>, <piece>, <otherwise>, <eq>
-  - [ ] <eq>, <neq>, <gt>, <lt>, <geq>, <leq>
-  - [ ] <and>, <or>, <xor>, <not>
-  - [ ] <true>
-  - [ ] <false>
-- Constants
+  - [x] Integer only: <factorial>
+  - [x] Basic: <sin>, <cos>, <tan>, <arcsin>, <arccos>, <arctan>
+  - [x] Hyperbolic: <sinh>, <cosh>, <tanh>, <arcsinh>, <arccosh>, <arctanh>
+  - [x] Redundant <sec>, <csc>, <cot>, <arcsec>, <arccsc>, <arccot>
+  - [x] Hyperbolic redundant: <sech>, <csch>, <coth>, <arcsech>, <arccsch>, <arccoth>
+- 5 Calculus
+  - [x] Basic: <diff>, <bvar>
+  - [x] Higher: <degree>
+- 6 Conditions and relational
+  - [x] <piecewise>, <piece>, <otherwise>, <eq>
+  - [x] <eq>, <neq>, <gt>, <lt>, <geq>, <leq>
+  - [x] <not>
+  - [x] <and>, <or>, <xor>
+  - [ ] <true>, <false>
+- 7 Constants
   - [ ] <pi>
   - [ ] <exponentiale>
   - [ ] <notanumber>, <infinity>
-- Semantics and annotation elements
+- 8 Semantics and annotation elements
   - [ ] <semantics>, <annotation>, <annotation-xml>
 

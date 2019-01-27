@@ -270,13 +270,20 @@ In addition, values for x factorial quickly become larger than fit in most numbe
 - Redundant `<sec>`, `<csc>`, `<cot>`, `<arcsec>`, `<arccsc>`, `<arccot>`
 - Hyperbolic redundant: `<sech>`, `<csch>`, `<coth>`, `<arcsech>`, `<arccsch>`, `<arccoth>`
 
-#### Conditions and piecewise
+#### Logic and Piecewise
 - Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
 - Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
 - Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
 - Logical constants: `<true>`, `<false>`
 
-Note that `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
+Note 1: `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
+
+Note 2: The `<otherwise>` element is not required.
+This means that you can write a statement like `x = (y > 0) ? 1 : undefined`.
+The CellML spec doesn't define what implementations should do for these cases.
+
+Note 3: Variables can never have the value `true` or `false`.
+In light of this, it's a bit unclear what allowing `<true>` and `<false>` is intended to achieve, other than writing things like "if((x == 1) == true)".
 
 #### Constants
 - `<pi>`
