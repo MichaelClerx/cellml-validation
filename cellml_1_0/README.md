@@ -254,8 +254,8 @@ The default type is real and
 #### Arithmetic
 - Basic 1: `<plus>`, `<minus>`, `<times>`, `<divide>`
 - Basic 2: `<power>`, `<root>`, `<exp>`, `<ln>`, `<log>`, `<logbase>`
-- Discontinuous: `<abs>`, `<floor>`, `<ceiling>`
-- Integer only: `<factorial>`
+- Non-smooth: `<abs>`, `<floor>`, `<ceiling>`
+- Non-negative integer only: `<factorial>`
 
 Note that the factorial element is slightly troublesome for CellML: There is no concept of integers in CellML, yet factorial operates on integers exclusively.
 In addition, values for x factorial quickly become larger than fit in most number types.

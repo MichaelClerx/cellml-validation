@@ -1,16 +1,18 @@
 Valid tests to create
 
-- 1)Basic
+- 1 Basic
   - [x] cn, ci, apply, eq
-- 2)Numbers:
+- 2 Numbers:
   - [x] real, real-with-base, integer, integer-with-base
   - [x] rational (uses sep)
   - [x] complex-cartesian, complex-polar
   - [x] e-notation: Optional! Uses <sep>
-- Arithmetic
-  - [ ] Basic 1: <plus>, <minus>, <times>, <divide>
-  - [ ] Basic 2: <power>, <root>, <exp>, <ln>, <log>, <logbase>
-  - [ ] Discontinuous: <abs>, <floor>, <ceiling>
+- 3 Arithmetic
+  - [x] Binary <plus>, <minus>, <times>, <divide>
+  - [x] N-ary <plus>, <minus>, <times>, <divide>
+- 4 Functions
+  - [x] Basic: <power>, <root>, <exp>, <ln>, <log>, <logbase>
+  - [x] Non-smooth: <abs>, <floor>, <ceiling>
   - [ ] Integer only: <factorial>
 
 - Calculus

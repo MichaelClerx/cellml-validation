@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
-MathML Basic arithmetic 2: n-ary plus, minus and times -->
-<model name="mathml_arithmetic_basic_2"
+B-ary plus, minus and times -->
+<model name="mathml_arithmetic_n_ary"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">

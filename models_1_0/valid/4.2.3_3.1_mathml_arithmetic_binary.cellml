@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
-MathML Basic arithmetic 1: Binary plus, minus, times, divide -->
-<model name="mathml_arithmetic_basic_1"
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset.
+Binary plus, minus, times, divide -->
+<model name="mathml_arithmetic_binary"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">

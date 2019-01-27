@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
-MathML Basics: <cn>, <ci>, <apply>, and <eq> -->
+Basics: cn, ci, apply, and eq -->
 <model name="mathml_basics"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">

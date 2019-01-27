@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
-MathML Basic arithmetic 3: power, root (degree), exp, ln, log (logbase) -->
-<model name="mathml_arithmetic_basic_3"
+Basic functions: power, root (degree), exp, ln, log (logbase) -->
+<model name="mathml_functions_basic"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
