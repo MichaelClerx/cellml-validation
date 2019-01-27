@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.4.2: <ci> must refer to a local variable -->
+<model name="ci_no_whitespace"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <plus />
+          <cn cellml:units="dimensionless">1</cn>
+          <ci>y</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

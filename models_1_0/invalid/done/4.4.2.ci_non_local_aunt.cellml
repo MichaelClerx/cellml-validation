@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.4.2: <ci> must refer to a local variable -->
+<model name="ci_non_local_aunt"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="AA">
+    <variable name="x" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <plus />
+          <cn cellml:units="dimensionless">1</cn>
+          <ci>y</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="B">
+    <variable name="y" units="dimensionless" />
+  </component>
+  <group>
+    <relationship_ref relationship="encapsulation">
+      <component_ref component="A">
+        <component_ref component="AA" />
+      </component_ref>
+    </relationship_ref>
+  </group>
+</model>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.4.2: <ci> can contain whitespace -->
+<model name="ci_whitespace_1"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>
+        a</ci>
+        <cn cellml:units="dimensionless">1</cn>
+      </apply>
+    </math>
+  </component>
+</model>

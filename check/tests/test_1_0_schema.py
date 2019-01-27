@@ -385,6 +385,24 @@ expected_errors = {
     '3.4.6.4.map_variables_sibling_private_in_and_out': None,
     '3.4.6.4.map_variables_sibling_private_out_1': None,
     '3.4.6.4.map_variables_sibling_private_out_2': None,
+    # 4.4.1 Bad math
+    '4.4.1.math_not_math_component':
+        "cake': This element is not expected.",
+    '4.4.1.math_not_math_reaction':
+        "cake': This element is not expected.",
+    # 4.4.2 Ci can only refer to local variables
+    '4.4.2.ci_nonexistent': None,
+    '4.4.2.ci_non_local_aunt': None,
+    '4.4.2.ci_non_local_child': None,
+    '4.4.2.ci_non_local_cousin': None,
+    '4.4.2.ci_non_local_nested_sibling': None,
+    '4.4.2.ci_non_local_niece': None,
+    '4.4.2.ci_non_local_parent': None,
+    '4.4.2.ci_non_local_sibling': None,
+
+
+
+
 
 
 
