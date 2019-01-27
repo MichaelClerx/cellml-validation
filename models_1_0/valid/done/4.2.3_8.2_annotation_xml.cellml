@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+MathML can be wrapped in a <semantics> element, with <annotation-xml> to define
+xml-based annotation.
+This example is adapted from the spec. -->
+<model name="mathml_annotation_xml"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="potassium_channel_n_gate">
+    <units name="per_millisecond">
+      <unit prefix="milli" units="second" exponent="-1" />
+    </units>
+    <units name="millivolt">
+      <unit prefix="milli" units="volt" />
+    </units>
+    <units name="per_millivolt">
+      <unit prefix="milli" units="volt" exponent="-1" />
+    </units>
+    <variable name="alpha_n" units="per_millisecond" />
+    <variable name="V" units="millivolt" initial_value="0" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+        <apply id="alpha_n_calculation">
+          <eq />
+          <ci> alpha_n </ci>
+          <apply>
+            <times />
+            <cn cellml:units="per_millisecond"> 1.0 </cn>
+            <apply>
+              <divide />
+              <apply>
+                <times />
+                <cn cellml:units="per_millivolt"> 0.01 </cn>
+                <apply>
+                  <plus />
+                  <ci> V </ci>
+                  <cn cellml:units="millivolt"> 10.0 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <minus />
+                <apply>
+                  <exp />
+                  <apply>
+                    <times />
+                    <cn cellml:units="per_millivolt"> 0.1 </cn>
+                    <apply>
+                      <plus />
+                      <ci> V </ci>
+                      <cn cellml:units="millivolt"> 10.0 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn cellml:units="dimensionless"> 1.0 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+        <annotation-xml encoding="MathML-Presentation">
+          <mrow>
+            <mi> alpha_n </mi>
+            <mo> = </mo>
+            <mn> 1.0 </mn>
+            <mfrac>
+              <mrow>
+                <mn> 0.01 </mn>
+                <mo> ( </mo>
+                <mi> V </mi>
+                <mo> + </mo>
+                <mn> 10.0 </mn>
+                <mo> ) </mo>
+              </mrow>
+              <mrow>
+                <mo>exp</mo>
+                <mo> ( </mo>
+                <mn> 0.1 </mn>
+                <mo> ( </mo>
+                <mi> V </mi>
+                <mo> + </mo>
+                <mn> 10.0 </mn>
+                <mo> ) </mo>
+                <mo> ) </mo>
+                <mo> - </mo>
+                <mn> 1.0 </mn>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </annotation-xml>
+      </semantics>
+    </math>
+  </component>
+</model>

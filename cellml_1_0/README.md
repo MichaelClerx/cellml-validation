@@ -293,6 +293,17 @@ In light of this, it's a bit unclear what allowing `<true>` and `<false>` is int
 ### Semantics and annotation
 - `<semantics>`, `<annotation>`, `<annotation-xml>`
 
+It's allowed to wrap a bit of Content MathML in a `<semantics>` element, which looks something like this:
+```
+<semantics>
+  <apply>
+    <eq /><ci>x</ci><cn cellml:units="dimensionless">1</cn>
+  </apply>
+  <annotation>
+    X is a really great variable.
+  </annotation>
+</semantics>
+```
+There can be multiple `<annotation>` elements (for non-xml annotation) or `<annotation-xml>` elements (for xml annotation).
 I have personally never seen these in a model.
-
 
