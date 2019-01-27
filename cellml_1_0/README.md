@@ -222,3 +222,37 @@ The hash characters at the end seem to be so that [you can identify elements e.g
 
 - yes
 - no
+
+### MathML subset
+
+CellML documents can use all of content MathML's capabilities.
+However, CellML software only needs to be able to handle "the CellML subset".
+Documents using only this set are called "valid CellML subset documents".
+The following list is taken directly from the spec:
+
+- token elements
+  -`<cn>`, `<ci>`
+- basic content elements
+  - `<apply>`, `<piecewise>`, `<piece>`, `<otherwise>`
+- relational operators
+  - `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
+- arithmetic operators
+  - `<plus>`, `<minus>`, `<times>`, `<divide>`, `<power>`, `<root>`, `<abs>`, `<exp>`, `<ln>`, `<log>`, `<floor>`,
+  - `<ceiling>`, `<factorial>`
+- logical operators
+  - `<and>`, `<or>`, `<xor>`, `<not>`
+- calculus elements
+  - `<diff>`
+- qualifier elements
+  - `<degree>`, `<bvar>`, `<logbase>`
+- trigonometric operators
+  - `<sin>`, `<cos>`, `<tan>`, `<sec>`, `<csc>`, `<cot>`, `<sinh>`, `<cosh>`, `<tanh>`, `<sech>`, `<csch>`, `<coth>`,
+  - `<arcsin>`, `<arccos>`, `<arctan>`, `<arccosh>`, `<arccot>`, `<arccoth>`, `<arccsc>`, `<arccsch>`,
+  - `<arcsec>`, `<arcsech>`, `<arcsinh>`, `<arctanh>`
+- constants
+  - `<true>`, `<false>`, `<notanumber>`, `<pi>`, `<infinity>`, `<exponentiale>`
+- semantics and annotation elements
+  - `<semantics>`, `<annotation>`, `<annotation-xml>`
+
+
+
