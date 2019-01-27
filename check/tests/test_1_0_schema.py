@@ -406,6 +406,11 @@ expected_errors = {
     '4.4.3.2.cn_units_nonexistent_1': None,
     '4.4.3.2.cn_units_nonexistent_2': None,
     '4.4.3.2.cn_units_parent_component': None,
+    # 4.4.4 A mathml:math can only modify 'owned' variables
+    '4.4.4.modify_nonexistent': None,
+    '4.4.4.modify_private_in': None,
+    '4.4.4.modify_public_in': None,
+
 
 
 
