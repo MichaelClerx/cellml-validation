@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.1: A units can have a base_units element -->
+<model name="units_name_missing"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster" base_units="yes" />
+  <units name="fluther" base_units="no">
+    <unit units="litre" />
+    <unit units="second" exponent="-1" />
+  </units>
+</model>

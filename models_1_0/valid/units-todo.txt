@@ -1,0 +1,11 @@
+Todo:
+
+Add file that's invalid if a variable references a model unit, but valid if
+the local component unit is referenced (both units should have the same name).
+
+This is the final test for 5.4.1.2
+
+although a <units> element in a <component> element
+may share the same name as a <units> element in the parent <model> element. In this case, the
+units definition in the <component> element supercedes the model-wide definition when
+referenced inside that component.

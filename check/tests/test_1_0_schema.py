@@ -412,15 +412,127 @@ expected_errors = {
     '4.4.4.modify_nonexistent': None,
     '4.4.4.modify_private_in': None,
     '4.4.4.modify_public_in': None,
-    # 5.4.1 Unitses must have a name
+    # 5.4.1.1 Unitses must have a name
     '5.4.1.1.units_name_missing':
         "Element 'cellml:units': The attribute 'name' is required",
-    # 3.4.1.2 A units name must be a valid identifier
+    # 5.4.1.1 A units with base_units="yes" can't have children
+    '5.4.1.1.units_base_units_with_children': None,
+    # 5.4.1.1 A units can only contain unit elements
+    '5.4.1.1.units_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '5.4.1.1.units_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '5.4.1.1.units_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '5.4.1.1.units_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '5.4.1.1.units_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '5.4.1.1.units_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '5.4.1.1.units_with_math': None,
+    '5.4.1.1.units_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '5.4.1.1.units_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '5.4.1.1.units_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '5.4.1.1.units_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '5.4.1.1.units_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '5.4.1.1.units_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '5.4.1.1.units_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+    # 5.4.1.2 A units name must be a valid identifier
     '5.4.1.2.units_name_invalid':
         "Element 'cellml:units', attribute 'name'",
+    # 5.4.1.2 Units names must be unique (within model or local component)
+    '5.4.1.2.units_name_duplicate_1':
+        "Element 'cellml:units': Duplicate key-sequence",
+     '5.4.1.2.units_name_duplicate_2':
+        "Element 'cellml:units': Duplicate key-sequence",
+    # 5.4.1.2 Units names cannot overlap with predefined ones
+    '5.4.1.2.units_name_predefined_ampere': None,
+    '5.4.1.2.units_name_predefined_becquerel': None,
+    '5.4.1.2.units_name_predefined_candela': None,
+    '5.4.1.2.units_name_predefined_celsius': None,
+    '5.4.1.2.units_name_predefined_coulomb': None,
+    '5.4.1.2.units_name_predefined_dimensionless': None,
+    '5.4.1.2.units_name_predefined_farad': None,
+    '5.4.1.2.units_name_predefined_gram': None,
+    '5.4.1.2.units_name_predefined_gray': None,
+    '5.4.1.2.units_name_predefined_henry': None,
+    '5.4.1.2.units_name_predefined_hertz': None,
+    '5.4.1.2.units_name_predefined_joule': None,
+    '5.4.1.2.units_name_predefined_katal': None,
+    '5.4.1.2.units_name_predefined_kelvin': None,
+    '5.4.1.2.units_name_predefined_kilogram': None,
+    '5.4.1.2.units_name_predefined_liter': None,
+    '5.4.1.2.units_name_predefined_litre': None,
+    '5.4.1.2.units_name_predefined_lumen': None,
+    '5.4.1.2.units_name_predefined_lux': None,
+    '5.4.1.2.units_name_predefined_meter': None,
+    '5.4.1.2.units_name_predefined_metre': None,
+    '5.4.1.2.units_name_predefined_mole': None,
+    '5.4.1.2.units_name_predefined_newton': None,
+    '5.4.1.2.units_name_predefined_ohm': None,
+    '5.4.1.2.units_name_predefined_pascal': None,
+    '5.4.1.2.units_name_predefined_radian': None,
+    '5.4.1.2.units_name_predefined_second': None,
+    '5.4.1.2.units_name_predefined_siemens': None,
+    '5.4.1.2.units_name_predefined_sievert': None,
+    '5.4.1.2.units_name_predefined_steradian': None,
+    '5.4.1.2.units_name_predefined_tesla': None,
+    '5.4.1.2.units_name_predefined_volt': None,
+    '5.4.1.2.units_name_predefined_watt': None,
+    '5.4.1.2.units_name_predefined_weber': None,
+    # 5.4.1.2 Component units names cannot overlap with predefined ones
+    '5.4.1.2.units_name_predefined_component_ampere': None,
+    # 5.4.1.3 Units base_units attribute can only be yes or no
+    '5.4.1.3.units_base_units_invalid':
+        "not a valid value of the atomic type 'cellml:yes_no'",
 
 
 
+
+
+
+
+
+
+
+    # 5.4.2.1 A unit cannot have any CellML children
+    '5.4.2.1.unit_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '5.4.2.1.unit_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '5.4.2.1.unit_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '5.4.2.1.unit_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '5.4.2.1.unit_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '5.4.2.1.unit_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '5.4.2.1.unit_with_math': None,
+    '5.4.2.1.unit_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '5.4.2.1.unit_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '5.4.2.1.unit_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '5.4.2.1.unit_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '5.4.2.1.unit_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '5.4.2.1.unit_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '5.4.2.1.unit_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '5.4.2.1.unit_with_variable':
+        "Element 'cellml:variable': This element is not expected",
 
 
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.1: A units with base_units="yes" can't have CellML children -->
+<model name="units_base_units_with_children"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="fluther" base_units="yes">
+    <unit units="litre" />
+    <unit units="second" exponent="-1" />
+  </units>
+</model>

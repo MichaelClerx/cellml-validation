@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.2: Model units can't share a name -->
+<model name="units_name_duplicate_1"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster" />
+  <units name="wooster" />
+</model>

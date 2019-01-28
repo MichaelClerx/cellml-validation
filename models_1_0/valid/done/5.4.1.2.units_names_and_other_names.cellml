@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.2: Component units can shadow model unit names -->
+<model name="units_names_and_other_names"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="units_names_and_other_names" />
+  <component name="units_names_and_other_names">
+    <units name="units_names_and_other_names" />
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" />
+  </component>
+  <component name="B">
+    <units name="units_names_and_other_names" />
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" />
+  </component>
+</model>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.2: A units name must not overlap with the predefined names -->
+<model name="units_name_predefined_tesla"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="tesla" />
+</model>

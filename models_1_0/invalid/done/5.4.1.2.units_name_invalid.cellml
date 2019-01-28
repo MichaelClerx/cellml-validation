@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.2: A units name must be a CellML 1.0 identifier -->
+<model name="units_name_invalid"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="_" />
+</model>
