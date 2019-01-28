@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.3: A unit prefix can be an integer -->
+<model name="unit_prefix_integer"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="ampere" prefix="1" />
+    <unit units="becquerel" prefix="2" />
+    <unit units="candela" prefix="0" />
+    <unit units="celsius" prefix="-3" />
+  </units>
+</model>

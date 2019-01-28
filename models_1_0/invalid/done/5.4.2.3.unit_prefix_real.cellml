@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.3: A numerical unit prefix must be an integer -->
+<model name="unit_prefix_real"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="ampere" prefix="1.1" />
+  </units>
+</model>

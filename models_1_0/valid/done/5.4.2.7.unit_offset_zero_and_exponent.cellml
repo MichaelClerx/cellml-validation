@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.7: A unit with offset 0 can have an exponent other than 1 -->
+<model name="unit_offset_zero_and_exponent"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="volt" offset="0" exponent="2" />
+  </units>
+</model>

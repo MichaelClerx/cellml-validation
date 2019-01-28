@@ -493,17 +493,10 @@ expected_errors = {
     # 5.4.1.3 Units base_units attribute can only be yes or no
     '5.4.1.3.units_base_units_invalid':
         "not a valid value of the atomic type 'cellml:yes_no'",
-
-
-
-
-
-
-
-
-
-
-    # 5.4.2.1 A unit cannot have any CellML children
+    # 5.4.2.1 A unit must have a units attribute
+    '5.4.2.1.unit_units_missing':
+        "Element 'cellml:unit': The attribute 'units' is required",
+    # 5.4.2.1 A unit cannot have CellML children
     '5.4.2.1.unit_with_component':
         "Element 'cellml:component': This element is not expected",
     '5.4.2.1.unit_with_component_ref':
@@ -533,6 +526,37 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '5.4.2.1.unit_with_variable':
         "Element 'cellml:variable': This element is not expected",
+    # 5.4.2.2 A unit must refer to an existing units
+    '5.4.2.2.unit_units_invalid': None,
+    # 5.4.2.2 A unit cannot refer to itself directly or indirectly
+    '5.4.2.2.unit_cycle_1': None,
+    '5.4.2.2.unit_cycle_2': None,
+    '5.4.2.2.unit_cycle_3': None,
+    # 5.4.2.3 Allowed values of the prefix attribute
+    '5.4.2.3.unit_prefix_real':
+        "not a valid value of the union type 'cellml:unit_prefix'",
+    '5.4.2.3.unit_prefix_real_int':
+        "not a valid value of the union type 'cellml:unit_prefix'",
+    '5.4.2.3.unit_prefix_spaces':
+        "not a valid value of the union type 'cellml:unit_prefix'",
+    '5.4.2.3.unit_prefix_unknown':
+        "not a valid value of the union type 'cellml:unit_prefix'",
+    # 5.4.2.4 A unit exponent must be a real number
+    '5.4.2.4.unit_exponent_invalid':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    # 5.4.2.5 A unit multiplier must be a real number
+    '5.4.2.5.unit_multiplier_invalid':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    # 5.4.2.6 A unit offset must be a real number
+    '5.4.2.6.unit_offset_invalid':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    # 5.4.2.7: A unit with a non-zero offset must have exponent 1
+    '5.4.2.7.unit_offset_and_exponent': None,
+    # 5.4.2.7: A unit with an offset can't have siblings
+    '5.4.2.7.unit_offset_and_siblings_1': None,
+    '5.4.2.7.unit_offset_and_siblings_2': None,
+
+
 
 
 

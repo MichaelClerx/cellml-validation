@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.7: A unit with offset 0 can have siblings -->
+<model name="unit_offset_zero_and_siblings"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="weber" />
+    <unit units="volt" offset="0" />
+    <unit units="second" offset="0" />
+    <unit units="henry" />
+  </units>
+</model>

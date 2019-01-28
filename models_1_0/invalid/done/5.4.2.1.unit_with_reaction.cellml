@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.1: A unit cannot contain a reaction -->
+<model name="unit_with_reaction"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+    <units name="wooster">
+      <unit units="volt">
+        <reaction>
+          <variable_ref variable="x">
+            <role role="reactant" />
+          </variable_ref>
+        </reaction>
+      </unit>
+    </units>
+  </component>
+</model>

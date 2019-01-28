@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.1: A unit cannot contain a model -->
+<model name="map_components_with_model"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="volt">
+      <model name="inner_model" />
+    </unit>
+  </units>
+</model>

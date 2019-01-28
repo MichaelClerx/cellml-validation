@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.2.7: A unit with an offset can't have siblings -->
+<model name="unit_offset_and_siblings_2"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="second" />
+    <unit units="volt" offset="2" />
+  </units>
+</model>
