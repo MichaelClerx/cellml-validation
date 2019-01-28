@@ -6,7 +6,7 @@
     <variable name="a" units="dimensionless" public_interface="out" />
     <variable name="b" units="dimensionless" public_interface="out" />
   </component>
-  <component name="A">
+  <component name="B">
     <variable name="a" units="dimensionless" public_interface="in" />
     <variable name="b" units="dimensionless" public_interface="in" />
   </component>

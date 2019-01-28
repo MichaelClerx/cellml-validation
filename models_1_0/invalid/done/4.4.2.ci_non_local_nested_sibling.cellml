@@ -22,11 +22,10 @@
     <variable name="y" units="dimensionless" />
   </component>
   <group>
-    <relationship_ref relationship="encapsulation">
-      <component_ref component="A">
-        <component_ref component="B" />
-        <component_ref component="C" />
-      </component_ref>
-    </relationship_ref>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A">
+      <component_ref component="B" />
+      <component_ref component="C" />
+    </component_ref>
   </group>
 </model>

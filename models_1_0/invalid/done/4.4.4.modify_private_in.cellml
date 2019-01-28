@@ -17,11 +17,10 @@
     <variable name="x" units="dimensionless" public_interface="out" />
   </component>
   <group>
-    <relationship_ref relationship="encapsulation">
-      <component_ref component="A">
-        <component_ref component="AA" />
-      </component_ref>
-    </relationship_ref>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A">
+      <component_ref component="AA" />
+    </component_ref>
   </group>
   <connection>
     <map_components component_1="A" component_2="AA" />

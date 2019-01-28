@@ -10,7 +10,7 @@
     <variable name="a" units="meter" public_interface="in" />
   </component>
   <connection>
-    <map_components component_1="c1" component_2="c2" />
+    <map_components component_1="A" component_2="B" />
     <fruit:apple />
     <fruit:banana />
   </connection>

@@ -219,7 +219,6 @@ expected_errors = {
     # 3.4.3.8 A variable can't have an initial value and an "in" interface
     '3.4.3.8.variable_interfaces_private_in_and_initial': None,
     '3.4.3.8.variable_interfaces_public_in_and_initial': None,
-
     # 3.4.4.1 A connection must contain exactly one map_components
     '3.4.4.1.connection_map_components_missing': None,
     '3.4.4.1.connection_map_components_multiple': None,
@@ -413,7 +412,12 @@ expected_errors = {
     '4.4.4.modify_nonexistent': None,
     '4.4.4.modify_private_in': None,
     '4.4.4.modify_public_in': None,
-
+    # 5.4.1 Unitses must have a name
+    '5.4.1.1.units_name_missing':
+        "Element 'cellml:units': The attribute 'name' is required",
+    # 3.4.1.2 A units name must be a valid identifier
+    '5.4.1.2.units_name_invalid':
+        "Element 'cellml:units', attribute 'name'",
 
 
 
@@ -457,38 +461,16 @@ def schema_1_0(filename):
     assert_valid_with_schema(filename, schema(parser), parser)
 
 
-def valid_models():
-    """ Returns a list of filenames for models that should validate. """
+def list_models(subdir):
     # Note: Returning file basename rather than path, so that the test output
     # is e.g. test_valid_models[empty-model] instead of something containing
     # containing the absolute path and extension.
-    files = os.listdir(check.model_1_0('valid'))
+    files = os.listdir(check.model_1_0(subdir))
     files = [os.path.splitext(x) for x in files]
-    return [x[0] for x in files if x[1] == '.cellml']
+    return [x[0] for x in sorted(files) if x[1] == '.cellml']
 
 
-def optional_models():
-    """ Returns a list of filenames for models that should validate. """
-    files = os.listdir(check.model_1_0('optional'))
-    files = [os.path.splitext(x) for x in files]
-    return [x[0] for x in files if x[1] == '.cellml']
-
-
-def invalid_models():
-    """ Returns a list of filenames for models that should not validate. """
-    files = []
-    for f in os.listdir(check.model_1_0('invalid')):
-        name, ext = os.path.splitext(f)
-        if ext != '.cellml':
-            continue
-        if expected_errors.get(name, '') is None:
-            files.append(pytest.param(name, marks=pytest.mark.xfail))
-        else:
-            files.append(name)
-    return files
-
-
-@pytest.mark.parametrize('filename', valid_models())
+@pytest.mark.parametrize('filename', list_models('valid'))
 def test_valid_models(filename, schema, schema_parser):
     """
     Tests if all valid models validate.
@@ -507,7 +489,7 @@ def test_valid_models(filename, schema, schema_parser):
     schema.assertValid(xml)
 
 
-@pytest.mark.parametrize('filename', optional_models())
+@pytest.mark.parametrize('filename', list_models('optional'))
 def test_optional_models(filename, schema, schema_parser):
     """
     Tests if all valid models with optional MathML validate.
@@ -526,8 +508,7 @@ def test_optional_models(filename, schema, schema_parser):
     schema.assertValid(xml)
 
 
-
-@pytest.mark.parametrize('filename', invalid_models())
+@pytest.mark.parametrize('filename', list_models('invalid'))
 def test_invalid_models(filename, schema, schema_parser):
     """
     Checks that no invalid models validate.
@@ -550,20 +531,28 @@ def test_invalid_models(filename, schema, schema_parser):
         assert True
 
     else:
-        # Validate (known fails exit here)
-        assert not schema.validate(xml)
+        # Validate
+        valid = schema.validate(xml)
 
-        # Log detected error
-        e = schema.error_log.last_error
-        r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
-        error = r.sub('cellml:', e.message)
-        log.info('Error on line ' + str(e.line) + ': ' + error)
+        if valid:
+            if expected_errors.get(filename, '') is None:
+                pytest.xfail('Known false negative')
+                return
+            else:
+                error = 'No error raised'
+        else:
+            # Log detected error
+            e = schema.error_log.last_error
+            r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
+            error = r.sub('cellml:', e.message)
+            log.info('Error on line ' + str(e.line) + ': ' + error)
 
     # Test correct error was raised
     expected = expected_errors.get(filename, '')
-    print(expected)
     if expected == '':
         expected = 'No expected error set'
+    if expected is None:
+        expected = 'Expected xfail, but found other error instead'
     log.info('Expected error: ' + expected)
     r = re.compile(re.escape(expected))
     if r.search(error) is None:

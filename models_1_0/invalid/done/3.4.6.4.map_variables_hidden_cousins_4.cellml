@@ -11,7 +11,7 @@
   <component name="B" /> <!-- Parent of BB -->
   <component name="BB"> <!-- Hidden from AA -->
     <variable name="a" units="newton" private_interface="in" />
-  <component>
+  </component>
   <group>
     <relationship_ref relationship="encapsulation" />
     <component_ref component="A">
