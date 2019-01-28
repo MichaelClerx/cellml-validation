@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 5.4.1.2: Component units can shadow model unit names -->
-<model name="units_shadowing"
+<model name="units_shadowing_1"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="wooster" />
   <component name="A">

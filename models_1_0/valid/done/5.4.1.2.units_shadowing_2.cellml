@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.4.1.2: Component units can shadow model unit names; the
+     component unit takes precedence. -->
+<model name="units_shadowing_2"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="wooster">
+    <unit units="volt" />
+  </units>
+  <component name="A">
+    <units name="wooster">
+      <unit units="newton" />
+    </units>
+    <variable name="x" units="wooster" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <cn cellml:units="newton">1</cn>
+      </apply>
+    </math>
+  </component>
+  <component name="B">
+    <units name="wooster">
+      <unit units="kilogram" />
+    </units>
+    <variable name="x" units="wooster" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <cn cellml:units="kilogram">1</cn>
+      </apply>
+    </math>
+  </component>
+</model>
