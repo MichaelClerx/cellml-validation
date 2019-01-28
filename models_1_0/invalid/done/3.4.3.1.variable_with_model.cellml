@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 3.4.3.1: A variable cannot contain a model -->
 <model name="variable_with_model"
-       xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+       xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
-    <variable name="x" cellml:units="dimensionless">
-      <model name="inner model" />
+    <variable name="x" units="dimensionless">
+      <model name="inner_model" />
     </variable>
   </component>
 </model>

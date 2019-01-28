@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 3.4.3.1: A variable cannot contain a map_variables -->
 <model name="variable_with_map_variables"
-       xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+       xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
-    <variable name="x" cellml:units="dimensionless">
+    <variable name="x" units="dimensionless">
       <map_variables variable_1="x" variable_2="y" />
     </variable>
   </component>
