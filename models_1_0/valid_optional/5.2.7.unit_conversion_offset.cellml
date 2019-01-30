@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: Units with a different offset are convertible -->
+<model name="unit_conversion_offset"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="centimeter">
+    <unit units="meter" prefix="centi" />
+  </units>
+  <units name="inch">
+    <unit units="centimeter" multiplier="2.54" />
+  </units>
+  <units name="barleycorn">
+    <unit units="inch" multiplier="0.3333333333333333" />
+  </units>
+  <units name="uk_adult_shoe">
+    <unit units="barleycorn" offset="-23" />
+  </units>
+  <component name="A">
+    <variable name="x" units="uk_adult_shoe" public_interface="out" initial_value="12" />
+  </component>
+  <component name="B">
+    <variable name="x" units="centimeter" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+</model>

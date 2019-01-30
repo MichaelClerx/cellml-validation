@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: MathML unit checking, sec, csc, cot, arcsec, arccsc, arccot -->
+<model name="unit_checking_mathml_functions_trig_redundant"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="sec" units="dimensionless" />
+    <variable name="csc" units="dimensionless" />
+    <variable name="cot" units="dimensionless" />
+    <variable name="arcsec" units="dimensionless" />
+    <variable name="arccsc" units="dimensionless" />
+    <variable name="arccot" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>sec</ci>
+        <apply>
+          <sec />
+          <cn cellml:units="dimensionless">0.5</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>csc</ci>
+        <apply>
+          <csc />
+          <cn cellml:units="dimensionless">0.5</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>cot</ci>
+        <apply>
+          <cot />
+          <cn cellml:units="dimensionless">0.5</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arcsec</ci>
+        <apply>
+          <arcsec />
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arccsc</ci>
+        <apply>
+          <arccsc />
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arccot</ci>
+        <apply>
+          <arccot />
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

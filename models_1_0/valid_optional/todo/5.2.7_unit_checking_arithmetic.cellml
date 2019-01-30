@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: MathML unit checking, binary plus, minus, times, divide -->
+<model name="unit_checking_mathml_arithmetic_binary"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="E" units="joule" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>E</ci>
+        <apply>
+          <divide />
+            <apply>
+              <times />
+                <cn cellml:units="meter">1</cn>
+                <apply>
+                  <plus />
+                  <cn cellml:units="kilogram">1</cn>
+                  <cn cellml:units="kilogram">2</cn>
+                </apply>
+                <cn cellml:units="meter">3</cn>
+            </apply>
+            <apply>
+              <times />
+              <cn cellml:units="second">1</cn>
+              <apply>
+                <minus />
+                <cn cellml:units="second">3</cn>
+                <cn cellml:units="second">2</cn>
+              </apply>
+            </apply>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

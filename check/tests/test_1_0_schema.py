@@ -550,6 +550,8 @@ expected_errors = {
     # 5.4.2.6 A unit offset must be a real number
     '5.4.2.6.unit_offset_invalid':
         "not a valid value of the atomic type 'cellml:real_number'",
+    # 5.2.7 Unit checking and conversion
+    '5.2.7.unit_not_convertible_1': None,
     # 5.4.2.7: A unit with a non-zero offset must have exponent 1
     '5.4.2.7.unit_offset_and_exponent': None,
     # 5.4.2.7: A unit with an offset can't have siblings
@@ -606,53 +608,66 @@ def list_models(subdir):
     return [x[0] for x in sorted(files) if x[1] == '.cellml']
 
 
-@pytest.mark.parametrize('filename', list_models('valid'))
-def test_valid_models(filename, schema, schema_parser):
+@pytest.mark.parametrize('name', list_models('valid'))
+def test_valid_models(name, schema, schema_parser):
     """
     Tests if all valid models validate.
     """
-    # Parse CellML file
-    filename = os.path.join('valid', filename + '.cellml')
-    path = check.model_1_0(filename)
-    assert os.path.isfile(path)
-    xml = etree.parse(path, schema_parser)
-
-    # Check if namespace is set correctly (for a nicer error message)
-    tag = etree.QName(xml.getroot().tag)
-    assert tag.namespace == check.CELLML_1_0_NS
-
-    # Validate
-    schema.assertValid(xml)
+    check_passes(name, 'valid', schema, schema_parser)
 
 
-@pytest.mark.parametrize('filename', list_models('optional'))
-def test_optional_models(filename, schema, schema_parser):
+@pytest.mark.parametrize('name', list_models('valid_optional'))
+def test_valid_optional_models(name, schema, schema_parser):
     """
-    Tests if all valid models with optional MathML validate.
+    Tests if all valid optional models validate.
     """
-    # Parse CellML file
-    filename = os.path.join('optional', filename + '.cellml')
-    path = check.model_1_0(filename)
-    assert os.path.isfile(path)
-    xml = etree.parse(path, schema_parser)
-
-    # Check if namespace is set correctly (for a nicer error message)
-    tag = etree.QName(xml.getroot().tag)
-    assert tag.namespace == check.CELLML_1_0_NS
-
-    # Validate
-    schema.assertValid(xml)
+    check_passes(name, 'valid_optional', schema, schema_parser)
 
 
-@pytest.mark.parametrize('filename', list_models('invalid'))
-def test_invalid_models(filename, schema, schema_parser):
+@pytest.mark.parametrize('name', list_models('invalid'))
+def test_invalid_models(name, schema, schema_parser):
     """
     Checks that no invalid models validate.
+    """
+    check_fails(name, 'invalid', schema, schema_parser)
+
+
+@pytest.mark.parametrize('name', list_models('invalid_optional'))
+def test_invalid_optional_models(name, schema, schema_parser):
+    """
+    Checks that no invalid optional models validate.
+    """
+    check_fails(name, 'invalid_optional', schema, schema_parser)
+
+
+def check_passes(name, subdir, schema, schema_parser):
+    """
+    Checks that a model validates.
+    """
+    # Check file exists
+    rel_path = os.path.join(subdir, name + '.cellml')
+    path = check.model_1_0(rel_path)
+    assert os.path.isfile(path)
+
+    # Parse CellML file
+    xml = etree.parse(path, schema_parser)
+
+    # Check if namespace is set correctly (for a nicer error message)
+    tag = etree.QName(xml.getroot().tag)
+    assert tag.namespace == check.CELLML_1_0_NS
+
+    # Validate
+    schema.assertValid(xml)
+
+
+def check_fails(name, subdir, schema, schema_parser):
+    """
+    Checks that a model doesn't validate, and for the right reason.
     """
     log = logging.getLogger(__name__)
 
     # Check file exists
-    rel_path = os.path.join('invalid', filename + '.cellml')
+    rel_path = os.path.join(subdir, name + '.cellml')
     path = check.model_1_0(rel_path)
     assert os.path.isfile(path)
 
@@ -671,7 +686,7 @@ def test_invalid_models(filename, schema, schema_parser):
         valid = schema.validate(xml)
 
         if valid:
-            if expected_errors.get(filename, '') is None:
+            if expected_errors.get(name, '') is None:
                 pytest.xfail('Known false negative')
                 return
             else:
@@ -684,7 +699,7 @@ def test_invalid_models(filename, schema, schema_parser):
             log.info('Error on line ' + str(e.line) + ': ' + error)
 
     # Test correct error was raised
-    expected = expected_errors.get(filename, '')
+    expected = expected_errors.get(name, '')
     if expected == '':
         expected = 'No expected error set'
     if expected is None:
@@ -692,7 +707,7 @@ def test_invalid_models(filename, schema, schema_parser):
     log.info('Expected error: ' + expected)
     r = re.compile(re.escape(expected))
     if r.search(error) is None:
-        log.error('Unexpected error in ' + filename)
+        log.error('Unexpected error in ' + name)
         log.error('Expected: ' + expected)
         log.error('Returned: ' + error)
         pytest.fail()

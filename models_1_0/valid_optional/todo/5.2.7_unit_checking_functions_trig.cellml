@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: MathML unit checking, sin, cos, tan, arcsin, arccos, arctan -->
+<model name="unit_checking_mathml_functions_trig"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="sin" units="dimensionless" />
+    <variable name="cos" units="dimensionless" />
+    <variable name="tan" units="dimensionless" />
+    <variable name="arcsin" units="dimensionless" />
+    <variable name="arccos" units="dimensionless" />
+    <variable name="arctan" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>sin</ci>
+        <apply>
+          <sin />
+          <cn cellml:units="dimensionless">1.2</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>cos</ci>
+        <apply>
+          <cos />
+          <cn cellml:units="dimensionless">1.2</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>tan</ci>
+        <apply>
+          <tan />
+          <cn cellml:units="dimensionless">1.2</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arcsin</ci>
+        <apply>
+          <arcsin />
+          <cn cellml:units="dimensionless">0.5</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arccos</ci>
+        <apply>
+          <arccos />
+          <cn cellml:units="dimensionless">0.5</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arctan</ci>
+        <apply>
+          <arctan />
+          <cn cellml:units="dimensionless">0.5</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>
