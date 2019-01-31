@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+Discontinuous and non-smooth functions: floor, ceiling, abs -->
+<model name="mathml_functions_non_smooth"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="floor" units="dimensionless" />
+    <variable name="ceiling" units="dimensionless" />
+    <variable name="abs" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>floor</ci>
+        <apply>
+          <floor />
+          <apply>
+            <plus />
+            <cn cellml:units="dimensionless">1.2</cn>
+            <cn cellml:units="dimensionless">3.4</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>ceiling</ci>
+        <apply>
+          <ceiling />
+          <apply>
+            <times />
+            <cn cellml:units="dimensionless">3</cn>
+            <cn cellml:units="dimensionless">3.01</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>abs</ci>
+        <apply>
+          <abs />
+          <apply>
+            <times />
+            <cn cellml:units="dimensionless">-2</cn>
+            <cn cellml:units="dimensionless">3</cn>
+          </apply>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

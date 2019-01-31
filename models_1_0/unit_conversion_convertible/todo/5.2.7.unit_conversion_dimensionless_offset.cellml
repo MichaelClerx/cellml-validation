@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: Units with a different prefix are convertible -->
+<model name="unit_conversion_prefix"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="millivolt">
+    <unit units="volt" prefix="milli" />
+  </units>
+  <units name="megavolt">
+    <unit units="volt" prefix="6" />
+  </units>
+  <component name="A">
+    <variable name="x" units="millivolt" initial_value="3" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="x" units="megavolt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+</model>

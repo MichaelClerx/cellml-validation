@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+Redundant hyperbolic trigonometric functions: sech, csch, coth, arcsech, arccsch, arccoth -->
+<model name="mathml_functions_trig_redundant_hyperbolic"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="sech" units="dimensionless" />
+    <variable name="csch" units="dimensionless" />
+    <variable name="coth" units="dimensionless" />
+    <variable name="arcsech" units="dimensionless" />
+    <variable name="arccsch" units="dimensionless" />
+    <variable name="arccoth" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>sech</ci>
+        <apply>
+          <sech />
+          <apply>
+            <plus />
+            <cn cellml:units="dimensionless">1.2</cn>
+            <cn cellml:units="dimensionless">3.4</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>csch</ci>
+        <apply>
+          <csch />
+          <apply>
+            <times />
+            <cn cellml:units="dimensionless">3</cn>
+            <cn cellml:units="dimensionless">3.01</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>coth</ci>
+        <apply>
+          <coth />
+          <apply>
+            <times />
+            <cn cellml:units="dimensionless">-1.2</cn>
+            <cn cellml:units="dimensionless">-5.123</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arcsech</ci>
+        <apply>
+          <arcsech />
+          <apply>
+            <divide />
+            <cn cellml:units="dimensionless">1</cn>
+            <cn cellml:units="dimensionless">2</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arccsch</ci>
+        <apply>
+          <arccsch />
+          <apply>
+            <divide />
+            <cn cellml:units="dimensionless">1</cn>
+            <cn cellml:units="dimensionless">2</cn>
+          </apply>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>arccoth</ci>
+        <apply>
+          <arccoth />
+          <apply>
+            <times />
+            <cn cellml:units="dimensionless">-1</cn>
+            <cn cellml:units="dimensionless">-1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>
