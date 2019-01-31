@@ -9,7 +9,7 @@
       <math xmlns="http://www.w3.org/1998/Math/MathML">
         <apply>
           <eq/>
-          <cn cellml:units="dimensionless">1</cn>
+          <ci>a</ci>
           <cn cellml:units="dimensionless">1</cn>
         </apply>
       </math>

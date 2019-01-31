@@ -9,11 +9,11 @@
     </map_variables>
   </connection>
   <component name="a">
-    <variable name="x" units="newton" public_interface="out" />
+    <variable name="x" units="volt" public_interface="out" />
     <variable name="y" units="volt" public_interface="in" />
   </component>
   <component name="b">
-    <variable name="x" units="newton" public_interface="in" />
+    <variable name="x" units="volt" public_interface="in" />
     <variable name="y" units="volt" public_interface="out" />
   </component>
 </model>

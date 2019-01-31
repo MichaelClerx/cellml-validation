@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
-First-order derivatives: diff, bvar - with non-trivial units -->
-<model name="mathml_derivatives_with_units"
+<!-- CellML 1.0, 5.2.7: Unit checking: higher-order derivatives -->
+<model name="unit_checking_derivatives_degree"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <units name="volt_per_second">
     <unit units="volt" />
     <unit units="second" exponent="-1" />
   </units>
+  <units name="volt_per_second_squared">
+    <unit units="volt" />
+    <unit units="second" exponent="-2" />
+  </units>
   <component name="A">
     <variable name="time" units="second" initial_value="0" />
     <variable name="V" units="volt" initial_value = "-0.08" />
+    <variable name="x" units="volt" initial_value = "1" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
@@ -19,9 +23,26 @@ First-order derivatives: diff, bvar - with non-trivial units -->
           <bvar>
             <ci>time</ci>
           </bvar>
+          <degree>
+            <cn cellml:units="dimensionless">1</cn>
+          </degree>
           <ci>V</ci>
         </apply>
         <cn cellml:units="volt_per_second">0.001</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>time</ci>
+          </bvar>
+          <degree>
+            <cn cellml:units="dimensionless">2</cn>
+          </degree>
+          <ci>x</ci>
+        </apply>
+        <cn cellml:units="volt_per_second_squared">0.001</cn>
       </apply>
     </math>
   </component>

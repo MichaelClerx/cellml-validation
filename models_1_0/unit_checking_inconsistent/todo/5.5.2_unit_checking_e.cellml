@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 5.5.2: MathML unit checking, pi -->
-<model name="mathml_pi"
+<!-- CellML 1.0, 5.5.2: Unit checking: e -->
+<model name="unit_checking_e"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
@@ -9,7 +9,7 @@
       <apply>
         <eq/>
         <ci>x</ci>
-        <pi />
+        <exponentiale />
       </apply>
     </math>
   </component>

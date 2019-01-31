@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
-First-order derivatives: diff, bvar -->
-<model name="mathml_derivatives"
+<!-- CellML 1.0, 5.2.7: Unit checking: First-order derivatives -->
+<model name="unit_checking_derivatives"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="volt_per_second">
+    <unit units="volt" />
+    <unit units="second" exponent="-1" />
+  </units>
   <component name="A">
-    <variable name="time" units="dimensionless" initial_value="0" />
-    <variable name="V" units="dimensionless" initial_value="-0.08" />
+    <variable name="time" units="second" initial_value="0" />
+    <variable name="V" units="volt" initial_value = "-0.08" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
@@ -17,7 +20,7 @@ First-order derivatives: diff, bvar -->
           </bvar>
           <ci>V</ci>
         </apply>
-        <cn cellml:units="dimensionless">0.001</cn>
+        <cn cellml:units="volt_per_second">0.001</cn>
       </apply>
     </math>
   </component>

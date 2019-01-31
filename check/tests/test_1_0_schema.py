@@ -550,8 +550,6 @@ expected_errors = {
     # 5.4.2.6 A unit offset must be a real number
     '5.4.2.6.unit_offset_invalid':
         "not a valid value of the atomic type 'cellml:real_number'",
-    # 5.2.7 Unit checking and conversion
-    '5.2.7.unit_not_convertible_1': None,
     # 5.4.2.7: A unit with a non-zero offset must have exponent 1
     '5.4.2.7.unit_offset_and_exponent': None,
     # 5.4.2.7: A unit with an offset can't have siblings
@@ -610,34 +608,37 @@ def list_models(subdir):
 
 @pytest.mark.parametrize('name', list_models('valid'))
 def test_valid_models(name, schema, schema_parser):
-    """
-    Tests if all valid models validate.
-    """
     check_passes(name, 'valid', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('valid_optional'))
-def test_valid_optional_models(name, schema, schema_parser):
-    """
-    Tests if all valid optional models validate.
-    """
-    check_passes(name, 'valid_optional', schema, schema_parser)
 
 
 @pytest.mark.parametrize('name', list_models('invalid'))
 def test_invalid_models(name, schema, schema_parser):
-    """
-    Checks that no invalid models validate.
-    """
     check_fails(name, 'invalid', schema, schema_parser)
 
 
-@pytest.mark.parametrize('name', list_models('invalid_optional'))
-def test_invalid_optional_models(name, schema, schema_parser):
-    """
-    Checks that no invalid optional models validate.
-    """
-    check_fails(name, 'invalid_optional', schema, schema_parser)
+@pytest.mark.parametrize('name', list_models('numbers'))
+def test_numbers(name, schema, schema_parser):
+    check_passes(name, 'numbers', schema, schema_parser)
+
+
+@pytest.mark.parametrize('name', list_models('unit_checking_consistent'))
+def test_unit_checking_consistent(name, schema, schema_parser):
+    check_passes(name, 'unit_checking_consistent', schema, schema_parser)
+
+
+@pytest.mark.parametrize('name', list_models('unit_checking_inconsistent'))
+def test_unit_checking_inconsistent(name, schema, schema_parser):
+    check_passes(name, 'unit_checking_inconsistent', schema, schema_parser)
+
+
+@pytest.mark.parametrize('name', list_models('unit_conversion_convertible'))
+def test_unit_conversion_convertible(name, schema, schema_parser):
+    check_passes(name, 'unit_conversion_convertible', schema, schema_parser)
+
+
+@pytest.mark.parametrize('name', list_models('unit_conversion_inconvertible'))
+def test_unit_conversion_inconvertible(name, schema, schema_parser):
+    check_passes(name, 'unit_conversion_inconvertible', schema, schema_parser)
 
 
 def check_passes(name, subdir, schema, schema_parser):

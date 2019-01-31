@@ -14,18 +14,18 @@
     </component_ref>
   </group>
   <component name="C">
-    <variable name="a" units="U" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
   </component>
   <units name="U" />
   <component name="A">
-    <variable name="a" units="U" initial_value="0" public_interface="out" />
+    <variable name="a" units="dimensionless" initial_value="0" public_interface="out" />
   </component>
   <connection>
     <map_components component_1="A" component_2="B" />
     <map_variables variable_1="a" variable_2="a" />
   </connection>
   <component name="B">
-    <variable name="a" units="U" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
   </component>
   <units name="Q" />
   <group>

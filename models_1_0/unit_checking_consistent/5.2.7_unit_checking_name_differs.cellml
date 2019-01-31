@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: Matching units but with different names -->
+<model name="unit_checking_name_differs"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <units name="wooster">
+      <unit units="volt" />
+    </units>
+    <variable name="a" units="wooster" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>a</ci>
+        <cn cellml:units="volt">-0.085</cn>
+      </apply>
+    </math>
+  </component>
+</model>

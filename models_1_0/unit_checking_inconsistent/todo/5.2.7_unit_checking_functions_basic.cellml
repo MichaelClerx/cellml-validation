@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 5.2.7: MathML unit checking, power, root (degree), exp, ln, log (logbase) -->
-<model name="mathml_functions_basic"
+<!-- CellML 1.0 Unit checking: Power, root (degree), exp, ln, log (logbase) -->
+<model name="unit_checking_functions_basic"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">

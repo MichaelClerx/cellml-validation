@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 5.2.7: MathML unit checking, cn and ci -->
-<model name="unit_checking_mathml_basics"
+<!-- CellML 1.0, 5.5.2: Unit checking: inf -->
+<model name="unit_checking_inf"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <units name="wooster">
-      <unit units="volt" />
-    </units>
-    <variable name="a" units="wooster" />
+    <variable name="inf" units="dimensionless" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
-        <ci>a</ci>
-        <cn cellml:units="volt">-0.085</cn>
+        <ci>inf</ci>
+        <infinity />
       </apply>
     </math>
   </component>

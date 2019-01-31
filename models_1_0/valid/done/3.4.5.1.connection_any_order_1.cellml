@@ -9,10 +9,10 @@
   </connection>
   <component name="A">
     <variable name="a" units="dimensionless" public_interface="out" />
-    <variable name="b" units="volt" public_interface="out" />
+    <variable name="b" units="dimensionless" public_interface="out" />
   </component>
   <component name="B">
     <variable name="c" units="dimensionless" public_interface="in" />
-    <variable name="d" units="volt" public_interface="in" />
+    <variable name="d" units="dimensionless" public_interface="in" />
   </component>
 </model>

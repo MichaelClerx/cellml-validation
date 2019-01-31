@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 5.2.7: MathML unit checking, piecewise -->
-<model name="unit_checking_mathml_piecewise"
+<!-- CellML 1.0, 5.2.7: Unit checking: piecewise -->
+<model name="unit_checking_piecewise"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
