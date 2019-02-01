@@ -621,6 +621,11 @@ def test_numbers(name, schema, schema_parser):
     check_passes(name, 'numbers', schema, schema_parser)
 
 
+@pytest.mark.parametrize('name', list_models('booleans'))
+def test_numbers(name, schema, schema_parser):
+    check_passes(name, 'booleans', schema, schema_parser)
+
+
 @pytest.mark.parametrize('name', list_models('unit_checking_consistent'))
 def test_unit_checking_consistent(name, schema, schema_parser):
     check_passes(name, 'unit_checking_consistent', schema, schema_parser)

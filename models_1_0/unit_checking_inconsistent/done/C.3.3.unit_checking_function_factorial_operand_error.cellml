@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.3.3: Factorial operand must be dimensionless -->
+<model name="unit_checking_function_factorial_operand_error"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="volt_squared">
+    <unit units="volt" exponent="2" />
+  </units>
+  <component name="A">
+    <variable name="x" units="volt_squared" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <factorial />
+          <cn cellml:units="volt">2</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

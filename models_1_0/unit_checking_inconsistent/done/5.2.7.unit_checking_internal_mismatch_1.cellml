@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: A variable in volts with an expression in ampere -->
+<model name="unit_checking_equation_has_wrong_units_1"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>a</ci>
+        <cn cellml:units="ampere">1</cn>
+      </apply>
+    </math>
+  </component>
+</model>

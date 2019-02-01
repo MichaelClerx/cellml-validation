@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: Units with different base units are inconvertible -->
+<model name="unit_conversion_inconvertible_1"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="volt" initial_value="3" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="y" units="meter" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="x" variable_2="y" />
+  </connection>
+</model>
