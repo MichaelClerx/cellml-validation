@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 7.4.3.9: The math in a role must be relevant to the variable_ref -->
-<model name="role_math_not_relevant"
+<!-- CellML 1.0, 7.4.3.8: A delta_variable can only appear on reactants or products -->
+<model name="role_delta_variable_inhibitor"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="x">
     <variable name="A" units="dimensionless" initial_value="20" />
     <variable name="B" units="dimensionless" initial_value="20" />
     <variable name="C" units="dimensionless" initial_value="5" />
+    <variable name="m" units="dimensionless" initial_value="1" />
+    <variable name="dm" units="dimensionless" initial_value="1" />
     <variable name="r" units="dimensionless" />
     <reaction>
       <variable_ref variable="A">
@@ -17,6 +19,9 @@
       </variable_ref>
       <variable_ref variable="C">
         <role role="product" />
+      </variable_ref>
+      <variable_ref variable="m">
+        <role role="inhibitor" delta_variable="dm" />
       </variable_ref>
       <variable_ref variable="r">
         <role role="rate">

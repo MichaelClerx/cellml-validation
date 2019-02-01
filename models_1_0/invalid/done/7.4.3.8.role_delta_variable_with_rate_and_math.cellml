@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 7.4.3.8: A delta_variable can only appear on reactants or products -->
-<model name="role_delta_vairable_modifier"
+<!-- CellML 1.0, 7.4.3.8: A delta_variable with a stoichiometry cannot have math -->
+<model name="role_delta_variable_with_rate_and_math"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="x">
     <variable name="A" units="dimensionless" initial_value="20" />
     <variable name="B" units="dimensionless" initial_value="20" />
     <variable name="C" units="dimensionless" initial_value="5" />
+    <variable name="dA" units="dimensionless" />
     <variable name="r" units="dimensionless" />
     <reaction>
       <variable_ref variable="A">
-        <role role="reactant" />
+        <role role="reactant" delta_variable="dA" stoichiometry="2" />
       </variable_ref>
       <variable_ref variable="B">
         <role role="reactant" />
@@ -25,6 +26,11 @@
               <eq/>
               <ci>r</ci>
               <cn cellml:units="dimensionless">1</cn>
+            </apply>
+            <apply>
+              <eq/>
+              <ci>dA</ci>
+              <cn cellml:units="dimensionless">2</cn>
             </apply>
           </math>
         </role>
