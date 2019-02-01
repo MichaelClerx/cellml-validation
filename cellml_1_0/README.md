@@ -30,7 +30,7 @@ Required elements/attributes are indicated in italics.
     - *map_variables*(*variable_1*,*variable_2*)
 
 Note that (contrary to what the spec says), most attributes listed above are _not_ in the CellML 1.0 namespace.
-The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.The `relationship` attribute is similarly not in a namespace, but the spec does allow `relationship` attributes to be in a namespace other than CellML, and have any old value.
+The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.
 
 All CellML 1.0 elements can also contain:
  - any element from the `rdf` namespace
@@ -66,6 +66,8 @@ Because a variable can only get its value from one source, CellML 1.0 has additi
 - A variable cannot have public _and_ private interface "in".
   
 The third rule doesn't seem strictly necessary (as the second rule already prevents any abuse), but is present in CellML 1.0 anyway.
+
+Finally, users can add their own relationship types by using a `relationship` attribute on the `relationship_ref` element from any namespace other than cellml, mathml, cmeta, or rdf. In this case its value is unrestricted and there are no rules for the relationship's interpretation.
 
 ## Identifiers
 
