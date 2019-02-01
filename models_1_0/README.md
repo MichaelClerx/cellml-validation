@@ -20,7 +20,7 @@ The `numbers` test set includes valid files using other number types, including 
 ## Unit checking
 
 The CellML 1.0 spec does not mention how units affect the validity of a CellML file.
-Presumably, this falls under the "CellML can't stop you (entirely) from making a bad model" rule, and models containing statements such `x = 1 newton + 1 ampere` are simply bad models encoded in a valid CellML file.
+Presumably, this falls under the "CellML can't stop you (entirely) from making a bad model" rule, and models containing statements like `x = 1 newton + 1 ampere` are simply bad models encoded in a valid CellML file.
 
 For tools that do implement unit checking, the `unit_checking_consistent` set contains examples of how MathML operations from the CellML subset affect units.
 The `unit_checking_inconsistent` set contains examples of unit inconsistencies.
