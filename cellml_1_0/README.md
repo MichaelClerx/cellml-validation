@@ -141,6 +141,7 @@ The one case where namespaced attributes are useful is when they appear in an el
 For example, in `<mathml:cn cellml:units="volt">1</mathml:cn>` we have a MathML element using a CellML attribute.
 
 The spec unfortunately gets this wrong (2001 is early days for XML namespaces), and consistently refers to attributes in the `cellml` namespace, when what is meant is un-namespaced attributes.
+Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), when wat is meant is an unnamespaced `id` attribute.
 
 ### Predefined units
 

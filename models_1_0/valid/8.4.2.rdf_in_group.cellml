@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 8.4.2: A group can have an rdf:RDF -->
+<model name="rdf_in_group"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:dc= "http://purl.org/dc/elements/1.1/">
+  <component name="A" />
+  <component name="B" />
+  <group cmeta:id="x">
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+    <rdf:RDF about="#x">
+      <dc:description>It's a group</dc:description>
+    </rdf:RDF>
+  </group>
+</model>

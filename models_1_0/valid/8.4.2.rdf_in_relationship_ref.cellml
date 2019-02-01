@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 8.4.2: A relationship_ref can have an rdf:RDF -->
+<model name="rdf_in_relationship_ref"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:dc= "http://purl.org/dc/elements/1.1/">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" cmeta:id="x">
+      <rdf:RDF about="#x">
+        <dc:description>It's a relationship_ref</dc:description>
+      </rdf:RDF>
+    </relationship_ref>
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 8.4.2: A units element can have an rdf:RDF -->
+<model name="rdf_in_units_1"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:dc= "http://purl.org/dc/elements/1.1/">
+  <units name="orange" cmeta:id="orange">
+    <rdf:RDF about="#orange">
+      <dc:description>It's a units element</dc:description>
+    </rdf:RDF>
+  </units>
+</model>

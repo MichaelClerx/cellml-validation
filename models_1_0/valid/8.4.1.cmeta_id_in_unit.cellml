@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 8.4.1: A unit can have a cmeta:id -->
+<model name="cmeta_id_in_unit"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <units name="apple">
+    <unit units="volt" cmeta:id="apple" />
+  </units>
+</model>

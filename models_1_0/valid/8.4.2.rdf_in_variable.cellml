@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 8.4.2: A variable can have an rdf:RDF -->
+<model name="rdf_in_variable"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <component name="c1">
+    <variable name="a" units="volt" cmeta:id="a">
+      <rdf:RDF about="#a">
+        <dc:description>It's a variable</dc:description>
+      </rdf:RDF>
+    </variable>
+  </component>
+</model>

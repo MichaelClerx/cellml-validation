@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 8.4.2: A unit can have an rdf:RDF -->
+<model name="rdf_in_unit"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:dc= "http://purl.org/dc/elements/1.1/">
+  <units name="apple">
+    <unit units="volt" cmeta:id="volt">
+      <rdf:RDF about="#volt">
+        <dc:description>It's a unit</dc:description>
+      </rdf:RDF>
+    </unit>
+  </units>
+</model>

@@ -864,7 +864,9 @@ expected_errors = {
     '7.4.3.8.role_delta_variable_with_stoichiometry_no_rate': None,
     # 7.4.3.9 The math in a role must be relevant to the variable_ref
     '7.4.3.9.role_math_not_relevant': None,
-
+    # 8.4.1 Cmeta id's are unique
+    '8.4.1.cmeta_id_duplicate':
+        "not a valid value of the atomic type 'xs:ID'"
 }
 
 
