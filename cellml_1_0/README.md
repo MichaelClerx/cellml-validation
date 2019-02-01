@@ -2,7 +2,7 @@
 
 This directory contains validation files for CellML 1.0.
 
-A quick-and-dirty reference is given below.
+A quick-and-dirty reference to CellML 1.0 itself is given below.
 
 ## These things exist in CellML 1.0:
 
