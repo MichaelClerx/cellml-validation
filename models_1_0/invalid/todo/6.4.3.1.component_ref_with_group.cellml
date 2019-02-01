@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.1: A component_ref cannot contain a group -->
+<model name="component_ref_with_group"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="B" />
+  <component name="C" />
+  <component name="D" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+      <group>
+        <relationship_ref relationship="containment" />
+        <component_ref component="C" >
+          <component_ref component="D" />
+        </component_ref>
+      </group>
+    </component_ref>
+  </group>
+</model>

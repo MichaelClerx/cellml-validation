@@ -4,7 +4,7 @@
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
     <variable name="x" units="dimensionless">
-      <units name="dimensionless" />
+      <units name="wooster" />
     </variable>
   </component>
 </model>

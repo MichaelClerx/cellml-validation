@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.2.1: A relationship_ref cannot have mathml:math -->
+<model name="relationship_ref_with_math"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+  </component>
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <eq/>
+          <ci>x</ci>
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </math>
+    </relationship_ref>
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

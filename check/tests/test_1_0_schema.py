@@ -555,9 +555,111 @@ expected_errors = {
     # 5.4.2.7: A unit with an offset can't have siblings
     '5.4.2.7.unit_offset_and_siblings_1': None,
     '5.4.2.7.unit_offset_and_siblings_2': None,
+    # 6.4.1.1 A group must have at least one component_ref
+    '6.4.1.1.group_component_ref_missing': None,
+    # 6.4.1.1 A group must have exactly one relationship_ref
+    '6.4.1.1.group_relationship_ref_missing': None,
+    '6.4.1.1.group_relationship_ref_multiple_1': None,
+    '6.4.1.1.group_relationship_ref_multiple_2': None,
+    # 6.4.1.1 A group cannot be empty (extra test for missing comp_ref/rel_ref)
+    '6.4.1.1.group_empty':
+        "Element 'cellml:group': Missing child element(s)",
+    '6.4.1.1.group_only_extensions': None,
+    # 6.4.1.1 A group can only contain component_refs and relationship_refs
+    '6.4.1.1.group_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '6.4.1.1.group_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '6.4.1.1.group_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '6.4.1.1.group_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '6.4.1.1.group_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '6.4.1.1.group_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '6.4.1.1.group_with_math': None,
+    '6.4.1.1.group_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '6.4.1.1.group_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '6.4.1.1.group_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '6.4.1.1.group_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '6.4.1.1.group_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '6.4.1.1.group_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '6.4.1.1.group_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '6.4.1.1.group_with_variable':
+        "Element 'cellml:variable': This element is not expected",
 
 
 
+    '''
+    '6.4.2.1.relationship_ref_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '6.4.2.1.relationship_ref_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '6.4.2.1.relationship_ref_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '6.4.2.1.relationship_ref_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '6.4.2.1.relationship_ref_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '6.4.2.1.relationship_ref_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '6.4.2.1.relationship_ref_with_math': None,
+    '6.4.2.1.relationship_ref_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '6.4.2.1.relationship_ref_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '6.4.2.1.relationship_ref_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '6.4.2.1.relationship_ref_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '6.4.2.1.relationship_ref_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '6.4.2.1.relationship_ref_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '6.4.2.1.relationship_ref_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '6.4.2.1.relationship_ref_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+
+
+    '6.4.3.1.component_ref_with_component':
+        "Element 'cellml:component': This element is not expected",
+    '6.4.3.1.component_ref_with_component_ref':
+        "Element 'cellml:component_ref': This element is not expected",
+    '6.4.3.1.component_ref_with_connection':
+        "Element 'cellml:connection': This element is not expected",
+    '6.4.3.1.component_ref_with_group':
+        "Element 'cellml:group': This element is not expected",
+    '6.4.3.1.component_ref_with_map_components':
+        "Element 'cellml:map_components': This element is not expected",
+    '6.4.3.1.component_ref_with_map_variables':
+        "Element 'cellml:map_variables': This element is not expected",
+    '6.4.3.1.component_ref_with_math': None,
+    '6.4.3.1.component_ref_with_model':
+        "Element 'cellml:model': This element is not expected",
+    '6.4.3.1.component_ref_with_reaction':
+        "Element 'cellml:reaction': This element is not expected",
+    '6.4.3.1.component_ref_with_relationship_ref':
+        "Element 'cellml:relationship_ref': This element is not expected",
+    '6.4.3.1.component_ref_with_role':
+        "Element 'cellml:role': This element is not expected",
+    '6.4.3.1.component_ref_with_unit':
+        "Element 'cellml:unit': This element is not expected",
+    '6.4.3.1.component_ref_with_units':
+        "Element 'cellml:units': This element is not expected",
+    '6.4.3.1.component_ref_with_variable_ref':
+        "Element 'cellml:variable_ref': This element is not expected",
+    '6.4.3.1.component_ref_with_variable':
+        "Element 'cellml:variable': This element is not expected",
+    '''
 
 
 

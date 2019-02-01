@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.1: A component_ref cannot contain a reaction -->
+<model name="component_ref_with_reaction"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" >
+    <variable name="x" units="dimensionless">
+  </component>
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+      <reaction>
+        <variable_ref variable="x">
+          <role role="reactant" />
+        </variable_ref>
+      </reaction>
+    </component_ref>
+  </group>
+</model>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.1.1: A group cannot contain a role -->
+<model name="group_with_role"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+    <role role="reactant" />
+  </group>
+</model>
