@@ -248,6 +248,11 @@ Limitations related to extensions and namespaces:
           <xs:selector xpath="cellml:units" />
           <xs:field xpath="@name" />
         </xs:unique>
+        <!-- Reaction delta_variables can only be used once -->
+        <xs:unique name="delta_variable">
+          <xs:selector xpath="cellml:reaction/cellml:variable_ref/cellml:role" />
+          <xs:field xpath="@delta_variable" />
+        </xs:unique>
       </xs:element>
       <xs:element name="group" type="cellml:group_type">
         <!-- Named relationship_refs must be unique within a group -->
@@ -276,11 +281,6 @@ Limitations related to extensions and namespaces:
         <xs:unique name="reaction_variable">
           <xs:selector xpath="cellml:variable_ref" />
           <xs:field xpath="@variable" />
-        </xs:unique>
-        <!-- Reaction delta_variables can only be used once -->
-        <xs:unique name="delta_variable">
-          <xs:selector xpath="cellml:variable_ref/cellml:role" />
-          <xs:field xpath="@delta_variable" />
         </xs:unique>
       </xs:element>
       <!-- Allow elements from other namespaces, including MathML. Use lax

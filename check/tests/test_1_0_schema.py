@@ -451,7 +451,7 @@ expected_errors = {
     # 5.4.1.2 Units names must be unique (within model or local component)
     '5.4.1.2.units_name_duplicate_1':
         "Element 'cellml:units': Duplicate key-sequence",
-     '5.4.1.2.units_name_duplicate_2':
+    '5.4.1.2.units_name_duplicate_2':
         "Element 'cellml:units': Duplicate key-sequence",
     # 5.4.1.2 Units names cannot overlap with predefined ones
     '5.4.1.2.units_name_predefined_ampere': None,
@@ -777,15 +777,7 @@ expected_errors = {
         "Element 'cellml:variable_ref': Duplicate key-sequence",
     # 7.4.3.1 A role must define a role attribute
     '7.4.3.1.role_role_missing':
-        "Element 'cellml:variable_ref': Duplicate key-sequence",
-
-    # 7.4.3.1 A role must define a valid role attribute
-
-
-
-
-
-
+        "Element 'cellml:role': The attribute 'role' is required",
     # 7.4.3.1 A role cannot contain any CellML children (only math)
     '7.4.3.1.role_with_component':
         "Element 'cellml:component': This element is not expected",
@@ -815,8 +807,63 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '7.4.3.1.role_with_variable':
         "Element 'cellml:variable': This element is not expected",
-
-
+    # 7.4.3.2 A role must define a valid role attribute
+    '7.4.3.2.role_role_invalid':
+        "Element 'cellml:role', attribute 'role'",
+    # 7.4.3.3 A reaction can only have a single rate
+    '7.4.3.3.reaction_multiple_rates': None,
+    # 7.4.3.3 A variable_ref with a rate can't have other roles
+    '7.4.3.3.role_rate_with_multiple_roles': None,
+    # 7.4.3.3 A role with attribute rate can't have a delta_variable attribute
+    '7.4.3.3.role_rate_with_delta_variable': None,
+    # 7.4.3.3 A role with attribute rate can't have a stoichiometry attribute
+    '7.4.3.3.role_rate_with_stoichiometry': None,
+    # 7.4.3.4 A direction can only be forward, reverse, or both
+    '7.4.3.4.role_direction_invalid':
+        "Element 'cellml:role', attribute 'direction'",
+    # 7.4.3.5 A direction in an irreversible reaction must be forward
+    '7.4.3.5.role_direction_both_irreversible': None,
+    '7.4.3.5.role_direction_reverse_irreversible': None,
+    # 7.4.3.5 A rate must have direction forward
+    '7.4.3.5.role_direction_both_rate': None,
+    '7.4.3.5.role_direction_reverse_rate': None,
+    # 7.4.3.5 A reactant must have direction forward
+    '7.4.3.5.role_direction_both_reactant': None,
+    '7.4.3.5.role_direction_reverse_reactant': None,
+    # 7.4.3.5 A product must have direction forward
+    '7.4.3.5.role_direction_both_product': None,
+    '7.4.3.5.role_direction_reverse_product': None,
+    # 7.4.3.5 Each (role,direction) combination must be unique within a
+    # variable_ref
+    '7.4.3.5.role_direction_role_duplicate':
+        "Element 'cellml:role': Duplicate key-sequence",
+    # 7.4.3.6 Stoichiometry must be a real number
+    '7.4.3.6.role_stoichiometry_invalid':
+        "not a valid value of the atomic type 'cellml:real_number'",
+    # 7.4.3.7 The delta_variable must refer to a local variable
+    '7.4.3.7.role_delta_variable_nonexistent_1':
+        "Element 'cellml:role': No match found for key-sequence",
+    '7.4.3.7.role_delta_variable_nonexistent_2':
+        "Element 'cellml:role': No match found for key-sequence",
+    # 7.4.3.7 The delta_variable must be unique component-wide
+    '7.4.3.7.role_delta_variable_duplicate_1':
+        "Element 'cellml:role': Duplicate key-sequence",
+    '7.4.3.7.role_delta_variable_duplicate_2':
+        "Element 'cellml:role': Duplicate key-sequence",
+    # 7.4.3.8 A delta_variable can only appear on reactants or products
+    # Note: rate is already checked in 7.4.3.3
+    '7.4.3.8.role_delta_variable_activator': None,
+    '7.4.3.8.role_delta_variable_catalyst': None,
+    '7.4.3.8.role_delta_variable_inhibitor': None,
+    '7.4.3.8.role_delta_variable_modifier': None,
+    # 7.4.3.8 A delta_variable must have either a stoichiometry or math
+    '7.4.3.8.role_delta_variable_without_rate_or_math': None,
+    # 7.4.3.8 A delta_variable with a stoichiometry cannot have math
+    '7.4.3.8.role_delta_variable_with_rate_and_math': None,
+    # 7.4.3.8 A delta_variable with a stoichiometry must have a rate
+    '7.4.3.8.role_delta_variable_with_stoichiometry_no_rate': None,
+    # 7.4.3.9 The math in a role must be relevant to the variable_ref
+    '7.4.3.9.role_math_not_relevant': None,
 
 }
 
