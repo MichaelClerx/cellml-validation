@@ -735,15 +735,12 @@ expected_errors = {
     # delta_variable attributes in its roles.
     '7.4.1.3.reaction_encapsulating_delta_variable': None,
     # 7.4.1.3 There's another rule about maths here that I don't understand
-    # 7.4.2.1
-
-
-
-
-
-
-
-
+    # 7.4.2.1 A variable_ref must have at least one role
+    '7.4.2.1.variable_ref_role_missing':
+        "Element 'cellml:variable_ref': Missing child element",
+    '7.4.2.1.variable_ref_variable_missing':
+        "Element 'cellml:variable_ref': The attribute 'variable' is required",
+    # 7.4.2.1 A variable_ref can only contain a role
     '7.4.2.1.variable_ref_with_component_ref':
         "Element 'cellml:component_ref': This element is not expected",
     '7.4.2.1.variable_ref_with_component':
@@ -771,11 +768,25 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '7.4.2.1.variable_ref_with_variable':
         "Element 'cellml:variable': This element is not expected",
+    # 7.4.2.1 A variable_ref must refer to a local variable
+    '7.4.2.2.variable_ref_variable_hidden':
+        "Element 'cellml:variable_ref': No match found for key-sequence",
+    '7.4.2.2.variable_ref_variable_nonexistent':
+        "Element 'cellml:variable_ref': No match found for key-sequence",
+    '7.4.2.2.variable_ref_variable_duplicate':
+        "Element 'cellml:variable_ref': Duplicate key-sequence",
+    # 7.4.3.1 A role must define a role attribute
+    '7.4.3.1.role_role_missing':
+        "Element 'cellml:variable_ref': Duplicate key-sequence",
+
+    # 7.4.3.1 A role must define a valid role attribute
 
 
 
 
 
+
+    # 7.4.3.1 A role cannot contain any CellML children (only math)
     '7.4.3.1.role_with_component':
         "Element 'cellml:component': This element is not expected",
     '7.4.3.1.role_with_component_ref':

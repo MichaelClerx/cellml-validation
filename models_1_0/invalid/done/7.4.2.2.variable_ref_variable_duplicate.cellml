@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 7.4.2.2: A variable_ref variable must be unique within the reaction -->
+<model name="variable_ref_variable_duplicate"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <variable name="b" units="mole" />
+    <reaction>
+      <variable_ref variable="a" />
+      <variable_ref variable="a" />
+    </reaction>
+  </component>
+</model>

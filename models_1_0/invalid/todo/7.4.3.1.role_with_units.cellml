@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 7.4.1.1: A reaction cannot contain a units element -->
-<model name="reaction_with_unit"
+<!-- CellML 1.0, 7.4.3.1: A role cannot contain a units element -->
+<model name="role_with_units"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
     <variable name="a" units="mole" />
     <reaction>
       <variable_ref variable="a">
-        <role role="reactant" />
+        <role role="reactant">
+          <units name="wooster" />
+        </role>
       </variable_ref>
-      <units name="wooster" />
     </reaction>
   </component>
 </model>

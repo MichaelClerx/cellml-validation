@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 7.4.1.1: A reaction cannot contain a model -->
-<model name="reaction_with_model"
+<!-- CellML 1.0, 7.4.3.1: A role cannot contain a model -->
+<model name="role_with_model"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
     <variable name="a" units="mole" />
     <reaction>
       <variable_ref variable="a">
-        <role role="reactant" />
+        <role role="reactant">
+          <model name="inner_model" />
+        </role>
       </variable_ref>
-      <model name="inner_model" />
     </reaction>
   </component>
 </model>

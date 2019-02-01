@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 7.4.1.1: A reaction cannot have mathml:math -->
-<model name="reaction_with_math"
+<!-- CellML 1.0, 7.4.2.1: A variable_ref cannot have mathml:math -->
+<model name="variable_ref_with_math"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
@@ -8,14 +8,14 @@
     <reaction>
       <variable_ref variable="a">
         <role role="reactant" />
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <eq/>
+            <ci>a</ci>
+            <cn cellml:units="dimensionless">1</cn>
+          </apply>
+        </math>
       </variable_ref>
-      <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <apply>
-          <eq/>
-          <ci>a</ci>
-          <cn cellml:units="dimensionless">1</cn>
-        </apply>
-      </math>
     </reaction>
   </component>
 </model>
