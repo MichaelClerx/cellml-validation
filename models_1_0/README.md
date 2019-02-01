@@ -2,13 +2,13 @@
 
 THIS IS A WORK IN PROGRESS. NOT ALL TESTS ARE IMPLEMENTED YET. SOME FILES MAY _ACCIDENTALLY_ CONTAIN ERRORS.
 
-## Valid CellML 1.0 files (`valid`)
+## Valid CellML 1.0 files
 
-These files should pass in all CellML 1.0 validators.
+The files in the `valid` subset should pass in all CellML 1.0 validators.
 
-## Invalid CellML 1.0 files (`invalid`)
+## Invalid CellML 1.0 files
 
-These files should fail in all CellML 1.0 validators.
+The files in the `invalid` subset should fail in all CellML 1.0 validators.
 Where possible, these files contain only a single error per file.
 
 ## Advanced number types
