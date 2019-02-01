@@ -700,63 +700,54 @@ def schema_1_0(filename):
 
 
 def list_models(subdir):
-    # Note: Returning file basename rather than path, so that the test output
-    # is e.g. test_valid_models[empty-model] instead of something containing
-    # containing the absolute path and extension.
-    files = os.listdir(check.model_1_0(subdir))
-    files = [os.path.splitext(x) for x in files]
-    return [x[0] for x in sorted(files) if x[1] == '.cellml']
+    """
+    Scans a path (without recursing into subdirectories) and returns a list of
+    tuples ``(name, path)`` representing each file.
+    """
+    files = []
+    subdir = check.model_1_0(subdir)
+    for filename in os.listdir(subdir):
+        name, ext = os.path.splitext(filename)
+        if ext == '.cellml':
+            files.append(pytest.param(
+                name, os.path.join(subdir, filename), id=name))
+    files.sort(key=lambda x: x[0])
+    return files
 
 
-@pytest.mark.parametrize('name', list_models('valid'))
-def test_valid_models(name, schema, schema_parser):
-    check_passes(name, 'valid', schema, schema_parser)
+def list_passes():
+    """
+    Returns a list of ``pytest.param`` objects for models that should pass.
+    """
+    # Valid models
+    files = list_models('valid')
+
+    # Numbers are all valid MathML2, so should pass schema validation
+    files += list_models('numbers')
+
+    # Types are not checked in schema, should pass
+    files += list_models('booleans')
+
+    # Units do not affect validity, so these should all pass
+    files += list_models('unit_checking_consistent')
+    files += list_models('unit_checking_inconsistent')
+    files += list_models('unit_conversion_convertible')
+    files += list_models('unit_conversion_inconvertible')
+
+    return files
+
+def list_fails():
+    """
+    Returns a list of ``pytest.param`` objects for models that should fail.
+    """
+    return list_models('invalid')
 
 
-@pytest.mark.parametrize('name', list_models('invalid'))
-def test_invalid_models(name, schema, schema_parser):
-    check_fails(name, 'invalid', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('numbers'))
-def test_numbers(name, schema, schema_parser):
-    check_passes(name, 'numbers', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('booleans'))
-def test_numbers(name, schema, schema_parser):
-    check_passes(name, 'booleans', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('unit_checking_consistent'))
-def test_unit_checking_consistent(name, schema, schema_parser):
-    check_passes(name, 'unit_checking_consistent', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('unit_checking_inconsistent'))
-def test_unit_checking_inconsistent(name, schema, schema_parser):
-    check_passes(name, 'unit_checking_inconsistent', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('unit_conversion_convertible'))
-def test_unit_conversion_convertible(name, schema, schema_parser):
-    check_passes(name, 'unit_conversion_convertible', schema, schema_parser)
-
-
-@pytest.mark.parametrize('name', list_models('unit_conversion_inconvertible'))
-def test_unit_conversion_inconvertible(name, schema, schema_parser):
-    check_passes(name, 'unit_conversion_inconvertible', schema, schema_parser)
-
-
-def check_passes(name, subdir, schema, schema_parser):
+@pytest.mark.parametrize(('name', 'path'), list_passes())
+def test_valid_model(name, path, schema, schema_parser):
     """
     Checks that a model validates.
     """
-    # Check file exists
-    rel_path = os.path.join(subdir, name + '.cellml')
-    path = check.model_1_0(rel_path)
-    assert os.path.isfile(path)
-
     # Parse CellML file
     xml = etree.parse(path, schema_parser)
 
@@ -768,16 +759,12 @@ def check_passes(name, subdir, schema, schema_parser):
     schema.assertValid(xml)
 
 
-def check_fails(name, subdir, schema, schema_parser):
+@pytest.mark.parametrize(('name', 'path'), list_fails())
+def test_invalid_model(name, path, schema, schema_parser):
     """
     Checks that a model doesn't validate, and for the right reason.
     """
     log = logging.getLogger(__name__)
-
-    # Check file exists
-    rel_path = os.path.join(subdir, name + '.cellml')
-    path = check.model_1_0(rel_path)
-    assert os.path.isfile(path)
 
     # Parse and validate
     try:
