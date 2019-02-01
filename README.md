@@ -19,7 +19,7 @@ Disclaimers:
 ## CellML 1.0
 
 * [A very brief overview of CellML 1.0](cellml_1_0/README.md)
-* [The CellML 1.0 test set](models_1_0/README.md)
+* [The CellML 1.0 test set](models_1_0)
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
 * Older files:
   * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
