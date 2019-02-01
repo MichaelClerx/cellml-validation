@@ -1,6 +1,6 @@
 # CellML 1.0 Test set
 
-THIS IS A WORK IN PROGRESS. NOT ALL TESTS ARE IMPLEMENTED YET. SOME FILES MAY _ACCIDENTALLY_ CONTAIN ERRORS.
+Please report any issues with these tests on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
 
 ## Valid CellML 1.0 files
 
