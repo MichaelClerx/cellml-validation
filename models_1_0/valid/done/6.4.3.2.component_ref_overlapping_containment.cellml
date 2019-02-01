@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.2: Containment relationships may overlap. -->
+<model name="component_ref_overlapping_containment"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="B" />
+  <component name="C" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="C" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

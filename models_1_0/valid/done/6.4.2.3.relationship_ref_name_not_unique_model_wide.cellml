@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.2.1: A relationship name does not need to be unique model-wide -->
+<model name="relationship_ref_name_not_unique_model_wide"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:family="http://family.org">
+  <component name="A" />
+  <component name="B" />
+  <component name="C" />
+  <component name="D" />
+  <group>
+    <relationship_ref relationship="containment" name="x" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref relationship="containment" name="x" />
+    <component_ref component="C" >
+      <component_ref component="D" />
+    </component_ref>
+  </group>
+</model>

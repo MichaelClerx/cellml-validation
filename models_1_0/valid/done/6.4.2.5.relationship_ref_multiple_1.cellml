@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 6.4.1.1, A group element must contain exactly one relationship_ref -->
-<model name="group_relationship_ref_multiple_2"
+<!-- CellML 1.0, 6.4.2.5, A group element can contain multiple relationship_ref elements -->
+<model name="relationship_ref_multiple_1"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:fruit="http://fruit.org">
   <component name="A" />
@@ -10,6 +10,6 @@
       <component_ref component="B" />
     </component_ref>
     <relationship_ref relationship="containment" />
-    <relationship_ref relationship="containment" />
+    <relationship_ref relationship="encapsulation" />
   </group>
 </model>

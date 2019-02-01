@@ -14,7 +14,7 @@
           <component_ref component="D" />
         </component_ref>
       </group>
-    </relationship>
+    </relationship_ref>
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>

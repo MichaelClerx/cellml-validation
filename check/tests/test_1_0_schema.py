@@ -557,10 +557,8 @@ expected_errors = {
     '5.4.2.7.unit_offset_and_siblings_2': None,
     # 6.4.1.1 A group must have at least one component_ref
     '6.4.1.1.group_component_ref_missing': None,
-    # 6.4.1.1 A group must have exactly one relationship_ref
+    # 6.4.1.1 A group must have at least one relationship_ref
     '6.4.1.1.group_relationship_ref_missing': None,
-    '6.4.1.1.group_relationship_ref_multiple_1': None,
-    '6.4.1.1.group_relationship_ref_multiple_2': None,
     # 6.4.1.1 A group cannot be empty (extra test for missing comp_ref/rel_ref)
     '6.4.1.1.group_empty':
         "Element 'cellml:group': Missing child element(s)",
@@ -595,10 +593,10 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '6.4.1.1.group_with_variable':
         "Element 'cellml:variable': This element is not expected",
-
-
-
-    '''
+    # 6.4.2.1 A relationship_ref must define a relationship - although it can
+    #         be either namespaceless, or in any extension namespace!
+    '6.4.2.1.relationship_ref_relationship_missing': None,
+    # 6.4.2.1 A relationship_ref cannot have any CellML children
     '6.4.2.1.relationship_ref_with_component':
         "Element 'cellml:component': This element is not expected",
     '6.4.2.1.relationship_ref_with_component_ref':
@@ -628,12 +626,27 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '6.4.2.1.relationship_ref_with_variable':
         "Element 'cellml:variable': This element is not expected",
-
-
+    # 6.4.2.2 When not in a namespace, a relationship_ref's relationship must
+    # be either containment or encapsulation.
+    '6.4.2.2.relationship_ref_relationship_invalid':
+        "Element 'cellml:relationship_ref', attribute 'relationship'",
+    # 6.4.2.3 A relationship_ref name must be a cellml identifier
+    '6.4.2.3.relationship_ref_name_invalid':
+        "Element 'cellml:relationship_ref', attribute 'name'",
+    # 6.4.2.4 An encapsulation can not be named
+    '6.4.2.4.relationship_ref_encapsulation_duplicate': None,
+    '6.4.2.4.relationship_ref_encapsulation_named': None,
+    # 6.2.4.5 name/relationship pairs must be unique
+    '6.4.2.5.relationship_ref_duplicate_named':
+        "Element 'cellml:relationship_ref': Duplicate key-sequence",
+    '6.4.2.5.relationship_ref_duplicate_unnamed_1': None,
+    '6.4.2.5.relationship_ref_duplicate_unnamed_2': None,
+    # 6.4.3.1 A component_ref must define a component
+    '6.4.3.1.component_ref_component_missing':
+        "'cellml:component_ref': The attribute 'component' is required",
+    # 6.4.3.1 A component_ref can only contain a component_ref
     '6.4.3.1.component_ref_with_component':
         "Element 'cellml:component': This element is not expected",
-    '6.4.3.1.component_ref_with_component_ref':
-        "Element 'cellml:component_ref': This element is not expected",
     '6.4.3.1.component_ref_with_connection':
         "Element 'cellml:connection': This element is not expected",
     '6.4.3.1.component_ref_with_group':
@@ -659,7 +672,32 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     '6.4.3.1.component_ref_with_variable':
         "Element 'cellml:variable': This element is not expected",
-    '''
+    # 6.4.3.2 A component's children cannot be declared two places
+    '6.4.3.2.component_ref_children_declared_twice_1': None,
+    '6.4.3.2.component_ref_children_declared_twice_2': None,
+    '6.4.3.2.component_ref_children_declared_twice_3': None,
+    # 6.4.3.3 A hierarchy cannot be circular
+    '6.4.3.2.component_ref_cycle_1': None,
+    '6.4.3.2.component_ref_cycle_2': None,
+    '6.4.3.2.component_ref_cycle_3': None,
+    '6.4.3.2.component_ref_cycle_4': None,
+    # 6.4.3.2 A component cannot be named twice in a single hierarchy
+    '6.4.3.2.component_ref_duplicate_child_1': None,
+    '6.4.3.2.component_ref_duplicate_child_2': None,
+    # 6.4.3.2 The first component_ref in a containment must have children
+    '6.4.3.2.component_ref_no_children_containment': None,
+    # 6.4.3.2 The first component_ref in an encapsulation must have children
+    '6.4.3.2.component_ref_no_children_encapsulation': None,
+    # 6.4.3.2 Encapsulation relationships cannot overlap
+    '6.4.3.2.component_ref_overlapping_encapsulation': None,
+    # 6.4.3.3 A component attribute must be an identifier
+    '6.4.3.3.component_ref_component_invalid':
+        "'cellml:component_ref', attribute 'component'",
+    # 6.4.3.3 A component_ref must refer to an existing component
+    '6.4.3.3.component_ref_component_nonexistent_1':
+        "'cellml:component_ref': No match found for key-sequence",
+    '6.4.3.3.component_ref_component_nonexistent_2': None,
+    #
 
 
 
@@ -735,6 +773,7 @@ def list_passes():
     files += list_models('unit_conversion_inconvertible')
 
     return files
+
 
 def list_fails():
     """

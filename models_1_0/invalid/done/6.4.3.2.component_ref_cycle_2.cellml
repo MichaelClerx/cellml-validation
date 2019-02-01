@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 6.4.2.1: A relationship_ref cannot contain a variable -->
-<model name="relationship_ref_with_variable"
+<!-- CellML 1.0, 6.4.3.2: A hierarchy cannot be circular -->
+<model name="component_ref_cycle_2"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A" />
   <component name="B" />
   <group>
-    <relationship_ref relationship="containment">
-      <variable name="x" units="dimensionless" />
-    </relationship>
+    <relationship_ref relationship="containment" />
     <component_ref component="A" >
       <component_ref component="B" />
+    </component_ref>
+    <component_ref component="B">
+      <component_ref component="A" />
     </component_ref>
   </group>
 </model>

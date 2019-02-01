@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 6.4.1.1, A group element must contain at least one relationship_ref -->
-<model name="group_relationship_ref_missing"
+<!-- CellML 1.0, 6.4.2.1: A relationship may define a name -->
+<model name="relationship_ref_name"
        xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:fruit="http://fruit.org">
+       xmlns:family="http://family.org">
   <component name="A" />
   <component name="B" />
   <group>
+    <relationship_ref relationship="containment" name="x" />
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>
-    <fruit:apple />
   </group>
 </model>

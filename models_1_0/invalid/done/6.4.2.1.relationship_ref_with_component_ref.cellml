@@ -3,20 +3,16 @@
 <model name="relationship_ref_with_math"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
-  <component name="A">
-    <variable name="x" units="dimensionless" />
-  </component>
+  <component name="A" />
   <component name="B" />
+  <component name="C" />
+  <component name="D" />
   <group>
     <relationship_ref relationship="containment">
-      <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <apply>
-          <eq/>
-          <ci>x</ci>
-          <cn cellml:units="dimensionless">1</cn>
-        </apply>
-      </math>
-    </relationship>
+      <component_ref component="C" >
+        <component_ref component="D" />
+      </component_ref>
+    </relationship_ref>
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>

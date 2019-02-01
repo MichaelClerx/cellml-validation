@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.1: Component_ref elements can be nested -->
+<model name="component_ref_nesting"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="AA" />
+  <component name="AAA" />
+  <component name="AAAA" />
+  <component name="AAAB" />
+  <component name="AB" />
+  <component name="ABA" />
+  <component name="ABAA" />
+  <component name="ABB" />
+  <component name="ABBA">
+    <variable name="dancing_queen" initial_value="0" units="dimensionless" />
+  </component>
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A" >
+      <component_ref component="AA" >
+        <component_ref component="AAA" >
+          <component_ref component="AAAA" />
+          <component_ref component="AAAB" />
+        </component_ref>
+      </component_ref>
+      <component_ref component="AB" >
+        <component_ref component="ABA" >
+          <component_ref component="ABAA" />
+        </component_ref>
+        <component_ref component="ABB" >
+          <component_ref component="ABBA" />
+        </component_ref>
+      </component_ref>
+    </component_ref>
+  </group>
+</model>

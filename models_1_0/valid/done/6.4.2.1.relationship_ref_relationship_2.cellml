@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.2.1: A relationship_ref must define a relationship_ref
+                          with no namespace or in an extension namespace -->
+<model name="relationship_ref_relationship_2"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:family="http://family.org">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref family:relationship="cousins" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

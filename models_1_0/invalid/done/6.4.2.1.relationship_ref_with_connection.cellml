@@ -14,7 +14,7 @@
         <map_components component_1="A" component_2="B" />
         <map_variables variable_1="a" variable_2="a" />
       </connection>
-    </relationship>
+    </relationship_ref>
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>

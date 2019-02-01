@@ -11,7 +11,7 @@
   <group>
     <relationship_ref relationship="containment">
       <map_variables variable_1="x" variable_2="x" />
-    </relationship>
+    </relationship_ref>
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>

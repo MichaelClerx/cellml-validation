@@ -30,12 +30,13 @@ Required elements/attributes are indicated in italics.
     - *map_variables*(*variable_1*,*variable_2*)
 
 Note that (contrary to what the spec says), most attributes listed above are _not_ in the CellML 1.0 namespace.
-The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.
+The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.The `relationship` attribute is similarly not in a namespace, but the spec does allow `relationship` attributes to be in a namespace other than CellML, and have any old value.
 
 All CellML 1.0 elements can also contain:
  - any element from the `rdf` namespace
  - a `cmeta:id` attribute.
  - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
+
 
 ## Grouping & public/private interfaces
 
@@ -130,6 +131,16 @@ rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 ```
 
 The hash characters at the end seem to be so that [you can identify elements e.g. `rdf:type` as `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`](https://www.w3.org/TR/REC-rdf-syntax/#section-Namespace).
+
+### Confusion
+
+In XML, elements can specify a namespace just for themselves (`<ns:element xmlns:ns="http://example.org" />`) or for themselves and all their children (`<element xmlns="http://example.org" />`).
+Attributes are not in a namespace unless explicitly stated using the `namespace:attribute="attribute_value"` syntax.
+In general, attributes do not _need_ to be namespaced, because they are already uniquely identifiable from their namespaced parent element.
+The one case where namespaced attributes are useful is when they appear in an element from a different namespace.
+For example, in `<mathml:cn cellml:units="volt">1</mathml:cn>` we have a MathML element using a CellML attribute.
+
+The spec unfortunately gets this wrong (2001 is early days for XML namespaces), and consistently refers to attributes in the `cellml` namespace, when what is meant is un-namespaced attributes.
 
 ### Predefined units
 

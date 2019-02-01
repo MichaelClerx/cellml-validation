@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.2.1: A relationship_ref cannot contain a map_components -->
+<model name="relationship_ref_with_map_components"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment">
+      <map_components component_1="A" component_2="B" />
+    </relationship_ref>
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

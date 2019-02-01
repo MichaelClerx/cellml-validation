@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.2: Component_ref elements in a group only _need_ to have
+                          children if they're encapsulation or containment
+                          relations. -->
+<model name="component_ref_no_children_extensions"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:fruit="http://fruit.org">
+  <component name="A" />
+  <group>
+    <relationship_ref fruit:relationship="encapsulation" />
+    <component_ref component="A" />
+  </group>
+</model>

@@ -77,13 +77,6 @@ Limitations related to units:
 
 Limitations related to grouping:
 
- - CellML 1.0 specifies that a `relationship_ref` element must contain a
-   `relationship` attribute either in the CellML namespace or in an extension
-   namespace (see 6.4.2.1). However, all examples and all CellML handling
-   software so far use a relationship attribute without any namespace. This
-   schema assumes the `relationship` attribute is not in any namespace, and can
-   only have the values "containment" or "encapsulation".
-
  - The schema does not detect when there are two unnamed `relationship_ref`
    elements with the same `relationship` in a single group, although it does
    detect if there are two with the same relationship and the same name (see
@@ -123,7 +116,7 @@ Limitations related to extensions and namespaces:
    - CellML "http://www.cellml.org/cellml/1.0#" cellml
    - CellML Metadata "http://www.cellml.org/metadata/1.0#" cmeta
    - MathML "http://www.w3.org/1998/Math/MathML" mathml
-   -  RDF "http://www.w3.org/1999/02/22-rdf-syntax-ns#"rdf
+   - RDF "http://www.w3.org/1999/02/22-rdf-syntax-ns#"rdf
 
    Note that following this rule strictly, all the attributes found in
    cellml elements (which have no namespace, see above) are extension
@@ -220,7 +213,8 @@ Limitations related to extensions and namespaces:
       <xs:field xpath="@component_2" />
     </xs:unique>
     <!-- Group component_refs must name components -->
-    <xs:keyref name="group_components" refer="cellml:component_name">
+    <!-- Note: This only works for direct children, not for nested ones! -->
+    <xs:keyref name="group_components_root" refer="cellml:component_name">
       <xs:selector xpath="cellml:group/cellml:component_ref" />
       <xs:field xpath="@component" />
     </xs:keyref>
@@ -412,7 +406,9 @@ Limitations related to extensions and namespaces:
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:any namespace="##other" processContents="skip" />
     </xs:choice>
-    <xs:attribute name="relationship" type="cellml:relationship" use="required" />
+    <!-- Note: relationship is optional because an extension namespace relationship
+         may be used instead -->
+    <xs:attribute name="relationship" type="cellml:relationship" use="optional" />
     <xs:attribute name="name" type="cellml:identifier" use="optional" />
     <xs:anyAttribute namespace="##other" processContents="lax" />
   </xs:complexType>

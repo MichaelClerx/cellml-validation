@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.1: Component_refs must refer to an existing component -->
+<model name="component_ref_component_nonexistent_1"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="X" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

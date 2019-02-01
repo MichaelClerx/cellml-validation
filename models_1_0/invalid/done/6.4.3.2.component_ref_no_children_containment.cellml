@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 6.4.3.2: The first component_ref in an encapsulation or
+                          containment relationship must have at least one child -->
+<model name="component_ref_no_children_containment"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A" />
+  </group>
+</model>

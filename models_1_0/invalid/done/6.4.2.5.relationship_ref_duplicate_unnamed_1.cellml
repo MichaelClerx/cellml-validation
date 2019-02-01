@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CellML 1.0, 6.4.1.1, A group element must contain at least one relationship_ref -->
-<model name="group_relationship_ref_missing"
+<!-- CellML 1.0, 6.4.2.5, An unnamed relationship_ref within a group must be unique -->
+<model name="relationship_ref_duplicate_unnamed_1"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:fruit="http://fruit.org">
   <component name="A" />
@@ -9,6 +9,7 @@
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>
-    <fruit:apple />
+    <relationship_ref relationship="containment" />
+    <relationship_ref relationship="containment" />
   </group>
 </model>
