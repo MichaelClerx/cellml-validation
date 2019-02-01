@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 7.4.1.2 A reaction in an encapsulating component shouldn't have
+                         a delta_variable -->
+<model name="reaction_encapsulating_delta_variable"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+    <variable name="b" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="a">
+        <role role="reactant" delta_variable="b" />
+      </variable_ref>
+    </reaction>
+  </component>
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

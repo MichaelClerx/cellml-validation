@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 7.4.1.1: A reaction cannot contain a unit -->
+<model name="reaction_with_unit"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction>
+      <variable_ref variable="a">
+        <role role="reactant" />
+      </variable_ref>
+      <unit units="dimensionless" />
+    </reaction>
+  </component>
+</model>
