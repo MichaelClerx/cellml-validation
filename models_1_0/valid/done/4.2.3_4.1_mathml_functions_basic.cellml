@@ -79,7 +79,7 @@ Basic functions: power, root (degree), exp, ln, log (logbase) -->
         <eq/>
         <ci>ln</ci>
         <apply>
-          <power />
+          <ln />
           <apply>
             <plus />
             <cn cellml:units="dimensionless">2</cn>

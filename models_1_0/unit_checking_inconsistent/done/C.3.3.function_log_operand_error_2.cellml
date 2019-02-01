@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 3.3.3: Log logbase operand must be dimensionless -->
+<model name="function_log_operand_error_2"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <log />
+          <logbase>
+            <cn cellml:units="volt">2</cn>
+          </logbase>
+          <cn cellml:units="dimensionless">256</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

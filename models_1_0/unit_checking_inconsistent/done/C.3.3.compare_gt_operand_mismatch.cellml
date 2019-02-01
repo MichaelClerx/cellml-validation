@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, C.3.3: The operands of gt must have the same unit -->
+<model name="compare_gt_operand_mismatch"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="dimensionless">1</cn>
+            <apply>
+              <gt />
+              <cn cellml:units="volt">2</cn>
+              <cn cellml:units="dimensionless">2</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="dimensionless">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+    </math>
+  </component>
+</model>

@@ -1,6 +1,6 @@
 # CellML 1.0 Test set
 
-THIS IS A WORK IN PROGRESS. NOT ALL TESTS ARE IMPLEMENTED YET. SOME FILES MAY ACCIDENTALLY CONTAIN ERRORS.
+THIS IS A WORK IN PROGRESS. NOT ALL TESTS ARE IMPLEMENTED YET. SOME FILES MAY _ACCIDENTALLY_ CONTAIN ERRORS.
 
 ## Valid CellML 1.0 files (`valid`)
 
@@ -34,6 +34,7 @@ Again, it seems the units of connected variables do not affect validity of the f
 
 The `unit_conversion_convertible` set contains models where unit conversion between components is necessary to obtain the correct results.
 The `unit_conversion_inconvertible` set contains models where connetions between varaibles with incompatible units have been made.
+Note that all models from both sets should validate, but software is free to complain about models from the `unit_conversion_inconvertible` on other grounds.
 None of the files in `valid` require unit conversion.
 
 ## Booleans

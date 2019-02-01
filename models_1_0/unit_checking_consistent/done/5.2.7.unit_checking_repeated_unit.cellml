@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.0, 5.2.7: Unit checking: repeated unit in units definition -->
+<model name="unit_checking_repeated_unit"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="cubic_meter">
+    <unit units="meter" />
+    <unit units="meter" exponent="2" />
+  </units>
+  <component name="A">
+    <variable name="x" units="cubic_meter" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <power />
+          <cn cellml:units="meter">2</cn>
+          <cn cellml:units="dimensionless">3</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>
