@@ -24,18 +24,18 @@ Presumably, this falls under the "CellML can't stop you (entirely) from making a
 
 For tools that do implement unit checking, the `unit_checking_consistent` set contains examples of how MathML operations from the CellML subset affect units.
 The `unit_checking_inconsistent` set contains examples of unit inconsistencies.
-Note that all models from both sets should validate, but software is free to complain about models from the `unit_checking_inconsistent` on other grounds.
+Note that all models from both sets should validate, but software is free to complain about models from `unit_checking_inconsistent` on other grounds.
 
 ## Unit conversion
 
-When variables from two separate componets are connected by a `map_variables`, the CellML 1.0 spec mentions unit conversion as an optional thing software may do.
+When variables from two separate components are connected by a `map_variables`, the CellML 1.0 spec mentions unit conversion as an optional thing software may do.
 (Note that conversion _within a component_ is never mentioned, so no software is expected to deal with the case where you define x in millivolts but then give it a value in volts).
-Again, it seems the units of connected variables do not affect validity of the file.
+Again, all this is discussed in terms of software capabilities, not the CellML format, so it seems that the units of connected variables do not affect validity of the file.
 
 The `unit_conversion_convertible` set contains models where unit conversion between components is necessary to obtain the correct results.
-The `unit_conversion_inconvertible` set contains models where connetions between varaibles with incompatible units have been made.
-Note that all models from both sets should validate, but software is free to complain about models from the `unit_conversion_inconvertible` on other grounds.
-None of the files in `valid` require unit conversion.
+The `unit_conversion_inconvertible` set contains models where connections between varaibles with incompatible units have been made.
+Note that all models from both sets should validate, but software is free to complain about models from `unit_conversion_inconvertible` on other grounds.
+None of the files in `valid` should require unit conversion.
 
 ## Booleans
 
