@@ -16,10 +16,10 @@
     <variable name="x" units="millijoule_per_meter" initial_value="1" public_interface="out" />
   </component>
   <component name="B">
-    <variable name="x" units="joule_per_meter" public_interface="in" />
+    <variable name="y" units="joule_per_meter" public_interface="in" />
   </component>
   <connection>
     <map_components component_1="A" component_2="B" />
-    <map_variables variable_1="x" variable_2="x" />
+    <map_variables variable_1="x" variable_2="y" />
   </connection>
 </model>
