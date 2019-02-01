@@ -76,7 +76,7 @@ Note that this includes strings such as "0" and "1e12".
 
 ## Real numbers
 
-CellML 1.0 does not define a notation for real numbers.
+CellML 1.0 does not define a notation for real numbers, but presumably this should be something compatible with the MathML `real` number type.
 
 ## Lists
 
