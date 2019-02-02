@@ -210,6 +210,8 @@ Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), wh
 - containment
 - encapsulation
 
+(Note that a relationship may also be defined in an extension namespace, in which case any value is allowable).
+
 ### Interface types
 
 - in
@@ -239,8 +241,8 @@ Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), wh
 
 ### MathML subset
 
-CellML documents can use all of content MathML's capabilities.
-However, CellML software only needs to be able to handle "the CellML subset".
+CellML 1.0 documents can use all of content MathML's capabilities.
+However, CellML 1.0 software only needs to be able to handle "the CellML subset".
 Documents using only this set are called "valid CellML subset documents".
 
 #### MathML basics
