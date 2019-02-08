@@ -14,8 +14,44 @@ import check
 
 
 # Known instances where the DTD says a valid file is invalid
+# All to do with namespaces and extension elements
 known_false_negatives = {
-
+    '2.4.3.component_ref_with_extensions': 'No declaration',
+    '2.4.3.component_with_extensions': 'No declaration',
+    '2.4.3.connection_with_extensions': 'No declaration',
+    '2.4.3.group_with_extensions': 'No declaration',
+    '2.4.3.map_components_with_extensions': 'No declaration',
+    '2.4.3.map_variables_with_extensions': 'No declaration',
+    '2.4.3.model_with_extensions': 'No declaration',
+    '2.4.3.reaction_with_extensions': 'No declaration',
+    '2.4.3.relationship_ref_with_extensions': 'No declaration',
+    '2.4.3.role_with_extensions': 'No declaration',
+    '2.4.3.units_with_extensions': 'No declaration',
+    '2.4.3.unit_with_extensions': 'No declaration',
+    '2.4.3.variable_ref_with_extensions': 'No declaration',
+    '2.4.3.variable_with_extensions': 'No declaration',
+    '6.4.2.1.relationship_ref_name': 'No declaration',
+    '6.4.2.1.relationship_ref_relationship_2': 'No declaration',
+    '6.4.2.3.relationship_ref_name_not_unique_model_wide': 'No declaration',
+    '6.4.2.5.relationship_ref_multiple_1': 'No declaration',
+    '6.4.2.5.relationship_ref_multiple_2': 'No declaration',
+    '6.4.2.5.relationship_ref_multiple_3': 'No declaration',
+    '6.4.3.2.component_ref_no_children_extension': 'No declaration',
+    '8.4.2.rdf_in_component': 'No declaration',
+    '8.4.2.rdf_in_component_ref': 'No declaration',
+    '8.4.2.rdf_in_connection': 'No declaration',
+    '8.4.2.rdf_in_group': 'No declaration',
+    '8.4.2.rdf_in_map_components': 'No declaration',
+    '8.4.2.rdf_in_map_variables': 'No declaration',
+    '8.4.2.rdf_in_model': 'No declaration',
+    '8.4.2.rdf_in_reaction': 'No declaration',
+    '8.4.2.rdf_in_relationship_ref': 'No declaration',
+    '8.4.2.rdf_in_role': 'No declaration',
+    '8.4.2.rdf_in_unit': 'No declaration',
+    '8.4.2.rdf_in_units_1': 'No declaration',
+    '8.4.2.rdf_in_units_2': 'No declaration',
+    '8.4.2.rdf_in_variable': 'No declaration',
+    '8.4.2.rdf_in_variable_ref': 'No declaration',
 }
 
 
@@ -908,8 +944,7 @@ def list_passes():
     files += list_models('unit_conversion_convertible')
     files += list_models('unit_conversion_inconvertible')
 
-    #return files
-    return []
+    return files
 
 
 @pytest.mark.parametrize(('name', 'path'), list_passes())
@@ -945,7 +980,8 @@ def test_valid_model(name, path, parser, dtd, log):
 
         # Check if we were expecting to fail
         if expected is None:
-            log.error('Unexpected fail: ' + error)
+            log.error('Unexpected error in ' + name)
+            log.error('Returned: ' + error)
 
             # Assert valid, raising a detailed error message
             dtd.assertValid(xml)
