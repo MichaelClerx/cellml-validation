@@ -5,7 +5,9 @@
   <connection>
     <map_components component_1="a" component_2="b" />
     <map_variables variable_1="x" variable_2="x">
-      <variable_ref variable="x" />
+      <variable_ref variable="x">
+        <role role="reactant" />
+      </variable_ref>
     </map_variables>
   </connection>
   <component name="a">

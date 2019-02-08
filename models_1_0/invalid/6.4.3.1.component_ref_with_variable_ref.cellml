@@ -10,7 +10,9 @@
     <relationship_ref relationship="containment" />
     <component_ref component="A" >
       <component_ref component="B" />
-      <variable_ref variable="x" />
+      <variable_ref variable="x">
+        <role role="modifier" />
+      </variable_ref>
     </component_ref>
   </group>
 </model>

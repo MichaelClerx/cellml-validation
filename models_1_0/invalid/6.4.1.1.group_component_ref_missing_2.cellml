@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 6.4.1.1, A group element must contain at least one component_ref -->
-<model name="group_component_ref_missing"
+<model name="group_component_ref_missing_2"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:fruit="http://fruit.org">
   <component name="A" />

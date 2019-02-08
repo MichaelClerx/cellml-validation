@@ -12,6 +12,10 @@
   <connection>
     <map_components component_1="A" component_2="B" />
     <map_variables variable_1="a" variable_2="a" />
-    <reaction />
+    <reaction>
+      <variable_ref variable="a">
+        <role role="inhibitor" />
+      </variable_ref>
+    </reaction>
   </connection>
 </model>

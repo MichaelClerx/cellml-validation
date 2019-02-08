@@ -5,7 +5,10 @@
   <connection>
     <map_components component_1="a" component_2="b" />
     <map_variables variable_1="x" variable_2="x">
-      <group />
+      <group>
+        <relationship_ref relationship="containment" />
+        <component_ref component="a" />
+      </group>
     </map_variables>
   </connection>
   <component name="a">

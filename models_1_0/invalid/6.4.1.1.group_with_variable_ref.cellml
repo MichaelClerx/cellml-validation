@@ -11,6 +11,8 @@
     <component_ref component="A" >
       <component_ref component="B" />
     </component_ref>
-    <variable_ref variable="x" />
+    <variable_ref variable="x">
+      <role role="inhibitor" />
+    </variable_ref>
   </group>
 </model>

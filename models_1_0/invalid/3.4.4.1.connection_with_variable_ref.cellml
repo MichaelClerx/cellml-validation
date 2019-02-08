@@ -12,6 +12,8 @@
   <connection>
     <map_components component_1="A" component_2="B" />
     <map_variables variable_1="a" variable_2="a" />
-    <variable_ref variable="a" />
+    <variable_ref variable="a">
+      <role role="reactant" />
+    </variable_ref>
   </connection>
 </model>

@@ -8,7 +8,9 @@
   <component name="B" />
   <group>
     <relationship_ref relationship="containment">
-      <variable_ref variable="x" />
+      <variable_ref variable="x">
+        <role role="reactant" />
+      </variable_ref>
     </relationship_ref>
     <component_ref component="A" >
       <component_ref component="B" />

@@ -5,7 +5,9 @@
   <component name="A">
     <variable name="a" units="dimensionless" />
     <units name="wooster">
-      <variable_ref variable="a" />
+      <variable_ref variable="a">
+        <role role="inhibitor" />
+      </variable_ref>
     </units>
   </component>
 </model>

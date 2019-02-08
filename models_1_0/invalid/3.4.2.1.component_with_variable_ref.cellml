@@ -3,6 +3,8 @@
 <model name="component_with_variable_ref"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="component">
-    <variable_ref name="invalid" units="dimensionless" />
+    <variable_ref variable="x">
+      <role role="reactant" />
+    </variable_ref>
   </component>
 </model>

@@ -3,6 +3,6 @@
 <model name="component_with_model"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="c1">
-    <model />
+    <model name="inner_model" />
   </component>
 </model>
