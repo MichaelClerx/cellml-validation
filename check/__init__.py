@@ -52,6 +52,8 @@ from ._loaders import (     # noqa
     model_2_0,
 )
 from ._validation import (  # noqa
+    dtd_1_0,
+    relaxng_1_0,
     schema_1_0,
 )
 

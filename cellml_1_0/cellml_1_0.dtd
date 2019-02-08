@@ -1,0 +1,129 @@
+<!--
+
+CellML 1.0 DTD, based on the original by Warren Hedley.
+
+This version has a number of error corrections and uses a local MathML DTD.
+
+Some notes (see test results for full spec):
+ - DTDs don't allow any kind of extension element or attribute
+ - The DTDs don't do any checks involving content (e.g. valid identifier,
+   existing component etc.).
+
+-->
+
+<!ELEMENT note (type,to,from,heading,body)>
+<!ENTITY % mathml_dtd SYSTEM "../catalog/dtd/mathml2/mathml2.dtd">
+%mathml_dtd;
+
+<!ATTLIST %cn.qname;
+  %MATHML.Common.attrib;
+  %att-type;
+  %att-base;
+  %att-definition;
+  %att-encoding;
+  cellml:units      CDATA           #REQUIRED
+>
+
+<!ENTITY % cellml_common_attributes "
+  xmlns               CDATA           #IMPLIED
+  xmlns:cellml        CDATA           #IMPLIED
+  xmlns:cmeta         CDATA           #IMPLIED
+  cmeta:id            ID              #IMPLIED
+">
+
+<!ELEMENT model (units | component | group | connection)*>
+<!ATTLIST model
+  %cellml_common_attributes;
+  name                CDATA           #REQUIRED
+>
+
+<!ELEMENT component (units | variable | reaction | math)*>
+<!ATTLIST component
+  %cellml_common_attributes;
+  name                CDATA           #REQUIRED
+>
+
+<!ELEMENT variable EMPTY>
+<!ATTLIST variable
+  %cellml_common_attributes;
+  name                CDATA           #REQUIRED
+  public_interface    (in|out|none)   #IMPLIED
+  private_interface   (in|out|none)   #IMPLIED
+  units               CDATA           #REQUIRED
+  initial_value       CDATA           #IMPLIED
+>
+
+<!ELEMENT connection (map_components, map_variables+)>
+<!ATTLIST connection
+  %cellml_common_attributes;
+>
+
+<!ELEMENT map_components EMPTY>
+<!ATTLIST map_components
+  %cellml_common_attributes;
+  component_1         CDATA           #REQUIRED
+  component_2         CDATA           #REQUIRED
+>
+
+<!ELEMENT map_variables EMPTY>
+<!ATTLIST map_variables
+  %cellml_common_attributes;
+  variable_1          CDATA           #REQUIRED
+  variable_2          CDATA           #REQUIRED
+>
+
+<!ELEMENT units (unit*)>
+<!ATTLIST units
+  %cellml_common_attributes;
+  name                CDATA           #REQUIRED
+  base_units          (yes|no)        #IMPLIED
+>
+
+<!ELEMENT unit EMPTY>
+<!ATTLIST unit
+  %cellml_common_attributes;
+  multiplier          CDATA           #IMPLIED
+  prefix              CDATA           #IMPLIED
+  units               CDATA           #REQUIRED
+  exponent            CDATA           #IMPLIED
+  offset              CDATA           #IMPLIED
+>
+
+<!ELEMENT group (relationship_ref|component_ref)+>
+<!ATTLIST group
+  %cellml_common_attributes;
+>
+
+<!ELEMENT relationship_ref EMPTY>
+<!ATTLIST relationship_ref
+  %cellml_common_attributes;
+  relationship        CDATA           #REQUIRED
+  name                CDATA           #IMPLIED
+>
+
+<!ELEMENT component_ref (component_ref*)>
+<!ATTLIST component_ref
+  %cellml_common_attributes;
+  component           CDATA           #REQUIRED
+>
+
+<!ELEMENT reaction (variable_ref+)>
+<!ATTLIST reaction
+  %cellml_common_attributes;
+  reversible          (yes|no)        #IMPLIED
+>
+
+<!ELEMENT variable_ref (role+)>
+<!ATTLIST variable_ref
+  %cellml_common_attributes;
+  variable            CDATA           #REQUIRED
+>
+
+<!ELEMENT role (math?)>
+<!ATTLIST role
+  %cellml_common_attributes;
+  role (reactant|product|activator|catalyst|inhibitor|modifier|rate) #REQUIRED
+  direction (forward|reverse|both)    #IMPLIED
+  delta_variable      CDATA           #IMPLIED
+  stoichiometry       CDATA           #IMPLIED
+>

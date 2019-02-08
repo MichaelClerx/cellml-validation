@@ -9,7 +9,7 @@ import check
 
 
 # Map common schemas to local copies
-CATALOG_DIR = os.path.join(check.MODULE_DIR, '..', 'catalog')
+CATALOG_DIR = os.path.join(check.MODULE_DIR, '..', 'catalog', 'schema')
 MATHML2_XSD = os.path.abspath(os.path.join(
     CATALOG_DIR, 'mathml2', 'mathml2.xsd'))
 XLINK_HREF_XSD = os.path.abspath(os.path.join(
