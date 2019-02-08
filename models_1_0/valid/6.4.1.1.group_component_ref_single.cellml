@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 6.4.1.1, A group can contain a single component_ref -->
 <model name="group_component_ref_single"
-       xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:fruit="http://fruit.org">
+       xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A" />
   <component name="B" />
   <group>
