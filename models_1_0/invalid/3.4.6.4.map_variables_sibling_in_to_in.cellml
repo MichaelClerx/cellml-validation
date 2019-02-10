@@ -6,7 +6,7 @@
     <variable name="a" units="newton" public_interface="in" />
   </component>
   <component name="B">
-    <variable name="a" units="newton" public_interface="in" initial_value="1" />
+    <variable name="a" units="newton" public_interface="in" />
   </component>
   <connection>
     <map_components component_1="A" component_2="B" />

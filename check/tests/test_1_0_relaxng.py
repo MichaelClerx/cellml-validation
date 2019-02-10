@@ -161,185 +161,270 @@ expected_errors = {
     '3.4.2.1.component_with_role':
         'Element component has extra content: role',    
     '3.4.2.1.component_with_unit':
-        'Element component has extra content: variable',    
+        'Element component has extra content: unit',    
     '3.4.2.1.component_with_variable_ref':
         'Element component has extra content: variable_ref',    
     # 3.4.2.1 Components must have a name
     '3.4.2.1.component_name_missing':
         'Element component failed to validate content',
     # 3.4.2.2 A component name must be a valid identifier
-    #'3.4.2.2.component_name_invalid':
+    '3.4.2.2.component_name_invalid':
+        'Element component failed to validate',
     # 3.4.2.2 Component names must be unique
-    #'3.4.2.2.component_name_duplicate':
+    '3.4.2.2.component_name_duplicate': None,
     # 3.4.3.1 Variables can't contain any elements
-    #'3.4.3.1.variable_with_component':
-    #'3.4.3.1.variable_with_component_ref':
-    #'3.4.3.1.variable_with_connection':
-    #'3.4.3.1.variable_with_group':
-    #'3.4.3.1.variable_with_map_components':
-    #'3.4.3.1.variable_with_map_variables':
-    #'3.4.3.1.variable_with_math':
-    #'3.4.3.1.variable_with_model':
-    #'3.4.3.1.variable_with_reaction':
-    #'3.4.3.1.variable_with_relationship_ref':
-    #'3.4.3.1.variable_with_role':
-    #'3.4.3.1.variable_with_unit':
-    #'3.4.3.1.variable_with_units':
-    #'3.4.3.1.variable_with_variable_ref':
-    #'3.4.3.1.variable_with_variable':
+    '3.4.3.1.variable_with_component':
+        'Element variable has extra content: component',
+    '3.4.3.1.variable_with_component_ref':
+        'Element variable has extra content: component_ref',
+    '3.4.3.1.variable_with_connection':
+        'Element variable has extra content: connection',
+    '3.4.3.1.variable_with_group':
+        'Element variable has extra content: group',
+    '3.4.3.1.variable_with_map_components':
+        'Element variable has extra content: map_component',
+    '3.4.3.1.variable_with_map_variables':
+        'Element variable has extra content: map_variables',
+    '3.4.3.1.variable_with_math':
+        'Element variable has extra content: math',
+    '3.4.3.1.variable_with_model':
+        'Element variable has extra content: model',
+    '3.4.3.1.variable_with_reaction':
+        'Element variable has extra content: reaction',
+    '3.4.3.1.variable_with_relationship_ref':
+        'Element variable has extra content: relationship_ref',
+    '3.4.3.1.variable_with_role':
+        'Element variable has extra content: role',
+    '3.4.3.1.variable_with_unit':
+        'Element variable has extra content: unit',
+    '3.4.3.1.variable_with_units':
+        'Element variable has extra content: units',
+    '3.4.3.1.variable_with_variable':
+        'Element variable has extra content: variable',
+    '3.4.3.1.variable_with_variable_ref':
+        'Element variable has extra content: variable_ref',
     # 3.4.3.1 Variables must have a name attribute
-    #'3.4.3.1.variable_name_missing':
+    '3.4.3.1.variable_name_missing':
+        'Element variable failed to validate attributes',
     # 3.4.3.1 Variables must have a units attribute
-    #'3.4.3.1.variable_units_missing':
+    '3.4.3.1.variable_units_missing':
+        'Element variable failed to validate attributes',
     # 3.4.3.2 A variable name must be an identifier
-    #'3.4.3.2.variable_name_invalid':
+    '3.4.3.2.variable_name_invalid':
+        'Element variable failed to validate attributes',
     # 3.4.3.2 A variable name must be unique with the component
-    #'3.4.3.2.variable_name_duplicate':
+    '3.4.3.2.variable_name_duplicate': None,
     # 3.4.3.3 A variable must reference known units
-    #'3.4.3.3.variable_units_unknown':
+    '3.4.3.3.variable_units_unknown': None,
     # 3.4.3.3 A variable cannot reference another component's units
-    #'3.4.3.3.variable_units_other_component':
+    '3.4.3.3.variable_units_other_component': None,
     # 3.4.3.4 A public interface must be one of in/out/none
-    #'3.4.3.4.variable_interface_public_invalid':
+    '3.4.3.4.variable_interface_public_invalid':
+        'Invalid attribute public_interface for element variable',
     # 3.4.3.5 A private interface must be one of in/out/none
-    #'3.4.3.5.variable_interface_private_invalid':
+    '3.4.3.5.variable_interface_private_invalid':
+        'Invalid attribute private_interface for element variable',
     # 3.4.3.6 The private and public interface can't both be in
-    #'3.4.3.6.variable_interfaces_both_in':
+    '3.4.3.6.variable_interfaces_both_in':
+        'Invalid attribute public_interface for element variable',
     # 3.4.3.7 The initial value (if present) must be a real number
-    #'3.4.3.7.variable_initial_value_empty':
-    #'3.4.3.7.variable_initial_value_invalid':
+    '3.4.3.7.variable_initial_value_empty':
+        'Invalid attribute initial_value for element variable',
+    '3.4.3.7.variable_initial_value_invalid':
+        'Invalid attribute initial_value for element variable',
     # 3.4.3.8 A variable can't have an initial value and an "in" interface
-    #'3.4.3.8.variable_interfaces_private_in_and_initial':
-    #'3.4.3.8.variable_interfaces_public_in_and_initial':
+    '3.4.3.8.variable_interfaces_private_in_and_initial':
+        'Invalid attribute initial_value for element variable',
+    '3.4.3.8.variable_interfaces_public_in_and_initial':
+        'Invalid attribute initial_value for element variable',
     # 3.4.4.1 A connection must contain exactly one map_components
-    #'3.4.4.1.connection_map_components_missing':
-    #'3.4.4.1.connection_map_components_multiple':
+    '3.4.4.1.connection_map_components_missing':
+        'Expecting an element map_components',
+    '3.4.4.1.connection_map_components_multiple':
+        'Extra element map_components',
     # 3.4.4.1 A component must contain at least one map_variables
-    #'3.4.4.1.connection_map_variables_missing':
+    '3.4.4.1.connection_map_variables_missing_2':
+        'Expecting an element map_variables',
+    '3.4.4.1.connection_map_variables_missing_1':
+        'Expecting an element map_variables',
     # 3.4.4.1 A connection must have map_components and map_variables
-    #'3.4.4.1.connection_only_extensions':
-    #'3.4.4.1.connection_with_math':
-    #'3.4.4.1.connection_empty':
+    '3.4.4.1.connection_only_extensions':
+        'Element connection failed to validate',
+    '3.4.4.1.connection_with_math':
+        'Element connection has extra content: math',
+    '3.4.4.1.connection_empty':
+        'Expecting an element map_components',
     # 3.4.4.1 A connection can only contain map_components and map_variables
-    #'3.4.4.1.connection_with_component':
-    #'3.4.4.1.connection_with_component_ref':
-    #'3.4.4.1.connection_with_connection':
-    #'3.4.4.1.connection_with_group':
-    #'3.4.4.1.connection_with_map_components':
-    #'3.4.4.1.connection_with_map_variables':
-    #'3.4.4.1.connection_with_model':
-    #'3.4.4.1.connection_with_name_attribute':
-    #'3.4.4.1.connection_with_reaction':
-    #'3.4.4.1.connection_with_relationship_ref':
-    #'3.4.4.1.connection_with_role':
-    #'3.4.4.1.connection_with_unit':
-    #'3.4.4.1.connection_with_units':
-    #'3.4.4.1.connection_with_variable_ref':
-    #'3.4.4.1.connection_with_variable':
+    '3.4.4.1.connection_with_component':
+        'Element connection has extra content: component',
+    '3.4.4.1.connection_with_component_ref':
+        'Element connection has extra content: component_ref',
+    '3.4.4.1.connection_with_connection':
+        'Element connection has extra content: connection',
+    '3.4.4.1.connection_with_group':
+        'Element connection has extra content: group',
+    '3.4.4.1.connection_with_map_components':
+        'Element connection has extra content: map_components',
+    '3.4.4.1.connection_with_map_variables':
+        'Element connection has extra content: map_variables',
+    '3.4.4.1.connection_with_model':
+        'Element connection has extra content: model',
+    '3.4.4.1.connection_with_name_attribute':
+        'Invalid attribute name for element connection',
+    '3.4.4.1.connection_with_reaction':
+        'Element connection has extra content: reaction',
+    '3.4.4.1.connection_with_relationship_ref':
+        'Element connection has extra content: relationship_ref',
+    '3.4.4.1.connection_with_role':
+        'Element connection has extra content: role',
+    '3.4.4.1.connection_with_unit':
+        'Element connection has extra content: unit',
+    '3.4.4.1.connection_with_units':
+        'Element connection has extra content: units',
+    '3.4.4.1.connection_with_variable_ref':
+        'Element connection has extra content: variable_ref',
+    '3.4.4.1.connection_with_variable':
+        'Element connection has extra content: variable',
     # 3.4.5.1 A map_components must declare component_1 and component_2
-    #'3.4.5.1.map_components_component_1_missing':
-    #'3.4.5.1.map_components_component_2_missing':
+    '3.4.5.1.map_components_component_1_missing':
+        'Element map_components failed to validate attributes',
+    '3.4.5.1.map_components_component_2_missing':
+        'Element map_components failed to validate attributes',
     # 3.4.5.1 A map_components cannot have cellml children or math
-    #'3.4.5.1.map_components_with_component':
-    #'3.4.5.1.map_components_with_component_ref':
-    #'3.4.5.1.map_components_with_connection':
-    #'3.4.5.1.map_components_with_group':
-    #'3.4.5.1.map_components_with_map_components':
-    #'3.4.5.1.map_components_with_map_variables':
-    #'3.4.5.1.map_components_with_math':
-    #'3.4.5.1.map_components_with_model':
-    #'3.4.5.1.map_components_with_reaction':
-    #'3.4.5.1.map_components_with_relationship_ref':
-    #'3.4.5.1.map_components_with_role':
-    #'3.4.5.1.map_components_with_unit':
-    #'3.4.5.1.map_components_with_units':
-    #'3.4.5.1.map_components_with_variable_ref':
-    #'3.4.5.1.map_components_with_variable':
+    '3.4.5.1.map_components_with_component':
+        'Element map_components has extra content: component',
+    '3.4.5.1.map_components_with_component_ref':
+        'Element map_components has extra content: component_ref',
+    '3.4.5.1.map_components_with_connection':
+        'Element map_components has extra content: connection',
+    '3.4.5.1.map_components_with_group':
+        'Element map_components has extra content: group',
+    '3.4.5.1.map_components_with_map_components':
+        'Element map_components has extra content: map_components',
+    '3.4.5.1.map_components_with_map_variables':
+        'Element map_components has extra content: map_variables',
+    '3.4.5.1.map_components_with_math':
+        'Element map_components has extra content: math',
+    '3.4.5.1.map_components_with_model':
+        'Element map_components has extra content: model',
+    '3.4.5.1.map_components_with_reaction':
+        'Element map_components has extra content: reaction',
+    '3.4.5.1.map_components_with_relationship_ref':
+        'Element map_components has extra content: relationship_ref',
+    '3.4.5.1.map_components_with_role':
+        'Element map_components has extra content: role',
+    '3.4.5.1.map_components_with_unit':
+        'Element map_components has extra content: unit',
+    '3.4.5.1.map_components_with_units':
+        'Element map_components has extra content: units',
+    '3.4.5.1.map_components_with_variable':
+        'Element map_components has extra content: variable',
+    '3.4.5.1.map_components_with_variable_ref':
+        'Element map_components has extra content: variable_ref',
     # 3.4.5.2 component_1 must refer to an existing component
-    #'3.4.5.2.map_components_component_1_nonexistent':
+    '3.4.5.2.map_components_component_1_nonexistent': None,
     # 3.4.5.3 component_2 must refer to an existing component
-    #'3.4.5.3.map_components_component_2_nonexistent':
+    '3.4.5.3.map_components_component_2_nonexistent': None,
     # 3.4.5.4 component_1 cannot match component_2
-    #'3.4.5.4.map_components_component_1_equals_2':
+    '3.4.5.4.map_components_component_1_equals_2': None,
     # 3.4.5.4 Each map_components in a model must be unique
-    #'3.4.5.4.map_components_duplicate_mirrored':
-    #'3.4.5.4.map_components_duplicate':
+    '3.4.5.4.map_components_duplicate': None,
+    '3.4.5.4.map_components_duplicate_mirrored': None,
     # 3.4.6.1 A map_variables must declare variable_1 and variable_2
-    #'3.4.6.1.map_variables_variable_1_missing':
-    #'3.4.6.1.map_variables_variable_2_missing':
+    '3.4.6.1.map_variables_variable_1_missing':
+        'Element map_variables failed to validate attributes',
+    '3.4.6.1.map_variables_variable_2_missing':
+        'Element map_variables failed to validate attributes',
     # 3.4.6.1 A map_variables cannot have cellml children or math
-    #'3.4.6.1.map_variables_with_component':
-    #'3.4.6.1.map_variables_with_component_ref':
-    #'3.4.6.1.map_variables_with_connection':
-    #'3.4.6.1.map_variables_with_group':
-    #'3.4.6.1.map_variables_with_map_components':
-    #'3.4.6.1.map_variables_with_map_variables':
-    #'3.4.6.1.map_variables_with_math':
-    #'3.4.6.1.map_variables_with_model':
-    #'3.4.6.1.map_variables_with_reaction':
-    #'3.4.6.1.map_variables_with_relationship_ref':
-    #'3.4.6.1.map_variables_with_role':
-    #'3.4.6.1.map_variables_with_unit':
-    #'3.4.6.1.map_variables_with_units':
-    #'3.4.6.1.map_variables_with_variable_ref':
-    #'3.4.6.1.map_variables_with_variable':
+    '3.4.6.1.map_variables_with_component':
+        'Element map_variables has extra content: component',    
+    '3.4.6.1.map_variables_with_component_ref':
+        'Element map_variables has extra content: component_ref',    
+    '3.4.6.1.map_variables_with_connection':
+        'Element map_variables has extra content: connection',    
+    '3.4.6.1.map_variables_with_group':
+        'Element map_variables has extra content: group',    
+    '3.4.6.1.map_variables_with_map_components':
+        'Element map_variables has extra content: map_components',    
+    '3.4.6.1.map_variables_with_map_variables':
+        'Element map_variables has extra content: map_variables',    
+    '3.4.6.1.map_variables_with_math':
+        'Element map_variables has extra content: math',    
+    '3.4.6.1.map_variables_with_model':
+        'Element map_variables has extra content: model',    
+    '3.4.6.1.map_variables_with_reaction':
+        'Element map_variables has extra content: reaction',    
+    '3.4.6.1.map_variables_with_relationship_ref':
+        'Element map_variables has extra content: relationship_ref',    
+    '3.4.6.1.map_variables_with_role':
+        'Element map_variables has extra content: role',    
+    '3.4.6.1.map_variables_with_unit':
+        'Element map_variables has extra content: unit',    
+    '3.4.6.1.map_variables_with_units':
+        'Element map_variables has extra content: units',    
+    '3.4.6.1.map_variables_with_variable':
+        'Element map_variables has extra content: variable',    
+    '3.4.6.1.map_variables_with_variable_ref':
+        'Element map_variables has extra content: variable_ref',    
     # 3.4.6.2 variable_1 must refer to an existing variable in component_1
-    #'3.4.6.2.map_variables_variable_1_nonexistent':
+    '3.4.6.2.map_variables_variable_1_nonexistent': None,
     # 3.4.6.3 variable_2 must refer to an existing variable in component_2
-    #'3.4.6.3.map_variables_variable_2_nonexistent':
+    '3.4.6.3.map_variables_variable_2_nonexistent': None,
     # 3.4.6.4 Interfaces and encapsulation
-    #'3.4.6.4.map_variables_child_multiple_out_1':
-    #'3.4.6.4.map_variables_child_multiple_out_2':
-    #'3.4.6.4.map_variables_child_out_to_out_1':
-    #'3.4.6.4.map_variables_child_out_to_out_2':
-    #'3.4.6.4.map_variables_child_private_in':
-    #'3.4.6.4.map_variables_child_private_out':
-    #'3.4.6.4.map_variables_hidden_aunt_1':
-    #'3.4.6.4.map_variables_hidden_aunt_2':
-    #'3.4.6.4.map_variables_hidden_cousins_1':
-    #'3.4.6.4.map_variables_hidden_cousins_2':
-    #'3.4.6.4.map_variables_hidden_cousins_3':
-    #'3.4.6.4.map_variables_hidden_cousins_4':
-    #'3.4.6.4.map_variables_hidden_grandchild_1':
-    #'3.4.6.4.map_variables_hidden_grandchild_2':
-    #'3.4.6.4.map_variables_hidden_grandparent_1':
-    #'3.4.6.4.map_variables_hidden_grandparent_2':
-    #'3.4.6.4.map_variables_hidden_niece_1':
-    #'3.4.6.4.map_variables_hidden_niece_2':
-    #'3.4.6.4.map_variables_nested_sibling_private_in':
-    #'3.4.6.4.map_variables_nested_sibling_private_in_and_out':
-    #'3.4.6.4.map_variables_nested_sibling_private_out':
-    #'3.4.6.4.map_variables_parent_in_to_in_1':
-    #'3.4.6.4.map_variables_parent_in_to_in_2':
-    #'3.4.6.4.map_variables_parent_multiple_out':
-    #'3.4.6.4.map_variables_parent_out_to_out_1':
-    #'3.4.6.4.map_variables_parent_out_to_out_2':
-    #'3.4.6.4.map_variables_parent_public_in':
-    #'3.4.6.4.map_variables_parent_public_out':
-    #'3.4.6.4.map_variables_sibling_in_to_in':
-    #'3.4.6.4.map_variables_sibling_multiple_out_1':
-    #'3.4.6.4.map_variables_sibling_multiple_out_2':
-    #'3.4.6.4.map_variables_sibling_out_to_out':
-    #'3.4.6.4.map_variables_sibling_private_in_1':
-    #'3.4.6.4.map_variables_sibling_private_in_2':
-    #'3.4.6.4.map_variables_sibling_private_in_and_out':
-    #'3.4.6.4.map_variables_sibling_private_out_1':
-    #'3.4.6.4.map_variables_sibling_private_out_2':
+    '3.4.6.4.map_variables_child_multiple_out_1': None,
+    '3.4.6.4.map_variables_child_multiple_out_2': None,
+    '3.4.6.4.map_variables_child_out_to_out_1': None,
+    '3.4.6.4.map_variables_child_out_to_out_2': None,
+    '3.4.6.4.map_variables_child_private_in': None,
+    '3.4.6.4.map_variables_child_private_out': None,
+    '3.4.6.4.map_variables_hidden_aunt_1': None,
+    '3.4.6.4.map_variables_hidden_aunt_2': None,
+    '3.4.6.4.map_variables_hidden_cousins_1': None,
+    '3.4.6.4.map_variables_hidden_cousins_2': None,
+    '3.4.6.4.map_variables_hidden_cousins_3': None,
+    '3.4.6.4.map_variables_hidden_cousins_4': None,
+    '3.4.6.4.map_variables_hidden_grandchild_1': None,
+    '3.4.6.4.map_variables_hidden_grandchild_2': None,
+    '3.4.6.4.map_variables_hidden_grandparent_1': None,
+    '3.4.6.4.map_variables_hidden_grandparent_2': None,
+    '3.4.6.4.map_variables_hidden_niece_1': None,
+    '3.4.6.4.map_variables_hidden_niece_2': None,
+    '3.4.6.4.map_variables_nested_sibling_private_in': None,
+    '3.4.6.4.map_variables_nested_sibling_private_in_and_out': None,
+    '3.4.6.4.map_variables_nested_sibling_private_out': None,
+    '3.4.6.4.map_variables_parent_in_to_in_1': None,
+    '3.4.6.4.map_variables_parent_in_to_in_2': None,
+    '3.4.6.4.map_variables_parent_multiple_out': None,
+    '3.4.6.4.map_variables_parent_out_to_out_1': None,
+    '3.4.6.4.map_variables_parent_out_to_out_2': None,
+    '3.4.6.4.map_variables_parent_public_in': None,
+    '3.4.6.4.map_variables_parent_public_out': None,
+    '3.4.6.4.map_variables_sibling_in_to_in': None,
+    '3.4.6.4.map_variables_sibling_multiple_out_1': None,
+    '3.4.6.4.map_variables_sibling_multiple_out_2': None,
+    '3.4.6.4.map_variables_sibling_out_to_out': None,
+    '3.4.6.4.map_variables_sibling_private_in_1': None,
+    '3.4.6.4.map_variables_sibling_private_in_2': None,
+    '3.4.6.4.map_variables_sibling_private_in_and_out': None,
+    '3.4.6.4.map_variables_sibling_private_out_1': None,
+    '3.4.6.4.map_variables_sibling_private_out_2': None,
     # 4 Math can't be overdefined
     #'4.math_and_initial_value':
     #'4.math_overdefined':
     # 4.4.1 Bad math
-    #'4.4.1.math_not_math_component':
-    #'4.4.1.math_not_math_reaction':
+    '4.4.1.math_not_math_component':
+        'Element component failed to validate content',
+    '4.4.1.math_not_math_reaction': 
+        'Element role failed to validate content',
     # 4.4.2 Ci can only refer to local variables
-    #'4.4.2.ci_nonexistent':
-    #'4.4.2.ci_non_local_aunt':
-    #'4.4.2.ci_non_local_child':
-    #'4.4.2.ci_non_local_cousin':
-    #'4.4.2.ci_non_local_nested_sibling':
-    #'4.4.2.ci_non_local_niece':
-    #'4.4.2.ci_non_local_parent':
-    #'4.4.2.ci_non_local_sibling':
+    '4.4.2.ci_nonexistent': None,
+    '4.4.2.ci_non_local_aunt': None,
+    '4.4.2.ci_non_local_child': None,
+    '4.4.2.ci_non_local_cousin': None,
+    '4.4.2.ci_non_local_nested_sibling': None,
+    '4.4.2.ci_non_local_niece': None,
+    '4.4.2.ci_non_local_parent': None,
+    '4.4.2.ci_non_local_sibling': None,
     # 4.4.3.1 A cn must have a cellml:units
     #'4.4.3.1.cn_units_missing':
     # 4.4.3.2 A cn unit attribute must refer to a model, local component, or
@@ -356,20 +441,34 @@ expected_errors = {
     # 5.4.1.1 A units with base_units="yes" can't have children
     #'5.4.1.1.units_base_units_with_children':
     # 5.4.1.1 A units can only contain unit elements
-    #'5.4.1.1.units_with_component':
-    #'5.4.1.1.units_with_component_ref':
-    #'5.4.1.1.units_with_connection':
-    #'5.4.1.1.units_with_group':
-    #'5.4.1.1.units_with_map_components':
-    #'5.4.1.1.units_with_map_variables':
-    #'5.4.1.1.units_with_math':
-    #'5.4.1.1.units_with_model':
-    #'5.4.1.1.units_with_reaction':
-    #'5.4.1.1.units_with_relationship_ref':
-    #'5.4.1.1.units_with_role':
-    #'5.4.1.1.units_with_units':
-    #'5.4.1.1.units_with_variable_ref':
-    #'5.4.1.1.units_with_variable':
+    '5.4.1.1.units_with_component':
+        'Element units has extra content: component',    
+    '5.4.1.1.units_with_component_ref':
+        'Element units has extra content: component_ref',    
+    '5.4.1.1.units_with_connection':
+        'Element units has extra content: connection',    
+    '5.4.1.1.units_with_group':
+        'Element units has extra content: group',    
+    '5.4.1.1.units_with_map_components':
+        'Element units has extra content: map_components',    
+    '5.4.1.1.units_with_map_variables':
+        'Element units has extra content: map_variables',    
+    '5.4.1.1.units_with_math':
+        'Element units has extra content: math',    
+    '5.4.1.1.units_with_model':
+        'Element units has extra content: model',    
+    '5.4.1.1.units_with_reaction':
+        'Element units has extra content: reaction',    
+    '5.4.1.1.units_with_relationship_ref':
+        'Element units has extra content: relationship_ref',    
+    '5.4.1.1.units_with_role':
+        'Element units has extra content: unit',    
+    '5.4.1.1.units_with_units':
+        'Element units has extra content: units',    
+    '5.4.1.1.units_with_variable':
+        'Element units has extra content: variable',    
+    '5.4.1.1.units_with_variable_ref':
+        'Element units has extra content: variable_ref',    
     # 5.4.1.2 A units name must be a valid identifier
     #'5.4.1.2.units_name_invalid':
     # 5.4.1.2 Units names must be unique (within model or local component)
@@ -417,21 +516,36 @@ expected_errors = {
     # 5.4.2.1 A unit must have a units attribute
     #'5.4.2.1.unit_units_missing':
     # 5.4.2.1 A unit cannot have CellML children
-    #'5.4.2.1.unit_with_component':
-    #'5.4.2.1.unit_with_component_ref':
-    #'5.4.2.1.unit_with_connection':
-    #'5.4.2.1.unit_with_group':
-    #'5.4.2.1.unit_with_map_components':
-    #'5.4.2.1.unit_with_map_variables':
-    #'5.4.2.1.unit_with_math':
-    #'5.4.2.1.unit_with_model':
-    #'5.4.2.1.unit_with_reaction':
-    #'5.4.2.1.unit_with_relationship_ref':
-    #'5.4.2.1.unit_with_role':
-    #'5.4.2.1.unit_with_unit':
-    #'5.4.2.1.unit_with_units':
-    #'5.4.2.1.unit_with_variable_ref':
-    #'5.4.2.1.unit_with_variable':
+    '5.4.2.1.unit_with_component':
+        'Element unit has extra content: component',    
+    '5.4.2.1.unit_with_component_ref':
+        'Element unit has extra content: component_ref',    
+    '5.4.2.1.unit_with_connection':
+        'Element unit has extra content: connection',    
+    '5.4.2.1.unit_with_group':
+        'Element unit has extra content: group',    
+    '5.4.2.1.unit_with_map_components':
+        'Element unit has extra content: map_components',    
+    '5.4.2.1.unit_with_map_variables':
+        'Element unit has extra content: map_variables',    
+    '5.4.2.1.unit_with_math':
+        'Element unit has extra content: math',    
+    '5.4.2.1.unit_with_model':
+        'Element unit has extra content: model',    
+    '5.4.2.1.unit_with_reaction':
+        'Element unit has extra content: reaction',    
+    '5.4.2.1.unit_with_relationship_ref':
+        'Element unit has extra content: relationship_ref',    
+    '5.4.2.1.unit_with_role':
+        'Element unit has extra content: role',    
+    '5.4.2.1.unit_with_unit':
+        'Element unit has extra content: unit',    
+    '5.4.2.1.unit_with_units':
+        'Element unit has extra content: units',    
+    '5.4.2.1.unit_with_variable':
+        'Element unit has extra content: variable',    
+    '5.4.2.1.unit_with_variable_ref':
+        'Element unit has extra content: variable_ref',    
     # 5.4.2.2 A unit must refer to an existing units
     #'5.4.2.2.unit_units_invalid':
     # 5.4.2.2 A unit cannot refer to itself directly or indirectly
@@ -462,40 +576,70 @@ expected_errors = {
     #'6.4.1.1.group_empty':
     #'6.4.1.1.group_only_extensions':
     # 6.4.1.1 A group can only contain component_refs and relationship_refs
-    #'6.4.1.1.group_with_component':
-    #'6.4.1.1.group_with_component_ref':
-    #'6.4.1.1.group_with_connection':
-    #'6.4.1.1.group_with_group':
-    #'6.4.1.1.group_with_map_components':
-    #'6.4.1.1.group_with_map_variables':
-    #'6.4.1.1.group_with_math':
-    #'6.4.1.1.group_with_model':
-    #'6.4.1.1.group_with_reaction':
-    #'6.4.1.1.group_with_relationship_ref':
-    #'6.4.1.1.group_with_role':
-    #'6.4.1.1.group_with_unit':
-    #'6.4.1.1.group_with_units':
-    #'6.4.1.1.group_with_variable_ref':
-    #'6.4.1.1.group_with_variable':
+    '6.4.1.1.group_with_component':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_component_ref':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_connection':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_group':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_map_components':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_map_variables':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_math':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_model':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_reaction':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_relationship_ref':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_role':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_unit':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_units':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_variable_ref':
+        'Element group has extra content: variable',    
+    '6.4.1.1.group_with_variable':
+        'Element group has extra content: variable',    
     # 6.4.2.1 A relationship_ref must define a relationship - although it can
     #         be either namespaceless, or in any extension namespace!
     #'6.4.2.1.relationship_ref_relationship_missing':
     # 6.4.2.1 A relationship_ref cannot have any CellML children
-    #'6.4.2.1.relationship_ref_with_component':
-    #'6.4.2.1.relationship_ref_with_component_ref':
-    #'6.4.2.1.relationship_ref_with_connection':
-    #'6.4.2.1.relationship_ref_with_group':
-    #'6.4.2.1.relationship_ref_with_map_components':
-    #'6.4.2.1.relationship_ref_with_map_variables':
-    #'6.4.2.1.relationship_ref_with_math':
-    #'6.4.2.1.relationship_ref_with_model':
-    #'6.4.2.1.relationship_ref_with_reaction':
-    #'6.4.2.1.relationship_ref_with_relationship_ref':
-    #'6.4.2.1.relationship_ref_with_role':
-    #'6.4.2.1.relationship_ref_with_unit':
-    #'6.4.2.1.relationship_ref_with_units':
-    #'6.4.2.1.relationship_ref_with_variable_ref':
-    #'6.4.2.1.relationship_ref_with_variable':
+    '6.4.2.1.relationship_ref_with_component':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_component_ref':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_connection':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_group':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_map_components':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_map_variables':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_math':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_model':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_reaction':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_relationship_ref':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_role':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_unit':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_units':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_variable_ref':
+        'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_variable':
+        'Element relationship_ref has extra content: variable',    
     # 6.4.2.2 When not in a namespace, a relationship_ref's relationship must
     # be either containment or encapsulation.
     #'6.4.2.2.relationship_ref_relationship_invalid':
@@ -511,20 +655,34 @@ expected_errors = {
     # 6.4.3.1 A component_ref must define a component
     #'6.4.3.1.component_ref_component_missing':
     # 6.4.3.1 A component_ref can only contain a component_ref
-    #'6.4.3.1.component_ref_with_component':
-    #'6.4.3.1.component_ref_with_connection':
-    #'6.4.3.1.component_ref_with_group':
-    #'6.4.3.1.component_ref_with_map_components':
-    #'6.4.3.1.component_ref_with_map_variables':
-    #'6.4.3.1.component_ref_with_math':
-    #'6.4.3.1.component_ref_with_model':
-    #'6.4.3.1.component_ref_with_reaction':
-    #'6.4.3.1.component_ref_with_relationship_ref':
-    #'6.4.3.1.component_ref_with_role':
-    #'6.4.3.1.component_ref_with_unit':
-    #'6.4.3.1.component_ref_with_units':
-    #'6.4.3.1.component_ref_with_variable_ref':
-    #'6.4.3.1.component_ref_with_variable':
+    '6.4.3.1.component_ref_with_component':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_connection':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_group':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_map_components':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_map_variables':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_math':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_model':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_reaction':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_relationship_ref':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_role':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_unit':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_units':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_variable_ref':
+        'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_variable':
+        'Element component_ref has extra content: variable',    
     # 6.4.3.2 A component's children cannot be declared two places
     #'6.4.3.2.component_ref_children_declared_twice_1':
     #'6.4.3.2.component_ref_children_declared_twice_2':
@@ -551,20 +709,34 @@ expected_errors = {
     # 7.4.1.1 A reaction must contain at least one variable_ref
     #'7.4.1.1.reaction_variable_ref_missing':
     # 7.4.1.1 A reaction can only contain a variable_ref
-    #'7.4.1.1.reaction_with_component':
-    #'7.4.1.1.reaction_with_component_ref':
-    #'7.4.1.1.reaction_with_connection':
-    #'7.4.1.1.reaction_with_group':
-    #'7.4.1.1.reaction_with_map_components':
-    #'7.4.1.1.reaction_with_map_variables':
-    #'7.4.1.1.reaction_with_math':
-    #'7.4.1.1.reaction_with_model':
-    #'7.4.1.1.reaction_with_reaction':
-    #'7.4.1.1.reaction_with_relationship_ref':
-    #'7.4.1.1.reaction_with_role':
-    #'7.4.1.1.reaction_with_unit':
-    #'7.4.1.1.reaction_with_units':
-    #'7.4.1.1.reaction_with_variable':
+    '7.4.1.1.reaction_with_component':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_component_ref':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_connection':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_group':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_map_components':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_map_variables':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_math':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_model':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_reaction':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_relationship_ref':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_role':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_unit':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_units':
+        'Element reaction has extra content: variable',    
+    '7.4.1.1.reaction_with_variable':
+        'Element reaction has extra content: variable',    
     # 7.4.1.2 The reversible attribute can only be yes or no
     #'7.4.1.2.reaction_reversible_invalid':
     # 7.4.1.3 A reaction in an encapsulating component cannot use
@@ -575,20 +747,34 @@ expected_errors = {
     #'7.4.2.1.variable_ref_role_missing':
     #'7.4.2.1.variable_ref_variable_missing':
     # 7.4.2.1 A variable_ref can only contain a role
-    #'7.4.2.1.variable_ref_with_component_ref':
-    #'7.4.2.1.variable_ref_with_component':
-    #'7.4.2.1.variable_ref_with_connection':
-    #'7.4.2.1.variable_ref_with_group':
-    #'7.4.2.1.variable_ref_with_map_components':
-    #'7.4.2.1.variable_ref_with_map_variables':
-    #'7.4.2.1.variable_ref_with_math':
-    #'7.4.2.1.variable_ref_with_model':
-    #'7.4.2.1.variable_ref_with_reaction':
-    #'7.4.2.1.variable_ref_with_relationship_ref':
-    #'7.4.2.1.variable_ref_with_unit':
-    #'7.4.2.1.variable_ref_with_units':
-    #'7.4.2.1.variable_ref_with_variable_ref':
-    #'7.4.2.1.variable_ref_with_variable':
+    '7.4.2.1.variable_ref_with_component_ref':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_component':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_connection':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_group':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_map_components':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_map_variables':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_math':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_model':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_reaction':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_relationship_ref':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_unit':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_units':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_variable':
+        'Element variable_ref has extra content: variable',    
+    '7.4.2.1.variable_ref_with_variable_ref':
+        'Element variable_ref has extra content: variable',    
     # 7.4.2.1 A variable_ref must refer to a local variable
     #'7.4.2.2.variable_ref_variable_hidden':
     #'7.4.2.2.variable_ref_variable_nonexistent':
@@ -596,20 +782,34 @@ expected_errors = {
     # 7.4.3.1 A role must define a role attribute
     #'7.4.3.1.role_role_missing':
     # 7.4.3.1 A role cannot contain any CellML children (only math)
-    #'7.4.3.1.role_with_component':
-    #'7.4.3.1.role_with_component_ref':
-    #'7.4.3.1.role_with_connection':
-    #'7.4.3.1.role_with_group':
-    #'7.4.3.1.role_with_map_components':
-    #'7.4.3.1.role_with_map_variables':
-    #'7.4.3.1.role_with_model':
-    #'7.4.3.1.role_with_reaction':
-    #'7.4.3.1.role_with_relationship_ref':
-    #'7.4.3.1.role_with_role':
-    #'7.4.3.1.role_with_unit':
-    #'7.4.3.1.role_with_units':
-    #'7.4.3.1.role_with_variable_ref':
-    #'7.4.3.1.role_with_variable':
+    '7.4.3.1.role_with_component':
+        'Element role has extra content: component',
+    '7.4.3.1.role_with_component_ref':
+        'Element role has extra content: component_ref',
+    '7.4.3.1.role_with_connection':
+        'Element role has extra content: connection',
+    '7.4.3.1.role_with_group':
+        'Element role has extra content: group',
+    '7.4.3.1.role_with_map_components':
+        'Element role has extra content: map_components',
+    '7.4.3.1.role_with_map_variables':
+        'Element role has extra content: map_variables',
+    '7.4.3.1.role_with_model':
+        'Element role has extra content: model',
+    '7.4.3.1.role_with_reaction':
+        'Element role has extra content: reaction',
+    '7.4.3.1.role_with_relationship_ref':
+        'Element role has extra content: relationship_ref',
+    '7.4.3.1.role_with_role':
+        'Element role has extra content: role',
+    '7.4.3.1.role_with_unit':
+        'Element role has extra content: unit',
+    '7.4.3.1.role_with_units':
+        'Element role has extra content: units',
+    '7.4.3.1.role_with_variable_ref':
+        'Element role has extra content: variable_ref',
+    '7.4.3.1.role_with_variable':
+        'Element role has extra content: variable',
     # 7.4.3.2 A role must define a valid role attribute
     #'7.4.3.2.role_role_invalid':
     # 7.4.3.3 A reaction can only have a single rate
@@ -779,7 +979,7 @@ def list_fails():
     """
     Returns a list of ``pytest.param`` objects for models that should fail.
     """
-    return list_models('invalid')[60:90]
+    return list_models('invalid')[160:200]
 
 
 @pytest.mark.parametrize(('name', 'path'), list_fails())
@@ -826,7 +1026,7 @@ def test_invalid_model(name, path, parser, relaxng, log):
         if r.search(e) is not None:
             return
     if valid:
-        log.error('Model passed validation unexpectedly.')
+        log.error('Model passed validation unexpectedly: ' + name)
         log.error('Expected: ' + expected)
     else:
         log.error('Unexpected error in ' + name)

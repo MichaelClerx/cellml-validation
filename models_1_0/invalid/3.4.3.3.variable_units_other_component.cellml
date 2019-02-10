@@ -6,6 +6,8 @@
     <variable name="a" units="oranges" />
   </component>
   <component name="B">
-    <units name="oranges" />
+    <units name="oranges">
+      <unit units="volt" />
+    </units>
   </component>
 </model>
