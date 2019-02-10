@@ -22,7 +22,7 @@ known_false_negatives = {
     '2.4.3.group_with_extensions': 'No declaration',
     '2.4.3.map_components_with_extensions': 'No declaration',
     '2.4.3.map_variables_with_extensions': 'No declaration',
-    '2.4.3.model_with_extensions': 'No declaration',
+    '2.4.3.model_with_extensions': 'Element model content does not follow the',
     '2.4.3.reaction_with_extensions': 'No declaration',
     '2.4.3.relationship_ref_with_extensions': 'No declaration',
     '2.4.3.role_with_extensions': 'No declaration',
@@ -43,7 +43,7 @@ known_false_negatives = {
     '8.4.2.rdf_in_group': 'No declaration',
     '8.4.2.rdf_in_map_components': 'No declaration',
     '8.4.2.rdf_in_map_variables': 'No declaration',
-    '8.4.2.rdf_in_model': 'No declaration',
+    '8.4.2.rdf_in_model': 'Element model content does not follow the DTD',
     '8.4.2.rdf_in_reaction': 'No declaration',
     '8.4.2.rdf_in_relationship_ref': 'No declaration',
     '8.4.2.rdf_in_role': 'No declaration',
@@ -84,12 +84,12 @@ expected_errors = {
     '2.4.2.imaginary_attributes_2':
         'No declaration for attribute',
     '2.4.2.imaginary_elements':
-        'No declaration for',
+        'Element model content does not follow the DTD',
     # 2.4.3 Elements/attributes in extension namespaces
     '2.4.3.cellml_attributes_inside_extensions':
-        'No declaration for attribute',
+        'Element model content does not follow the DTD',
     '2.4.3.cellml_elements_inside_extensions':
-        'No declaration for element',
+        'Element model content does not follow the DTD',
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         'Element component content does not follow the DTD',
@@ -252,11 +252,9 @@ expected_errors = {
     # 3.4.4.1 A component must contain at least one map_variables
     '3.4.4.1.connection_map_variables_missing_1':
         'Element connection content does not follow the DTD',
-    '3.4.4.1.connection_map_variables_missing_2':
-        'No declaration for element',
+    '3.4.4.1.connection_map_variables_missing_2': 'No declaration for',
     # 3.4.4.1 A connection must have map_components and map_variables
-    '3.4.4.1.connection_only_extensions':
-        'No declaration for element',
+    '3.4.4.1.connection_only_extensions': 'No declaration for',
     '3.4.4.1.connection_with_math':
         'Element connection content does not follow the DTD',
     '3.4.4.1.connection_empty':
@@ -420,9 +418,9 @@ expected_errors = {
     '4.math_overdefined': None,
     # 4.4.1 Bad math
     '4.4.1.math_not_math_component':
-        'No declaration for attribute',
+        'Element apply content does not follow the DTD',
     '4.4.1.math_not_math_reaction':
-        'No declaration for attribute',
+        'Element apply content does not follow the DTD',
     # 4.4.2 Ci can only refer to local variables
     '4.4.2.ci_nonexistent': None,
     '4.4.2.ci_non_local_aunt': None,
@@ -581,17 +579,14 @@ expected_errors = {
     '5.4.2.7.unit_offset_and_siblings_2': None,
     # 6.4.1.1 A group must have at least one component_ref
     '6.4.1.1.group_component_ref_missing_1': None,
-    '6.4.1.1.group_component_ref_missing_2':
-        'No declaration for element',
+    '6.4.1.1.group_component_ref_missing_2': 'No declaration for',
     # 6.4.1.1 A group must have at least one relationship_ref
     '6.4.1.1.group_relationship_ref_missing_1': None,
-    '6.4.1.1.group_relationship_ref_missing_2':
-        'No declaration for element',
+    '6.4.1.1.group_relationship_ref_missing_2': 'No declaration for',        
     # 6.4.1.1 A group cannot be empty (extra test for missing comp_ref/rel_ref)
     '6.4.1.1.group_empty':
         'Element group content does not follow the DTD',
-    '6.4.1.1.group_only_extensions':
-        'No declaration for element hallo',
+    '6.4.1.1.group_only_extensions': 'No declaration for',
     # 6.4.1.1 A group can only contain component_refs and relationship_refs
     '6.4.1.1.group_with_component':
         'Element group content does not follow the DTD',
@@ -974,7 +969,7 @@ def test_valid_model(name, path, parser, dtd, log):
     else:
 
         # Log error
-        e = dtd.error_log.last_error
+        e = dtd.error_log[0]
         error = e.message
         log.info('Error on line ' + str(e.line) + ': ' + error)
 
@@ -1031,7 +1026,7 @@ def test_invalid_model(name, path, parser, dtd, log):
                 error = 'No error raised'
         else:
             # Log detected error
-            e = dtd.error_log.last_error
+            e = dtd.error_log[0]
             error = e.message
             log.info('Error on line ' + str(e.line) + ': ' + error)
 
