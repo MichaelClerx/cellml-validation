@@ -377,7 +377,7 @@ Limitations related to extensions and namespaces:
       <xs:enumeration value="giga" />
       <xs:enumeration value="mega" />
       <xs:enumeration value="kilo" />
-      <xs:enumeration value="hecta" />
+      <xs:enumeration value="hecto" />
       <xs:enumeration value="deka" />
       <xs:enumeration value="deci" />
       <xs:enumeration value="centi" />
