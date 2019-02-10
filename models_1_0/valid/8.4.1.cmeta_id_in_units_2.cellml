@@ -4,6 +4,8 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
   <component name="A">
-    <units name="apple" cmeta:id="apple" />
+    <units name="apple" cmeta:id="apple">
+      <unit units="dimensionless" />
+    </units>
   </component>
 </model>

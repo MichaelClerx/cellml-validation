@@ -3,7 +3,11 @@
 <model name="component_with_units"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <units name="a" />
-    <units name="b" />
+    <units name="a">
+      <unit units="volt" />
+    </units>
+    <units name="b">
+      <unit units="volt" />
+    </units>
   </component>
 </model>

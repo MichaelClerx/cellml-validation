@@ -5,8 +5,12 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <units name="a" />
-    <units name="b" />
+    <units name="a">
+      <unit units="volt" />
+    </units>
+    <units name="b">
+      <unit units="volt" />
+    </units>
     <variable name="a" units="dimensionless" />
     <variable name="b" units="dimensionless" />
     <variable name="c" units="dimensionless" />

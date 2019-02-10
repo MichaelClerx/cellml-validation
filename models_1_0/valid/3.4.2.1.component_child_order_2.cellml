@@ -25,7 +25,9 @@
       </apply>
     </math>
     <variable name="c" units="dimensionless" />
-    <units name="a" />
+    <units name="a">
+      <unit units="volt" />
+    </units>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
@@ -39,7 +41,9 @@
       </variable_ref>
     </reaction>
     <variable name="b" units="dimensionless" />
-    <units name="b" />
+    <units name="b">
+      <unit units="volt" />
+    </units>
     <variable name="a" units="dimensionless" />
   </component>
 </model>

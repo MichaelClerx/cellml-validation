@@ -3,7 +3,9 @@
 <model name="variable_units_component"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <units name="oranges" />
+    <units name="oranges">
+      <unit units="volt" />
+    </units>
     <variable name="a" units="oranges" />
   </component>
 </model>

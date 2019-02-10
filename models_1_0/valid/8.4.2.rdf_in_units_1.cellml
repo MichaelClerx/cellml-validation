@@ -6,6 +6,7 @@
        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
        xmlns:dc= "http://purl.org/dc/elements/1.1/">
   <units name="orange" cmeta:id="orange">
+    <unit units="dimensionless" />
     <rdf:RDF about="#orange">
       <dc:description>It's a units element</dc:description>
     </rdf:RDF>

@@ -2,11 +2,17 @@
 <!-- CellML 1.0, 5.4.1.2: Component units can shadow model unit names -->
 <model name="units_shadowing_1"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  <units name="wooster" />
+  <units name="wooster">
+    <unit units="ampere" />
+  </units>
   <component name="A">
-    <units name="wooster" />
+    <units name="wooster">
+      <unit units="volt" />
+    </units>
   </component>
   <component name="B">
-    <units name="wooster" />
+    <units name="wooster">
+      <unit units="volt" />
+    </units>
   </component>
 </model>

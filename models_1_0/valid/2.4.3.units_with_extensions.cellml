@@ -4,6 +4,7 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:fruit="http://fruit.org">
   <units name="wooster" fruit:x_a_day="5">
+    <unit units="dimensionless" />
     <fruit:orange peel="yes">
       <fruit:clementine />
     </fruit:orange>
@@ -11,6 +12,7 @@
   </units>
   <component name="A">
     <units name="worcester" fruit:x_a_day="5">
+      <unit units="dimensionless" />
       <fruit:orange peel="yes">
         <fruit:clementine />
       </fruit:orange>

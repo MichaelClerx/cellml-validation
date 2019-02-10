@@ -3,5 +3,7 @@
 <model name="cmeta_id_in_units_1"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
-  <units name="orange" cmeta:id="orange" />
+  <units name="orange" cmeta:id="orange">
+    <unit units="dimensionless" />  
+  </units>
 </model>

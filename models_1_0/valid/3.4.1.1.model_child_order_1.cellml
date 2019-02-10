@@ -3,16 +3,20 @@
                           units, component, group, connection is preferred. -->
 <model name="model_child_order_1"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  <units name="U" />
-  <units name="Q" />
+  <units name="U">
+    <unit units="dimensionless" />
+  </units>
+  <units name="Q">
+    <unit units="dimensionless" />
+  </units>
   <component name="A">
     <variable name="a" units="dimensionless" initial_value="0" public_interface="out" />
   </component>
   <component name="B">
-    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
   <component name="C">
-    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
   <group>
     <relationship_ref relationship="containment" />

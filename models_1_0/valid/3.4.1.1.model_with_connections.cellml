@@ -6,10 +6,10 @@
     <variable name="a" units="dimensionless" initial_value="0" public_interface="out" />
   </component>
   <component name="B">
-    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
   <component name="C">
-    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
   <connection>
     <map_components component_1="A" component_2="B" />

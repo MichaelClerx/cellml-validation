@@ -14,9 +14,11 @@
     </component_ref>
   </group>
   <component name="C">
-    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
-  <units name="U" />
+  <units name="U">
+    <unit units="dimensionless" />
+  </units>
   <component name="A">
     <variable name="a" units="dimensionless" initial_value="0" public_interface="out" />
   </component>
@@ -25,9 +27,11 @@
     <map_variables variable_1="a" variable_2="a" />
   </connection>
   <component name="B">
-    <variable name="a" units="dimensionless" initial_value="0" public_interface="in" />
+    <variable name="a" units="dimensionless" public_interface="in" />
   </component>
-  <units name="Q" />
+  <units name="Q">
+    <unit units="dimensionless" />
+  </units>
   <group>
     <relationship_ref relationship="encapsulation" />
     <component_ref component="B">

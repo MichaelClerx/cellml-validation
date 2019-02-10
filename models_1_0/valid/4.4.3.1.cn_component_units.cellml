@@ -4,7 +4,9 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <units name="wooster" />
+    <units name="wooster">
+      <unit units="volt" />
+    </units>
     <variable name="a" units="wooster" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>

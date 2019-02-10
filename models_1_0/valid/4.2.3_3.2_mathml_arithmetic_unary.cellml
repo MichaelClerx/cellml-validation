@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Variables can be described via any algebraic equation -->
-<model name="algebraic_model"
+<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+Unary plus and minus -->
+<model name="mathml_arithmetic_unary"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <variable name="x" units="dimensionless" />
-    <variable name="y" units="dimensionless" />
+    <variable name="plus" units="volt" />
+    <variable name="minus" units="volt" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
+        <ci>plus</ci>
         <apply>
           <plus />
-          <ci>x</ci>
-          <ci>y</ci>
+          <cn cellml:units="volt">1</cn>
         </apply>
-        <cn cellml:units="dimensionless">2</cn>
       </apply>
       <apply>
         <eq/>
+        <ci>minus</ci>
         <apply>
-          <divide />
-          <cn cellml:units="dimensionless">1</cn>
-          <ci>y</ci>
+          <minus />
+          <cn cellml:units="dimensionless">2</cn>
         </apply>
-        <cn cellml:units="dimensionless">7</cn>
       </apply>
     </math>
   </component>

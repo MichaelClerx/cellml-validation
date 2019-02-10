@@ -6,8 +6,9 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:fruit="http://fruit.org">
   <component name="A" />
+  <component name="B" />
   <group>
-    <relationship_ref fruit:relationship="encapsulation" />
+    <relationship_ref fruit:relationship="super_containment" />
     <component_ref component="A" />
   </group>
 </model>

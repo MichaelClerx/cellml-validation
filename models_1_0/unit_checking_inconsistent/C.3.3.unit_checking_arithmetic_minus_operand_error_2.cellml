@@ -3,6 +3,9 @@
 <model name="unit_checking_arithmetic_minus_operand_error_2"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="millivolt">
+    <unit units="volt" prefix="milli" />
+  </units>
   <component name="A">
     <variable name="a" units="volt" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -12,8 +15,7 @@
         <apply>
           <minus />
           <cn cellml:units="volt">3</cn>
-          <cn cellml:units="volt">1.2</cn>
-          <cn cellml:units="kilogram">8.7</cn>
+          <cn cellml:units="millivolt">1.2</cn>
         </apply>
       </apply>
     </math>

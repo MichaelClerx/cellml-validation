@@ -11,7 +11,7 @@
     <unit units="farad" prefix="giga" />
     <unit units="gram" prefix="mega" />
     <unit units="gray" prefix="kilo" />
-    <unit units="henry" prefix="hecta" />
+    <unit units="henry" prefix="hecto" />
     <unit units="hertz" prefix="deka" />
     <unit units="joule" prefix="deci" />
     <unit units="katal" prefix="centi" />

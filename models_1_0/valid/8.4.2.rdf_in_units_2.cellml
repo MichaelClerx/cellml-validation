@@ -7,6 +7,7 @@
        xmlns:dc= "http://purl.org/dc/elements/1.1/">
   <component name="A">
     <units name="apple" cmeta:id="apple">
+      <unit units="dimensionless" />
       <rdf:RDF about="#apple">
         <dc:description>It's a units element</dc:description>
       </rdf:RDF>
