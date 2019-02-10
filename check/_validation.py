@@ -40,10 +40,10 @@ def dtd_1_0(filename):
             + ' This file validates against the CellML 1.0 DTD.')
         sys.exit(0)
     else:
-        e = dtd.error_log.last_error
-        r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
-        print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
-        print(r.sub('cellml:', e.message))
+        for e in dtd.error_log:
+            r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
+            print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
+            print(r.sub('cellml:', e.message))
         print()
         sys.exit(1)
 
@@ -70,10 +70,10 @@ def relaxng_1_0(filename):
             + ' This file validates against the CellML 1.0 RELAX NG schema.')
         sys.exit(0)
     else:
-        e = rnc.error_log.last_error
-        r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
-        print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
-        print(r.sub('cellml:', e.message))
+        for e in rnc.error_log:
+            r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
+            print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
+            print(r.sub('cellml:', e.message))
         print()
         sys.exit(1)
 
@@ -101,10 +101,10 @@ def schema_1_0(filename):
             + ' This file validates against the CellML 1.0 schema.')
         sys.exit(0)
     else:
-        e = schema.error_log.last_error
-        r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
-        print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
-        print(r.sub('cellml:', e.message))
+        for e in schema.error_log:
+            r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
+            print(colored('fail', '[fail]') + ' Error on line ' + str(e.line))
+            print(r.sub('cellml:', e.message))
         print()
         sys.exit(1)
 
