@@ -26,17 +26,17 @@ expected_errors = {
         "No matching global declaration available for the validation root",
     # Not in spec: Real number format
     '0.1.real_number_invalid_1':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     '0.1.real_number_invalid_2':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     '0.1.real_number_invalid_3':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     '0.1.real_number_invalid_4':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     '0.1.real_number_invalid_5':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     '0.1.real_number_invalid_6':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         #"'name': '' is not a valid value",
@@ -95,7 +95,7 @@ expected_errors = {
         "No match found for key-sequence",
     # 2.5.2 There are no attributes in the CellML namespace
     '2.5.2.attribute_in_cellml_namespace':
-        "Element 'cellml:model': The attribute 'name' is required",
+        "The attribute 'cellml:name' is not allowed",
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
     '3.4.1.1.model_with_component_ref':
@@ -124,7 +124,7 @@ expected_errors = {
         "Element 'cellml:model': The attribute 'name' is required",
     # 3.4.1.2 A model name must be a valid identifier
     '3.4.1.2.model_name_invalid':
-        "Element 'cellml:model', attribute 'name': '___' is not a valid value",
+        "not accepted by the pattern",
     # 3.4.2.1 Components contain only units, variable, reaction, math
     '3.4.2.1.component_with_component':
         "Element 'cellml:component': This element is not expected",
@@ -150,10 +150,10 @@ expected_errors = {
         "Element 'cellml:variable_ref': This element is not expected",
     # 3.4.2.1 Components must have a name
     '3.4.2.1.component_name_missing':
-        "Element 'cellml:component': Not all fields of key",
+        "Element 'cellml:component': The attribute 'name' is required",
     # 3.4.2.2 A component name must be a valid identifier
     '3.4.2.2.component_name_invalid':
-        "Not all fields of key identity-constraint 'cellml:component_name'",
+        "not accepted by the pattern",
     # 3.4.2.2 Component names must be unique
     '3.4.2.2.component_name_duplicate':
         "Duplicate key-sequence ['c1']",
@@ -189,13 +189,13 @@ expected_errors = {
         "Element 'cellml:variable': This element is not expected",
     # 3.4.3.1 Variables must have a name attribute
     '3.4.3.1.variable_name_missing':
-        "Not all fields of key identity-constraint 'cellml:variable_name'",
+        "The attribute 'name' is required but missing",
     # 3.4.3.1 Variables must have a units attribute
     '3.4.3.1.variable_units_missing':
         "Element 'cellml:variable': The attribute 'units' is required",
     # 3.4.3.2 A variable name must be an identifier
     '3.4.3.2.variable_name_invalid':
-        "Not all fields of key identity-constraint 'cellml:variable_name'",
+        "not accepted by the pattern",
     # 3.4.3.2 A variable name must be unique with the component
     '3.4.3.2.variable_name_duplicate':
         "Element 'cellml:variable': Duplicate key-sequence",
@@ -205,17 +205,17 @@ expected_errors = {
     '3.4.3.3.variable_units_other_component': None,
     # 3.4.3.4 A public interface must be one of in/out/none
     '3.4.3.4.variable_interface_public_invalid':
-        "is not a valid value of the atomic type 'cellml:interface'",
+        "not an element of the set",
     # 3.4.3.5 A private interface must be one of in/out/none
     '3.4.3.5.variable_interface_private_invalid':
-        "is not a valid value of the atomic type 'cellml:interface'",
+        "not an element of the set",
     # 3.4.3.6 The private and public interface can't both be in
     '3.4.3.6.variable_interfaces_both_in': None,
     # 3.4.3.7 The initial value (if present) must be a real number
     '3.4.3.7.variable_initial_value_empty':
-        "is not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     '3.4.3.7.variable_initial_value_invalid':
-        "is not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     # 3.4.3.8 A variable can't have an initial value and an "in" interface
     '3.4.3.8.variable_interfaces_private_in_and_initial': None,
     '3.4.3.8.variable_interfaces_public_in_and_initial': None,
@@ -493,7 +493,7 @@ expected_errors = {
     '5.4.1.2.units_name_predefined_component_ampere': None,
     # 5.4.1.3 Units base_units attribute can only be yes or no
     '5.4.1.3.units_base_units_invalid':
-        "not a valid value of the atomic type 'cellml:yes_no'",
+        "not an element of the set",
     # 5.4.2.1 A unit must have a units attribute
     '5.4.2.1.unit_units_missing':
         "Element 'cellml:unit': The attribute 'units' is required",
@@ -544,13 +544,13 @@ expected_errors = {
         "not a valid value of the union type 'cellml:unit_prefix'",
     # 5.4.2.4 A unit exponent must be a real number
     '5.4.2.4.unit_exponent_invalid':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     # 5.4.2.5 A unit multiplier must be a real number
     '5.4.2.5.unit_multiplier_invalid':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     # 5.4.2.6 A unit offset must be a real number
     '5.4.2.6.unit_offset_invalid':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     # 5.4.2.7: A unit with a non-zero offset must have exponent 1
     '5.4.2.7.unit_offset_and_exponent': None,
     # 5.4.2.7: A unit with an offset can't have siblings
@@ -733,7 +733,7 @@ expected_errors = {
         "Element 'cellml:variable': This element is not expected",
     # 7.4.1.2 The reversible attribute can only be yes or no
     '7.4.1.2.reaction_reversible_invalid':
-        "not a valid value of the atomic type 'cellml:yes_no'",
+        "not an element of the set",
     # 7.4.1.3 A reaction in an encapsulating component cannot use
     # delta_variable attributes in its roles.
     '7.4.1.3.reaction_encapsulating_delta_variable': None,
@@ -842,7 +842,7 @@ expected_errors = {
         "Element 'cellml:role': Duplicate key-sequence",
     # 7.4.3.6 Stoichiometry must be a real number
     '7.4.3.6.role_stoichiometry_invalid':
-        "not a valid value of the atomic type 'cellml:real_number'",
+        "not accepted by the pattern",
     # 7.4.3.7 The delta_variable must refer to a local variable
     '7.4.3.7.role_delta_variable_nonexistent_1':
         "Element 'cellml:role': No match found for key-sequence",
@@ -983,7 +983,7 @@ def test_invalid_model(name, path, schema, schema_parser, log):
                 error = 'No error raised'
         else:
             # Log detected error
-            e = schema.error_log.last_error
+            e = schema.error_log[0]
             r = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
             error = r.sub('cellml:', e.message)
             log.info('Error on line ' + str(e.line) + ': ' + error)
