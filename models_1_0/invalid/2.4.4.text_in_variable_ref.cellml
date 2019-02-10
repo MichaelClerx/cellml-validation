@@ -6,8 +6,8 @@
     <variable name="a" units="mole" />
     <reaction>
       <variable_ref variable="a">
-        Banana
         <role role="reactant" />
+        Banana        
       </variable_ref>
     </reaction>
   </component>

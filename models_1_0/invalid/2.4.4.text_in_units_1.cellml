@@ -3,6 +3,7 @@
 <model name="text_in_units_1"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="orange">
+    <unit units="volt" />
     Clementine
   </units>
 </model>

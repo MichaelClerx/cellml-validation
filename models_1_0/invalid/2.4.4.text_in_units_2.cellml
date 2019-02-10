@@ -4,6 +4,7 @@
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
     <units name="apple">
+      <unit units="volt" />
       Clementine
     </units>
   </component>

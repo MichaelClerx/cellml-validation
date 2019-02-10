@@ -37,6 +37,9 @@ All CellML 1.0 elements can also contain:
  - a `cmeta:id` attribute.
  - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
 
+It's unclear from the spec whether a `<units>` element that's not a base unit can be empty.
+Implementers disagree.
+CellML 2.0 explicitly allows it.
 
 ## Grouping & public/private interfaces
 
