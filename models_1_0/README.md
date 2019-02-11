@@ -33,7 +33,7 @@ When variables from two separate components are connected by a `map_variables`, 
 Again, all this is discussed in terms of software capabilities, not the CellML format, so it seems that the units of connected variables do not affect validity of the file.
 
 The `unit_conversion_convertible` set contains models where unit conversion between components is necessary to obtain the correct results.
-The `unit_conversion_inconvertible` set contains models where connections between varaibles with incompatible units have been made.
+The `unit_conversion_inconvertible` set contains models where connections between variables with incompatible units have been made.
 Note that all models from both sets should validate, but software is free to complain about models from `unit_conversion_inconvertible` on other grounds.
 None of the files in `valid` should require unit conversion.
 
