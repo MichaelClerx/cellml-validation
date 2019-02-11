@@ -37,6 +37,17 @@ The `unit_conversion_inconvertible` set contains models where connections betwee
 Note that all models from both sets should validate, but software is free to complain about models from `unit_conversion_inconvertible` on other grounds.
 None of the files in `valid` should require unit conversion.
 
+## Empty units elements
+
+The CellML spec says:
+
+- _If a `<units>` element defines a base_units attribute with a value of "yes", then that `<units>` element must contain only the following elements, which may appear in any order:_
+  - _`<RDF>` elements in the RDF namespace._
+- _If a `<units> element does not define a base_units attribute with a value of "yes", then that `<units>` element must contain only the following elements, which may appear in any order:_
+  - _`<unit>` elements in the CellML namespace,_
+  - _`<RDF>` elements in the RDF namespace._
+
+
 ## Booleans
 
 The CellML spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the other properties of a unit).
