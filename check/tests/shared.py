@@ -6,9 +6,14 @@ from __future__ import print_function, unicode_literals
 
 import os
 import pytest
+import re
 from lxml import etree
 
 import check
+
+
+# Regex to find the CellML 1.0 namespace
+r1_0 = re.compile(re.escape('{' + check.CELLML_1_0_NS + '}'))
 
 
 def list_models_1_0(subdir):
@@ -112,7 +117,8 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
         if expected_error is None:
             log.error('Unexpected error in ' + name)
             for e in validator.error_log:
-                log.error('Error on line ' + str(e.line) + ': ' + e.message)
+                msg = r1_0.sub('cellml:', e.message)
+                log.error('Error on line ' + str(e.line) + ': ' + msg)
             pytest.fail()
 
         else:
@@ -120,7 +126,8 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
             # Scan logged errors for expected error
             expected_found = False
             for e in validator.error_log:
-                if expected_error in e.message:
+                msg = r1_0.sub('cellml:', e.message)
+                if expected_error in msg:
                     expected_found = True
                     break
 
@@ -130,8 +137,8 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
                 log.error('Unexpected error in ' + name)
                 log.error('Expected: ' + expected_error)
                 for e in validator.error_log:
-                    log.error(
-                        'Error on line ' + str(e.line) + ': ' + e.message)
+                    msg = r1_0.sub('cellml:', e.message)
+                    log.error('Error on line ' + str(e.line) + ': ' + msg)
                 pytest.fail()
 
 
@@ -208,13 +215,13 @@ def assert_invalid(
 
         # Check if expected error set
         if expected_error is None:
-            if known_issue:
+            if expected_issue:
                 pytest.xfail()
             else:
                 log.error('Unexpected error in ' + name)
                 for e in validator.error_log:
-                    log.error(
-                        'Error on line ' + str(e.line) + ': ' + e.message)
+                    msg = r1_0.sub('cellml:', e.message)
+                    log.error('Error on line ' + str(e.line) + ': ' + msg)
                 log.error('No expected error set')
                 pytest.fail()
 
@@ -223,18 +230,19 @@ def assert_invalid(
             # Scan logged errors for expected one
             expected_found = False
             for e in validator.error_log:
-                if expected_error in e.message:
+                msg = r1_0.sub('cellml:', e.message)
+                if expected_error in msg:
                     expected_found = True
                     break
 
             if not expected_found:
-                if known_issue:
+                if expected_issue:
                     pytest.xfail()
                 else:
                     log.error('Unexpected error in ' + name)
                     for e in validator.error_log:
-                        log.error(
-                            'Error on line ' + str(e.line) + ': ' + e.message)
+                        msg = r1_0.sub('cellml:', e.message)
+                        log.error('Error on line ' + str(e.line) + ': ' + msg)
                     log.error('Expected error: ' + expected_error)
                     pytest.fail()
 

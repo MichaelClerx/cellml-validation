@@ -18,7 +18,7 @@ false_negatives = {}
 
 
 # Expected error messages
-expected_errors = {
+expected_messages = {
     # Not in spec: Root node
     '0.0.root_node_not_model':
         "No matching global declaration available for the validation root",
@@ -30,29 +30,29 @@ expected_errors = {
         "No matching global declaration available for the validation root",
     # Not in spec: Real number format
     '0.1.real_number_invalid_1':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     '0.1.real_number_invalid_2':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     '0.1.real_number_invalid_3':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     '0.1.real_number_invalid_4':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     '0.1.real_number_invalid_5':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     '0.1.real_number_invalid_6':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         #"'name': '' is not a valid value",
-        "Element 'cellml:units', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     '2.4.1.identifier_only_underscore':
-        "Element 'cellml:units', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     '2.4.1.identifier_unexpected_character':
-        "Element 'cellml:units', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     '2.4.1.identifier_unexpected_character_2':
-        "Element 'cellml:units', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     '2.4.1.identifier_unexpected_character_unicode':
-        "Element 'cellml:units', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 2.4.2. Allowable CellML elements and attributes
     '2.4.2.imaginary_attributes_1':
         "The attribute 'fruit' is not allowed",
