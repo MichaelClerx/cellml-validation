@@ -39,7 +39,7 @@ None of the files in `valid` should require unit conversion.
 
 ## Booleans
 
-The CellML spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the properties of any of the other units).
+The CellML spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the other properties of a unit).
 In this test set, cases involving booleans are treated separately from unit checking conversion, as it seems likely many tools will treat booleans as a type, and e.g. implement type checking (`7 + false` is wrong) but not unit checking (`1 newton + 1 meter` is fine).
 The set `booleans` contains examples of misuse of booleans.
 
