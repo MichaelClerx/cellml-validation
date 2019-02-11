@@ -21,10 +21,14 @@ Disclaimers:
 * [A very brief overview of CellML 1.0](cellml_1_0/README.md)
 * [The CellML 1.0 test set](models_1_0)
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
+* [CellML 1.0 DTD](cellml_1_0/cellml_1_0.dtd) - based on the version by Warren Hedley
+* [CellML 1.0 RELAX NG schema (XML syntax)(cellml_1_0/cellml_1_0.rng) translated from the compact version by Jonathan Cooper
+* [CellML 1.0 RELAX NG schema (compact syntax)](cellml_1_0/cellml_1_0.rnc) written by Jonathan Cooper
+
 * Older files:
   * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
   * [CellML 1.0 DTD](cellml_1_0/todo/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
-  * [RELAX NG schema](cellml_1_0/todo/cellml1.0.rnc) for CellML 1.0 written by Jonathan Cooper
+ 
 
 ## Tests
 
