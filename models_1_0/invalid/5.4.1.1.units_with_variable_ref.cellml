@@ -5,6 +5,7 @@
   <component name="A">
     <variable name="a" units="dimensionless" />
     <units name="wooster">
+      <unit units="volt" />
       <variable_ref variable="a">
         <role role="inhibitor" />
       </variable_ref>

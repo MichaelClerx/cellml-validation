@@ -2,5 +2,7 @@
 <!-- CellML 1.0, 5.4.1.2: A units name must not overlap with the predefined names -->
 <model name="units_name_predefined_mole"
        xmlns="http://www.cellml.org/cellml/1.0#">
-  <units name="mole" />
+  <units name="mole">
+    <unit units="newton" />
+  </units>
 </model>

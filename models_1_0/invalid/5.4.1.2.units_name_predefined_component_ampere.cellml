@@ -3,6 +3,8 @@
 <model name="units_name_predefined_component_ampere"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <units name="ampere" />
+    <units name="ampere">
+      <unit units="newton" />
+    </units>
   </component>
 </model>

@@ -6,6 +6,7 @@
   <component name="A">
     <variable name="a" units="dimensionless" />
     <units name="wooster">
+      <unit units="volt" />
       <math xmlns="http://www.w3.org/1998/Math/MathML">
         <apply>
           <eq/>

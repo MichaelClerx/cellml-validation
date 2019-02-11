@@ -3,6 +3,7 @@
 <model name="units_with_units"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="wooster">
+    <unit units="volt" />
     <units name="fluther" />
   </units>
 </model>

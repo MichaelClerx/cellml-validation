@@ -409,8 +409,8 @@ expected_errors = {
     '3.4.6.4.map_variables_sibling_private_out_1': None,
     '3.4.6.4.map_variables_sibling_private_out_2': None,
     # 4 Math can't be overdefined
-    #'4.math_and_initial_value':
-    #'4.math_overdefined':
+    '4.math_and_initial_value': None,
+    '4.math_overdefined': None,
     # 4.4.1 Bad math
     '4.4.1.math_not_math_component':
         'Element component failed to validate content',
@@ -426,20 +426,23 @@ expected_errors = {
     '4.4.2.ci_non_local_parent': None,
     '4.4.2.ci_non_local_sibling': None,
     # 4.4.3.1 A cn must have a cellml:units
-    #'4.4.3.1.cn_units_missing':
+    '4.4.3.1.cn_units_missing':
+        'Element math',
     # 4.4.3.2 A cn unit attribute must refer to a model, local component, or
     #         predefined unit
-    #'4.4.3.2.cn_units_nonexistent_1':
-    #'4.4.3.2.cn_units_nonexistent_2':
-    #'4.4.3.2.cn_units_parent_component':
+    '4.4.3.2.cn_units_nonexistent_1': None,
+    '4.4.3.2.cn_units_nonexistent_2': None,
+    '4.4.3.2.cn_units_parent_component': None,
     # 4.4.4 A mathml:math can only modify 'owned' variables
-    #'4.4.4.modify_nonexistent':
-    #'4.4.4.modify_private_in':
-    #'4.4.4.modify_public_in':
+    '4.4.4.modify_nonexistent': None,
+    '4.4.4.modify_private_in': None,
+    '4.4.4.modify_public_in': None,
     # 5.4.1.1 Unitses must have a name
-    #'5.4.1.1.units_name_missing':
+    '5.4.1.1.units_name_missing':
+        'Element units failed to validate content',
     # 5.4.1.1 A units with base_units="yes" can't have children
-    #'5.4.1.1.units_base_units_with_children':
+    '5.4.1.1.units_base_units_with_children':
+        'Invalid attribute base_units for element units',
     # 5.4.1.1 A units can only contain unit elements
     '5.4.1.1.units_with_component':
         'Element units has extra content: component',    
@@ -462,7 +465,7 @@ expected_errors = {
     '5.4.1.1.units_with_relationship_ref':
         'Element units has extra content: relationship_ref',    
     '5.4.1.1.units_with_role':
-        'Element units has extra content: unit',    
+        'Element units has extra content: role',    
     '5.4.1.1.units_with_units':
         'Element units has extra content: units',    
     '5.4.1.1.units_with_variable':
@@ -470,51 +473,54 @@ expected_errors = {
     '5.4.1.1.units_with_variable_ref':
         'Element units has extra content: variable_ref',    
     # 5.4.1.2 A units name must be a valid identifier
-    #'5.4.1.2.units_name_invalid':
+    '5.4.1.2.units_name_invalid':
+        'Element units failed to validate content',
     # 5.4.1.2 Units names must be unique (within model or local component)
-    #'5.4.1.2.units_name_duplicate_1':
-    #'5.4.1.2.units_name_duplicate_2':
+    '5.4.1.2.units_name_duplicate_1': None,
+    '5.4.1.2.units_name_duplicate_2': None,
     # 5.4.1.2 Units names cannot overlap with predefined ones
-    #'5.4.1.2.units_name_predefined_ampere':
-    #'5.4.1.2.units_name_predefined_becquerel':
-    #'5.4.1.2.units_name_predefined_candela':
-    #'5.4.1.2.units_name_predefined_celsius':
-    #'5.4.1.2.units_name_predefined_coulomb':
-    #'5.4.1.2.units_name_predefined_dimensionless':
-    #'5.4.1.2.units_name_predefined_farad':
-    #'5.4.1.2.units_name_predefined_gram':
-    #'5.4.1.2.units_name_predefined_gray':
-    #'5.4.1.2.units_name_predefined_henry':
-    #'5.4.1.2.units_name_predefined_hertz':
-    #'5.4.1.2.units_name_predefined_joule':
-    #'5.4.1.2.units_name_predefined_katal':
-    #'5.4.1.2.units_name_predefined_kelvin':
-    #'5.4.1.2.units_name_predefined_kilogram':
-    #'5.4.1.2.units_name_predefined_liter':
-    #'5.4.1.2.units_name_predefined_litre':
-    #'5.4.1.2.units_name_predefined_lumen':
-    #'5.4.1.2.units_name_predefined_lux':
-    #'5.4.1.2.units_name_predefined_meter':
-    #'5.4.1.2.units_name_predefined_metre':
-    #'5.4.1.2.units_name_predefined_mole':
-    #'5.4.1.2.units_name_predefined_newton':
-    #'5.4.1.2.units_name_predefined_ohm':
-    #'5.4.1.2.units_name_predefined_pascal':
-    #'5.4.1.2.units_name_predefined_radian':
-    #'5.4.1.2.units_name_predefined_second':
-    #'5.4.1.2.units_name_predefined_siemens':
-    #'5.4.1.2.units_name_predefined_sievert':
-    #'5.4.1.2.units_name_predefined_steradian':
-    #'5.4.1.2.units_name_predefined_tesla':
-    #'5.4.1.2.units_name_predefined_volt':
-    #'5.4.1.2.units_name_predefined_watt':
-    #'5.4.1.2.units_name_predefined_weber':
+    '5.4.1.2.units_name_predefined_ampere': None,
+    '5.4.1.2.units_name_predefined_becquerel': None,
+    '5.4.1.2.units_name_predefined_candela': None,
+    '5.4.1.2.units_name_predefined_celsius': None,
+    '5.4.1.2.units_name_predefined_coulomb': None,
+    '5.4.1.2.units_name_predefined_dimensionless': None,
+    '5.4.1.2.units_name_predefined_farad': None,
+    '5.4.1.2.units_name_predefined_gram': None,
+    '5.4.1.2.units_name_predefined_gray': None,
+    '5.4.1.2.units_name_predefined_henry': None,
+    '5.4.1.2.units_name_predefined_hertz': None,
+    '5.4.1.2.units_name_predefined_joule': None,
+    '5.4.1.2.units_name_predefined_katal': None,
+    '5.4.1.2.units_name_predefined_kelvin': None,
+    '5.4.1.2.units_name_predefined_kilogram': None,
+    '5.4.1.2.units_name_predefined_liter': None,
+    '5.4.1.2.units_name_predefined_litre': None,
+    '5.4.1.2.units_name_predefined_lumen': None,
+    '5.4.1.2.units_name_predefined_lux': None,
+    '5.4.1.2.units_name_predefined_meter': None,
+    '5.4.1.2.units_name_predefined_metre': None,
+    '5.4.1.2.units_name_predefined_mole': None,
+    '5.4.1.2.units_name_predefined_newton': None,
+    '5.4.1.2.units_name_predefined_ohm': None,
+    '5.4.1.2.units_name_predefined_pascal': None,
+    '5.4.1.2.units_name_predefined_radian': None,
+    '5.4.1.2.units_name_predefined_second': None,
+    '5.4.1.2.units_name_predefined_siemens': None,
+    '5.4.1.2.units_name_predefined_sievert': None,
+    '5.4.1.2.units_name_predefined_steradian': None,
+    '5.4.1.2.units_name_predefined_tesla': None,
+    '5.4.1.2.units_name_predefined_volt': None,
+    '5.4.1.2.units_name_predefined_watt': None,
+    '5.4.1.2.units_name_predefined_weber': None,
     # 5.4.1.2 Component units names cannot overlap with predefined ones
-    #'5.4.1.2.units_name_predefined_component_ampere':
+    '5.4.1.2.units_name_predefined_component_ampere': None,
     # 5.4.1.3 Units base_units attribute can only be yes or no
-    #'5.4.1.3.units_base_units_invalid':
+    '5.4.1.3.units_base_units_invalid':
+        'Invalid attribute base_units',
     # 5.4.2.1 A unit must have a units attribute
-    #'5.4.2.1.unit_units_missing':
+    '5.4.2.1.unit_units_missing':
+        'Element unit failed to validate attributes',
     # 5.4.2.1 A unit cannot have CellML children
     '5.4.2.1.unit_with_component':
         'Element unit has extra content: component',    
@@ -547,240 +553,270 @@ expected_errors = {
     '5.4.2.1.unit_with_variable_ref':
         'Element unit has extra content: variable_ref',    
     # 5.4.2.2 A unit must refer to an existing units
-    #'5.4.2.2.unit_units_invalid':
+    '5.4.2.2.unit_units_invalid': None,
     # 5.4.2.2 A unit cannot refer to itself directly or indirectly
-    #'5.4.2.2.unit_cycle_1':
-    #'5.4.2.2.unit_cycle_2':
-    #'5.4.2.2.unit_cycle_3':
+    '5.4.2.2.unit_cycle_1': None,
+    '5.4.2.2.unit_cycle_2': None,
+    '5.4.2.2.unit_cycle_3': None,
     # 5.4.2.3 Allowed values of the prefix attribute
-    #'5.4.2.3.unit_prefix_real':
-    #'5.4.2.3.unit_prefix_real_int':
-    #'5.4.2.3.unit_prefix_spaces':
-    #'5.4.2.3.unit_prefix_unknown':
+    '5.4.2.3.unit_prefix_real':
+        'Invalid attribute prefix',
+    '5.4.2.3.unit_prefix_real_int':
+        'Invalid attribute prefix',
+    '5.4.2.3.unit_prefix_spaces': None,
+    '5.4.2.3.unit_prefix_unknown':
+        'Invalid attribute prefix',
     # 5.4.2.4 A unit exponent must be a real number
-    #'5.4.2.4.unit_exponent_invalid':
+    '5.4.2.4.unit_exponent_invalid':
+        'Invalid attribute exponent',
     # 5.4.2.5 A unit multiplier must be a real number
-    #'5.4.2.5.unit_multiplier_invalid':
+    '5.4.2.5.unit_multiplier_invalid':
+        'Invalid attribute multiplier',
     # 5.4.2.6 A unit offset must be a real number
-    #'5.4.2.6.unit_offset_invalid':
+    '5.4.2.6.unit_offset_invalid':
+        'Invalid attribute offset',
     # 5.4.2.7: A unit with a non-zero offset must have exponent 1
-    #'5.4.2.7.unit_offset_and_exponent':
+    '5.4.2.7.unit_offset_and_exponent':
+        'Invalid attribute offset',
     # 5.4.2.7: A unit with an offset can't have siblings
-    #'5.4.2.7.unit_offset_and_siblings_1':
-    #'5.4.2.7.unit_offset_and_siblings_2':
+    '5.4.2.7.unit_offset_and_siblings_1':
+        'Extra element unit',
+    '5.4.2.7.unit_offset_and_siblings_2':
+        'Extra element unit',
     # 6.4.1.1 A group must have at least one component_ref
-    #'6.4.1.1.group_component_ref_missing':
+    '6.4.1.1.group_component_ref_missing_1':
+        'Element group failed to validate content',
+    '6.4.1.1.group_component_ref_missing_2':
+        'Element group failed to validate content',
     # 6.4.1.1 A group must have at least one relationship_ref
-    #'6.4.1.1.group_relationship_ref_missing':
+    '6.4.1.1.group_relationship_ref_missing_1':
+        'Expecting an element relationship_ref',
+    '6.4.1.1.group_relationship_ref_missing_2':
+        'Expecting an element relationship_ref',
     # 6.4.1.1 A group cannot be empty (extra test for missing comp_ref/rel_ref)
-    #'6.4.1.1.group_empty':
-    #'6.4.1.1.group_only_extensions':
+    '6.4.1.1.group_empty':
+        'Expecting an element relationship_ref',
+    '6.4.1.1.group_only_extensions':
+        'Expecting an element relationship_ref',   
     # 6.4.1.1 A group can only contain component_refs and relationship_refs
     '6.4.1.1.group_with_component':
-        'Element group has extra content: variable',    
+        'Element group has extra content: component',    
     '6.4.1.1.group_with_component_ref':
-        'Element group has extra content: variable',    
+        'Element group has extra content: component_ref',    
     '6.4.1.1.group_with_connection':
-        'Element group has extra content: variable',    
+        'Element group has extra content: connection',    
     '6.4.1.1.group_with_group':
-        'Element group has extra content: variable',    
+        'Element group has extra content: group',    
     '6.4.1.1.group_with_map_components':
-        'Element group has extra content: variable',    
+        'Element group has extra content: map_components',    
     '6.4.1.1.group_with_map_variables':
-        'Element group has extra content: variable',    
+        'Element group has extra content: map_variables',    
     '6.4.1.1.group_with_math':
-        'Element group has extra content: variable',    
+        'Element group has extra content: math',    
     '6.4.1.1.group_with_model':
-        'Element group has extra content: variable',    
+        'Element group has extra content: model',    
     '6.4.1.1.group_with_reaction':
-        'Element group has extra content: variable',    
+        'Element group has extra content: reaction',    
     '6.4.1.1.group_with_relationship_ref':
-        'Element group has extra content: variable',    
+        'Element group has extra content: relationship_ref',    
     '6.4.1.1.group_with_role':
-        'Element group has extra content: variable',    
+        'Element group has extra content: role',    
     '6.4.1.1.group_with_unit':
-        'Element group has extra content: variable',    
+        'Element group failed to validate content',    
     '6.4.1.1.group_with_units':
-        'Element group has extra content: variable',    
+        'Element group has extra content: units',    
     '6.4.1.1.group_with_variable_ref':
-        'Element group has extra content: variable',    
+        'Element group has extra content: variable_ref',    
     '6.4.1.1.group_with_variable':
         'Element group has extra content: variable',    
     # 6.4.2.1 A relationship_ref must define a relationship - although it can
     #         be either namespaceless, or in any extension namespace!
-    #'6.4.2.1.relationship_ref_relationship_missing':
+    '6.4.2.1.relationship_ref_relationship_missing':
+        'Element relationship_ref failed to validate',
     # 6.4.2.1 A relationship_ref cannot have any CellML children
     '6.4.2.1.relationship_ref_with_component':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: component',    
     '6.4.2.1.relationship_ref_with_component_ref':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: component_ref',    
     '6.4.2.1.relationship_ref_with_connection':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: connection',    
     '6.4.2.1.relationship_ref_with_group':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: group',    
     '6.4.2.1.relationship_ref_with_map_components':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: map_components',    
     '6.4.2.1.relationship_ref_with_map_variables':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: map_variables',    
     '6.4.2.1.relationship_ref_with_math':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: math',    
     '6.4.2.1.relationship_ref_with_model':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: model',    
     '6.4.2.1.relationship_ref_with_reaction':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: reaction',    
     '6.4.2.1.relationship_ref_with_relationship_ref':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: relationship_ref',    
     '6.4.2.1.relationship_ref_with_role':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: role',    
     '6.4.2.1.relationship_ref_with_unit':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: unit',    
     '6.4.2.1.relationship_ref_with_units':
-        'Element relationship_ref has extra content: variable',    
-    '6.4.2.1.relationship_ref_with_variable_ref':
-        'Element relationship_ref has extra content: variable',    
+        'Element relationship_ref has extra content: units',    
     '6.4.2.1.relationship_ref_with_variable':
         'Element relationship_ref has extra content: variable',    
+    '6.4.2.1.relationship_ref_with_variable_ref':
+        'Element relationship_ref has extra content: variable_ref',    
     # 6.4.2.2 When not in a namespace, a relationship_ref's relationship must
     # be either containment or encapsulation.
-    #'6.4.2.2.relationship_ref_relationship_invalid':
+    '6.4.2.2.relationship_ref_relationship_invalid':
+        'Element relationship_ref failed to validate content',
     # 6.4.2.3 A relationship_ref name must be a cellml identifier
-    #'6.4.2.3.relationship_ref_name_invalid':
+    '6.4.2.3.relationship_ref_name_invalid':
+        'Invalid attribute name for element relationship_ref',
     # 6.4.2.4 An encapsulation can not be named
-    #'6.4.2.4.relationship_ref_encapsulation_duplicate':
-    #'6.4.2.4.relationship_ref_encapsulation_named':
+    '6.4.2.4.relationship_ref_encapsulation_duplicate':
+        'Invalid attribute name for element relationship_ref',
+    '6.4.2.4.relationship_ref_encapsulation_named':
+        'Invalid attribute name for element relationship_ref',
     # 6.2.4.5 name/relationship pairs must be unique
-    #'6.4.2.5.relationship_ref_duplicate_named':
-    #'6.4.2.5.relationship_ref_duplicate_unnamed_1':
-    #'6.4.2.5.relationship_ref_duplicate_unnamed_2':
+    '6.4.2.5.relationship_ref_duplicate_named': None,
+    '6.4.2.5.relationship_ref_duplicate_unnamed_1': None,
+    '6.4.2.5.relationship_ref_duplicate_unnamed_2': None,
     # 6.4.3.1 A component_ref must define a component
-    #'6.4.3.1.component_ref_component_missing':
+    '6.4.3.1.component_ref_component_missing':
+        'Element component_ref failed to validate content',
     # 6.4.3.1 A component_ref can only contain a component_ref
     '6.4.3.1.component_ref_with_component':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: component',    
     '6.4.3.1.component_ref_with_connection':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: connection',    
     '6.4.3.1.component_ref_with_group':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: group',    
     '6.4.3.1.component_ref_with_map_components':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: map_components',    
     '6.4.3.1.component_ref_with_map_variables':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: map_variables',    
     '6.4.3.1.component_ref_with_math':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: math',    
     '6.4.3.1.component_ref_with_model':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: model',    
     '6.4.3.1.component_ref_with_reaction':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: reaction',    
     '6.4.3.1.component_ref_with_relationship_ref':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: relationship_ref',    
     '6.4.3.1.component_ref_with_role':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: role',    
     '6.4.3.1.component_ref_with_unit':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: unit',    
     '6.4.3.1.component_ref_with_units':
-        'Element component_ref has extra content: variable',    
-    '6.4.3.1.component_ref_with_variable_ref':
-        'Element component_ref has extra content: variable',    
+        'Element component_ref has extra content: units',    
     '6.4.3.1.component_ref_with_variable':
         'Element component_ref has extra content: variable',    
+    '6.4.3.1.component_ref_with_variable_ref':
+        'Element component_ref has extra content: variable_ref',    
     # 6.4.3.2 A component's children cannot be declared two places
-    #'6.4.3.2.component_ref_children_declared_twice_1':
-    #'6.4.3.2.component_ref_children_declared_twice_2':
-    #'6.4.3.2.component_ref_children_declared_twice_3':
+    '6.4.3.2.component_ref_children_declared_twice_1': None,
+    '6.4.3.2.component_ref_children_declared_twice_2': None,
+    '6.4.3.2.component_ref_children_declared_twice_3': None,
     # 6.4.3.3 A hierarchy cannot be circular
-    #'6.4.3.2.component_ref_cycle_1':
-    #'6.4.3.2.component_ref_cycle_2':
-    #'6.4.3.2.component_ref_cycle_3':
-    #'6.4.3.2.component_ref_cycle_4':
+    '6.4.3.2.component_ref_cycle_1': None,
+    '6.4.3.2.component_ref_cycle_2': None,
+    '6.4.3.2.component_ref_cycle_3': None,
+    '6.4.3.2.component_ref_cycle_4': None,
     # 6.4.3.2 A component cannot be named twice in a single hierarchy
-    #'6.4.3.2.component_ref_duplicate_child_1':
-    #'6.4.3.2.component_ref_duplicate_child_2':
+    '6.4.3.2.component_ref_duplicate_child_1': None,
+    '6.4.3.2.component_ref_duplicate_child_2': None,
     # 6.4.3.2 The first component_ref in a containment must have children
-    #'6.4.3.2.component_ref_no_children_containment':
+    '6.4.3.2.component_ref_no_children_containment': None,
     # 6.4.3.2 The first component_ref in an encapsulation must have children
-    #'6.4.3.2.component_ref_no_children_encapsulation':
+    '6.4.3.2.component_ref_no_children_encapsulation': None,
     # 6.4.3.2 Encapsulation relationships cannot overlap
-    #'6.4.3.2.component_ref_overlapping_encapsulation':
+    '6.4.3.2.component_ref_overlapping_encapsulation': None,
     # 6.4.3.3 A component attribute must be an identifier
-    #'6.4.3.3.component_ref_component_invalid':
+    '6.4.3.3.component_ref_component_invalid':
+        'Element component_ref failed to validate content',
     # 6.4.3.3 A component_ref must refer to an existing component
-    #'6.4.3.3.component_ref_component_nonexistent_1':
-    #'6.4.3.3.component_ref_component_nonexistent_2':
+    '6.4.3.3.component_ref_component_nonexistent_1': None,
+    '6.4.3.3.component_ref_component_nonexistent_2': None,
     # 7.4.1.1 A reaction must contain at least one variable_ref
-    #'7.4.1.1.reaction_variable_ref_missing':
+    '7.4.1.1.reaction_variable_ref_missing':
+        'Expecting an element variable_ref',
     # 7.4.1.1 A reaction can only contain a variable_ref
     '7.4.1.1.reaction_with_component':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: component',    
     '7.4.1.1.reaction_with_component_ref':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: component_ref',    
     '7.4.1.1.reaction_with_connection':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: connection',    
     '7.4.1.1.reaction_with_group':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: group',    
     '7.4.1.1.reaction_with_map_components':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: map_components',    
     '7.4.1.1.reaction_with_map_variables':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: map_variables',    
     '7.4.1.1.reaction_with_math':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: math',    
     '7.4.1.1.reaction_with_model':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: model',    
     '7.4.1.1.reaction_with_reaction':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: reaction',    
     '7.4.1.1.reaction_with_relationship_ref':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: relationship_ref',    
     '7.4.1.1.reaction_with_role':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: role',    
     '7.4.1.1.reaction_with_unit':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: unit',    
     '7.4.1.1.reaction_with_units':
-        'Element reaction has extra content: variable',    
+        'Element reaction has extra content: units',    
     '7.4.1.1.reaction_with_variable':
         'Element reaction has extra content: variable',    
     # 7.4.1.2 The reversible attribute can only be yes or no
-    #'7.4.1.2.reaction_reversible_invalid':
+    '7.4.1.2.reaction_reversible_invalid':
+        'Invalid attribute reversible for element reaction',
     # 7.4.1.3 A reaction in an encapsulating component cannot use
     # delta_variable attributes in its roles.
-    #'7.4.1.3.reaction_encapsulating_delta_variable':
+    '7.4.1.3.reaction_encapsulating_delta_variable':
+        'Invalid attribute delta_variable for element role',
     # 7.4.1.3 There's another rule about maths here that I don't understand
     # 7.4.2.1 A variable_ref must have at least one role
-    #'7.4.2.1.variable_ref_role_missing':
-    #'7.4.2.1.variable_ref_variable_missing':
+    '7.4.2.1.variable_ref_role_missing':
+        'Element variable_ref failed to validate content',
+    '7.4.2.1.variable_ref_variable_missing':
+        'Element variable_ref failed to validate content',
     # 7.4.2.1 A variable_ref can only contain a role
     '7.4.2.1.variable_ref_with_component_ref':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: component_ref',    
     '7.4.2.1.variable_ref_with_component':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: component',    
     '7.4.2.1.variable_ref_with_connection':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: connection',    
     '7.4.2.1.variable_ref_with_group':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: group',    
     '7.4.2.1.variable_ref_with_map_components':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: map_components',    
     '7.4.2.1.variable_ref_with_map_variables':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: map_variables',    
     '7.4.2.1.variable_ref_with_math':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: math',    
     '7.4.2.1.variable_ref_with_model':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: model',    
     '7.4.2.1.variable_ref_with_reaction':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: reaction',    
     '7.4.2.1.variable_ref_with_relationship_ref':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: relationship_ref',    
     '7.4.2.1.variable_ref_with_unit':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: unit',    
     '7.4.2.1.variable_ref_with_units':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: units',    
     '7.4.2.1.variable_ref_with_variable':
         'Element variable_ref has extra content: variable',    
     '7.4.2.1.variable_ref_with_variable_ref':
-        'Element variable_ref has extra content: variable',    
+        'Element variable_ref has extra content: variable_ref',    
     # 7.4.2.1 A variable_ref must refer to a local variable
-    #'7.4.2.2.variable_ref_variable_hidden':
-    #'7.4.2.2.variable_ref_variable_nonexistent':
-    #'7.4.2.2.variable_ref_variable_duplicate':
+    '7.4.2.2.variable_ref_variable_hidden': None,
+    '7.4.2.2.variable_ref_variable_nonexistent': None,
+    '7.4.2.2.variable_ref_variable_duplicate': None,
     # 7.4.3.1 A role must define a role attribute
-    #'7.4.3.1.role_role_missing':
+    '7.4.3.1.role_role_missing':
+        'Element role failed to validate attributes',
     # 7.4.3.1 A role cannot contain any CellML children (only math)
     '7.4.3.1.role_with_component':
         'Element role has extra content: component',
@@ -811,54 +847,75 @@ expected_errors = {
     '7.4.3.1.role_with_variable':
         'Element role has extra content: variable',
     # 7.4.3.2 A role must define a valid role attribute
-    #'7.4.3.2.role_role_invalid':
+    '7.4.3.2.role_role_invalid':
+        'Element role failed to validate attributes',
     # 7.4.3.3 A reaction can only have a single rate
-    #'7.4.3.3.reaction_multiple_rates':
+    '7.4.3.3.reaction_multiple_rates': None,
     # 7.4.3.3 A variable_ref with a rate can't have other roles
-    #'7.4.3.3.role_rate_with_multiple_roles':
+    '7.4.3.3.role_rate_with_multiple_roles':
+        'Extra element role',
     # 7.4.3.3 A role with attribute rate can't have a delta_variable attribute
-    #'7.4.3.3.role_rate_with_delta_variable':
+    '7.4.3.3.role_rate_with_delta_variable':
+        'Invalid attribute delta_variable',
     # 7.4.3.3 A role with attribute rate can't have a stoichiometry attribute
-    #'7.4.3.3.role_rate_with_stoichiometry':
+    '7.4.3.3.role_rate_with_stoichiometry':
+        'Element role failed to validate content',
     # 7.4.3.4 A direction can only be forward, reverse, or both
-    #'7.4.3.4.role_direction_invalid':
+    '7.4.3.4.role_direction_invalid':
+        'Invalid attribute direction',
     # 7.4.3.5 A direction in an irreversible reaction must be forward
-    #'7.4.3.5.role_direction_both_irreversible':
-    #'7.4.3.5.role_direction_reverse_irreversible':
+    '7.4.3.5.role_direction_both_irreversible': None,
+    '7.4.3.5.role_direction_reverse_irreversible': None,
     # 7.4.3.5 A rate must have direction forward
-    #'7.4.3.5.role_direction_both_rate':
-    #'7.4.3.5.role_direction_reverse_rate':
+    '7.4.3.5.role_direction_both_rate':
+        'Element role failed to validate content',
+    '7.4.3.5.role_direction_reverse_rate':
+        'Element role failed to validate content',
     # 7.4.3.5 A reactant must have direction forward
-    #'7.4.3.5.role_direction_both_reactant':
-    #'7.4.3.5.role_direction_reverse_reactant':
+    '7.4.3.5.role_direction_both_reactant':
+        'Invalid attribute direction for element role',
+    '7.4.3.5.role_direction_reverse_reactant':
+        'Invalid attribute direction for element role',
     # 7.4.3.5 A product must have direction forward
-    #'7.4.3.5.role_direction_both_product':
-    #'7.4.3.5.role_direction_reverse_product':
+    '7.4.3.5.role_direction_both_product':
+        'Invalid attribute direction',
+    '7.4.3.5.role_direction_reverse_product':
+        'Invalid attribute direction for element role',
     # 7.4.3.5 Each (role,direction) combination must be unique within a
     # variable_ref
-    #'7.4.3.5.role_direction_role_duplicate':
+    '7.4.3.5.role_direction_role_duplicate': None,
     # 7.4.3.6 Stoichiometry must be a real number
-    #'7.4.3.6.role_stoichiometry_invalid':
+    '7.4.3.6.role_stoichiometry_invalid':
+        'Invalid attribute delta_variable',
     # 7.4.3.7 The delta_variable must refer to a local variable
-    #'7.4.3.7.role_delta_variable_nonexistent_1':
-    #'7.4.3.7.role_delta_variable_nonexistent_2':
+    '7.4.3.7.role_delta_variable_nonexistent_1':
+        'Invalid attribute delta_variable',
+    '7.4.3.7.role_delta_variable_nonexistent_2':
+        'Invalid attribute delta_variable',
     # 7.4.3.7 The delta_variable must be unique component-wide
-    #'7.4.3.7.role_delta_variable_duplicate_1':
-    #'7.4.3.7.role_delta_variable_duplicate_2':
+    '7.4.3.7.role_delta_variable_duplicate_1':
+        'Invalid attribute delta_variable',
+    '7.4.3.7.role_delta_variable_duplicate_2':
+        'Invalid attribute delta_variable',
     # 7.4.3.8 A delta_variable can only appear on reactants or products
     # Note: rate is already checked in 7.4.3.3
-    #'7.4.3.8.role_delta_variable_activator':
-    #'7.4.3.8.role_delta_variable_catalyst':
-    #'7.4.3.8.role_delta_variable_inhibitor':
-    #'7.4.3.8.role_delta_variable_modifier':
+    '7.4.3.8.role_delta_variable_activator':
+        'Invalid attribute delta_variable',
+    '7.4.3.8.role_delta_variable_catalyst':
+        'Invalid attribute delta_variable',
+    '7.4.3.8.role_delta_variable_inhibitor':
+        'Invalid attribute delta_variable',
+    '7.4.3.8.role_delta_variable_modifier':
+        'Invalid attribute delta_variable',
     # 7.4.3.8 A delta_variable must have either a stoichiometry or math
-    #'7.4.3.8.role_delta_variable_without_rate_or_math':
+   '7.4.3.8.role_delta_variable_without_rate_or_math':
+        'Invalid attribute delta_variable',
     # 7.4.3.8 A delta_variable with a stoichiometry cannot have math
-    #'7.4.3.8.role_delta_variable_with_rate_and_math':
+    '7.4.3.8.role_delta_variable_with_rate_and_math': None,
     # 7.4.3.8 A delta_variable with a stoichiometry must have a rate
-    #'7.4.3.8.role_delta_variable_with_stoichiometry_no_rate':
+    '7.4.3.8.role_delta_variable_with_stoichiometry_no_rate': None,
     # 7.4.3.9 The math in a role must be relevant to the variable_ref
-    #'7.4.3.9.role_math_not_relevant':
+    '7.4.3.9.role_math_not_relevant': None,
     # 8.4.1 Cmeta id's are unique
     '8.4.1.cmeta_id_duplicate':
         'Invalid attribute id for element component_ref',
@@ -921,7 +978,8 @@ def list_passes():
     files += list_models('unit_conversion_convertible')
     files += list_models('unit_conversion_inconvertible')
 
-    return []
+    files.sort()
+    
     return files
 
 
@@ -954,7 +1012,6 @@ def test_valid_model(name, path, parser, relaxng, log):
         # Log error
         e = relaxng.error_log[0]
         error = e.message
-        log.info('Error on line ' + str(e.line) + ': ' + error)
 
         # Check if we were expecting to fail
         if expected is None:
@@ -979,7 +1036,7 @@ def list_fails():
     """
     Returns a list of ``pytest.param`` objects for models that should fail.
     """
-    return list_models('invalid')[160:200]
+    return list_models('invalid')
 
 
 @pytest.mark.parametrize(('name', 'path'), list_fails())
@@ -995,7 +1052,7 @@ def test_invalid_model(name, path, parser, relaxng, log):
 
         # Log detected error
         errors = [str(e)]
-        log.info('Error during parsing: ' + errors[0])
+        log.error('Error during parsing: ' + errors[0])
         valid = False
 
     else:
@@ -1012,7 +1069,6 @@ def test_invalid_model(name, path, parser, relaxng, log):
             # Log detected error
             errors = [e.message for e in relaxng.error_log]
             e = relaxng.error_log[0]
-            log.info('Error on line ' + str(e.line) + ': ' + e.message)
 
     # Test correct error was raised
     expected = expected_errors.get(name, '')
@@ -1020,7 +1076,6 @@ def test_invalid_model(name, path, parser, relaxng, log):
         expected = 'No expected error set'
     if expected is None:
         expected = 'Expected xfail, but found other error instead'
-    log.info('Expected error: ' + expected)
     r = re.compile(re.escape(expected))
     for e in errors:
         if r.search(e) is not None:
@@ -1030,6 +1085,7 @@ def test_invalid_model(name, path, parser, relaxng, log):
         log.error('Expected: ' + expected)
     else:
         log.error('Unexpected error in ' + name)
+        log.error('Expected: ' + expected)
         for e in errors:
             log.error('Returned: ' + e)
     pytest.fail()

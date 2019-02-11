@@ -20,6 +20,8 @@
     </math>
   </component>
   <component name="B">
-    <units name="wooster" />
+    <units name="wooster">
+      <unit units="volt" />
+    </units>
   </component>
 </model>

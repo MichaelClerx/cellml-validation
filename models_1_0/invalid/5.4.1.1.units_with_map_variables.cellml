@@ -3,6 +3,7 @@
 <model name="units_with_map_variables"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="wooster">
+    <unit units="volt" />
     <map_variables variable_1="x" variable_2="y" />
   </units>
   <component name="A">

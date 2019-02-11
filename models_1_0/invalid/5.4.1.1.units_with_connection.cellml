@@ -9,6 +9,7 @@
     <variable name="a" units="volt" public_interface="in" />
   </component>
   <units name="wooster">
+    <unit units="volt" />
     <connection>
       <map_components component_1="A" component_2="B" />
       <map_variables variable_1="a" variable_2="a" />

@@ -3,6 +3,7 @@
 <model name="units_with_relationship_ref"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="wooster">
+    <unit units="volt" />
     <relationship_ref relationship="encapsulation" />
   </units>
 </model>
