@@ -47,6 +47,11 @@ The CellML spec says:
   - _`<unit>` elements in the CellML namespace,_
   - _`<RDF>` elements in the RDF namespace._
 
+It is unclear from this text if a `<units>` with `base_units="no"` is required to have any `<unit>` elements.
+However, (1) it is certain that `RDF` elements are not required, so presumably neither are `unit` elements, and (2) the CellML 2.0 spec explicitly allows empty `<units>` elements.
+
+However, the spec does not say what an empty units _means_ (presumably dimensionless).
+
 
 ## Booleans
 
