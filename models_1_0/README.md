@@ -52,6 +52,8 @@ However, (1) it is certain that `RDF` elements are not required, so presumably n
 
 However, the spec does not say what an empty units _means_ (presumably dimensionless).
 
+In the test sets, there are two _valid_ files with empty units elements, but all other files avoid having empty unitses.
+
 
 ## Booleans
 
