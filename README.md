@@ -22,7 +22,7 @@ Disclaimers:
 * [The CellML 1.0 test set](models_1_0)
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
 * [CellML 1.0 DTD](cellml_1_0/cellml_1_0.dtd) - based on the version by Warren Hedley
-* [CellML 1.0 RELAX NG schema (XML syntax)(cellml_1_0/cellml_1_0.rng) translated from the compact version by Jonathan Cooper
+* [CellML 1.0 RELAX NG schema (XML syntax)](cellml_1_0/cellml_1_0.rng) translated from the compact version by Jonathan Cooper
 * [CellML 1.0 RELAX NG schema (compact syntax)](cellml_1_0/cellml_1_0.rnc) written by Jonathan Cooper
 
 * Older files:
