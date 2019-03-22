@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML 1.0, 5.4.2.2: A unit can reference local units -->
-<model name="unit_units_local"
+<model name="unit_units_local_1"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="wooster">
     <unit units="volt" />
@@ -9,12 +9,12 @@
     <unit units="wooster" prefix="mega" />
   </units>
   <component name="A">
+    <units name="fluther">
+      <unit units="second" />
+    </units>
     <units name="milliwooster_per_fluther">
       <unit units="wooster" prefix="milli" />
       <unit units="fluther" exponent="-1" />
-    </units>
-    <units name="fluther">
-      <unit units="second" />
     </units>
   </component>
 </model>
