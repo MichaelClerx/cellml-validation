@@ -64,7 +64,6 @@ def list_fails_1_0():
     return list_models_1_0('invalid')
 
 
-
 def assert_valid(name, path, parser, validator, false_negatives, log):
     """
     Tries validating a valid file, and tests if the results are expected.

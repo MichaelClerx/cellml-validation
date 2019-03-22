@@ -741,7 +741,7 @@ expected_messages = {
     '7.4.3.8.role_delta_variable_modifier':
         'Invalid attribute delta_variable',
     # 7.4.3.8 A delta_variable must have either a stoichiometry or math
-   '7.4.3.8.role_delta_variable_without_rate_or_math':
+    '7.4.3.8.role_delta_variable_without_rate_or_math':
         'Invalid attribute delta_variable',
     # 8.4.1 Cmeta id's are unique
     '8.4.1.cmeta_id_duplicate':
