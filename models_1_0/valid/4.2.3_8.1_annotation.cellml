@@ -13,7 +13,7 @@ MathML can be wrapped in a <semantics> element, that defines non-xml <annotation
           <ci>a</ci>
           <cn cellml:units="volt">-0.085</cn>
         </apply>
-        <annotation encoding="latex">
+        <annotation encoding="application/x-tex">
           a = -0.085
         </annotation>
       </semantics>

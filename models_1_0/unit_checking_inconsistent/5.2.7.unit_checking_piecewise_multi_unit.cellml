@@ -20,7 +20,7 @@
             </apply>
           </piece>
           <piece>
-            <cn cellml:units="ampera">456</cn>
+            <cn cellml:units="ampere">456</cn>
             <apply>
               <eq />
               <ci>x</ci>
@@ -28,7 +28,7 @@
             </apply>
           </piece>
           <otherwise>
-            <cn cellml:units="newton">0s</cn>
+            <cn cellml:units="newton">0</cn>
           </otherwise>
         </piecewise>
       </apply>

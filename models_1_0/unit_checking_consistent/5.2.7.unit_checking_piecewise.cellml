@@ -28,7 +28,7 @@
             </apply>
           </piece>
           <otherwise>
-            <cn cellml:units="volt">0s</cn>
+            <cn cellml:units="volt">0</cn>
           </otherwise>
         </piecewise>
       </apply>

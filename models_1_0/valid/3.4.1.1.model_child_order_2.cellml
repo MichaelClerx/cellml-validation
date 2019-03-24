@@ -33,7 +33,7 @@
     <unit units="dimensionless" />
   </units>
   <group>
-    <relationship_ref relationship="encapsulation" />
+    <relationship_ref relationship="containment" />
     <component_ref component="B">
       <component_ref component="C" />
     </component_ref>

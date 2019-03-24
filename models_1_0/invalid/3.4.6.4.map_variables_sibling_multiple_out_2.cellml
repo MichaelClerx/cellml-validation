@@ -12,11 +12,11 @@
     <variable name="a" units="newton" public_interface="in" />
   </component>
   <connection>
-    <map_components component_1="A" component_2="B" />
+    <map_components component_1="A" component_2="C" />
     <map_variables variable_1="a" variable_2="a" />
   </connection>
   <connection>
-    <map_components component_1="A" component_2="C" />
+    <map_components component_1="B" component_2="C" />
     <map_variables variable_1="a" variable_2="a" />
   </connection>
 </model>

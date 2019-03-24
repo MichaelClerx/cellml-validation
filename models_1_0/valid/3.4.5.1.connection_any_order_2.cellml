@@ -4,8 +4,8 @@
        xmlns="http://www.cellml.org/cellml/1.0#">
   <connection>
     <map_components component_2="A" component_1="B" />
-    <map_variables variable_2="a" variable_1="b" />
-    <map_variables variable_2="c" variable_1="d" />
+    <map_variables variable_2="a" variable_1="c" />
+    <map_variables variable_2="b" variable_1="d" />
   </connection>
   <component name="A">
     <variable name="a" units="dimensionless" public_interface="out" />

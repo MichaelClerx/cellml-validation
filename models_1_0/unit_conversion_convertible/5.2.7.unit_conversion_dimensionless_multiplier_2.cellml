@@ -3,10 +3,10 @@
 <model name="unit_conversion_dimensionless_multiplier_2"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="millivolt">
-    <unit units="volt" multiplier="milli" />
+    <unit units="volt" prefix="milli" />
   </units>
   <units name="kilovolt">
-    <unit units="volt" multiplier="kilo" />
+    <unit units="volt" prefix="kilo" />
   </units>
   <units name="mV_per_kV">
     <unit units="millivolt" />

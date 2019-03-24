@@ -18,6 +18,7 @@
     <relationship_ref relationship="encapsulation" />
     <component_ref component="A">
       <component_ref component="B" />
+      <component_ref component="C" />
     </component_ref>
   </group>
   <connection>

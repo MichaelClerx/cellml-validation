@@ -12,6 +12,7 @@ Basic functions: power, root (degree), exp, ln, log (logbase) -->
     <variable name="ln" units="dimensionless" />
     <variable name="log" units="dimensionless" />
     <variable name="log_with_logbase" units="dimensionless" />
+    <variable name="log_with_logbase_10" units="dimensionless" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>

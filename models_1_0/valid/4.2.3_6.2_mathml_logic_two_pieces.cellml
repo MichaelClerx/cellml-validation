@@ -29,7 +29,7 @@ Piecewise value: piecewise, piece, otherwise and eq -->
             </apply>
           </piece>
           <otherwise>
-            <cn cellml:units="dimensionless">0s</cn>
+            <cn cellml:units="dimensionless">0</cn>
           </otherwise>
         </piecewise>
       </apply>
