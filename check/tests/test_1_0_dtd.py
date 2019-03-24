@@ -633,7 +633,7 @@ known_issues = {
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty',
     '2.4.1.identifier_only_underscore',
-    '2.4.1.identifier_unexpected_character',
+    '2.4.1.identifier_unexpected_character_1',
     '2.4.1.identifier_unexpected_character_2',
     '2.4.1.identifier_unexpected_character_unicode',
     # 2.5.1 Identifiers are case sensitive

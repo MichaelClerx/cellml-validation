@@ -47,7 +47,7 @@ expected_messages = {
         "not a valid value of the atomic type 'cellml:identifier'",
     '2.4.1.identifier_only_underscore':
         "not a valid value of the atomic type 'cellml:identifier'",
-    '2.4.1.identifier_unexpected_character':
+    '2.4.1.identifier_unexpected_character_1':
         "not a valid value of the atomic type 'cellml:identifier'",
     '2.4.1.identifier_unexpected_character_2':
         "not a valid value of the atomic type 'cellml:identifier'",

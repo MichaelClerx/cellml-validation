@@ -56,7 +56,7 @@ expected_messages = {
         'Element component failed to validate',
     '2.4.1.identifier_only_underscore':
         'Element component failed to validate',
-    '2.4.1.identifier_unexpected_character':
+    '2.4.1.identifier_unexpected_character_1':
         'Element component failed to validate',
     '2.4.1.identifier_unexpected_character_2':
         'Element component failed to validate',
