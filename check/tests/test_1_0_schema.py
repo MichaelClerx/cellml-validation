@@ -325,6 +325,9 @@ expected_messages = {
         "cake': This element is not expected.",
     '4.4.1.math_not_math_reaction':
         "cake': This element is not expected.",
+    # 5.2.2 CellML prefers "deka" over "deca"
+    '5.2.2.unit_deca':
+        "'deca' is not a valid value of the union type 'cellml:unit_prefix'",
     # 5.4.1.1 Unitses must have a name
     '5.4.1.1.units_name_missing':
         "Element 'cellml:units': The attribute 'name' is required",

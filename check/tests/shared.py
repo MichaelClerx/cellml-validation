@@ -69,6 +69,9 @@ def list_fails_1_0(debug=False):
     """
     files = list_models_1_0('invalid')
 
+    # Deca- is an official prefix, but CellML prefers deka-
+    files += list_models_1_0('unit_deca')
+
     if debug:
         return files[:1]
     return files

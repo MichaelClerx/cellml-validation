@@ -354,6 +354,9 @@ expected_messages = {
     # 4.4.3.1 A cn must have a cellml:units
     '4.4.3.1.cn_units_missing':
         'Element math',
+    # 5.2.2 CellML prefers "deka" to "deca"
+    '5.2.2.unit_deca':
+        'Invalid attribute prefix for element unit',
     # 5.4.1.1 Unitses must have a name
     '5.4.1.1.units_name_missing':
         'Element units failed to validate content',
