@@ -33,10 +33,12 @@ def list_models_1_0(subdir):
     return files
 
 
-def list_passes_1_0():
+def list_passes_1_0(debug=False):
     """
     Returns a list of ``pytest.param`` objects for CellML 1.0 models that
     should pass validation.
+
+    If ``debug=False`` is set, only a single model is returned.
     """
     # Valid models
     files = list_models_1_0('valid')
@@ -53,15 +55,23 @@ def list_passes_1_0():
     files += list_models_1_0('unit_conversion_convertible')
     files += list_models_1_0('unit_conversion_inconvertible')
 
+    if debug:
+        return files[:1]
     return files
 
 
-def list_fails_1_0():
+def list_fails_1_0(debug=False):
     """
     Returns a list of ``pytest.param`` objects for CellML 1.0 models that
     should fail validation.
+
+    If ``debug=False`` is set, only a single model is returned.
     """
-    return list_models_1_0('invalid')
+    files = list_models_1_0('invalid')
+
+    if debug:
+        return files[:1]
+    return files
 
 
 def assert_valid(name, path, parser, validator, false_negatives, log):
