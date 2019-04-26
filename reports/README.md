@@ -10,5 +10,5 @@ Some care needs to be taken when interpreting these results, as (1) many tools d
 ## CellML 1.0
 
 - [DTD validation](dtd_1_0.md)
-- [RelaxNG validation](relaxng_1_0.md)
 - [Schema validation](schema_1_0.md)
+- [RelaxNG validation](relaxng_1_0.md)
