@@ -156,7 +156,8 @@ class Report(object):
                 invalid_failed_incorrectly += 1
                 b.append(ebad1 + name +
                          'Invalid file failed validation for wrong reason')
-                b.append(pre1 + 'Expected: ' + r.expected)
+                if r.expected:
+                    b.append(pre1 + 'Expected: ' + r.expected)
                 b.append(pre1 + 'Returned: ')
                 for line in r.message.splitlines():
                     b.append(pre2 + line)
@@ -178,7 +179,7 @@ class Report(object):
             invalid_passed + invalid_failed + invalid_failed_incorrectly)
         total = valid_total + invalid_total
         correct = valid_passed + invalid_failed
-        percent_correct = int(100 * correct / total)
+        percent_correct = int(100 * correct / total) if total else 0
 
         # Update header
         h.append('Performance:')
