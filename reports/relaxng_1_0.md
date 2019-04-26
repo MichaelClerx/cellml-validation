@@ -1,6 +1,7 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
+* 81% according to spec (625 out of 763)
 * 312 out of 316 valid files passed
 * 313 out of 447 invalid files detected
 

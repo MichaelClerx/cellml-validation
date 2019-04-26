@@ -172,11 +172,19 @@ class Report(object):
             for test in sorted(extra):
                 b.append(ebad2 + '`' + name + '`')
 
-        # Update header
+        # Calculate scores
         valid_total = valid_passed + valid_failed
         invalid_total = (
             invalid_passed + invalid_failed + invalid_failed_incorrectly)
+        total = valid_total + invalid_total
+        correct = valid_passed + invalid_failed
+        percent_correct = int(100 * correct / total)
+
+        # Update header
         h.append('Performance:')
+        h.append(
+            '* ' + str(percent_correct) + '% according to spec ('
+            + str(correct) + ' out of ' + str(total) + ')')
         h.append(
             '* ' + str(valid_passed) + ' out of ' + str(valid_total)
             + ' valid files passed')
