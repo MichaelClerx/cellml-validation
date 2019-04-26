@@ -127,11 +127,12 @@ def assert_valid(report, name, path, parser, validator, false_negatives, log):
 
     else:
         # Report valid failed
-        long_msg = []
+        lmsg = []
         for e in validator.error_log:
             msg = r1_0.sub('cellml:', e.message)
-            long_msg.append('Error on line ' + str(e.line) + ': ' + msg)
-        report.valid_failed(name, path, '\n'.join(long_msg))
+            lmsg.append('Error on line ' + str(e.line) + ': ' + msg)
+        lmsg = '\n'.join(lmsg)
+        report.valid_failed(name, path, lmsg)
 
         # Check for unexpected fails
         if expected_error is None:
