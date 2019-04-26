@@ -42,3 +42,8 @@ To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-lev
 
 To validate a single file, use e.g. `$ python -m check schema_1_0 models_1_0/valid/empty-model.cellml`.
 
+
+## Reports
+
+Reports can be generated of which test files pass and fail with different validation tools.
+A list of pre-rendered reports [can be viewed here](reports/README.md).
