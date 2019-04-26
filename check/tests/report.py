@@ -4,8 +4,7 @@
 from __future__ import absolute_import, division
 from __future__ import print_function, unicode_literals
 
-#import logging
-#import os
+import os
 
 from . import shared
 
@@ -23,43 +22,44 @@ class Report(object):
     def _list_all_tests(self):
         raise NotImplementedError()
 
-    def valid_passed(self, test):
+    def valid_passed(self, name, path):
         """ Report that a valid file passed validation. """
-        test = str(test)
-        if test in self._results:
-            raise Exception('Duplicate test result for: ' + test)
-        self._results[test] = ValidPassed(test)
+        name = str(name)
+        if name in self._results:
+            raise Exception('Duplicate test result for: ' + name)
+        self._results[name] = ValidPassed(name, path)
 
-    def valid_failed(self, test, message):
+    def valid_failed(self, name, path, message):
         """ Report that a valid file failed to pass validation. """
-        test = str(test)
-        if test in self._results:
-            raise Exception('Duplicate test result for: ' + test)
-        self._results[test] = ValidFailed(test, message)
+        name = str(name)
+        if name in self._results:
+            raise Exception('Duplicate test result for: ' + name)
+        self._results[name] = ValidFailed(name, path, message)
 
-    def invalid_passed(self, test, expected):
+    def invalid_passed(self, name, path, expected):
         """ Report that an invalid file passed validation. """
-        test = str(test)
-        if test in self._results:
-            raise Exception('Duplicate test result for: ' + test)
-        self._results[test] = InvalidPassed(test, expected)
+        name = str(name)
+        if name in self._results:
+            raise Exception('Duplicate test result for: ' + name)
+        self._results[name] = InvalidPassed(name, path, expected)
 
-    def invalid_failed(self, test, expected, message):
+    def invalid_failed(self, name, path, expected, message):
         """ Report that the error in an invalid file was detected. """
-        test = str(test)
-        if test in self._results:
-            raise Exception('Duplicate test result for: ' + test)
-        self._results[test] = InvalidFailed(test, message, expected)
+        name = str(name)
+        if name in self._results:
+            raise Exception('Duplicate test result for: ' + name)
+        self._results[name] = InvalidFailed(name, path, message, expected)
 
-    def invalid_failed_incorrectly(self, test, expected, message):
+    def invalid_failed_incorrectly(self, name, path, expected, message):
         """
         Report that an invalid file failed validation, but for the wrong
         reasons.
         """
-        test = str(test)
-        if test in self._results:
-            raise Exception('Duplicate test result for: ' + test)
-        self._results[test] = InvalidFailedIncorrectly(test, message, expected)
+        name = str(name)
+        if name in self._results:
+            raise Exception('Duplicate test result for: ' + name)
+        self._results[name] = InvalidFailedIncorrectly(
+            name, path, message, expected)
 
     def render(self, path):
         """
@@ -121,9 +121,16 @@ class Report(object):
                 b.append('#' * header + ' ' + '.'.join([str(x) for x in code]))
                 b.append(e)
 
-            # Show result
+            # Get path to test file
             r = self._results.get(test, None)
-            name = '`' + test + '`: '
+            if r:
+                rpath = os.path.relpath(r.path, os.path.basename(path))
+                name = '[' + test + '](' + rpath + ')'
+            else:
+                name = '`' + test + '`'
+            name += ': '
+
+            # Show result
             if isinstance(r, ValidPassed):
                 valid_passed += 1
                 b.append(name + 'Valid file passed OK')
@@ -163,7 +170,7 @@ class Report(object):
         if extra:
             b.append('# Unknown tests found')
             for test in sorted(extra):
-                b.append(ebad2 + '`' + test + '`')
+                b.append(ebad2 + '`' + name + '`')
 
         # Update header
         valid_total = valid_passed + valid_failed
@@ -217,37 +224,38 @@ class Report_1_0(Report):
 
 
 class Result(object):
-    def __init__(self, test):
-        self._test = test
+    def __init__(self, name, path):
+        self.name = str(name)
+        self.path = str(path)
 
 
 class ValidPassed(Result):
-    def __init__(self, test):
-        super(ValidPassed, self).__init__(test)
+    def __init__(self, name, path):
+        super(ValidPassed, self).__init__(name, path)
 
 
 class ValidFailed(Result):
-    def __init__(self, test, message):
-        super(ValidFailed, self).__init__(test)
+    def __init__(self, name, path, message):
+        super(ValidFailed, self).__init__(name, path)
         self.message = str(message)
 
 
 class InvalidPassed(Result):
-    def __init__(self, test, expected):
-        super(InvalidPassed, self).__init__(test)
+    def __init__(self, name, path, expected):
+        super(InvalidPassed, self).__init__(name, path)
         self.expected = str(expected) if expected else None
 
 
 class InvalidFailed(Result):
-    def __init__(self, test, message, expected):
-        super(InvalidFailed, self).__init__(test)
+    def __init__(self, name, path, message, expected):
+        super(InvalidFailed, self).__init__(name, path)
         self.message = str(message)
         self.expected = str(expected)
 
 
 class InvalidFailedIncorrectly(Result):
-    def __init__(self, test, message, expected):
-        super(InvalidFailedIncorrectly, self).__init__(test)
+    def __init__(self, name, path, message, expected):
+        super(InvalidFailedIncorrectly, self).__init__(name, path)
         self.message = str(message)
         self.expected = str(expected)
 

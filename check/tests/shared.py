@@ -115,7 +115,7 @@ def assert_valid(report, name, path, parser, validator, false_negatives, log):
 
     if valid:
         # Report valid passed
-        report.valid_passed(name)
+        report.valid_passed(name, path)
 
         # Let the user know if a listed false negative is actually handled
         # correctly
@@ -131,7 +131,7 @@ def assert_valid(report, name, path, parser, validator, false_negatives, log):
         for e in validator.error_log:
             msg = r1_0.sub('cellml:', e.message)
             long_msg.append('Error on line ' + str(e.line) + ': ' + msg)
-        report.valid_failed(name, '\n'.join(long_msg))
+        report.valid_failed(name, path, '\n'.join(long_msg))
 
         # Check for unexpected fails
         if expected_error is None:
@@ -205,11 +205,11 @@ def assert_invalid(
         # Check if we expected this parsing problem (pass!)
         msg = str(e)
         if (expected_error is not None) and expected_error in msg:
-            report.invalid_failed(name, expected_error, msg)
+            report.invalid_failed(name, path, expected_error, msg)
             return
 
         # Report unexpected parsing problem
-        report.invalid_failed_incorrectly(name, expected_error, msg)
+        report.invalid_failed_incorrectly(name, path, expected_error, msg)
         log.error('Unexpected parse error in ' + name)
         log.error(msg)
         pytest.fail()
@@ -219,7 +219,7 @@ def assert_invalid(
     valid = validator.validate(xml)
 
     if valid:
-        report.invalid_passed(name, expected_error)
+        report.invalid_passed(name, path, expected_error)
 
         # Check if this was expected
         if expected_issue:
@@ -267,9 +267,10 @@ def assert_invalid(
 
             # Check if test OK
             if expected_found:
-                report.invalid_failed(name, expected_error, lmsg)
+                report.invalid_failed(name, path, expected_error, lmsg)
             else:
-                report.invalid_failed_incorrectly(name, expected_error, lmsg)
+                report.invalid_failed_incorrectly(
+                    name, path, expected_error, lmsg)
 
                 if expected_issue:
                     pytest.xfail()
