@@ -16,3 +16,7 @@ Percentages shown are for the number of test files that were classified correctl
 - [DTD validation](dtd_1_0.md) (69%)
 - [Schema validation](schema_1_0.md) (77%)
 - [RelaxNG validation](relaxng_1_0.md) (81%)
+
+External tools (tests for these are located in branches)
+
+- [OpenCOR / CellML API](opencor_1_0.md) (89%)
