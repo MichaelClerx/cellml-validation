@@ -11,6 +11,7 @@ from lxml import etree
 
 import check
 from . import shared
+from .report import Report_1_0 as Report
 
 
 # Known instances where the RelaxNG schema says a valid file is invalid
@@ -951,13 +952,27 @@ def validator(parser):
     return etree.RelaxNG(etree.parse(filename, parser))
 
 
-@pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
-def test_valid_model(name, path, parser, validator, log):
-    shared.assert_valid(name, path, parser, validator, false_negatives, log)
+class TestRelaxNG(object):
+    """ Tests the RelaxNG validation. """
+    @classmethod
+    def setup_class(cls):
+        cls._report = Report('RelaxNG Validation - CellML 1.0')
 
+    @classmethod
+    def teardown_class(cls):
+        cls._report.render(
+            os.path.join(check.REPORT_DIR, 'relaxng_1_0.md'))
 
-@pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
-def test_invalid_model(name, path, parser, validator, log):
-    shared.assert_invalid(
-        name, path, parser, validator, expected_messages, known_issues, log)
+    @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
+    def test_valid_model(self, name, path, parser, validator, log):
+        shared.assert_valid(
+            self._report, name, path, parser, validator, false_negatives, log,
+        )
+
+    @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
+    def test_invalid_model(self, name, path, parser, validator, log):
+        shared.assert_invalid(
+            self._report, name, path, parser, validator, expected_messages,
+            known_issues, log,
+        )
 

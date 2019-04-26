@@ -36,6 +36,9 @@ MODELS_1_0_DIR = os.path.join(MODEL_ROOT, 'models_1_0')
 MODELS_1_1_DIR = os.path.join(MODEL_ROOT, 'models_1_1')
 MODELS_2_0_DIR = os.path.join(MODEL_ROOT, 'models_2_0')
 
+# Reports
+REPORT_DIR = os.path.abspath(os.path.join(MODULE_DIR, '..', 'reports'))
+
 del(os)
 
 

@@ -77,7 +77,7 @@ def list_fails_1_0(debug=False):
     return files
 
 
-def assert_valid(name, path, parser, validator, false_negatives, log):
+def assert_valid(report, name, path, parser, validator, false_negatives, log):
     """
     Tries validating a valid file, and tests if the results are expected.
 
@@ -114,6 +114,8 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
     valid = validator.validate(xml)
 
     if valid:
+        # Report valid passed
+        report.valid_passed(name)
 
         # Let the user know if a listed false negative is actually handled
         # correctly
@@ -124,6 +126,12 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
             pytest.xpass()
 
     else:
+        # Report valid failed
+        long_msg = []
+        for e in validator.error_log:
+            msg = r1_0.sub('cellml:', e.message)
+            long_msg.append('Error on line ' + str(e.line) + ': ' + msg)
+        report.valid_failed(name, '\n'.join(long_msg))
 
         # Check for unexpected fails
         if expected_error is None:
@@ -134,7 +142,6 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
             pytest.fail()
 
         else:
-
             # Scan logged errors for expected error
             expected_found = False
             for e in validator.error_log:
@@ -155,7 +162,8 @@ def assert_valid(name, path, parser, validator, false_negatives, log):
 
 
 def assert_invalid(
-        name, path, parser, validator, expected_messages, known_issues, log):
+        report, name, path, parser, validator, expected_messages, known_issues,
+        log):
     """
     Tries validating an invalid file, and tests if the results are expected.
 
@@ -195,13 +203,15 @@ def assert_invalid(
     except etree.XMLSyntaxError as e:
 
         # Check if we expected this parsing problem (pass!)
-        e = str(e)
-        if (expected_error is not None) and expected_error in e:
+        msg = str(e)
+        if (expected_error is not None) and expected_error in msg:
+            report.invalid_failed(name, expected_error, msg)
             return
 
         # Report unexpected parsing problem
+        report.invalid_failed_incorrectly(name, expected_error, msg)
         log.error('Unexpected parse error in ' + name)
-        log.error(e)
+        log.error(msg)
         pytest.fail()
         return
 
@@ -209,11 +219,11 @@ def assert_invalid(
     valid = validator.validate(xml)
 
     if valid:
+        report.invalid_passed(name, expected_error)
 
         # Check if this was expected
         if expected_issue:
             pytest.xfail()
-
         else:
             # Unexpected pass
             log.error('Unexpected pass in ' + name)
@@ -227,15 +237,16 @@ def assert_invalid(
 
         # Check if expected error set
         if expected_error is None:
-            if expected_issue:
-                pytest.xfail()
-            else:
-                log.error('Unexpected error in ' + name)
-                for e in validator.error_log:
-                    msg = r1_0.sub('cellml:', e.message)
-                    log.error('Error on line ' + str(e.line) + ': ' + msg)
-                log.error('No expected error set')
-                pytest.fail()
+
+            # Expected error not set: Test designer needs to update tests.
+            # Don't report: don't know what the outcome should be!
+            log.error('Unknown error in invalid file: ' + name)
+            log.error('Found this error:')
+            for e in validator.error_log:
+                msg = r1_0.sub('cellml:', e.message)
+                log.error('Error on line ' + str(e.line) + ': ' + msg)
+            log.error('But no expected error set, please update test file.')
+            pytest.fail()
 
         else:
 
@@ -247,7 +258,19 @@ def assert_invalid(
                     expected_found = True
                     break
 
-            if not expected_found:
+            # Compose multi-line error message
+            lmsg = []
+            for e in validator.error_log:
+                msg = r1_0.sub('cellml:', e.message)
+                lmsg.append('Error on line ' + str(e.line) + ': ' + msg)
+            lmsg = '\n'.join(lmsg)
+
+            # Check if test OK
+            if expected_found:
+                report.invalid_failed(name, expected_error, lmsg)
+            else:
+                report.invalid_failed_incorrectly(name, expected_error, lmsg)
+
                 if expected_issue:
                     pytest.xfail()
                 else:

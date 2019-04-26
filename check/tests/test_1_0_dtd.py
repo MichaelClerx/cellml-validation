@@ -5,11 +5,13 @@ from __future__ import absolute_import, division
 from __future__ import print_function, unicode_literals
 
 import logging
+import os
 import pytest
 from lxml import etree
 
 import check
 from . import shared
+from .report import Report_1_0 as Report
 
 
 # Known instances where the DTD says a valid file is invalid
@@ -912,13 +914,26 @@ def validator():
     return etree.DTD(check.cellml_1_0('cellml_1_0.dtd'))
 
 
-@pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
-def test_valid_model(name, path, parser, validator, log):
-    shared.assert_valid(name, path, parser, validator, false_negatives, log)
+class TestDTD(object):
+    """ Tests the DTD validation. """
 
+    @classmethod
+    def setup_class(cls):
+        cls._report = Report('DTD Validation - CellML 1.0')
 
-@pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
-def test_invalid_model(name, path, parser, validator, log):
-    shared.assert_invalid(
-        name, path, parser, validator, expected_messages, known_issues, log)
+    @classmethod
+    def teardown_class(cls):
+        cls._report.render(
+            os.path.join(check.REPORT_DIR, 'dtd_1_0.md'))
+
+    @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
+    def test_valid_model(self, name, path, parser, validator, log):
+        shared.assert_valid(
+            self._report, name, path, parser, validator, false_negatives, log)
+
+    @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
+    def test_invalid_model(self, name, path, parser, validator, log):
+        shared.assert_invalid(
+            self._report, name, path, parser, validator, expected_messages,
+            known_issues, log)
 
