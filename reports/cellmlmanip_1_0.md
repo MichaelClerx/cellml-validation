@@ -1,12 +1,12 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 84% according to spec (154 out of 183)
-* 154 out of 183 valid files passed
+* 54% according to spec (173 out of 316)
+* 173 out of 316 valid files passed
 * 0 out of 0 invalid files detected
 
 Issues:
-* 29 valid files failed to parse
+* 143 valid files failed to parse
 * 0 invalid files passed validation
 * 0 invalid files failed validation for the wrong reason
 
@@ -215,6 +215,28 @@ Issues:
 
 [4.2.3_1.mathml_basics](../models_1_0/valid/4.2.3_1.mathml_basics.cellml): Valid file passed OK
 
+❌ [4.2.3_2.1.mathml_numbers_real](../models_1_0/numbers/4.2.3_2.1.mathml_numbers_real.cellml): Valid file failed validation
+* Returned: 
+  * Unimplemented type attribute for <cn>: real
+
+❌ [4.2.3_2.2.mathml_numbers_integer](../models_1_0/numbers/4.2.3_2.2.mathml_numbers_integer.cellml): Valid file failed validation
+* Returned: 
+  * Unimplemented type attribute for <cn>: integer
+
+❌ [4.2.3_2.3.mathml_numbers_real_base](../models_1_0/numbers/4.2.3_2.3.mathml_numbers_real_base.cellml): Valid file failed validation
+* Returned: 
+  * Unimplemented type attribute for <cn>: real
+
+❌ [4.2.3_2.4.mathml_numbers_integer_base](../models_1_0/numbers/4.2.3_2.4.mathml_numbers_integer_base.cellml): Valid file failed validation
+* Returned: 
+  * Unimplemented type attribute for <cn>: integer
+
+[4.2.3_2.5.mathml_numbers_e_notation](../models_1_0/numbers/4.2.3_2.5.mathml_numbers_e_notation.cellml): Valid file passed OK
+
+❌ [4.2.3_2.6.mathml_numbers_rational](../models_1_0/numbers/4.2.3_2.6.mathml_numbers_rational.cellml): Valid file failed validation
+* Returned: 
+  * Unimplemented type attribute for <cn>: rational
+
 [4.2.3_3.1_mathml_arithmetic_binary](../models_1_0/valid/4.2.3_3.1_mathml_arithmetic_binary.cellml): Valid file passed OK
 
 [4.2.3_3.2_mathml_arithmetic_n_ary](../models_1_0/valid/4.2.3_3.2_mathml_arithmetic_n_ary.cellml): Valid file passed OK
@@ -326,7 +348,99 @@ Issues:
 * Returned: 
 
 
-## 5.4.1.1
+## 5.2.7
+
+[5.2.7.unit_checking_arithmetic](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_arithmetic.cellml): Valid file passed OK
+
+[5.2.7.unit_checking_comparisons](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_comparisons.cellml): Valid file passed OK
+
+[5.2.7.unit_checking_derivatives](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_derivatives.cellml): Valid file passed OK
+
+❌ [5.2.7.unit_checking_derivatives_degree](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_derivatives_degree.cellml): Valid file failed validation
+* Returned: 
+
+❌ [5.2.7.unit_checking_dimensionless](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_dimensionless.cellml): Valid file failed validation
+* Returned: 
+
+❌ [5.2.7.unit_checking_functions_factorial](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_factorial.cellml): Valid file failed validation
+* Returned: 
+  * No handler for element <factorial>
+
+❌ [5.2.7.unit_checking_functions_non_smooth](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_non_smooth.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=5178190))
+
+❌ [5.2.7.unit_checking_functions_power_and_root](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_power_and_root.cellml): Valid file failed validation
+* Returned: 
+  * 'Cannot find unit <meter_cubic> in unit registry'
+
+❌ [5.2.7.unit_checking_internal_mismatch_1](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_internal_mismatch_1.cellml): Valid file failed validation
+* Returned: 
+  * Units volt (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != ampere (1.0, <Unit('ampere')>)
+
+❌ [5.2.7.unit_checking_internal_mismatch_2](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_internal_mismatch_2.cellml): Valid file failed validation
+* Returned: 
+  * Units dimensionless (1.0, <Unit('dimensionless')>) != ampere (1.0, <Unit('ampere')>)
+
+❌ [5.2.7.unit_checking_internal_mismatch_3](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_internal_mismatch_3.cellml): Valid file failed validation
+* Returned: 
+  * Units volt (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != dimensionless (1.0, <Unit('dimensionless')>)
+
+❌ [5.2.7.unit_checking_internal_mismatch_4](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_internal_mismatch_4.cellml): Valid file failed validation
+* Returned: 
+  * Units volt (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != millivolt (0.001, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>)
+
+❌ [5.2.7.unit_checking_name_differs](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_name_differs.cellml): Valid file failed validation
+* Returned: 
+  * 'Cannot find unit <wooster> in unit registry'
+
+[5.2.7.unit_checking_piecewise](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise.cellml): Valid file passed OK
+
+❌ [5.2.7.unit_checking_piecewise_multi_unit](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_piecewise_multi_unit.cellml): Valid file failed validation
+* Returned: 
+
+[5.2.7.unit_checking_repeated_unit](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_repeated_unit.cellml): Valid file passed OK
+
+[5.2.7.unit_conversion_different_names_same_unit](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_different_names_same_unit.cellml): Valid file passed OK
+
+[5.2.7.unit_conversion_dimensionless_exponent](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_exponent.cellml): Valid file passed OK
+
+❌ [5.2.7.unit_conversion_dimensionless_multiplier_1](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_multiplier_1.cellml): Valid file failed validation
+* Returned: 
+  * Units halves (<Quantity(0.5, 'dimensionless')>, <Unit('dimensionless')>) != dimensionless (1.0, <Unit('dimensionless')>)
+
+❌ [5.2.7.unit_conversion_dimensionless_multiplier_2](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_multiplier_2.cellml): Valid file failed validation
+* Returned: 
+  * Units mV_per_kV (<Quantity(1e-06, 'dimensionless')>, <Unit('dimensionless')>) != dimensionless (1.0, <Unit('dimensionless')>)
+
+[5.2.7.unit_conversion_dimensionless_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_offset.cellml): Valid file passed OK
+
+❌ [5.2.7.unit_conversion_inconvertible_1](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_inconvertible_1.cellml): Valid file failed validation
+* Returned: 
+  * Units meter (1.0, <Unit('meter')>) != volt (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>)
+
+❌ [5.2.7.unit_conversion_less_obvious](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_less_obvious.cellml): Valid file failed validation
+* Returned: 
+  * Units joule_per_meter (1.0, <Unit('kilogram * meter / second ** 2')>) != millijoule_per_meter (0.001, <Unit('kilogram * meter / second ** 2')>)
+
+❌ [5.2.7.unit_conversion_multiplier](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_multiplier.cellml): Valid file failed validation
+* Returned: 
+  * Units volt (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != imperial_volt (2.54, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>)
+
+❌ [5.2.7.unit_conversion_new_base_units](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_new_base_units.cellml): Valid file failed validation
+* Returned: 
+  * Units dimensionless (1.0, <Unit('dimensionless')>) != wooster (1.0, <Unit('wooster')>)
+
+❌ [5.2.7.unit_conversion_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_offset.cellml): Valid file failed validation
+* Returned: 
+  * Units centimeter (0.01, <Unit('meter')>) != uk_adult_shoe (0.008466666666666667, <Unit('meter')>)
+
+❌ [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file failed validation
+* Returned: 
+  * Units megavolt (1000000.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != millivolt (0.001, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>)
+
+
+### 5.4.1.1
 
 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed OK
 
@@ -384,6 +498,220 @@ Issues:
 [5.4.2.7.unit_offset_zero_and_exponent](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_exponent.cellml): Valid file passed OK
 
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed OK
+
+
+### 5.5.2
+
+❌ [5.5.2.boolean_arithmetic_divide](../models_1_0/booleans/5.5.2.boolean_arithmetic_divide.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_minus](../models_1_0/booleans/5.5.2.boolean_arithmetic_minus.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_plus](../models_1_0/booleans/5.5.2.boolean_arithmetic_plus.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_power_1](../models_1_0/booleans/5.5.2.boolean_arithmetic_power_1.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_power_2](../models_1_0/booleans/5.5.2.boolean_arithmetic_power_2.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_root_1](../models_1_0/booleans/5.5.2.boolean_arithmetic_root_1.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_root_2](../models_1_0/booleans/5.5.2.boolean_arithmetic_root_2.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_arithmetic_times](../models_1_0/booleans/5.5.2.boolean_arithmetic_times.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_base_exp'
+
+❌ [5.5.2.boolean_compare_eq_operand_error](../models_1_0/booleans/5.5.2.boolean_compare_eq_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_compare_geq_operand_error](../models_1_0/booleans/5.5.2.boolean_compare_geq_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_compare_gt_operand_error](../models_1_0/booleans/5.5.2.boolean_compare_gt_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_compare_leq_operand_error](../models_1_0/booleans/5.5.2.boolean_compare_leq_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_compare_lt_operand_error](../models_1_0/booleans/5.5.2.boolean_compare_lt_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+[5.5.2.boolean_compare_neq_operand_error](../models_1_0/booleans/5.5.2.boolean_compare_neq_operand_error.cellml): Valid file passed OK
+
+❌ [5.5.2.boolean_derivatives_1](../models_1_0/booleans/5.5.2.boolean_derivatives_1.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO True S.true
+
+❌ [5.5.2.boolean_derivatives_2](../models_1_0/booleans/5.5.2.boolean_derivatives_2.cellml): Valid file failed validation
+* Returned: 
+
+❌ [5.5.2.boolean_function_abs](../models_1_0/booleans/5.5.2.boolean_function_abs.cellml): Valid file failed validation
+* Returned: 
+  * Bad argument type for Abs(): <class 'sympy.logic.boolalg.BooleanTrue'>
+
+❌ [5.5.2.boolean_function_ceiling](../models_1_0/booleans/5.5.2.boolean_function_ceiling.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_function_exp](../models_1_0/booleans/5.5.2.boolean_function_exp.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_function_factorial](../models_1_0/booleans/5.5.2.boolean_function_factorial.cellml): Valid file failed validation
+* Returned: 
+  * No handler for element <factorial>
+
+❌ [5.5.2.boolean_function_floor](../models_1_0/booleans/5.5.2.boolean_function_floor.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_function_ln](../models_1_0/booleans/5.5.2.boolean_function_ln.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_function_log_1](../models_1_0/booleans/5.5.2.boolean_function_log_1.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_function_log_2](../models_1_0/booleans/5.5.2.boolean_function_log_2.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_logic_and_operand_error](../models_1_0/booleans/5.5.2.boolean_logic_and_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * Cond 2.00000000000000 is of type <class 'sympy.core.numbers.Float'>, but must be a Relational, Boolean, or a built-in bool.
+
+[5.5.2.boolean_logic_not_operand_error](../models_1_0/booleans/5.5.2.boolean_logic_not_operand_error.cellml): Valid file passed OK
+
+[5.5.2.boolean_logic_or_operand_error](../models_1_0/booleans/5.5.2.boolean_logic_or_operand_error.cellml): Valid file passed OK
+
+[5.5.2.boolean_logic_xor_operand_error](../models_1_0/booleans/5.5.2.boolean_logic_xor_operand_error.cellml): Valid file passed OK
+
+❌ [5.5.2.boolean_trig_arccos](../models_1_0/booleans/5.5.2.boolean_trig_arccos.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_arccosh](../models_1_0/booleans/5.5.2.boolean_trig_arccosh.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_trig_arccot](../models_1_0/booleans/5.5.2.boolean_trig_arccot.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_arccoth](../models_1_0/booleans/5.5.2.boolean_trig_arccoth.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_trig_arccsc](../models_1_0/booleans/5.5.2.boolean_trig_arccsc.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_trig_arccsch](../models_1_0/booleans/5.5.2.boolean_trig_arccsch.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_trig_arcsec](../models_1_0/booleans/5.5.2.boolean_trig_arcsec.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_trig_arcsech](../models_1_0/booleans/5.5.2.boolean_trig_arcsech.cellml): Valid file failed validation
+* Returned: 
+  * BooleanAtom not allowed in this context.
+
+❌ [5.5.2.boolean_trig_arcsin](../models_1_0/booleans/5.5.2.boolean_trig_arcsin.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_arcsinh](../models_1_0/booleans/5.5.2.boolean_trig_arcsinh.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_trig_arctan](../models_1_0/booleans/5.5.2.boolean_trig_arctan.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_arctanh](../models_1_0/booleans/5.5.2.boolean_trig_arctanh.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_trig_cos](../models_1_0/booleans/5.5.2.boolean_trig_cos.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_cosh](../models_1_0/booleans/5.5.2.boolean_trig_cosh.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_trig_cot](../models_1_0/booleans/5.5.2.boolean_trig_cot.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_coth](../models_1_0/booleans/5.5.2.boolean_trig_coth.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_trig_csc](../models_1_0/booleans/5.5.2.boolean_trig_csc.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_csch](../models_1_0/booleans/5.5.2.boolean_trig_csch.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_sec](../models_1_0/booleans/5.5.2.boolean_trig_sec.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_sech](../models_1_0/booleans/5.5.2.boolean_trig_sech.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_sin](../models_1_0/booleans/5.5.2.boolean_trig_sin.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_sinh](../models_1_0/booleans/5.5.2.boolean_trig_sinh.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_trig_tan](../models_1_0/booleans/5.5.2.boolean_trig_tan.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'could_extract_minus_sign'
+
+❌ [5.5.2.boolean_trig_tanh](../models_1_0/booleans/5.5.2.boolean_trig_tanh.cellml): Valid file failed validation
+* Returned: 
+  * 'BooleanTrue' object has no attribute 'as_coefficient'
+
+❌ [5.5.2.boolean_variable_1](../models_1_0/booleans/5.5.2.boolean_variable_1.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO True S.true
+
+❌ [5.5.2.boolean_variable_2](../models_1_0/booleans/5.5.2.boolean_variable_2.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO False S.false
+
+❌ [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=5178129), Dummy('1.00000000000000', dummy_index=5178130))
 
 
 ## 6.4.1.1
@@ -524,3 +852,159 @@ Issues:
 [8.4.2.rdf_in_variable](../models_1_0/valid/8.4.2.rdf_in_variable.cellml): Valid file passed OK
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed OK
+
+❌ [C.3.3.unit_checking_arithmetic_minus_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_minus_operand_error_1.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_minus_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_minus_operand_error_2.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_minus_operand_error_3](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_minus_operand_error_3.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_plus_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_plus_operand_error_1.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_plus_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_plus_operand_error_2.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_plus_operand_error_3](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_plus_operand_error_3.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_plus_operand_error_4](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_plus_operand_error_4.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_power_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_power_operand_error.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_arithmetic_root_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_root_operand_error.cellml): Valid file failed validation
+* Returned: 
+
+[C.3.3.unit_checking_compare_eq_operand_mismatch](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_compare_eq_operand_mismatch.cellml): Valid file passed OK
+
+[C.3.3.unit_checking_compare_geq_operand_mismatch](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_compare_geq_operand_mismatch.cellml): Valid file passed OK
+
+[C.3.3.unit_checking_compare_gt_operand_mismatch](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_compare_gt_operand_mismatch.cellml): Valid file passed OK
+
+[C.3.3.unit_checking_compare_leq_operand_mismatch](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_compare_leq_operand_mismatch.cellml): Valid file passed OK
+
+[C.3.3.unit_checking_compare_lt_operand_mismatch](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_compare_lt_operand_mismatch.cellml): Valid file passed OK
+
+[C.3.3.unit_checking_compare_neq_operand_mismatch](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_compare_neq_operand_mismatch.cellml): Valid file passed OK
+
+❌ [C.3.3.unit_checking_derivative_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_derivative_operand_error.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_function_exp_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_exp_operand_error.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_function_factorial_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_factorial_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * No handler for element <factorial>
+
+❌ [C.3.3.unit_checking_function_ln_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_ln_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * log args not dimensionless ([<Unit('second')>])
+
+❌ [C.3.3.unit_checking_function_log_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_1.cellml): Valid file failed validation
+* Returned: 
+
+❌ [C.3.3.unit_checking_function_log_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_2.cellml): Valid file failed validation
+* Returned: 
+  * log args not dimensionless ([<Unit('volt')>])
+
+❌ [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=5178294))
+
+❌ [C.3.3.unit_checking_trig_arccosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccosh_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=5178296))
+
+❌ [C.3.3.unit_checking_trig_arccot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccot_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=5178298))
+
+❌ [C.3.3.unit_checking_trig_arccoth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccoth_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=5178300))
+
+❌ [C.3.3.unit_checking_trig_arccsc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsc_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=5178302))
+
+❌ [C.3.3.unit_checking_trig_arccsch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsch_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=5178304))
+
+❌ [C.3.3.unit_checking_trig_arcsec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsec_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=5178306))
+
+❌ [C.3.3.unit_checking_trig_arcsech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsech_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=5178308))
+
+❌ [C.3.3.unit_checking_trig_arcsin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsin_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=5178310))
+
+❌ [C.3.3.unit_checking_trig_arcsinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsinh_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=5178312))
+
+❌ [C.3.3.unit_checking_trig_arctan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctan_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=5178314))
+
+❌ [C.3.3.unit_checking_trig_arctanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctanh_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=5178316))
+
+❌ [C.3.3.unit_checking_trig_cos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cos_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=5178318))
+
+❌ [C.3.3.unit_checking_trig_cosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cosh_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=5178320))
+
+❌ [C.3.3.unit_checking_trig_cot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cot_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=5178322))
+
+❌ [C.3.3.unit_checking_trig_coth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_coth_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=5178324))
+
+❌ [C.3.3.unit_checking_trig_csc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csc_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=5178326))
+
+❌ [C.3.3.unit_checking_trig_csch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csch_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=5178328))
+
+❌ [C.3.3.unit_checking_trig_sec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sec_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=5178330))
+
+❌ [C.3.3.unit_checking_trig_sech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sech_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=5178332))
+
+❌ [C.3.3.unit_checking_trig_sin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sin_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=5178334))
+
+❌ [C.3.3.unit_checking_trig_sinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sinh_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=5178336))
+
+❌ [C.3.3.unit_checking_trig_tan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tan_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=5178338))
+
+❌ [C.3.3.unit_checking_trig_tanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tanh_operand_error.cellml): Valid file failed validation
+* Returned: 
+  * TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=5178340))
