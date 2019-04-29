@@ -22,38 +22,38 @@ class Report(object):
     def _list_all_tests(self):
         raise NotImplementedError()
 
-    def valid_passed(self, name, path):
+    def valid_passed(self, name, path, output=''):
         """ Report that a valid file passed validation. """
         name = str(name)
         if name in self._results:
             raise Exception('Duplicate test result for: ' + name)
-        self._results[name] = ValidPassed(name, path)
+        self._results[name] = ValidPassed(name, path, output)
 
-    def valid_failed(self, name, path, message):
+    def valid_failed(self, name, path, output=''):
         """ Report that a valid file failed to pass validation. """
         name = str(name)
         if name in self._results:
             raise Exception('Duplicate test result for: ' + name)
-        self._results[name] = ValidFailed(name, path, message)
+        self._results[name] = ValidFailed(name, path, output)
 
-    def invalid_passed(self, name, path, expected):
+    def invalid_passed(self, name, path, expected, output=''):
         """ Report that an invalid file passed validation. """
         name = str(name)
         if name in self._results:
             raise Exception('Duplicate test result for: ' + name)
-        self._results[name] = InvalidPassed(name, path, expected)
+        self._results[name] = InvalidPassed(name, path, expected, output)
 
-    def invalid_failed(self, name, path, expected, message):
+    def invalid_failed(self, name, path, expected, output=''):
         """ Report that the error in an invalid file was detected. """
         name = str(name)
         if name in self._results:
             raise Exception('Duplicate test result for: ' + name)
-        self._results[name] = InvalidFailed(name, path, message, expected)
+        self._results[name] = InvalidFailed(name, path, expected, output)
 
-    def invalid_failed_incorrectly(self, name, path, expected, message):
+    def invalid_failed_incorrectly(self, name, path, expected, output=''):
         """
         Report that an invalid file failed validation, but for the wrong
-        reasons.
+        reason(s).
         """
         name = str(name)
         if name in self._results:
@@ -85,11 +85,11 @@ class Report(object):
         extra = 0
 
         # Create body
-        efail = '❌ '
-        ebad1 = '❗ '
-        ebad2 = '❗❗❗ '
-        pre1 = '* '
-        pre2 = '  * '
+        e_valid_failed = '🔴'
+        e_invalid_passed = '🔵'
+        e_invalid_failed_bad = '🔶'
+        e_not_run = '❗'
+        e_unknown_test = '❗❗'
 
         # Loop over known tests, show results
         last = [-1, -1, -1, -1]
@@ -133,37 +133,53 @@ class Report(object):
             # Show result
             if isinstance(r, ValidPassed):
                 valid_passed += 1
-                b.append(name + 'Valid file passed OK')
+                b.append(name + 'Valid file passed validation.')
+
             elif isinstance(r, ValidFailed):
                 valid_failed += 1
-                b.append(efail + name + 'Valid file failed validation')
-                b.append(pre1 + 'Returned: ')
-                for line in r.message.splitlines():
-                    b.append(pre2 + line)
+                b.append(e_valid_failed + ' ' + name +
+                         '**Valid file failed validation.**')
+                if r.output:
+                    b.append('* Output:')
+                    for line in r.output.splitlines():
+                        b.append('  * ```' + line + '```')
+
             elif isinstance(r, InvalidPassed):
                 invalid_passed += 1
-                b.append(efail + name + 'Invalid file passed validation')
+                b.append(e_invalid_passed + ' ' + name
+                         + '**Error not detected.**')
                 if r.expected:
-                    b.append(pre1 + 'Expected: ' + r.expected)
+                    b.append('* Expected: ```' + r.expected + '```')
+                if r.output:
+                    b.append('* Output:')
+                    for line in r.output.splitlines():
+                        b.append('  * ```' + line + '```')
+
             elif isinstance(r, InvalidFailed):
                 invalid_failed += 1
-                b.append(name + 'Error in invalid file detected')
-                #b.append(pre1 + 'Expected: ' + r.expected)
-                #b.append(pre1 + 'Returned: ')
-                #for line in r.message.splitlines():
-                #    b.append(pre2 + line)
+                b.append(name + 'Error detected correctly.')
+                if r.expected:
+                    b.append('* Expected: ```' + r.expected + '```')
+                if r.output:
+                    b.append('* Output:')
+                    for line in r.output.splitlines():
+                        b.append('  * ```' + line + '```')
+
             elif isinstance(r, InvalidFailedIncorrectly):
                 invalid_failed_incorrectly += 1
-                b.append(ebad1 + name +
-                         'Invalid file failed validation for wrong reason')
+                b.append(e_invalid_failed_bad + ' ' + name +
+                         '**Invalid file failed for unexpected reason.**')
                 if r.expected:
-                    b.append(pre1 + 'Expected: ' + r.expected)
-                b.append(pre1 + 'Returned: ')
-                for line in r.message.splitlines():
-                    b.append(pre2 + line)
+                    b.append('* Expected: ```' + r.expected + '```')
+                if r.output:
+                    b.append('* Output:')
+                    for line in r.output.splitlines():
+                        b.append('  * ```' + line + '```')
+
             else:
                 not_run += 1
-                b.append(ebad2 + name + 'Test not run')
+                b.append(e_not_run + name + '**Test not run**')
+
             b.append(e)
 
         # Show unknown tests
@@ -171,7 +187,7 @@ class Report(object):
         if extra:
             b.append('# Unknown tests found')
             for test in sorted(extra):
-                b.append(ebad2 + '`' + name + '`')
+                b.append(e_unknown_test + '`' + name + '`')
 
         # Calculate scores
         valid_total = valid_passed + valid_failed
@@ -233,38 +249,36 @@ class Report_1_0(Report):
 
 
 class Result(object):
-    def __init__(self, name, path):
+    def __init__(self, name, path, output):
         self.name = str(name)
         self.path = str(path)
+        self.output = str(output) if output else ''
 
 
 class ValidPassed(Result):
-    def __init__(self, name, path):
-        super(ValidPassed, self).__init__(name, path)
+    def __init__(self, name, path, output):
+        super(ValidPassed, self).__init__(name, path, output)
 
 
 class ValidFailed(Result):
-    def __init__(self, name, path, message):
-        super(ValidFailed, self).__init__(name, path)
-        self.message = str(message)
+    def __init__(self, name, path, output):
+        super(ValidFailed, self).__init__(name, path, output)
 
 
 class InvalidPassed(Result):
-    def __init__(self, name, path, expected):
-        super(InvalidPassed, self).__init__(name, path)
-        self.expected = str(expected) if expected else None
+    def __init__(self, name, path, expected, output):
+        super(InvalidPassed, self).__init__(name, path, output)
+        self.expected = str(expected) if expected else ''
 
 
 class InvalidFailed(Result):
-    def __init__(self, name, path, message, expected):
-        super(InvalidFailed, self).__init__(name, path)
-        self.message = str(message)
-        self.expected = str(expected)
+    def __init__(self, name, path, expected, output):
+        super(InvalidFailed, self).__init__(name, path, output)
+        self.expected = str(expected) if expected else ''
 
 
 class InvalidFailedIncorrectly(Result):
-    def __init__(self, name, path, message, expected):
-        super(InvalidFailedIncorrectly, self).__init__(name, path)
-        self.message = str(message)
-        self.expected = str(expected)
+    def __init__(self, name, path, expected, output):
+        super(InvalidFailedIncorrectly, self).__init__(name, path, output)
+        self.expected = str(expected) if expected else ''
 
