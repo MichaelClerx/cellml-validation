@@ -239,7 +239,7 @@ class Report(object):
         h.append('Results per category')
         h.append('')
         h.append('(Valid passed, invalid failed, valid failed, invalid passed'
-                 ', invalid passed incorrectly)')
+                 ', invalid failed for wrong reason)')
         h.append('')
         h.append('|Category|V Pass|I Fail|'
                  + e_valid_failed + ' V Fail|'

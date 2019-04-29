@@ -12,7 +12,7 @@ Issues:
 
 Results per category
 
-(Valid passed, invalid failed, valid failed, invalid passed, invalid passed incorrectly)
+(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason)
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
