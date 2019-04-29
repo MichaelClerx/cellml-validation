@@ -22,13 +22,11 @@ Issues:
 
 [0.0.root_node_two_elements](../models_1_0/invalid/0.0.root_node_two_elements.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output:
-  * ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_elements.cellml, line 5)```
+* Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_elements.cellml, line 5)```
 
 [0.0.root_node_two_models](../models_1_0/invalid/0.0.root_node_two_models.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output:
-  * ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
+* Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
 
 
 ### 0.1
@@ -76,13 +74,11 @@ Issues:
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
 * Expected: ```No declaration for attribute```
-* Output:
-  * ```Error on line 6: No declaration for attribute fruit of element model```
+* Output: ```Error on line 6: No declaration for attribute fruit of element model```
 
 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): Error detected correctly.
 * Expected: ```No declaration for attribute```
-* Output:
-  * ```Error on line 7: No declaration for attribute fruit of element model```
+* Output: ```Error on line 7: No declaration for attribute fruit of element model```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
@@ -268,78 +264,63 @@ Issues:
 
 [2.4.4.text_in_component](../models_1_0/invalid/2.4.4.text_in_component.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (CDATA)```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (CDATA)```
 
 [2.4.4.text_in_component_ref](../models_1_0/invalid/2.4.4.text_in_component_ref.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 10: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (CDATA)```
+* Output: ```Error on line 10: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (CDATA)```
 
 [2.4.4.text_in_connection](../models_1_0/invalid/2.4.4.text_in_connection.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables CDATA)```
+* Output: ```Error on line 11: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables CDATA)```
 
 [2.4.4.text_in_group](../models_1_0/invalid/2.4.4.text_in_group.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref CDATA)```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref CDATA)```
 
 [2.4.4.text_in_map_components](../models_1_0/invalid/2.4.4.text_in_map_components.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [2.4.4.text_in_map_variables](../models_1_0/invalid/2.4.4.text_in_map_variables.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 13: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 13: Element map_variables was declared EMPTY this one has content```
 
 [2.4.4.text_in_model](../models_1_0/invalid/2.4.4.text_in_model.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (CDATA)```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (CDATA)```
 
 [2.4.4.text_in_reaction](../models_1_0/invalid/2.4.4.text_in_reaction.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref CDATA)```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref CDATA)```
 
 [2.4.4.text_in_relationship_ref](../models_1_0/invalid/2.4.4.text_in_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [2.4.4.text_in_role](../models_1_0/invalid/2.4.4.text_in_role.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (CDATA)```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (CDATA)```
 
 [2.4.4.text_in_unit](../models_1_0/invalid/2.4.4.text_in_unit.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [2.4.4.text_in_units_1](../models_1_0/invalid/2.4.4.text_in_units_1.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit CDATA)```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit CDATA)```
 
 [2.4.4.text_in_units_2](../models_1_0/invalid/2.4.4.text_in_units_2.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 6: Element units content does not follow the DTD, expecting (unit)*, got (unit CDATA)```
+* Output: ```Error on line 6: Element units content does not follow the DTD, expecting (unit)*, got (unit CDATA)```
 
 [2.4.4.text_in_variable](../models_1_0/invalid/2.4.4.text_in_variable.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [2.4.4.text_in_variable_ref](../models_1_0/invalid/2.4.4.text_in_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role CDATA)```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role CDATA)```
 
 
 ### 2.5.1
@@ -351,8 +332,7 @@ Issues:
 
 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Error detected correctly.
 * Expected: ```No declaration for attribute name```
-* Output:
-  * ```Error on line 5: No declaration for attribute name of element model```
+* Output: ```Error on line 5: No declaration for attribute name of element model```
 
 
 ## 3.4.1.1
@@ -365,13 +345,11 @@ Issues:
 
 [3.4.1.1.model_name_missing](../models_1_0/invalid/3.4.1.1.model_name_missing.cellml): Error detected correctly.
 * Expected: ```Element model does not carry attribute name```
-* Output:
-  * ```Error on line 3: Element model does not carry attribute name```
+* Output: ```Error on line 3: Element model does not carry attribute name```
 
 [3.4.1.1.model_with_component_ref](../models_1_0/invalid/3.4.1.1.model_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component_ref )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component_ref )```
 
 [3.4.1.1.model_with_components](../models_1_0/valid/3.4.1.1.model_with_components.cellml): Valid file passed validation.
 
@@ -381,23 +359,19 @@ Issues:
 
 [3.4.1.1.model_with_map_components](../models_1_0/invalid/3.4.1.1.model_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component component map_components )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component component map_components )```
 
 [3.4.1.1.model_with_map_variables](../models_1_0/invalid/3.4.1.1.model_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component component map_variables )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component component map_variables )```
 
 [3.4.1.1.model_with_math](../models_1_0/invalid/3.4.1.1.model_with_math.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component math )```
+* Output: ```Error on line 5: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component math )```
 
 [3.4.1.1.model_with_model](../models_1_0/invalid/3.4.1.1.model_with_model.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (model )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (model )```
 
 [3.4.1.1.model_with_one_component](../models_1_0/valid/3.4.1.1.model_with_one_component.cellml): Valid file passed validation.
 
@@ -409,35 +383,29 @@ Issues:
 
 [3.4.1.1.model_with_reaction](../models_1_0/invalid/3.4.1.1.model_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component reaction )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (component reaction )```
 
 [3.4.1.1.model_with_relationship_ref](../models_1_0/invalid/3.4.1.1.model_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (relationship_ref )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (relationship_ref )```
 
 [3.4.1.1.model_with_role](../models_1_0/invalid/3.4.1.1.model_with_role.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (role )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (role )```
 
 [3.4.1.1.model_with_unit](../models_1_0/invalid/3.4.1.1.model_with_unit.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (unit )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (unit )```
 
 [3.4.1.1.model_with_units](../models_1_0/valid/3.4.1.1.model_with_units.cellml): Valid file passed validation.
 
 [3.4.1.1.model_with_variable](../models_1_0/invalid/3.4.1.1.model_with_variable.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (variable )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (variable )```
 
 [3.4.1.1.model_with_variable_ref](../models_1_0/invalid/3.4.1.1.model_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element model content does not follow the DTD```
-* Output:
-  * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (variable_ref )```
+* Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (variable_ref )```
 
 
 ##### 3.4.1.2
@@ -455,45 +423,37 @@ Issues:
 
 [3.4.2.1.component_name_missing](../models_1_0/invalid/3.4.2.1.component_name_missing.cellml): Error detected correctly.
 * Expected: ```Element component does not carry attribute name```
-* Output:
-  * ```Error on line 5: Element component does not carry attribute name```
+* Output: ```Error on line 5: Element component does not carry attribute name```
 
 [3.4.2.1.component_with_component](../models_1_0/invalid/3.4.2.1.component_with_component.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (component )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (component )```
 
 [3.4.2.1.component_with_component_ref](../models_1_0/invalid/3.4.2.1.component_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (component_ref )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (component_ref )```
 
 [3.4.2.1.component_with_connection](../models_1_0/invalid/3.4.2.1.component_with_connection.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (connection )```
+* Output: ```Error on line 11: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (connection )```
 
 [3.4.2.1.component_with_group](../models_1_0/invalid/3.4.2.1.component_with_group.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (group )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (group )```
 
 [3.4.2.1.component_with_map_components](../models_1_0/invalid/3.4.2.1.component_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (map_components )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (map_components )```
 
 [3.4.2.1.component_with_map_variables](../models_1_0/invalid/3.4.2.1.component_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (map_variables variable )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (map_variables variable )```
 
 [3.4.2.1.component_with_maths](../models_1_0/valid/3.4.2.1.component_with_maths.cellml): Valid file passed validation.
 
 [3.4.2.1.component_with_model](../models_1_0/invalid/3.4.2.1.component_with_model.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (model )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (model )```
 
 [3.4.2.1.component_with_one_math](../models_1_0/valid/3.4.2.1.component_with_one_math.cellml): Valid file passed validation.
 
@@ -507,25 +467,21 @@ Issues:
 
 [3.4.2.1.component_with_relationship_ref](../models_1_0/invalid/3.4.2.1.component_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (relationship_ref )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (relationship_ref )```
 
 [3.4.2.1.component_with_role](../models_1_0/invalid/3.4.2.1.component_with_role.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (role )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (role )```
 
 [3.4.2.1.component_with_unit](../models_1_0/invalid/3.4.2.1.component_with_unit.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (unit )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (unit )```
 
 [3.4.2.1.component_with_units](../models_1_0/valid/3.4.2.1.component_with_units.cellml): Valid file passed validation.
 
 [3.4.2.1.component_with_variable_ref](../models_1_0/invalid/3.4.2.1.component_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element component content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (variable_ref )```
+* Output: ```Error on line 5: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (variable_ref )```
 
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
@@ -541,33 +497,27 @@ Issues:
 
 [3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
 * Expected: ```Element variable does not carry attribute name```
-* Output:
-  * ```Error on line 6: Element variable does not carry attribute name```
+* Output: ```Error on line 6: Element variable does not carry attribute name```
 
 [3.4.3.1.variable_units_missing](../models_1_0/invalid/3.4.3.1.variable_units_missing.cellml): Error detected correctly.
 * Expected: ```Element variable does not carry attribute units```
-* Output:
-  * ```Error on line 6: Element variable does not carry attribute units```
+* Output: ```Error on line 6: Element variable does not carry attribute units```
 
 [3.4.3.1.variable_with_component](../models_1_0/invalid/3.4.3.1.variable_with_component.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 12: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 12: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_initial_value](../models_1_0/valid/3.4.3.1.variable_with_initial_value.cellml): Valid file passed validation.
 
@@ -575,58 +525,47 @@ Issues:
 
 [3.4.3.1.variable_with_map_components](../models_1_0/invalid/3.4.3.1.variable_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 7: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_model](../models_1_0/invalid/3.4.3.1.variable_with_model.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_reaction](../models_1_0/invalid/3.4.3.1.variable_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_relationship_ref](../models_1_0/invalid/3.4.3.1.variable_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_role](../models_1_0/invalid/3.4.3.1.variable_with_role.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_unit](../models_1_0/invalid/3.4.3.1.variable_with_unit.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_units](../models_1_0/invalid/3.4.3.1.variable_with_units.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_variable](../models_1_0/invalid/3.4.3.1.variable_with_variable.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_variable_ref](../models_1_0/invalid/3.4.3.1.variable_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element variable was declared EMPTY```
-* Output:
-  * ```Error on line 6: Element variable was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
@@ -659,16 +598,14 @@ Issues:
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
 * Expected: ```attribute public_interface of variable is not among```
-* Output:
-  * ```Error on line 6: Value "apple" for attribute public_interface of variable is not among the enumerated set```
+* Output: ```Error on line 6: Value "apple" for attribute public_interface of variable is not among the enumerated set```
 
 
 ##### 3.4.3.5
 
 [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Error detected correctly.
 * Expected: ```attribute private_interface of variable is not among```
-* Output:
-  * ```Error on line 6: Value "apple" for attribute private_interface of variable is not among the enumerated set```
+* Output: ```Error on line 6: Value "apple" for attribute private_interface of variable is not among the enumerated set```
 
 
 ##### 3.4.3.6
@@ -694,23 +631,19 @@ Issues:
 
 [3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
 * Expected: ```expecting (map_components , map_variables+)```
-* Output:
-  * ```Error on line 5: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got ```
+* Output: ```Error on line 5: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got ```
 
 [3.4.4.1.connection_map_components_missing](../models_1_0/invalid/3.4.4.1.connection_map_components_missing.cellml): Error detected correctly.
 * Expected: ```expecting (map_components , map_variables+)```
-* Output:
-  * ```Error on line 13: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_variables map_variables )```
+* Output: ```Error on line 13: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_variables map_variables )```
 
 [3.4.4.1.connection_map_components_multiple](../models_1_0/invalid/3.4.4.1.connection_map_components_multiple.cellml): Error detected correctly.
 * Expected: ```expecting (map_components , map_variables+)```
-* Output:
-  * ```Error on line 16: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_components map_variables map_variables )```
+* Output: ```Error on line 16: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_components map_variables map_variables )```
 
 [3.4.4.1.connection_map_variables_missing_1](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_1.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components )```
+* Output: ```Error on line 11: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components )```
 
 [3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): Error detected correctly.
 * Expected: ```No declaration for```
@@ -731,77 +664,63 @@ Issues:
 
 [3.4.4.1.connection_with_component](../models_1_0/invalid/3.4.4.1.connection_with_component.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables component )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables component )```
 
 [3.4.4.1.connection_with_component_ref](../models_1_0/invalid/3.4.4.1.connection_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables component_ref )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables component_ref )```
 
 [3.4.4.1.connection_with_connection](../models_1_0/invalid/3.4.4.1.connection_with_connection.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 15: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables connection )```
+* Output: ```Error on line 15: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables connection )```
 
 [3.4.4.1.connection_with_group](../models_1_0/invalid/3.4.4.1.connection_with_group.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables group )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables group )```
 
 [3.4.4.1.connection_with_map_variables](../models_1_0/valid/3.4.4.1.connection_with_map_variables.cellml): Valid file passed validation.
 
 [3.4.4.1.connection_with_math](../models_1_0/invalid/3.4.4.1.connection_with_math.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables math )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables math )```
 
 [3.4.4.1.connection_with_model](../models_1_0/invalid/3.4.4.1.connection_with_model.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables model )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables model )```
 
 [3.4.4.1.connection_with_name_attribute](../models_1_0/invalid/3.4.4.1.connection_with_name_attribute.cellml): Error detected correctly.
 * Expected: ```No declaration for attribute name of element connection```
-* Output:
-  * ```Error on line 11: No declaration for attribute name of element connection```
+* Output: ```Error on line 11: No declaration for attribute name of element connection```
 
 [3.4.4.1.connection_with_one_map_variables](../models_1_0/valid/3.4.4.1.connection_with_one_map_variables.cellml): Valid file passed validation.
 
 [3.4.4.1.connection_with_reaction](../models_1_0/invalid/3.4.4.1.connection_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables reaction )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables reaction )```
 
 [3.4.4.1.connection_with_relationship_ref](../models_1_0/invalid/3.4.4.1.connection_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables relationship_ref )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables relationship_ref )```
 
 [3.4.4.1.connection_with_role](../models_1_0/invalid/3.4.4.1.connection_with_role.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables role )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables role )```
 
 [3.4.4.1.connection_with_unit](../models_1_0/invalid/3.4.4.1.connection_with_unit.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables unit )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables unit )```
 
 [3.4.4.1.connection_with_units](../models_1_0/invalid/3.4.4.1.connection_with_units.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables units )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables units )```
 
 [3.4.4.1.connection_with_variable](../models_1_0/invalid/3.4.4.1.connection_with_variable.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables variable )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables variable )```
 
 [3.4.4.1.connection_with_variable_ref](../models_1_0/invalid/3.4.4.1.connection_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element connection content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables variable_ref )```
+* Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables variable_ref )```
 
 
 #### 3.4.5.1
@@ -812,88 +731,71 @@ Issues:
 
 [3.4.5.1.map_components_component_1_missing](../models_1_0/invalid/3.4.5.1.map_components_component_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_components does not carry attribute component_1```
-* Output:
-  * ```Error on line 6: Element map_components does not carry attribute component_1```
+* Output: ```Error on line 6: Element map_components does not carry attribute component_1```
 
 [3.4.5.1.map_components_component_2_missing](../models_1_0/invalid/3.4.5.1.map_components_component_2_missing.cellml): Error detected correctly.
 * Expected: ```Element map_components does not carry attribute component_2```
-* Output:
-  * ```Error on line 6: Element map_components does not carry attribute component_2```
+* Output: ```Error on line 6: Element map_components does not carry attribute component_2```
 
 [3.4.5.1.map_components_with_component](../models_1_0/invalid/3.4.5.1.map_components_with_component.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_model](../models_1_0/invalid/3.4.5.1.map_components_with_model.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_reaction](../models_1_0/invalid/3.4.5.1.map_components_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_relationship_ref](../models_1_0/invalid/3.4.5.1.map_components_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_role](../models_1_0/invalid/3.4.5.1.map_components_with_role.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_unit](../models_1_0/invalid/3.4.5.1.map_components_with_unit.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_units](../models_1_0/invalid/3.4.5.1.map_components_with_units.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_variable](../models_1_0/invalid/3.4.5.1.map_components_with_variable.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 [3.4.5.1.map_components_with_variable_ref](../models_1_0/invalid/3.4.5.1.map_components_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element map_components was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element map_components was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 
 ##### 3.4.5.2
@@ -919,88 +821,71 @@ Issues:
 
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables does not carry attribute variable_1```
-* Output:
-  * ```Error on line 13: Element map_variables does not carry attribute variable_1```
+* Output: ```Error on line 13: Element map_variables does not carry attribute variable_1```
 
 [3.4.6.1.map_variables_variable_2_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_2_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables does not carry attribute variable_2```
-* Output:
-  * ```Error on line 13: Element map_variables does not carry attribute variable_2```
+* Output: ```Error on line 13: Element map_variables does not carry attribute variable_2```
 
 [3.4.6.1.map_variables_with_component](../models_1_0/invalid/3.4.6.1.map_variables_with_component.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_model](../models_1_0/invalid/3.4.6.1.map_variables_with_model.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_reaction](../models_1_0/invalid/3.4.6.1.map_variables_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_relationship_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_role](../models_1_0/invalid/3.4.6.1.map_variables_with_role.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_unit](../models_1_0/invalid/3.4.6.1.map_variables_with_unit.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_units](../models_1_0/invalid/3.4.6.1.map_variables_with_units.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_variable](../models_1_0/invalid/3.4.6.1.map_variables_with_variable.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 [3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element map_variables was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element map_variables was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 
 ##### 3.4.6.2
@@ -1249,8 +1134,7 @@ Issues:
 
 [4.4.3.1.cn_units_missing](../models_1_0/invalid/4.4.3.1.cn_units_missing.cellml): Error detected correctly.
 * Expected: ```Element cn does not carry attribute cellml:units```
-* Output:
-  * ```Error on line 12: Element cn does not carry attribute cellml:units```
+* Output: ```Error on line 12: Element cn does not carry attribute cellml:units```
 
 
 ##### 4.4.3.2
@@ -1362,80 +1246,65 @@ Issues:
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Element units does not carry attribute name```
-* Output:
-  * ```Error on line 5: Element units does not carry attribute name```
+* Output: ```Error on line 5: Element units does not carry attribute name```
 
 [5.4.1.1.units_with_component](../models_1_0/invalid/5.4.1.1.units_with_component.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit component )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit component )```
 
 [5.4.1.1.units_with_component_ref](../models_1_0/invalid/5.4.1.1.units_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit component_ref )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit component_ref )```
 
 [5.4.1.1.units_with_connection](../models_1_0/invalid/5.4.1.1.units_with_connection.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element units content does not follow the DTD, expecting (unit)*, got (unit connection )```
+* Output: ```Error on line 11: Element units content does not follow the DTD, expecting (unit)*, got (unit connection )```
 
 [5.4.1.1.units_with_group](../models_1_0/invalid/5.4.1.1.units_with_group.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit group )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit group )```
 
 [5.4.1.1.units_with_map_components](../models_1_0/invalid/5.4.1.1.units_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit map_components )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit map_components )```
 
 [5.4.1.1.units_with_map_variables](../models_1_0/invalid/5.4.1.1.units_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit map_variables )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit map_variables )```
 
 [5.4.1.1.units_with_math](../models_1_0/invalid/5.4.1.1.units_with_math.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element units content does not follow the DTD, expecting (unit)*, got (unit math )```
+* Output: ```Error on line 8: Element units content does not follow the DTD, expecting (unit)*, got (unit math )```
 
 [5.4.1.1.units_with_model](../models_1_0/invalid/5.4.1.1.units_with_model.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit model )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit model )```
 
 [5.4.1.1.units_with_reaction](../models_1_0/invalid/5.4.1.1.units_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 6: Element units content does not follow the DTD, expecting (unit)*, got (unit reaction )```
+* Output: ```Error on line 6: Element units content does not follow the DTD, expecting (unit)*, got (unit reaction )```
 
 [5.4.1.1.units_with_relationship_ref](../models_1_0/invalid/5.4.1.1.units_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit relationship_ref )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit relationship_ref )```
 
 [5.4.1.1.units_with_role](../models_1_0/invalid/5.4.1.1.units_with_role.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit role )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit role )```
 
 [5.4.1.1.units_with_unit_children](../models_1_0/valid/5.4.1.1.units_with_unit_children.cellml): Valid file passed validation.
 
 [5.4.1.1.units_with_units](../models_1_0/invalid/5.4.1.1.units_with_units.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit units )```
+* Output: ```Error on line 5: Element units content does not follow the DTD, expecting (unit)*, got (unit units )```
 
 [5.4.1.1.units_with_variable](../models_1_0/invalid/5.4.1.1.units_with_variable.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 6: Element units content does not follow the DTD, expecting (unit)*, got (unit variable )```
+* Output: ```Error on line 6: Element units content does not follow the DTD, expecting (unit)*, got (unit variable )```
 
 [5.4.1.1.units_with_variable_ref](../models_1_0/invalid/5.4.1.1.units_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element units content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element units content does not follow the DTD, expecting (unit)*, got (unit variable_ref )```
+* Output: ```Error on line 7: Element units content does not follow the DTD, expecting (unit)*, got (unit variable_ref )```
 
 
 ##### 5.4.1.2
@@ -1527,8 +1396,7 @@ Issues:
 
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
 * Expected: ```for attribute base_units of units is not among the enumerated set```
-* Output:
-  * ```Error on line 5: Value "certainly" for attribute base_units of units is not among the enumerated set```
+* Output: ```Error on line 5: Value "certainly" for attribute base_units of units is not among the enumerated set```
 
 
 #### 5.4.2.1
@@ -1541,83 +1409,67 @@ Issues:
 
 [5.4.2.1.unit_units_missing](../models_1_0/invalid/5.4.2.1.unit_units_missing.cellml): Error detected correctly.
 * Expected: ```Element unit does not carry attribute units```
-* Output:
-  * ```Error on line 6: Element unit does not carry attribute units```
+* Output: ```Error on line 6: Element unit does not carry attribute units```
 
 [5.4.2.1.unit_with_component](../models_1_0/invalid/5.4.2.1.unit_with_component.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_component_ref](../models_1_0/invalid/5.4.2.1.unit_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_connection](../models_1_0/invalid/5.4.2.1.unit_with_connection.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_group](../models_1_0/invalid/5.4.2.1.unit_with_group.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_map_components](../models_1_0/invalid/5.4.2.1.unit_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_map_variables](../models_1_0/invalid/5.4.2.1.unit_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_math](../models_1_0/invalid/5.4.2.1.unit_with_math.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_model](../models_1_0/invalid/5.4.2.1.unit_with_model.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_reaction](../models_1_0/invalid/5.4.2.1.unit_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_relationship_ref](../models_1_0/invalid/5.4.2.1.unit_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_role](../models_1_0/invalid/5.4.2.1.unit_with_role.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_unit](../models_1_0/invalid/5.4.2.1.unit_with_unit.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_units](../models_1_0/invalid/5.4.2.1.unit_with_units.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 6: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 6: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_variable](../models_1_0/invalid/5.4.2.1.unit_with_variable.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 7: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 7: Element unit was declared EMPTY this one has content```
 
 [5.4.2.1.unit_with_variable_ref](../models_1_0/invalid/5.4.2.1.unit_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element unit was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element unit was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element unit was declared EMPTY this one has content```
 
 
 ##### 5.4.2.2
@@ -1810,8 +1662,7 @@ Issues:
 
 [6.4.1.1.group_empty](../models_1_0/invalid/6.4.1.1.group_empty.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 5: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got ```
+* Output: ```Error on line 5: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got ```
 
 [6.4.1.1.group_only_extensions](../models_1_0/invalid/6.4.1.1.group_only_extensions.cellml): Error detected correctly.
 * Expected: ```No declaration for```
@@ -1836,68 +1687,55 @@ Issues:
 
 [6.4.1.1.group_with_component](../models_1_0/invalid/6.4.1.1.group_with_component.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref component )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref component )```
 
 [6.4.1.1.group_with_connection](../models_1_0/invalid/6.4.1.1.group_with_connection.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref connection )```
+* Output: ```Error on line 11: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref connection )```
 
 [6.4.1.1.group_with_group](../models_1_0/invalid/6.4.1.1.group_with_group.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref group )```
+* Output: ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref group )```
 
 [6.4.1.1.group_with_map_components](../models_1_0/invalid/6.4.1.1.group_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref map_components )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref map_components )```
 
 [6.4.1.1.group_with_map_variables](../models_1_0/invalid/6.4.1.1.group_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref map_variables )```
+* Output: ```Error on line 11: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref map_variables )```
 
 [6.4.1.1.group_with_math](../models_1_0/invalid/6.4.1.1.group_with_math.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 10: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref math )```
+* Output: ```Error on line 10: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref math )```
 
 [6.4.1.1.group_with_model](../models_1_0/invalid/6.4.1.1.group_with_model.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref model )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref model )```
 
 [6.4.1.1.group_with_reaction](../models_1_0/invalid/6.4.1.1.group_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref reaction )```
+* Output: ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref reaction )```
 
 [6.4.1.1.group_with_role](../models_1_0/invalid/6.4.1.1.group_with_role.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref role )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref role )```
 
 [6.4.1.1.group_with_unit](../models_1_0/invalid/6.4.1.1.group_with_unit.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref unit component_ref )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref unit component_ref )```
 
 [6.4.1.1.group_with_units](../models_1_0/invalid/6.4.1.1.group_with_units.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref units )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref units )```
 
 [6.4.1.1.group_with_variable](../models_1_0/invalid/6.4.1.1.group_with_variable.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref variable )```
+* Output: ```Error on line 7: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref variable )```
 
 [6.4.1.1.group_with_variable_ref](../models_1_0/invalid/6.4.1.1.group_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element group content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref variable_ref )```
+* Output: ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref variable_ref )```
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
@@ -1907,8 +1745,7 @@ Issues:
 #### 6.4.2.1
 
 🔴 [6.4.2.1.relationship_ref_name](../models_1_0/valid/6.4.2.1.relationship_ref_name.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 5: No declaration for attribute xmlns:family of element model```
+* Output: ```Error on line 5: No declaration for attribute xmlns:family of element model```
 
 [6.4.2.1.relationship_ref_relationship_1](../models_1_0/valid/6.4.2.1.relationship_ref_relationship_1.cellml): Valid file passed validation.
 
@@ -1919,83 +1756,67 @@ Issues:
 
 [6.4.2.1.relationship_ref_relationship_missing](../models_1_0/invalid/6.4.2.1.relationship_ref_relationship_missing.cellml): Error detected correctly.
 * Expected: ```relationship_ref does not carry attribute relationship```
-* Output:
-  * ```Error on line 9: Element relationship_ref does not carry attribute relationship```
+* Output: ```Error on line 9: Element relationship_ref does not carry attribute relationship```
 
 [6.4.2.1.relationship_ref_with_component](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_component_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 11: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 11: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_connection](../models_1_0/invalid/6.4.2.1.relationship_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 12: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 12: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_group](../models_1_0/invalid/6.4.2.1.relationship_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_map_components](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_map_variables](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 12: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 12: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_math](../models_1_0/invalid/6.4.2.1.relationship_ref_with_math.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 11: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 11: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_model](../models_1_0/invalid/6.4.2.1.relationship_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_reaction](../models_1_0/invalid/6.4.2.1.relationship_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_relationship_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_role](../models_1_0/invalid/6.4.2.1.relationship_ref_with_role.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_unit](../models_1_0/invalid/6.4.2.1.relationship_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_units](../models_1_0/invalid/6.4.2.1.relationship_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_variable](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 8: Element relationship_ref was declared EMPTY this one has content```
 
 [6.4.2.1.relationship_ref_with_variable_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref was declared EMPTY this one has content```
-* Output:
-  * ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
+* Output: ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
 
 
 ##### 6.4.2.2
@@ -2008,8 +1829,7 @@ Issues:
 🔵 [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): **Error not detected.**
 
 🔴 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 5: No declaration for attribute xmlns:family of element model```
+* Output: ```Error on line 5: No declaration for attribute xmlns:family of element model```
 
 
 ##### 6.4.2.4
@@ -2028,96 +1848,78 @@ Issues:
 🔵 [6.4.2.5.relationship_ref_duplicate_unnamed_2](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_unnamed_2.cellml): **Error not detected.**
 
 🔴 [6.4.2.5.relationship_ref_multiple_1](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_1.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
+* Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
 
 🔴 [6.4.2.5.relationship_ref_multiple_2](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_2.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
+* Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
 
 🔴 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
+* Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
 
 
 #### 6.4.3.1
 
 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Error detected correctly.
 * Expected: ```Element component_ref does not carry attribute component```
-* Output:
-  * ```Error on line 10: Element component_ref does not carry attribute component```
+* Output: ```Error on line 10: Element component_ref does not carry attribute component```
 
 [6.4.3.1.component_ref_nesting](../models_1_0/valid/6.4.3.1.component_ref_nesting.cellml): Valid file passed validation.
 
 [6.4.3.1.component_ref_with_component](../models_1_0/invalid/6.4.3.1.component_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref component )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref component )```
 
 [6.4.3.1.component_ref_with_connection](../models_1_0/invalid/6.4.3.1.component_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 13: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref connection )```
+* Output: ```Error on line 13: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref connection )```
 
 [6.4.3.1.component_ref_with_group](../models_1_0/invalid/6.4.3.1.component_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref group )```
+* Output: ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref group )```
 
 [6.4.3.1.component_ref_with_map_components](../models_1_0/invalid/6.4.3.1.component_ref_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref map_components )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref map_components )```
 
 [6.4.3.1.component_ref_with_map_variables](../models_1_0/invalid/6.4.3.1.component_ref_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 13: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref map_variables )```
+* Output: ```Error on line 13: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref map_variables )```
 
 [6.4.3.1.component_ref_with_math](../models_1_0/invalid/6.4.3.1.component_ref_with_math.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 12: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref math )```
+* Output: ```Error on line 12: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref math )```
 
 [6.4.3.1.component_ref_with_model](../models_1_0/invalid/6.4.3.1.component_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref model )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref model )```
 
 [6.4.3.1.component_ref_with_reaction](../models_1_0/invalid/6.4.3.1.component_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref reaction )```
+* Output: ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref reaction )```
 
 [6.4.3.1.component_ref_with_relationship_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref relationship_ref )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref relationship_ref )```
 
 [6.4.3.1.component_ref_with_role](../models_1_0/invalid/6.4.3.1.component_ref_with_role.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref role )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref role )```
 
 [6.4.3.1.component_ref_with_unit](../models_1_0/invalid/6.4.3.1.component_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref unit )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref unit )```
 
 [6.4.3.1.component_ref_with_units](../models_1_0/invalid/6.4.3.1.component_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref units )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref units )```
 
 [6.4.3.1.component_ref_with_variable](../models_1_0/invalid/6.4.3.1.component_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref variable )```
+* Output: ```Error on line 9: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref variable )```
 
 [6.4.3.1.component_ref_with_variable_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element component_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref variable_ref )```
+* Output: ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref variable_ref )```
 
 
 ##### 6.4.3.2
@@ -2173,86 +1975,70 @@ Issues:
 
 [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got ```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got ```
 
 [7.4.1.1.reaction_with_component](../models_1_0/invalid/7.4.1.1.reaction_with_component.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref component )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref component )```
 
 [7.4.1.1.reaction_with_component_ref](../models_1_0/invalid/7.4.1.1.reaction_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref component_ref )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref component_ref )```
 
 [7.4.1.1.reaction_with_connection](../models_1_0/invalid/7.4.1.1.reaction_with_connection.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref connection )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref connection )```
 
 [7.4.1.1.reaction_with_group](../models_1_0/invalid/7.4.1.1.reaction_with_group.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref group )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref group )```
 
 [7.4.1.1.reaction_with_map_components](../models_1_0/invalid/7.4.1.1.reaction_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref map_components )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref map_components )```
 
 [7.4.1.1.reaction_with_map_variables](../models_1_0/invalid/7.4.1.1.reaction_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref map_variables )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref map_variables )```
 
 [7.4.1.1.reaction_with_math](../models_1_0/invalid/7.4.1.1.reaction_with_math.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref math )```
+* Output: ```Error on line 8: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref math )```
 
 [7.4.1.1.reaction_with_model](../models_1_0/invalid/7.4.1.1.reaction_with_model.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref model )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref model )```
 
 [7.4.1.1.reaction_with_reaction](../models_1_0/invalid/7.4.1.1.reaction_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref reaction )```
+* Output: ```Error on line 8: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref reaction )```
 
 [7.4.1.1.reaction_with_relationship_ref](../models_1_0/invalid/7.4.1.1.reaction_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref relationship_ref )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref relationship_ref )```
 
 [7.4.1.1.reaction_with_role](../models_1_0/invalid/7.4.1.1.reaction_with_role.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref role )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref role )```
 
 [7.4.1.1.reaction_with_unit](../models_1_0/invalid/7.4.1.1.reaction_with_unit.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref unit )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref unit )```
 
 [7.4.1.1.reaction_with_units](../models_1_0/invalid/7.4.1.1.reaction_with_units.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref units )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref units )```
 
 [7.4.1.1.reaction_with_variable](../models_1_0/invalid/7.4.1.1.reaction_with_variable.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
-* Output:
-  * ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref variable )```
+* Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref variable )```
 
 
 ##### 7.4.1.2
 
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
 * Expected: ```attribute reversible of reaction is not among the enumerated set```
-* Output:
-  * ```Error on line 7: Value "definitely" for attribute reversible of reaction is not among the enumerated set```
+* Output: ```Error on line 7: Value "definitely" for attribute reversible of reaction is not among the enumerated set```
 
 [7.4.1.2.reaction_reversible_no](../models_1_0/valid/7.4.1.2.reaction_reversible_no.cellml): Valid file passed validation.
 
@@ -2268,83 +2054,67 @@ Issues:
 
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got ```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got ```
 
 [7.4.2.1.variable_ref_variable_missing](../models_1_0/invalid/7.4.2.1.variable_ref_variable_missing.cellml): Error detected correctly.
 * Expected: ```variable_ref does not carry attribute variable```
-* Output:
-  * ```Error on line 8: Element variable_ref does not carry attribute variable```
+* Output: ```Error on line 8: Element variable_ref does not carry attribute variable```
 
 [7.4.2.1.variable_ref_with_component](../models_1_0/invalid/7.4.2.1.variable_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role component )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role component )```
 
 [7.4.2.1.variable_ref_with_component_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role component_ref )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role component_ref )```
 
 [7.4.2.1.variable_ref_with_connection](../models_1_0/invalid/7.4.2.1.variable_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role connection )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role connection )```
 
 [7.4.2.1.variable_ref_with_group](../models_1_0/invalid/7.4.2.1.variable_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role group )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role group )```
 
 [7.4.2.1.variable_ref_with_map_components](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role map_components )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role map_components )```
 
 [7.4.2.1.variable_ref_with_map_variables](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role map_variables )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role map_variables )```
 
 [7.4.2.1.variable_ref_with_math](../models_1_0/invalid/7.4.2.1.variable_ref_with_math.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role math )```
+* Output: ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role math )```
 
 [7.4.2.1.variable_ref_with_model](../models_1_0/invalid/7.4.2.1.variable_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role model )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role model )```
 
 [7.4.2.1.variable_ref_with_reaction](../models_1_0/invalid/7.4.2.1.variable_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role reaction )```
+* Output: ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role reaction )```
 
 [7.4.2.1.variable_ref_with_relationship_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role relationship_ref )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role relationship_ref )```
 
 [7.4.2.1.variable_ref_with_unit](../models_1_0/invalid/7.4.2.1.variable_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role unit )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role unit )```
 
 [7.4.2.1.variable_ref_with_units](../models_1_0/invalid/7.4.2.1.variable_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role units )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role units )```
 
 [7.4.2.1.variable_ref_with_variable](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role variable )```
+* Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role variable )```
 
 [7.4.2.1.variable_ref_with_variable_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role variable_ref )```
+* Output: ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role variable_ref )```
 
 
 ##### 7.4.2.2
@@ -2360,86 +2130,70 @@ Issues:
 
 [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Error detected correctly.
 * Expected: ```Element role does not carry attribute role```
-* Output:
-  * ```Error on line 9: Element role does not carry attribute role```
+* Output: ```Error on line 9: Element role does not carry attribute role```
 
 [7.4.3.1.role_with_component](../models_1_0/invalid/7.4.3.1.role_with_component.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (component )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (component )```
 
 [7.4.3.1.role_with_component_ref](../models_1_0/invalid/7.4.3.1.role_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (component_ref )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (component_ref )```
 
 [7.4.3.1.role_with_connection](../models_1_0/invalid/7.4.3.1.role_with_connection.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (connection )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (connection )```
 
 [7.4.3.1.role_with_group](../models_1_0/invalid/7.4.3.1.role_with_group.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (group )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (group )```
 
 [7.4.3.1.role_with_map_components](../models_1_0/invalid/7.4.3.1.role_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (map_components )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (map_components )```
 
 [7.4.3.1.role_with_map_variables](../models_1_0/invalid/7.4.3.1.role_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (map_variables )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (map_variables )```
 
 [7.4.3.1.role_with_model](../models_1_0/invalid/7.4.3.1.role_with_model.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (model )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (model )```
 
 [7.4.3.1.role_with_reaction](../models_1_0/invalid/7.4.3.1.role_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (reaction )```
+* Output: ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (reaction )```
 
 [7.4.3.1.role_with_relationship_ref](../models_1_0/invalid/7.4.3.1.role_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (relationship_ref )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (relationship_ref )```
 
 [7.4.3.1.role_with_role](../models_1_0/invalid/7.4.3.1.role_with_role.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (role )```
+* Output: ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (role )```
 
 [7.4.3.1.role_with_unit](../models_1_0/invalid/7.4.3.1.role_with_unit.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (unit )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (unit )```
 
 [7.4.3.1.role_with_units](../models_1_0/invalid/7.4.3.1.role_with_units.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (units )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (units )```
 
 [7.4.3.1.role_with_variable](../models_1_0/invalid/7.4.3.1.role_with_variable.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (variable )```
+* Output: ```Error on line 9: Element role content does not follow the DTD, expecting (math)?, got (variable )```
 
 [7.4.3.1.role_with_variable_ref](../models_1_0/invalid/7.4.3.1.role_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element role content does not follow the DTD```
-* Output:
-  * ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (variable_ref )```
+* Output: ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (variable_ref )```
 
 
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
 * Expected: ```Value "mole" for attribute role of role is not among```
-* Output:
-  * ```Error on line 9: Value "mole" for attribute role of role is not among the enumerated set```
+* Output: ```Error on line 9: Value "mole" for attribute role of role is not among the enumerated set```
 
 
 ##### 7.4.3.3
@@ -2457,8 +2211,7 @@ Issues:
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
 * Expected: ```Value "backward" for attribute direction of role is not among```
-* Output:
-  * ```Error on line 23: Value "backward" for attribute direction of role is not among the enumerated set```
+* Output: ```Error on line 23: Value "backward" for attribute direction of role is not among the enumerated set```
 
 
 ##### 7.4.3.5
@@ -2530,8 +2283,7 @@ Issues:
 
 [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
 * Expected: ```ID x already defined```
-* Output:
-  * ```Error on line 11: ID x already defined```
+* Output: ```Error on line 11: ID x already defined```
 
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed validation.
 

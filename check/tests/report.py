@@ -130,7 +130,20 @@ class Report(object):
                 name = '`' + test + '`'
             name += ': '
 
-            # Show result
+            # Show expected/returned
+            def expret(expected=None, returned=None):
+                if expected:
+                    b.append('* Expected: ```' + expected + '```')
+                if returned:
+                    returned = returned.splitlines()
+                    if len(returned) == 1:
+                        b.append('* Output: ```' + returned[0] + '```')
+                    else:
+                        b.append('* Output:')
+                        for line in returned:
+                            b.append('  * ```' + line + '```')
+
+            # Show results
             if isinstance(r, ValidPassed):
                 valid_passed += 1
                 b.append(name + 'Valid file passed validation.')
@@ -139,42 +152,24 @@ class Report(object):
                 valid_failed += 1
                 b.append(e_valid_failed + ' ' + name +
                          '**Valid file failed validation.**')
-                if r.output:
-                    b.append('* Output:')
-                    for line in r.output.splitlines():
-                        b.append('  * ```' + line + '```')
+                expret(None, r.output)
 
             elif isinstance(r, InvalidPassed):
                 invalid_passed += 1
                 b.append(e_invalid_passed + ' ' + name
                          + '**Error not detected.**')
-                if r.expected:
-                    b.append('* Expected: ```' + r.expected + '```')
-                if r.output:
-                    b.append('* Output:')
-                    for line in r.output.splitlines():
-                        b.append('  * ```' + line + '```')
+                expret(r.expected, r.output)
 
             elif isinstance(r, InvalidFailed):
                 invalid_failed += 1
                 b.append(name + 'Error detected correctly.')
-                if r.expected:
-                    b.append('* Expected: ```' + r.expected + '```')
-                if r.output:
-                    b.append('* Output:')
-                    for line in r.output.splitlines():
-                        b.append('  * ```' + line + '```')
+                expret(r.expected, r.output)
 
             elif isinstance(r, InvalidFailedIncorrectly):
                 invalid_failed_incorrectly += 1
                 b.append(e_invalid_failed_bad + ' ' + name +
                          '**Invalid file failed for unexpected reason.**')
-                if r.expected:
-                    b.append('* Expected: ```' + r.expected + '```')
-                if r.output:
-                    b.append('* Output:')
-                    for line in r.output.splitlines():
-                        b.append('  * ```' + line + '```')
+                expret(r.expected, r.output)
 
             else:
                 not_run += 1
