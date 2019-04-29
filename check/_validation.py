@@ -22,6 +22,25 @@ def colored(color, text):
     return colors[color] + str(text) + colors['normal']
 
 
+def cellmlmanip(filename):
+    """
+    Validates ``filename`` in cellmlmanip, prints the result and then exits.
+    """
+    from . import cellmlmanip_validation
+
+    ok, msg = cellmlmanip_validation.parse(filename)
+
+    if ok:
+        print(
+            colored('warning', '[pass]')
+            + ' This file validates in cellmlmanip.')
+        sys.exit(0)
+    else:
+        print(colored('fail', '[fail]'))
+        print(msg)
+        sys.exit(1)
+
+
 def dtd_1_0(filename):
     """
     Validates ``filename`` against the CellML 1.0 DTD, prints the result and

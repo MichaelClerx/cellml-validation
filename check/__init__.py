@@ -55,6 +55,7 @@ from ._loaders import (     # noqa
     model_2_0,
 )
 from ._validation import (  # noqa
+    cellmlmanip,
     dtd_1_0,
     myokit,
     opencor,
