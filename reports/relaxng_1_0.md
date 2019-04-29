@@ -16,15 +16,15 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0.-Not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2.-Fundamentals)|19|26|0|1|0|97%|
-|[3. Model structure](#3.-Model-structure)|50|105|0|48|0|76%|
-|[4. Mathematics](#4.-Mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5.-Units)|97|44|2|42|0|76%|
-|[6. Grouping](#6.-Grouping)|15|55|2|17|0|78%|
-|[7. Reactions](#7.-Reactions)|5|69|0|10|0|88%|
-|[8. Metadata framework](#8.-Metadata-framework)|30|1|0|0|0|100%|
-|[C. Advanced units functionality](#C.-Advanced-units-functionality)|45|0|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
+|[2. Fundamentals](#2-fundamentals)|19|26|0|1|0|97%|
+|[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
+|[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
+|[5. Units](#5-units)|97|44|2|42|0|76%|
+|[6. Grouping](#6-grouping)|15|55|2|17|0|78%|
+|[7. Reactions](#7-reactions)|5|69|0|10|0|88%|
+|[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
+|[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
 
 ## 0. Not mentioned in spec

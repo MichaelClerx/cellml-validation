@@ -288,8 +288,9 @@ class Report_1_0(Report):
         }
         self._anchors = {}
         for k, v in self._categories.items():
-            a = v.replace('.', '')
-            a = v.replace(' ', '-')
+            a = v.lower()
+            a = a.replace('.', '')
+            a = a.replace(' ', '-')
             self._anchors[k] = a
 
     def _list_all_tests(self):
