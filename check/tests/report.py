@@ -236,20 +236,22 @@ class Report(object):
         h.append('')
 
         # Add table of scores to header
-        h.append('Results per category:')
+        h.append('Results per category')
+        h.append('')
         h.append('(Valid passed, invalid failed, valid failed, invalid passed'
-                 ', invalid passed incorrectly')
-        h.append('||V Pass|I Fail|'
-                 + e_valid_failed + 'V Fail|'
-                 + e_invalid_passed + 'I Pass|'
-                 + e_invalid_failed_bad + 'I Bad|'
+                 ', invalid passed incorrectly)')
+        h.append('')
+        h.append('|Category|V Pass|I Fail|'
+                 + e_valid_failed + ' V Fail|'
+                 + e_invalid_passed + ' I Pass|'
+                 + e_invalid_failed_bad + ' I Bad|'
                  + 'Score|')
         h.append('|-|-|-|-|-|-|-|')
         for key, label in self._categories.items():
             c = self.count(key)
             vpass, vfail, ipass, ifail, ibad = c
             score = int(100 * (vpass + ifail) / sum(c))
-            line = [label, vpass, ifail, vfail, ipass, ibad, score]
+            line = [label, vpass, ifail, vfail, ipass, ibad, str(score) + '%']
             h.append('|' + '|'.join([str(x) for x in line]) + '|')
         h.append('')
 

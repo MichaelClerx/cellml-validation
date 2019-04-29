@@ -6,11 +6,30 @@ Performance:
 * 278 out of 447 invalid files detected
 
 Issues:
-* 0 valid files failed to parse
+* 0 valid files failed validation
 * 169 invalid files passed validation
 * 0 invalid files failed validation for the wrong reason
 
-## 0.0
+Results per category
+
+(Valid passed, invalid failed, valid failed, invalid passed, invalid passed incorrectly)
+
+|Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
+|-|-|-|-|-|-|-|
+|0. Not mentioned in spec|6|10|0|0|0|100%|
+|2. Fundamentals|19|25|0|2|0|95%|
+|3. Model structure|50|97|0|56|0|72%|
+|4. Mathematics|45|2|0|17|0|73%|
+|5. Units|99|41|0|45|0|75%|
+|6. Grouping|17|46|0|26|0|70%|
+|7. Reactions|5|56|0|23|0|72%|
+|8. Metadata framework|30|1|0|0|0|100%|
+|C. Advanced units functionality|45|0|0|0|0|100%|
+
+
+## 0. Not mentioned in spec
+
+### 0.0
 
 [0.0.root_namespace_1](../models_1_0/valid/0.0.root_namespace_1.cellml): Valid file passed validation.
 
@@ -83,7 +102,9 @@ Issues:
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
 
-## 2.4.1
+## 2. Fundamentals
+
+#### 2.4.1
 
 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
@@ -249,7 +270,7 @@ Issues:
 * Output: ```Error on line 8: Element 'cellml:variable_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 
-### 2.5.1
+#### 2.5.1
 
 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): Error detected correctly.
 * Expected: ```No match found for key-sequence```
@@ -265,7 +286,9 @@ Issues:
   * ```Error on line 5: Element 'cellml:model': The attribute 'name' is required but missing.```
 
 
-## 3.4.1.1
+## 3. Model structure
+
+##### 3.4.1.1
 
 [3.4.1.1.model_child_order_1](../models_1_0/valid/3.4.1.1.model_child_order_1.cellml): Valid file passed validation.
 
@@ -345,7 +368,7 @@ Issues:
   * ```Error on line 3: Element 'cellml:model', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
 
 
-#### 3.4.2.1
+##### 3.4.2.1
 
 [3.4.2.1.component_child_order_1](../models_1_0/valid/3.4.2.1.component_child_order_1.cellml): Valid file passed validation.
 
@@ -435,7 +458,7 @@ Issues:
   * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 
-#### 3.4.3.1
+##### 3.4.3.1
 
 [3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
 * Expected: ```The attribute 'name' is required but missing```
@@ -589,7 +612,7 @@ Issues:
 🔵 [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): **Error not detected.**
 
 
-#### 3.4.4.1
+##### 3.4.4.1
 
 [3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': Missing child element(s).```
@@ -664,7 +687,7 @@ Issues:
 * Output: ```Error on line 15: Element 'cellml:variable_ref': This element is not expected.```
 
 
-#### 3.4.5.1
+##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
 
@@ -762,7 +785,7 @@ Issues:
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
 
-#### 3.4.6.1
+##### 3.4.6.1
 
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': The attribute 'variable_1' is req```
@@ -950,7 +973,9 @@ Issues:
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
-## 4.2
+## 4. Mathematics
+
+### 4.2
 
 [4.2.3_1.mathml_basics](../models_1_0/valid/4.2.3_1.mathml_basics.cellml): Valid file passed validation.
 
@@ -1019,7 +1044,7 @@ Issues:
 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): Valid file passed validation.
 
 
-### 4.4.1
+#### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
 * Expected: ```cake': This element is not expected.```
@@ -1057,7 +1082,7 @@ Issues:
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
-#### 4.4.3.1
+##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
 
@@ -1090,9 +1115,10 @@ Issues:
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
-### 4.5.1
+#### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
+
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1103,7 +1129,9 @@ Issues:
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
 
-## 5.2.2
+## 5. Units
+
+#### 5.2.2
 
 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): Error detected correctly.
 * Expected: ```'deca' is not a valid value of the union type 'cellml:unit_prefix'```
@@ -1167,7 +1195,7 @@ Issues:
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
 
-### 5.4.1.1
+##### 5.4.1.1
 
 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed validation.
 
@@ -1341,7 +1369,7 @@ Issues:
   * ```Error on line 5: Element 'cellml:units', attribute 'base_units': 'certainly' is not a valid value of the atomic type 'cellml:yes_no'.```
 
 
-#### 5.4.2.1
+##### 5.4.2.1
 
 [5.4.2.1.unit_offset_non_zero](../models_1_0/valid/5.4.2.1.unit_offset_non_zero.cellml): Valid file passed validation.
 
@@ -1492,7 +1520,7 @@ Issues:
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
 
-### 5.5.2
+#### 5.5.2
 
 [5.5.2.boolean_arithmetic_divide](../models_1_0/booleans/5.5.2.boolean_arithmetic_divide.cellml): Valid file passed validation.
 
@@ -1605,7 +1633,9 @@ Issues:
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
 
-## 6.4.1.1
+## 6. Grouping
+
+##### 6.4.1.1
 
 🔵 [6.4.1.1.group_component_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_1.cellml): **Error not detected.**
 
@@ -1675,12 +1705,15 @@ Issues:
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
 * Output: ```Error on line 14: Element 'cellml:variable_ref': This element is not expected.```
 
+
+#### 6.4.1
+
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
 
-#### 6.4.2.1
+##### 6.4.2.1
 
 [6.4.2.1.relationship_ref_name](../models_1_0/valid/6.4.2.1.relationship_ref_name.cellml): Valid file passed validation.
 
@@ -1795,7 +1828,7 @@ Issues:
 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): Valid file passed validation.
 
 
-#### 6.4.3.1
+##### 6.4.3.1
 
 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Error detected correctly.
 * Expected: ```'cellml:component_ref': The attribute 'component' is required```
@@ -1910,7 +1943,9 @@ Issues:
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
 
-## 7.4.1.1
+## 7. Reactions
+
+##### 7.4.1.1
 
 [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Error detected correctly.
 * Expected: ```'cellml:reaction': Missing child element```
@@ -1989,7 +2024,7 @@ Issues:
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 
 
-#### 7.4.2.1
+##### 7.4.2.1
 
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': Missing child element```
@@ -2069,7 +2104,7 @@ Issues:
 * Output: ```Error on line 8: Element 'cellml:variable_ref': No match found for key-sequence ['b'] of keyref 'cellml:reaction_variables'.```
 
 
-#### 7.4.3.1
+##### 7.4.3.1
 
 [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': The attribute 'role' is required```
@@ -2235,6 +2270,9 @@ Issues:
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+#### 7.4.3
+
 [7.4.3.reaction_all_roles_and_attributes](../models_1_0/valid/7.4.3.reaction_all_roles_and_attributes.cellml): Valid file passed validation.
 
 [7.4.3.reaction_reversible_no](../models_1_0/valid/7.4.3.reaction_reversible_no.cellml): Valid file passed validation.
@@ -2242,7 +2280,9 @@ Issues:
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
 
-## 8.4.1
+## 8. Metadata framework
+
+#### 8.4.1
 
 [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'xs:ID'```
@@ -2310,6 +2350,11 @@ Issues:
 [8.4.2.rdf_in_variable](../models_1_0/valid/8.4.2.rdf_in_variable.cellml): Valid file passed validation.
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed validation.
+
+
+## C. Advanced units functionality
+
+#### 103.3.3
 
 [C.3.3.unit_checking_arithmetic_minus_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_minus_operand_error_1.cellml): Valid file passed validation.
 

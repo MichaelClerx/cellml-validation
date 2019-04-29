@@ -6,11 +6,30 @@ Performance:
 * 313 out of 447 invalid files detected
 
 Issues:
-* 4 valid files failed to parse
+* 4 valid files failed validation
 * 134 invalid files passed validation
 * 0 invalid files failed validation for the wrong reason
 
-## 0.0
+Results per category
+
+(Valid passed, invalid failed, valid failed, invalid passed, invalid passed incorrectly)
+
+|Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
+|-|-|-|-|-|-|-|
+|0. Not mentioned in spec|6|10|0|0|0|100%|
+|2. Fundamentals|19|26|0|1|0|97%|
+|3. Model structure|50|105|0|48|0|76%|
+|4. Mathematics|45|3|0|16|0|75%|
+|5. Units|97|44|2|42|0|76%|
+|6. Grouping|15|55|2|17|0|78%|
+|7. Reactions|5|69|0|10|0|88%|
+|8. Metadata framework|30|1|0|0|0|100%|
+|C. Advanced units functionality|45|0|0|0|0|100%|
+
+
+## 0. Not mentioned in spec
+
+### 0.0
 
 [0.0.root_namespace_1](../models_1_0/valid/0.0.root_namespace_1.cellml): Valid file passed validation.
 
@@ -101,7 +120,9 @@ Issues:
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
 
-## 2.4.1
+## 2. Fundamentals
+
+#### 2.4.1
 
 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
@@ -347,7 +368,7 @@ Issues:
   * ```Error on line 5: Element model failed to validate content```
 
 
-### 2.5.1
+#### 2.5.1
 
 🔵 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): **Error not detected.**
 
@@ -361,7 +382,9 @@ Issues:
   * ```Error on line 5: Element model failed to validate content```
 
 
-## 3.4.1.1
+## 3. Model structure
+
+##### 3.4.1.1
 
 [3.4.1.1.model_child_order_1](../models_1_0/valid/3.4.1.1.model_child_order_1.cellml): Valid file passed validation.
 
@@ -445,7 +468,7 @@ Issues:
   * ```Error on line 3: Element model failed to validate content```
 
 
-#### 3.4.2.1
+##### 3.4.2.1
 
 [3.4.2.1.component_child_order_1](../models_1_0/valid/3.4.2.1.component_child_order_1.cellml): Valid file passed validation.
 
@@ -568,7 +591,7 @@ Issues:
   * ```Error on line 5: Element model failed to validate content```
 
 
-#### 3.4.3.1
+##### 3.4.3.1
 
 [3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
 * Expected: ```Element variable failed to validate attributes```
@@ -839,7 +862,7 @@ Issues:
   * ```Error on line 6: Element model failed to validate content```
 
 
-#### 3.4.4.1
+##### 3.4.4.1
 
 [3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
 * Expected: ```Expecting an element map_components```
@@ -997,7 +1020,7 @@ Issues:
   * ```Error on line 12: Element model failed to validate content```
 
 
-#### 3.4.5.1
+##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
 
@@ -1176,7 +1199,7 @@ Issues:
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
 
-#### 3.4.6.1
+##### 3.4.6.1
 
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables failed to validate attributes```
@@ -1451,7 +1474,9 @@ Issues:
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
-## 4.2
+## 4. Mathematics
+
+### 4.2
 
 [4.2.3_1.mathml_basics](../models_1_0/valid/4.2.3_1.mathml_basics.cellml): Valid file passed validation.
 
@@ -1520,7 +1545,7 @@ Issues:
 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): Valid file passed validation.
 
 
-### 4.4.1
+#### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate content```
@@ -1570,7 +1595,7 @@ Issues:
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
-#### 4.4.3.1
+##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
 
@@ -1610,9 +1635,10 @@ Issues:
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
-### 4.5.1
+#### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
+
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1623,7 +1649,9 @@ Issues:
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
 
-## 5.2.2
+## 5. Units
+
+#### 5.2.2
 
 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix for element unit```
@@ -1692,7 +1720,7 @@ Issues:
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
 
-### 5.4.1.1
+##### 5.4.1.1
 
 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed validation.
 
@@ -1939,7 +1967,7 @@ Issues:
   * ```Error on line 5: Element model failed to validate content```
 
 
-#### 5.4.2.1
+##### 5.4.2.1
 
 [5.4.2.1.unit_offset_non_zero](../models_1_0/valid/5.4.2.1.unit_offset_non_zero.cellml): Valid file passed validation.
 
@@ -2222,7 +2250,7 @@ Issues:
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
 
-### 5.5.2
+#### 5.5.2
 
 [5.5.2.boolean_arithmetic_divide](../models_1_0/booleans/5.5.2.boolean_arithmetic_divide.cellml): Valid file passed validation.
 
@@ -2335,7 +2363,9 @@ Issues:
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
 
-## 6.4.1.1
+## 6. Grouping
+
+##### 6.4.1.1
 
 [6.4.1.1.group_component_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_1.cellml): Error detected correctly.
 * Expected: ```Element group failed to validate content```
@@ -2488,12 +2518,15 @@ Issues:
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 9: Element model failed to validate content```
 
+
+#### 6.4.1
+
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
 
-#### 6.4.2.1
+##### 6.4.2.1
 
 [6.4.2.1.relationship_ref_name](../models_1_0/valid/6.4.2.1.relationship_ref_name.cellml): Valid file passed validation.
 
@@ -2717,7 +2750,7 @@ Issues:
 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): Valid file passed validation.
 
 
-#### 6.4.3.1
+##### 6.4.3.1
 
 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Error detected correctly.
 * Expected: ```Element component_ref failed to validate content```
@@ -2921,7 +2954,9 @@ Issues:
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
 
-## 7.4.1.1
+## 7. Reactions
+
+##### 7.4.1.1
 
 [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Error detected correctly.
 * Expected: ```Expecting an element variable_ref```
@@ -3091,7 +3126,7 @@ Issues:
   * ```Error on line 6: Element model failed to validate content```
 
 
-#### 7.4.2.1
+##### 7.4.2.1
 
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
 * Expected: ```Element variable_ref failed to validate content```
@@ -3279,7 +3314,7 @@ Issues:
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 
 
-#### 7.4.3.1
+##### 7.4.3.1
 
 [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Error detected correctly.
 * Expected: ```Element role failed to validate attributes```
@@ -3715,6 +3750,9 @@ Issues:
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+#### 7.4.3
+
 [7.4.3.reaction_all_roles_and_attributes](../models_1_0/valid/7.4.3.reaction_all_roles_and_attributes.cellml): Valid file passed validation.
 
 [7.4.3.reaction_reversible_no](../models_1_0/valid/7.4.3.reaction_reversible_no.cellml): Valid file passed validation.
@@ -3722,7 +3760,9 @@ Issues:
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
 
-## 8.4.1
+## 8. Metadata framework
+
+#### 8.4.1
 
 [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
 * Expected: ```Invalid attribute id for element component_ref```
@@ -3795,6 +3835,11 @@ Issues:
 [8.4.2.rdf_in_variable](../models_1_0/valid/8.4.2.rdf_in_variable.cellml): Valid file passed validation.
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed validation.
+
+
+## C. Advanced units functionality
+
+#### 103.3.3
 
 [C.3.3.unit_checking_arithmetic_minus_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_minus_operand_error_1.cellml): Valid file passed validation.
 
