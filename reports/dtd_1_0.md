@@ -12,7 +12,8 @@ Issues:
 
 Results per category:
 (Valid passed, invalid failed, valid failed, invalid passed, invalid passed incorrectly
-||V Pass|I Fail|🔴V Fail|🔵I Pass|🔶I Bad|Score|
+
+|C|V Pass|I Fail|🔴V Fail|🔵I Pass|🔶I Bad|Score|
 |-|-|-|-|-|-|-|
 |0. Not mentioned in spec|6|2|0|8|0|50|
 |2. Fundamentals|5|21|14|6|0|56|
