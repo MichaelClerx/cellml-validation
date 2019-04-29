@@ -239,7 +239,8 @@ class Report(object):
         h.append('Results per category')
         h.append('')
         h.append('(Valid passed, invalid failed, valid failed, invalid passed'
-                 ', invalid failed for wrong reason)')
+                 ', invalid failed for wrong reason'
+                 ', percent classified correctly according to spec)')
         h.append('')
         h.append('|Category|V Pass|I Fail|'
                  + e_valid_failed + ' V Fail|'
