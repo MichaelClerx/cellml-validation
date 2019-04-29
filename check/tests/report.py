@@ -59,7 +59,7 @@ class Report(object):
         if name in self._results:
             raise Exception('Duplicate test result for: ' + name)
         self._results[name] = InvalidFailedIncorrectly(
-            name, path, message, expected)
+            name, path, output, expected)
 
     def count(self, category=None):
         """
