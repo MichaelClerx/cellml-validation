@@ -247,12 +247,18 @@ class Report(object):
                  + e_invalid_failed_bad + ' I Bad|'
                  + 'Score|')
         h.append('|-|-|-|-|-|-|-|')
+
         for key, label in self._categories.items():
+            # Category, with link
+            a = '[' + label + '](' + self._anchors[key]  + ')'
+
+            # Body
             c = self.count(key)
             vpass, vfail, ipass, ifail, ibad = c
             score = int(100 * (vpass + ifail) / sum(c))
-            line = [label, vpass, ifail, vfail, ipass, ibad, str(score) + '%']
+            line = [a, vpass, ifail, vfail, ipass, ibad, str(score) + '%']
             h.append('|' + '|'.join([str(x) for x in line]) + '|')
+
         h.append('')
 
         # Write tests to file
@@ -280,6 +286,11 @@ class Report_1_0(Report):
             8: '8. Metadata framework',
             103: 'C. Advanced units functionality',
         }
+        self._anchors = {}
+        for k, v in self._categories.items():
+            a = v.replace('.', '')
+            a = v.replace(' ', '-')
+            self._anchors[k] = a
 
     def _list_all_tests(self):
         tests = shared.list_passes_1_0() + shared.list_fails_1_0()
