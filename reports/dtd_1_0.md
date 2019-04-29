@@ -6,11 +6,28 @@ Performance:
 * 253 out of 447 invalid files detected
 
 Issues:
-* 36 valid files failed to parse
+* 36 valid files failed validation
 * 194 invalid files passed validation
 * 0 invalid files failed validation for the wrong reason
 
-## 0.0
+Results per category:
+(Valid passed, invalid failed, valid failed, invalid passed, invalid passed incorrectly
+||V Pass|I Fail|🔴V Fail|🔵I Pass|🔶I Bad|Score|
+|-|-|-|-|-|-|-|
+|0. Not mentioned in spec|6|2|0|8|0|50|
+|2. Fundamentals|5|21|14|6|0|56|
+|3. Model structure|50|97|0|56|0|72|
+|4. Mathematics|45|3|0|16|0|75|
+|5. Units|99|32|0|54|0|70|
+|6. Grouping|10|48|7|24|0|65|
+|7. Reactions|5|49|0|30|0|64|
+|8. Metadata framework|15|1|15|0|0|51|
+|C. Advanced units functionality|45|0|0|0|0|100|
+
+
+## 0. Not mentioned in spec
+
+### 0.0
 
 [0.0.root_namespace_1](../models_1_0/valid/0.0.root_namespace_1.cellml): Valid file passed validation.
 
@@ -55,7 +72,9 @@ Issues:
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
 
-## 2.4.1
+## 2. Fundamentals
+
+#### 2.4.1
 
 🔵 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): **Error not detected.**
 
@@ -323,7 +342,7 @@ Issues:
 * Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role CDATA)```
 
 
-### 2.5.1
+#### 2.5.1
 
 🔵 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): **Error not detected.**
 
@@ -335,7 +354,9 @@ Issues:
 * Output: ```Error on line 5: No declaration for attribute name of element model```
 
 
-## 3.4.1.1
+## 3. Model structure
+
+##### 3.4.1.1
 
 [3.4.1.1.model_child_order_1](../models_1_0/valid/3.4.1.1.model_child_order_1.cellml): Valid file passed validation.
 
@@ -413,7 +434,7 @@ Issues:
 🔵 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): **Error not detected.**
 
 
-#### 3.4.2.1
+##### 3.4.2.1
 
 [3.4.2.1.component_child_order_1](../models_1_0/valid/3.4.2.1.component_child_order_1.cellml): Valid file passed validation.
 
@@ -493,7 +514,7 @@ Issues:
 🔵 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): **Error not detected.**
 
 
-#### 3.4.3.1
+##### 3.4.3.1
 
 [3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
 * Expected: ```Element variable does not carry attribute name```
@@ -627,7 +648,7 @@ Issues:
 🔵 [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): **Error not detected.**
 
 
-#### 3.4.4.1
+##### 3.4.4.1
 
 [3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
 * Expected: ```expecting (map_components , map_variables+)```
@@ -723,7 +744,7 @@ Issues:
 * Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables variable_ref )```
 
 
-#### 3.4.5.1
+##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
 
@@ -817,7 +838,7 @@ Issues:
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
 
-#### 3.4.6.1
+##### 3.4.6.1
 
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables does not carry attribute variable_1```
@@ -1007,7 +1028,9 @@ Issues:
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
-## 4.2
+## 4. Mathematics
+
+### 4.2
 
 [4.2.3_1.mathml_basics](../models_1_0/valid/4.2.3_1.mathml_basics.cellml): Valid file passed validation.
 
@@ -1076,7 +1099,7 @@ Issues:
 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): Valid file passed validation.
 
 
-### 4.4.1
+#### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
 * Expected: ```Element apply content does not follow the DTD```
@@ -1124,7 +1147,7 @@ Issues:
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
-#### 4.4.3.1
+##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
 
@@ -1159,9 +1182,10 @@ Issues:
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
-### 4.5.1
+#### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
+
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1172,7 +1196,9 @@ Issues:
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
 
-## 5.2.2
+## 5. Units
+
+#### 5.2.2
 
 🔵 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): **Error not detected.**
 
@@ -1234,7 +1260,7 @@ Issues:
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
 
-### 5.4.1.1
+##### 5.4.1.1
 
 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed validation.
 
@@ -1399,7 +1425,7 @@ Issues:
 * Output: ```Error on line 5: Value "certainly" for attribute base_units of units is not among the enumerated set```
 
 
-#### 5.4.2.1
+##### 5.4.2.1
 
 [5.4.2.1.unit_offset_non_zero](../models_1_0/valid/5.4.2.1.unit_offset_non_zero.cellml): Valid file passed validation.
 
@@ -1532,7 +1558,7 @@ Issues:
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
 
-### 5.5.2
+#### 5.5.2
 
 [5.5.2.boolean_arithmetic_divide](../models_1_0/booleans/5.5.2.boolean_arithmetic_divide.cellml): Valid file passed validation.
 
@@ -1645,7 +1671,9 @@ Issues:
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
 
-## 6.4.1.1
+## 6. Grouping
+
+##### 6.4.1.1
 
 🔵 [6.4.1.1.group_component_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_1.cellml): **Error not detected.**
 
@@ -1737,12 +1765,15 @@ Issues:
 * Expected: ```Element group content does not follow the DTD```
 * Output: ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref variable_ref )```
 
+
+#### 6.4.1
+
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
 
-#### 6.4.2.1
+##### 6.4.2.1
 
 🔴 [6.4.2.1.relationship_ref_name](../models_1_0/valid/6.4.2.1.relationship_ref_name.cellml): **Valid file failed validation.**
 * Output: ```Error on line 5: No declaration for attribute xmlns:family of element model```
@@ -1857,7 +1888,7 @@ Issues:
 * Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
 
 
-#### 6.4.3.1
+##### 6.4.3.1
 
 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Error detected correctly.
 * Expected: ```Element component_ref does not carry attribute component```
@@ -1971,7 +2002,9 @@ Issues:
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
 
-## 7.4.1.1
+## 7. Reactions
+
+##### 7.4.1.1
 
 [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Error detected correctly.
 * Expected: ```Element reaction content does not follow the DTD```
@@ -2050,7 +2083,7 @@ Issues:
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 
 
-#### 7.4.2.1
+##### 7.4.2.1
 
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
 * Expected: ```Element variable_ref content does not follow the DTD```
@@ -2126,7 +2159,7 @@ Issues:
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 
 
-#### 7.4.3.1
+##### 7.4.3.1
 
 [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Error detected correctly.
 * Expected: ```Element role does not carry attribute role```
@@ -2272,6 +2305,9 @@ Issues:
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+#### 7.4.3
+
 [7.4.3.reaction_all_roles_and_attributes](../models_1_0/valid/7.4.3.reaction_all_roles_and_attributes.cellml): Valid file passed validation.
 
 [7.4.3.reaction_reversible_no](../models_1_0/valid/7.4.3.reaction_reversible_no.cellml): Valid file passed validation.
@@ -2279,7 +2315,9 @@ Issues:
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
 
-## 8.4.1
+## 8. Metadata framework
+
+#### 8.4.1
 
 [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
 * Expected: ```ID x already defined```
@@ -2452,6 +2490,11 @@ Issues:
   * ```Error on line 12: No declaration for element RDF```
   * ```Error on line 12: No declaration for attribute about of element RDF```
   * ```Error on line 13: No declaration for element description```
+
+
+## C. Advanced units functionality
+
+#### 103.3.3
 
 [C.3.3.unit_checking_arithmetic_minus_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_arithmetic_minus_operand_error_1.cellml): Valid file passed validation.
 

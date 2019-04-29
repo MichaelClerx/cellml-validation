@@ -61,6 +61,52 @@ class Report(object):
         self._results[name] = InvalidFailedIncorrectly(
             name, path, message, expected)
 
+    def count(self, category=None):
+        """
+        Counts and returns the different test results.
+        """
+        valid_passed = 0
+        valid_failed = 0
+        invalid_passed = 0
+        invalid_failed = 0
+        invalid_failed_incorrectly = 0
+        not_run = 0
+
+        for test in self._all_tests:
+            try:
+                r = self._results[test]
+            except KeyError:
+                not_run += 1
+                continue
+            if category is not None:
+                if r.category != category:
+                    continue
+
+            if isinstance(r, ValidPassed):
+                valid_passed += 1
+            elif isinstance(r, ValidFailed):
+                valid_failed += 1
+            elif isinstance(r, InvalidPassed):
+                invalid_passed += 1
+            elif isinstance(r, InvalidFailed):
+                invalid_failed += 1
+            elif isinstance(r, InvalidFailedIncorrectly):
+                invalid_failed_incorrectly += 1
+            else:
+                raise NotImplementedError(
+                    'Unknown test result class: ' + str(type(r)))
+
+        output = [
+            valid_passed,
+            valid_failed,
+            invalid_passed,
+            invalid_failed,
+            invalid_failed_incorrectly,
+        ]
+        if category is None:
+            return output + [not_run]
+        return output
+
     def render(self, path):
         """
         Renders this report, storing the result as a markdown file in the given
@@ -71,18 +117,8 @@ class Report(object):
         b = []
 
         # Add title to header
-        e = ''
         h.append('# ' + self._name)
-        h.append(e)
-
-        # Count
-        valid_passed = 0
-        valid_failed = 0
-        invalid_passed = 0
-        invalid_failed = 0
-        invalid_failed_incorrectly = 0
-        not_run = 0
-        extra = 0
+        h.append('')
 
         # Create body
         e_valid_failed = '🔴'
@@ -92,37 +128,27 @@ class Report(object):
         e_unknown_test = '❗❗'
 
         # Loop over known tests, show results
-        last = [-1, -1, -1, -1]
+        last = (-1, -1, -1, -1)
         level = 0
         for test in self._all_tests:
 
-            # Split index part from textual test name
-            code = []
-            for x in test.split('.'):
-                if not x.isdigit():
-                    break
-                code.append(int(x))
-            next = code + [0] * (4 - len(code))
-
-            # Determine heading level
-            if last == next:
-                header = 6
-            else:
-                header = 2
-                for i in range(4):
-                    if next[i] > last[i]:
-                        break
-                    header += 1
-                last = next
+            # Get result
+            r = self._results.get(test, None)
 
             # Write header
-            if header < 6:
-                b.append(e)
-                b.append('#' * header + ' ' + '.'.join([str(x) for x in code]))
-                b.append(e)
+            if r is not None:
+                next = r.index
+            if last != next:
+                if last[0] != next[0]:
+                    b.append('')
+                    b.append('## ' + self._categories[next[0]])
+                b.append('')
+                if r.level > 1:
+                    b.append('#' * (1 + r.level) + ' ' + r.pretty_index)
+                    b.append('')
+                last = next
 
             # Get path to test file
-            r = self._results.get(test, None)
             if r:
                 rpath = os.path.relpath(r.path, os.path.basename(path))
                 name = '[' + test + '](' + rpath + ')'
@@ -145,37 +171,25 @@ class Report(object):
 
             # Show results
             if isinstance(r, ValidPassed):
-                valid_passed += 1
                 b.append(name + 'Valid file passed validation.')
-
             elif isinstance(r, ValidFailed):
-                valid_failed += 1
                 b.append(e_valid_failed + ' ' + name +
                          '**Valid file failed validation.**')
                 expret(None, r.output)
-
             elif isinstance(r, InvalidPassed):
-                invalid_passed += 1
                 b.append(e_invalid_passed + ' ' + name
                          + '**Error not detected.**')
                 expret(r.expected, r.output)
-
             elif isinstance(r, InvalidFailed):
-                invalid_failed += 1
                 b.append(name + 'Error detected correctly.')
                 expret(r.expected, r.output)
-
             elif isinstance(r, InvalidFailedIncorrectly):
-                invalid_failed_incorrectly += 1
                 b.append(e_invalid_failed_bad + ' ' + name +
                          '**Invalid file failed for unexpected reason.**')
                 expret(r.expected, r.output)
-
             else:
-                not_run += 1
                 b.append(e_not_run + name + '**Test not run**')
-
-            b.append(e)
+            b.append('')
 
         # Show unknown tests
         extra = set(self._results.keys()) - set(self._all_tests)
@@ -185,40 +199,59 @@ class Report(object):
                 b.append(e_unknown_test + '`' + name + '`')
 
         # Calculate scores
-        valid_total = valid_passed + valid_failed
-        invalid_total = (
-            invalid_passed + invalid_failed + invalid_failed_incorrectly)
-        total = valid_total + invalid_total
-        correct = valid_passed + invalid_failed
-        percent_correct = int(100 * correct / total) if total else 0
+        vpass, vfail, ipass, ifail, ibad, not_run = self.count()
+        vtotal = vpass + vfail
+        itotal = ipass + ifail + ibad
+        total = vtotal + itotal
+        correct = vpass + ifail
+        pcorrect = int(100 * correct / total) if total else 0
 
-        # Update header
+        # Add scores to header
         h.append('Performance:')
         h.append(
-            '* ' + str(percent_correct) + '% according to spec ('
-            + str(correct) + ' out of ' + str(total) + ')')
+            '* ' + str(pcorrect) + '% according to spec (' + str(correct)
+            + ' out of ' + str(total) + ')')
         h.append(
-            '* ' + str(valid_passed) + ' out of ' + str(valid_total)
+            '* ' + str(vpass) + ' out of ' + str(vtotal)
             + ' valid files passed')
         h.append(
-            '* ' + str(invalid_failed) + ' out of ' + str(invalid_total)
+            '* ' + str(ifail) + ' out of ' + str(itotal)
             + ' invalid files detected')
-        h.append(e)
+        h.append('')
         h.append('Issues:')
         h.append(
-            '* ' + str(valid_failed) + ' valid files failed to parse')
+            '* ' + str(vfail) + ' valid files failed validation')
         h.append(
-            '* ' + str(invalid_passed) + ' invalid files passed validation')
+            '* ' + str(ipass) + ' invalid files passed validation')
         h.append(
-            '* ' + str(invalid_failed_incorrectly)
+            '* ' + str(ibad)
             + ' invalid files failed validation for the wrong reason')
         if not_run or extra:
-            h.append(e)
+            h.append('')
             h.append('Test implementation issues')
             if extra:
-                h.append('* ' + str(unknown) + ' unknown tests run')
+                h.append('* **' + str(unknown) + ' unknown tests run**')
             else:
-                h.append('* ' + str(not_run) + ' tests not run')
+                h.append('* **' + str(not_run) + ' tests not run**')
+        h.append('')
+
+        # Add table of scores to header
+        h.append('Results per category:')
+        h.append('(Valid passed, invalid failed, valid failed, invalid passed'
+                 ', invalid passed incorrectly')
+        h.append('||V Pass|I Fail|'
+                 + e_valid_failed + 'V Fail|'
+                 + e_invalid_passed + 'I Pass|'
+                 + e_invalid_failed_bad + 'I Bad|'
+                 + 'Score|')
+        h.append('|-|-|-|-|-|-|-|')
+        for key, label in self._categories.items():
+            c = self.count(key)
+            vpass, vfail, ipass, ifail, ibad = c
+            score = int(100 * (vpass + ifail) / sum(c))
+            line = [label, vpass, ifail, vfail, ipass, ibad, score]
+            h.append('|' + '|'.join([str(x) for x in line]) + '|')
+        h.append('')
 
         # Write tests to file
         with open(path, 'w') as f:
@@ -234,10 +267,21 @@ class Report_1_0(Report):
     def __init__(self, name):
         super(Report_1_0, self).__init__(name)
 
+        self._categories = {
+            0: '0. Not mentioned in spec',
+            2: '2. Fundamentals',
+            3: '3. Model structure',
+            4: '4. Mathematics',
+            5: '5. Units',
+            6: '6. Grouping',
+            7: '7. Reactions',
+            8: '8. Metadata framework',
+            103: 'C. Advanced units functionality',
+        }
+
     def _list_all_tests(self):
         tests = shared.list_passes_1_0() + shared.list_fails_1_0()
         tests = [t.values[0] for t in tests]
-        print(tests[0])
 
         tests.sort()
         return tests
@@ -248,6 +292,31 @@ class Result(object):
         self.name = str(name)
         self.path = str(path)
         self.output = str(output) if output else ''
+
+        # Get index from test name
+        index = []
+        for x in self.name.split('.'):
+            # Allow only numbers or single letters (appendix)
+            if x.isdigit():
+                index.append(int(x))
+            elif len(x) == 1:
+                index.append(ord(x) + 36)
+            else:
+                break
+        assert len(index) <= 4
+
+        # String index
+        self.pretty_index = '.'.join([str(x) for x in index])
+
+        # Number of entries in index
+        self.level = len(index)
+        index += [0] * (4 - len(index))
+
+        # Index, appended with zeros
+        self.index = tuple(index)
+
+        # First index
+        self.category = index[0]
 
 
 class ValidPassed(Result):
