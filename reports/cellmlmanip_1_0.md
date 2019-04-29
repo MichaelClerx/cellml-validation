@@ -623,7 +623,7 @@ Results per category
 
 [3.4.6.4.map_variables_child_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_2.cellml): Error detected correctly.
 * Expected: ```Target already assigned to```
-* Output: ```Target already assigned to _C$b before assignment to _B$a```
+* Output: ```Target already assigned to _B$a before assignment to _C$b```
 
 [3.4.6.4.map_variables_child_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_1.cellml): Error detected correctly.
 * Expected: ```Cannot determine the source & target for connection```
@@ -719,7 +719,7 @@ Results per category
 
 [3.4.6.4.map_variables_parent_multiple_out](../models_1_0/invalid/3.4.6.4.map_variables_parent_multiple_out.cellml): Error detected correctly.
 * Expected: ```Target already assigned```
-* Output: ```Target already assigned to _A$b before assignment to _A$a```
+* Output: ```Target already assigned to _A$a before assignment to _A$b```
 
 [3.4.6.4.map_variables_parent_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_parent_out_to_out_1.cellml): Error detected correctly.
 * Expected: ```Cannot determine the source & target for connection```
@@ -753,7 +753,7 @@ Results per category
 
 [3.4.6.4.map_variables_sibling_multiple_out_1](../models_1_0/invalid/3.4.6.4.map_variables_sibling_multiple_out_1.cellml): Error detected correctly.
 * Expected: ```Target already assigned```
-* Output: ```Target already assigned to _A$a before assignment to _A$b```
+* Output: ```Target already assigned to _A$b before assignment to _A$a```
 
 [3.4.6.4.map_variables_sibling_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_sibling_multiple_out_2.cellml): Error detected correctly.
 * Expected: ```Target already assigned```
@@ -1007,7 +1007,7 @@ Results per category
 * Output: ```No handler for element <factorial>```
 
 🔴 [5.2.7.unit_checking_functions_non_smooth](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_non_smooth.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=7214920))```
+* Output: ```TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=3014616))```
 
 🔴 [5.2.7.unit_checking_functions_power_and_root](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_power_and_root.cellml): **Valid file failed validation.**
 * Output: ```'Cannot find unit <meter_cubic> in unit registry'```
@@ -1572,7 +1572,7 @@ Results per category
 * Output: ```TODO TODO TODO False S.false```
 
 🔴 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=7214859), Dummy('1.00000000000000', dummy_index=7214860))```
+* Output: ```TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=3014555), Dummy('1.00000000000000', dummy_index=3014556))```
 
 
 ## 6. Grouping
@@ -2135,73 +2135,73 @@ Results per category
 * Output: ```log args not dimensionless ([<Unit('volt')>])```
 
 🔴 [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=7215024))```
+* Output: ```TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=3014720))```
 
 🔴 [C.3.3.unit_checking_trig_arccosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccosh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=7215026))```
+* Output: ```TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=3014722))```
 
 🔴 [C.3.3.unit_checking_trig_arccot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccot_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=7215028))```
+* Output: ```TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=3014724))```
 
 🔴 [C.3.3.unit_checking_trig_arccoth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccoth_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=7215030))```
+* Output: ```TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=3014726))```
 
 🔴 [C.3.3.unit_checking_trig_arccsc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsc_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=7215032))```
+* Output: ```TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=3014728))```
 
 🔴 [C.3.3.unit_checking_trig_arccsch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsch_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=7215034))```
+* Output: ```TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=3014730))```
 
 🔴 [C.3.3.unit_checking_trig_arcsec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsec_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=7215036))```
+* Output: ```TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=3014732))```
 
 🔴 [C.3.3.unit_checking_trig_arcsech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsech_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=7215038))```
+* Output: ```TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=3014734))```
 
 🔴 [C.3.3.unit_checking_trig_arcsin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsin_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=7215040))```
+* Output: ```TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=3014736))```
 
 🔴 [C.3.3.unit_checking_trig_arcsinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsinh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=7215042))```
+* Output: ```TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=3014738))```
 
 🔴 [C.3.3.unit_checking_trig_arctan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctan_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=7215044))```
+* Output: ```TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=3014740))```
 
 🔴 [C.3.3.unit_checking_trig_arctanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctanh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=7215046))```
+* Output: ```TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=3014742))```
 
 🔴 [C.3.3.unit_checking_trig_cos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cos_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=7215048))```
+* Output: ```TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=3014744))```
 
 🔴 [C.3.3.unit_checking_trig_cosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cosh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=7215050))```
+* Output: ```TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=3014746))```
 
 🔴 [C.3.3.unit_checking_trig_cot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cot_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=7215052))```
+* Output: ```TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=3014748))```
 
 🔴 [C.3.3.unit_checking_trig_coth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_coth_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=7215054))```
+* Output: ```TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=3014750))```
 
 🔴 [C.3.3.unit_checking_trig_csc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csc_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=7215056))```
+* Output: ```TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=3014752))```
 
 🔴 [C.3.3.unit_checking_trig_csch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csch_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=7215058))```
+* Output: ```TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=3014754))```
 
 🔴 [C.3.3.unit_checking_trig_sec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sec_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=7215060))```
+* Output: ```TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=3014756))```
 
 🔴 [C.3.3.unit_checking_trig_sech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sech_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=7215062))```
+* Output: ```TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=3014758))```
 
 🔴 [C.3.3.unit_checking_trig_sin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sin_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=7215064))```
+* Output: ```TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=3014760))```
 
 🔴 [C.3.3.unit_checking_trig_sinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sinh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=7215066))```
+* Output: ```TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=3014762))```
 
 🔴 [C.3.3.unit_checking_trig_tan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tan_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=7215068))```
+* Output: ```TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=3014764))```
 
 🔴 [C.3.3.unit_checking_trig_tanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tanh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=7215070))```
+* Output: ```TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=3014766))```

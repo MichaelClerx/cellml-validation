@@ -1294,9 +1294,10 @@ Results per category
 #### 5.2.2
 
 🔶 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 
 #### 5.2.7
@@ -1718,48 +1719,55 @@ Results per category
 [5.4.2.3.unit_prefix_named](../models_1_0/valid/5.4.2.3.unit_prefix_named.cellml): Valid file passed validation.
 
 🔶 [5.4.2.3.unit_prefix_real](../models_1_0/invalid/5.4.2.3.unit_prefix_real.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 🔶 [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 🔶 [5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 🔶 [5.4.2.3.unit_prefix_unknown](../models_1_0/invalid/5.4.2.3.unit_prefix_unknown.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 
 ##### 5.4.2.4
 
 🔶 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 
 ##### 5.4.2.5
 
 🔶 [5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 
 ##### 5.4.2.6
 
 🔶 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'
-  what():  std::exception```
-* Output: ```Expected error not set```
+* Expected: ```Expected error not set```
+* Output:
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
 
 
 ##### 5.4.2.7
