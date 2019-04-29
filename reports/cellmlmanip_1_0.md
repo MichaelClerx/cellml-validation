@@ -1,14 +1,14 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 54% according to spec (173 out of 316)
+* 39% according to spec (298 out of 763)
 * 173 out of 316 valid files passed
-* 0 out of 0 invalid files detected
+* 125 out of 447 invalid files detected
 
 Issues:
 * 143 valid files failed to parse
-* 0 invalid files passed validation
-* 0 invalid files failed validation for the wrong reason
+* 263 invalid files passed validation
+* 59 invalid files failed validation for the wrong reason
 
 ## 0.0
 
@@ -16,8 +16,28 @@ Issues:
 
 [0.0.root_namespace_2](../models_1_0/valid/0.0.root_namespace_2.cellml): Valid file passed OK
 
+❌ [0.0.root_node_namespace_wrong](../models_1_0/invalid/0.0.root_node_namespace_wrong.cellml): Invalid file passed validation
+
+❌ [0.0.root_node_not_model](../models_1_0/invalid/0.0.root_node_not_model.cellml): Invalid file passed validation
+
+[0.0.root_node_two_elements](../models_1_0/invalid/0.0.root_node_two_elements.cellml): Error in invalid file detected
+
+[0.0.root_node_two_models](../models_1_0/invalid/0.0.root_node_two_models.cellml): Error in invalid file detected
+
 
 ### 0.1
+
+[0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): Error in invalid file detected
+
+[0.1.real_number_invalid_2](../models_1_0/invalid/0.1.real_number_invalid_2.cellml): Error in invalid file detected
+
+[0.1.real_number_invalid_3](../models_1_0/invalid/0.1.real_number_invalid_3.cellml): Error in invalid file detected
+
+[0.1.real_number_invalid_4](../models_1_0/invalid/0.1.real_number_invalid_4.cellml): Error in invalid file detected
+
+[0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): Error in invalid file detected
+
+[0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error in invalid file detected
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed OK
 
@@ -33,10 +53,33 @@ Issues:
 
 ## 2.4.1
 
+❌ [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Invalid file passed validation
+
+❌ [2.4.1.identifier_only_underscore](../models_1_0/invalid/2.4.1.identifier_only_underscore.cellml): Invalid file passed validation
+
+❌ [2.4.1.identifier_unexpected_character_1](../models_1_0/invalid/2.4.1.identifier_unexpected_character_1.cellml): Invalid file passed validation
+
+❌ [2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): Invalid file passed validation
+
+❌ [2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): Invalid file passed validation
+
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed OK
 
 
+#### 2.4.2
+
+❌ [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Invalid file passed validation
+
+❌ [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): Invalid file passed validation
+
+❌ [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Invalid file passed validation
+
+
 #### 2.4.3
+
+❌ [2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): Invalid file passed validation
+
+❌ [2.4.3.cellml_elements_inside_extensions](../models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml): Invalid file passed validation
 
 [2.4.3.component_ref_with_extensions](../models_1_0/valid/2.4.3.component_ref_with_extensions.cellml): Valid file passed OK
 
@@ -80,6 +123,48 @@ Issues:
 
 [2.4.4.model_with_tabs](../models_1_0/valid/2.4.4.model_with_tabs.cellml): Valid file passed OK
 
+❌ [2.4.4.text_in_component](../models_1_0/invalid/2.4.4.text_in_component.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_component_ref](../models_1_0/invalid/2.4.4.text_in_component_ref.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_connection](../models_1_0/invalid/2.4.4.text_in_connection.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_group](../models_1_0/invalid/2.4.4.text_in_group.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_map_components](../models_1_0/invalid/2.4.4.text_in_map_components.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_map_variables](../models_1_0/invalid/2.4.4.text_in_map_variables.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_model](../models_1_0/invalid/2.4.4.text_in_model.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_reaction](../models_1_0/invalid/2.4.4.text_in_reaction.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_relationship_ref](../models_1_0/invalid/2.4.4.text_in_relationship_ref.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_role](../models_1_0/invalid/2.4.4.text_in_role.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_unit](../models_1_0/invalid/2.4.4.text_in_unit.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_units_1](../models_1_0/invalid/2.4.4.text_in_units_1.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_units_2](../models_1_0/invalid/2.4.4.text_in_units_2.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_variable](../models_1_0/invalid/2.4.4.text_in_variable.cellml): Invalid file passed validation
+
+❌ [2.4.4.text_in_variable_ref](../models_1_0/invalid/2.4.4.text_in_variable_ref.cellml): Invalid file passed validation
+
+
+### 2.5.1
+
+❗ [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * 'a$x'
+
+
+#### 2.5.2
+
+❌ [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Invalid file passed validation
+
 
 ## 3.4.1.1
 
@@ -89,11 +174,23 @@ Issues:
 
 [3.4.1.1.model_empty](../models_1_0/valid/3.4.1.1.model_empty.cellml): Valid file passed OK
 
+❌ [3.4.1.1.model_name_missing](../models_1_0/invalid/3.4.1.1.model_name_missing.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_component_ref](../models_1_0/invalid/3.4.1.1.model_with_component_ref.cellml): Invalid file passed validation
+
 [3.4.1.1.model_with_components](../models_1_0/valid/3.4.1.1.model_with_components.cellml): Valid file passed OK
 
 [3.4.1.1.model_with_connections](../models_1_0/valid/3.4.1.1.model_with_connections.cellml): Valid file passed OK
 
 [3.4.1.1.model_with_groups](../models_1_0/valid/3.4.1.1.model_with_groups.cellml): Valid file passed OK
+
+❌ [3.4.1.1.model_with_map_components](../models_1_0/invalid/3.4.1.1.model_with_map_components.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_map_variables](../models_1_0/invalid/3.4.1.1.model_with_map_variables.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_math](../models_1_0/invalid/3.4.1.1.model_with_math.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_model](../models_1_0/invalid/3.4.1.1.model_with_model.cellml): Invalid file passed validation
 
 [3.4.1.1.model_with_one_component](../models_1_0/valid/3.4.1.1.model_with_one_component.cellml): Valid file passed OK
 
@@ -103,7 +200,24 @@ Issues:
 
 [3.4.1.1.model_with_one_units](../models_1_0/valid/3.4.1.1.model_with_one_units.cellml): Valid file passed OK
 
+❌ [3.4.1.1.model_with_reaction](../models_1_0/invalid/3.4.1.1.model_with_reaction.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_relationship_ref](../models_1_0/invalid/3.4.1.1.model_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_role](../models_1_0/invalid/3.4.1.1.model_with_role.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_unit](../models_1_0/invalid/3.4.1.1.model_with_unit.cellml): Invalid file passed validation
+
 [3.4.1.1.model_with_units](../models_1_0/valid/3.4.1.1.model_with_units.cellml): Valid file passed OK
+
+❌ [3.4.1.1.model_with_variable](../models_1_0/invalid/3.4.1.1.model_with_variable.cellml): Invalid file passed validation
+
+❌ [3.4.1.1.model_with_variable_ref](../models_1_0/invalid/3.4.1.1.model_with_variable_ref.cellml): Invalid file passed validation
+
+
+##### 3.4.1.2
+
+❌ [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Invalid file passed validation
 
 
 #### 3.4.2.1
@@ -114,7 +228,25 @@ Issues:
 
 [3.4.2.1.component_empty](../models_1_0/valid/3.4.2.1.component_empty.cellml): Valid file passed OK
 
+❌ [3.4.2.1.component_name_missing](../models_1_0/invalid/3.4.2.1.component_name_missing.cellml): Invalid file passed validation
+
+❌ [3.4.2.1.component_with_component](../models_1_0/invalid/3.4.2.1.component_with_component.cellml): Invalid file passed validation
+
+❌ [3.4.2.1.component_with_component_ref](../models_1_0/invalid/3.4.2.1.component_with_component_ref.cellml): Invalid file passed validation
+
+❗ [3.4.2.1.component_with_connection](../models_1_0/invalid/3.4.2.1.component_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [3.4.2.1.component_with_group](../models_1_0/invalid/3.4.2.1.component_with_group.cellml): Invalid file passed validation
+
+❌ [3.4.2.1.component_with_map_components](../models_1_0/invalid/3.4.2.1.component_with_map_components.cellml): Invalid file passed validation
+
+❌ [3.4.2.1.component_with_map_variables](../models_1_0/invalid/3.4.2.1.component_with_map_variables.cellml): Invalid file passed validation
+
 [3.4.2.1.component_with_maths](../models_1_0/valid/3.4.2.1.component_with_maths.cellml): Valid file passed OK
+
+❌ [3.4.2.1.component_with_model](../models_1_0/invalid/3.4.2.1.component_with_model.cellml): Invalid file passed validation
 
 [3.4.2.1.component_with_one_math](../models_1_0/valid/3.4.2.1.component_with_one_math.cellml): Valid file passed OK
 
@@ -126,12 +258,41 @@ Issues:
 
 [3.4.2.1.component_with_reactions](../models_1_0/valid/3.4.2.1.component_with_reactions.cellml): Valid file passed OK
 
+❌ [3.4.2.1.component_with_relationship_ref](../models_1_0/invalid/3.4.2.1.component_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [3.4.2.1.component_with_role](../models_1_0/invalid/3.4.2.1.component_with_role.cellml): Invalid file passed validation
+
+❌ [3.4.2.1.component_with_unit](../models_1_0/invalid/3.4.2.1.component_with_unit.cellml): Invalid file passed validation
+
 [3.4.2.1.component_with_units](../models_1_0/valid/3.4.2.1.component_with_units.cellml): Valid file passed OK
+
+❌ [3.4.2.1.component_with_variable_ref](../models_1_0/invalid/3.4.2.1.component_with_variable_ref.cellml): Invalid file passed validation
 
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed OK
 
 
+##### 3.4.2.2
+
+❌ [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): Invalid file passed validation
+
+❌ [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): Invalid file passed validation
+
+
 #### 3.4.3.1
+
+[3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error in invalid file detected
+
+[3.4.3.1.variable_units_missing](../models_1_0/invalid/3.4.3.1.variable_units_missing.cellml): Error in invalid file detected
+
+❌ [3.4.3.1.variable_with_component](../models_1_0/invalid/3.4.3.1.variable_with_component.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): Invalid file passed validation
+
+❗ [3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): Invalid file passed validation
 
 [3.4.3.1.variable_with_initial_value](../models_1_0/valid/3.4.3.1.variable_with_initial_value.cellml): Valid file passed OK
 
@@ -139,10 +300,36 @@ Issues:
 * Returned: 
   * None
 
+❌ [3.4.3.1.variable_with_map_components](../models_1_0/invalid/3.4.3.1.variable_with_map_components.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_model](../models_1_0/invalid/3.4.3.1.variable_with_model.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_reaction](../models_1_0/invalid/3.4.3.1.variable_with_reaction.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_relationship_ref](../models_1_0/invalid/3.4.3.1.variable_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_role](../models_1_0/invalid/3.4.3.1.variable_with_role.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_unit](../models_1_0/invalid/3.4.3.1.variable_with_unit.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_units](../models_1_0/invalid/3.4.3.1.variable_with_units.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_variable](../models_1_0/invalid/3.4.3.1.variable_with_variable.cellml): Invalid file passed validation
+
+❌ [3.4.3.1.variable_with_variable_ref](../models_1_0/invalid/3.4.3.1.variable_with_variable_ref.cellml): Invalid file passed validation
+
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed OK
 
 
 ##### 3.4.3.2
+
+[3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): Error in invalid file detected
+
+❌ [3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): Invalid file passed validation
 
 [3.4.3.2.variable_name_same_as_cousin](../models_1_0/valid/3.4.3.2.variable_name_same_as_cousin.cellml): Valid file passed OK
 
@@ -157,16 +344,114 @@ Issues:
 
 [3.4.3.3.variable_units_model](../models_1_0/valid/3.4.3.3.variable_units_model.cellml): Valid file passed OK
 
+[3.4.3.3.variable_units_other_component](../models_1_0/invalid/3.4.3.3.variable_units_other_component.cellml): Error in invalid file detected
+
 [3.4.3.3.variable_units_predefined](../models_1_0/valid/3.4.3.3.variable_units_predefined.cellml): Valid file passed OK
+
+[3.4.3.3.variable_units_unknown](../models_1_0/invalid/3.4.3.3.variable_units_unknown.cellml): Error in invalid file detected
+
+
+##### 3.4.3.4
+
+❌ [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Invalid file passed validation
+
+
+##### 3.4.3.5
+
+❌ [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Invalid file passed validation
+
+
+##### 3.4.3.6
+
+❗ [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+
+##### 3.4.3.7
+
+[3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): Error in invalid file detected
+
+[3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): Error in invalid file detected
+
+
+##### 3.4.3.8
+
+❗ [3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
 
 
 #### 3.4.4.1
 
+[3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error in invalid file detected
+
+❗ [3.4.4.1.connection_map_components_missing](../models_1_0/invalid/3.4.4.1.connection_map_components_missing.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_map_components_multiple](../models_1_0/invalid/3.4.4.1.connection_map_components_multiple.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_map_variables_missing_1](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_1.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_only_extensions](../models_1_0/invalid/3.4.4.1.connection_only_extensions.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_component](../models_1_0/invalid/3.4.4.1.connection_with_component.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_component_ref](../models_1_0/invalid/3.4.4.1.connection_with_component_ref.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_connection](../models_1_0/invalid/3.4.4.1.connection_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_group](../models_1_0/invalid/3.4.4.1.connection_with_group.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
 [3.4.4.1.connection_with_map_variables](../models_1_0/valid/3.4.4.1.connection_with_map_variables.cellml): Valid file passed OK
+
+❗ [3.4.4.1.connection_with_math](../models_1_0/invalid/3.4.4.1.connection_with_math.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_model](../models_1_0/invalid/3.4.4.1.connection_with_model.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❌ [3.4.4.1.connection_with_name_attribute](../models_1_0/invalid/3.4.4.1.connection_with_name_attribute.cellml): Invalid file passed validation
 
 ❌ [3.4.4.1.connection_with_one_map_variables](../models_1_0/valid/3.4.4.1.connection_with_one_map_variables.cellml): Valid file failed validation
 * Returned: 
   * None
+
+❗ [3.4.4.1.connection_with_reaction](../models_1_0/invalid/3.4.4.1.connection_with_reaction.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_relationship_ref](../models_1_0/invalid/3.4.4.1.connection_with_relationship_ref.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_role](../models_1_0/invalid/3.4.4.1.connection_with_role.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_unit](../models_1_0/invalid/3.4.4.1.connection_with_unit.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_units](../models_1_0/invalid/3.4.4.1.connection_with_units.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_variable](../models_1_0/invalid/3.4.4.1.connection_with_variable.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [3.4.4.1.connection_with_variable_ref](../models_1_0/invalid/3.4.4.1.connection_with_variable_ref.cellml): Invalid file failed validation for wrong reason
+* Returned: 
 
 
 #### 3.4.5.1
@@ -175,22 +460,190 @@ Issues:
 
 [3.4.5.1.connection_any_order_2](../models_1_0/valid/3.4.5.1.connection_any_order_2.cellml): Valid file passed OK
 
+[3.4.5.1.map_components_component_1_missing](../models_1_0/invalid/3.4.5.1.map_components_component_1_missing.cellml): Error in invalid file detected
 
-#### 3.4.6.4
+[3.4.5.1.map_components_component_2_missing](../models_1_0/invalid/3.4.5.1.map_components_component_2_missing.cellml): Error in invalid file detected
+
+❌ [3.4.5.1.map_components_with_component](../models_1_0/invalid/3.4.5.1.map_components_with_component.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): Invalid file passed validation
+
+❗ [3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): Invalid file passed validation
+
+❗ [3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_model](../models_1_0/invalid/3.4.5.1.map_components_with_model.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_reaction](../models_1_0/invalid/3.4.5.1.map_components_with_reaction.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_relationship_ref](../models_1_0/invalid/3.4.5.1.map_components_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_role](../models_1_0/invalid/3.4.5.1.map_components_with_role.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_unit](../models_1_0/invalid/3.4.5.1.map_components_with_unit.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_units](../models_1_0/invalid/3.4.5.1.map_components_with_units.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_variable](../models_1_0/invalid/3.4.5.1.map_components_with_variable.cellml): Invalid file passed validation
+
+❌ [3.4.5.1.map_components_with_variable_ref](../models_1_0/invalid/3.4.5.1.map_components_with_variable_ref.cellml): Invalid file passed validation
+
+
+##### 3.4.5.2
+
+[3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): Error in invalid file detected
+
+
+##### 3.4.5.3
+
+[3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): Error in invalid file detected
+
+
+##### 3.4.5.4
+
+[3.4.5.4.map_components_component_1_equals_2](../models_1_0/invalid/3.4.5.4.map_components_component_1_equals_2.cellml): Error in invalid file detected
+
+❌ [3.4.5.4.map_components_duplicate](../models_1_0/invalid/3.4.5.4.map_components_duplicate.cellml): Invalid file passed validation
+
+❌ [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): Invalid file passed validation
+
+
+#### 3.4.6.1
+
+[3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error in invalid file detected
+
+[3.4.6.1.map_variables_variable_2_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_2_missing.cellml): Error in invalid file detected
+
+❌ [3.4.6.1.map_variables_with_component](../models_1_0/invalid/3.4.6.1.map_variables_with_component.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): Invalid file passed validation
+
+❗ [3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): Invalid file passed validation
+
+❗ [3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_model](../models_1_0/invalid/3.4.6.1.map_variables_with_model.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_reaction](../models_1_0/invalid/3.4.6.1.map_variables_with_reaction.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_relationship_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_role](../models_1_0/invalid/3.4.6.1.map_variables_with_role.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_unit](../models_1_0/invalid/3.4.6.1.map_variables_with_unit.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_units](../models_1_0/invalid/3.4.6.1.map_variables_with_units.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_variable](../models_1_0/invalid/3.4.6.1.map_variables_with_variable.cellml): Invalid file passed validation
+
+❌ [3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): Invalid file passed validation
+
+
+##### 3.4.6.2
+
+[3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): Error in invalid file detected
+
+
+##### 3.4.6.3
+
+[3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): Error in invalid file detected
+
+
+##### 3.4.6.4
 
 [3.4.6.4.map_variables_chain_down](../models_1_0/valid/3.4.6.4.map_variables_chain_down.cellml): Valid file passed OK
 
 [3.4.6.4.map_variables_chain_up](../models_1_0/valid/3.4.6.4.map_variables_chain_up.cellml): Valid file passed OK
 
+[3.4.6.4.map_variables_child_multiple_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_child_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_child_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_child_out_to_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_child_private_in](../models_1_0/invalid/3.4.6.4.map_variables_child_private_in.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_child_private_out](../models_1_0/invalid/3.4.6.4.map_variables_child_private_out.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_aunt_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_aunt_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_aunt_2](../models_1_0/invalid/3.4.6.4.map_variables_hidden_aunt_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_cousins_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_cousins_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_cousins_2](../models_1_0/invalid/3.4.6.4.map_variables_hidden_cousins_2.cellml): Error in invalid file detected
+
+❌ [3.4.6.4.map_variables_hidden_cousins_3](../models_1_0/invalid/3.4.6.4.map_variables_hidden_cousins_3.cellml): Invalid file passed validation
+
+[3.4.6.4.map_variables_hidden_cousins_4](../models_1_0/invalid/3.4.6.4.map_variables_hidden_cousins_4.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_grandchild_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_grandchild_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_grandchild_2](../models_1_0/invalid/3.4.6.4.map_variables_hidden_grandchild_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_grandparent_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_grandparent_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_grandparent_2](../models_1_0/invalid/3.4.6.4.map_variables_hidden_grandparent_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_niece_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_niece_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_hidden_niece_2](../models_1_0/invalid/3.4.6.4.map_variables_hidden_niece_2.cellml): Error in invalid file detected
+
 [3.4.6.4.map_variables_nested_sibling_connection](../models_1_0/valid/3.4.6.4.map_variables_nested_sibling_connection.cellml): Valid file passed OK
+
+[3.4.6.4.map_variables_nested_sibling_private_in](../models_1_0/invalid/3.4.6.4.map_variables_nested_sibling_private_in.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_nested_sibling_private_in_and_out](../models_1_0/invalid/3.4.6.4.map_variables_nested_sibling_private_in_and_out.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_nested_sibling_private_out](../models_1_0/invalid/3.4.6.4.map_variables_nested_sibling_private_out.cellml): Error in invalid file detected
 
 [3.4.6.4.map_variables_parent_connection_1](../models_1_0/valid/3.4.6.4.map_variables_parent_connection_1.cellml): Valid file passed OK
 
 [3.4.6.4.map_variables_parent_connection_2](../models_1_0/valid/3.4.6.4.map_variables_parent_connection_2.cellml): Valid file passed OK
 
+[3.4.6.4.map_variables_parent_in_to_in_1](../models_1_0/invalid/3.4.6.4.map_variables_parent_in_to_in_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_parent_in_to_in_2](../models_1_0/invalid/3.4.6.4.map_variables_parent_in_to_in_2.cellml): Error in invalid file detected
+
 [3.4.6.4.map_variables_parent_multiple_1](../models_1_0/valid/3.4.6.4.map_variables_parent_multiple_1.cellml): Valid file passed OK
 
 [3.4.6.4.map_variables_parent_multiple_2](../models_1_0/valid/3.4.6.4.map_variables_parent_multiple_2.cellml): Valid file passed OK
+
+[3.4.6.4.map_variables_parent_multiple_out](../models_1_0/invalid/3.4.6.4.map_variables_parent_multiple_out.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_parent_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_parent_out_to_out_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_parent_out_to_out_2](../models_1_0/invalid/3.4.6.4.map_variables_parent_out_to_out_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_parent_public_in](../models_1_0/invalid/3.4.6.4.map_variables_parent_public_in.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_parent_public_out](../models_1_0/invalid/3.4.6.4.map_variables_parent_public_out.cellml): Error in invalid file detected
 
 [3.4.6.4.map_variables_sibling_connection_1](../models_1_0/valid/3.4.6.4.map_variables_sibling_connection_1.cellml): Valid file passed OK
 
@@ -198,11 +651,29 @@ Issues:
 
 [3.4.6.4.map_variables_sibling_connection_3](../models_1_0/valid/3.4.6.4.map_variables_sibling_connection_3.cellml): Valid file passed OK
 
+[3.4.6.4.map_variables_sibling_in_to_in](../models_1_0/invalid/3.4.6.4.map_variables_sibling_in_to_in.cellml): Error in invalid file detected
+
 [3.4.6.4.map_variables_sibling_multiple_1](../models_1_0/valid/3.4.6.4.map_variables_sibling_multiple_1.cellml): Valid file passed OK
 
 [3.4.6.4.map_variables_sibling_multiple_2](../models_1_0/valid/3.4.6.4.map_variables_sibling_multiple_2.cellml): Valid file passed OK
 
+[3.4.6.4.map_variables_sibling_multiple_out_1](../models_1_0/invalid/3.4.6.4.map_variables_sibling_multiple_out_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_sibling_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_sibling_multiple_out_2.cellml): Error in invalid file detected
+
 [3.4.6.4.map_variables_sibling_mutual](../models_1_0/valid/3.4.6.4.map_variables_sibling_mutual.cellml): Valid file passed OK
+
+[3.4.6.4.map_variables_sibling_out_to_out](../models_1_0/invalid/3.4.6.4.map_variables_sibling_out_to_out.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_sibling_private_in_1](../models_1_0/invalid/3.4.6.4.map_variables_sibling_private_in_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_sibling_private_in_2](../models_1_0/invalid/3.4.6.4.map_variables_sibling_private_in_2.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_sibling_private_in_and_out](../models_1_0/invalid/3.4.6.4.map_variables_sibling_private_in_and_out.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_sibling_private_out_1](../models_1_0/invalid/3.4.6.4.map_variables_sibling_private_out_1.cellml): Error in invalid file detected
+
+[3.4.6.4.map_variables_sibling_private_out_2](../models_1_0/invalid/3.4.6.4.map_variables_sibling_private_out_2.cellml): Error in invalid file detected
 
 [3.4.6.4.map_variables_talking_aunt](../models_1_0/valid/3.4.6.4.map_variables_talking_aunt.cellml): Valid file passed OK
 
@@ -308,9 +779,32 @@ Issues:
   * 'Cannot find unit <per_millisecond> in unit registry'
 
 
-### 4.4.2
+### 4.4.1
+
+[4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error in invalid file detected
+
+❌ [4.4.1.math_not_math_reaction](../models_1_0/invalid/4.4.1.math_not_math_reaction.cellml): Invalid file passed validation
+
+
+#### 4.4.2
 
 [4.4.2.ci_no_whitespace](../models_1_0/valid/4.4.2.ci_no_whitespace.cellml): Valid file passed OK
+
+[4.4.2.ci_non_local_aunt](../models_1_0/invalid/4.4.2.ci_non_local_aunt.cellml): Error in invalid file detected
+
+[4.4.2.ci_non_local_child](../models_1_0/invalid/4.4.2.ci_non_local_child.cellml): Error in invalid file detected
+
+[4.4.2.ci_non_local_cousin](../models_1_0/invalid/4.4.2.ci_non_local_cousin.cellml): Error in invalid file detected
+
+[4.4.2.ci_non_local_nested_sibling](../models_1_0/invalid/4.4.2.ci_non_local_nested_sibling.cellml): Error in invalid file detected
+
+[4.4.2.ci_non_local_niece](../models_1_0/invalid/4.4.2.ci_non_local_niece.cellml): Error in invalid file detected
+
+[4.4.2.ci_non_local_parent](../models_1_0/invalid/4.4.2.ci_non_local_parent.cellml): Error in invalid file detected
+
+[4.4.2.ci_non_local_sibling](../models_1_0/invalid/4.4.2.ci_non_local_sibling.cellml): Error in invalid file detected
+
+[4.4.2.ci_nonexistent](../models_1_0/invalid/4.4.2.ci_nonexistent.cellml): Error in invalid file detected
 
 [4.4.2.ci_whitespace_1](../models_1_0/valid/4.4.2.ci_whitespace_1.cellml): Valid file passed OK
 
@@ -329,10 +823,27 @@ Issues:
 
 [4.4.3.1.cn_predefined_units](../models_1_0/valid/4.4.3.1.cn_predefined_units.cellml): Valid file passed OK
 
+[4.4.3.1.cn_units_missing](../models_1_0/invalid/4.4.3.1.cn_units_missing.cellml): Error in invalid file detected
+
+
+##### 4.4.3.2
+
+[4.4.3.2.cn_units_nonexistent_1](../models_1_0/invalid/4.4.3.2.cn_units_nonexistent_1.cellml): Error in invalid file detected
+
+[4.4.3.2.cn_units_nonexistent_2](../models_1_0/invalid/4.4.3.2.cn_units_nonexistent_2.cellml): Error in invalid file detected
+
+[4.4.3.2.cn_units_parent_component](../models_1_0/invalid/4.4.3.2.cn_units_parent_component.cellml): Error in invalid file detected
+
 
 #### 4.4.4
 
+[4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error in invalid file detected
+
+❌ [4.4.4.modify_private_in](../models_1_0/invalid/4.4.4.modify_private_in.cellml): Invalid file passed validation
+
 [4.4.4.modify_private_out](../models_1_0/valid/4.4.4.modify_private_out.cellml): Valid file passed OK
+
+❌ [4.4.4.modify_public_in](../models_1_0/invalid/4.4.4.modify_public_in.cellml): Invalid file passed validation
 
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed OK
 
@@ -347,8 +858,18 @@ Issues:
 ❌ [4.algebraic_ode_model](../models_1_0/valid/4.algebraic_ode_model.cellml): Valid file failed validation
 * Returned: 
 
+❌ [4.math_and_initial_value](../models_1_0/invalid/4.math_and_initial_value.cellml): Invalid file passed validation
 
-## 5.2.7
+❗ [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+
+## 5.2.2
+
+❌ [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): Invalid file passed validation
+
+
+#### 5.2.7
 
 [5.2.7.unit_checking_arithmetic](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_arithmetic.cellml): Valid file passed OK
 
@@ -368,7 +889,7 @@ Issues:
 
 ❌ [5.2.7.unit_checking_functions_non_smooth](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_non_smooth.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=5178190))
+  * TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=8328742))
 
 ❌ [5.2.7.unit_checking_functions_power_and_root](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_power_and_root.cellml): Valid file failed validation
 * Returned: 
@@ -444,14 +965,126 @@ Issues:
 
 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed OK
 
+❌ [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): Invalid file passed validation
+
 [5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): Valid file passed OK
 
 [5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): Valid file passed OK
 
+[5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error in invalid file detected
+
+[5.4.1.1.units_with_component](../models_1_0/invalid/5.4.1.1.units_with_component.cellml): Error in invalid file detected
+
+[5.4.1.1.units_with_component_ref](../models_1_0/invalid/5.4.1.1.units_with_component_ref.cellml): Error in invalid file detected
+
+[5.4.1.1.units_with_connection](../models_1_0/invalid/5.4.1.1.units_with_connection.cellml): Error in invalid file detected
+
+[5.4.1.1.units_with_group](../models_1_0/invalid/5.4.1.1.units_with_group.cellml): Error in invalid file detected
+
+[5.4.1.1.units_with_map_components](../models_1_0/invalid/5.4.1.1.units_with_map_components.cellml): Error in invalid file detected
+
+[5.4.1.1.units_with_map_variables](../models_1_0/invalid/5.4.1.1.units_with_map_variables.cellml): Error in invalid file detected
+
+❌ [5.4.1.1.units_with_math](../models_1_0/invalid/5.4.1.1.units_with_math.cellml): Invalid file passed validation
+
+[5.4.1.1.units_with_model](../models_1_0/invalid/5.4.1.1.units_with_model.cellml): Error in invalid file detected
+
+❌ [5.4.1.1.units_with_reaction](../models_1_0/invalid/5.4.1.1.units_with_reaction.cellml): Invalid file passed validation
+
+[5.4.1.1.units_with_relationship_ref](../models_1_0/invalid/5.4.1.1.units_with_relationship_ref.cellml): Error in invalid file detected
+
+❗ [5.4.1.1.units_with_role](../models_1_0/invalid/5.4.1.1.units_with_role.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * 'units'
+
 [5.4.1.1.units_with_unit_children](../models_1_0/valid/5.4.1.1.units_with_unit_children.cellml): Valid file passed OK
+
+❗ [5.4.1.1.units_with_units](../models_1_0/invalid/5.4.1.1.units_with_units.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * 'units'
+
+❌ [5.4.1.1.units_with_variable](../models_1_0/invalid/5.4.1.1.units_with_variable.cellml): Invalid file passed validation
+
+❌ [5.4.1.1.units_with_variable_ref](../models_1_0/invalid/5.4.1.1.units_with_variable_ref.cellml): Invalid file passed validation
 
 
 ##### 5.4.1.2
+
+❌ [5.4.1.2.units_name_duplicate_1](../models_1_0/invalid/5.4.1.2.units_name_duplicate_1.cellml): Invalid file passed validation
+
+❌ [5.4.1.2.units_name_duplicate_2](../models_1_0/invalid/5.4.1.2.units_name_duplicate_2.cellml): Invalid file passed validation
+
+[5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_ampere.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_becquerel](../models_1_0/invalid/5.4.1.2.units_name_predefined_becquerel.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_candela](../models_1_0/invalid/5.4.1.2.units_name_predefined_candela.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_celsius](../models_1_0/invalid/5.4.1.2.units_name_predefined_celsius.cellml): Error in invalid file detected
+
+❌ [5.4.1.2.units_name_predefined_component_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_component_ampere.cellml): Invalid file passed validation
+
+[5.4.1.2.units_name_predefined_coulomb](../models_1_0/invalid/5.4.1.2.units_name_predefined_coulomb.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_dimensionless](../models_1_0/invalid/5.4.1.2.units_name_predefined_dimensionless.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_farad](../models_1_0/invalid/5.4.1.2.units_name_predefined_farad.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_gram](../models_1_0/invalid/5.4.1.2.units_name_predefined_gram.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_gray](../models_1_0/invalid/5.4.1.2.units_name_predefined_gray.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_henry](../models_1_0/invalid/5.4.1.2.units_name_predefined_henry.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_hertz](../models_1_0/invalid/5.4.1.2.units_name_predefined_hertz.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_joule](../models_1_0/invalid/5.4.1.2.units_name_predefined_joule.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_katal](../models_1_0/invalid/5.4.1.2.units_name_predefined_katal.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_kelvin](../models_1_0/invalid/5.4.1.2.units_name_predefined_kelvin.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_kilogram](../models_1_0/invalid/5.4.1.2.units_name_predefined_kilogram.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_liter](../models_1_0/invalid/5.4.1.2.units_name_predefined_liter.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_litre](../models_1_0/invalid/5.4.1.2.units_name_predefined_litre.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_lumen](../models_1_0/invalid/5.4.1.2.units_name_predefined_lumen.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_lux](../models_1_0/invalid/5.4.1.2.units_name_predefined_lux.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_meter](../models_1_0/invalid/5.4.1.2.units_name_predefined_meter.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_metre](../models_1_0/invalid/5.4.1.2.units_name_predefined_metre.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_mole](../models_1_0/invalid/5.4.1.2.units_name_predefined_mole.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_newton](../models_1_0/invalid/5.4.1.2.units_name_predefined_newton.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_ohm](../models_1_0/invalid/5.4.1.2.units_name_predefined_ohm.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_pascal](../models_1_0/invalid/5.4.1.2.units_name_predefined_pascal.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_radian](../models_1_0/invalid/5.4.1.2.units_name_predefined_radian.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_second](../models_1_0/invalid/5.4.1.2.units_name_predefined_second.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_siemens](../models_1_0/invalid/5.4.1.2.units_name_predefined_siemens.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_sievert](../models_1_0/invalid/5.4.1.2.units_name_predefined_sievert.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_steradian](../models_1_0/invalid/5.4.1.2.units_name_predefined_steradian.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_tesla](../models_1_0/invalid/5.4.1.2.units_name_predefined_tesla.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_volt](../models_1_0/invalid/5.4.1.2.units_name_predefined_volt.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_watt](../models_1_0/invalid/5.4.1.2.units_name_predefined_watt.cellml): Error in invalid file detected
+
+[5.4.1.2.units_name_predefined_weber](../models_1_0/invalid/5.4.1.2.units_name_predefined_weber.cellml): Error in invalid file detected
 
 [5.4.1.2.units_names_and_other_names](../models_1_0/valid/5.4.1.2.units_names_and_other_names.cellml): Valid file passed OK
 
@@ -462,6 +1095,11 @@ Issues:
   * Units wooster (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != newton (1.0, <Unit('kilogram * meter / second ** 2')>)
 
 
+##### 5.4.1.3
+
+❌ [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Invalid file passed validation
+
+
 #### 5.4.2.1
 
 [5.4.2.1.unit_offset_non_zero](../models_1_0/valid/5.4.2.1.unit_offset_non_zero.cellml): Valid file passed OK
@@ -470,8 +1108,64 @@ Issues:
 
 [5.4.2.1.unit_prefix_exponent_multiplier](../models_1_0/valid/5.4.2.1.unit_prefix_exponent_multiplier.cellml): Valid file passed OK
 
+[5.4.2.1.unit_units_missing](../models_1_0/invalid/5.4.2.1.unit_units_missing.cellml): Error in invalid file detected
+
+❌ [5.4.2.1.unit_with_component](../models_1_0/invalid/5.4.2.1.unit_with_component.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_component_ref](../models_1_0/invalid/5.4.2.1.unit_with_component_ref.cellml): Invalid file passed validation
+
+❗ [5.4.2.1.unit_with_connection](../models_1_0/invalid/5.4.2.1.unit_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [5.4.2.1.unit_with_group](../models_1_0/invalid/5.4.2.1.unit_with_group.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_map_components](../models_1_0/invalid/5.4.2.1.unit_with_map_components.cellml): Invalid file passed validation
+
+❗ [5.4.2.1.unit_with_map_variables](../models_1_0/invalid/5.4.2.1.unit_with_map_variables.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [5.4.2.1.unit_with_math](../models_1_0/invalid/5.4.2.1.unit_with_math.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_model](../models_1_0/invalid/5.4.2.1.unit_with_model.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_reaction](../models_1_0/invalid/5.4.2.1.unit_with_reaction.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_relationship_ref](../models_1_0/invalid/5.4.2.1.unit_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_role](../models_1_0/invalid/5.4.2.1.unit_with_role.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_unit](../models_1_0/invalid/5.4.2.1.unit_with_unit.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_units](../models_1_0/invalid/5.4.2.1.unit_with_units.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_variable](../models_1_0/invalid/5.4.2.1.unit_with_variable.cellml): Invalid file passed validation
+
+❌ [5.4.2.1.unit_with_variable_ref](../models_1_0/invalid/5.4.2.1.unit_with_variable_ref.cellml): Invalid file passed validation
+
 
 ##### 5.4.2.2
+
+❗ [5.4.2.2.unit_cycle_1](../models_1_0/invalid/5.4.2.2.unit_cycle_1.cellml): Invalid file failed validation for wrong reason
+* Expected: unit cycle
+* Returned: 
+  * Running test causes infinite loop
+
+❗ [5.4.2.2.unit_cycle_2](../models_1_0/invalid/5.4.2.2.unit_cycle_2.cellml): Invalid file failed validation for wrong reason
+* Expected: unit cycle
+* Returned: 
+  * Running test causes infinite loop
+
+❗ [5.4.2.2.unit_cycle_3](../models_1_0/invalid/5.4.2.2.unit_cycle_3.cellml): Invalid file failed validation for wrong reason
+* Expected: unit cycle
+* Returned: 
+  * Running test causes infinite loop
+
+❗ [5.4.2.2.unit_units_invalid](../models_1_0/invalid/5.4.2.2.unit_units_invalid.cellml): Invalid file failed validation for wrong reason
+* Expected: unit cycle
+* Returned: 
+  * Running test causes infinite loop
 
 [5.4.2.2.unit_units_local_1](../models_1_0/valid/5.4.2.2.unit_units_local_1.cellml): Valid file passed OK
 
@@ -488,8 +1182,37 @@ Issues:
 * Returned: 
   * 'Cannot find unit <celsius> in unit registry'
 
+❌ [5.4.2.3.unit_prefix_real](../models_1_0/invalid/5.4.2.3.unit_prefix_real.cellml): Invalid file passed validation
+
+❌ [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): Invalid file passed validation
+
+[5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): Error in invalid file detected
+
+[5.4.2.3.unit_prefix_unknown](../models_1_0/invalid/5.4.2.3.unit_prefix_unknown.cellml): Error in invalid file detected
+
+
+##### 5.4.2.4
+
+[5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error in invalid file detected
+
+
+##### 5.4.2.5
+
+[5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): Error in invalid file detected
+
+
+##### 5.4.2.6
+
+❌ [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): Invalid file passed validation
+
 
 ##### 5.4.2.7
+
+❌ [5.4.2.7.unit_offset_and_exponent](../models_1_0/invalid/5.4.2.7.unit_offset_and_exponent.cellml): Invalid file passed validation
+
+❌ [5.4.2.7.unit_offset_and_siblings_1](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_1.cellml): Invalid file passed validation
+
+❌ [5.4.2.7.unit_offset_and_siblings_2](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_2.cellml): Invalid file passed validation
 
 ❌ [5.4.2.7.unit_offset_non_zero_and_exponent_one](../models_1_0/valid/5.4.2.7.unit_offset_non_zero_and_exponent_one.cellml): Valid file failed validation
 * Returned: 
@@ -711,14 +1434,58 @@ Issues:
 
 ❌ [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=5178129), Dummy('1.00000000000000', dummy_index=5178130))
+  * TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=8328681), Dummy('1.00000000000000', dummy_index=8328682))
 
 
 ## 6.4.1.1
 
+❌ [6.4.1.1.group_component_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_1.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_component_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_2.cellml): Invalid file passed validation
+
 [6.4.1.1.group_component_ref_multiple](../models_1_0/valid/6.4.1.1.group_component_ref_multiple.cellml): Valid file passed OK
 
 [6.4.1.1.group_component_ref_single](../models_1_0/valid/6.4.1.1.group_component_ref_single.cellml): Valid file passed OK
+
+❗ [6.4.1.1.group_empty](../models_1_0/invalid/6.4.1.1.group_empty.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [6.4.1.1.group_only_extensions](../models_1_0/invalid/6.4.1.1.group_only_extensions.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [6.4.1.1.group_relationship_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_1.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [6.4.1.1.group_relationship_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_2.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❌ [6.4.1.1.group_with_component](../models_1_0/invalid/6.4.1.1.group_with_component.cellml): Invalid file passed validation
+
+❗ [6.4.1.1.group_with_connection](../models_1_0/invalid/6.4.1.1.group_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [6.4.1.1.group_with_group](../models_1_0/invalid/6.4.1.1.group_with_group.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_map_components](../models_1_0/invalid/6.4.1.1.group_with_map_components.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_map_variables](../models_1_0/invalid/6.4.1.1.group_with_map_variables.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_math](../models_1_0/invalid/6.4.1.1.group_with_math.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_model](../models_1_0/invalid/6.4.1.1.group_with_model.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_reaction](../models_1_0/invalid/6.4.1.1.group_with_reaction.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_role](../models_1_0/invalid/6.4.1.1.group_with_role.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_unit](../models_1_0/invalid/6.4.1.1.group_with_unit.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_units](../models_1_0/invalid/6.4.1.1.group_with_units.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_variable](../models_1_0/invalid/6.4.1.1.group_with_variable.cellml): Invalid file passed validation
+
+❌ [6.4.1.1.group_with_variable_ref](../models_1_0/invalid/6.4.1.1.group_with_variable_ref.cellml): Invalid file passed validation
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed OK
 
@@ -733,13 +1500,71 @@ Issues:
 
 [6.4.2.1.relationship_ref_relationship_2](../models_1_0/valid/6.4.2.1.relationship_ref_relationship_2.cellml): Valid file passed OK
 
+❌ [6.4.2.1.relationship_ref_relationship_missing](../models_1_0/invalid/6.4.2.1.relationship_ref_relationship_missing.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_component](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_component_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component_ref.cellml): Invalid file passed validation
+
+❗ [6.4.2.1.relationship_ref_with_connection](../models_1_0/invalid/6.4.2.1.relationship_ref_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [6.4.2.1.relationship_ref_with_group](../models_1_0/invalid/6.4.2.1.relationship_ref_with_group.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_map_components](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_components.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_map_variables](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_variables.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_math](../models_1_0/invalid/6.4.2.1.relationship_ref_with_math.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_model](../models_1_0/invalid/6.4.2.1.relationship_ref_with_model.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_reaction](../models_1_0/invalid/6.4.2.1.relationship_ref_with_reaction.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_relationship_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_role](../models_1_0/invalid/6.4.2.1.relationship_ref_with_role.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_unit](../models_1_0/invalid/6.4.2.1.relationship_ref_with_unit.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_units](../models_1_0/invalid/6.4.2.1.relationship_ref_with_units.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_variable](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable.cellml): Invalid file passed validation
+
+❌ [6.4.2.1.relationship_ref_with_variable_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable_ref.cellml): Invalid file passed validation
+
+
+##### 6.4.2.2
+
+❌ [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Invalid file passed validation
+
 
 ##### 6.4.2.3
+
+❌ [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): Invalid file passed validation
 
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed OK
 
 
+##### 6.4.2.4
+
+❗ [6.4.2.4.relationship_ref_encapsulation_duplicate](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_duplicate.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❌ [6.4.2.4.relationship_ref_encapsulation_named](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_named.cellml): Invalid file passed validation
+
+
 ##### 6.4.2.5
+
+❗ [6.4.2.5.relationship_ref_duplicate_named](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_named.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [6.4.2.5.relationship_ref_duplicate_unnamed_1](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_unnamed_1.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+
+❗ [6.4.2.5.relationship_ref_duplicate_unnamed_2](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_unnamed_2.cellml): Invalid file failed validation for wrong reason
+* Returned: 
 
 ❌ [6.4.2.5.relationship_ref_multiple_1](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_1.cellml): Valid file failed validation
 * Returned: 
@@ -753,14 +1578,70 @@ Issues:
 
 #### 6.4.3.1
 
+❌ [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Invalid file passed validation
+
 [6.4.3.1.component_ref_nesting](../models_1_0/valid/6.4.3.1.component_ref_nesting.cellml): Valid file passed OK
+
+❌ [6.4.3.1.component_ref_with_component](../models_1_0/invalid/6.4.3.1.component_ref_with_component.cellml): Invalid file passed validation
+
+❗ [6.4.3.1.component_ref_with_connection](../models_1_0/invalid/6.4.3.1.component_ref_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [6.4.3.1.component_ref_with_group](../models_1_0/invalid/6.4.3.1.component_ref_with_group.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_map_components](../models_1_0/invalid/6.4.3.1.component_ref_with_map_components.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_map_variables](../models_1_0/invalid/6.4.3.1.component_ref_with_map_variables.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_math](../models_1_0/invalid/6.4.3.1.component_ref_with_math.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_model](../models_1_0/invalid/6.4.3.1.component_ref_with_model.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_reaction](../models_1_0/invalid/6.4.3.1.component_ref_with_reaction.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_relationship_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_role](../models_1_0/invalid/6.4.3.1.component_ref_with_role.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_unit](../models_1_0/invalid/6.4.3.1.component_ref_with_unit.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_units](../models_1_0/invalid/6.4.3.1.component_ref_with_units.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_variable](../models_1_0/invalid/6.4.3.1.component_ref_with_variable.cellml): Invalid file passed validation
+
+❌ [6.4.3.1.component_ref_with_variable_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_variable_ref.cellml): Invalid file passed validation
 
 
 ##### 6.4.3.2
 
+❌ [6.4.3.2.component_ref_children_declared_twice_1](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_1.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_children_declared_twice_2](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_2.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_children_declared_twice_3](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_3.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_cycle_1](../models_1_0/invalid/6.4.3.2.component_ref_cycle_1.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_cycle_2](../models_1_0/invalid/6.4.3.2.component_ref_cycle_2.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_cycle_3](../models_1_0/invalid/6.4.3.2.component_ref_cycle_3.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_cycle_4](../models_1_0/invalid/6.4.3.2.component_ref_cycle_4.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_duplicate_child_1](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_1.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_duplicate_child_2](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_2.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_no_children_containment](../models_1_0/invalid/6.4.3.2.component_ref_no_children_containment.cellml): Invalid file passed validation
+
+❌ [6.4.3.2.component_ref_no_children_encapsulation](../models_1_0/invalid/6.4.3.2.component_ref_no_children_encapsulation.cellml): Invalid file passed validation
+
 [6.4.3.2.component_ref_no_children_extension](../models_1_0/valid/6.4.3.2.component_ref_no_children_extension.cellml): Valid file passed OK
 
 [6.4.3.2.component_ref_overlapping_containment](../models_1_0/valid/6.4.3.2.component_ref_overlapping_containment.cellml): Valid file passed OK
+
+[6.4.3.2.component_ref_overlapping_encapsulation](../models_1_0/invalid/6.4.3.2.component_ref_overlapping_encapsulation.cellml): Error in invalid file detected
 
 [6.4.3.2.component_ref_split_named](../models_1_0/valid/6.4.3.2.component_ref_split_named.cellml): Valid file passed OK
 
@@ -769,14 +1650,235 @@ Issues:
 [6.4.3.2.component_ref_split_unnamed_2](../models_1_0/valid/6.4.3.2.component_ref_split_unnamed_2.cellml): Valid file passed OK
 
 
-## 7.4.1.2
+##### 6.4.3.3
+
+❌ [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Invalid file passed validation
+
+❌ [6.4.3.3.component_ref_component_nonexistent_1](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_1.cellml): Invalid file passed validation
+
+❌ [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): Invalid file passed validation
+
+
+## 7.4.1.1
+
+❌ [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_component](../models_1_0/invalid/7.4.1.1.reaction_with_component.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_component_ref](../models_1_0/invalid/7.4.1.1.reaction_with_component_ref.cellml): Invalid file passed validation
+
+❗ [7.4.1.1.reaction_with_connection](../models_1_0/invalid/7.4.1.1.reaction_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [7.4.1.1.reaction_with_group](../models_1_0/invalid/7.4.1.1.reaction_with_group.cellml): Invalid file passed validation
+
+❗ [7.4.1.1.reaction_with_map_components](../models_1_0/invalid/7.4.1.1.reaction_with_map_components.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [7.4.1.1.reaction_with_map_variables](../models_1_0/invalid/7.4.1.1.reaction_with_map_variables.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [7.4.1.1.reaction_with_math](../models_1_0/invalid/7.4.1.1.reaction_with_math.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_model](../models_1_0/invalid/7.4.1.1.reaction_with_model.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_reaction](../models_1_0/invalid/7.4.1.1.reaction_with_reaction.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_relationship_ref](../models_1_0/invalid/7.4.1.1.reaction_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_role](../models_1_0/invalid/7.4.1.1.reaction_with_role.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_unit](../models_1_0/invalid/7.4.1.1.reaction_with_unit.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_units](../models_1_0/invalid/7.4.1.1.reaction_with_units.cellml): Invalid file passed validation
+
+❌ [7.4.1.1.reaction_with_variable](../models_1_0/invalid/7.4.1.1.reaction_with_variable.cellml): Invalid file passed validation
+
+
+##### 7.4.1.2
+
+❌ [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Invalid file passed validation
 
 [7.4.1.2.reaction_reversible_no](../models_1_0/valid/7.4.1.2.reaction_reversible_no.cellml): Valid file passed OK
 
 [7.4.1.2.reaction_reversible_yes](../models_1_0/valid/7.4.1.2.reaction_reversible_yes.cellml): Valid file passed OK
 
 
-#### 7.4.3
+##### 7.4.1.3
+
+❌ [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): Invalid file passed validation
+
+
+#### 7.4.2.1
+
+❌ [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_variable_missing](../models_1_0/invalid/7.4.2.1.variable_ref_variable_missing.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_component](../models_1_0/invalid/7.4.2.1.variable_ref_with_component.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_component_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_component_ref.cellml): Invalid file passed validation
+
+❗ [7.4.2.1.variable_ref_with_connection](../models_1_0/invalid/7.4.2.1.variable_ref_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [7.4.2.1.variable_ref_with_group](../models_1_0/invalid/7.4.2.1.variable_ref_with_group.cellml): Invalid file passed validation
+
+❗ [7.4.2.1.variable_ref_with_map_components](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_components.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [7.4.2.1.variable_ref_with_map_variables](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_variables.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [7.4.2.1.variable_ref_with_math](../models_1_0/invalid/7.4.2.1.variable_ref_with_math.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_model](../models_1_0/invalid/7.4.2.1.variable_ref_with_model.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_reaction](../models_1_0/invalid/7.4.2.1.variable_ref_with_reaction.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_relationship_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_unit](../models_1_0/invalid/7.4.2.1.variable_ref_with_unit.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_units](../models_1_0/invalid/7.4.2.1.variable_ref_with_units.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_variable](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable.cellml): Invalid file passed validation
+
+❌ [7.4.2.1.variable_ref_with_variable_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable_ref.cellml): Invalid file passed validation
+
+
+##### 7.4.2.2
+
+❌ [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): Invalid file passed validation
+
+❌ [7.4.2.2.variable_ref_variable_hidden](../models_1_0/invalid/7.4.2.2.variable_ref_variable_hidden.cellml): Invalid file passed validation
+
+❌ [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): Invalid file passed validation
+
+
+#### 7.4.3.1
+
+❌ [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_component](../models_1_0/invalid/7.4.3.1.role_with_component.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_component_ref](../models_1_0/invalid/7.4.3.1.role_with_component_ref.cellml): Invalid file passed validation
+
+❗ [7.4.3.1.role_with_connection](../models_1_0/invalid/7.4.3.1.role_with_connection.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [7.4.3.1.role_with_group](../models_1_0/invalid/7.4.3.1.role_with_group.cellml): Invalid file passed validation
+
+❗ [7.4.3.1.role_with_map_components](../models_1_0/invalid/7.4.3.1.role_with_map_components.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❗ [7.4.3.1.role_with_map_variables](../models_1_0/invalid/7.4.3.1.role_with_map_variables.cellml): Invalid file failed validation for wrong reason
+* Returned: 
+  * None
+
+❌ [7.4.3.1.role_with_model](../models_1_0/invalid/7.4.3.1.role_with_model.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_reaction](../models_1_0/invalid/7.4.3.1.role_with_reaction.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_relationship_ref](../models_1_0/invalid/7.4.3.1.role_with_relationship_ref.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_role](../models_1_0/invalid/7.4.3.1.role_with_role.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_unit](../models_1_0/invalid/7.4.3.1.role_with_unit.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_units](../models_1_0/invalid/7.4.3.1.role_with_units.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_variable](../models_1_0/invalid/7.4.3.1.role_with_variable.cellml): Invalid file passed validation
+
+❌ [7.4.3.1.role_with_variable_ref](../models_1_0/invalid/7.4.3.1.role_with_variable_ref.cellml): Invalid file passed validation
+
+
+##### 7.4.3.2
+
+❌ [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Invalid file passed validation
+
+
+##### 7.4.3.3
+
+❌ [7.4.3.3.reaction_multiple_rates](../models_1_0/invalid/7.4.3.3.reaction_multiple_rates.cellml): Invalid file passed validation
+
+❌ [7.4.3.3.role_rate_with_delta_variable](../models_1_0/invalid/7.4.3.3.role_rate_with_delta_variable.cellml): Invalid file passed validation
+
+❌ [7.4.3.3.role_rate_with_multiple_roles](../models_1_0/invalid/7.4.3.3.role_rate_with_multiple_roles.cellml): Invalid file passed validation
+
+❌ [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): Invalid file passed validation
+
+
+##### 7.4.3.4
+
+❌ [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Invalid file passed validation
+
+
+##### 7.4.3.5
+
+❌ [7.4.3.5.role_direction_both_irreversible](../models_1_0/invalid/7.4.3.5.role_direction_both_irreversible.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_both_product](../models_1_0/invalid/7.4.3.5.role_direction_both_product.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_both_rate](../models_1_0/invalid/7.4.3.5.role_direction_both_rate.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_both_reactant](../models_1_0/invalid/7.4.3.5.role_direction_both_reactant.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_reverse_irreversible](../models_1_0/invalid/7.4.3.5.role_direction_reverse_irreversible.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_reverse_product](../models_1_0/invalid/7.4.3.5.role_direction_reverse_product.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_reverse_rate](../models_1_0/invalid/7.4.3.5.role_direction_reverse_rate.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_reverse_reactant](../models_1_0/invalid/7.4.3.5.role_direction_reverse_reactant.cellml): Invalid file passed validation
+
+❌ [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): Invalid file passed validation
+
+
+##### 7.4.3.6
+
+❌ [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): Invalid file passed validation
+
+
+##### 7.4.3.7
+
+❌ [7.4.3.7.role_delta_variable_duplicate_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_1.cellml): Invalid file passed validation
+
+❌ [7.4.3.7.role_delta_variable_duplicate_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_2.cellml): Invalid file passed validation
+
+❌ [7.4.3.7.role_delta_variable_nonexistent_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_1.cellml): Invalid file passed validation
+
+❌ [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): Invalid file passed validation
+
+
+##### 7.4.3.8
+
+❌ [7.4.3.8.role_delta_variable_activator](../models_1_0/invalid/7.4.3.8.role_delta_variable_activator.cellml): Invalid file passed validation
+
+❌ [7.4.3.8.role_delta_variable_catalyst](../models_1_0/invalid/7.4.3.8.role_delta_variable_catalyst.cellml): Invalid file passed validation
+
+❌ [7.4.3.8.role_delta_variable_inhibitor](../models_1_0/invalid/7.4.3.8.role_delta_variable_inhibitor.cellml): Invalid file passed validation
+
+❌ [7.4.3.8.role_delta_variable_modifier](../models_1_0/invalid/7.4.3.8.role_delta_variable_modifier.cellml): Invalid file passed validation
+
+❌ [7.4.3.8.role_delta_variable_with_rate_and_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_with_rate_and_math.cellml): Invalid file passed validation
+
+❌ [7.4.3.8.role_delta_variable_with_stoichiometry_no_rate](../models_1_0/invalid/7.4.3.8.role_delta_variable_with_stoichiometry_no_rate.cellml): Invalid file passed validation
+
+❌ [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): Invalid file passed validation
+
+
+##### 7.4.3.9
+
+❌ [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): Invalid file passed validation
 
 [7.4.3.reaction_all_roles_and_attributes](../models_1_0/valid/7.4.3.reaction_all_roles_and_attributes.cellml): Valid file passed OK
 
@@ -786,6 +1888,8 @@ Issues:
 
 
 ## 8.4.1
+
+❌ [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Invalid file passed validation
 
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed OK
 
@@ -915,96 +2019,96 @@ Issues:
 
 ❌ [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=5178294))
+  * TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=8328846))
 
 ❌ [C.3.3.unit_checking_trig_arccosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccosh_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=5178296))
+  * TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=8328848))
 
 ❌ [C.3.3.unit_checking_trig_arccot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccot_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=5178298))
+  * TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=8328850))
 
 ❌ [C.3.3.unit_checking_trig_arccoth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccoth_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=5178300))
+  * TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=8328852))
 
 ❌ [C.3.3.unit_checking_trig_arccsc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsc_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=5178302))
+  * TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=8328854))
 
 ❌ [C.3.3.unit_checking_trig_arccsch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsch_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=5178304))
+  * TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=8328856))
 
 ❌ [C.3.3.unit_checking_trig_arcsec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsec_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=5178306))
+  * TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=8328858))
 
 ❌ [C.3.3.unit_checking_trig_arcsech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsech_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=5178308))
+  * TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=8328860))
 
 ❌ [C.3.3.unit_checking_trig_arcsin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsin_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=5178310))
+  * TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=8328862))
 
 ❌ [C.3.3.unit_checking_trig_arcsinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsinh_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=5178312))
+  * TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=8328864))
 
 ❌ [C.3.3.unit_checking_trig_arctan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctan_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=5178314))
+  * TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=8328866))
 
 ❌ [C.3.3.unit_checking_trig_arctanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctanh_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=5178316))
+  * TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=8328868))
 
 ❌ [C.3.3.unit_checking_trig_cos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cos_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=5178318))
+  * TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=8328870))
 
 ❌ [C.3.3.unit_checking_trig_cosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cosh_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=5178320))
+  * TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=8328872))
 
 ❌ [C.3.3.unit_checking_trig_cot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cot_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=5178322))
+  * TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=8328874))
 
 ❌ [C.3.3.unit_checking_trig_coth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_coth_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=5178324))
+  * TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=8328876))
 
 ❌ [C.3.3.unit_checking_trig_csc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csc_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=5178326))
+  * TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=8328878))
 
 ❌ [C.3.3.unit_checking_trig_csch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csch_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=5178328))
+  * TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=8328880))
 
 ❌ [C.3.3.unit_checking_trig_sec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sec_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=5178330))
+  * TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=8328882))
 
 ❌ [C.3.3.unit_checking_trig_sech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sech_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=5178332))
+  * TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=8328884))
 
 ❌ [C.3.3.unit_checking_trig_sin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sin_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=5178334))
+  * TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=8328886))
 
 ❌ [C.3.3.unit_checking_trig_sinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sinh_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=5178336))
+  * TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=8328888))
 
 ❌ [C.3.3.unit_checking_trig_tan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tan_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=5178338))
+  * TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=8328890))
 
 ❌ [C.3.3.unit_checking_trig_tanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tanh_operand_error.cellml): Valid file failed validation
 * Returned: 
-  * TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=5178340))
+  * TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=8328892))
