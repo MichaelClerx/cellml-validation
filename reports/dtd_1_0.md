@@ -1,12 +1,12 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 69% according to spec (531 out of 763)
-* 280 out of 316 valid files passed
+* 70% according to spec (536 out of 763)
+* 285 out of 316 valid files passed
 * 251 out of 447 invalid files detected
 
 Issues:
-* 36 valid files failed validation
+* 31 valid files failed validation
 * 194 invalid files passed validation
 * 2 invalid files failed validation for the wrong reason
 
@@ -21,7 +21,7 @@ Results per category
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
 |[5. Units](#5-units)|99|32|0|54|0|70%|
-|[6. Grouping](#6-grouping)|10|48|7|24|0|65%|
+|[6. Grouping](#6-grouping)|15|48|2|24|0|70%|
 |[7. Reactions](#7-reactions)|5|49|0|30|0|64%|
 |[8. Metadata framework](#8-metadata-framework)|15|1|15|0|0|51%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
@@ -653,7 +653,7 @@ Results per category
 ##### 3.4.3.4
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
-* Expected: ```attribute public_interface of variable is not among```
+* Expected: ```attribute public_interface of variable is not among the enumerated```
 * Output: ```Error on line 6: Value "apple" for attribute public_interface of variable is not among the enumerated set```
 
 
@@ -662,7 +662,7 @@ Results per category
 ##### 3.4.3.5
 
 [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Error detected correctly.
-* Expected: ```attribute private_interface of variable is not among```
+* Expected: ```attribute private_interface of variable is not among the enumerated```
 * Output: ```Error on line 6: Value "apple" for attribute private_interface of variable is not among the enumerated set```
 
 
@@ -708,11 +708,11 @@ Results per category
 * Output: ```Error on line 16: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_components map_variables map_variables )```
 
 [3.4.4.1.connection_map_variables_missing_1](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_1.cellml): Error detected correctly.
-* Expected: ```Element connection content does not follow the DTD```
+* Expected: ```got (map_components )```
 * Output: ```Error on line 11: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components )```
 
 [3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): Error detected correctly.
-* Expected: ```No declaration for```
+* Expected: ```got (map_components fruit```
 * Output:
   * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
   * ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components fruit:apple fruit:banana )```
@@ -720,7 +720,7 @@ Results per category
   * ```Error on line 15: No declaration for element banana```
 
 [3.4.4.1.connection_only_extensions](../models_1_0/invalid/3.4.4.1.connection_only_extensions.cellml): Error detected correctly.
-* Expected: ```No declaration for```
+* Expected: ```got (fruit```
 * Output:
   * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
   * ```Error on line 6: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (fruit:apple fruit:banana fruit:cherry )```
@@ -1781,9 +1781,10 @@ Results per category
 ##### 6.4.1.1
 
 🔵 [6.4.1.1.group_component_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_1.cellml): **Error not detected.**
+* Expected: ```Element group content does not follow the DTD```
 
 [6.4.1.1.group_component_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_2.cellml): Error detected correctly.
-* Expected: ```No declaration for```
+* Expected: ```Element group content does not follow the DTD```
 * Output:
   * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
   * ```Error on line 8: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref fruit:apple )```
@@ -1798,7 +1799,7 @@ Results per category
 * Output: ```Error on line 5: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got ```
 
 [6.4.1.1.group_only_extensions](../models_1_0/invalid/6.4.1.1.group_only_extensions.cellml): Error detected correctly.
-* Expected: ```No declaration for```
+* Expected: ```Element group content does not follow the DTD```
 * Output:
   * ```Error on line 5: No declaration for attribute xmlns:hi of element model```
   * ```Error on line 6: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (hi:hello hi:bonjour hi:hola hi:hallo )```
@@ -1810,9 +1811,10 @@ Results per category
   * ```Error on line 12: No declaration for element hallo```
 
 🔵 [6.4.1.1.group_relationship_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_1.cellml): **Error not detected.**
+* Expected: ```Element group failed to validate content```
 
 [6.4.1.1.group_relationship_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_2.cellml): Error detected correctly.
-* Expected: ```No declaration for```
+* Expected: ```Element group content does not follow the DTD```
 * Output:
   * ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
   * ```Error on line 8: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (component_ref fruit:apple )```
@@ -1884,8 +1886,7 @@ Results per category
 
 ##### 6.4.2.1
 
-🔴 [6.4.2.1.relationship_ref_name](../models_1_0/valid/6.4.2.1.relationship_ref_name.cellml): **Valid file failed validation.**
-* Output: ```Error on line 5: No declaration for attribute xmlns:family of element model```
+[6.4.2.1.relationship_ref_name](../models_1_0/valid/6.4.2.1.relationship_ref_name.cellml): Valid file passed validation.
 
 [6.4.2.1.relationship_ref_relationship_1](../models_1_0/valid/6.4.2.1.relationship_ref_relationship_1.cellml): Valid file passed validation.
 
@@ -1972,8 +1973,7 @@ Results per category
 
 🔵 [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): **Error not detected.**
 
-🔴 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): **Valid file failed validation.**
-* Output: ```Error on line 5: No declaration for attribute xmlns:family of element model```
+[6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
 
 ---
@@ -1995,14 +1995,11 @@ Results per category
 
 🔵 [6.4.2.5.relationship_ref_duplicate_unnamed_2](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_unnamed_2.cellml): **Error not detected.**
 
-🔴 [6.4.2.5.relationship_ref_multiple_1](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_1.cellml): **Valid file failed validation.**
-* Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
+[6.4.2.5.relationship_ref_multiple_1](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_1.cellml): Valid file passed validation.
 
-🔴 [6.4.2.5.relationship_ref_multiple_2](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_2.cellml): **Valid file failed validation.**
-* Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
+[6.4.2.5.relationship_ref_multiple_2](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_2.cellml): Valid file passed validation.
 
-🔴 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): **Valid file failed validation.**
-* Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
+[6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): Valid file passed validation.
 
 
 ---
@@ -2362,7 +2359,7 @@ Results per category
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
-* Expected: ```Value "mole" for attribute role of role is not among```
+* Expected: ```attribute role of role is not among the enumerated set```
 * Output: ```Error on line 9: Value "mole" for attribute role of role is not among the enumerated set```
 
 
@@ -2384,7 +2381,7 @@ Results per category
 ##### 7.4.3.4
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
-* Expected: ```Value "backward" for attribute direction of role is not among```
+* Expected: ```attribute direction of role is not among the enumerated set```
 * Output: ```Error on line 23: Value "backward" for attribute direction of role is not among the enumerated set```
 
 

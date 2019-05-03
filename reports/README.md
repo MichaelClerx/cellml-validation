@@ -15,7 +15,7 @@ The reports listed below were automatically generated during testing. Some care 
 
 ## CellML 1.0
 
-- [DTD validation](dtd_1_0.md) (69%)
+- [DTD validation](dtd_1_0.md) (70%)
 - [Schema validation](schema_1_0.md) (77%)
 - [RelaxNG validation](relaxng_1_0.md) (81%)
 

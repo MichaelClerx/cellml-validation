@@ -31,12 +31,7 @@ false_negatives = {
     '2.4.3.unit_with_extensions': 'No declaration',
     '2.4.3.variable_ref_with_extensions': 'No declaration',
     '2.4.3.variable_with_extensions': 'No declaration',
-    '6.4.2.1.relationship_ref_name': 'No declaration',
     '6.4.2.1.relationship_ref_relationship_2': 'No declaration',
-    '6.4.2.3.relationship_ref_name_not_unique_model_wide': 'No declaration',
-    '6.4.2.5.relationship_ref_multiple_1': 'No declaration',
-    '6.4.2.5.relationship_ref_multiple_2': 'No declaration',
-    '6.4.2.5.relationship_ref_multiple_3': 'No declaration',
     '6.4.3.2.component_ref_no_children_extension': 'No declaration',
     '8.4.2.rdf_in_component': 'No declaration',
     '8.4.2.rdf_in_component_ref': 'No declaration',
@@ -202,10 +197,10 @@ expected_messages = {
         'Element variable does not carry attribute units',
     # 3.4.3.4 A public interface must be one of in/out/none
     '3.4.3.4.variable_interface_public_invalid':
-        'attribute public_interface of variable is not among',
+        'attribute public_interface of variable is not among the enumerated',
     # 3.4.3.5 A private interface must be one of in/out/none
     '3.4.3.5.variable_interface_private_invalid':
-        'attribute private_interface of variable is not among',
+        'attribute private_interface of variable is not among the enumerated',
     # 3.4.4.1 A connection must contain exactly one map_components
     '3.4.4.1.connection_map_components_missing':
         'expecting (map_components , map_variables+)',
@@ -213,10 +208,12 @@ expected_messages = {
         'expecting (map_components , map_variables+)',
     # 3.4.4.1 A component must contain at least one map_variables
     '3.4.4.1.connection_map_variables_missing_1':
-        'Element connection content does not follow the DTD',
-    '3.4.4.1.connection_map_variables_missing_2': 'No declaration for',
+        'got (map_components )',
+    '3.4.4.1.connection_map_variables_missing_2':
+        'got (map_components fruit',
     # 3.4.4.1 A connection must have map_components and map_variables
-    '3.4.4.1.connection_only_extensions': 'No declaration for',
+    '3.4.4.1.connection_only_extensions':
+        'got (fruit',
     '3.4.4.1.connection_with_math':
         'Element connection content does not follow the DTD',
     '3.4.4.1.connection_empty':
@@ -402,13 +399,20 @@ expected_messages = {
     '5.4.2.1.unit_with_variable':
         'Element unit was declared EMPTY this one has content',
     # 6.4.1.1 A group must have at least one component_ref
-    '6.4.1.1.group_component_ref_missing_2': 'No declaration for',
+    '6.4.1.1.group_component_ref_missing_1':
+        'Element group content does not follow the DTD',
+    '6.4.1.1.group_component_ref_missing_2':
+        'Element group content does not follow the DTD',
     # 6.4.1.1 A group must have at least one relationship_ref
-    '6.4.1.1.group_relationship_ref_missing_2': 'No declaration for',
+    '6.4.1.1.group_relationship_ref_missing_1':
+        'Element group failed to validate content',
+    '6.4.1.1.group_relationship_ref_missing_2':
+        'Element group content does not follow the DTD',
     # 6.4.1.1 A group cannot be empty (extra test for missing comp_ref/rel_ref)
     '6.4.1.1.group_empty':
         'Element group content does not follow the DTD',
-    '6.4.1.1.group_only_extensions': 'No declaration for',
+    '6.4.1.1.group_only_extensions':
+        'Element group content does not follow the DTD',
     # 6.4.1.1 A group can only contain component_refs and relationship_refs
     '6.4.1.1.group_with_component':
         'Element group content does not follow the DTD',
@@ -611,10 +615,10 @@ expected_messages = {
         'Element role content does not follow the DTD',
     # 7.4.3.2 A role must define a valid role attribute
     '7.4.3.2.role_role_invalid':
-        'Value "mole" for attribute role of role is not among',
+        'attribute role of role is not among the enumerated set',
     # 7.4.3.4 A direction can only be forward, reverse, or both
     '7.4.3.4.role_direction_invalid':
-        'Value "backward" for attribute direction of role is not among',
+        'attribute direction of role is not among the enumerated set',
     # 8.4.1 Cmeta id's are unique
     '8.4.1.cmeta_id_duplicate': 'ID x already defined',
 }

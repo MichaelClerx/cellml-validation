@@ -3,7 +3,7 @@
                           with no namespace or in an extension namespace -->
 <model name="relationship_ref_relationship_2"
        xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:family="http://family.org">
+       xmlns:family="http://example.org/family">
   <component name="A" />
   <component name="B" />
   <group>
