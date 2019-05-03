@@ -484,10 +484,10 @@ expected_messages = {
     # 6.4.2.2 When not in a namespace, a relationship_ref's relationship must
     # be either containment or encapsulation.
     '6.4.2.2.relationship_ref_relationship_invalid':
-        "Element 'cellml:relationship_ref', attribute 'relationship'",
+        "not a valid value of the atomic type 'cellml:relationship'",
     # 6.4.2.3 A relationship_ref name must be a cellml identifier
     '6.4.2.3.relationship_ref_name_invalid':
-        "Element 'cellml:relationship_ref', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 6.2.4.5 name/relationship pairs must be unique
     '6.4.2.5.relationship_ref_duplicate_named':
         "Element 'cellml:relationship_ref': Duplicate key-sequence",
@@ -523,7 +523,7 @@ expected_messages = {
         "Element 'cellml:variable': This element is not expected",
     # 6.4.3.3 A component attribute must be an identifier
     '6.4.3.3.component_ref_component_invalid':
-        "'cellml:component_ref', attribute 'component'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 6.4.3.3 A component_ref must refer to an existing component
     '6.4.3.3.component_ref_component_nonexistent_1':
         "'cellml:component_ref': No match found for key-sequence",
@@ -634,10 +634,10 @@ expected_messages = {
         "Element 'cellml:variable': This element is not expected",
     # 7.4.3.2 A role must define a valid role attribute
     '7.4.3.2.role_role_invalid':
-        "Element 'cellml:role', attribute 'role'",
+        "not a valid value of the atomic type 'cellml:species_role'",
     # 7.4.3.4 A direction can only be forward, reverse, or both
     '7.4.3.4.role_direction_invalid':
-        "Element 'cellml:role', attribute 'direction'",
+        "not a valid value of the atomic type 'cellml:reaction_direction'",
     # 7.4.3.5 Each (role,direction) combination must be unique within a
     # variable_ref
     '7.4.3.5.role_direction_role_duplicate':
@@ -656,6 +656,8 @@ expected_messages = {
     '7.4.3.7.role_delta_variable_duplicate_2':
         "Element 'cellml:role': Duplicate key-sequence",
     # 8.4.1 Cmeta id's are unique
+    # This is a bit odd, but is apparently the expected message, as the
+    # uniqueness constraint is considered part of the atomic type xs:ID
     '8.4.1.cmeta_id_duplicate':
         "not a valid value of the atomic type 'xs:ID'"
 }

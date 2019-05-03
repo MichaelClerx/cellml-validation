@@ -1361,7 +1361,7 @@ Results per category
 * Output: ```Error on line 9: Element 'cellml:units': Duplicate key-sequence ['wooster'] in unique identity-constraint 'cellml:component_units_name'.```
 
 [5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): Error detected correctly.
-* Expected: ```Element 'cellml:units', attribute 'name'```
+* Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 5: Element 'cellml:units', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
   * ```Error on line 5: Element 'cellml:units', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
@@ -1895,7 +1895,7 @@ Results per category
 ##### 6.4.2.2
 
 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
-* Expected: ```Element 'cellml:relationship_ref', attribute 'relationship'```
+* Expected: ```not a valid value of the atomic type 'cellml:relationship'```
 * Output:
   * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': [facet 'enumeration'] The value 'howdy' is not an element of the set {'containment', 'encapsulation'}.```
   * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': 'howdy' is not a valid value of the atomic type 'cellml:relationship'.```
@@ -1907,7 +1907,7 @@ Results per category
 ##### 6.4.2.3
 
 [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): Error detected correctly.
-* Expected: ```Element 'cellml:relationship_ref', attribute 'name'```
+* Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
   * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
@@ -2053,7 +2053,7 @@ Results per category
 ##### 6.4.3.3
 
 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
-* Expected: ```'cellml:component_ref', attribute 'component'```
+* Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 10: Element 'cellml:component_ref', attribute 'component': [facet 'pattern'] The value '.' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
   * ```Error on line 10: Element 'cellml:component_ref', attribute 'component': '.' is not a valid value of the atomic type 'cellml:identifier'.```
@@ -2306,7 +2306,7 @@ Results per category
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
-* Expected: ```Element 'cellml:role', attribute 'role'```
+* Expected: ```not a valid value of the atomic type 'cellml:species_role'```
 * Output:
   * ```Error on line 9: Element 'cellml:role', attribute 'role': [facet 'enumeration'] The value 'mole' is not an element of the set {'reactant', 'product', 'catalyst', 'activator', 'inhibitor', 'modifier', 'rate'}.```
   * ```Error on line 9: Element 'cellml:role', attribute 'role': 'mole' is not a valid value of the atomic type 'cellml:species_role'.```
@@ -2331,7 +2331,7 @@ Results per category
 ##### 7.4.3.4
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
-* Expected: ```Element 'cellml:role', attribute 'direction'```
+* Expected: ```not a valid value of the atomic type 'cellml:reaction_direction'```
 * Output:
   * ```Error on line 23: Element 'cellml:role', attribute 'direction': [facet 'enumeration'] The value 'backward' is not an element of the set {'forward', 'reverse', 'both'}.```
   * ```Error on line 23: Element 'cellml:role', attribute 'direction': 'backward' is not a valid value of the atomic type 'cellml:reaction_direction'.```
