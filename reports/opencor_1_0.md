@@ -12,7 +12,7 @@ Issues:
 
 Results per category
 
-(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason)
+(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason, percent classified correctly according to spec)
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
@@ -26,6 +26,8 @@ Results per category
 |[8. Metadata framework](#8-metadata-framework)|30|0|0|1|0|96%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|42|0|3|0|0|93%|
 
+
+---
 
 ## 0. Not mentioned in spec
 
@@ -51,6 +53,8 @@ Results per category
 * Expected: ```The model could not be loaded (badxml```
 * Output: ```[Error] [0:0] The model could not be loaded (badxml/5/0//).```
 
+
+---
 
 ### 0.1
 
@@ -87,12 +91,16 @@ Results per category
 [0.1.real_numbers_extreme](../models_1_0/valid/0.1.real_numbers_extreme.cellml): Valid file passed validation.
 
 
+---
+
 ### 0.2
 
 [0.2.component_name_same_as_model](../models_1_0/valid/0.2.component_name_same_as_model.cellml): Valid file passed validation.
 
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
+
+---
 
 ## 2. Fundamentals
 
@@ -120,6 +128,8 @@ Results per category
   * ```[Error] [15:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
 
 
+---
+
 #### 2.4.2
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
@@ -134,6 +144,8 @@ Results per category
 * Expected: ```Unexpected element fruit found```
 * Output: ```[Error] [3:4] Unexpected element fruit found - not valid here.```
 
+
+---
 
 #### 2.4.3
 
@@ -171,6 +183,8 @@ Results per category
 
 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): Valid file passed validation.
 
+
+---
 
 #### 2.4.4
 
@@ -243,6 +257,8 @@ Results per category
 * Output: ```[Error] [6:8] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
 
 
+---
+
 #### 2.5.1
 
 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): Error detected correctly.
@@ -252,10 +268,14 @@ Results per category
   * ```[Error] [10:6] Invalid component referenced by component_1 attribute.```
 
 
+---
+
 #### 2.5.2
 
 🔵 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): **Error not detected.**
 
+
+---
 
 ## 3. Model structure
 
@@ -332,12 +352,16 @@ Results per category
 * Output: ```[Error] [3:4] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 3.4.1.2
 
 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
 * Expected: ```A valid CellML identifier must contain at least one letter```
 * Output: ```[Error] [2:181] A valid CellML identifier must contain at least one letter (section 2.4.1).```
 
+
+---
 
 ##### 3.4.2.1
 
@@ -412,6 +436,8 @@ Results per category
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.2.2
 
 [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): Error detected correctly.
@@ -422,6 +448,8 @@ Results per category
 * Expected: ```A valid CellML identifier must contain at least one letter```
 * Output: ```[Error] [3:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
 
+
+---
 
 ##### 3.4.3.1
 
@@ -502,6 +530,8 @@ Results per category
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.3.2
 
 [3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): Error detected correctly.
@@ -520,6 +550,8 @@ Results per category
 [3.4.3.2.variable_name_same_as_parent](../models_1_0/valid/3.4.3.2.variable_name_same_as_parent.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.3.3
 
 [3.4.3.3.variable_units_component](../models_1_0/valid/3.4.3.3.variable_units_component.cellml): Valid file passed validation.
@@ -537,12 +569,16 @@ Results per category
 * Output: ```[Error] [4:6] Invalid units on variable: oranges.```
 
 
+---
+
 ##### 3.4.3.4
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
 * Expected: ```the value of the public_interface / private_interface attribute MUST```
 * Output: ```[Error] [4:32] If present, the value of the public_interface / private_interface attribute MUST be "in", "out", or "none" (section 3.4.3.4 / 3.4.3.5).```
 
+
+---
 
 ##### 3.4.3.5
 
@@ -551,12 +587,16 @@ Results per category
 * Output: ```[Error] [4:33] If present, the value of the public_interface / private_interface attribute MUST be "in", "out", or "none" (section 3.4.3.4 / 3.4.3.5).```
 
 
+---
+
 ##### 3.4.3.6
 
 [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): Error detected correctly.
 * Expected: ```Cannot have two in interfaces on variable```
 * Output: ```[Error] [4:6] Cannot have two in interfaces on variable.```
 
+
+---
 
 ##### 3.4.3.7
 
@@ -569,6 +609,8 @@ Results per category
 * Output: ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
 
 
+---
+
 ##### 3.4.3.8
 
 [3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): Error detected correctly.
@@ -579,6 +621,8 @@ Results per category
 * Expected: ```cannot have initial value```
 * Output: ```[Error] [5:6] Variables with public or private interfaces of in cannot have initial value attributes.```
 
+
+---
 
 ##### 3.4.4.1
 
@@ -673,6 +717,8 @@ Results per category
 * Output: ```[Error] [12:6] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
@@ -748,6 +794,8 @@ Results per category
 * Output: ```[Error] [5:8] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 3.4.5.2
 
 [3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): Error detected correctly.
@@ -757,6 +805,8 @@ Results per category
   * ```[Error] [5:6] Invalid component referenced by component_1 attribute.```
 
 
+---
+
 ##### 3.4.5.3
 
 [3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): Error detected correctly.
@@ -765,6 +815,8 @@ Results per category
   * ```[Error] [5:6] Component_2 attribute doesn't refer to a valid component.```
   * ```[Error] [5:6] Invalid component referenced by component_2 attribute.```
 
+
+---
 
 ##### 3.4.5.4
 
@@ -787,6 +839,8 @@ Results per category
   * ```[Error] [8:6] The can only be a single connection element for each pair of components in the model.```
   * ```[Error] [8:6] There is more than one connection element for the same pair of components.```
 
+
+---
 
 ##### 3.4.6.1
 
@@ -863,6 +917,8 @@ Results per category
 * Output: ```[Error] [6:8] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 3.4.6.2
 
 [3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): Error detected correctly.
@@ -870,12 +926,16 @@ Results per category
 * Output: ```[Error] [9:6] Variable_1 attribute doesn't refer to a valid variable.```
 
 
+---
+
 ##### 3.4.6.3
 
 [3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): Error detected correctly.
 * Expected: ```Variable_2 attribute doesn't refer to a valid variable```
 * Output: ```[Error] [9:6] Variable_2 attribute doesn't refer to a valid variable.```
 
+
+---
 
 ##### 3.4.6.4
 
@@ -1098,6 +1158,8 @@ Results per category
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
+---
+
 ## 4. Mathematics
 
 ### 4.2
@@ -1180,6 +1242,8 @@ Results per category
   * ```[Error] [85:26] Text should not be present directly inside a MathML semantics element.```
 
 
+---
+
 #### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
@@ -1188,6 +1252,8 @@ Results per category
 
 🔵 [4.4.1.math_not_math_reaction](../models_1_0/invalid/4.4.1.math_not_math_reaction.cellml): **Error not detected.**
 
+
+---
 
 #### 4.4.2
 
@@ -1232,6 +1298,8 @@ Results per category
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
+---
+
 ##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
@@ -1244,6 +1312,8 @@ Results per category
 * Expected: ```MathML cn elements must have CellML units attribute```
 * Output: ```[Error] [9:10] MathML cn elements must have CellML units attribute.```
 
+
+---
 
 ##### 4.4.3.2
 
@@ -1260,6 +1330,8 @@ Results per category
 * Output: ```[Error] [17:12] MathML cn element has invalid units.```
 
 
+---
+
 #### 4.4.4
 
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
@@ -1275,10 +1347,14 @@ Results per category
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
 
+
+---
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1288,6 +1364,8 @@ Results per category
 
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
+
+---
 
 ## 5. Units
 
@@ -1299,6 +1377,8 @@ Results per category
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
   * ```  what():  std::exception```
 
+
+---
 
 #### 5.2.7
 
@@ -1363,6 +1443,8 @@ Results per category
 🔴 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): **Valid file failed validation.**
 * Output: ```[Error] [17:6] Connection of two variables which have dimensionally inconsistent units.```
 
+
+---
 
 ##### 5.4.1.1
 
@@ -1436,6 +1518,8 @@ Results per category
 * Expected: ```Unexpected element variable_ref```
 * Output: ```[Error] [7:8] Unexpected element variable_ref found - not valid here.```
 
+
+---
 
 ##### 5.4.1.2
 
@@ -1598,12 +1682,16 @@ Results per category
 [5.4.1.2.units_shadowing_2](../models_1_0/valid/5.4.1.2.units_shadowing_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 5.4.1.3
 
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
 * Expected: ```the value of the base_units attribute MUST be```
 * Output: ```[Error] [3:15] If present, the value of the base_units attribute MUST be "yes" or "no" (section 5.4.1.3).```
 
+
+---
 
 ##### 5.4.2.1
 
@@ -1681,6 +1769,8 @@ Results per category
 * Output: ```[Error] [7:10] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 5.4.2.2
 
 [5.4.2.2.unit_cycle_1](../models_1_0/invalid/5.4.2.2.unit_cycle_1.cellml): Error detected correctly.
@@ -1711,6 +1801,8 @@ Results per category
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.2.3
 
@@ -1743,6 +1835,8 @@ Results per category
   * ```  what():  std::exception```
 
 
+---
+
 ##### 5.4.2.4
 
 🔶 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): **Invalid file failed for unexpected reason.**
@@ -1751,6 +1845,8 @@ Results per category
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
   * ```  what():  std::exception```
 
+
+---
 
 ##### 5.4.2.5
 
@@ -1761,6 +1857,8 @@ Results per category
   * ```  what():  std::exception```
 
 
+---
+
 ##### 5.4.2.6
 
 🔶 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): **Invalid file failed for unexpected reason.**
@@ -1769,6 +1867,8 @@ Results per category
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
   * ```  what():  std::exception```
 
+
+---
 
 ##### 5.4.2.7
 
@@ -1784,6 +1884,8 @@ Results per category
 
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
+
+---
 
 #### 5.5.2
 
@@ -1909,6 +2011,8 @@ Results per category
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
 
+---
+
 ## 6. Grouping
 
 ##### 6.4.1.1
@@ -1999,12 +2103,16 @@ Results per category
 * Output: ```[Error] [12:6] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 #### 6.4.1
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.1
 
@@ -2079,12 +2187,16 @@ Results per category
 * Output: ```[Error] [9:8] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 6.4.2.2
 
 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
 * Expected: ```The value of a relationship attribute in the CellML namespace```
 * Output: ```[Error] [6:19] The value of a relationship attribute in the CellML namespace must be "containment" or "encapsulation" (section 6.4.2.2).```
 
+
+---
 
 ##### 6.4.2.3
 
@@ -2096,6 +2208,8 @@ Results per category
 
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.4
 
@@ -2109,6 +2223,8 @@ Results per category
 * Expected: ```A name attribute must not be defined```
 * Output: ```[Error] [6:6] A name attribute must not be defined on a  element with a relationship attribute value of "encapsulation" (section 6.4.2.4).```
 
+
+---
 
 ##### 6.4.2.5
 
@@ -2130,6 +2246,8 @@ Results per category
 
 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.3.1
 
@@ -2198,6 +2316,8 @@ Results per category
 * Output: ```[Error] [11:8] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 6.4.3.2
 
 [6.4.3.2.component_ref_children_declared_twice_1](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_1.cellml): Error detected correctly.
@@ -2246,6 +2366,8 @@ Results per category
 [6.4.3.2.component_ref_split_unnamed_2](../models_1_0/valid/6.4.3.2.component_ref_split_unnamed_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.3.3
 
 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
@@ -2263,6 +2385,8 @@ Results per category
 * Expected: ```Component_ref element references component which does not exist```
 * Output: ```[Error] [8:8] Component_ref element references component which does not exist.```
 
+
+---
 
 ## 7. Reactions
 
@@ -2329,6 +2453,8 @@ Results per category
 * Output: ```[Error] [9:8] Unexpected element variable found - not valid here.```
 
 
+---
+
 ##### 7.4.1.2
 
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
@@ -2340,10 +2466,14 @@ Results per category
 [7.4.1.2.reaction_reversible_yes](../models_1_0/valid/7.4.1.2.reaction_reversible_yes.cellml): Valid file passed validation.
 
 
+---
+
 ##### 7.4.1.3
 
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.2.1
 
@@ -2412,6 +2542,8 @@ Results per category
 * Output: ```[Error] [9:10] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 7.4.2.2
 
 🔵 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): **Error not detected.**
@@ -2420,6 +2552,8 @@ Results per category
 
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.1
 
@@ -2484,12 +2618,16 @@ Results per category
 * Output: ```[Error] [9:12] Unexpected element variable_ref found - not valid here.```
 
 
+---
+
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
 * Expected: ```must take one of the following seven values```
 * Output: ```[Error] [7:15] The role attribute must take one of the following seven values: reactant, product, catalyst, activator, inhibitor, modifier, rate (section 7.4.3.2).```
 
+
+---
 
 ##### 7.4.3.3
 
@@ -2502,12 +2640,16 @@ Results per category
 🔵 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.4
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
 * Expected: ```the direction attribute must take one of the following```
 * Output: ```[Error] [20:20] If present, the direction attribute must take one of the following three values: forward, reverse, both (section 7.4.3.4).```
 
+
+---
 
 ##### 7.4.3.5
 
@@ -2530,12 +2672,16 @@ Results per category
 🔵 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.6
 
 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): Error detected correctly.
 * Expected: ```Expected a real number```
 * Output: ```[Error] [11:60] Expected a real number, but didn't get one in a valid format.```
 
+
+---
 
 ##### 7.4.3.7
 
@@ -2547,6 +2693,8 @@ Results per category
 
 🔵 [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.8
 
@@ -2565,10 +2713,14 @@ Results per category
 🔵 [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.9
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+---
 
 #### 7.4.3
 
@@ -2578,6 +2730,8 @@ Results per category
 
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
+
+---
 
 ## 8. Metadata framework
 
@@ -2616,6 +2770,8 @@ Results per category
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
 
 
+---
+
 #### 8.4.2
 
 [8.4.2.rdf_in_component](../models_1_0/valid/8.4.2.rdf_in_component.cellml): Valid file passed validation.
@@ -2648,6 +2804,8 @@ Results per category
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed validation.
 
+
+---
 
 ## C. Advanced units functionality
 

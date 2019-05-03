@@ -12,7 +12,7 @@ Issues:
 
 Results per category
 
-(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason)
+(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason, percent classified correctly according to spec)
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
@@ -26,6 +26,8 @@ Results per category
 |[8. Metadata framework](#8-metadata-framework)|28|0|2|1|0|90%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|6|0|39|0|0|13%|
 
+
+---
 
 ## 0. Not mentioned in spec
 
@@ -47,6 +49,8 @@ Results per category
 * Expected: ```Extra content at the end of the document```
 * Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
 
+
+---
 
 ### 0.1
 
@@ -79,12 +83,16 @@ Results per category
 [0.1.real_numbers_extreme](../models_1_0/valid/0.1.real_numbers_extreme.cellml): Valid file passed validation.
 
 
+---
+
 ### 0.2
 
 [0.2.component_name_same_as_model](../models_1_0/valid/0.2.component_name_same_as_model.cellml): Valid file passed validation.
 
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
+
+---
 
 ## 2. Fundamentals
 
@@ -103,6 +111,8 @@ Results per category
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
 
 
+---
+
 #### 2.4.2
 
 🔵 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): **Error not detected.**
@@ -111,6 +121,8 @@ Results per category
 
 🔵 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): **Error not detected.**
 
+
+---
 
 #### 2.4.3
 
@@ -147,6 +159,8 @@ Results per category
 
 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): Valid file passed validation.
 
+
+---
 
 #### 2.4.4
 
@@ -189,16 +203,22 @@ Results per category
 🔵 [2.4.4.text_in_variable_ref](../models_1_0/invalid/2.4.4.text_in_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 #### 2.5.1
 
 🔶 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```'a$x'```
+* Output: ```'a$x'```
 
+
+---
 
 #### 2.5.2
 
 🔵 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): **Error not detected.**
 
+
+---
 
 ## 3. Model structure
 
@@ -251,10 +271,14 @@ Results per category
 🔵 [3.4.1.1.model_with_variable_ref](../models_1_0/invalid/3.4.1.1.model_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.1.2
 
 🔵 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.2.1
 
@@ -271,7 +295,7 @@ Results per category
 🔵 [3.4.2.1.component_with_component_ref](../models_1_0/invalid/3.4.2.1.component_with_component_ref.cellml): **Error not detected.**
 
 🔶 [3.4.2.1.component_with_connection](../models_1_0/invalid/3.4.2.1.component_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [3.4.2.1.component_with_group](../models_1_0/invalid/3.4.2.1.component_with_group.cellml): **Error not detected.**
 
@@ -306,12 +330,16 @@ Results per category
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.2.2
 
 🔵 [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): **Error not detected.**
 
 🔵 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.3.1
 
@@ -328,7 +356,7 @@ Results per category
 🔵 [3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): **Error not detected.**
 
 🔶 [3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): **Error not detected.**
 
@@ -362,6 +390,8 @@ Results per category
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.3.2
 
 [3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): Error detected correctly.
@@ -374,6 +404,8 @@ Results per category
 
 [3.4.3.2.variable_name_same_as_parent](../models_1_0/valid/3.4.3.2.variable_name_same_as_parent.cellml): Valid file passed validation.
 
+
+---
 
 ##### 3.4.3.3
 
@@ -393,21 +425,29 @@ Results per category
 * Output: ```'Cannot find unit <oranges> in unit registry'```
 
 
+---
+
 ##### 3.4.3.4
 
 🔵 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.3.5
 
 🔵 [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.3.6
 
 🔶 [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
+
+---
 
 ##### 3.4.3.7
 
@@ -420,14 +460,18 @@ Results per category
 * Output: ```could not convert string to float: '1+1'```
 
 
+---
+
 ##### 3.4.3.8
 
 🔶 [3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
+
+---
 
 ##### 3.4.4.1
 
@@ -440,7 +484,7 @@ Results per category
 🔶 [3.4.4.1.connection_map_components_multiple](../models_1_0/invalid/3.4.4.1.connection_map_components_multiple.cellml): **Invalid file failed for unexpected reason.**
 
 🔶 [3.4.4.1.connection_map_variables_missing_1](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_1.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): **Invalid file failed for unexpected reason.**
 
@@ -480,6 +524,8 @@ Results per category
 🔶 [3.4.4.1.connection_with_variable_ref](../models_1_0/invalid/3.4.4.1.connection_with_variable_ref.cellml): **Invalid file failed for unexpected reason.**
 
 
+---
+
 ##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
@@ -499,15 +545,15 @@ Results per category
 🔵 [3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): **Error not detected.**
 
 🔶 [3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): **Error not detected.**
 
 🔶 [3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): **Error not detected.**
 
@@ -528,6 +574,8 @@ Results per category
 🔵 [3.4.5.1.map_components_with_variable_ref](../models_1_0/invalid/3.4.5.1.map_components_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.5.2
 
 [3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): Error detected correctly.
@@ -535,12 +583,16 @@ Results per category
 * Output: ```'c$x'```
 
 
+---
+
 ##### 3.4.5.3
 
 [3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): Error detected correctly.
 * Expected: ```c$x```
 * Output: ```'c$x'```
 
+
+---
 
 ##### 3.4.5.4
 
@@ -552,6 +604,8 @@ Results per category
 
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.1
 
@@ -568,15 +622,15 @@ Results per category
 🔵 [3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): **Error not detected.**
 
 🔶 [3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): **Error not detected.**
 
 🔶 [3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): **Error not detected.**
 
@@ -597,6 +651,8 @@ Results per category
 🔵 [3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.6.2
 
 [3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): Error detected correctly.
@@ -604,12 +660,16 @@ Results per category
 * Output: ```'c1$a'```
 
 
+---
+
 ##### 3.4.6.3
 
 [3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): Error detected correctly.
 * Expected: ```c2$b```
 * Output: ```'c2$b'```
 
+
+---
 
 ##### 3.4.6.4
 
@@ -719,7 +779,7 @@ Results per category
 
 [3.4.6.4.map_variables_parent_multiple_out](../models_1_0/invalid/3.4.6.4.map_variables_parent_multiple_out.cellml): Error detected correctly.
 * Expected: ```Target already assigned```
-* Output: ```Target already assigned to _A$a before assignment to _A$b```
+* Output: ```Target already assigned to _A$b before assignment to _A$a```
 
 [3.4.6.4.map_variables_parent_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_parent_out_to_out_1.cellml): Error detected correctly.
 * Expected: ```Cannot determine the source & target for connection```
@@ -753,11 +813,11 @@ Results per category
 
 [3.4.6.4.map_variables_sibling_multiple_out_1](../models_1_0/invalid/3.4.6.4.map_variables_sibling_multiple_out_1.cellml): Error detected correctly.
 * Expected: ```Target already assigned```
-* Output: ```Target already assigned to _A$b before assignment to _A$a```
+* Output: ```Target already assigned to _A$a before assignment to _A$b```
 
 [3.4.6.4.map_variables_sibling_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_sibling_multiple_out_2.cellml): Error detected correctly.
 * Expected: ```Target already assigned```
-* Output: ```Target already assigned to _B$a before assignment to _A$a```
+* Output: ```Target already assigned to _A$a before assignment to _B$a```
 
 [3.4.6.4.map_variables_sibling_mutual](../models_1_0/valid/3.4.6.4.map_variables_sibling_mutual.cellml): Valid file passed validation.
 
@@ -791,6 +851,8 @@ Results per category
 
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
+
+---
 
 ## 4. Mathematics
 
@@ -874,6 +936,8 @@ Results per category
 * Output: ```'Cannot find unit <per_millisecond> in unit registry'```
 
 
+---
+
 #### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
@@ -882,6 +946,8 @@ Results per category
 
 🔵 [4.4.1.math_not_math_reaction](../models_1_0/invalid/4.4.1.math_not_math_reaction.cellml): **Error not detected.**
 
+
+---
 
 #### 4.4.2
 
@@ -926,6 +992,8 @@ Results per category
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
+---
+
 ##### 4.4.3.1
 
 🔴 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): **Valid file failed validation.**
@@ -939,6 +1007,8 @@ Results per category
 * Expected: ```cellml:units```
 * Output: ```'cellml:units'```
 
+
+---
 
 ##### 4.4.3.2
 
@@ -955,6 +1025,8 @@ Results per category
 * Output: ```'Cannot find unit <wooster> in unit registry'```
 
 
+---
+
 #### 4.4.4
 
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
@@ -970,10 +1042,14 @@ Results per category
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
 
+
+---
 
 🔴 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): **Valid file failed validation.**
 
@@ -984,12 +1060,16 @@ Results per category
 🔶 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Invalid file failed for unexpected reason.**
 
 
+---
+
 ## 5. Units
 
 #### 5.2.2
 
 🔵 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): **Error not detected.**
 
+
+---
 
 #### 5.2.7
 
@@ -1007,7 +1087,7 @@ Results per category
 * Output: ```No handler for element <factorial>```
 
 🔴 [5.2.7.unit_checking_functions_non_smooth](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_non_smooth.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=3014616))```
+* Output: ```TODO TODO TODO ceiling(_3.00000000000000) ceiling(Dummy('3.00000000000000', dummy_index=8330020))```
 
 🔴 [5.2.7.unit_checking_functions_power_and_root](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_functions_power_and_root.cellml): **Valid file failed validation.**
 * Output: ```'Cannot find unit <meter_cubic> in unit registry'```
@@ -1064,6 +1144,8 @@ Results per category
 * Output: ```Units megavolt (1000000.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != millivolt (0.001, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>)```
 
 
+---
+
 ##### 5.4.1.1
 
 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed validation.
@@ -1115,17 +1197,19 @@ Results per category
 * Output: ```'units'```
 
 🔶 [5.4.1.1.units_with_role](../models_1_0/invalid/5.4.1.1.units_with_role.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```'units'```
+* Output: ```'units'```
 
 [5.4.1.1.units_with_unit_children](../models_1_0/valid/5.4.1.1.units_with_unit_children.cellml): Valid file passed validation.
 
 🔶 [5.4.1.1.units_with_units](../models_1_0/invalid/5.4.1.1.units_with_units.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```'units'```
+* Output: ```'units'```
 
 🔵 [5.4.1.1.units_with_variable](../models_1_0/invalid/5.4.1.1.units_with_variable.cellml): **Error not detected.**
 
 🔵 [5.4.1.1.units_with_variable_ref](../models_1_0/invalid/5.4.1.1.units_with_variable_ref.cellml): **Error not detected.**
 
+
+---
 
 ##### 5.4.1.2
 
@@ -1283,10 +1367,14 @@ Results per category
 * Output: ```Units wooster (1.0, <Unit('kilogram * meter ** 2 / ampere / second ** 3')>) != newton (1.0, <Unit('kilogram * meter / second ** 2')>)```
 
 
+---
+
 ##### 5.4.1.3
 
 🔵 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 5.4.2.1
 
@@ -1305,14 +1393,14 @@ Results per category
 🔵 [5.4.2.1.unit_with_component_ref](../models_1_0/invalid/5.4.2.1.unit_with_component_ref.cellml): **Error not detected.**
 
 🔶 [5.4.2.1.unit_with_connection](../models_1_0/invalid/5.4.2.1.unit_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [5.4.2.1.unit_with_group](../models_1_0/invalid/5.4.2.1.unit_with_group.cellml): **Error not detected.**
 
 🔵 [5.4.2.1.unit_with_map_components](../models_1_0/invalid/5.4.2.1.unit_with_map_components.cellml): **Error not detected.**
 
 🔶 [5.4.2.1.unit_with_map_variables](../models_1_0/invalid/5.4.2.1.unit_with_map_variables.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [5.4.2.1.unit_with_math](../models_1_0/invalid/5.4.2.1.unit_with_math.cellml): **Error not detected.**
 
@@ -1333,28 +1421,32 @@ Results per category
 🔵 [5.4.2.1.unit_with_variable_ref](../models_1_0/invalid/5.4.2.1.unit_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 5.4.2.2
 
 🔶 [5.4.2.2.unit_cycle_1](../models_1_0/invalid/5.4.2.2.unit_cycle_1.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Running test causes infinite loop```
-* Output: ```unit cycle```
+* Expected: ```unit cycle```
+* Output: ```Running test causes infinite loop```
 
 🔶 [5.4.2.2.unit_cycle_2](../models_1_0/invalid/5.4.2.2.unit_cycle_2.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Running test causes infinite loop```
-* Output: ```unit cycle```
+* Expected: ```unit cycle```
+* Output: ```Running test causes infinite loop```
 
 🔶 [5.4.2.2.unit_cycle_3](../models_1_0/invalid/5.4.2.2.unit_cycle_3.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Running test causes infinite loop```
-* Output: ```unit cycle```
+* Expected: ```unit cycle```
+* Output: ```Running test causes infinite loop```
 
 🔶 [5.4.2.2.unit_units_invalid](../models_1_0/invalid/5.4.2.2.unit_units_invalid.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Running test causes infinite loop```
-* Output: ```unit cycle```
+* Expected: ```unit cycle```
+* Output: ```Running test causes infinite loop```
 
 [5.4.2.2.unit_units_local_1](../models_1_0/valid/5.4.2.2.unit_units_local_1.cellml): Valid file passed validation.
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.2.3
 
@@ -1377,12 +1469,16 @@ Results per category
 * Output: ```'eflotta' is not defined in the unit registry```
 
 
+---
+
 ##### 5.4.2.4
 
 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error detected correctly.
 * Expected: ```'yes' is not defined in the unit registry```
 * Output: ```'yes' is not defined in the unit registry```
 
+
+---
 
 ##### 5.4.2.5
 
@@ -1391,10 +1487,14 @@ Results per category
 * Output: ```'three' is not defined in the unit registry```
 
 
+---
+
 ##### 5.4.2.6
 
 🔵 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 5.4.2.7
 
@@ -1411,6 +1511,8 @@ Results per category
 
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
+
+---
 
 #### 5.5.2
 
@@ -1572,8 +1674,10 @@ Results per category
 * Output: ```TODO TODO TODO False S.false```
 
 🔴 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=3014555), Dummy('1.00000000000000', dummy_index=3014556))```
+* Output: ```TODO TODO TODO Eq(_1.00000000000000, _1.00000000000000) Equality(Dummy('1.00000000000000', dummy_index=8329959), Dummy('1.00000000000000', dummy_index=8329960))```
 
+
+---
 
 ## 6. Grouping
 
@@ -1598,7 +1702,7 @@ Results per category
 🔵 [6.4.1.1.group_with_component](../models_1_0/invalid/6.4.1.1.group_with_component.cellml): **Error not detected.**
 
 🔶 [6.4.1.1.group_with_connection](../models_1_0/invalid/6.4.1.1.group_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [6.4.1.1.group_with_group](../models_1_0/invalid/6.4.1.1.group_with_group.cellml): **Error not detected.**
 
@@ -1623,12 +1727,16 @@ Results per category
 🔵 [6.4.1.1.group_with_variable_ref](../models_1_0/invalid/6.4.1.1.group_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 #### 6.4.1
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.1
 
@@ -1645,7 +1753,7 @@ Results per category
 🔵 [6.4.2.1.relationship_ref_with_component_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component_ref.cellml): **Error not detected.**
 
 🔶 [6.4.2.1.relationship_ref_with_connection](../models_1_0/invalid/6.4.2.1.relationship_ref_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [6.4.2.1.relationship_ref_with_group](../models_1_0/invalid/6.4.2.1.relationship_ref_with_group.cellml): **Error not detected.**
 
@@ -1672,10 +1780,14 @@ Results per category
 🔵 [6.4.2.1.relationship_ref_with_variable_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 6.4.2.2
 
 🔵 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 6.4.2.3
 
@@ -1684,12 +1796,16 @@ Results per category
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.2.4
 
 🔶 [6.4.2.4.relationship_ref_encapsulation_duplicate](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_duplicate.cellml): **Invalid file failed for unexpected reason.**
 
 🔵 [6.4.2.4.relationship_ref_encapsulation_named](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_named.cellml): **Error not detected.**
 
+
+---
 
 ##### 6.4.2.5
 
@@ -1706,6 +1822,8 @@ Results per category
 🔴 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): **Valid file failed validation.**
 
 
+---
+
 ##### 6.4.3.1
 
 🔵 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): **Error not detected.**
@@ -1715,7 +1833,7 @@ Results per category
 🔵 [6.4.3.1.component_ref_with_component](../models_1_0/invalid/6.4.3.1.component_ref_with_component.cellml): **Error not detected.**
 
 🔶 [6.4.3.1.component_ref_with_connection](../models_1_0/invalid/6.4.3.1.component_ref_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [6.4.3.1.component_ref_with_group](../models_1_0/invalid/6.4.3.1.component_ref_with_group.cellml): **Error not detected.**
 
@@ -1741,6 +1859,8 @@ Results per category
 
 🔵 [6.4.3.1.component_ref_with_variable_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_variable_ref.cellml): **Error not detected.**
 
+
+---
 
 ##### 6.4.3.2
 
@@ -1781,6 +1901,8 @@ Results per category
 [6.4.3.2.component_ref_split_unnamed_2](../models_1_0/valid/6.4.3.2.component_ref_split_unnamed_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.3.3
 
 🔵 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): **Error not detected.**
@@ -1789,6 +1911,8 @@ Results per category
 
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ## 7. Reactions
 
@@ -1801,15 +1925,15 @@ Results per category
 🔵 [7.4.1.1.reaction_with_component_ref](../models_1_0/invalid/7.4.1.1.reaction_with_component_ref.cellml): **Error not detected.**
 
 🔶 [7.4.1.1.reaction_with_connection](../models_1_0/invalid/7.4.1.1.reaction_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [7.4.1.1.reaction_with_group](../models_1_0/invalid/7.4.1.1.reaction_with_group.cellml): **Error not detected.**
 
 🔶 [7.4.1.1.reaction_with_map_components](../models_1_0/invalid/7.4.1.1.reaction_with_map_components.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [7.4.1.1.reaction_with_map_variables](../models_1_0/invalid/7.4.1.1.reaction_with_map_variables.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [7.4.1.1.reaction_with_math](../models_1_0/invalid/7.4.1.1.reaction_with_math.cellml): **Error not detected.**
 
@@ -1828,6 +1952,8 @@ Results per category
 🔵 [7.4.1.1.reaction_with_variable](../models_1_0/invalid/7.4.1.1.reaction_with_variable.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.1.2
 
 🔵 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): **Error not detected.**
@@ -1837,10 +1963,14 @@ Results per category
 [7.4.1.2.reaction_reversible_yes](../models_1_0/valid/7.4.1.2.reaction_reversible_yes.cellml): Valid file passed validation.
 
 
+---
+
 ##### 7.4.1.3
 
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.2.1
 
@@ -1853,15 +1983,15 @@ Results per category
 🔵 [7.4.2.1.variable_ref_with_component_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_component_ref.cellml): **Error not detected.**
 
 🔶 [7.4.2.1.variable_ref_with_connection](../models_1_0/invalid/7.4.2.1.variable_ref_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [7.4.2.1.variable_ref_with_group](../models_1_0/invalid/7.4.2.1.variable_ref_with_group.cellml): **Error not detected.**
 
 🔶 [7.4.2.1.variable_ref_with_map_components](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_components.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [7.4.2.1.variable_ref_with_map_variables](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_variables.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [7.4.2.1.variable_ref_with_math](../models_1_0/invalid/7.4.2.1.variable_ref_with_math.cellml): **Error not detected.**
 
@@ -1880,6 +2010,8 @@ Results per category
 🔵 [7.4.2.1.variable_ref_with_variable_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.2.2
 
 🔵 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): **Error not detected.**
@@ -1888,6 +2020,8 @@ Results per category
 
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.1
 
@@ -1898,15 +2032,15 @@ Results per category
 🔵 [7.4.3.1.role_with_component_ref](../models_1_0/invalid/7.4.3.1.role_with_component_ref.cellml): **Error not detected.**
 
 🔶 [7.4.3.1.role_with_connection](../models_1_0/invalid/7.4.3.1.role_with_connection.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [7.4.3.1.role_with_group](../models_1_0/invalid/7.4.3.1.role_with_group.cellml): **Error not detected.**
 
 🔶 [7.4.3.1.role_with_map_components](../models_1_0/invalid/7.4.3.1.role_with_map_components.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔶 [7.4.3.1.role_with_map_variables](../models_1_0/invalid/7.4.3.1.role_with_map_variables.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```None```
+* Output: ```None```
 
 🔵 [7.4.3.1.role_with_model](../models_1_0/invalid/7.4.3.1.role_with_model.cellml): **Error not detected.**
 
@@ -1925,10 +2059,14 @@ Results per category
 🔵 [7.4.3.1.role_with_variable_ref](../models_1_0/invalid/7.4.3.1.role_with_variable_ref.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.2
 
 🔵 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.3
 
@@ -1941,10 +2079,14 @@ Results per category
 🔵 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.4
 
 🔵 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.5
 
@@ -1967,10 +2109,14 @@ Results per category
 🔵 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.6
 
 🔵 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.7
 
@@ -1982,6 +2128,8 @@ Results per category
 
 🔵 [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.8
 
@@ -2000,10 +2148,14 @@ Results per category
 🔵 [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.9
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+---
 
 #### 7.4.3
 
@@ -2013,6 +2165,8 @@ Results per category
 
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
+
+---
 
 ## 8. Metadata framework
 
@@ -2051,6 +2205,8 @@ Results per category
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
 
 
+---
+
 #### 8.4.2
 
 [8.4.2.rdf_in_component](../models_1_0/valid/8.4.2.rdf_in_component.cellml): Valid file passed validation.
@@ -2084,6 +2240,8 @@ Results per category
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed validation.
 
+
+---
 
 ## C. Advanced units functionality
 
@@ -2135,73 +2293,73 @@ Results per category
 * Output: ```log args not dimensionless ([<Unit('volt')>])```
 
 🔴 [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=3014720))```
+* Output: ```TODO TODO TODO acos(_0.500000000000000) acos(Dummy('0.500000000000000', dummy_index=8330124))```
 
 🔴 [C.3.3.unit_checking_trig_arccosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccosh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=3014722))```
+* Output: ```TODO TODO TODO acosh(_0.500000000000000) acosh(Dummy('0.500000000000000', dummy_index=8330126))```
 
 🔴 [C.3.3.unit_checking_trig_arccot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccot_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=3014724))```
+* Output: ```TODO TODO TODO acot(_0.500000000000000) acot(Dummy('0.500000000000000', dummy_index=8330128))```
 
 🔴 [C.3.3.unit_checking_trig_arccoth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccoth_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=3014726))```
+* Output: ```TODO TODO TODO acoth(_0.500000000000000) acoth(Dummy('0.500000000000000', dummy_index=8330130))```
 
 🔴 [C.3.3.unit_checking_trig_arccsc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsc_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=3014728))```
+* Output: ```TODO TODO TODO acsc(_0.500000000000000) acsc(Dummy('0.500000000000000', dummy_index=8330132))```
 
 🔴 [C.3.3.unit_checking_trig_arccsch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccsch_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=3014730))```
+* Output: ```TODO TODO TODO acsch(_0.500000000000000) acsch(Dummy('0.500000000000000', dummy_index=8330134))```
 
 🔴 [C.3.3.unit_checking_trig_arcsec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsec_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=3014732))```
+* Output: ```TODO TODO TODO asec(_0.500000000000000) asec(Dummy('0.500000000000000', dummy_index=8330136))```
 
 🔴 [C.3.3.unit_checking_trig_arcsech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsech_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=3014734))```
+* Output: ```TODO TODO TODO asech(_0.500000000000000) asech(Dummy('0.500000000000000', dummy_index=8330138))```
 
 🔴 [C.3.3.unit_checking_trig_arcsin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsin_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=3014736))```
+* Output: ```TODO TODO TODO asin(_0.500000000000000) asin(Dummy('0.500000000000000', dummy_index=8330140))```
 
 🔴 [C.3.3.unit_checking_trig_arcsinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arcsinh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=3014738))```
+* Output: ```TODO TODO TODO asinh(_0.500000000000000) asinh(Dummy('0.500000000000000', dummy_index=8330142))```
 
 🔴 [C.3.3.unit_checking_trig_arctan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctan_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=3014740))```
+* Output: ```TODO TODO TODO atan(_0.500000000000000) atan(Dummy('0.500000000000000', dummy_index=8330144))```
 
 🔴 [C.3.3.unit_checking_trig_arctanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arctanh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=3014742))```
+* Output: ```TODO TODO TODO atanh(_0.500000000000000) atanh(Dummy('0.500000000000000', dummy_index=8330146))```
 
 🔴 [C.3.3.unit_checking_trig_cos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cos_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=3014744))```
+* Output: ```TODO TODO TODO cos(_4.30000000000000) cos(Dummy('4.30000000000000', dummy_index=8330148))```
 
 🔴 [C.3.3.unit_checking_trig_cosh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cosh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=3014746))```
+* Output: ```TODO TODO TODO cosh(_4.30000000000000) cosh(Dummy('4.30000000000000', dummy_index=8330150))```
 
 🔴 [C.3.3.unit_checking_trig_cot_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_cot_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=3014748))```
+* Output: ```TODO TODO TODO cot(_4.30000000000000) cot(Dummy('4.30000000000000', dummy_index=8330152))```
 
 🔴 [C.3.3.unit_checking_trig_coth_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_coth_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=3014750))```
+* Output: ```TODO TODO TODO coth(_4.30000000000000) coth(Dummy('4.30000000000000', dummy_index=8330154))```
 
 🔴 [C.3.3.unit_checking_trig_csc_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csc_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=3014752))```
+* Output: ```TODO TODO TODO csc(_4.30000000000000) csc(Dummy('4.30000000000000', dummy_index=8330156))```
 
 🔴 [C.3.3.unit_checking_trig_csch_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_csch_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=3014754))```
+* Output: ```TODO TODO TODO csch(_4.30000000000000) csch(Dummy('4.30000000000000', dummy_index=8330158))```
 
 🔴 [C.3.3.unit_checking_trig_sec_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sec_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=3014756))```
+* Output: ```TODO TODO TODO sec(_4.30000000000000) sec(Dummy('4.30000000000000', dummy_index=8330160))```
 
 🔴 [C.3.3.unit_checking_trig_sech_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sech_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=3014758))```
+* Output: ```TODO TODO TODO sech(_4.30000000000000) sech(Dummy('4.30000000000000', dummy_index=8330162))```
 
 🔴 [C.3.3.unit_checking_trig_sin_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sin_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=3014760))```
+* Output: ```TODO TODO TODO sin(_4.30000000000000) sin(Dummy('4.30000000000000', dummy_index=8330164))```
 
 🔴 [C.3.3.unit_checking_trig_sinh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_sinh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=3014762))```
+* Output: ```TODO TODO TODO sinh(_4.30000000000000) sinh(Dummy('4.30000000000000', dummy_index=8330166))```
 
 🔴 [C.3.3.unit_checking_trig_tan_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tan_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=3014764))```
+* Output: ```TODO TODO TODO tan(_4.30000000000000) tan(Dummy('4.30000000000000', dummy_index=8330168))```
 
 🔴 [C.3.3.unit_checking_trig_tanh_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_tanh_operand_error.cellml): **Valid file failed validation.**
-* Output: ```TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=3014766))```
+* Output: ```TODO TODO TODO tanh(_4.30000000000000) tanh(Dummy('4.30000000000000', dummy_index=8330170))```
