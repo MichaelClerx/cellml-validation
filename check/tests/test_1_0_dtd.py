@@ -65,16 +65,17 @@ expected_messages = {
         'Extra content at the end of the document',
     # 2.4.2. Allowable CellML elements and attributes
     '2.4.2.imaginary_attributes_1':
-        'No declaration for attribute',
+        'No declaration for attribute fruit',
     '2.4.2.imaginary_attributes_2':
-        'No declaration for attribute',
+        'No declaration for attribute fruit',
     '2.4.2.imaginary_elements':
-        'Element model content does not follow the DTD',
+        'No declaration for element fruit',
     # 2.4.3 Elements/attributes in extension namespaces
+    # Error is raised about extension elements, which are allowed
     '2.4.3.cellml_attributes_inside_extensions':
-        'Element model content does not follow the DTD',
+        'CellML attributes may not appears inside extension elements',
     '2.4.3.cellml_elements_inside_extensions':
-        'Element model content does not follow the DTD',
+        'CellML attributes may not appears inside extension elements',
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         'Element component content does not follow the DTD',
@@ -164,35 +165,35 @@ expected_messages = {
         'Element component does not carry attribute name',
     # 3.4.3.1 Variables can't contain any elements
     '3.4.3.1.variable_with_component':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_component_ref':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_connection':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_group':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_map_components':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_map_variables':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_math':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_model':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_reaction':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_relationship_ref':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_role':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_unit':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_units':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_variable_ref':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     '3.4.3.1.variable_with_variable':
-        'Element variable was declared EMPTY',
+        'Element variable was declared EMPTY this one has content',
     # 3.4.3.1 Variables must have a name attribute
     '3.4.3.1.variable_name_missing':
         'Element variable does not carry attribute name',
@@ -638,6 +639,9 @@ known_issues = {
     '2.4.1.identifier_unexpected_character_1',
     '2.4.1.identifier_unexpected_character_2',
     '2.4.1.identifier_unexpected_character_unicode',
+    # 2.4.3 Elements/attributes in extension namespaces
+    '2.4.3.cellml_attributes_inside_extensions',
+    '2.4.3.cellml_elements_inside_extensions',
     # 2.5.1 Identifiers are case sensitive
     '2.5.1.identifiers_are_case_sensitive',
     # 3.4.1.2 A model name must be a valid identifier

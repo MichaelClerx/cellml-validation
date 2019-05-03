@@ -1,23 +1,23 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 69% according to spec (533 out of 763)
+* 69% according to spec (531 out of 763)
 * 280 out of 316 valid files passed
-* 253 out of 447 invalid files detected
+* 251 out of 447 invalid files detected
 
 Issues:
 * 36 valid files failed validation
 * 194 invalid files passed validation
-* 0 invalid files failed validation for the wrong reason
+* 2 invalid files failed validation for the wrong reason
 
 Results per category
 
-(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason)
+(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason, percent classified correctly according to spec)
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|8|0|50%|
-|[2. Fundamentals](#2-fundamentals)|5|21|14|6|0|56%|
+|[2. Fundamentals](#2-fundamentals)|5|19|14|6|2|52%|
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
 |[5. Units](#5-units)|99|32|0|54|0|70%|
@@ -26,6 +26,8 @@ Results per category
 |[8. Metadata framework](#8-metadata-framework)|15|1|15|0|0|51%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
+
+---
 
 ## 0. Not mentioned in spec
 
@@ -48,6 +50,8 @@ Results per category
 * Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
 
 
+---
+
 ### 0.1
 
 🔵 [0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): **Error not detected.**
@@ -67,12 +71,16 @@ Results per category
 [0.1.real_numbers_extreme](../models_1_0/valid/0.1.real_numbers_extreme.cellml): Valid file passed validation.
 
 
+---
+
 ### 0.2
 
 [0.2.component_name_same_as_model](../models_1_0/valid/0.2.component_name_same_as_model.cellml): Valid file passed validation.
 
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
+
+---
 
 ## 2. Fundamentals
 
@@ -91,36 +99,39 @@ Results per category
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
 
 
+---
+
 #### 2.4.2
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
-* Expected: ```No declaration for attribute```
+* Expected: ```No declaration for attribute fruit```
 * Output: ```Error on line 6: No declaration for attribute fruit of element model```
 
 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): Error detected correctly.
-* Expected: ```No declaration for attribute```
+* Expected: ```No declaration for attribute fruit```
 * Output: ```Error on line 7: No declaration for attribute fruit of element model```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
-* Expected: ```Element model content does not follow the DTD```
+* Expected: ```No declaration for element fruit```
 * Output:
   * ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (fruit )```
   * ```Error on line 5: No declaration for element fruit```
-  * ```Error on line 5: No declaration for attribute name of element fruit```
 
+
+---
 
 #### 2.4.3
 
-[2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): Error detected correctly.
-* Expected: ```Element model content does not follow the DTD```
+🔶 [2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```CellML attributes may not appears inside extension elements```
 * Output:
   * ```Error on line 6: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (fruit:banana )```
   * ```Error on line 6: No declaration for attribute xmlns:fruit of element model```
   * ```Error on line 7: No declaration for element banana```
   * ```Error on line 7: No declaration for attribute name of element banana```
 
-[2.4.3.cellml_elements_inside_extensions](../models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml): Error detected correctly.
-* Expected: ```Element model content does not follow the DTD```
+🔶 [2.4.3.cellml_elements_inside_extensions](../models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```CellML attributes may not appears inside extension elements```
 * Output:
   * ```Error on line 6: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (fruit:banana )```
   * ```Error on line 6: No declaration for attribute xmlns:fruit of element model```
@@ -273,6 +284,8 @@ Results per category
   * ```Error on line 11: No declaration for element pear```
 
 
+---
+
 #### 2.4.4
 
 [2.4.4.model_linux_line_breaks](../models_1_0/valid/2.4.4.model_linux_line_breaks.cellml): Valid file passed validation.
@@ -344,10 +357,14 @@ Results per category
 * Output: ```Error on line 8: Element variable_ref content does not follow the DTD, expecting (role)+, got (role CDATA)```
 
 
+---
+
 #### 2.5.1
 
 🔵 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): **Error not detected.**
 
+
+---
 
 #### 2.5.2
 
@@ -355,6 +372,8 @@ Results per category
 * Expected: ```No declaration for attribute name```
 * Output: ```Error on line 5: No declaration for attribute name of element model```
 
+
+---
 
 ## 3. Model structure
 
@@ -431,10 +450,14 @@ Results per category
 * Output: ```Error on line 4: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (variable_ref )```
 
 
+---
+
 ##### 3.4.1.2
 
 🔵 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.2.1
 
@@ -509,12 +532,16 @@ Results per category
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.2.2
 
 🔵 [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): **Error not detected.**
 
 🔵 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.3.1
 
@@ -527,19 +554,19 @@ Results per category
 * Output: ```Error on line 6: Element variable does not carry attribute units```
 
 [3.4.3.1.variable_with_component](../models_1_0/invalid/3.4.3.1.variable_with_component.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 12: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_initial_value](../models_1_0/valid/3.4.3.1.variable_with_initial_value.cellml): Valid file passed validation.
@@ -547,51 +574,53 @@ Results per category
 [3.4.3.1.variable_with_interfaces](../models_1_0/valid/3.4.3.1.variable_with_interfaces.cellml): Valid file passed validation.
 
 [3.4.3.1.variable_with_map_components](../models_1_0/invalid/3.4.3.1.variable_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 7: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_model](../models_1_0/invalid/3.4.3.1.variable_with_model.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_reaction](../models_1_0/invalid/3.4.3.1.variable_with_reaction.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_relationship_ref](../models_1_0/invalid/3.4.3.1.variable_with_relationship_ref.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_role](../models_1_0/invalid/3.4.3.1.variable_with_role.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_unit](../models_1_0/invalid/3.4.3.1.variable_with_unit.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_units](../models_1_0/invalid/3.4.3.1.variable_with_units.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_variable](../models_1_0/invalid/3.4.3.1.variable_with_variable.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_with_variable_ref](../models_1_0/invalid/3.4.3.1.variable_with_variable_ref.cellml): Error detected correctly.
-* Expected: ```Element variable was declared EMPTY```
+* Expected: ```Element variable was declared EMPTY this one has content```
 * Output: ```Error on line 6: Element variable was declared EMPTY this one has content```
 
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
+
+---
 
 ##### 3.4.3.2
 
@@ -603,6 +632,8 @@ Results per category
 
 [3.4.3.2.variable_name_same_as_parent](../models_1_0/valid/3.4.3.2.variable_name_same_as_parent.cellml): Valid file passed validation.
 
+
+---
 
 ##### 3.4.3.3
 
@@ -617,12 +648,16 @@ Results per category
 🔵 [3.4.3.3.variable_units_unknown](../models_1_0/invalid/3.4.3.3.variable_units_unknown.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.3.4
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
 * Expected: ```attribute public_interface of variable is not among```
 * Output: ```Error on line 6: Value "apple" for attribute public_interface of variable is not among the enumerated set```
 
+
+---
 
 ##### 3.4.3.5
 
@@ -631,10 +666,14 @@ Results per category
 * Output: ```Error on line 6: Value "apple" for attribute private_interface of variable is not among the enumerated set```
 
 
+---
+
 ##### 3.4.3.6
 
 🔵 [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.3.7
 
@@ -643,12 +682,16 @@ Results per category
 🔵 [3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.3.8
 
 🔵 [3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): **Error not detected.**
 
 🔵 [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.4.1
 
@@ -746,6 +789,8 @@ Results per category
 * Output: ```Error on line 12: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables variable_ref )```
 
 
+---
+
 ##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
@@ -821,15 +866,21 @@ Results per category
 * Output: ```Error on line 6: Element map_components was declared EMPTY this one has content```
 
 
+---
+
 ##### 3.4.5.2
 
 🔵 [3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.5.3
 
 🔵 [3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.5.4
 
@@ -839,6 +890,8 @@ Results per category
 
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.1
 
@@ -911,15 +964,21 @@ Results per category
 * Output: ```Error on line 7: Element map_variables was declared EMPTY this one has content```
 
 
+---
+
 ##### 3.4.6.2
 
 🔵 [3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.6.3
 
 🔵 [3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.4
 
@@ -1030,6 +1089,8 @@ Results per category
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
+---
+
 ## 4. Mathematics
 
 ### 4.2
@@ -1101,6 +1162,8 @@ Results per category
 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
@@ -1121,6 +1184,8 @@ Results per category
   * ```Error on line 17: No declaration for element cream```
   * ```Error on line 17: No declaration for attribute type of element cream```
 
+
+---
 
 #### 4.4.2
 
@@ -1149,6 +1214,8 @@ Results per category
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
+---
+
 ##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
@@ -1162,6 +1229,8 @@ Results per category
 * Output: ```Error on line 12: Element cn does not carry attribute cellml:units```
 
 
+---
+
 ##### 4.4.3.2
 
 🔵 [4.4.3.2.cn_units_nonexistent_1](../models_1_0/invalid/4.4.3.2.cn_units_nonexistent_1.cellml): **Error not detected.**
@@ -1170,6 +1239,8 @@ Results per category
 
 🔵 [4.4.3.2.cn_units_parent_component](../models_1_0/invalid/4.4.3.2.cn_units_parent_component.cellml): **Error not detected.**
 
+
+---
 
 #### 4.4.4
 
@@ -1184,10 +1255,14 @@ Results per category
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
 
+
+---
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1198,12 +1273,16 @@ Results per category
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
 
+---
+
 ## 5. Units
 
 #### 5.2.2
 
 🔵 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): **Error not detected.**
 
+
+---
 
 #### 5.2.7
 
@@ -1261,6 +1340,8 @@ Results per category
 
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.1.1
 
@@ -1334,6 +1415,8 @@ Results per category
 * Expected: ```Element units content does not follow the DTD```
 * Output: ```Error on line 7: Element units content does not follow the DTD, expecting (unit)*, got (unit variable_ref )```
 
+
+---
 
 ##### 5.4.1.2
 
@@ -1420,12 +1503,16 @@ Results per category
 [5.4.1.2.units_shadowing_2](../models_1_0/valid/5.4.1.2.units_shadowing_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 5.4.1.3
 
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
 * Expected: ```for attribute base_units of units is not among the enumerated set```
 * Output: ```Error on line 5: Value "certainly" for attribute base_units of units is not among the enumerated set```
 
+
+---
 
 ##### 5.4.2.1
 
@@ -1500,6 +1587,8 @@ Results per category
 * Output: ```Error on line 8: Element unit was declared EMPTY this one has content```
 
 
+---
+
 ##### 5.4.2.2
 
 🔵 [5.4.2.2.unit_cycle_1](../models_1_0/invalid/5.4.2.2.unit_cycle_1.cellml): **Error not detected.**
@@ -1514,6 +1603,8 @@ Results per category
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.2.3
 
@@ -1530,20 +1621,28 @@ Results per category
 🔵 [5.4.2.3.unit_prefix_unknown](../models_1_0/invalid/5.4.2.3.unit_prefix_unknown.cellml): **Error not detected.**
 
 
+---
+
 ##### 5.4.2.4
 
 🔵 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 5.4.2.5
 
 🔵 [5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): **Error not detected.**
 
 
+---
+
 ##### 5.4.2.6
 
 🔵 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 5.4.2.7
 
@@ -1559,6 +1658,8 @@ Results per category
 
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
+
+---
 
 #### 5.5.2
 
@@ -1673,6 +1774,8 @@ Results per category
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
 
+---
+
 ## 6. Grouping
 
 ##### 6.4.1.1
@@ -1768,12 +1871,16 @@ Results per category
 * Output: ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref variable_ref )```
 
 
+---
+
 #### 6.4.1
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.1
 
@@ -1852,10 +1959,14 @@ Results per category
 * Output: ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
 
 
+---
+
 ##### 6.4.2.2
 
 🔵 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 6.4.2.3
 
@@ -1865,12 +1976,16 @@ Results per category
 * Output: ```Error on line 5: No declaration for attribute xmlns:family of element model```
 
 
+---
+
 ##### 6.4.2.4
 
 🔵 [6.4.2.4.relationship_ref_encapsulation_duplicate](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_duplicate.cellml): **Error not detected.**
 
 🔵 [6.4.2.4.relationship_ref_encapsulation_named](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_named.cellml): **Error not detected.**
 
+
+---
 
 ##### 6.4.2.5
 
@@ -1889,6 +2004,8 @@ Results per category
 🔴 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): **Valid file failed validation.**
 * Output: ```Error on line 5: No declaration for attribute xmlns:fruit of element model```
 
+
+---
 
 ##### 6.4.3.1
 
@@ -1955,6 +2072,8 @@ Results per category
 * Output: ```Error on line 11: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (component_ref variable_ref )```
 
 
+---
+
 ##### 6.4.3.2
 
 🔵 [6.4.3.2.component_ref_children_declared_twice_1](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_1.cellml): **Error not detected.**
@@ -1995,6 +2114,8 @@ Results per category
 [6.4.3.2.component_ref_split_unnamed_2](../models_1_0/valid/6.4.3.2.component_ref_split_unnamed_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.3.3
 
 🔵 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): **Error not detected.**
@@ -2003,6 +2124,8 @@ Results per category
 
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ## 7. Reactions
 
@@ -2069,6 +2192,8 @@ Results per category
 * Output: ```Error on line 7: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref variable )```
 
 
+---
+
 ##### 7.4.1.2
 
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
@@ -2080,10 +2205,14 @@ Results per category
 [7.4.1.2.reaction_reversible_yes](../models_1_0/valid/7.4.1.2.reaction_reversible_yes.cellml): Valid file passed validation.
 
 
+---
+
 ##### 7.4.1.3
 
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.2.1
 
@@ -2152,6 +2281,8 @@ Results per category
 * Output: ```Error on line 9: Element variable_ref content does not follow the DTD, expecting (role)+, got (role variable_ref )```
 
 
+---
+
 ##### 7.4.2.2
 
 🔵 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): **Error not detected.**
@@ -2160,6 +2291,8 @@ Results per category
 
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.1
 
@@ -2224,12 +2357,16 @@ Results per category
 * Output: ```Error on line 10: Element role content does not follow the DTD, expecting (math)?, got (variable_ref )```
 
 
+---
+
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
 * Expected: ```Value "mole" for attribute role of role is not among```
 * Output: ```Error on line 9: Value "mole" for attribute role of role is not among the enumerated set```
 
+
+---
 
 ##### 7.4.3.3
 
@@ -2242,12 +2379,16 @@ Results per category
 🔵 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.4
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
 * Expected: ```Value "backward" for attribute direction of role is not among```
 * Output: ```Error on line 23: Value "backward" for attribute direction of role is not among the enumerated set```
 
+
+---
 
 ##### 7.4.3.5
 
@@ -2270,10 +2411,14 @@ Results per category
 🔵 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.6
 
 🔵 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.7
 
@@ -2285,6 +2430,8 @@ Results per category
 
 🔵 [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.8
 
@@ -2303,10 +2450,14 @@ Results per category
 🔵 [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.9
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+---
 
 #### 7.4.3
 
@@ -2316,6 +2467,8 @@ Results per category
 
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
+
+---
 
 ## 8. Metadata framework
 
@@ -2355,6 +2508,8 @@ Results per category
 
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
 
+
+---
 
 #### 8.4.2
 
@@ -2493,6 +2648,8 @@ Results per category
   * ```Error on line 12: No declaration for attribute about of element RDF```
   * ```Error on line 13: No declaration for element description```
 
+
+---
 
 ## C. Advanced units functionality
 

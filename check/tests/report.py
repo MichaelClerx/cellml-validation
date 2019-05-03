@@ -139,10 +139,12 @@ class Report(object):
             if r is not None:
                 next = r.index
             if last != next:
-                if last[0] != next[0]:
-                    b.append('')
-                    b.append('## ' + self._categories[next[0]])
                 b.append('')
+                b.append('---')
+                b.append('')
+                if last[0] != next[0]:
+                    b.append('## ' + self._categories[next[0]])
+                    b.append('')
                 if r.level > 1:
                     b.append('#' * (1 + r.level) + ' ' + r.pretty_index)
                     b.append('')
