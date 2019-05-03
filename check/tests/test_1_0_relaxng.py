@@ -348,13 +348,18 @@ expected_messages = {
     '3.4.6.1.map_variables_with_variable_ref':
         'Element map_variables has extra content: variable_ref',
     # 4.4.1 Bad math
+    # These ones are a bit weird: it complains about the math having <apply>
+    # instead of complaining about the extensions, but at least points in the
+    # right direction...
     '4.4.1.math_not_math_component':
         'Element component failed to validate content',
     '4.4.1.math_not_math_reaction':
         'Element role failed to validate content',
     # 4.4.3.1 A cn must have a cellml:units
+    # Again, the message isn't very helpful but at least points in the right
+    # direction
     '4.4.3.1.cn_units_missing':
-        'Element math',
+        'Element component failed to validate content',
     # 5.2.2 CellML prefers "deka" to "deca"
     '5.2.2.unit_deca':
         'Invalid attribute prefix for element unit',
@@ -551,6 +556,7 @@ expected_messages = {
     '6.4.2.4.relationship_ref_encapsulation_named':
         'Invalid attribute name for element relationship_ref',
     # 6.4.3.1 A component_ref must define a component
+    # Message could be better!
     '6.4.3.1.component_ref_component_missing':
         'Element component_ref failed to validate content',
     # 6.4.3.1 A component_ref can only contain a component_ref
@@ -627,7 +633,7 @@ expected_messages = {
     # 7.4.1.3 There's another rule about maths here that I don't understand
     # 7.4.2.1 A variable_ref must have at least one role
     '7.4.2.1.variable_ref_role_missing':
-        'Element variable_ref failed to validate content',
+        'Expecting an element role, got nothing',
     '7.4.2.1.variable_ref_variable_missing':
         'Element variable_ref failed to validate content',
     # 7.4.2.1 A variable_ref can only contain a role
@@ -702,15 +708,15 @@ expected_messages = {
         'Invalid attribute delta_variable',
     # 7.4.3.3 A role with attribute rate can't have a stoichiometry attribute
     '7.4.3.3.role_rate_with_stoichiometry':
-        'Element role failed to validate content',
+        'Invalid attribute stoichiometry for element role',
     # 7.4.3.4 A direction can only be forward, reverse, or both
     '7.4.3.4.role_direction_invalid':
-        'Invalid attribute direction',
+        'Invalid attribute direction for element role',
     # 7.4.3.5 A rate must have direction forward
     '7.4.3.5.role_direction_both_rate':
-        'Element role failed to validate content',
+        'Invalid attribute direction for element role',
     '7.4.3.5.role_direction_reverse_rate':
-        'Element role failed to validate content',
+        'Invalid attribute direction for element role',
     # 7.4.3.5 A reactant must have direction forward
     '7.4.3.5.role_direction_both_reactant':
         'Invalid attribute direction for element role',
@@ -718,12 +724,12 @@ expected_messages = {
         'Invalid attribute direction for element role',
     # 7.4.3.5 A product must have direction forward
     '7.4.3.5.role_direction_both_product':
-        'Invalid attribute direction',
+        'Invalid attribute direction for element role',
     '7.4.3.5.role_direction_reverse_product':
         'Invalid attribute direction for element role',
     # 7.4.3.6 Stoichiometry must be a real number
     '7.4.3.6.role_stoichiometry_invalid':
-        'Invalid attribute delta_variable',
+        'Invalid attribute stoichiometry for element role',
     # 7.4.3.7 The delta_variable must refer to a local variable
     '7.4.3.7.role_delta_variable_nonexistent_1':
         'Invalid attribute delta_variable',
@@ -923,6 +929,8 @@ known_issues = {
     # 7.4.3.5 Each (role,direction) combination must be unique within a
     # variable_ref
     '7.4.3.5.role_direction_role_duplicate',
+    # 7.4.3.6 Stoichiometry must be a real number
+    '7.4.3.6.role_stoichiometry_invalid',
     # 7.4.3.8 A delta_variable with a stoichiometry cannot have math
     '7.4.3.8.role_delta_variable_with_rate_and_math',
     # 7.4.3.8 A delta_variable with a stoichiometry must have a rate

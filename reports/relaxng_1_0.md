@@ -1,18 +1,18 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 81% according to spec (625 out of 763)
+* 81% according to spec (624 out of 763)
 * 312 out of 316 valid files passed
-* 313 out of 447 invalid files detected
+* 312 out of 447 invalid files detected
 
 Issues:
 * 4 valid files failed validation
 * 134 invalid files passed validation
-* 0 invalid files failed validation for the wrong reason
+* 1 invalid files failed validation for the wrong reason
 
 Results per category
 
-(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason)
+(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason, percent classified correctly according to spec)
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
@@ -22,10 +22,12 @@ Results per category
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
 |[5. Units](#5-units)|97|44|2|42|0|76%|
 |[6. Grouping](#6-grouping)|15|55|2|17|0|78%|
-|[7. Reactions](#7-reactions)|5|69|0|10|0|88%|
+|[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
+
+---
 
 ## 0. Not mentioned in spec
 
@@ -51,6 +53,8 @@ Results per category
 * Expected: ```Extra content at the end of the document```
 * Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
 
+
+---
 
 ### 0.1
 
@@ -113,12 +117,16 @@ Results per category
 [0.1.real_numbers_extreme](../models_1_0/valid/0.1.real_numbers_extreme.cellml): Valid file passed validation.
 
 
+---
+
 ### 0.2
 
 [0.2.component_name_same_as_model](../models_1_0/valid/0.2.component_name_same_as_model.cellml): Valid file passed validation.
 
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
+
+---
 
 ## 2. Fundamentals
 
@@ -167,6 +175,8 @@ Results per category
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
 
 
+---
+
 #### 2.4.2
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
@@ -181,6 +191,8 @@ Results per category
 * Expected: ```Element model has extra content```
 * Output: ```Error on line 5: Element model has extra content: fruit```
 
+
+---
 
 #### 2.4.3
 
@@ -228,6 +240,8 @@ Results per category
 
 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): Valid file passed validation.
 
+
+---
 
 #### 2.4.4
 
@@ -368,10 +382,14 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 #### 2.5.1
 
 🔵 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): **Error not detected.**
 
+
+---
 
 #### 2.5.2
 
@@ -381,6 +399,8 @@ Results per category
   * ```Error on line 5: Invalid sequence in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ## 3. Model structure
 
@@ -459,6 +479,8 @@ Results per category
 * Output: ```Error on line 5: Element model has extra content: variable_ref```
 
 
+---
+
 ##### 3.4.1.2
 
 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
@@ -467,6 +489,8 @@ Results per category
   * ```Error on line 3: Invalid sequence in interleave```
   * ```Error on line 3: Element model failed to validate content```
 
+
+---
 
 ##### 3.4.2.1
 
@@ -578,6 +602,8 @@ Results per category
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.2.2
 
 🔵 [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): **Error not detected.**
@@ -590,6 +616,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 3.4.3.1
 
@@ -753,6 +781,8 @@ Results per category
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.3.2
 
 🔵 [3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): **Error not detected.**
@@ -771,6 +801,8 @@ Results per category
 [3.4.3.2.variable_name_same_as_parent](../models_1_0/valid/3.4.3.2.variable_name_same_as_parent.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.3.3
 
 [3.4.3.3.variable_units_component](../models_1_0/valid/3.4.3.3.variable_units_component.cellml): Valid file passed validation.
@@ -784,6 +816,8 @@ Results per category
 🔵 [3.4.3.3.variable_units_unknown](../models_1_0/invalid/3.4.3.3.variable_units_unknown.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.3.4
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
@@ -795,6 +829,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 3.4.3.5
 
@@ -808,6 +844,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 3.4.3.6
 
 [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): Error detected correctly.
@@ -819,6 +857,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 3.4.3.7
 
@@ -841,6 +881,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 3.4.3.8
 
 [3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): Error detected correctly.
@@ -861,6 +903,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+
+---
 
 ##### 3.4.4.1
 
@@ -1019,6 +1063,8 @@ Results per category
   * ```Error on line 0: Extra element connection in interleave```
   * ```Error on line 12: Element model failed to validate content```
 
+
+---
 
 ##### 3.4.5.1
 
@@ -1180,15 +1226,21 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 3.4.5.2
 
 🔵 [3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.5.3
 
 🔵 [3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.5.4
 
@@ -1198,6 +1250,8 @@ Results per category
 
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.1
 
@@ -1355,15 +1409,21 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 3.4.6.2
 
 🔵 [3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.6.3
 
 🔵 [3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.4
 
@@ -1474,6 +1534,8 @@ Results per category
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
+---
+
 ## 4. Mathematics
 
 ### 4.2
@@ -1545,6 +1607,8 @@ Results per category
 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
@@ -1567,6 +1631,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+
+---
 
 #### 4.4.2
 
@@ -1595,6 +1661,8 @@ Results per category
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
+---
+
 ##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
@@ -1604,7 +1672,7 @@ Results per category
 [4.4.3.1.cn_predefined_units](../models_1_0/valid/4.4.3.1.cn_predefined_units.cellml): Valid file passed validation.
 
 [4.4.3.1.cn_units_missing](../models_1_0/invalid/4.4.3.1.cn_units_missing.cellml): Error detected correctly.
-* Expected: ```Element math```
+* Expected: ```Element component failed to validate content```
 * Output:
   * ```Error on line 9: Element math has extra content: apply```
   * ```Error on line 0: Extra element math in interleave```
@@ -1612,6 +1680,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+
+---
 
 ##### 4.4.3.2
 
@@ -1621,6 +1691,8 @@ Results per category
 
 🔵 [4.4.3.2.cn_units_parent_component](../models_1_0/invalid/4.4.3.2.cn_units_parent_component.cellml): **Error not detected.**
 
+
+---
 
 #### 4.4.4
 
@@ -1635,10 +1707,14 @@ Results per category
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
 
+
+---
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1648,6 +1724,8 @@ Results per category
 
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
+
+---
 
 ## 5. Units
 
@@ -1662,6 +1740,8 @@ Results per category
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 8: Element model failed to validate content```
 
+
+---
 
 #### 5.2.7
 
@@ -1719,6 +1799,8 @@ Results per category
 
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.1.1
 
@@ -1866,6 +1948,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 5.4.1.2
 
 🔵 [5.4.1.2.units_name_duplicate_1](../models_1_0/invalid/5.4.1.2.units_name_duplicate_1.cellml): **Error not detected.**
@@ -1957,6 +2041,8 @@ Results per category
 [5.4.1.2.units_shadowing_2](../models_1_0/valid/5.4.1.2.units_shadowing_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 5.4.1.3
 
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
@@ -1966,6 +2052,8 @@ Results per category
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 5.4.2.1
 
@@ -2126,6 +2214,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 5.4.2.2
 
 🔵 [5.4.2.2.unit_cycle_1](../models_1_0/invalid/5.4.2.2.unit_cycle_1.cellml): **Error not detected.**
@@ -2140,6 +2230,8 @@ Results per category
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.2.3
 
@@ -2177,6 +2269,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 5.4.2.4
 
 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error detected correctly.
@@ -2188,6 +2282,8 @@ Results per category
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 5.4.2.5
 
@@ -2201,6 +2297,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 5.4.2.6
 
 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): Error detected correctly.
@@ -2212,6 +2310,8 @@ Results per category
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 5.4.2.7
 
@@ -2249,6 +2349,8 @@ Results per category
 
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
+
+---
 
 #### 5.5.2
 
@@ -2362,6 +2464,8 @@ Results per category
 
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
+
+---
 
 ## 6. Grouping
 
@@ -2519,12 +2623,16 @@ Results per category
   * ```Error on line 9: Element model failed to validate content```
 
 
+---
+
 #### 6.4.1
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.1
 
@@ -2687,6 +2795,8 @@ Results per category
   * ```Error on line 9: Element model failed to validate content```
 
 
+---
+
 ##### 6.4.2.2
 
 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
@@ -2699,6 +2809,8 @@ Results per category
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 7: Element model failed to validate content```
 
+
+---
 
 ##### 6.4.2.3
 
@@ -2713,6 +2825,8 @@ Results per category
 
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.4
 
@@ -2735,6 +2849,8 @@ Results per category
   * ```Error on line 7: Element model failed to validate content```
 
 
+---
+
 ##### 6.4.2.5
 
 🔵 [6.4.2.5.relationship_ref_duplicate_named](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_named.cellml): **Error not detected.**
@@ -2749,6 +2865,8 @@ Results per category
 
 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.3.1
 
@@ -2892,6 +3010,8 @@ Results per category
   * ```Error on line 9: Element model failed to validate content```
 
 
+---
+
 ##### 6.4.3.2
 
 🔵 [6.4.3.2.component_ref_children_declared_twice_1](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_1.cellml): **Error not detected.**
@@ -2936,6 +3056,8 @@ Results per category
 [6.4.3.2.component_ref_split_unnamed_2](../models_1_0/valid/6.4.3.2.component_ref_split_unnamed_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.3.3
 
 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
@@ -2953,6 +3075,8 @@ Results per category
 
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ## 7. Reactions
 
@@ -3096,6 +3220,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.1.2
 
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
@@ -3112,6 +3238,8 @@ Results per category
 [7.4.1.2.reaction_reversible_yes](../models_1_0/valid/7.4.1.2.reaction_reversible_yes.cellml): Valid file passed validation.
 
 
+---
+
 ##### 7.4.1.3
 
 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): Error detected correctly.
@@ -3126,10 +3254,12 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.2.1
 
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
-* Expected: ```Element variable_ref failed to validate content```
+* Expected: ```Expecting an element role, got nothing```
 * Output:
   * ```Error on line 8: Expecting an element role, got nothing```
   * ```Error on line 8: Invalid sequence in interleave```
@@ -3305,6 +3435,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.2.2
 
 🔵 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): **Error not detected.**
@@ -3313,6 +3445,8 @@ Results per category
 
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.3.1
 
@@ -3482,6 +3616,8 @@ Results per category
   * ```Error on line 5: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
@@ -3495,6 +3631,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 5: Element model failed to validate content```
 
+
+---
 
 ##### 7.4.3.3
 
@@ -3523,7 +3661,7 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): Error detected correctly.
-* Expected: ```Element role failed to validate content```
+* Expected: ```Invalid attribute stoichiometry for element role```
 * Output:
   * ```Error on line 22: Invalid sequence in interleave```
   * ```Error on line 22: Element role failed to validate content```
@@ -3534,10 +3672,12 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.3.4
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
-* Expected: ```Invalid attribute direction```
+* Expected: ```Invalid attribute direction for element role```
 * Output:
   * ```Error on line 23: Invalid attribute direction for element role```
   * ```Error on line 23: Element role failed to validate attributes```
@@ -3548,12 +3688,14 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.3.5
 
 🔵 [7.4.3.5.role_direction_both_irreversible](../models_1_0/invalid/7.4.3.5.role_direction_both_irreversible.cellml): **Error not detected.**
 
 [7.4.3.5.role_direction_both_product](../models_1_0/invalid/7.4.3.5.role_direction_both_product.cellml): Error detected correctly.
-* Expected: ```Invalid attribute direction```
+* Expected: ```Invalid attribute direction for element role```
 * Output:
   * ```Error on line 19: Invalid attribute direction for element role```
   * ```Error on line 19: Element role failed to validate attributes```
@@ -3564,7 +3706,7 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 [7.4.3.5.role_direction_both_rate](../models_1_0/invalid/7.4.3.5.role_direction_both_rate.cellml): Error detected correctly.
-* Expected: ```Element role failed to validate content```
+* Expected: ```Invalid attribute direction for element role```
 * Output:
   * ```Error on line 22: Invalid sequence in interleave```
   * ```Error on line 22: Element role failed to validate content```
@@ -3599,7 +3741,7 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 [7.4.3.5.role_direction_reverse_rate](../models_1_0/invalid/7.4.3.5.role_direction_reverse_rate.cellml): Error detected correctly.
-* Expected: ```Element role failed to validate content```
+* Expected: ```Invalid attribute direction for element role```
 * Output:
   * ```Error on line 22: Invalid sequence in interleave```
   * ```Error on line 22: Element role failed to validate content```
@@ -3623,10 +3765,12 @@ Results per category
 🔵 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.6
 
-[7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): Error detected correctly.
-* Expected: ```Invalid attribute delta_variable```
+🔶 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Invalid attribute stoichiometry for element role```
 * Output:
   * ```Error on line 14: Invalid attribute delta_variable for element role```
   * ```Error on line 14: Element role failed to validate attributes```
@@ -3636,6 +3780,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+
+---
 
 ##### 7.4.3.7
 
@@ -3683,6 +3829,8 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+
+---
 
 ##### 7.4.3.8
 
@@ -3746,10 +3894,14 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 
+---
+
 ##### 7.4.3.9
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+---
 
 #### 7.4.3
 
@@ -3759,6 +3911,8 @@ Results per category
 
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
+
+---
 
 ## 8. Metadata framework
 
@@ -3804,6 +3958,8 @@ Results per category
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
 
 
+---
+
 #### 8.4.2
 
 [8.4.2.rdf_in_component](../models_1_0/valid/8.4.2.rdf_in_component.cellml): Valid file passed validation.
@@ -3836,6 +3992,8 @@ Results per category
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed validation.
 
+
+---
 
 ## C. Advanced units functionality
 
