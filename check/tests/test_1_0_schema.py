@@ -125,7 +125,7 @@ expected_messages = {
         "Element 'cellml:model': The attribute 'name' is required",
     # 3.4.1.2 A model name must be a valid identifier
     '3.4.1.2.model_name_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 3.4.2.1 Components contain only units, variable, reaction, math
     '3.4.2.1.component_with_component':
         "Element 'cellml:component': This element is not expected",
@@ -154,7 +154,7 @@ expected_messages = {
         "Element 'cellml:component': The attribute 'name' is required",
     # 3.4.2.2 A component name must be a valid identifier
     '3.4.2.2.component_name_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 3.4.2.2 Component names must be unique
     '3.4.2.2.component_name_duplicate':
         "Duplicate key-sequence ['c1']",
@@ -195,7 +195,7 @@ expected_messages = {
         "Element 'cellml:variable': The attribute 'units' is required",
     # 3.4.3.2 A variable name must be an identifier
     '3.4.3.2.variable_name_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 3.4.3.2 A variable name must be unique with the component
     '3.4.3.2.variable_name_duplicate':
         "Element 'cellml:variable': Duplicate key-sequence",
@@ -207,9 +207,9 @@ expected_messages = {
         "not an element of the set",
     # 3.4.3.7 The initial value (if present) must be a real number
     '3.4.3.7.variable_initial_value_empty':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     '3.4.3.7.variable_initial_value_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 3.4.4.1 A connection must have map_components and map_variables
     '3.4.4.1.connection_empty':
         "Element 'cellml:connection': Missing child element(s).",
@@ -361,7 +361,7 @@ expected_messages = {
         "Element 'cellml:variable': This element is not expected",
     # 5.4.1.2 A units name must be a valid identifier
     '5.4.1.2.units_name_invalid':
-        "Element 'cellml:units', attribute 'name'",
+        "not a valid value of the atomic type 'cellml:identifier'",
     # 5.4.1.2 Units names must be unique (within model or local component)
     '5.4.1.2.units_name_duplicate_1':
         "Element 'cellml:units': Duplicate key-sequence",
@@ -413,13 +413,13 @@ expected_messages = {
         "not a valid value of the union type 'cellml:unit_prefix'",
     # 5.4.2.4 A unit exponent must be a real number
     '5.4.2.4.unit_exponent_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 5.4.2.5 A unit multiplier must be a real number
     '5.4.2.5.unit_multiplier_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 5.4.2.6 A unit offset must be a real number
     '5.4.2.6.unit_offset_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 6.4.1.1 A group cannot be empty (extra test for missing comp_ref/rel_ref)
     '6.4.1.1.group_empty':
         "Element 'cellml:group': Missing child element(s)",
@@ -644,7 +644,7 @@ expected_messages = {
         "Element 'cellml:role': Duplicate key-sequence",
     # 7.4.3.6 Stoichiometry must be a real number
     '7.4.3.6.role_stoichiometry_invalid':
-        "not accepted by the pattern",
+        "not a valid value of the atomic type 'cellml:real_number'",
     # 7.4.3.7 The delta_variable must refer to a local variable
     '7.4.3.7.role_delta_variable_nonexistent_1':
         "Element 'cellml:role': No match found for key-sequence",

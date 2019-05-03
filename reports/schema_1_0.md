@@ -12,7 +12,7 @@ Issues:
 
 Results per category
 
-(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason)
+(Valid passed, invalid failed, valid failed, invalid passed, invalid failed for wrong reason, percent classified correctly according to spec)
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
@@ -26,6 +26,8 @@ Results per category
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
+
+---
 
 ## 0. Not mentioned in spec
 
@@ -51,6 +53,8 @@ Results per category
 * Expected: ```Extra content at the end of the document```
 * Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
 
+
+---
 
 ### 0.1
 
@@ -95,12 +99,16 @@ Results per category
 [0.1.real_numbers_extreme](../models_1_0/valid/0.1.real_numbers_extreme.cellml): Valid file passed validation.
 
 
+---
+
 ### 0.2
 
 [0.2.component_name_same_as_model](../models_1_0/valid/0.2.component_name_same_as_model.cellml): Valid file passed validation.
 
 [0.2.variable_name_same_as_model](../models_1_0/valid/0.2.variable_name_same_as_model.cellml): Valid file passed validation.
 
+
+---
 
 ## 2. Fundamentals
 
@@ -149,6 +157,8 @@ Results per category
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
 
 
+---
+
 #### 2.4.2
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
@@ -163,6 +173,8 @@ Results per category
 * Expected: ```Element 'cellml:fruit': This element is not expected```
 * Output: ```Error on line 5: Element 'cellml:fruit': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
+
+---
 
 #### 2.4.3
 
@@ -198,6 +210,8 @@ Results per category
 
 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): Valid file passed validation.
 
+
+---
 
 #### 2.4.4
 
@@ -270,12 +284,16 @@ Results per category
 * Output: ```Error on line 8: Element 'cellml:variable_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 
+---
+
 #### 2.5.1
 
 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): Error detected correctly.
 * Expected: ```No match found for key-sequence```
 * Output: ```Error on line 12: Element 'cellml:map_components': No match found for key-sequence ['a'] of keyref 'cellml:connect_component_1'.```
 
+
+---
 
 #### 2.5.2
 
@@ -285,6 +303,8 @@ Results per category
   * ```Error on line 5: Element 'cellml:model', attribute 'cellml:name': The attribute 'cellml:name' is not allowed.```
   * ```Error on line 5: Element 'cellml:model': The attribute 'name' is required but missing.```
 
+
+---
 
 ## 3. Model structure
 
@@ -359,14 +379,18 @@ Results per category
 * Output: ```Error on line 5: Element 'cellml:variable_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 
+---
+
 ##### 3.4.1.2
 
 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 3: Element 'cellml:model', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
   * ```Error on line 3: Element 'cellml:model', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
 
+
+---
 
 ##### 3.4.2.1
 
@@ -443,6 +467,8 @@ Results per category
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.2.2
 
 [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): Error detected correctly.
@@ -450,13 +476,15 @@ Results per category
 * Output: ```Error on line 6: Element 'cellml:component': Duplicate key-sequence ['c1'] in key identity-constraint 'cellml:component_name'.```
 
 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
   * ```Error on line 5: Element 'cellml:component', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
   * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
   * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
+
+---
 
 ##### 3.4.3.1
 
@@ -535,6 +563,8 @@ Results per category
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
 
+---
+
 ##### 3.4.3.2
 
 [3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): Error detected correctly.
@@ -542,7 +572,7 @@ Results per category
 * Output: ```Error on line 7: Element 'cellml:variable': Duplicate key-sequence ['x'] in key identity-constraint 'cellml:variable_name'.```
 
 [3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:variable', attribute 'name': [facet 'pattern'] The value 'Spaces are not allowed' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
   * ```Error on line 6: Element 'cellml:variable', attribute 'name': 'Spaces are not allowed' is not a valid value of the atomic type 'cellml:identifier'.```
@@ -553,6 +583,8 @@ Results per category
 
 [3.4.3.2.variable_name_same_as_parent](../models_1_0/valid/3.4.3.2.variable_name_same_as_parent.cellml): Valid file passed validation.
 
+
+---
 
 ##### 3.4.3.3
 
@@ -567,6 +599,8 @@ Results per category
 🔵 [3.4.3.3.variable_units_unknown](../models_1_0/invalid/3.4.3.3.variable_units_unknown.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.3.4
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
@@ -575,6 +609,8 @@ Results per category
   * ```Error on line 6: Element 'cellml:variable', attribute 'public_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
   * ```Error on line 6: Element 'cellml:variable', attribute 'public_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
 
+
+---
 
 ##### 3.4.3.5
 
@@ -585,25 +621,31 @@ Results per category
   * ```Error on line 6: Element 'cellml:variable', attribute 'private_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
 
 
+---
+
 ##### 3.4.3.6
 
 🔵 [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.3.7
 
 [3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
   * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
   * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
   * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
   * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
 
+
+---
 
 ##### 3.4.3.8
 
@@ -611,6 +653,8 @@ Results per category
 
 🔵 [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.4.1
 
@@ -687,6 +731,8 @@ Results per category
 * Output: ```Error on line 15: Element 'cellml:variable_ref': This element is not expected.```
 
 
+---
+
 ##### 3.4.5.1
 
 [3.4.5.1.connection_any_order_1](../models_1_0/valid/3.4.5.1.connection_any_order_1.cellml): Valid file passed validation.
@@ -760,6 +806,8 @@ Results per category
 * Output: ```Error on line 7: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
+---
+
 ##### 3.4.5.2
 
 [3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): Error detected correctly.
@@ -767,12 +815,16 @@ Results per category
 * Output: ```Error on line 7: Element 'cellml:map_components': No match found for key-sequence ['c'] of keyref 'cellml:connect_component_1'.```
 
 
+---
+
 ##### 3.4.5.3
 
 [3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': No match found for key-sequence```
 * Output: ```Error on line 7: Element 'cellml:map_components': No match found for key-sequence ['c'] of keyref 'cellml:connect_component_2'.```
 
+
+---
 
 ##### 3.4.5.4
 
@@ -784,6 +836,8 @@ Results per category
 
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.1
 
@@ -854,15 +908,21 @@ Results per category
 * Output: ```Error on line 8: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
+---
+
 ##### 3.4.6.2
 
 🔵 [3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): **Error not detected.**
 
 
+---
+
 ##### 3.4.6.3
 
 🔵 [3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): **Error not detected.**
 
+
+---
 
 ##### 3.4.6.4
 
@@ -973,6 +1033,8 @@ Results per category
 [3.4.6.4.map_variables_talking_niece](../models_1_0/valid/3.4.6.4.map_variables_talking_niece.cellml): Valid file passed validation.
 
 
+---
+
 ## 4. Mathematics
 
 ### 4.2
@@ -1044,6 +1106,8 @@ Results per category
 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.4.1
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
@@ -1054,6 +1118,8 @@ Results per category
 * Expected: ```cake': This element is not expected.```
 * Output: ```Error on line 15: Element '{http://www.w3.org/1998/Math/MathML}cake': This element is not expected. Expected is one of ( {http://www.w3.org/1998/Math/MathML}cn, {http://www.w3.org/1998/Math/MathML}ci, {http://www.w3.org/1998/Math/MathML}csymbol, {http://www.w3.org/1998/Math/MathML}abs, {http://www.w3.org/1998/Math/MathML}conjugate, {http://www.w3.org/1998/Math/MathML}factorial, {http://www.w3.org/1998/Math/MathML}arg, {http://www.w3.org/1998/Math/MathML}real, {http://www.w3.org/1998/Math/MathML}imaginary, {http://www.w3.org/1998/Math/MathML}floor ).```
 
+
+---
 
 #### 4.4.2
 
@@ -1082,6 +1148,8 @@ Results per category
 [4.4.2.ci_whitespace_3](../models_1_0/valid/4.4.2.ci_whitespace_3.cellml): Valid file passed validation.
 
 
+---
+
 ##### 4.4.3.1
 
 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): Valid file passed validation.
@@ -1093,6 +1161,8 @@ Results per category
 🔵 [4.4.3.1.cn_units_missing](../models_1_0/invalid/4.4.3.1.cn_units_missing.cellml): **Error not detected.**
 
 
+---
+
 ##### 4.4.3.2
 
 🔵 [4.4.3.2.cn_units_nonexistent_1](../models_1_0/invalid/4.4.3.2.cn_units_nonexistent_1.cellml): **Error not detected.**
@@ -1101,6 +1171,8 @@ Results per category
 
 🔵 [4.4.3.2.cn_units_parent_component](../models_1_0/invalid/4.4.3.2.cn_units_parent_component.cellml): **Error not detected.**
 
+
+---
 
 #### 4.4.4
 
@@ -1115,10 +1187,14 @@ Results per category
 [4.4.4.modify_public_out](../models_1_0/valid/4.4.4.modify_public_out.cellml): Valid file passed validation.
 
 
+---
+
 #### 4.5.1
 
 [4.5.1.ordering_not_significant](../models_1_0/valid/4.5.1.ordering_not_significant.cellml): Valid file passed validation.
 
+
+---
 
 [4.algebraic_model](../models_1_0/valid/4.algebraic_model.cellml): Valid file passed validation.
 
@@ -1129,6 +1205,8 @@ Results per category
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
 
+---
+
 ## 5. Units
 
 #### 5.2.2
@@ -1137,6 +1215,8 @@ Results per category
 * Expected: ```'deca' is not a valid value of the union type 'cellml:unit_prefix'```
 * Output: ```Error on line 9: Element 'cellml:unit', attribute 'prefix': 'deca' is not a valid value of the union type 'cellml:unit_prefix'.```
 
+
+---
 
 #### 5.2.7
 
@@ -1194,6 +1274,8 @@ Results per category
 
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.1.1
 
@@ -1265,6 +1347,8 @@ Results per category
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
 * Output: ```Error on line 9: Element 'cellml:variable_ref': This element is not expected.```
 
+
+---
 
 ##### 5.4.1.2
 
@@ -1360,6 +1444,8 @@ Results per category
 [5.4.1.2.units_shadowing_2](../models_1_0/valid/5.4.1.2.units_shadowing_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 5.4.1.3
 
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
@@ -1368,6 +1454,8 @@ Results per category
   * ```Error on line 5: Element 'cellml:units', attribute 'base_units': [facet 'enumeration'] The value 'certainly' is not an element of the set {'yes', 'no'}.```
   * ```Error on line 5: Element 'cellml:units', attribute 'base_units': 'certainly' is not a valid value of the atomic type 'cellml:yes_no'.```
 
+
+---
 
 ##### 5.4.2.1
 
@@ -1440,6 +1528,8 @@ Results per category
 * Output: ```Error on line 9: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
+---
+
 ##### 5.4.2.2
 
 🔵 [5.4.2.2.unit_cycle_1](../models_1_0/invalid/5.4.2.2.unit_cycle_1.cellml): **Error not detected.**
@@ -1454,6 +1544,8 @@ Results per category
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 5.4.2.3
 
@@ -1478,32 +1570,40 @@ Results per category
 * Output: ```Error on line 6: Element 'cellml:unit', attribute 'prefix': 'flotta' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 
+---
+
 ##### 5.4.2.4
 
 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
   * ```Error on line 6: Element 'cellml:unit', attribute 'exponent': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
   * ```Error on line 6: Element 'cellml:unit', attribute 'exponent': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
+---
+
 ##### 5.4.2.5
 
 [5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
   * ```Error on line 6: Element 'cellml:unit', attribute 'multiplier': [facet 'pattern'] The value 'three' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
   * ```Error on line 6: Element 'cellml:unit', attribute 'multiplier': 'three' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
+---
+
 ##### 5.4.2.6
 
 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
   * ```Error on line 6: Element 'cellml:unit', attribute 'offset': [facet 'pattern'] The value 'no' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
   * ```Error on line 6: Element 'cellml:unit', attribute 'offset': 'no' is not a valid value of the atomic type 'cellml:real_number'.```
 
+
+---
 
 ##### 5.4.2.7
 
@@ -1519,6 +1619,8 @@ Results per category
 
 [5.4.2.7.unit_offset_zero_and_siblings](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_siblings.cellml): Valid file passed validation.
 
+
+---
 
 #### 5.5.2
 
@@ -1633,6 +1735,8 @@ Results per category
 [5.5.2.boolean_variable_3](../models_1_0/booleans/5.5.2.boolean_variable_3.cellml): Valid file passed validation.
 
 
+---
+
 ## 6. Grouping
 
 ##### 6.4.1.1
@@ -1706,12 +1810,16 @@ Results per category
 * Output: ```Error on line 14: Element 'cellml:variable_ref': This element is not expected.```
 
 
+---
+
 #### 6.4.1
 
 [6.4.1.group_child_order_1](../models_1_0/valid/6.4.1.group_child_order_1.cellml): Valid file passed validation.
 
 [6.4.1.group_child_order_2](../models_1_0/valid/6.4.1.group_child_order_2.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.2.1
 
@@ -1782,6 +1890,8 @@ Results per category
 * Output: ```Error on line 11: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
+---
+
 ##### 6.4.2.2
 
 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
@@ -1791,6 +1901,8 @@ Results per category
   * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': 'howdy' is not a valid value of the atomic type 'cellml:relationship'.```
   * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
+
+---
 
 ##### 6.4.2.3
 
@@ -1804,12 +1916,16 @@ Results per category
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.2.4
 
 🔵 [6.4.2.4.relationship_ref_encapsulation_duplicate](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_duplicate.cellml): **Error not detected.**
 
 🔵 [6.4.2.4.relationship_ref_encapsulation_named](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_named.cellml): **Error not detected.**
 
+
+---
 
 ##### 6.4.2.5
 
@@ -1827,6 +1943,8 @@ Results per category
 
 [6.4.2.5.relationship_ref_multiple_3](../models_1_0/valid/6.4.2.5.relationship_ref_multiple_3.cellml): Valid file passed validation.
 
+
+---
 
 ##### 6.4.3.1
 
@@ -1891,6 +2009,8 @@ Results per category
 * Output: ```Error on line 13: Element 'cellml:variable_ref': This element is not expected.```
 
 
+---
+
 ##### 6.4.3.2
 
 🔵 [6.4.3.2.component_ref_children_declared_twice_1](../models_1_0/invalid/6.4.3.2.component_ref_children_declared_twice_1.cellml): **Error not detected.**
@@ -1928,6 +2048,8 @@ Results per category
 [6.4.3.2.component_ref_split_unnamed_2](../models_1_0/valid/6.4.3.2.component_ref_split_unnamed_2.cellml): Valid file passed validation.
 
 
+---
+
 ##### 6.4.3.3
 
 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
@@ -1942,6 +2064,8 @@ Results per category
 
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
+
+---
 
 ## 7. Reactions
 
@@ -2006,6 +2130,8 @@ Results per category
 * Output: ```Error on line 11: Element 'cellml:variable': This element is not expected.```
 
 
+---
+
 ##### 7.4.1.2
 
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
@@ -2019,10 +2145,14 @@ Results per category
 [7.4.1.2.reaction_reversible_yes](../models_1_0/valid/7.4.1.2.reaction_reversible_yes.cellml): Valid file passed validation.
 
 
+---
+
 ##### 7.4.1.3
 
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 
+
+---
 
 ##### 7.4.2.1
 
@@ -2089,6 +2219,8 @@ Results per category
 * Output: ```Error on line 11: Element 'cellml:variable_ref': This element is not expected.```
 
 
+---
+
 ##### 7.4.2.2
 
 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): Error detected correctly.
@@ -2103,6 +2235,8 @@ Results per category
 * Expected: ```Element 'cellml:variable_ref': No match found for key-sequence```
 * Output: ```Error on line 8: Element 'cellml:variable_ref': No match found for key-sequence ['b'] of keyref 'cellml:reaction_variables'.```
 
+
+---
 
 ##### 7.4.3.1
 
@@ -2167,6 +2301,8 @@ Results per category
 * Output: ```Error on line 11: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
+---
+
 ##### 7.4.3.2
 
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
@@ -2176,6 +2312,8 @@ Results per category
   * ```Error on line 9: Element 'cellml:role', attribute 'role': 'mole' is not a valid value of the atomic type 'cellml:species_role'.```
   * ```Error on line 9: Element 'cellml:role', attribute 'role': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
+
+---
 
 ##### 7.4.3.3
 
@@ -2188,6 +2326,8 @@ Results per category
 🔵 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.4
 
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
@@ -2197,6 +2337,8 @@ Results per category
   * ```Error on line 23: Element 'cellml:role', attribute 'direction': 'backward' is not a valid value of the atomic type 'cellml:reaction_direction'.```
   * ```Error on line 23: Element 'cellml:role', attribute 'direction': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
+
+---
 
 ##### 7.4.3.5
 
@@ -2221,14 +2363,18 @@ Results per category
 * Output: ```Error on line 24: Element 'cellml:role': Duplicate key-sequence ['inhibitor', 'forward'] in unique identity-constraint 'cellml:unique_role_direction_pairs'.```
 
 
+---
+
 ##### 7.4.3.6
 
 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): Error detected correctly.
-* Expected: ```not accepted by the pattern```
+* Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
   * ```Error on line 14: Element 'cellml:role', attribute 'stoichiometry': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
   * ```Error on line 14: Element 'cellml:role', attribute 'stoichiometry': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
 
+
+---
 
 ##### 7.4.3.7
 
@@ -2249,6 +2395,8 @@ Results per category
 * Output: ```Error on line 13: Element 'cellml:role': No match found for key-sequence ['dA'] of keyref 'cellml:delta_variables'.```
 
 
+---
+
 ##### 7.4.3.8
 
 🔵 [7.4.3.8.role_delta_variable_activator](../models_1_0/invalid/7.4.3.8.role_delta_variable_activator.cellml): **Error not detected.**
@@ -2266,10 +2414,14 @@ Results per category
 🔵 [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): **Error not detected.**
 
 
+---
+
 ##### 7.4.3.9
 
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 
+
+---
 
 #### 7.4.3
 
@@ -2279,6 +2431,8 @@ Results per category
 
 [7.4.3.reaction_simple](../models_1_0/valid/7.4.3.reaction_simple.cellml): Valid file passed validation.
 
+
+---
 
 ## 8. Metadata framework
 
@@ -2319,6 +2473,8 @@ Results per category
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
 
 
+---
+
 #### 8.4.2
 
 [8.4.2.rdf_in_component](../models_1_0/valid/8.4.2.rdf_in_component.cellml): Valid file passed validation.
@@ -2351,6 +2507,8 @@ Results per category
 
 [8.4.2.rdf_in_variable_ref](../models_1_0/valid/8.4.2.rdf_in_variable_ref.cellml): Valid file passed validation.
 
+
+---
 
 ## C. Advanced units functionality
 
