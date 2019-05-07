@@ -1,11 +1,17 @@
 # CellML Validation tools
 
-This repository is intended to host tests for the various validation tools for CellML.
+This repository hosts:
 
-Disclaimers:
+- a large set of CellML models that each either break or exemplify a single rule in the CellML 1.0 specification,
+- XML validation tools (DTD, Schema, RelaxNG) for CellML 1.0,
+- code to apply each validation method to each model file, and generate a report showing the results.
 
-1. XML technologies like Schema, DTD, RelaxNG, and Schematron can only provide *partial* validation for CellML files.
-2. This repo is still under development, meaning the validation tools have not yet been fully tested.
+Please not that
+
+1. XML technologies like Schema, DTD, RelaxNG, and Schematron can only provide *partial* validation for CellML files,
+2. this repo is still under development, meaning the validation tools have not yet been fully tested.
+
+The goal is to extend/modify the 1.0 tests and tools to 1.1, and then 2.0.
 
 ## CellML 2.0 (Draft)
 
