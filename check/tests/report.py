@@ -128,7 +128,7 @@ class Report(object):
         e_unknown_test = '❗❗'
 
         # Loop over known tests, show results
-        last = (-1, -1, -1, -1)
+        next = last = (-1, -1, -1, -1)
         level = 0
         for test in self._all_tests:
 
@@ -258,7 +258,10 @@ class Report(object):
             # Body
             c = self.count(key)
             vpass, vfail, ipass, ifail, ibad = c
-            score = int(100 * (vpass + ifail) / sum(c))
+            if sum(c):
+                score = int(100 * (vpass + ifail) / sum(c))
+            else:
+                score = 0
             line = [a, vpass, ifail, vfail, ipass, ibad, str(score) + '%']
             h.append('|' + '|'.join([str(x) for x in line]) + '|')
 
