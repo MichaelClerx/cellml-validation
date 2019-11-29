@@ -17,161 +17,65 @@ from .report import Report_1_0 as Report
 false_negatives = {
     # Myokit uses stricter rules for identifiers
     '2.4.1.valid_identifiers':
-        'must be a valid CellML identifier'
-
-    # CellML API doesn't like annotations?
-    #'4.2.3_8.1_annotation':
-    #    'Text should not be present',
-    #'4.2.3_8.2_annotation_xml':
-    #    'Text should not be present',
-
-    # Extension relationships are apparently not supported
-    #'6.4.3.2.component_ref_no_children_extension':
-    #    'does not have any child component_ref elements',
-
-    # Bases other than 10
-    #'4.2.3_2.3.mathml_numbers_real_base':
-    #    'invalid constant representation',
-    #'4.2.3_2.4.mathml_numbers_integer_base':
-    #    'invalid constant representation',
-
-    # Rational numbers aren't supported
-    #'4.2.3_2.6.mathml_numbers_rational':
-    #    'shouldn\'t have element children',
-
-    # The CellML API is OK (but not great) with booleans
-    # (OK, but not great)
-    #'5.5.2.boolean_arithmetic_divide',
-    #'5.5.2.boolean_arithmetic_minus',
-    #'5.5.2.boolean_arithmetic_plus',
-    #'5.5.2.boolean_arithmetic_power_1',
-    #'5.5.2.boolean_arithmetic_power_2':
-    #    'to have the same units',
-    #'5.5.2.boolean_arithmetic_root_1',
-    #'5.5.2.boolean_arithmetic_root_2':
-    #    'qualifier should be in dimensionless units',
-    #'5.5.2.boolean_arithmetic_times',
-    #'5.5.2.boolean_compare_eq_operand_error',
-    #'5.5.2.boolean_compare_geq_operand_error',
-    #'5.5.2.boolean_compare_gt_operand_error',
-    #'5.5.2.boolean_compare_leq_operand_error',
-    #'5.5.2.boolean_compare_lt_operand_error',
-    #'5.5.2.boolean_compare_neq_operand_error',
-    #'5.5.2.boolean_derivatives_1',
-    #'5.5.2.boolean_derivatives_2':
-    #    'qualifier should be in dimensionless units',
-    #'5.5.2.boolean_function_abs',
-    #'5.5.2.boolean_function_ceiling',
-    #'5.5.2.boolean_function_exp',
-    #'5.5.2.boolean_function_factorial',
-    #'5.5.2.boolean_function_floor',
-    #'5.5.2.boolean_function_ln',
-    #'5.5.2.boolean_function_log_1',
-    #'5.5.2.boolean_function_log_2',
-    #'5.5.2.boolean_logic_and_operand_error',
-    #'5.5.2.boolean_logic_not_operand_error',
-    #'5.5.2.boolean_logic_or_operand_error',
-    #'5.5.2.boolean_logic_xor_operand_error',
-    #'5.5.2.boolean_trig_arccos',
-    #'5.5.2.boolean_trig_arccosh',
-    #'5.5.2.boolean_trig_arccot',
-    #'5.5.2.boolean_trig_arccoth',
-    #'5.5.2.boolean_trig_arccsc',
-    #'5.5.2.boolean_trig_arccsch',
-    #'5.5.2.boolean_trig_arcsec',
-    #'5.5.2.boolean_trig_arcsech',
-    #'5.5.2.boolean_trig_arcsin',
-    #'5.5.2.boolean_trig_arcsinh',
-    #'5.5.2.boolean_trig_arctan',
-    #'5.5.2.boolean_trig_arctanh',
-    #'5.5.2.boolean_trig_cos',
-    #'5.5.2.boolean_trig_cosh',
-    #'5.5.2.boolean_trig_cot',
-    #'5.5.2.boolean_trig_coth',
-    #'5.5.2.boolean_trig_csc',
-    #'5.5.2.boolean_trig_csch',
-    #'5.5.2.boolean_trig_sec',
-    #'5.5.2.boolean_trig_sech',
-    #'5.5.2.boolean_trig_sin',
-    #'5.5.2.boolean_trig_sinh',
-    #'5.5.2.boolean_trig_tan',
-    #'5.5.2.boolean_trig_tanh',
-    #'5.5.2.boolean_variable_1',
-    #'5.5.2.boolean_variable_2',
-    #'5.5.2.boolean_variable_3',
-
-    # CellML API picks up on bad units, but tends to just warn
-    #'5.2.7.unit_checking_internal_mismatch_1',
-    #'5.2.7.unit_checking_internal_mismatch_2',
-    #'5.2.7.unit_checking_internal_mismatch_3',
-    #'5.2.7.unit_checking_internal_mismatch_4',
-    #'5.2.7.unit_checking_piecewise_multi_unit':
-    #'C.3.3.unit_checking_arithmetic_minus_operand_error_1',
-    #'C.3.3.unit_checking_arithmetic_minus_operand_error_2',
-    #'C.3.3.unit_checking_arithmetic_minus_operand_error_3',
-    #'C.3.3.unit_checking_arithmetic_plus_operand_error_1',
-    #'C.3.3.unit_checking_arithmetic_plus_operand_error_2',
-    #'C.3.3.unit_checking_arithmetic_plus_operand_error_3',
-    #'C.3.3.unit_checking_arithmetic_plus_operand_error_4',
-    #'C.3.3.unit_checking_arithmetic_power_operand_error':
-    #    'Expected exponent to pow operator to be dimensionless',
-    #'C.3.3.unit_checking_arithmetic_root_operand_error':
-    #    'Degree qualifier should be in dimensionless units',
-    #'C.3.3.unit_checking_compare_eq_operand_mismatch',
-    #'C.3.3.unit_checking_compare_geq_operand_mismatch',
-    #'C.3.3.unit_checking_compare_gt_operand_mismatch',
-    #'C.3.3.unit_checking_compare_leq_operand_mismatch',
-    #'C.3.3.unit_checking_compare_lt_operand_mismatch',
-    #'C.3.3.unit_checking_compare_neq_operand_mismatch',
-    #'C.3.3.unit_checking_derivative_operand_error':
-    #    'Degree qualifier should be in dimensionless units',
-    #'C.3.3.unit_checking_function_exp_operand_error',
-    #'C.3.3.unit_checking_function_factorial_operand_error',
-    #'C.3.3.unit_checking_function_ln_operand_error',
-    #'C.3.3.unit_checking_function_log_operand_error_1',
-    #'C.3.3.unit_checking_function_log_operand_error_2',
-    #'C.3.3.unit_checking_trig_arccosh_operand_error',
-    #'C.3.3.unit_checking_trig_arccos_operand_error',
-    #'C.3.3.unit_checking_trig_arccoth_operand_error',
-    #'C.3.3.unit_checking_trig_arccot_operand_error',
-    #'C.3.3.unit_checking_trig_arccsch_operand_error',
-    #'C.3.3.unit_checking_trig_arccsc_operand_error',
-    #'C.3.3.unit_checking_trig_arcsech_operand_error',
-    #'C.3.3.unit_checking_trig_arcsec_operand_error',
-    #'C.3.3.unit_checking_trig_arcsinh_operand_error',
-    #'C.3.3.unit_checking_trig_arcsin_operand_error',
-    #'C.3.3.unit_checking_trig_arctanh_operand_error',
-    #'C.3.3.unit_checking_trig_arctan_operand_error',
-    #'C.3.3.unit_checking_trig_cosh_operand_error',
-    #'C.3.3.unit_checking_trig_cos_operand_error',
-    #'C.3.3.unit_checking_trig_coth_operand_error',
-    #'C.3.3.unit_checking_trig_cot_operand_error',
-    #'C.3.3.unit_checking_trig_csch_operand_error',
-    #'C.3.3.unit_checking_trig_csc_operand_error',
-    #'C.3.3.unit_checking_trig_sech_operand_error',
-    #'C.3.3.unit_checking_trig_sec_operand_error',
-    #'C.3.3.unit_checking_trig_sinh_operand_error',
-    #'C.3.3.unit_checking_trig_sin_operand_error',
-    #'C.3.3.unit_checking_trig_tanh_operand_error',
-    #'C.3.3.unit_checking_trig_tan_operand_error',
-
-    # Fails on some unit conversions...
-    #'5.2.7.unit_conversion_dimensionless_multiplier_2':
-    #    'two variables which have dimensionally inconsistent units',
-    #'5.2.7.unit_conversion_less_obvious':
-    #    'two variables which have dimensionally inconsistent units',
-    #'5.2.7.unit_conversion_multiplier':
-    #    'two variables which have dimensionally inconsistent units',
-    #'5.2.7.unit_conversion_offset':
-    #    'two variables which have dimensionally inconsistent units',
-    #'5.2.7.unit_conversion_prefix':
-    #    'two variables which have dimensionally inconsistent units',
-
-    # OpenCOR can pick up on inconvertible units
-    #'5.2.7.unit_conversion_inconvertible_1':
-    #    'two variables which have dimensionally inconsistent units',
-    #'5.2.7.unit_conversion_new_base_units':
-    #    'two variables which have dimensionally inconsistent units',
+        'must be a valid CellML identifier',
+    # No reaction support
+    '2.4.3.reaction_with_extensions':
+        'Reaction elements are not supported.',
+    '2.4.3.role_with_extensions':
+        'Reaction elements are not supported.',
+    '2.4.3.variable_ref_with_extensions':
+        'Reaction elements are not supported.',
+    '3.4.2.1.component_child_order_1':
+        'Reaction elements are not supported.',
+    '3.4.2.1.component_child_order_2':
+        'Reaction elements are not supported.',
+    '3.4.2.1.component_with_one_reaction':
+        'Reaction elements are not supported.',
+    '3.4.2.1.component_with_reactions':
+        'Reaction elements are not supported.',
+    # Non-zero offsets are not supported
+    '5.2.7.unit_conversion_dimensionless_offset':
+        'non-zero offsets are not supported',
+    '5.2.7.unit_conversion_offset':
+        'non-zero offsets are not supported',
+    # New base units are not supported
+    '5.2.7.unit_conversion_new_base_units':
+        'Defining new base units is not supported.',
+    # New base units are not supported
+    '5.4.1.1.units_base_units':
+        'Defining new base units is not supported.',
+    # Non-zero offsets are not supported
+    '5.4.2.1.unit_offset_non_zero':
+        'non-zero offsets are not supported',
+    # Unit prefixes can't be too big for floats
+    '5.4.2.1.unit_prefix_exponent_multiplier_huge':
+        'Unit prefix too large',
+    # Non-zero offsets are not supported
+    '5.4.2.7.unit_offset_non_zero_and_exponent_one':
+        'non-zero offsets are not supported.',
+    # No reaction support
+    '7.4.1.2.reaction_reversible_no':
+        'Reaction elements are not supported.',
+    '7.4.1.2.reaction_reversible_yes':
+        'Reaction elements are not supported.',
+    '7.4.3.reaction_all_roles_and_attributes':
+        'Reaction elements are not supported.',
+    '7.4.3.reaction_reversible_no':
+        'Reaction elements are not supported.',
+    '7.4.3.reaction_simple':
+        'Reaction elements are not supported.',
+    '8.4.1.cmeta_id_in_reaction':
+        'Reaction elements are not supported.',
+    '8.4.1.cmeta_id_in_role':
+        'Reaction elements are not supported.',
+    '8.4.1.cmeta_id_in_variable_ref':
+        'Reaction elements are not supported.',
+    '8.4.2.rdf_in_reaction':
+        'Reaction elements are not supported.',
+    '8.4.2.rdf_in_role':
+        'Reaction elements are not supported.',
+    '8.4.2.rdf_in_variable_ref':
+        'Reaction elements are not supported.',
 }
 
 
@@ -200,55 +104,56 @@ expected_messages = {
     '0.1.real_number_invalid_6':
         'must be a real number',
     # 2.4.1 CellML Identifiers
-    #'2.4.1.identifier_empty':
-    #    'A valid CellML identifier must contain at least one letter',
-    #'2.4.1.identifier_only_underscore':
-    #    'A valid CellML identifier must contain at least one letter',
-    #'2.4.1.identifier_unexpected_character_1':
-    #    'A valid CellML identifier must only contain alphanumeric characters',
+    '2.4.1.identifier_empty':
+        'valid CellML identifier',
+    '2.4.1.identifier_only_underscore':
+        'valid CellML identifier',
+    '2.4.1.identifier_unexpected_character_1':
+        'valid CellML identifier',
+    '2.4.1.identifier_unexpected_character_2':
+        'valid CellML identifier',
+    '2.4.1.identifier_unexpected_character_unicode':
+        'valid CellML identifier',
     # 2.4.2. Allowable CellML elements and attributes
-    #'2.4.2.imaginary_attributes_1':
-    #    'Unexpected attribute fruit found',
-    #'2.4.2.imaginary_attributes_2':
-    #    'Unexpected attribute fruit found',
-    #'2.4.2.imaginary_elements':
-    #    'Unexpected element fruit found',
+    '2.4.2.imaginary_attributes_1':
+        'Unexpected attribute "fruit"',
+    '2.4.2.imaginary_elements':
+        'found element of type cellml:fruit',
     # 2.4.3 Elements/attributes in extension namespaces
+    '2.4.3.cellml_elements_inside_extensions':
+        'CellML element cellml:component found inside extension element',
     # 2.4.4 Text in CellML elements
-    #'2.4.4.text_in_component':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_component_ref':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_connection':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_group':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_map_components':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_map_variables':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_model':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_reaction':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_relationship_ref':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_role':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_unit':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_units_1':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_units_2':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_variable':
-    #    'any characters that occur immediately within elements in the CellML',
-    #'2.4.4.text_in_variable_ref':
-    #    'any characters that occur immediately within elements in the CellML',
+    '2.4.4.text_in_component':
+        'Text found in cellml:component',
+    '2.4.4.text_in_component_ref':
+        'Text found in cellml:component_ref',
+    '2.4.4.text_in_connection':
+        'Text found in cellml:connection',
+    '2.4.4.text_in_group':
+        'Text found in cellml:group',
+    '2.4.4.text_in_map_components':
+        'Text found in cellml:map_components',
+    '2.4.4.text_in_map_variables':
+        'Text found in cellml:map_variables',
+    '2.4.4.text_in_model':
+        'Text found in cellml:model',
+    '2.4.4.text_in_relationship_ref':
+        'Text found in cellml:model',
+    '2.4.4.text_in_unit':
+        'Text found in cellml:model',
+    '2.4.4.text_in_units_1':
+        'Text found in cellml:model',
+    '2.4.4.text_in_units_2':
+        'Text found in cellml:model',
+    '2.4.4.text_in_variable':
+        'Text found in cellml:model',
+    '2.4.4.text_in_variable_ref':
+        'Text found in cellml:model',
     # 2.5.1 Identifiers are case sensitive
     #'2.5.1.identifiers_are_case_sensitive':
     #    'Invalid component referenced by component_1 attribute',
     # 2.5.2 There are no attributes in the CellML namespace
+    #'2.5.2.attribute_in_cellml_namespace',
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
     #'3.4.1.1.model_with_component_ref':
@@ -1057,18 +962,18 @@ expected_messages = {
 
 # Invalid models for which validation is not expected to pick up the (correct)
 # error.
-known_issues = {}
-'''
-    # CellML API allows letters with accents in identifiers
-    '2.4.1.identifier_unexpected_character_2',
-    # CellML API allows any unicode character
-    '2.4.1.identifier_unexpected_character_unicode',
+known_issues = {
+    # Attributes inside the CellML namespace are ignored
+    '2.4.2.imaginary_attributes_2',
     # CellML namespace attributes inside extensions are not detected
     '2.4.3.cellml_attributes_inside_extensions',
-    # CellML elements inside extensions are not detected
-    '2.4.3.cellml_elements_inside_extensions',
-    # API doesn't complain about attributes in the CellML namespace
-    '2.5.2.attribute_in_cellml_namespace',
+    # Text in reactions is not detected
+    '2.4.4.text_in_reaction',
+    '2.4.4.text_in_role',
+
+
+}
+'''
     # 4.4.1 Bad math
     '4.4.1.math_not_math_reaction',
     # 4.4.4 A mathml:math can only modify 'owned' variables
@@ -1251,7 +1156,7 @@ class TestMyokit(object):
             pytest.fail()
 
     @pytest.mark.skipif(no_myokit(), reason='Myokit not found')
-    @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0(True))
+    @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
     def test_invalid_model(self, name, path, log):
 
         # See if there's an expected error for this model
