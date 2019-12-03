@@ -87,9 +87,11 @@ expected_messages = {
     '0.0.root_node_not_model':
         'Root node must be a CellML model',
     '0.0.root_node_two_elements':
-        'junk after document element',
+        #'junk after document element', # etree
+        'Extra content at the end of the document',
     '0.0.root_node_two_models':
-        'junk after document element',
+        #'junk after document element',
+        'Extra content at the end of the document',
     # Not in spec: Real number format
     '0.1.real_number_invalid_1':
         'must be a real number',
@@ -138,20 +140,18 @@ expected_messages = {
     '2.4.4.text_in_model':
         'Text found in cellml:model',
     '2.4.4.text_in_relationship_ref':
-        'Text found in cellml:model',
+        'Text found in cellml:relationship_ref',
     '2.4.4.text_in_unit':
-        'Text found in cellml:model',
+        'Text found in cellml:unit',
     '2.4.4.text_in_units_1':
-        'Text found in cellml:model',
+        'Text found in cellml:units',
     '2.4.4.text_in_units_2':
-        'Text found in cellml:model',
+        'Text found in cellml:units',
     '2.4.4.text_in_variable':
-        'Text found in cellml:model',
-    '2.4.4.text_in_variable_ref':
-        'Text found in cellml:model',
+        'Text found in cellml:variable',
     # 2.5.1 Identifiers are case sensitive
-    #'2.5.1.identifiers_are_case_sensitive':
-    #    'Invalid component referenced by component_1 attribute',
+    '2.5.1.identifiers_are_case_sensitive':
+        'must refer to a component in the current model',
     # 2.5.2 There are no attributes in the CellML namespace
     #'2.5.2.attribute_in_cellml_namespace',
     # 2.5.3 Extension namespaces again
@@ -970,6 +970,7 @@ known_issues = {
     # Text in reactions is not detected
     '2.4.4.text_in_reaction',
     '2.4.4.text_in_role',
+    '2.4.4.text_in_variable_ref',
 
 
 }
@@ -1093,12 +1094,11 @@ def no_myokit():
 
 def parse(path):
     """ Parses the file at ``path``. """
-    from myokit.formats.cellml.cellml_1 import CellMLError
-    from myokit.formats.cellml._importer_temp import CellMLParser_1
-    p = CellMLParser_1()
+    from myokit.formats.cellml.parser_1 import CellMLParser, CellMLParsingError
+    p = CellMLParser()
     try:
-        p.parse(path)
-    except CellMLError as e:
+        p.parse_file(path)
+    except CellMLParsingError as e:
         return False, str(e)
     else:
         return True, 'OK'
