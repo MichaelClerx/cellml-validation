@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 7.4.3.8:  A delta_variable must have either a stoichiometry or math -->
 <model name="role_delta_variable_without_rate_or_math"
        xmlns="http://www.cellml.org/cellml/1.0#"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
 Binary logical operators: and, or, xor -->
 <model name="mathml_logic_binary_operators"

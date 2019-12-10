@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 7.4.3.7: The delta_variable must refer to a local variable -->
 <model name="role_delta_variable_nonexistent_2"
        xmlns="http://www.cellml.org/cellml/1.0#"

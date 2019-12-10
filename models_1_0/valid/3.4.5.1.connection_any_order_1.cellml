@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- Implied: There is no rule for who gets to be component_1 -->
 <model name="connection_any_order_1"
        xmlns="http://www.cellml.org/cellml/1.0#">

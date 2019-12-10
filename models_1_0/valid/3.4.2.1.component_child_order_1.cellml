@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 3.4.2.1: Component children can come in any order. Although
                           units, variable, reaction, math is preferred. -->
 <model name="component_child_order_1"

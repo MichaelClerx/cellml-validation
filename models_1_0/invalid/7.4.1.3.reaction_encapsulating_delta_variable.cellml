@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 7.4.1.2 A reaction in an encapsulating component shouldn't have
                          a delta_variable -->
 <model name="reaction_encapsulating_delta_variable"

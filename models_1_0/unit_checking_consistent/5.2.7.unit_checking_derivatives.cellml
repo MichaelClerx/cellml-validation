@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 5.2.7: Unit checking: First-order derivatives -->
 <model name="unit_checking_derivatives"
        xmlns="http://www.cellml.org/cellml/1.0#"

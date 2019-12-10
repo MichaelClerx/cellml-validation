@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 8.4.2: A unit can have an rdf:RDF -->
 <model name="rdf_in_unit"
        xmlns="http://www.cellml.org/cellml/1.0#"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 7.4.3.4: A direction can only be forward, reverse, or both -->
 <model name="role_direction_invalid"
        xmlns="http://www.cellml.org/cellml/1.0#"

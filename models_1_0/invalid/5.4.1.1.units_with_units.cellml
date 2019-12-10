@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 5.4.1.1: A units cannot contain a units -->
 <model name="units_with_units"
        xmlns="http://www.cellml.org/cellml/1.0#">

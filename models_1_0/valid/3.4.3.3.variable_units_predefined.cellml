@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 3.4.3.3: A variable can have a predefined unit -->
 <model name="variable_units_predefined"
        xmlns="http://www.cellml.org/cellml/1.0#">

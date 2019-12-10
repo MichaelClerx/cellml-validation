@@ -39,19 +39,19 @@ Results per category
 
 [0.0.root_node_namespace_wrong](../models_1_0/invalid/0.0.root_node_namespace_wrong.cellml): Error detected correctly.
 * Expected: ```Element model has wrong namespace```
-* Output: ```Error on line 4: Element model has wrong namespace: expecting http://www.cellml.org/cellml/1.0#```
+* Output: ```Error on line 5: Element model has wrong namespace: expecting http://www.cellml.org/cellml/1.0#```
 
 [0.0.root_node_not_model](../models_1_0/invalid/0.0.root_node_not_model.cellml): Error detected correctly.
 * Expected: ```Expecting element model```
-* Output: ```Error on line 4: Expecting element model, got component```
+* Output: ```Error on line 5: Expecting element model, got component```
 
 [0.0.root_node_two_elements](../models_1_0/invalid/0.0.root_node_two_elements.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_elements.cellml, line 5)```
+* Output: ```Extra content at the end of the document, line 6, column 1 (0.0.root_node_two_elements.cellml, line 6)```
 
 [0.0.root_node_two_models](../models_1_0/invalid/0.0.root_node_two_models.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
+* Output: ```Extra content at the end of the document, line 6, column 1 (0.0.root_node_two_models.cellml, line 6)```
 
 
 ---
@@ -61,56 +61,56 @@ Results per category
 [0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_2](../models_1_0/invalid/0.1.real_number_invalid_2.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_3](../models_1_0/invalid/0.1.real_number_invalid_3.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_4](../models_1_0/invalid/0.1.real_number_invalid_4.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -135,42 +135,42 @@ Results per category
 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.1.identifier_only_underscore](../models_1_0/invalid/2.4.1.identifier_only_underscore.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.1.identifier_unexpected_character_1](../models_1_0/invalid/2.4.1.identifier_unexpected_character_1.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
 
@@ -181,15 +181,15 @@ Results per category
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
 * Expected: ```Invalid attribute fruit for element model```
-* Output: ```Error on line 6: Invalid attribute fruit for element model```
+* Output: ```Error on line 7: Invalid attribute fruit for element model```
 
 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): Error detected correctly.
 * Expected: ```Invalid attribute fruit for element model```
-* Output: ```Error on line 7: Invalid attribute fruit for element model```
+* Output: ```Error on line 8: Invalid attribute fruit for element model```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
 * Expected: ```Element model has extra content```
-* Output: ```Error on line 5: Element model has extra content: fruit```
+* Output: ```Error on line 6: Element model has extra content: fruit```
 
 
 ---
@@ -199,18 +199,18 @@ Results per category
 [2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
-  * ```Error on line 6: Expecting an element units, got nothing```
+  * ```Error on line 7: Expecting an element units, got nothing```
   * ```Error on line 0: Extra element banana in interleave```
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element model failed to validate content```
 
 [2.4.3.cellml_elements_inside_extensions](../models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
-  * ```Error on line 6: Expecting an element units, got nothing```
+  * ```Error on line 7: Expecting an element units, got nothing```
   * ```Error on line 0: Extra element banana in interleave```
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element model failed to validate content```
 
 [2.4.3.component_ref_with_extensions](../models_1_0/valid/2.4.3.component_ref_with_extensions.cellml): Valid file passed validation.
 
@@ -256,130 +256,130 @@ Results per category
 [2.4.4.text_in_component](../models_1_0/invalid/2.4.4.text_in_component.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: text```
 * Output:
-  * ```Error on line 5: Element component has extra content: text```
+  * ```Error on line 6: Element component has extra content: text```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_component_ref](../models_1_0/invalid/2.4.4.text_in_component_ref.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: text```
 * Output:
-  * ```Error on line 10: Element component_ref has extra content: text```
+  * ```Error on line 11: Element component_ref has extra content: text```
   * ```Error on line 0: Extra element component_ref in interleave```
-  * ```Error on line 10: Element component_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 11: Element component_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [2.4.4.text_in_connection](../models_1_0/invalid/2.4.4.text_in_connection.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: text```
 * Output:
-  * ```Error on line 11: Element connection has extra content: text```
+  * ```Error on line 12: Element connection has extra content: text```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [2.4.4.text_in_group](../models_1_0/invalid/2.4.4.text_in_group.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: text```
 * Output:
-  * ```Error on line 7: Element group has extra content: text```
+  * ```Error on line 8: Element group has extra content: text```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [2.4.4.text_in_map_components](../models_1_0/invalid/2.4.4.text_in_map_components.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: text```
 * Output:
-  * ```Error on line 6: Element map_components has extra content: text```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 7: Element map_components has extra content: text```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_map_variables](../models_1_0/invalid/2.4.4.text_in_map_variables.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: text```
 * Output:
-  * ```Error on line 13: Element map_variables has extra content: text```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element connection failed to validate content```
+  * ```Error on line 14: Element map_variables has extra content: text```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [2.4.4.text_in_model](../models_1_0/invalid/2.4.4.text_in_model.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: text```
-* Output: ```Error on line 4: Element model has extra content: text```
+* Output: ```Error on line 5: Element model has extra content: text```
 
 [2.4.4.text_in_reaction](../models_1_0/invalid/2.4.4.text_in_reaction.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: text```
 * Output:
-  * ```Error on line 7: Element reaction has extra content: text```
+  * ```Error on line 8: Element reaction has extra content: text```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_relationship_ref](../models_1_0/invalid/2.4.4.text_in_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: text```
 * Output:
-  * ```Error on line 8: Element relationship_ref has extra content: text```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 9: Element relationship_ref has extra content: text```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [2.4.4.text_in_role](../models_1_0/invalid/2.4.4.text_in_role.cellml): Error detected correctly.
 * Expected: ```Element role has extra content: text```
 * Output:
-  * ```Error on line 9: Element role has extra content: text```
-  * ```Error on line 9: Element role failed to validate attributes```
+  * ```Error on line 10: Element role has extra content: text```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
   * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_unit](../models_1_0/invalid/2.4.4.text_in_unit.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: text```
 * Output:
-  * ```Error on line 6: Element unit has extra content: text```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Element unit has extra content: text```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_units_1](../models_1_0/invalid/2.4.4.text_in_units_1.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: text```
 * Output:
-  * ```Error on line 5: Element units has extra content: text```
+  * ```Error on line 6: Element units has extra content: text```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_units_2](../models_1_0/invalid/2.4.4.text_in_units_2.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: text```
 * Output:
-  * ```Error on line 6: Element units has extra content: text```
+  * ```Error on line 7: Element units has extra content: text```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_variable](../models_1_0/invalid/2.4.4.text_in_variable.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: text```
 * Output:
-  * ```Error on line 6: Element variable has extra content: text```
+  * ```Error on line 7: Element variable has extra content: text```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [2.4.4.text_in_variable_ref](../models_1_0/invalid/2.4.4.text_in_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element variable_ref has extra content: text```
 * Output:
-  * ```Error on line 8: Element variable_ref has extra content: text```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
+  * ```Error on line 9: Element variable_ref has extra content: text```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -396,8 +396,8 @@ Results per category
 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -415,12 +415,12 @@ Results per category
 [3.4.1.1.model_name_missing](../models_1_0/invalid/3.4.1.1.model_name_missing.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
-  * ```Error on line 3: Invalid sequence in interleave```
-  * ```Error on line 3: Element model failed to validate content```
+  * ```Error on line 4: Invalid sequence in interleave```
+  * ```Error on line 4: Element model failed to validate content```
 
 [3.4.1.1.model_with_component_ref](../models_1_0/invalid/3.4.1.1.model_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: component_ref```
-* Output: ```Error on line 5: Element model has extra content: component_ref```
+* Output: ```Error on line 6: Element model has extra content: component_ref```
 
 [3.4.1.1.model_with_components](../models_1_0/valid/3.4.1.1.model_with_components.cellml): Valid file passed validation.
 
@@ -430,19 +430,19 @@ Results per category
 
 [3.4.1.1.model_with_map_components](../models_1_0/invalid/3.4.1.1.model_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: map_components```
-* Output: ```Error on line 7: Element model has extra content: map_components```
+* Output: ```Error on line 8: Element model has extra content: map_components```
 
 [3.4.1.1.model_with_map_variables](../models_1_0/invalid/3.4.1.1.model_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: map_variables```
-* Output: ```Error on line 11: Element model has extra content: map_variables```
+* Output: ```Error on line 12: Element model has extra content: map_variables```
 
 [3.4.1.1.model_with_math](../models_1_0/invalid/3.4.1.1.model_with_math.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: math```
-* Output: ```Error on line 9: Element model has extra content: math```
+* Output: ```Error on line 10: Element model has extra content: math```
 
 [3.4.1.1.model_with_model](../models_1_0/invalid/3.4.1.1.model_with_model.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: model```
-* Output: ```Error on line 5: Element model has extra content: model```
+* Output: ```Error on line 6: Element model has extra content: model```
 
 [3.4.1.1.model_with_one_component](../models_1_0/valid/3.4.1.1.model_with_one_component.cellml): Valid file passed validation.
 
@@ -454,29 +454,29 @@ Results per category
 
 [3.4.1.1.model_with_reaction](../models_1_0/invalid/3.4.1.1.model_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: reaction```
-* Output: ```Error on line 8: Element model has extra content: reaction```
+* Output: ```Error on line 9: Element model has extra content: reaction```
 
 [3.4.1.1.model_with_relationship_ref](../models_1_0/invalid/3.4.1.1.model_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: relationship_ref```
-* Output: ```Error on line 5: Element model has extra content: relationship_ref```
+* Output: ```Error on line 6: Element model has extra content: relationship_ref```
 
 [3.4.1.1.model_with_role](../models_1_0/invalid/3.4.1.1.model_with_role.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: role```
-* Output: ```Error on line 5: Element model has extra content: role```
+* Output: ```Error on line 6: Element model has extra content: role```
 
 [3.4.1.1.model_with_unit](../models_1_0/invalid/3.4.1.1.model_with_unit.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: unit```
-* Output: ```Error on line 5: Element model has extra content: unit```
+* Output: ```Error on line 6: Element model has extra content: unit```
 
 [3.4.1.1.model_with_units](../models_1_0/valid/3.4.1.1.model_with_units.cellml): Valid file passed validation.
 
 [3.4.1.1.model_with_variable](../models_1_0/invalid/3.4.1.1.model_with_variable.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: variable```
-* Output: ```Error on line 5: Element model has extra content: variable```
+* Output: ```Error on line 6: Element model has extra content: variable```
 
 [3.4.1.1.model_with_variable_ref](../models_1_0/invalid/3.4.1.1.model_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element model has extra content: variable_ref```
-* Output: ```Error on line 5: Element model has extra content: variable_ref```
+* Output: ```Error on line 6: Element model has extra content: variable_ref```
 
 
 ---
@@ -486,8 +486,8 @@ Results per category
 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
-  * ```Error on line 3: Invalid sequence in interleave```
-  * ```Error on line 3: Element model failed to validate content```
+  * ```Error on line 4: Invalid sequence in interleave```
+  * ```Error on line 4: Element model failed to validate content```
 
 
 ---
@@ -503,61 +503,61 @@ Results per category
 [3.4.2.1.component_name_missing](../models_1_0/invalid/3.4.2.1.component_name_missing.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate content```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_component](../models_1_0/invalid/3.4.2.1.component_with_component.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: component```
 * Output:
-  * ```Error on line 6: Element component has extra content: component```
+  * ```Error on line 7: Element component has extra content: component```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_component_ref](../models_1_0/invalid/3.4.2.1.component_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: component_ref```
 * Output:
-  * ```Error on line 6: Element component has extra content: component_ref```
+  * ```Error on line 7: Element component has extra content: component_ref```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_connection](../models_1_0/invalid/3.4.2.1.component_with_connection.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: connection```
 * Output:
-  * ```Error on line 12: Element component has extra content: connection```
+  * ```Error on line 13: Element component has extra content: connection```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [3.4.2.1.component_with_group](../models_1_0/invalid/3.4.2.1.component_with_group.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: group```
 * Output:
-  * ```Error on line 6: Element component has extra content: group```
+  * ```Error on line 7: Element component has extra content: group```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_map_components](../models_1_0/invalid/3.4.2.1.component_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: map_components```
 * Output:
-  * ```Error on line 6: Element component has extra content: map_components```
+  * ```Error on line 7: Element component has extra content: map_components```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_map_variables](../models_1_0/invalid/3.4.2.1.component_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: map_variables```
 * Output:
-  * ```Error on line 6: Element component has extra content: map_variables```
+  * ```Error on line 7: Element component has extra content: map_variables```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_maths](../models_1_0/valid/3.4.2.1.component_with_maths.cellml): Valid file passed validation.
 
 [3.4.2.1.component_with_model](../models_1_0/invalid/3.4.2.1.component_with_model.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: model```
 * Output:
-  * ```Error on line 6: Element component has extra content: model```
+  * ```Error on line 7: Element component has extra content: model```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_one_math](../models_1_0/valid/3.4.2.1.component_with_one_math.cellml): Valid file passed validation.
 
@@ -572,32 +572,32 @@ Results per category
 [3.4.2.1.component_with_relationship_ref](../models_1_0/invalid/3.4.2.1.component_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: relationship_ref```
 * Output:
-  * ```Error on line 6: Element component has extra content: relationship_ref```
+  * ```Error on line 7: Element component has extra content: relationship_ref```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_role](../models_1_0/invalid/3.4.2.1.component_with_role.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: role```
 * Output:
-  * ```Error on line 6: Element component has extra content: role```
+  * ```Error on line 7: Element component has extra content: role```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_unit](../models_1_0/invalid/3.4.2.1.component_with_unit.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: unit```
 * Output:
-  * ```Error on line 6: Element component has extra content: unit```
+  * ```Error on line 7: Element component has extra content: unit```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_units](../models_1_0/valid/3.4.2.1.component_with_units.cellml): Valid file passed validation.
 
 [3.4.2.1.component_with_variable_ref](../models_1_0/invalid/3.4.2.1.component_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element component has extra content: variable_ref```
 * Output:
-  * ```Error on line 6: Element component has extra content: variable_ref```
+  * ```Error on line 7: Element component has extra content: variable_ref```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
@@ -611,10 +611,10 @@ Results per category
 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element component failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -624,56 +624,56 @@ Results per category
 [3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
 * Expected: ```Element variable failed to validate attributes```
 * Output:
-  * ```Error on line 6: Element variable failed to validate attributes```
+  * ```Error on line 7: Element variable failed to validate attributes```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_units_missing](../models_1_0/invalid/3.4.3.1.variable_units_missing.cellml): Error detected correctly.
 * Expected: ```Element variable failed to validate attributes```
 * Output:
-  * ```Error on line 6: Element variable failed to validate attributes```
+  * ```Error on line 7: Element variable failed to validate attributes```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_component](../models_1_0/invalid/3.4.3.1.variable_with_component.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: component```
 * Output:
-  * ```Error on line 7: Element variable has extra content: component```
+  * ```Error on line 8: Element variable has extra content: component```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: component_ref```
 * Output:
-  * ```Error on line 7: Element variable has extra content: component_ref```
+  * ```Error on line 8: Element variable has extra content: component_ref```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: connection```
 * Output:
-  * ```Error on line 13: Element variable has extra content: connection```
+  * ```Error on line 14: Element variable has extra content: connection```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 12: Element component failed to validate content```
+  * ```Error on line 13: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: group```
 * Output:
-  * ```Error on line 7: Element variable has extra content: group```
+  * ```Error on line 8: Element variable has extra content: group```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_initial_value](../models_1_0/valid/3.4.3.1.variable_with_initial_value.cellml): Valid file passed validation.
 
@@ -682,101 +682,101 @@ Results per category
 [3.4.3.1.variable_with_map_components](../models_1_0/invalid/3.4.3.1.variable_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: map_component```
 * Output:
-  * ```Error on line 7: Element variable has extra content: map_components```
-  * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element variable has extra content: map_variables```
-* Output:
-  * ```Error on line 7: Element variable has extra content: map_variables```
-  * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): Error detected correctly.
-* Expected: ```Element variable has extra content: math```
-* Output:
-  * ```Error on line 8: Element variable has extra content: math```
+  * ```Error on line 8: Element variable has extra content: map_components```
   * ```Error on line 0: Extra element variable in interleave```
   * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+[3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element variable has extra content: map_variables```
+* Output:
+  * ```Error on line 8: Element variable has extra content: map_variables```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): Error detected correctly.
+* Expected: ```Element variable has extra content: math```
+* Output:
+  * ```Error on line 9: Element variable has extra content: math```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [3.4.3.1.variable_with_model](../models_1_0/invalid/3.4.3.1.variable_with_model.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: model```
 * Output:
-  * ```Error on line 7: Element variable has extra content: model```
+  * ```Error on line 8: Element variable has extra content: model```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_reaction](../models_1_0/invalid/3.4.3.1.variable_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: reaction```
 * Output:
-  * ```Error on line 7: Element variable has extra content: reaction```
+  * ```Error on line 8: Element variable has extra content: reaction```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_relationship_ref](../models_1_0/invalid/3.4.3.1.variable_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: relationship_ref```
 * Output:
-  * ```Error on line 7: Element variable has extra content: relationship_ref```
+  * ```Error on line 8: Element variable has extra content: relationship_ref```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_role](../models_1_0/invalid/3.4.3.1.variable_with_role.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: role```
 * Output:
-  * ```Error on line 7: Element variable has extra content: role```
+  * ```Error on line 8: Element variable has extra content: role```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_unit](../models_1_0/invalid/3.4.3.1.variable_with_unit.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: unit```
 * Output:
-  * ```Error on line 7: Element variable has extra content: unit```
+  * ```Error on line 8: Element variable has extra content: unit```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_units](../models_1_0/invalid/3.4.3.1.variable_with_units.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: units```
 * Output:
-  * ```Error on line 7: Element variable has extra content: units```
+  * ```Error on line 8: Element variable has extra content: units```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_variable](../models_1_0/invalid/3.4.3.1.variable_with_variable.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: variable```
 * Output:
-  * ```Error on line 7: Element variable has extra content: variable```
+  * ```Error on line 8: Element variable has extra content: variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_with_variable_ref](../models_1_0/invalid/3.4.3.1.variable_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element variable has extra content: variable_ref```
 * Output:
-  * ```Error on line 7: Element variable has extra content: variable_ref```
+  * ```Error on line 8: Element variable has extra content: variable_ref```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
@@ -790,11 +790,11 @@ Results per category
 [3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): Error detected correctly.
 * Expected: ```Element variable failed to validate attributes```
 * Output:
-  * ```Error on line 6: Element variable failed to validate attributes```
+  * ```Error on line 7: Element variable failed to validate attributes```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.2.variable_name_same_as_cousin](../models_1_0/valid/3.4.3.2.variable_name_same_as_cousin.cellml): Valid file passed validation.
 
@@ -823,11 +823,11 @@ Results per category
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute public_interface for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute public_interface for element variable```
+  * ```Error on line 7: Invalid attribute public_interface for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -837,11 +837,11 @@ Results per category
 [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute private_interface for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute private_interface for element variable```
+  * ```Error on line 7: Invalid attribute private_interface for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -851,11 +851,11 @@ Results per category
 [3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): Error detected correctly.
 * Expected: ```Invalid attribute public_interface for element variable```
 * Output:
-  * ```Error on line 9: Invalid attribute public_interface for element variable```
+  * ```Error on line 10: Invalid attribute public_interface for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 10: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -865,20 +865,20 @@ Results per category
 [3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 6: Invalid attribute initial_value for element variable```
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -888,20 +888,20 @@ Results per category
 [3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 10: Invalid attribute initial_value for element variable```
+  * ```Error on line 11: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 10: Element component failed to validate content```
+  * ```Error on line 11: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
-  * ```Error on line 10: Invalid attribute initial_value for element variable```
+  * ```Error on line 11: Invalid attribute initial_value for element variable```
   * ```Error on line 0: Extra element variable in interleave```
-  * ```Error on line 10: Element component failed to validate content```
+  * ```Error on line 11: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -911,39 +911,30 @@ Results per category
 [3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
 * Expected: ```Expecting an element map_components```
 * Output:
-  * ```Error on line 5: Expecting an element map_components, got nothing```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 6: Expecting an element map_components, got nothing```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.4.1.connection_map_components_missing](../models_1_0/invalid/3.4.4.1.connection_map_components_missing.cellml): Error detected correctly.
 * Expected: ```Expecting an element map_components```
 * Output:
-  * ```Error on line 13: Expecting an element map_components, got nothing```
-  * ```Error on line 13: Invalid sequence in interleave```
-  * ```Error on line 13: Element connection failed to validate content```
+  * ```Error on line 14: Expecting an element map_components, got nothing```
+  * ```Error on line 14: Invalid sequence in interleave```
+  * ```Error on line 14: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 13: Element model failed to validate content```
+  * ```Error on line 14: Element model failed to validate content```
 
 [3.4.4.1.connection_map_components_multiple](../models_1_0/invalid/3.4.4.1.connection_map_components_multiple.cellml): Error detected correctly.
 * Expected: ```Extra element map_components```
 * Output:
   * ```Error on line 0: Extra element map_components in interleave```
-  * ```Error on line 18: Element connection failed to validate content```
+  * ```Error on line 19: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 16: Element model failed to validate content```
+  * ```Error on line 17: Element model failed to validate content```
 
 [3.4.4.1.connection_map_variables_missing_1](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_1.cellml): Error detected correctly.
-* Expected: ```Expecting an element map_variables```
-* Output:
-  * ```Error on line 11: Expecting an element map_variables, got nothing```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 11: Element model failed to validate content```
-
-[3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): Error detected correctly.
 * Expected: ```Expecting an element map_variables```
 * Output:
   * ```Error on line 12: Expecting an element map_variables, got nothing```
@@ -952,116 +943,125 @@ Results per category
   * ```Error on line 0: Extra element connection in interleave```
   * ```Error on line 12: Element model failed to validate content```
 
+[3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): Error detected correctly.
+* Expected: ```Expecting an element map_variables```
+* Output:
+  * ```Error on line 13: Expecting an element map_variables, got nothing```
+  * ```Error on line 13: Invalid sequence in interleave```
+  * ```Error on line 13: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 13: Element model failed to validate content```
+
 [3.4.4.1.connection_only_extensions](../models_1_0/invalid/3.4.4.1.connection_only_extensions.cellml): Error detected correctly.
 * Expected: ```Element connection failed to validate```
 * Output:
-  * ```Error on line 6: Expecting an element map_components, got nothing```
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 7: Expecting an element map_components, got nothing```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [3.4.4.1.connection_with_component](../models_1_0/invalid/3.4.4.1.connection_with_component.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: component```
 * Output:
-  * ```Error on line 15: Element connection has extra content: component```
+  * ```Error on line 16: Element connection has extra content: component```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_component_ref](../models_1_0/invalid/3.4.4.1.connection_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: component_ref```
 * Output:
-  * ```Error on line 15: Element connection has extra content: component_ref```
+  * ```Error on line 16: Element connection has extra content: component_ref```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_connection](../models_1_0/invalid/3.4.4.1.connection_with_connection.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: connection```
 * Output:
-  * ```Error on line 18: Element connection has extra content: connection```
+  * ```Error on line 19: Element connection has extra content: connection```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 15: Element model failed to validate content```
+  * ```Error on line 16: Element model failed to validate content```
 
 [3.4.4.1.connection_with_group](../models_1_0/invalid/3.4.4.1.connection_with_group.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: group```
 * Output:
-  * ```Error on line 15: Element connection has extra content: group```
+  * ```Error on line 16: Element connection has extra content: group```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_map_variables](../models_1_0/valid/3.4.4.1.connection_with_map_variables.cellml): Valid file passed validation.
 
 [3.4.4.1.connection_with_math](../models_1_0/invalid/3.4.4.1.connection_with_math.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: math```
 * Output:
-  * ```Error on line 15: Element connection has extra content: math```
+  * ```Error on line 16: Element connection has extra content: math```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_model](../models_1_0/invalid/3.4.4.1.connection_with_model.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: model```
 * Output:
-  * ```Error on line 15: Element connection has extra content: model```
+  * ```Error on line 16: Element connection has extra content: model```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_name_attribute](../models_1_0/invalid/3.4.4.1.connection_with_name_attribute.cellml): Error detected correctly.
 * Expected: ```Invalid attribute name for element connection```
 * Output:
-  * ```Error on line 11: Invalid attribute name for element connection```
+  * ```Error on line 12: Invalid attribute name for element connection```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [3.4.4.1.connection_with_one_map_variables](../models_1_0/valid/3.4.4.1.connection_with_one_map_variables.cellml): Valid file passed validation.
 
 [3.4.4.1.connection_with_reaction](../models_1_0/invalid/3.4.4.1.connection_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: reaction```
 * Output:
-  * ```Error on line 15: Element connection has extra content: reaction```
+  * ```Error on line 16: Element connection has extra content: reaction```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_relationship_ref](../models_1_0/invalid/3.4.4.1.connection_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: relationship_ref```
 * Output:
-  * ```Error on line 15: Element connection has extra content: relationship_ref```
+  * ```Error on line 16: Element connection has extra content: relationship_ref```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_role](../models_1_0/invalid/3.4.4.1.connection_with_role.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: role```
 * Output:
-  * ```Error on line 15: Element connection has extra content: role```
+  * ```Error on line 16: Element connection has extra content: role```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_unit](../models_1_0/invalid/3.4.4.1.connection_with_unit.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: unit```
 * Output:
-  * ```Error on line 15: Element connection has extra content: unit```
+  * ```Error on line 16: Element connection has extra content: unit```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_units](../models_1_0/invalid/3.4.4.1.connection_with_units.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: units```
 * Output:
-  * ```Error on line 15: Element connection has extra content: units```
+  * ```Error on line 16: Element connection has extra content: units```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_variable](../models_1_0/invalid/3.4.4.1.connection_with_variable.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: variable```
 * Output:
-  * ```Error on line 15: Element connection has extra content: variable```
+  * ```Error on line 16: Element connection has extra content: variable```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 [3.4.4.1.connection_with_variable_ref](../models_1_0/invalid/3.4.4.1.connection_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element connection has extra content: variable_ref```
 * Output:
-  * ```Error on line 15: Element connection has extra content: variable_ref```
+  * ```Error on line 16: Element connection has extra content: variable_ref```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 12: Element model failed to validate content```
+  * ```Error on line 13: Element model failed to validate content```
 
 
 ---
@@ -1075,155 +1075,155 @@ Results per category
 [3.4.5.1.map_components_component_1_missing](../models_1_0/invalid/3.4.5.1.map_components_component_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_components failed to validate attributes```
 * Output:
-  * ```Error on line 6: Element map_components failed to validate attributes```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_component_2_missing](../models_1_0/invalid/3.4.5.1.map_components_component_2_missing.cellml): Error detected correctly.
-* Expected: ```Element map_components failed to validate attributes```
-* Output:
-  * ```Error on line 6: Element map_components failed to validate attributes```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_component](../models_1_0/invalid/3.4.5.1.map_components_with_component.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: component```
-* Output:
-  * ```Error on line 7: Element map_components has extra content: component```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: component_ref```
-* Output:
-  * ```Error on line 7: Element map_components has extra content: component_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: connection```
-* Output:
-  * ```Error on line 7: Element map_components has extra content: connection```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: group```
-* Output:
-  * ```Error on line 7: Element map_components has extra content: group```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: map_components```
-* Output:
-  * ```Error on line 7: Element map_components has extra content: map_components```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: map_variables```
-* Output:
-  * ```Error on line 7: Element map_components has extra content: map_variables```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): Error detected correctly.
-* Expected: ```Element map_components has extra content: math```
-* Output:
-  * ```Error on line 8: Element map_components has extra content: math```
+  * ```Error on line 7: Element map_components failed to validate attributes```
   * ```Error on line 6: Invalid sequence in interleave```
   * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+[3.4.5.1.map_components_component_2_missing](../models_1_0/invalid/3.4.5.1.map_components_component_2_missing.cellml): Error detected correctly.
+* Expected: ```Element map_components failed to validate attributes```
+* Output:
+  * ```Error on line 7: Element map_components failed to validate attributes```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_component](../models_1_0/invalid/3.4.5.1.map_components_with_component.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: component```
+* Output:
+  * ```Error on line 8: Element map_components has extra content: component```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: component_ref```
+* Output:
+  * ```Error on line 8: Element map_components has extra content: component_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: connection```
+* Output:
+  * ```Error on line 8: Element map_components has extra content: connection```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: group```
+* Output:
+  * ```Error on line 8: Element map_components has extra content: group```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: map_components```
+* Output:
+  * ```Error on line 8: Element map_components has extra content: map_components```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: map_variables```
+* Output:
+  * ```Error on line 8: Element map_components has extra content: map_variables```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): Error detected correctly.
+* Expected: ```Element map_components has extra content: math```
+* Output:
+  * ```Error on line 9: Element map_components has extra content: math```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [3.4.5.1.map_components_with_model](../models_1_0/invalid/3.4.5.1.map_components_with_model.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: model```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: model```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: model```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_reaction](../models_1_0/invalid/3.4.5.1.map_components_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: reaction```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: reaction```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: reaction```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_relationship_ref](../models_1_0/invalid/3.4.5.1.map_components_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: relationship_ref```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: relationship_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: relationship_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_role](../models_1_0/invalid/3.4.5.1.map_components_with_role.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: role```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: role```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: role```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_unit](../models_1_0/invalid/3.4.5.1.map_components_with_unit.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: unit```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_units](../models_1_0/invalid/3.4.5.1.map_components_with_units.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: units```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: units```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: units```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_variable](../models_1_0/invalid/3.4.5.1.map_components_with_variable.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: variable```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: variable```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: variable```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.5.1.map_components_with_variable_ref](../models_1_0/invalid/3.4.5.1.map_components_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element map_components has extra content: variable_ref```
 * Output:
-  * ```Error on line 7: Element map_components has extra content: variable_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 8: Element map_components has extra content: variable_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -1258,155 +1258,155 @@ Results per category
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables failed to validate attributes```
 * Output:
-  * ```Error on line 13: Element map_variables failed to validate attributes```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element connection failed to validate content```
+  * ```Error on line 14: Element map_variables failed to validate attributes```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [3.4.6.1.map_variables_variable_2_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_2_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables failed to validate attributes```
 * Output:
-  * ```Error on line 13: Element map_variables failed to validate attributes```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element connection failed to validate content```
+  * ```Error on line 14: Element map_variables failed to validate attributes```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_component](../models_1_0/invalid/3.4.6.1.map_variables_with_component.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: component```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: component```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element map_variables has extra content: component_ref```
-* Output:
-  * ```Error on line 8: Element map_variables has extra content: component_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): Error detected correctly.
-* Expected: ```Element map_variables has extra content: connection```
-* Output:
-  * ```Error on line 8: Element map_variables has extra content: connection```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): Error detected correctly.
-* Expected: ```Element map_variables has extra content: group```
-* Output:
-  * ```Error on line 8: Element map_variables has extra content: group```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element map_variables has extra content: map_components```
-* Output:
-  * ```Error on line 8: Element map_variables has extra content: map_components```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element map_variables has extra content: map_variables```
-* Output:
-  * ```Error on line 8: Element map_variables has extra content: map_variables```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
-  * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): Error detected correctly.
-* Expected: ```Element map_variables has extra content: math```
-* Output:
-  * ```Error on line 9: Element map_variables has extra content: math```
+  * ```Error on line 9: Element map_variables has extra content: component```
   * ```Error on line 6: Invalid sequence in interleave```
   * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+[3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): Error detected correctly.
+* Expected: ```Element map_variables has extra content: component_ref```
+* Output:
+  * ```Error on line 9: Element map_variables has extra content: component_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): Error detected correctly.
+* Expected: ```Element map_variables has extra content: connection```
+* Output:
+  * ```Error on line 9: Element map_variables has extra content: connection```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): Error detected correctly.
+* Expected: ```Element map_variables has extra content: group```
+* Output:
+  * ```Error on line 9: Element map_variables has extra content: group```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element map_variables has extra content: map_components```
+* Output:
+  * ```Error on line 9: Element map_variables has extra content: map_components```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element map_variables has extra content: map_variables```
+* Output:
+  * ```Error on line 9: Element map_variables has extra content: map_variables```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): Error detected correctly.
+* Expected: ```Element map_variables has extra content: math```
+* Output:
+  * ```Error on line 10: Element map_variables has extra content: math```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [3.4.6.1.map_variables_with_model](../models_1_0/invalid/3.4.6.1.map_variables_with_model.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: model```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: model```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: model```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_reaction](../models_1_0/invalid/3.4.6.1.map_variables_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: reaction```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: reaction```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: reaction```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_relationship_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: relationship_ref```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: relationship_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: relationship_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_role](../models_1_0/invalid/3.4.6.1.map_variables_with_role.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: role```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: role```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: role```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_unit](../models_1_0/invalid/3.4.6.1.map_variables_with_unit.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: unit```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_units](../models_1_0/invalid/3.4.6.1.map_variables_with_units.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: units```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: units```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: units```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_variable](../models_1_0/invalid/3.4.6.1.map_variables_with_variable.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: variable```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: variable```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: variable```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element map_variables has extra content: variable_ref```
 * Output:
-  * ```Error on line 8: Element map_variables has extra content: variable_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element connection failed to validate content```
+  * ```Error on line 9: Element map_variables has extra content: variable_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element connection failed to validate content```
   * ```Error on line 0: Extra element connection in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -1614,22 +1614,22 @@ Results per category
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate content```
 * Output:
-  * ```Error on line 9: Element math has extra content: apply```
+  * ```Error on line 10: Element math has extra content: apply```
   * ```Error on line 0: Extra element math in interleave```
-  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 9: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [4.4.1.math_not_math_reaction](../models_1_0/invalid/4.4.1.math_not_math_reaction.cellml): Error detected correctly.
 * Expected: ```Element role failed to validate content```
 * Output:
   * ```Error on line 0: Extra element math in interleave```
-  * ```Error on line 10: Element role failed to validate content```
-  * ```Error on line 10: Element role failed to validate attributes```
-  * ```Error on line 12: Element math has extra content: apply```
-  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 11: Element role failed to validate content```
+  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 13: Element math has extra content: apply```
+  * ```Error on line 10: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -1674,11 +1674,11 @@ Results per category
 [4.4.3.1.cn_units_missing](../models_1_0/invalid/4.4.3.1.cn_units_missing.cellml): Error detected correctly.
 * Expected: ```Element component failed to validate content```
 * Output:
-  * ```Error on line 9: Element math has extra content: apply```
+  * ```Error on line 10: Element math has extra content: apply```
   * ```Error on line 0: Extra element math in interleave```
-  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 9: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -1734,11 +1734,11 @@ Results per category
 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix for element unit```
 * Output:
-  * ```Error on line 9: Invalid attribute prefix for element unit```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element units failed to validate content```
+  * ```Error on line 10: Invalid attribute prefix for element unit```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 8: Element model failed to validate content```
+  * ```Error on line 9: Element model failed to validate content```
 
 
 ---
@@ -1809,143 +1809,143 @@ Results per category
 [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): Error detected correctly.
 * Expected: ```Invalid attribute base_units for element units```
 * Output:
-  * ```Error on line 5: Invalid attribute base_units for element units```
+  * ```Error on line 6: Invalid attribute base_units for element units```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 🔴 [5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 5: Expecting an element unit, got nothing```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-🔴 [5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): **Valid file failed validation.**
 * Output:
   * ```Error on line 6: Expecting an element unit, got nothing```
   * ```Error on line 6: Invalid sequence in interleave```
   * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
+
+🔴 [5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 7: Expecting an element unit, got nothing```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Element units failed to validate content```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_component](../models_1_0/invalid/5.4.1.1.units_with_component.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: component```
 * Output:
-  * ```Error on line 7: Element units has extra content: component```
+  * ```Error on line 8: Element units has extra content: component```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_component_ref](../models_1_0/invalid/5.4.1.1.units_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: component_ref```
 * Output:
-  * ```Error on line 7: Element units has extra content: component_ref```
+  * ```Error on line 8: Element units has extra content: component_ref```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_connection](../models_1_0/invalid/5.4.1.1.units_with_connection.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: connection```
 * Output:
-  * ```Error on line 13: Element units has extra content: connection```
+  * ```Error on line 14: Element units has extra content: connection```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [5.4.1.1.units_with_group](../models_1_0/invalid/5.4.1.1.units_with_group.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: group```
 * Output:
-  * ```Error on line 7: Element units has extra content: group```
+  * ```Error on line 8: Element units has extra content: group```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_map_components](../models_1_0/invalid/5.4.1.1.units_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: map_components```
 * Output:
-  * ```Error on line 7: Element units has extra content: map_components```
+  * ```Error on line 8: Element units has extra content: map_components```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_map_variables](../models_1_0/invalid/5.4.1.1.units_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: map_variables```
 * Output:
-  * ```Error on line 7: Element units has extra content: map_variables```
+  * ```Error on line 8: Element units has extra content: map_variables```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_math](../models_1_0/invalid/5.4.1.1.units_with_math.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: math```
 * Output:
-  * ```Error on line 10: Element units has extra content: math```
+  * ```Error on line 11: Element units has extra content: math```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 9: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [5.4.1.1.units_with_model](../models_1_0/invalid/5.4.1.1.units_with_model.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: model```
 * Output:
-  * ```Error on line 7: Element units has extra content: model```
+  * ```Error on line 8: Element units has extra content: model```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_reaction](../models_1_0/invalid/5.4.1.1.units_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: reaction```
 * Output:
-  * ```Error on line 8: Element units has extra content: reaction```
+  * ```Error on line 9: Element units has extra content: reaction```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_relationship_ref](../models_1_0/invalid/5.4.1.1.units_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: relationship_ref```
 * Output:
-  * ```Error on line 7: Element units has extra content: relationship_ref```
+  * ```Error on line 8: Element units has extra content: relationship_ref```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_role](../models_1_0/invalid/5.4.1.1.units_with_role.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: role```
 * Output:
-  * ```Error on line 7: Element units has extra content: role```
+  * ```Error on line 8: Element units has extra content: role```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_unit_children](../models_1_0/valid/5.4.1.1.units_with_unit_children.cellml): Valid file passed validation.
 
 [5.4.1.1.units_with_units](../models_1_0/invalid/5.4.1.1.units_with_units.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: units```
 * Output:
-  * ```Error on line 7: Element units has extra content: units```
+  * ```Error on line 8: Element units has extra content: units```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_variable](../models_1_0/invalid/5.4.1.1.units_with_variable.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: variable```
 * Output:
-  * ```Error on line 8: Element units has extra content: variable```
+  * ```Error on line 9: Element units has extra content: variable```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element component failed to validate content```
+  * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.1.1.units_with_variable_ref](../models_1_0/invalid/5.4.1.1.units_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element units has extra content: variable_ref```
 * Output:
-  * ```Error on line 9: Element units has extra content: variable_ref```
+  * ```Error on line 10: Element units has extra content: variable_ref```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -1959,10 +1959,10 @@ Results per category
 [5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): Error detected correctly.
 * Expected: ```Element units failed to validate content```
 * Output:
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 🔵 [5.4.1.2.units_name_predefined_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_ampere.cellml): **Error not detected.**
 
@@ -2048,9 +2048,9 @@ Results per category
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute base_units```
 * Output:
-  * ```Error on line 5: Invalid attribute base_units for element units```
+  * ```Error on line 6: Invalid attribute base_units for element units```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -2066,152 +2066,152 @@ Results per category
 [5.4.2.1.unit_units_missing](../models_1_0/invalid/5.4.2.1.unit_units_missing.cellml): Error detected correctly.
 * Expected: ```Element unit failed to validate attributes```
 * Output:
-  * ```Error on line 6: Element unit failed to validate attributes```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_component](../models_1_0/invalid/5.4.2.1.unit_with_component.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: component```
-* Output:
-  * ```Error on line 7: Element unit has extra content: component```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_component_ref](../models_1_0/invalid/5.4.2.1.unit_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: component_ref```
-* Output:
-  * ```Error on line 7: Element unit has extra content: component_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_connection](../models_1_0/invalid/5.4.2.1.unit_with_connection.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: connection```
-* Output:
-  * ```Error on line 7: Element unit has extra content: connection```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_group](../models_1_0/invalid/5.4.2.1.unit_with_group.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: group```
-* Output:
-  * ```Error on line 7: Element unit has extra content: group```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_map_components](../models_1_0/invalid/5.4.2.1.unit_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: map_components```
-* Output:
-  * ```Error on line 7: Element unit has extra content: map_components```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_map_variables](../models_1_0/invalid/5.4.2.1.unit_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: map_variables```
-* Output:
-  * ```Error on line 7: Element unit has extra content: map_variables```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_math](../models_1_0/invalid/5.4.2.1.unit_with_math.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: math```
-* Output:
-  * ```Error on line 8: Element unit has extra content: math```
+  * ```Error on line 7: Element unit failed to validate attributes```
   * ```Error on line 6: Invalid sequence in interleave```
   * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+[5.4.2.1.unit_with_component](../models_1_0/invalid/5.4.2.1.unit_with_component.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: component```
+* Output:
+  * ```Error on line 8: Element unit has extra content: component```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_component_ref](../models_1_0/invalid/5.4.2.1.unit_with_component_ref.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: component_ref```
+* Output:
+  * ```Error on line 8: Element unit has extra content: component_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_connection](../models_1_0/invalid/5.4.2.1.unit_with_connection.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: connection```
+* Output:
+  * ```Error on line 8: Element unit has extra content: connection```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_group](../models_1_0/invalid/5.4.2.1.unit_with_group.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: group```
+* Output:
+  * ```Error on line 8: Element unit has extra content: group```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_map_components](../models_1_0/invalid/5.4.2.1.unit_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: map_components```
+* Output:
+  * ```Error on line 8: Element unit has extra content: map_components```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_map_variables](../models_1_0/invalid/5.4.2.1.unit_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: map_variables```
+* Output:
+  * ```Error on line 8: Element unit has extra content: map_variables```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_math](../models_1_0/invalid/5.4.2.1.unit_with_math.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: math```
+* Output:
+  * ```Error on line 9: Element unit has extra content: math```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [5.4.2.1.unit_with_model](../models_1_0/invalid/5.4.2.1.unit_with_model.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: model```
 * Output:
-  * ```Error on line 7: Element unit has extra content: model```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 8: Element unit has extra content: model```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.1.unit_with_reaction](../models_1_0/invalid/5.4.2.1.unit_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: reaction```
 * Output:
-  * ```Error on line 9: Element unit has extra content: reaction```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element units failed to validate content```
+  * ```Error on line 10: Element unit has extra content: reaction```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.1.unit_with_relationship_ref](../models_1_0/invalid/5.4.2.1.unit_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: relationship_ref```
 * Output:
-  * ```Error on line 7: Element unit has extra content: relationship_ref```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 8: Element unit has extra content: relationship_ref```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.1.unit_with_role](../models_1_0/invalid/5.4.2.1.unit_with_role.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: role```
 * Output:
-  * ```Error on line 7: Element unit has extra content: role```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 8: Element unit has extra content: role```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.1.unit_with_unit](../models_1_0/invalid/5.4.2.1.unit_with_unit.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: unit```
 * Output:
-  * ```Error on line 7: Element unit has extra content: unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 8: Element unit has extra content: unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.1.unit_with_units](../models_1_0/invalid/5.4.2.1.unit_with_units.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: units```
 * Output:
-  * ```Error on line 7: Element unit has extra content: units```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 8: Element unit has extra content: units```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.1.unit_with_variable](../models_1_0/invalid/5.4.2.1.unit_with_variable.cellml): Error detected correctly.
 * Expected: ```Element unit has extra content: variable```
 * Output:
-  * ```Error on line 8: Element unit has extra content: variable```
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[5.4.2.1.unit_with_variable_ref](../models_1_0/invalid/5.4.2.1.unit_with_variable_ref.cellml): Error detected correctly.
-* Expected: ```Element unit has extra content: variable_ref```
-* Output:
-  * ```Error on line 9: Element unit has extra content: variable_ref```
+  * ```Error on line 9: Element unit has extra content: variable```
   * ```Error on line 7: Invalid sequence in interleave```
   * ```Error on line 7: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 7: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
+
+[5.4.2.1.unit_with_variable_ref](../models_1_0/invalid/5.4.2.1.unit_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```Element unit has extra content: variable_ref```
+* Output:
+  * ```Error on line 10: Element unit has extra content: variable_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -2242,31 +2242,31 @@ Results per category
 [5.4.2.3.unit_prefix_real](../models_1_0/invalid/5.4.2.3.unit_prefix_real.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix```
 * Output:
-  * ```Error on line 6: Invalid attribute prefix for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute prefix for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix```
 * Output:
-  * ```Error on line 6: Invalid attribute prefix for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute prefix for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 🔵 [5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): **Error not detected.**
 
 [5.4.2.3.unit_prefix_unknown](../models_1_0/invalid/5.4.2.3.unit_prefix_unknown.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix```
 * Output:
-  * ```Error on line 6: Invalid attribute prefix for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute prefix for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -2276,11 +2276,11 @@ Results per category
 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute exponent```
 * Output:
-  * ```Error on line 6: Invalid attribute exponent for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute exponent for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -2290,11 +2290,11 @@ Results per category
 [5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute multiplier```
 * Output:
-  * ```Error on line 6: Invalid attribute multiplier for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute multiplier for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -2304,11 +2304,11 @@ Results per category
 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute offset```
 * Output:
-  * ```Error on line 6: Invalid attribute offset for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute offset for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -2318,30 +2318,30 @@ Results per category
 [5.4.2.7.unit_offset_and_exponent](../models_1_0/invalid/5.4.2.7.unit_offset_and_exponent.cellml): Error detected correctly.
 * Expected: ```Invalid attribute offset```
 * Output:
-  * ```Error on line 6: Invalid attribute offset for element unit```
-  * ```Error on line 6: Invalid attribute exponent for element unit```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 7: Invalid attribute offset for element unit```
+  * ```Error on line 7: Invalid attribute exponent for element unit```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.7.unit_offset_and_siblings_1](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_1.cellml): Error detected correctly.
 * Expected: ```Extra element unit```
 * Output:
   * ```Error on line 0: Extra element unit in interleave```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.7.unit_offset_and_siblings_2](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_2.cellml): Error detected correctly.
 * Expected: ```Extra element unit```
 * Output:
   * ```Error on line 0: Extra element unit in interleave```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element units failed to validate content```
+  * ```Error on line 6: Invalid sequence in interleave```
+  * ```Error on line 6: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [5.4.2.7.unit_offset_non_zero_and_exponent_one](../models_1_0/valid/5.4.2.7.unit_offset_non_zero_and_exponent_one.cellml): Valid file passed validation.
 
@@ -2474,20 +2474,20 @@ Results per category
 [6.4.1.1.group_component_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_1.cellml): Error detected correctly.
 * Expected: ```Element group failed to validate content```
 * Output:
-  * ```Error on line 7: Expecting an element relationship_ref, got nothing```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
-
-[6.4.1.1.group_component_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_2.cellml): Error detected correctly.
-* Expected: ```Element group failed to validate content```
-* Output:
   * ```Error on line 8: Expecting an element relationship_ref, got nothing```
   * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 8: Element model failed to validate content```
+
+[6.4.1.1.group_component_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_component_ref_missing_2.cellml): Error detected correctly.
+* Expected: ```Element group failed to validate content```
+* Output:
+  * ```Error on line 9: Expecting an element relationship_ref, got nothing```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 9: Element model failed to validate content```
 
 [6.4.1.1.group_component_ref_multiple](../models_1_0/valid/6.4.1.1.group_component_ref_multiple.cellml): Valid file passed validation.
 
@@ -2496,22 +2496,13 @@ Results per category
 [6.4.1.1.group_empty](../models_1_0/invalid/6.4.1.1.group_empty.cellml): Error detected correctly.
 * Expected: ```Expecting an element relationship_ref```
 * Output:
-  * ```Error on line 5: Expecting an element relationship_ref, got nothing```
-  * ```Error on line 5: Invalid sequence in interleave```
-  * ```Error on line 5: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[6.4.1.1.group_only_extensions](../models_1_0/invalid/6.4.1.1.group_only_extensions.cellml): Error detected correctly.
-* Expected: ```Expecting an element relationship_ref```
-* Output:
   * ```Error on line 6: Expecting an element relationship_ref, got nothing```
   * ```Error on line 6: Invalid sequence in interleave```
   * ```Error on line 6: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
-[6.4.1.1.group_relationship_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_1.cellml): Error detected correctly.
+[6.4.1.1.group_only_extensions](../models_1_0/invalid/6.4.1.1.group_only_extensions.cellml): Error detected correctly.
 * Expected: ```Expecting an element relationship_ref```
 * Output:
   * ```Error on line 7: Expecting an element relationship_ref, got nothing```
@@ -2520,7 +2511,7 @@ Results per category
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 7: Element model failed to validate content```
 
-[6.4.1.1.group_relationship_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_2.cellml): Error detected correctly.
+[6.4.1.1.group_relationship_ref_missing_1](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_1.cellml): Error detected correctly.
 * Expected: ```Expecting an element relationship_ref```
 * Output:
   * ```Error on line 8: Expecting an element relationship_ref, got nothing```
@@ -2529,98 +2520,107 @@ Results per category
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 8: Element model failed to validate content```
 
+[6.4.1.1.group_relationship_ref_missing_2](../models_1_0/invalid/6.4.1.1.group_relationship_ref_missing_2.cellml): Error detected correctly.
+* Expected: ```Expecting an element relationship_ref```
+* Output:
+  * ```Error on line 9: Expecting an element relationship_ref, got nothing```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 9: Element model failed to validate content```
+
 [6.4.1.1.group_with_component](../models_1_0/invalid/6.4.1.1.group_with_component.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: component```
 * Output:
-  * ```Error on line 12: Element group has extra content: component```
+  * ```Error on line 13: Element group has extra content: component```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_connection](../models_1_0/invalid/6.4.1.1.group_with_connection.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: connection```
 * Output:
-  * ```Error on line 16: Element group has extra content: connection```
+  * ```Error on line 17: Element group has extra content: connection```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [6.4.1.1.group_with_group](../models_1_0/invalid/6.4.1.1.group_with_group.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: group```
 * Output:
-  * ```Error on line 14: Element group has extra content: group```
+  * ```Error on line 15: Element group has extra content: group```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 [6.4.1.1.group_with_map_components](../models_1_0/invalid/6.4.1.1.group_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: map_components```
 * Output:
-  * ```Error on line 12: Element group has extra content: map_components```
+  * ```Error on line 13: Element group has extra content: map_components```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_map_variables](../models_1_0/invalid/6.4.1.1.group_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: map_variables```
 * Output:
-  * ```Error on line 16: Element group has extra content: map_variables```
+  * ```Error on line 17: Element group has extra content: map_variables```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [6.4.1.1.group_with_math](../models_1_0/invalid/6.4.1.1.group_with_math.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: math```
 * Output:
-  * ```Error on line 15: Element group has extra content: math```
+  * ```Error on line 16: Element group has extra content: math```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 10: Element model failed to validate content```
+  * ```Error on line 11: Element model failed to validate content```
 
 [6.4.1.1.group_with_model](../models_1_0/invalid/6.4.1.1.group_with_model.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: model```
 * Output:
-  * ```Error on line 12: Element group has extra content: model```
+  * ```Error on line 13: Element group has extra content: model```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_reaction](../models_1_0/invalid/6.4.1.1.group_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: reaction```
 * Output:
-  * ```Error on line 14: Element group has extra content: reaction```
+  * ```Error on line 15: Element group has extra content: reaction```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 [6.4.1.1.group_with_role](../models_1_0/invalid/6.4.1.1.group_with_role.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: role```
 * Output:
-  * ```Error on line 12: Element group has extra content: role```
+  * ```Error on line 13: Element group has extra content: role```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_unit](../models_1_0/invalid/6.4.1.1.group_with_unit.cellml): Error detected correctly.
 * Expected: ```Element group failed to validate content```
 * Output:
-  * ```Error on line 7: Expecting an element relationship_ref, got nothing```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 8: Expecting an element relationship_ref, got nothing```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_units](../models_1_0/invalid/6.4.1.1.group_with_units.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: units```
 * Output:
-  * ```Error on line 12: Element group has extra content: units```
+  * ```Error on line 13: Element group has extra content: units```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_variable](../models_1_0/invalid/6.4.1.1.group_with_variable.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: variable```
 * Output:
-  * ```Error on line 12: Element group has extra content: variable```
+  * ```Error on line 13: Element group has extra content: variable```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.1.1.group_with_variable_ref](../models_1_0/invalid/6.4.1.1.group_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element group has extra content: variable_ref```
 * Output:
-  * ```Error on line 14: Element group has extra content: variable_ref```
+  * ```Error on line 15: Element group has extra content: variable_ref```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 
 ---
@@ -2642,6 +2642,16 @@ Results per category
 
 🔴 [6.4.2.1.relationship_ref_relationship_2](../models_1_0/valid/6.4.2.1.relationship_ref_relationship_2.cellml): **Valid file failed validation.**
 * Output:
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element relationship_ref failed to validate content```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 10: Element model failed to validate content```
+
+[6.4.2.1.relationship_ref_relationship_missing](../models_1_0/invalid/6.4.2.1.relationship_ref_relationship_missing.cellml): Error detected correctly.
+* Expected: ```Element relationship_ref failed to validate```
+* Output:
   * ```Error on line 10: Invalid sequence in interleave```
   * ```Error on line 10: Element relationship_ref failed to validate content```
   * ```Error on line 9: Invalid sequence in interleave```
@@ -2649,150 +2659,140 @@ Results per category
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 9: Element model failed to validate content```
 
-[6.4.2.1.relationship_ref_relationship_missing](../models_1_0/invalid/6.4.2.1.relationship_ref_relationship_missing.cellml): Error detected correctly.
-* Expected: ```Element relationship_ref failed to validate```
+[6.4.2.1.relationship_ref_with_component](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component.cellml): Error detected correctly.
+* Expected: ```Element relationship_ref has extra content: component```
 * Output:
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element relationship_ref failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: component```
   * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 8: Element model failed to validate content```
 
-[6.4.2.1.relationship_ref_with_component](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component.cellml): Error detected correctly.
-* Expected: ```Element relationship_ref has extra content: component```
-* Output:
-  * ```Error on line 9: Element relationship_ref has extra content: component```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
-
 [6.4.2.1.relationship_ref_with_component_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: component_ref```
 * Output:
-  * ```Error on line 12: Element relationship_ref has extra content: component_ref```
-  * ```Error on line 10: Invalid sequence in interleave```
-  * ```Error on line 10: Element group failed to validate content```
+  * ```Error on line 13: Element relationship_ref has extra content: component_ref```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 10: Element model failed to validate content```
+  * ```Error on line 11: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_connection](../models_1_0/invalid/6.4.2.1.relationship_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: connection```
 * Output:
-  * ```Error on line 13: Element relationship_ref has extra content: connection```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element group failed to validate content```
+  * ```Error on line 14: Element relationship_ref has extra content: connection```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_group](../models_1_0/invalid/6.4.2.1.relationship_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: group```
 * Output:
-  * ```Error on line 11: Element relationship_ref has extra content: group```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
-
-[6.4.2.1.relationship_ref_with_map_components](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element relationship_ref has extra content: map_components```
-* Output:
-  * ```Error on line 9: Element relationship_ref has extra content: map_components```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
-
-[6.4.2.1.relationship_ref_with_map_variables](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element relationship_ref has extra content: map_variables```
-* Output:
-  * ```Error on line 13: Element relationship_ref has extra content: map_variables```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 11: Element model failed to validate content```
-
-[6.4.2.1.relationship_ref_with_math](../models_1_0/invalid/6.4.2.1.relationship_ref_with_math.cellml): Error detected correctly.
-* Expected: ```Element relationship_ref has extra content: math```
-* Output:
-  * ```Error on line 12: Element relationship_ref has extra content: math```
+  * ```Error on line 12: Element relationship_ref has extra content: group```
   * ```Error on line 10: Invalid sequence in interleave```
   * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 10: Element model failed to validate content```
 
+[6.4.2.1.relationship_ref_with_map_components](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element relationship_ref has extra content: map_components```
+* Output:
+  * ```Error on line 10: Element relationship_ref has extra content: map_components```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 8: Element model failed to validate content```
+
+[6.4.2.1.relationship_ref_with_map_variables](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element relationship_ref has extra content: map_variables```
+* Output:
+  * ```Error on line 14: Element relationship_ref has extra content: map_variables```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 12: Element model failed to validate content```
+
+[6.4.2.1.relationship_ref_with_math](../models_1_0/invalid/6.4.2.1.relationship_ref_with_math.cellml): Error detected correctly.
+* Expected: ```Element relationship_ref has extra content: math```
+* Output:
+  * ```Error on line 13: Element relationship_ref has extra content: math```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 11: Element model failed to validate content```
+
 [6.4.2.1.relationship_ref_with_model](../models_1_0/invalid/6.4.2.1.relationship_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: model```
 * Output:
-  * ```Error on line 9: Element relationship_ref has extra content: model```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: model```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_reaction](../models_1_0/invalid/6.4.2.1.relationship_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: reaction```
 * Output:
-  * ```Error on line 11: Element relationship_ref has extra content: reaction```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 12: Element relationship_ref has extra content: reaction```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_relationship_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: relationship_ref```
 * Output:
-  * ```Error on line 9: Element relationship_ref has extra content: relationship_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: relationship_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_role](../models_1_0/invalid/6.4.2.1.relationship_ref_with_role.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: role```
 * Output:
-  * ```Error on line 9: Element relationship_ref has extra content: role```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: role```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_unit](../models_1_0/invalid/6.4.2.1.relationship_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: unit```
 * Output:
-  * ```Error on line 9: Element relationship_ref has extra content: unit```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: unit```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_units](../models_1_0/invalid/6.4.2.1.relationship_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: units```
 * Output:
-  * ```Error on line 9: Element relationship_ref has extra content: units```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: units```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_variable](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: variable```
 * Output:
-  * ```Error on line 9: Element relationship_ref has extra content: variable```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 10: Element relationship_ref has extra content: variable```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.1.relationship_ref_with_variable_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref has extra content: variable_ref```
 * Output:
-  * ```Error on line 11: Element relationship_ref has extra content: variable_ref```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 12: Element relationship_ref has extra content: variable_ref```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 
 ---
@@ -2802,12 +2802,12 @@ Results per category
 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
 * Expected: ```Element relationship_ref failed to validate content```
 * Output:
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element relationship_ref failed to validate content```
   * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element relationship_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 
 ---
@@ -2817,11 +2817,11 @@ Results per category
 [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute name for element relationship_ref```
 * Output:
-  * ```Error on line 8: Invalid attribute name for element relationship_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 9: Invalid attribute name for element relationship_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
@@ -2833,20 +2833,20 @@ Results per category
 [6.4.2.4.relationship_ref_encapsulation_duplicate](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_duplicate.cellml): Error detected correctly.
 * Expected: ```Invalid attribute name for element relationship_ref```
 * Output:
-  * ```Error on line 11: Invalid attribute name for element relationship_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Invalid attribute name for element relationship_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.2.4.relationship_ref_encapsulation_named](../models_1_0/invalid/6.4.2.4.relationship_ref_encapsulation_named.cellml): Error detected correctly.
 * Expected: ```Invalid attribute name for element relationship_ref```
 * Output:
-  * ```Error on line 8: Invalid attribute name for element relationship_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 9: Invalid attribute name for element relationship_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 
 ---
@@ -2873,141 +2873,141 @@ Results per category
 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Error detected correctly.
 * Expected: ```Element component_ref failed to validate content```
 * Output:
-  * ```Error on line 10: Invalid sequence in interleave```
-  * ```Error on line 10: Element component_ref failed to validate content```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element component_ref failed to validate content```
   * ```Error on line 0: Extra element component_ref in interleave```
-  * ```Error on line 10: Element component_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 11: Element component_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_nesting](../models_1_0/valid/6.4.3.1.component_ref_nesting.cellml): Valid file passed validation.
 
 [6.4.3.1.component_ref_with_component](../models_1_0/invalid/6.4.3.1.component_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: component```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: component```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: component```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_connection](../models_1_0/invalid/6.4.3.1.component_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: connection```
 * Output:
-  * ```Error on line 15: Element component_ref has extra content: connection```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element group failed to validate content```
+  * ```Error on line 16: Element component_ref has extra content: connection```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 11: Element model failed to validate content```
+  * ```Error on line 12: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_group](../models_1_0/invalid/6.4.3.1.component_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: group```
 * Output:
-  * ```Error on line 13: Element component_ref has extra content: group```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
-
-[6.4.3.1.component_ref_with_map_components](../models_1_0/invalid/6.4.3.1.component_ref_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element component_ref has extra content: map_components```
-* Output:
-  * ```Error on line 11: Element component_ref has extra content: map_components```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
-
-[6.4.3.1.component_ref_with_map_variables](../models_1_0/invalid/6.4.3.1.component_ref_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element component_ref has extra content: map_variables```
-* Output:
-  * ```Error on line 15: Element component_ref has extra content: map_variables```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 11: Element model failed to validate content```
-
-[6.4.3.1.component_ref_with_math](../models_1_0/invalid/6.4.3.1.component_ref_with_math.cellml): Error detected correctly.
-* Expected: ```Element component_ref has extra content: math```
-* Output:
-  * ```Error on line 14: Element component_ref has extra content: math```
+  * ```Error on line 14: Element component_ref has extra content: group```
   * ```Error on line 10: Invalid sequence in interleave```
   * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
   * ```Error on line 10: Element model failed to validate content```
 
+[6.4.3.1.component_ref_with_map_components](../models_1_0/invalid/6.4.3.1.component_ref_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element component_ref has extra content: map_components```
+* Output:
+  * ```Error on line 12: Element component_ref has extra content: map_components```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 8: Element model failed to validate content```
+
+[6.4.3.1.component_ref_with_map_variables](../models_1_0/invalid/6.4.3.1.component_ref_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element component_ref has extra content: map_variables```
+* Output:
+  * ```Error on line 16: Element component_ref has extra content: map_variables```
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 12: Element model failed to validate content```
+
+[6.4.3.1.component_ref_with_math](../models_1_0/invalid/6.4.3.1.component_ref_with_math.cellml): Error detected correctly.
+* Expected: ```Element component_ref has extra content: math```
+* Output:
+  * ```Error on line 15: Element component_ref has extra content: math```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 11: Element model failed to validate content```
+
 [6.4.3.1.component_ref_with_model](../models_1_0/invalid/6.4.3.1.component_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: model```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: model```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: model```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_reaction](../models_1_0/invalid/6.4.3.1.component_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: reaction```
 * Output:
-  * ```Error on line 13: Element component_ref has extra content: reaction```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 14: Element component_ref has extra content: reaction```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_relationship_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: relationship_ref```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: relationship_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: relationship_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_role](../models_1_0/invalid/6.4.3.1.component_ref_with_role.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: role```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: role```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: role```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_unit](../models_1_0/invalid/6.4.3.1.component_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: unit```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: unit```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: unit```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_units](../models_1_0/invalid/6.4.3.1.component_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: units```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: units```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: units```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_variable](../models_1_0/invalid/6.4.3.1.component_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: variable```
 * Output:
-  * ```Error on line 11: Element component_ref has extra content: variable```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element group failed to validate content```
+  * ```Error on line 12: Element component_ref has extra content: variable```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 [6.4.3.1.component_ref_with_variable_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element component_ref has extra content: variable_ref```
 * Output:
-  * ```Error on line 13: Element component_ref has extra content: variable_ref```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 14: Element component_ref has extra content: variable_ref```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
+  * ```Error on line 10: Element model failed to validate content```
 
 
 ---
@@ -3038,12 +3038,12 @@ Results per category
 
 🔴 [6.4.3.2.component_ref_no_children_extension](../models_1_0/valid/6.4.3.2.component_ref_no_children_extension.cellml): **Valid file failed validation.**
 * Output:
+  * ```Error on line 12: Invalid sequence in interleave```
+  * ```Error on line 12: Element relationship_ref failed to validate content```
   * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 11: Element relationship_ref failed to validate content```
-  * ```Error on line 10: Invalid sequence in interleave```
-  * ```Error on line 10: Element group failed to validate content```
+  * ```Error on line 11: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 10: Element model failed to validate content```
+  * ```Error on line 11: Element model failed to validate content```
 
 [6.4.3.2.component_ref_overlapping_containment](../models_1_0/valid/6.4.3.2.component_ref_overlapping_containment.cellml): Valid file passed validation.
 
@@ -3063,13 +3063,13 @@ Results per category
 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
 * Expected: ```Element component_ref failed to validate content```
 * Output:
-  * ```Error on line 10: Invalid sequence in interleave```
-  * ```Error on line 10: Element component_ref failed to validate content```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element component_ref failed to validate content```
   * ```Error on line 0: Extra element component_ref in interleave```
-  * ```Error on line 10: Element component_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 11: Element component_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 7: Element model failed to validate content```
+  * ```Error on line 8: Element model failed to validate content```
 
 🔵 [6.4.3.3.component_ref_component_nonexistent_1](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_1.cellml): **Error not detected.**
 
@@ -3085,139 +3085,139 @@ Results per category
 [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Error detected correctly.
 * Expected: ```Expecting an element variable_ref```
 * Output:
-  * ```Error on line 7: Expecting an element variable_ref, got nothing```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_component](../models_1_0/invalid/7.4.1.1.reaction_with_component.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: component```
-* Output:
-  * ```Error on line 11: Element reaction has extra content: component```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_component_ref](../models_1_0/invalid/7.4.1.1.reaction_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: component_ref```
-* Output:
-  * ```Error on line 11: Element reaction has extra content: component_ref```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_connection](../models_1_0/invalid/7.4.1.1.reaction_with_connection.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: connection```
-* Output:
-  * ```Error on line 11: Element reaction has extra content: connection```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_group](../models_1_0/invalid/7.4.1.1.reaction_with_group.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: group```
-* Output:
-  * ```Error on line 11: Element reaction has extra content: group```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_map_components](../models_1_0/invalid/7.4.1.1.reaction_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: map_components```
-* Output:
-  * ```Error on line 11: Element reaction has extra content: map_components```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_map_variables](../models_1_0/invalid/7.4.1.1.reaction_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: map_variables```
-* Output:
-  * ```Error on line 11: Element reaction has extra content: map_variables```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.1.1.reaction_with_math](../models_1_0/invalid/7.4.1.1.reaction_with_math.cellml): Error detected correctly.
-* Expected: ```Element reaction has extra content: math```
-* Output:
-  * ```Error on line 12: Element reaction has extra content: math```
+  * ```Error on line 8: Expecting an element variable_ref, got nothing```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
   * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+[7.4.1.1.reaction_with_component](../models_1_0/invalid/7.4.1.1.reaction_with_component.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: component```
+* Output:
+  * ```Error on line 12: Element reaction has extra content: component```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.1.1.reaction_with_component_ref](../models_1_0/invalid/7.4.1.1.reaction_with_component_ref.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: component_ref```
+* Output:
+  * ```Error on line 12: Element reaction has extra content: component_ref```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.1.1.reaction_with_connection](../models_1_0/invalid/7.4.1.1.reaction_with_connection.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: connection```
+* Output:
+  * ```Error on line 12: Element reaction has extra content: connection```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.1.1.reaction_with_group](../models_1_0/invalid/7.4.1.1.reaction_with_group.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: group```
+* Output:
+  * ```Error on line 12: Element reaction has extra content: group```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.1.1.reaction_with_map_components](../models_1_0/invalid/7.4.1.1.reaction_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: map_components```
+* Output:
+  * ```Error on line 12: Element reaction has extra content: map_components```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.1.1.reaction_with_map_variables](../models_1_0/invalid/7.4.1.1.reaction_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: map_variables```
+* Output:
+  * ```Error on line 12: Element reaction has extra content: map_variables```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.1.1.reaction_with_math](../models_1_0/invalid/7.4.1.1.reaction_with_math.cellml): Error detected correctly.
+* Expected: ```Element reaction has extra content: math```
+* Output:
+  * ```Error on line 13: Element reaction has extra content: math```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [7.4.1.1.reaction_with_model](../models_1_0/invalid/7.4.1.1.reaction_with_model.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: model```
 * Output:
-  * ```Error on line 11: Element reaction has extra content: model```
+  * ```Error on line 12: Element reaction has extra content: model```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.1.reaction_with_reaction](../models_1_0/invalid/7.4.1.1.reaction_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: reaction```
 * Output:
-  * ```Error on line 12: Element reaction has extra content: reaction```
+  * ```Error on line 13: Element reaction has extra content: reaction```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 9: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.1.reaction_with_relationship_ref](../models_1_0/invalid/7.4.1.1.reaction_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: relationship_ref```
 * Output:
-  * ```Error on line 11: Element reaction has extra content: relationship_ref```
+  * ```Error on line 12: Element reaction has extra content: relationship_ref```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.1.reaction_with_role](../models_1_0/invalid/7.4.1.1.reaction_with_role.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: role```
 * Output:
-  * ```Error on line 11: Element reaction has extra content: role```
+  * ```Error on line 12: Element reaction has extra content: role```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.1.reaction_with_unit](../models_1_0/invalid/7.4.1.1.reaction_with_unit.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: unit```
 * Output:
-  * ```Error on line 11: Element reaction has extra content: unit```
+  * ```Error on line 12: Element reaction has extra content: unit```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.1.reaction_with_units](../models_1_0/invalid/7.4.1.1.reaction_with_units.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: units```
 * Output:
-  * ```Error on line 11: Element reaction has extra content: units```
+  * ```Error on line 12: Element reaction has extra content: units```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.1.reaction_with_variable](../models_1_0/invalid/7.4.1.1.reaction_with_variable.cellml): Error detected correctly.
 * Expected: ```Element reaction has extra content: variable```
 * Output:
-  * ```Error on line 11: Element reaction has extra content: variable```
+  * ```Error on line 12: Element reaction has extra content: variable```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -3227,11 +3227,11 @@ Results per category
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute reversible for element reaction```
 * Output:
-  * ```Error on line 7: Invalid attribute reversible for element reaction```
+  * ```Error on line 8: Invalid attribute reversible for element reaction```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.1.2.reaction_reversible_no](../models_1_0/valid/7.4.1.2.reaction_reversible_no.cellml): Valid file passed validation.
 
@@ -3245,13 +3245,13 @@ Results per category
 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable for element role```
 * Output:
-  * ```Error on line 11: Invalid attribute delta_variable for element role```
-  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 12: Invalid attribute delta_variable for element role```
+  * ```Error on line 12: Element role failed to validate attributes```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element variable_ref failed to validate content```
   * ```Error on line 10: Invalid sequence in interleave```
-  * ```Error on line 10: Element variable_ref failed to validate content```
-  * ```Error on line 9: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -3261,95 +3261,29 @@ Results per category
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
 * Expected: ```Expecting an element role, got nothing```
 * Output:
-  * ```Error on line 8: Expecting an element role, got nothing```
+  * ```Error on line 9: Expecting an element role, got nothing```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
   * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
+  * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.2.1.variable_ref_variable_missing](../models_1_0/invalid/7.4.2.1.variable_ref_variable_missing.cellml): Error detected correctly.
 * Expected: ```Element variable_ref failed to validate content```
 * Output:
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
   * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
+  * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.2.1.variable_ref_with_component](../models_1_0/invalid/7.4.2.1.variable_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element variable_ref has extra content: component```
 * Output:
-  * ```Error on line 10: Element variable_ref has extra content: component```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_component_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: component_ref```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: component_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_connection](../models_1_0/invalid/7.4.2.1.variable_ref_with_connection.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: connection```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: connection```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_group](../models_1_0/invalid/7.4.2.1.variable_ref_with_group.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: group```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: group```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_map_components](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: map_components```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: map_components```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_map_variables](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: map_variables```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: map_variables```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_math](../models_1_0/invalid/7.4.2.1.variable_ref_with_math.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: math```
-* Output:
-  * ```Error on line 11: Element variable_ref has extra content: math```
+  * ```Error on line 11: Element variable_ref has extra content: component```
   * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
@@ -3357,82 +3291,148 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
+[7.4.2.1.variable_ref_with_component_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_component_ref.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: component_ref```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: component_ref```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_connection](../models_1_0/invalid/7.4.2.1.variable_ref_with_connection.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: connection```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: connection```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_group](../models_1_0/invalid/7.4.2.1.variable_ref_with_group.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: group```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: group```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_map_components](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: map_components```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: map_components```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_map_variables](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: map_variables```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: map_variables```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_math](../models_1_0/invalid/7.4.2.1.variable_ref_with_math.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: math```
+* Output:
+  * ```Error on line 12: Element variable_ref has extra content: math```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [7.4.2.1.variable_ref_with_model](../models_1_0/invalid/7.4.2.1.variable_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element variable_ref has extra content: model```
 * Output:
-  * ```Error on line 10: Element variable_ref has extra content: model```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
+  * ```Error on line 11: Element variable_ref has extra content: model```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.2.1.variable_ref_with_reaction](../models_1_0/invalid/7.4.2.1.variable_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element variable_ref has extra content: reaction```
 * Output:
-  * ```Error on line 11: Element variable_ref has extra content: reaction```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 12: Element variable_ref has extra content: reaction```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 9: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.2.1.variable_ref_with_relationship_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element variable_ref has extra content: relationship_ref```
 * Output:
-  * ```Error on line 10: Element variable_ref has extra content: relationship_ref```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_unit](../models_1_0/invalid/7.4.2.1.variable_ref_with_unit.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: unit```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: unit```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_units](../models_1_0/invalid/7.4.2.1.variable_ref_with_units.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: units```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: units```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_variable](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: variable```
-* Output:
-  * ```Error on line 10: Element variable_ref has extra content: variable```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 7: Element reaction failed to validate content```
-  * ```Error on line 0: Extra element reaction in interleave```
-  * ```Error on line 7: Element component failed to validate content```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.2.1.variable_ref_with_variable_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable_ref.cellml): Error detected correctly.
-* Expected: ```Element variable_ref has extra content: variable_ref```
-* Output:
-  * ```Error on line 11: Element variable_ref has extra content: variable_ref```
+  * ```Error on line 11: Element variable_ref has extra content: relationship_ref```
   * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 8: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
   * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_unit](../models_1_0/invalid/7.4.2.1.variable_ref_with_unit.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: unit```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: unit```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_units](../models_1_0/invalid/7.4.2.1.variable_ref_with_units.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: units```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: units```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_variable](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: variable```
+* Output:
+  * ```Error on line 11: Element variable_ref has extra content: variable```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.2.1.variable_ref_with_variable_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```Element variable_ref has extra content: variable_ref```
+* Output:
+  * ```Error on line 12: Element variable_ref has extra content: variable_ref```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -3453,117 +3453,18 @@ Results per category
 [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Error detected correctly.
 * Expected: ```Element role failed to validate attributes```
 * Output:
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element role failed to validate content```
+  * ```Error on line 10: Element role failed to validate attributes```
   * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element role failed to validate content```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
+  * ```Error on line 9: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 [7.4.3.1.role_with_component](../models_1_0/invalid/7.4.3.1.role_with_component.cellml): Error detected correctly.
 * Expected: ```Element role has extra content: component```
 * Output:
-  * ```Error on line 10: Element role has extra content: component```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_component_ref](../models_1_0/invalid/7.4.3.1.role_with_component_ref.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: component_ref```
-* Output:
-  * ```Error on line 10: Element role has extra content: component_ref```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_connection](../models_1_0/invalid/7.4.3.1.role_with_connection.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: connection```
-* Output:
-  * ```Error on line 10: Element role has extra content: connection```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_group](../models_1_0/invalid/7.4.3.1.role_with_group.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: group```
-* Output:
-  * ```Error on line 10: Element role has extra content: group```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_map_components](../models_1_0/invalid/7.4.3.1.role_with_map_components.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: map_components```
-* Output:
-  * ```Error on line 10: Element role has extra content: map_components```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_map_variables](../models_1_0/invalid/7.4.3.1.role_with_map_variables.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: map_variables```
-* Output:
-  * ```Error on line 10: Element role has extra content: map_variables```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_model](../models_1_0/invalid/7.4.3.1.role_with_model.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: model```
-* Output:
-  * ```Error on line 10: Element role has extra content: model```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_reaction](../models_1_0/invalid/7.4.3.1.role_with_reaction.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: reaction```
-* Output:
-  * ```Error on line 11: Element role has extra content: reaction```
-  * ```Error on line 10: Element role failed to validate attributes```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element variable_ref failed to validate content```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_relationship_ref](../models_1_0/invalid/7.4.3.1.role_with_relationship_ref.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: relationship_ref```
-* Output:
-  * ```Error on line 10: Element role has extra content: relationship_ref```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_role](../models_1_0/invalid/7.4.3.1.role_with_role.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: role```
-* Output:
-  * ```Error on line 11: Element role has extra content: role```
+  * ```Error on line 11: Element role has extra content: component```
   * ```Error on line 10: Element role failed to validate attributes```
   * ```Error on line 9: Invalid sequence in interleave```
   * ```Error on line 9: Element variable_ref failed to validate content```
@@ -3571,49 +3472,148 @@ Results per category
   * ```Error on line 0: Extra element component in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
-[7.4.3.1.role_with_unit](../models_1_0/invalid/7.4.3.1.role_with_unit.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: unit```
+[7.4.3.1.role_with_component_ref](../models_1_0/invalid/7.4.3.1.role_with_component_ref.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: component_ref```
 * Output:
-  * ```Error on line 10: Element role has extra content: unit```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_units](../models_1_0/invalid/7.4.3.1.role_with_units.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: units```
-* Output:
-  * ```Error on line 10: Element role has extra content: units```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_variable](../models_1_0/invalid/7.4.3.1.role_with_variable.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: variable```
-* Output:
-  * ```Error on line 10: Element role has extra content: variable```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
-  * ```Error on line 7: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
-
-[7.4.3.1.role_with_variable_ref](../models_1_0/invalid/7.4.3.1.role_with_variable_ref.cellml): Error detected correctly.
-* Expected: ```Element role has extra content: variable_ref```
-* Output:
-  * ```Error on line 11: Element role has extra content: variable_ref```
+  * ```Error on line 11: Element role has extra content: component_ref```
   * ```Error on line 10: Element role failed to validate attributes```
   * ```Error on line 9: Invalid sequence in interleave```
   * ```Error on line 9: Element variable_ref failed to validate content```
   * ```Error on line 8: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_connection](../models_1_0/invalid/7.4.3.1.role_with_connection.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: connection```
+* Output:
+  * ```Error on line 11: Element role has extra content: connection```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_group](../models_1_0/invalid/7.4.3.1.role_with_group.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: group```
+* Output:
+  * ```Error on line 11: Element role has extra content: group```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_map_components](../models_1_0/invalid/7.4.3.1.role_with_map_components.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: map_components```
+* Output:
+  * ```Error on line 11: Element role has extra content: map_components```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_map_variables](../models_1_0/invalid/7.4.3.1.role_with_map_variables.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: map_variables```
+* Output:
+  * ```Error on line 11: Element role has extra content: map_variables```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_model](../models_1_0/invalid/7.4.3.1.role_with_model.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: model```
+* Output:
+  * ```Error on line 11: Element role has extra content: model```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_reaction](../models_1_0/invalid/7.4.3.1.role_with_reaction.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: reaction```
+* Output:
+  * ```Error on line 12: Element role has extra content: reaction```
+  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element variable_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_relationship_ref](../models_1_0/invalid/7.4.3.1.role_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: relationship_ref```
+* Output:
+  * ```Error on line 11: Element role has extra content: relationship_ref```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_role](../models_1_0/invalid/7.4.3.1.role_with_role.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: role```
+* Output:
+  * ```Error on line 12: Element role has extra content: role```
+  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element variable_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[7.4.3.1.role_with_unit](../models_1_0/invalid/7.4.3.1.role_with_unit.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: unit```
+* Output:
+  * ```Error on line 11: Element role has extra content: unit```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_units](../models_1_0/invalid/7.4.3.1.role_with_units.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: units```
+* Output:
+  * ```Error on line 11: Element role has extra content: units```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_variable](../models_1_0/invalid/7.4.3.1.role_with_variable.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: variable```
+* Output:
+  * ```Error on line 11: Element role has extra content: variable```
+  * ```Error on line 10: Element role failed to validate attributes```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element variable_ref failed to validate content```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[7.4.3.1.role_with_variable_ref](../models_1_0/invalid/7.4.3.1.role_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```Element role has extra content: variable_ref```
+* Output:
+  * ```Error on line 12: Element role has extra content: variable_ref```
+  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element variable_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -3623,13 +3623,13 @@ Results per category
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
 * Expected: ```Element role failed to validate attributes```
 * Output:
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element role failed to validate content```
+  * ```Error on line 10: Element role failed to validate attributes```
   * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element role failed to validate content```
-  * ```Error on line 9: Element role failed to validate attributes```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element variable_ref failed to validate content```
+  * ```Error on line 9: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 5: Element model failed to validate content```
+  * ```Error on line 6: Element model failed to validate content```
 
 
 ---
@@ -3641,35 +3641,35 @@ Results per category
 [7.4.3.3.role_rate_with_delta_variable](../models_1_0/invalid/7.4.3.3.role_rate_with_delta_variable.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
+  * ```Error on line 24: Invalid sequence in interleave```
+  * ```Error on line 24: Expecting an element math, got nothing```
+  * ```Error on line 24: Invalid attribute delta_variable for element role```
   * ```Error on line 23: Invalid sequence in interleave```
-  * ```Error on line 23: Expecting an element math, got nothing```
-  * ```Error on line 23: Invalid attribute delta_variable for element role```
-  * ```Error on line 22: Invalid sequence in interleave```
-  * ```Error on line 22: Element variable_ref failed to validate content```
+  * ```Error on line 23: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.3.role_rate_with_multiple_roles](../models_1_0/invalid/7.4.3.3.role_rate_with_multiple_roles.cellml): Error detected correctly.
 * Expected: ```Extra element role```
 * Output:
   * ```Error on line 0: Extra element role in interleave```
-  * ```Error on line 31: Element variable_ref failed to validate content```
+  * ```Error on line 32: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
-  * ```Error on line 21: Element reaction failed to validate content```
+  * ```Error on line 22: Element reaction failed to validate content```
   * ```Error on line 0: Extra element reaction in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): Error detected correctly.
 * Expected: ```Invalid attribute stoichiometry for element role```
 * Output:
+  * ```Error on line 23: Invalid sequence in interleave```
+  * ```Error on line 23: Element role failed to validate content```
+  * ```Error on line 23: Invalid attribute stoichiometry for element role```
   * ```Error on line 22: Invalid sequence in interleave```
-  * ```Error on line 22: Element role failed to validate content```
-  * ```Error on line 22: Invalid attribute stoichiometry for element role```
-  * ```Error on line 21: Invalid sequence in interleave```
-  * ```Error on line 21: Element variable_ref failed to validate content```
+  * ```Error on line 22: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -3679,13 +3679,13 @@ Results per category
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
-  * ```Error on line 23: Invalid attribute direction for element role```
-  * ```Error on line 23: Element role failed to validate attributes```
-  * ```Error on line 22: Invalid sequence in interleave```
-  * ```Error on line 22: Element variable_ref failed to validate content```
+  * ```Error on line 24: Invalid attribute direction for element role```
+  * ```Error on line 24: Element role failed to validate attributes```
+  * ```Error on line 23: Invalid sequence in interleave```
+  * ```Error on line 23: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -3697,70 +3697,70 @@ Results per category
 [7.4.3.5.role_direction_both_product](../models_1_0/invalid/7.4.3.5.role_direction_both_product.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
-  * ```Error on line 19: Invalid attribute direction for element role```
-  * ```Error on line 19: Element role failed to validate attributes```
-  * ```Error on line 18: Invalid sequence in interleave```
-  * ```Error on line 18: Element variable_ref failed to validate content```
+  * ```Error on line 20: Invalid attribute direction for element role```
+  * ```Error on line 20: Element role failed to validate attributes```
+  * ```Error on line 19: Invalid sequence in interleave```
+  * ```Error on line 19: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.5.role_direction_both_rate](../models_1_0/invalid/7.4.3.5.role_direction_both_rate.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
+  * ```Error on line 23: Invalid sequence in interleave```
+  * ```Error on line 23: Element role failed to validate content```
+  * ```Error on line 23: Invalid attribute direction for element role```
   * ```Error on line 22: Invalid sequence in interleave```
-  * ```Error on line 22: Element role failed to validate content```
-  * ```Error on line 22: Invalid attribute direction for element role```
-  * ```Error on line 21: Invalid sequence in interleave```
-  * ```Error on line 21: Element variable_ref failed to validate content```
+  * ```Error on line 22: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.5.role_direction_both_reactant](../models_1_0/invalid/7.4.3.5.role_direction_both_reactant.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
-  * ```Error on line 16: Invalid attribute direction for element role```
-  * ```Error on line 16: Element role failed to validate attributes```
-  * ```Error on line 15: Invalid sequence in interleave```
-  * ```Error on line 15: Element variable_ref failed to validate content```
+  * ```Error on line 17: Invalid attribute direction for element role```
+  * ```Error on line 17: Element role failed to validate attributes```
+  * ```Error on line 16: Invalid sequence in interleave```
+  * ```Error on line 16: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 🔵 [7.4.3.5.role_direction_reverse_irreversible](../models_1_0/invalid/7.4.3.5.role_direction_reverse_irreversible.cellml): **Error not detected.**
 
 [7.4.3.5.role_direction_reverse_product](../models_1_0/invalid/7.4.3.5.role_direction_reverse_product.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
-  * ```Error on line 19: Invalid attribute direction for element role```
-  * ```Error on line 19: Element role failed to validate attributes```
-  * ```Error on line 18: Invalid sequence in interleave```
-  * ```Error on line 18: Element variable_ref failed to validate content```
+  * ```Error on line 20: Invalid attribute direction for element role```
+  * ```Error on line 20: Element role failed to validate attributes```
+  * ```Error on line 19: Invalid sequence in interleave```
+  * ```Error on line 19: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.5.role_direction_reverse_rate](../models_1_0/invalid/7.4.3.5.role_direction_reverse_rate.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
+  * ```Error on line 23: Invalid sequence in interleave```
+  * ```Error on line 23: Element role failed to validate content```
+  * ```Error on line 23: Invalid attribute direction for element role```
   * ```Error on line 22: Invalid sequence in interleave```
-  * ```Error on line 22: Element role failed to validate content```
-  * ```Error on line 22: Invalid attribute direction for element role```
-  * ```Error on line 21: Invalid sequence in interleave```
-  * ```Error on line 21: Element variable_ref failed to validate content```
+  * ```Error on line 22: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.5.role_direction_reverse_reactant](../models_1_0/invalid/7.4.3.5.role_direction_reverse_reactant.cellml): Error detected correctly.
 * Expected: ```Invalid attribute direction for element role```
 * Output:
-  * ```Error on line 16: Invalid attribute direction for element role```
-  * ```Error on line 16: Element role failed to validate attributes```
-  * ```Error on line 15: Invalid sequence in interleave```
-  * ```Error on line 15: Element variable_ref failed to validate content```
+  * ```Error on line 17: Invalid attribute direction for element role```
+  * ```Error on line 17: Element role failed to validate attributes```
+  * ```Error on line 16: Invalid sequence in interleave```
+  * ```Error on line 16: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 🔵 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): **Error not detected.**
 
@@ -3772,13 +3772,13 @@ Results per category
 🔶 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```Invalid attribute stoichiometry for element role```
 * Output:
-  * ```Error on line 14: Invalid attribute delta_variable for element role```
-  * ```Error on line 14: Element role failed to validate attributes```
+  * ```Error on line 15: Invalid attribute delta_variable for element role```
+  * ```Error on line 15: Element role failed to validate attributes```
+  * ```Error on line 14: Invalid sequence in interleave```
+  * ```Error on line 14: Element variable_ref failed to validate content```
   * ```Error on line 13: Invalid sequence in interleave```
-  * ```Error on line 13: Element variable_ref failed to validate content```
-  * ```Error on line 12: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -3788,46 +3788,46 @@ Results per category
 [7.4.3.7.role_delta_variable_duplicate_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_1.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 14: Invalid attribute delta_variable for element role```
-  * ```Error on line 14: Element role failed to validate attributes```
+  * ```Error on line 15: Invalid attribute delta_variable for element role```
+  * ```Error on line 15: Element role failed to validate attributes```
+  * ```Error on line 14: Invalid sequence in interleave```
+  * ```Error on line 14: Element variable_ref failed to validate content```
   * ```Error on line 13: Invalid sequence in interleave```
-  * ```Error on line 13: Element variable_ref failed to validate content```
-  * ```Error on line 12: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.7.role_delta_variable_duplicate_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_2.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
+  * ```Error on line 15: Invalid attribute delta_variable for element role```
+  * ```Error on line 15: Element role failed to validate attributes```
+  * ```Error on line 14: Invalid sequence in interleave```
+  * ```Error on line 14: Element variable_ref failed to validate content```
+  * ```Error on line 13: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[7.4.3.7.role_delta_variable_nonexistent_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_1.cellml): Error detected correctly.
+* Expected: ```Invalid attribute delta_variable```
+* Output:
   * ```Error on line 14: Invalid attribute delta_variable for element role```
   * ```Error on line 14: Element role failed to validate attributes```
   * ```Error on line 13: Invalid sequence in interleave```
   * ```Error on line 13: Element variable_ref failed to validate content```
   * ```Error on line 12: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
-
-[7.4.3.7.role_delta_variable_nonexistent_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_1.cellml): Error detected correctly.
-* Expected: ```Invalid attribute delta_variable```
-* Output:
-  * ```Error on line 13: Invalid attribute delta_variable for element role```
-  * ```Error on line 13: Element role failed to validate attributes```
-  * ```Error on line 12: Invalid sequence in interleave```
-  * ```Error on line 12: Element variable_ref failed to validate content```
-  * ```Error on line 11: Invalid sequence in interleave```
-  * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 13: Invalid attribute delta_variable for element role```
-  * ```Error on line 13: Element role failed to validate attributes```
+  * ```Error on line 14: Invalid attribute delta_variable for element role```
+  * ```Error on line 14: Element role failed to validate attributes```
+  * ```Error on line 13: Invalid sequence in interleave```
+  * ```Error on line 13: Element variable_ref failed to validate content```
   * ```Error on line 12: Invalid sequence in interleave```
-  * ```Error on line 12: Element variable_ref failed to validate content```
-  * ```Error on line 11: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -3837,46 +3837,46 @@ Results per category
 [7.4.3.8.role_delta_variable_activator](../models_1_0/invalid/7.4.3.8.role_delta_variable_activator.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 24: Invalid attribute delta_variable for element role```
-  * ```Error on line 24: Element role failed to validate attributes```
-  * ```Error on line 23: Invalid sequence in interleave```
-  * ```Error on line 23: Element variable_ref failed to validate content```
+  * ```Error on line 25: Invalid attribute delta_variable for element role```
+  * ```Error on line 25: Element role failed to validate attributes```
+  * ```Error on line 24: Invalid sequence in interleave```
+  * ```Error on line 24: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.8.role_delta_variable_catalyst](../models_1_0/invalid/7.4.3.8.role_delta_variable_catalyst.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 24: Invalid attribute delta_variable for element role```
-  * ```Error on line 24: Element role failed to validate attributes```
-  * ```Error on line 23: Invalid sequence in interleave```
-  * ```Error on line 23: Element variable_ref failed to validate content```
+  * ```Error on line 25: Invalid attribute delta_variable for element role```
+  * ```Error on line 25: Element role failed to validate attributes```
+  * ```Error on line 24: Invalid sequence in interleave```
+  * ```Error on line 24: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.8.role_delta_variable_inhibitor](../models_1_0/invalid/7.4.3.8.role_delta_variable_inhibitor.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 24: Invalid attribute delta_variable for element role```
-  * ```Error on line 24: Element role failed to validate attributes```
-  * ```Error on line 23: Invalid sequence in interleave```
-  * ```Error on line 23: Element variable_ref failed to validate content```
+  * ```Error on line 25: Invalid attribute delta_variable for element role```
+  * ```Error on line 25: Element role failed to validate attributes```
+  * ```Error on line 24: Invalid sequence in interleave```
+  * ```Error on line 24: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [7.4.3.8.role_delta_variable_modifier](../models_1_0/invalid/7.4.3.8.role_delta_variable_modifier.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 24: Invalid attribute delta_variable for element role```
-  * ```Error on line 24: Element role failed to validate attributes```
-  * ```Error on line 23: Invalid sequence in interleave```
-  * ```Error on line 23: Element variable_ref failed to validate content```
+  * ```Error on line 25: Invalid attribute delta_variable for element role```
+  * ```Error on line 25: Element role failed to validate attributes```
+  * ```Error on line 24: Invalid sequence in interleave```
+  * ```Error on line 24: Element variable_ref failed to validate content```
   * ```Error on line 0: Extra element variable_ref in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 🔵 [7.4.3.8.role_delta_variable_with_rate_and_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_with_rate_and_math.cellml): **Error not detected.**
 
@@ -3885,13 +3885,13 @@ Results per category
 [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): Error detected correctly.
 * Expected: ```Invalid attribute delta_variable```
 * Output:
-  * ```Error on line 14: Invalid attribute delta_variable for element role```
-  * ```Error on line 14: Element role failed to validate attributes```
+  * ```Error on line 15: Invalid attribute delta_variable for element role```
+  * ```Error on line 15: Element role failed to validate attributes```
+  * ```Error on line 14: Invalid sequence in interleave```
+  * ```Error on line 14: Element variable_ref failed to validate content```
   * ```Error on line 13: Invalid sequence in interleave```
-  * ```Error on line 13: Element variable_ref failed to validate content```
-  * ```Error on line 12: Invalid sequence in interleave```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -3921,11 +3921,11 @@ Results per category
 [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
 * Expected: ```Invalid attribute id for element component_ref```
 * Output:
-  * ```Error on line 10: Invalid attribute id for element component_ref```
-  * ```Error on line 8: Invalid sequence in interleave```
-  * ```Error on line 8: Element group failed to validate content```
+  * ```Error on line 11: Invalid attribute id for element component_ref```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element group failed to validate content```
   * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 8: Element model failed to validate content```
+  * ```Error on line 9: Element model failed to validate content```
 
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed validation.
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 7.4.3.3: A reaction can only have a single rate -->
 <model name="reaction_multiple_rates"
        xmlns="http://www.cellml.org/cellml/1.0#"

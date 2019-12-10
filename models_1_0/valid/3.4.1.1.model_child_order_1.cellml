@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 3.4.1.1: A model's children have no fixed order. Although
                           units, component, group, connection is preferred. -->
 <model name="model_child_order_1"

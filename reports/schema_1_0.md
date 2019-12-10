@@ -39,19 +39,19 @@ Results per category
 
 [0.0.root_node_namespace_wrong](../models_1_0/invalid/0.0.root_node_namespace_wrong.cellml): Error detected correctly.
 * Expected: ```No matching global declaration available for the validation root```
-* Output: ```Error on line 4: Element '{http://www.wellml.org/wellml/1.0#}model': No matching global declaration available for the validation root.```
+* Output: ```Error on line 5: Element '{http://www.wellml.org/wellml/1.0#}model': No matching global declaration available for the validation root.```
 
 [0.0.root_node_not_model](../models_1_0/invalid/0.0.root_node_not_model.cellml): Error detected correctly.
 * Expected: ```No matching global declaration available for the validation root```
-* Output: ```Error on line 4: Element 'cellml:component': No matching global declaration available for the validation root.```
+* Output: ```Error on line 5: Element 'cellml:component': No matching global declaration available for the validation root.```
 
 [0.0.root_node_two_elements](../models_1_0/invalid/0.0.root_node_two_elements.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_elements.cellml, line 5)```
+* Output: ```Extra content at the end of the document, line 6, column 1 (0.0.root_node_two_elements.cellml, line 6)```
 
 [0.0.root_node_two_models](../models_1_0/invalid/0.0.root_node_two_models.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output: ```Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
+* Output: ```Extra content at the end of the document, line 6, column 1 (0.0.root_node_two_models.cellml, line 6)```
 
 
 ---
@@ -61,38 +61,38 @@ Results per category
 [0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [0.1.real_number_invalid_2](../models_1_0/invalid/0.1.real_number_invalid_2.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1e12e12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '1e12e12' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1e12e12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1e12e12' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [0.1.real_number_invalid_3](../models_1_0/invalid/0.1.real_number_invalid_3.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1f12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '1f12' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1f12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1f12' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [0.1.real_number_invalid_4](../models_1_0/invalid/0.1.real_number_invalid_4.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '--1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '--1' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '--1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '--1' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '++1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '++1' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '++1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '++1' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'hello' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': 'hello' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'hello' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': 'hello' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -117,42 +117,42 @@ Results per category
 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': '' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': '' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [2.4.1.identifier_only_underscore](../models_1_0/invalid/2.4.1.identifier_only_underscore.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [2.4.1.identifier_unexpected_character_1](../models_1_0/invalid/2.4.1.identifier_unexpected_character_1.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'Hello World' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': 'Hello World' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'Hello World' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': 'Hello World' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'HelloJosé' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': 'HelloJosé' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'HelloJosé' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': 'HelloJosé' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'Hello🥃' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': 'Hello🥃' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'Hello🥃' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': 'Hello🥃' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
 
@@ -163,15 +163,15 @@ Results per category
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
 * Expected: ```The attribute 'fruit' is not allowed```
-* Output: ```Error on line 6: Element 'cellml:model', attribute 'fruit': The attribute 'fruit' is not allowed.```
+* Output: ```Error on line 7: Element 'cellml:model', attribute 'fruit': The attribute 'fruit' is not allowed.```
 
 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): Error detected correctly.
 * Expected: ```The attribute 'cellml:fruit' is not allowed```
-* Output: ```Error on line 7: Element 'cellml:model', attribute 'cellml:fruit': The attribute 'cellml:fruit' is not allowed.```
+* Output: ```Error on line 8: Element 'cellml:model', attribute 'cellml:fruit': The attribute 'cellml:fruit' is not allowed.```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:fruit': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:fruit': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:fruit': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 
 ---
@@ -225,63 +225,63 @@ Results per category
 
 [2.4.4.text_in_component](../models_1_0/invalid/2.4.4.text_in_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': Character content other than white```
-* Output: ```Error on line 5: Element 'cellml:component': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 6: Element 'cellml:component': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_component_ref](../models_1_0/invalid/2.4.4.text_in_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': Character content other than white```
-* Output: ```Error on line 10: Element 'cellml:component_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 11: Element 'cellml:component_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_connection](../models_1_0/invalid/2.4.4.text_in_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': Character content other than white```
-* Output: ```Error on line 11: Element 'cellml:connection': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 12: Element 'cellml:connection': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_group](../models_1_0/invalid/2.4.4.text_in_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': Character content other than white```
-* Output: ```Error on line 7: Element 'cellml:group': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 8: Element 'cellml:group': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_map_components](../models_1_0/invalid/2.4.4.text_in_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': Character content other than white```
-* Output: ```Error on line 6: Element 'cellml:map_components': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 7: Element 'cellml:map_components': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_map_variables](../models_1_0/invalid/2.4.4.text_in_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': Character content other than white```
-* Output: ```Error on line 13: Element 'cellml:map_variables': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 14: Element 'cellml:map_variables': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_model](../models_1_0/invalid/2.4.4.text_in_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': Character content other than white```
-* Output: ```Error on line 4: Element 'cellml:model': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 5: Element 'cellml:model': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_reaction](../models_1_0/invalid/2.4.4.text_in_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': Character content other than white```
-* Output: ```Error on line 7: Element 'cellml:reaction': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 8: Element 'cellml:reaction': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_relationship_ref](../models_1_0/invalid/2.4.4.text_in_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': Character content other than```
-* Output: ```Error on line 8: Element 'cellml:relationship_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 9: Element 'cellml:relationship_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_role](../models_1_0/invalid/2.4.4.text_in_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': Character content other than white```
-* Output: ```Error on line 9: Element 'cellml:role': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 10: Element 'cellml:role': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_unit](../models_1_0/invalid/2.4.4.text_in_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': Character content other than white```
-* Output: ```Error on line 6: Element 'cellml:unit': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 7: Element 'cellml:unit': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_units_1](../models_1_0/invalid/2.4.4.text_in_units_1.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': Character content other than white```
-* Output: ```Error on line 5: Element 'cellml:units': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 6: Element 'cellml:units': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_units_2](../models_1_0/invalid/2.4.4.text_in_units_2.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': Character content other than white```
-* Output: ```Error on line 6: Element 'cellml:units': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 7: Element 'cellml:units': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_variable](../models_1_0/invalid/2.4.4.text_in_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': Character content other than white```
-* Output: ```Error on line 6: Element 'cellml:variable': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 7: Element 'cellml:variable': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 [2.4.4.text_in_variable_ref](../models_1_0/invalid/2.4.4.text_in_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': Character content other than white```
-* Output: ```Error on line 8: Element 'cellml:variable_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
+* Output: ```Error on line 9: Element 'cellml:variable_ref': Character content other than whitespace is not allowed because the content type is 'element-only'.```
 
 
 ---
@@ -290,7 +290,7 @@ Results per category
 
 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): Error detected correctly.
 * Expected: ```No match found for key-sequence```
-* Output: ```Error on line 12: Element 'cellml:map_components': No match found for key-sequence ['a'] of keyref 'cellml:connect_component_1'.```
+* Output: ```Error on line 13: Element 'cellml:map_components': No match found for key-sequence ['a'] of keyref 'cellml:connect_component_1'.```
 
 
 ---
@@ -300,8 +300,8 @@ Results per category
 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Error detected correctly.
 * Expected: ```The attribute 'cellml:name' is not allowed```
 * Output:
-  * ```Error on line 5: Element 'cellml:model', attribute 'cellml:name': The attribute 'cellml:name' is not allowed.```
-  * ```Error on line 5: Element 'cellml:model': The attribute 'name' is required but missing.```
+  * ```Error on line 6: Element 'cellml:model', attribute 'cellml:name': The attribute 'cellml:name' is not allowed.```
+  * ```Error on line 6: Element 'cellml:model': The attribute 'name' is required but missing.```
 
 
 ---
@@ -318,11 +318,11 @@ Results per category
 
 [3.4.1.1.model_name_missing](../models_1_0/invalid/3.4.1.1.model_name_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': The attribute 'name' is required```
-* Output: ```Error on line 3: Element 'cellml:model': The attribute 'name' is required but missing.```
+* Output: ```Error on line 4: Element 'cellml:model': The attribute 'name' is required but missing.```
 
 [3.4.1.1.model_with_component_ref](../models_1_0/invalid/3.4.1.1.model_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:component_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:component_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 [3.4.1.1.model_with_components](../models_1_0/valid/3.4.1.1.model_with_components.cellml): Valid file passed validation.
 
@@ -332,17 +332,17 @@ Results per category
 
 [3.4.1.1.model_with_map_components](../models_1_0/invalid/3.4.1.1.model_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_components': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:map_components': This element is not expected.```
 
 [3.4.1.1.model_with_map_variables](../models_1_0/invalid/3.4.1.1.model_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:map_variables': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:map_variables': This element is not expected.```
 
 🔵 [3.4.1.1.model_with_math](../models_1_0/invalid/3.4.1.1.model_with_math.cellml): **Error not detected.**
 
 [3.4.1.1.model_with_model](../models_1_0/invalid/3.4.1.1.model_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:model': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:model': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 [3.4.1.1.model_with_one_component](../models_1_0/valid/3.4.1.1.model_with_one_component.cellml): Valid file passed validation.
 
@@ -354,29 +354,29 @@ Results per category
 
 [3.4.1.1.model_with_reaction](../models_1_0/invalid/3.4.1.1.model_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 9: Element 'cellml:reaction': This element is not expected.```
 
 [3.4.1.1.model_with_relationship_ref](../models_1_0/invalid/3.4.1.1.model_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:relationship_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:relationship_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 [3.4.1.1.model_with_role](../models_1_0/invalid/3.4.1.1.model_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:role': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:role': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 [3.4.1.1.model_with_unit](../models_1_0/invalid/3.4.1.1.model_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:unit': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:unit': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 [3.4.1.1.model_with_units](../models_1_0/valid/3.4.1.1.model_with_units.cellml): Valid file passed validation.
 
 [3.4.1.1.model_with_variable](../models_1_0/invalid/3.4.1.1.model_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:variable': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:variable': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 [3.4.1.1.model_with_variable_ref](../models_1_0/invalid/3.4.1.1.model_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 5: Element 'cellml:variable_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:variable_ref': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 
 ---
@@ -386,8 +386,8 @@ Results per category
 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 3: Element 'cellml:model', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 3: Element 'cellml:model', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 4: Element 'cellml:model', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 4: Element 'cellml:model', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
 
 
 ---
@@ -403,38 +403,38 @@ Results per category
 [3.4.2.1.component_name_missing](../models_1_0/invalid/3.4.2.1.component_name_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': The attribute 'name' is required```
 * Output:
-  * ```Error on line 5: Element 'cellml:component': The attribute 'name' is required but missing.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component': The attribute 'name' is required but missing.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [3.4.2.1.component_with_component](../models_1_0/invalid/3.4.2.1.component_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:component': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:component': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_component_ref](../models_1_0/invalid/3.4.2.1.component_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:component_ref': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:component_ref': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_connection](../models_1_0/invalid/3.4.2.1.component_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:connection': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 13: Element 'cellml:connection': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_group](../models_1_0/invalid/3.4.2.1.component_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:group': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:group': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_map_components](../models_1_0/invalid/3.4.2.1.component_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:map_components': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:map_components': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_map_variables](../models_1_0/invalid/3.4.2.1.component_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:map_variables': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:map_variables': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_maths](../models_1_0/valid/3.4.2.1.component_with_maths.cellml): Valid file passed validation.
 
 [3.4.2.1.component_with_model](../models_1_0/invalid/3.4.2.1.component_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:model': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:model': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_one_math](../models_1_0/valid/3.4.2.1.component_with_one_math.cellml): Valid file passed validation.
 
@@ -448,21 +448,21 @@ Results per category
 
 [3.4.2.1.component_with_relationship_ref](../models_1_0/invalid/3.4.2.1.component_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:relationship_ref': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:relationship_ref': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_role](../models_1_0/invalid/3.4.2.1.component_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:role': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:role': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_unit](../models_1_0/invalid/3.4.2.1.component_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:unit': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:unit': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_units](../models_1_0/valid/3.4.2.1.component_with_units.cellml): Valid file passed validation.
 
 [3.4.2.1.component_with_variable_ref](../models_1_0/invalid/3.4.2.1.component_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 6: Element 'cellml:variable_ref': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
+* Output: ```Error on line 7: Element 'cellml:variable_ref': This element is not expected. Expected is one of ( cellml:units, cellml:variable, cellml:reaction, ##othercellml:* ).```
 
 [3.4.2.1.component_with_variables](../models_1_0/valid/3.4.2.1.component_with_variables.cellml): Valid file passed validation.
 
@@ -473,15 +473,15 @@ Results per category
 
 [3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): Error detected correctly.
 * Expected: ```Duplicate key-sequence ['c1']```
-* Output: ```Error on line 6: Element 'cellml:component': Duplicate key-sequence ['c1'] in key identity-constraint 'cellml:component_name'.```
+* Output: ```Error on line 7: Element 'cellml:component': Duplicate key-sequence ['c1'] in key identity-constraint 'cellml:component_name'.```
 
 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 5: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 
 ---
@@ -491,28 +491,28 @@ Results per category
 [3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
 * Expected: ```The attribute 'name' is required but missing```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable': The attribute 'name' is required but missing.```
-  * ```Error on line 6: Element 'cellml:variable': Not all fields of key identity-constraint 'cellml:variable_name' evaluate to a node.```
+  * ```Error on line 7: Element 'cellml:variable': The attribute 'name' is required but missing.```
+  * ```Error on line 7: Element 'cellml:variable': Not all fields of key identity-constraint 'cellml:variable_name' evaluate to a node.```
 
 [3.4.3.1.variable_units_missing](../models_1_0/invalid/3.4.3.1.variable_units_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': The attribute 'units' is required```
-* Output: ```Error on line 6: Element 'cellml:variable': The attribute 'units' is required but missing.```
+* Output: ```Error on line 7: Element 'cellml:variable': The attribute 'units' is required but missing.```
 
 [3.4.3.1.variable_with_component](../models_1_0/invalid/3.4.3.1.variable_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 14: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_initial_value](../models_1_0/valid/3.4.3.1.variable_with_initial_value.cellml): Valid file passed validation.
 
@@ -520,45 +520,45 @@ Results per category
 
 [3.4.3.1.variable_with_map_components](../models_1_0/invalid/3.4.3.1.variable_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
 
 🔵 [3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): **Error not detected.**
 
 [3.4.3.1.variable_with_model](../models_1_0/invalid/3.4.3.1.variable_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_reaction](../models_1_0/invalid/3.4.3.1.variable_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_relationship_ref](../models_1_0/invalid/3.4.3.1.variable_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_role](../models_1_0/invalid/3.4.3.1.variable_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_unit](../models_1_0/invalid/3.4.3.1.variable_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_units](../models_1_0/invalid/3.4.3.1.variable_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_variable](../models_1_0/invalid/3.4.3.1.variable_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_with_variable_ref](../models_1_0/invalid/3.4.3.1.variable_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.3.1.variable_without_initial_value](../models_1_0/valid/3.4.3.1.variable_without_initial_value.cellml): Valid file passed validation.
 
@@ -569,15 +569,15 @@ Results per category
 
 [3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': Duplicate key-sequence```
-* Output: ```Error on line 7: Element 'cellml:variable': Duplicate key-sequence ['x'] in key identity-constraint 'cellml:variable_name'.```
+* Output: ```Error on line 8: Element 'cellml:variable': Duplicate key-sequence ['x'] in key identity-constraint 'cellml:variable_name'.```
 
 [3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'name': [facet 'pattern'] The value 'Spaces are not allowed' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'name': 'Spaces are not allowed' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
-  * ```Error on line 6: Element 'cellml:variable': Not all fields of key identity-constraint 'cellml:variable_name' evaluate to a node.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'name': [facet 'pattern'] The value 'Spaces are not allowed' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'name': 'Spaces are not allowed' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 7: Element 'cellml:variable': Not all fields of key identity-constraint 'cellml:variable_name' evaluate to a node.```
 
 [3.4.3.2.variable_name_same_as_cousin](../models_1_0/valid/3.4.3.2.variable_name_same_as_cousin.cellml): Valid file passed validation.
 
@@ -606,8 +606,8 @@ Results per category
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'public_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'public_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'public_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'public_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
 
 
 ---
@@ -617,8 +617,8 @@ Results per category
 [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'private_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'private_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'private_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'private_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
 
 
 ---
@@ -635,14 +635,14 @@ Results per category
 [3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '' is not a valid value of the atomic type 'cellml:real_number'.```
 
 [3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
 ---
@@ -660,7 +660,7 @@ Results per category
 
 [3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': Missing child element(s).```
-* Output: ```Error on line 5: Element 'cellml:connection': Missing child element(s). Expected is one of ( cellml:map_variables, cellml:map_components, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:connection': Missing child element(s). Expected is one of ( cellml:map_variables, cellml:map_components, ##othercellml:* ).```
 
 🔵 [3.4.4.1.connection_map_components_missing](../models_1_0/invalid/3.4.4.1.connection_map_components_missing.cellml): **Error not detected.**
 
@@ -674,19 +674,19 @@ Results per category
 
 [3.4.4.1.connection_with_component](../models_1_0/invalid/3.4.4.1.connection_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:component': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:component': This element is not expected.```
 
 [3.4.4.1.connection_with_component_ref](../models_1_0/invalid/3.4.4.1.connection_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:component_ref': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:component_ref': This element is not expected.```
 
 [3.4.4.1.connection_with_connection](../models_1_0/invalid/3.4.4.1.connection_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 18: Element 'cellml:connection': This element is not expected.```
+* Output: ```Error on line 19: Element 'cellml:connection': This element is not expected.```
 
 [3.4.4.1.connection_with_group](../models_1_0/invalid/3.4.4.1.connection_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:group': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:group': This element is not expected.```
 
 [3.4.4.1.connection_with_map_variables](../models_1_0/valid/3.4.4.1.connection_with_map_variables.cellml): Valid file passed validation.
 
@@ -694,41 +694,41 @@ Results per category
 
 [3.4.4.1.connection_with_model](../models_1_0/invalid/3.4.4.1.connection_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:model': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:model': This element is not expected.```
 
 [3.4.4.1.connection_with_name_attribute](../models_1_0/invalid/3.4.4.1.connection_with_name_attribute.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection', attribute 'name'```
-* Output: ```Error on line 11: Element 'cellml:connection', attribute 'name': The attribute 'name' is not allowed.```
+* Output: ```Error on line 12: Element 'cellml:connection', attribute 'name': The attribute 'name' is not allowed.```
 
 [3.4.4.1.connection_with_one_map_variables](../models_1_0/valid/3.4.4.1.connection_with_one_map_variables.cellml): Valid file passed validation.
 
 [3.4.4.1.connection_with_reaction](../models_1_0/invalid/3.4.4.1.connection_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:reaction': This element is not expected.```
 
 [3.4.4.1.connection_with_relationship_ref](../models_1_0/invalid/3.4.4.1.connection_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:relationship_ref': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:relationship_ref': This element is not expected.```
 
 [3.4.4.1.connection_with_role](../models_1_0/invalid/3.4.4.1.connection_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:role': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:role': This element is not expected.```
 
 [3.4.4.1.connection_with_unit](../models_1_0/invalid/3.4.4.1.connection_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:unit': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:unit': This element is not expected.```
 
 [3.4.4.1.connection_with_units](../models_1_0/invalid/3.4.4.1.connection_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:units': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:units': This element is not expected.```
 
 [3.4.4.1.connection_with_variable](../models_1_0/invalid/3.4.4.1.connection_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:variable': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:variable': This element is not expected.```
 
 [3.4.4.1.connection_with_variable_ref](../models_1_0/invalid/3.4.4.1.connection_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:variable_ref': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:variable_ref': This element is not expected.```
 
 
 ---
@@ -741,69 +741,69 @@ Results per category
 
 [3.4.5.1.map_components_component_1_missing](../models_1_0/invalid/3.4.5.1.map_components_component_1_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': The attribute 'component_1' is req```
-* Output: ```Error on line 6: Element 'cellml:map_components': The attribute 'component_1' is required but missing.```
+* Output: ```Error on line 7: Element 'cellml:map_components': The attribute 'component_1' is required but missing.```
 
 [3.4.5.1.map_components_component_2_missing](../models_1_0/invalid/3.4.5.1.map_components_component_2_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': The attribute 'component_2' is req```
-* Output: ```Error on line 6: Element 'cellml:map_components': The attribute 'component_2' is required but missing.```
+* Output: ```Error on line 7: Element 'cellml:map_components': The attribute 'component_2' is required but missing.```
 
 [3.4.5.1.map_components_with_component](../models_1_0/invalid/3.4.5.1.map_components_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
 
 🔵 [3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): **Error not detected.**
 
 [3.4.5.1.map_components_with_model](../models_1_0/invalid/3.4.5.1.map_components_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_reaction](../models_1_0/invalid/3.4.5.1.map_components_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_relationship_ref](../models_1_0/invalid/3.4.5.1.map_components_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_role](../models_1_0/invalid/3.4.5.1.map_components_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_unit](../models_1_0/invalid/3.4.5.1.map_components_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_units](../models_1_0/invalid/3.4.5.1.map_components_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_variable](../models_1_0/invalid/3.4.5.1.map_components_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.5.1.map_components_with_variable_ref](../models_1_0/invalid/3.4.5.1.map_components_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
 ---
@@ -812,7 +812,7 @@ Results per category
 
 [3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': No match found for key-sequence```
-* Output: ```Error on line 7: Element 'cellml:map_components': No match found for key-sequence ['c'] of keyref 'cellml:connect_component_1'.```
+* Output: ```Error on line 8: Element 'cellml:map_components': No match found for key-sequence ['c'] of keyref 'cellml:connect_component_1'.```
 
 
 ---
@@ -821,7 +821,7 @@ Results per category
 
 [3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': No match found for key-sequence```
-* Output: ```Error on line 7: Element 'cellml:map_components': No match found for key-sequence ['c'] of keyref 'cellml:connect_component_2'.```
+* Output: ```Error on line 8: Element 'cellml:map_components': No match found for key-sequence ['c'] of keyref 'cellml:connect_component_2'.```
 
 
 ---
@@ -832,7 +832,7 @@ Results per category
 
 [3.4.5.4.map_components_duplicate](../models_1_0/invalid/3.4.5.4.map_components_duplicate.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': Duplicate key-sequence```
-* Output: ```Error on line 10: Element 'cellml:map_components': Duplicate key-sequence ['a', 'b'] in unique identity-constraint 'cellml:map_components'.```
+* Output: ```Error on line 11: Element 'cellml:map_components': Duplicate key-sequence ['a', 'b'] in unique identity-constraint 'cellml:map_components'.```
 
 🔵 [3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): **Error not detected.**
 
@@ -843,69 +843,69 @@ Results per category
 
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': The attribute 'variable_1' is req```
-* Output: ```Error on line 13: Element 'cellml:map_variables': The attribute 'variable_1' is required but missing.```
+* Output: ```Error on line 14: Element 'cellml:map_variables': The attribute 'variable_1' is required but missing.```
 
 [3.4.6.1.map_variables_variable_2_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_2_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': The attribute 'variable_2' is req```
-* Output: ```Error on line 13: Element 'cellml:map_variables': The attribute 'variable_2' is required but missing.```
+* Output: ```Error on line 14: Element 'cellml:map_variables': The attribute 'variable_2' is required but missing.```
 
 [3.4.6.1.map_variables_with_component](../models_1_0/invalid/3.4.6.1.map_variables_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
 
 🔵 [3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): **Error not detected.**
 
 [3.4.6.1.map_variables_with_model](../models_1_0/invalid/3.4.6.1.map_variables_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_reaction](../models_1_0/invalid/3.4.6.1.map_variables_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_relationship_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_role](../models_1_0/invalid/3.4.6.1.map_variables_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_unit](../models_1_0/invalid/3.4.6.1.map_variables_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_units](../models_1_0/invalid/3.4.6.1.map_variables_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_variable](../models_1_0/invalid/3.4.6.1.map_variables_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
 ---
@@ -1112,11 +1112,11 @@ Results per category
 
 [4.4.1.math_not_math_component](../models_1_0/invalid/4.4.1.math_not_math_component.cellml): Error detected correctly.
 * Expected: ```cake': This element is not expected.```
-* Output: ```Error on line 12: Element '{http://www.w3.org/1998/Math/MathML}cake': This element is not expected. Expected is one of ( {http://www.w3.org/1998/Math/MathML}cn, {http://www.w3.org/1998/Math/MathML}ci, {http://www.w3.org/1998/Math/MathML}csymbol, {http://www.w3.org/1998/Math/MathML}abs, {http://www.w3.org/1998/Math/MathML}conjugate, {http://www.w3.org/1998/Math/MathML}factorial, {http://www.w3.org/1998/Math/MathML}arg, {http://www.w3.org/1998/Math/MathML}real, {http://www.w3.org/1998/Math/MathML}imaginary, {http://www.w3.org/1998/Math/MathML}floor ).```
+* Output: ```Error on line 13: Element '{http://www.w3.org/1998/Math/MathML}cake': This element is not expected. Expected is one of ( {http://www.w3.org/1998/Math/MathML}cn, {http://www.w3.org/1998/Math/MathML}ci, {http://www.w3.org/1998/Math/MathML}csymbol, {http://www.w3.org/1998/Math/MathML}abs, {http://www.w3.org/1998/Math/MathML}conjugate, {http://www.w3.org/1998/Math/MathML}factorial, {http://www.w3.org/1998/Math/MathML}arg, {http://www.w3.org/1998/Math/MathML}real, {http://www.w3.org/1998/Math/MathML}imaginary, {http://www.w3.org/1998/Math/MathML}floor ).```
 
 [4.4.1.math_not_math_reaction](../models_1_0/invalid/4.4.1.math_not_math_reaction.cellml): Error detected correctly.
 * Expected: ```cake': This element is not expected.```
-* Output: ```Error on line 15: Element '{http://www.w3.org/1998/Math/MathML}cake': This element is not expected. Expected is one of ( {http://www.w3.org/1998/Math/MathML}cn, {http://www.w3.org/1998/Math/MathML}ci, {http://www.w3.org/1998/Math/MathML}csymbol, {http://www.w3.org/1998/Math/MathML}abs, {http://www.w3.org/1998/Math/MathML}conjugate, {http://www.w3.org/1998/Math/MathML}factorial, {http://www.w3.org/1998/Math/MathML}arg, {http://www.w3.org/1998/Math/MathML}real, {http://www.w3.org/1998/Math/MathML}imaginary, {http://www.w3.org/1998/Math/MathML}floor ).```
+* Output: ```Error on line 16: Element '{http://www.w3.org/1998/Math/MathML}cake': This element is not expected. Expected is one of ( {http://www.w3.org/1998/Math/MathML}cn, {http://www.w3.org/1998/Math/MathML}ci, {http://www.w3.org/1998/Math/MathML}csymbol, {http://www.w3.org/1998/Math/MathML}abs, {http://www.w3.org/1998/Math/MathML}conjugate, {http://www.w3.org/1998/Math/MathML}factorial, {http://www.w3.org/1998/Math/MathML}arg, {http://www.w3.org/1998/Math/MathML}real, {http://www.w3.org/1998/Math/MathML}imaginary, {http://www.w3.org/1998/Math/MathML}floor ).```
 
 
 ---
@@ -1213,7 +1213,7 @@ Results per category
 
 [5.2.2.unit_deca](../models_1_0/unit_deca/5.2.2.unit_deca.cellml): Error detected correctly.
 * Expected: ```'deca' is not a valid value of the union type 'cellml:unit_prefix'```
-* Output: ```Error on line 9: Element 'cellml:unit', attribute 'prefix': 'deca' is not a valid value of the union type 'cellml:unit_prefix'.```
+* Output: ```Error on line 10: Element 'cellml:unit', attribute 'prefix': 'deca' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 
 ---
@@ -1289,63 +1289,63 @@ Results per category
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': The attribute 'name' is required```
-* Output: ```Error on line 5: Element 'cellml:units': The attribute 'name' is required but missing.```
+* Output: ```Error on line 6: Element 'cellml:units': The attribute 'name' is required but missing.```
 
 [5.4.1.1.units_with_component](../models_1_0/invalid/5.4.1.1.units_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:component': This element is not expected.```
 
 [5.4.1.1.units_with_component_ref](../models_1_0/invalid/5.4.1.1.units_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component_ref': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:component_ref': This element is not expected.```
 
 [5.4.1.1.units_with_connection](../models_1_0/invalid/5.4.1.1.units_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:connection': This element is not expected.```
+* Output: ```Error on line 14: Element 'cellml:connection': This element is not expected.```
 
 [5.4.1.1.units_with_group](../models_1_0/invalid/5.4.1.1.units_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:group': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:group': This element is not expected.```
 
 [5.4.1.1.units_with_map_components](../models_1_0/invalid/5.4.1.1.units_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_components': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:map_components': This element is not expected.```
 
 [5.4.1.1.units_with_map_variables](../models_1_0/invalid/5.4.1.1.units_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_variables': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:map_variables': This element is not expected.```
 
 🔵 [5.4.1.1.units_with_math](../models_1_0/invalid/5.4.1.1.units_with_math.cellml): **Error not detected.**
 
 [5.4.1.1.units_with_model](../models_1_0/invalid/5.4.1.1.units_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:model': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:model': This element is not expected.```
 
 [5.4.1.1.units_with_reaction](../models_1_0/invalid/5.4.1.1.units_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 9: Element 'cellml:reaction': This element is not expected.```
 
 [5.4.1.1.units_with_relationship_ref](../models_1_0/invalid/5.4.1.1.units_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:relationship_ref': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:relationship_ref': This element is not expected.```
 
 [5.4.1.1.units_with_role](../models_1_0/invalid/5.4.1.1.units_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:role': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:role': This element is not expected.```
 
 [5.4.1.1.units_with_unit_children](../models_1_0/valid/5.4.1.1.units_with_unit_children.cellml): Valid file passed validation.
 
 [5.4.1.1.units_with_units](../models_1_0/invalid/5.4.1.1.units_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:units': This element is not expected.```
+* Output: ```Error on line 8: Element 'cellml:units': This element is not expected.```
 
 [5.4.1.1.units_with_variable](../models_1_0/invalid/5.4.1.1.units_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:variable': This element is not expected.```
+* Output: ```Error on line 9: Element 'cellml:variable': This element is not expected.```
 
 [5.4.1.1.units_with_variable_ref](../models_1_0/invalid/5.4.1.1.units_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:variable_ref': This element is not expected.```
+* Output: ```Error on line 10: Element 'cellml:variable_ref': This element is not expected.```
 
 
 ---
@@ -1354,18 +1354,18 @@ Results per category
 
 [5.4.1.2.units_name_duplicate_1](../models_1_0/invalid/5.4.1.2.units_name_duplicate_1.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': Duplicate key-sequence```
-* Output: ```Error on line 8: Element 'cellml:units': Duplicate key-sequence ['wooster'] in unique identity-constraint 'cellml:units_name'.```
+* Output: ```Error on line 9: Element 'cellml:units': Duplicate key-sequence ['wooster'] in unique identity-constraint 'cellml:units_name'.```
 
 [5.4.1.2.units_name_duplicate_2](../models_1_0/invalid/5.4.1.2.units_name_duplicate_2.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': Duplicate key-sequence```
-* Output: ```Error on line 9: Element 'cellml:units': Duplicate key-sequence ['wooster'] in unique identity-constraint 'cellml:component_units_name'.```
+* Output: ```Error on line 10: Element 'cellml:units': Duplicate key-sequence ['wooster'] in unique identity-constraint 'cellml:component_units_name'.```
 
 [5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 5: Element 'cellml:units', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 5: Element 'cellml:units', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 5: Element 'cellml:units', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:units', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 6: Element 'cellml:units', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 6: Element 'cellml:units', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
 🔵 [5.4.1.2.units_name_predefined_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_ampere.cellml): **Error not detected.**
 
@@ -1451,8 +1451,8 @@ Results per category
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
 * Output:
-  * ```Error on line 5: Element 'cellml:units', attribute 'base_units': [facet 'enumeration'] The value 'certainly' is not an element of the set {'yes', 'no'}.```
-  * ```Error on line 5: Element 'cellml:units', attribute 'base_units': 'certainly' is not a valid value of the atomic type 'cellml:yes_no'.```
+  * ```Error on line 6: Element 'cellml:units', attribute 'base_units': [facet 'enumeration'] The value 'certainly' is not an element of the set {'yes', 'no'}.```
+  * ```Error on line 6: Element 'cellml:units', attribute 'base_units': 'certainly' is not a valid value of the atomic type 'cellml:yes_no'.```
 
 
 ---
@@ -1467,65 +1467,65 @@ Results per category
 
 [5.4.2.1.unit_units_missing](../models_1_0/invalid/5.4.2.1.unit_units_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': The attribute 'units' is required```
-* Output: ```Error on line 6: Element 'cellml:unit': The attribute 'units' is required but missing.```
+* Output: ```Error on line 7: Element 'cellml:unit': The attribute 'units' is required but missing.```
 
 [5.4.2.1.unit_with_component](../models_1_0/invalid/5.4.2.1.unit_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_component_ref](../models_1_0/invalid/5.4.2.1.unit_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_connection](../models_1_0/invalid/5.4.2.1.unit_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_group](../models_1_0/invalid/5.4.2.1.unit_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_map_components](../models_1_0/invalid/5.4.2.1.unit_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_map_variables](../models_1_0/invalid/5.4.2.1.unit_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
 
 🔵 [5.4.2.1.unit_with_math](../models_1_0/invalid/5.4.2.1.unit_with_math.cellml): **Error not detected.**
 
 [5.4.2.1.unit_with_model](../models_1_0/invalid/5.4.2.1.unit_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_reaction](../models_1_0/invalid/5.4.2.1.unit_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_relationship_ref](../models_1_0/invalid/5.4.2.1.unit_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_role](../models_1_0/invalid/5.4.2.1.unit_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_unit](../models_1_0/invalid/5.4.2.1.unit_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_units](../models_1_0/invalid/5.4.2.1.unit_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 7: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_variable](../models_1_0/invalid/5.4.2.1.unit_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 8: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [5.4.2.1.unit_with_variable_ref](../models_1_0/invalid/5.4.2.1.unit_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
 ---
@@ -1555,19 +1555,19 @@ Results per category
 
 [5.4.2.3.unit_prefix_real](../models_1_0/invalid/5.4.2.3.unit_prefix_real.cellml): Error detected correctly.
 * Expected: ```not a valid value of the union type 'cellml:unit_prefix'```
-* Output: ```Error on line 6: Element 'cellml:unit', attribute 'prefix': '1.1' is not a valid value of the union type 'cellml:unit_prefix'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'prefix': '1.1' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): Error detected correctly.
 * Expected: ```not a valid value of the union type 'cellml:unit_prefix'```
-* Output: ```Error on line 6: Element 'cellml:unit', attribute 'prefix': '1.0' is not a valid value of the union type 'cellml:unit_prefix'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'prefix': '1.0' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 [5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): Error detected correctly.
 * Expected: ```not a valid value of the union type 'cellml:unit_prefix'```
-* Output: ```Error on line 6: Element 'cellml:unit', attribute 'prefix': ' yotta ' is not a valid value of the union type 'cellml:unit_prefix'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'prefix': ' yotta ' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 [5.4.2.3.unit_prefix_unknown](../models_1_0/invalid/5.4.2.3.unit_prefix_unknown.cellml): Error detected correctly.
 * Expected: ```not a valid value of the union type 'cellml:unit_prefix'```
-* Output: ```Error on line 6: Element 'cellml:unit', attribute 'prefix': 'flotta' is not a valid value of the union type 'cellml:unit_prefix'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'prefix': 'flotta' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 
 ---
@@ -1577,8 +1577,8 @@ Results per category
 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:unit', attribute 'exponent': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:unit', attribute 'exponent': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:unit', attribute 'exponent': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:unit', attribute 'exponent': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
 ---
@@ -1588,8 +1588,8 @@ Results per category
 [5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:unit', attribute 'multiplier': [facet 'pattern'] The value 'three' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:unit', attribute 'multiplier': 'three' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:unit', attribute 'multiplier': [facet 'pattern'] The value 'three' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:unit', attribute 'multiplier': 'three' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
 ---
@@ -1599,8 +1599,8 @@ Results per category
 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 6: Element 'cellml:unit', attribute 'offset': [facet 'pattern'] The value 'no' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 6: Element 'cellml:unit', attribute 'offset': 'no' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 7: Element 'cellml:unit', attribute 'offset': [facet 'pattern'] The value 'no' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 7: Element 'cellml:unit', attribute 'offset': 'no' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
 ---
@@ -1751,7 +1751,7 @@ Results per category
 
 [6.4.1.1.group_empty](../models_1_0/invalid/6.4.1.1.group_empty.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': Missing child element(s)```
-* Output: ```Error on line 5: Element 'cellml:group': Missing child element(s). Expected is one of ( cellml:relationship_ref, cellml:component_ref, ##othercellml:* ).```
+* Output: ```Error on line 6: Element 'cellml:group': Missing child element(s). Expected is one of ( cellml:relationship_ref, cellml:component_ref, ##othercellml:* ).```
 
 🔵 [6.4.1.1.group_only_extensions](../models_1_0/invalid/6.4.1.1.group_only_extensions.cellml): **Error not detected.**
 
@@ -1761,53 +1761,53 @@ Results per category
 
 [6.4.1.1.group_with_component](../models_1_0/invalid/6.4.1.1.group_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:component': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:component': This element is not expected.```
 
 [6.4.1.1.group_with_connection](../models_1_0/invalid/6.4.1.1.group_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 16: Element 'cellml:connection': This element is not expected.```
+* Output: ```Error on line 17: Element 'cellml:connection': This element is not expected.```
 
 [6.4.1.1.group_with_group](../models_1_0/invalid/6.4.1.1.group_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 14: Element 'cellml:group': This element is not expected.```
+* Output: ```Error on line 15: Element 'cellml:group': This element is not expected.```
 
 [6.4.1.1.group_with_map_components](../models_1_0/invalid/6.4.1.1.group_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:map_components': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:map_components': This element is not expected.```
 
 [6.4.1.1.group_with_map_variables](../models_1_0/invalid/6.4.1.1.group_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 16: Element 'cellml:map_variables': This element is not expected.```
+* Output: ```Error on line 17: Element 'cellml:map_variables': This element is not expected.```
 
 🔵 [6.4.1.1.group_with_math](../models_1_0/invalid/6.4.1.1.group_with_math.cellml): **Error not detected.**
 
 [6.4.1.1.group_with_model](../models_1_0/invalid/6.4.1.1.group_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:model': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:model': This element is not expected.```
 
 [6.4.1.1.group_with_reaction](../models_1_0/invalid/6.4.1.1.group_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 14: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 15: Element 'cellml:reaction': This element is not expected.```
 
 [6.4.1.1.group_with_role](../models_1_0/invalid/6.4.1.1.group_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:role': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:role': This element is not expected.```
 
 [6.4.1.1.group_with_unit](../models_1_0/invalid/6.4.1.1.group_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:unit': This element is not expected.```
+* Output: ```Error on line 10: Element 'cellml:unit': This element is not expected.```
 
 [6.4.1.1.group_with_units](../models_1_0/invalid/6.4.1.1.group_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:units': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:units': This element is not expected.```
 
 [6.4.1.1.group_with_variable](../models_1_0/invalid/6.4.1.1.group_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:variable': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:variable': This element is not expected.```
 
 [6.4.1.1.group_with_variable_ref](../models_1_0/invalid/6.4.1.1.group_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 14: Element 'cellml:variable_ref': This element is not expected.```
+* Output: ```Error on line 15: Element 'cellml:variable_ref': This element is not expected.```
 
 
 ---
@@ -1833,61 +1833,61 @@ Results per category
 
 [6.4.2.1.relationship_ref_with_component](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_component_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 13: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_connection](../models_1_0/invalid/6.4.2.1.relationship_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 14: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_group](../models_1_0/invalid/6.4.2.1.relationship_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 12: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_map_components](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_map_variables](../models_1_0/invalid/6.4.2.1.relationship_ref_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 14: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
 
 🔵 [6.4.2.1.relationship_ref_with_math](../models_1_0/invalid/6.4.2.1.relationship_ref_with_math.cellml): **Error not detected.**
 
 [6.4.2.1.relationship_ref_with_model](../models_1_0/invalid/6.4.2.1.relationship_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_reaction](../models_1_0/invalid/6.4.2.1.relationship_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 12: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_relationship_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_role](../models_1_0/invalid/6.4.2.1.relationship_ref_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_unit](../models_1_0/invalid/6.4.2.1.relationship_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_units](../models_1_0/invalid/6.4.2.1.relationship_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_variable](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 9: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 10: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [6.4.2.1.relationship_ref_with_variable_ref](../models_1_0/invalid/6.4.2.1.relationship_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 12: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
 ---
@@ -1897,9 +1897,9 @@ Results per category
 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:relationship'```
 * Output:
-  * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': [facet 'enumeration'] The value 'howdy' is not an element of the set {'containment', 'encapsulation'}.```
-  * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': 'howdy' is not a valid value of the atomic type 'cellml:relationship'.```
-  * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'relationship': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': [facet 'enumeration'] The value 'howdy' is not an element of the set {'containment', 'encapsulation'}.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': 'howdy' is not a valid value of the atomic type 'cellml:relationship'.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
 
 ---
@@ -1909,9 +1909,9 @@ Results per category
 [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 8: Element 'cellml:relationship_ref', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
@@ -1931,7 +1931,7 @@ Results per category
 
 [6.4.2.5.relationship_ref_duplicate_named](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_named.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': Duplicate key-sequence```
-* Output: ```Error on line 12: Element 'cellml:relationship_ref': Duplicate key-sequence ['containment', 'x'] in unique identity-constraint 'cellml:named_relationships_within_a_group'.```
+* Output: ```Error on line 13: Element 'cellml:relationship_ref': Duplicate key-sequence ['containment', 'x'] in unique identity-constraint 'cellml:named_relationships_within_a_group'.```
 
 🔵 [6.4.2.5.relationship_ref_duplicate_unnamed_1](../models_1_0/invalid/6.4.2.5.relationship_ref_duplicate_unnamed_1.cellml): **Error not detected.**
 
@@ -1950,63 +1950,63 @@ Results per category
 
 [6.4.3.1.component_ref_component_missing](../models_1_0/invalid/6.4.3.1.component_ref_component_missing.cellml): Error detected correctly.
 * Expected: ```'cellml:component_ref': The attribute 'component' is required```
-* Output: ```Error on line 10: Element 'cellml:component_ref': The attribute 'component' is required but missing.```
+* Output: ```Error on line 11: Element 'cellml:component_ref': The attribute 'component' is required but missing.```
 
 [6.4.3.1.component_ref_nesting](../models_1_0/valid/6.4.3.1.component_ref_nesting.cellml): Valid file passed validation.
 
 [6.4.3.1.component_ref_with_component](../models_1_0/invalid/6.4.3.1.component_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:component': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:component': This element is not expected.```
 
 [6.4.3.1.component_ref_with_connection](../models_1_0/invalid/6.4.3.1.component_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:connection': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:connection': This element is not expected.```
 
 [6.4.3.1.component_ref_with_group](../models_1_0/invalid/6.4.3.1.component_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:group': This element is not expected.```
+* Output: ```Error on line 14: Element 'cellml:group': This element is not expected.```
 
 [6.4.3.1.component_ref_with_map_components](../models_1_0/invalid/6.4.3.1.component_ref_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:map_components': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:map_components': This element is not expected.```
 
 [6.4.3.1.component_ref_with_map_variables](../models_1_0/invalid/6.4.3.1.component_ref_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 15: Element 'cellml:map_variables': This element is not expected.```
+* Output: ```Error on line 16: Element 'cellml:map_variables': This element is not expected.```
 
 🔵 [6.4.3.1.component_ref_with_math](../models_1_0/invalid/6.4.3.1.component_ref_with_math.cellml): **Error not detected.**
 
 [6.4.3.1.component_ref_with_model](../models_1_0/invalid/6.4.3.1.component_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:model': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:model': This element is not expected.```
 
 [6.4.3.1.component_ref_with_reaction](../models_1_0/invalid/6.4.3.1.component_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 14: Element 'cellml:reaction': This element is not expected.```
 
 [6.4.3.1.component_ref_with_relationship_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:relationship_ref': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:relationship_ref': This element is not expected.```
 
 [6.4.3.1.component_ref_with_role](../models_1_0/invalid/6.4.3.1.component_ref_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:role': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:role': This element is not expected.```
 
 [6.4.3.1.component_ref_with_unit](../models_1_0/invalid/6.4.3.1.component_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:unit': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:unit': This element is not expected.```
 
 [6.4.3.1.component_ref_with_units](../models_1_0/invalid/6.4.3.1.component_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:units': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:units': This element is not expected.```
 
 [6.4.3.1.component_ref_with_variable](../models_1_0/invalid/6.4.3.1.component_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:variable': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:variable': This element is not expected.```
 
 [6.4.3.1.component_ref_with_variable_ref](../models_1_0/invalid/6.4.3.1.component_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 13: Element 'cellml:variable_ref': This element is not expected.```
+* Output: ```Error on line 14: Element 'cellml:variable_ref': This element is not expected.```
 
 
 ---
@@ -2055,12 +2055,12 @@ Results per category
 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
-  * ```Error on line 10: Element 'cellml:component_ref', attribute 'component': [facet 'pattern'] The value '.' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 10: Element 'cellml:component_ref', attribute 'component': '.' is not a valid value of the atomic type 'cellml:identifier'.```
+  * ```Error on line 11: Element 'cellml:component_ref', attribute 'component': [facet 'pattern'] The value '.' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
+  * ```Error on line 11: Element 'cellml:component_ref', attribute 'component': '.' is not a valid value of the atomic type 'cellml:identifier'.```
 
 [6.4.3.3.component_ref_component_nonexistent_1](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_1.cellml): Error detected correctly.
 * Expected: ```'cellml:component_ref': No match found for key-sequence```
-* Output: ```Error on line 9: Element 'cellml:component_ref': No match found for key-sequence ['X'] of keyref 'cellml:group_components_root'.```
+* Output: ```Error on line 10: Element 'cellml:component_ref': No match found for key-sequence ['X'] of keyref 'cellml:group_components_root'.```
 
 🔵 [6.4.3.3.component_ref_component_nonexistent_2](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_2.cellml): **Error not detected.**
 
@@ -2073,61 +2073,61 @@ Results per category
 
 [7.4.1.1.reaction_variable_ref_missing](../models_1_0/invalid/7.4.1.1.reaction_variable_ref_missing.cellml): Error detected correctly.
 * Expected: ```'cellml:reaction': Missing child element```
-* Output: ```Error on line 7: Element 'cellml:reaction': Missing child element(s). Expected is one of ( cellml:variable_ref, ##othercellml:* ).```
+* Output: ```Error on line 8: Element 'cellml:reaction': Missing child element(s). Expected is one of ( cellml:variable_ref, ##othercellml:* ).```
 
 [7.4.1.1.reaction_with_component](../models_1_0/invalid/7.4.1.1.reaction_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:component': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:component': This element is not expected.```
 
 [7.4.1.1.reaction_with_component_ref](../models_1_0/invalid/7.4.1.1.reaction_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:component_ref': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:component_ref': This element is not expected.```
 
 [7.4.1.1.reaction_with_connection](../models_1_0/invalid/7.4.1.1.reaction_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:connection': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:connection': This element is not expected.```
 
 [7.4.1.1.reaction_with_group](../models_1_0/invalid/7.4.1.1.reaction_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:group': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:group': This element is not expected.```
 
 [7.4.1.1.reaction_with_map_components](../models_1_0/invalid/7.4.1.1.reaction_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:map_components': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:map_components': This element is not expected.```
 
 [7.4.1.1.reaction_with_map_variables](../models_1_0/invalid/7.4.1.1.reaction_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:map_variables': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:map_variables': This element is not expected.```
 
 🔵 [7.4.1.1.reaction_with_math](../models_1_0/invalid/7.4.1.1.reaction_with_math.cellml): **Error not detected.**
 
 [7.4.1.1.reaction_with_model](../models_1_0/invalid/7.4.1.1.reaction_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:model': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:model': This element is not expected.```
 
 [7.4.1.1.reaction_with_reaction](../models_1_0/invalid/7.4.1.1.reaction_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 12: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 13: Element 'cellml:reaction': This element is not expected.```
 
 [7.4.1.1.reaction_with_relationship_ref](../models_1_0/invalid/7.4.1.1.reaction_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:relationship_ref': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:relationship_ref': This element is not expected.```
 
 [7.4.1.1.reaction_with_role](../models_1_0/invalid/7.4.1.1.reaction_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:role': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:role': This element is not expected.```
 
 [7.4.1.1.reaction_with_unit](../models_1_0/invalid/7.4.1.1.reaction_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:unit': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:unit': This element is not expected.```
 
 [7.4.1.1.reaction_with_units](../models_1_0/invalid/7.4.1.1.reaction_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:units': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:units': This element is not expected.```
 
 [7.4.1.1.reaction_with_variable](../models_1_0/invalid/7.4.1.1.reaction_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:variable': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:variable': This element is not expected.```
 
 
 ---
@@ -2137,8 +2137,8 @@ Results per category
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
 * Output:
-  * ```Error on line 7: Element 'cellml:reaction', attribute 'reversible': [facet 'enumeration'] The value 'definitely' is not an element of the set {'yes', 'no'}.```
-  * ```Error on line 7: Element 'cellml:reaction', attribute 'reversible': 'definitely' is not a valid value of the atomic type 'cellml:yes_no'.```
+  * ```Error on line 8: Element 'cellml:reaction', attribute 'reversible': [facet 'enumeration'] The value 'definitely' is not an element of the set {'yes', 'no'}.```
+  * ```Error on line 8: Element 'cellml:reaction', attribute 'reversible': 'definitely' is not a valid value of the atomic type 'cellml:yes_no'.```
 
 [7.4.1.2.reaction_reversible_no](../models_1_0/valid/7.4.1.2.reaction_reversible_no.cellml): Valid file passed validation.
 
@@ -2158,65 +2158,65 @@ Results per category
 
 [7.4.2.1.variable_ref_role_missing](../models_1_0/invalid/7.4.2.1.variable_ref_role_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': Missing child element```
-* Output: ```Error on line 8: Element 'cellml:variable_ref': Missing child element(s). Expected is one of ( cellml:role, ##othercellml:* ).```
+* Output: ```Error on line 9: Element 'cellml:variable_ref': Missing child element(s). Expected is one of ( cellml:role, ##othercellml:* ).```
 
 [7.4.2.1.variable_ref_variable_missing](../models_1_0/invalid/7.4.2.1.variable_ref_variable_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': The attribute 'variable' is required```
-* Output: ```Error on line 8: Element 'cellml:variable_ref': The attribute 'variable' is required but missing.```
+* Output: ```Error on line 9: Element 'cellml:variable_ref': The attribute 'variable' is required but missing.```
 
 [7.4.2.1.variable_ref_with_component](../models_1_0/invalid/7.4.2.1.variable_ref_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:component': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:component': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_component_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:component_ref': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:component_ref': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_connection](../models_1_0/invalid/7.4.2.1.variable_ref_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:connection': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:connection': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_group](../models_1_0/invalid/7.4.2.1.variable_ref_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:group': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:group': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_map_components](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:map_components': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:map_components': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_map_variables](../models_1_0/invalid/7.4.2.1.variable_ref_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:map_variables': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:map_variables': This element is not expected.```
 
 🔵 [7.4.2.1.variable_ref_with_math](../models_1_0/invalid/7.4.2.1.variable_ref_with_math.cellml): **Error not detected.**
 
 [7.4.2.1.variable_ref_with_model](../models_1_0/invalid/7.4.2.1.variable_ref_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:model': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:model': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_reaction](../models_1_0/invalid/7.4.2.1.variable_ref_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:reaction': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:reaction': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_relationship_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:relationship_ref': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:relationship_ref': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_unit](../models_1_0/invalid/7.4.2.1.variable_ref_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:unit': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:unit': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_units](../models_1_0/invalid/7.4.2.1.variable_ref_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:units': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:units': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_variable](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:variable': This element is not expected.```
+* Output: ```Error on line 11: Element 'cellml:variable': This element is not expected.```
 
 [7.4.2.1.variable_ref_with_variable_ref](../models_1_0/invalid/7.4.2.1.variable_ref_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:variable_ref': This element is not expected.```
+* Output: ```Error on line 12: Element 'cellml:variable_ref': This element is not expected.```
 
 
 ---
@@ -2225,15 +2225,15 @@ Results per category
 
 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': Duplicate key-sequence```
-* Output: ```Error on line 12: Element 'cellml:variable_ref': Duplicate key-sequence ['a'] in unique identity-constraint 'cellml:reaction_variable'.```
+* Output: ```Error on line 13: Element 'cellml:variable_ref': Duplicate key-sequence ['a'] in unique identity-constraint 'cellml:reaction_variable'.```
 
 [7.4.2.2.variable_ref_variable_hidden](../models_1_0/invalid/7.4.2.2.variable_ref_variable_hidden.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': No match found for key-sequence```
-* Output: ```Error on line 8: Element 'cellml:variable_ref': No match found for key-sequence ['b'] of keyref 'cellml:reaction_variables'.```
+* Output: ```Error on line 9: Element 'cellml:variable_ref': No match found for key-sequence ['b'] of keyref 'cellml:reaction_variables'.```
 
 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': No match found for key-sequence```
-* Output: ```Error on line 8: Element 'cellml:variable_ref': No match found for key-sequence ['b'] of keyref 'cellml:reaction_variables'.```
+* Output: ```Error on line 9: Element 'cellml:variable_ref': No match found for key-sequence ['b'] of keyref 'cellml:reaction_variables'.```
 
 
 ---
@@ -2242,63 +2242,63 @@ Results per category
 
 [7.4.3.1.role_role_missing](../models_1_0/invalid/7.4.3.1.role_role_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': The attribute 'role' is required```
-* Output: ```Error on line 9: Element 'cellml:role': The attribute 'role' is required but missing.```
+* Output: ```Error on line 10: Element 'cellml:role': The attribute 'role' is required but missing.```
 
 [7.4.3.1.role_with_component](../models_1_0/invalid/7.4.3.1.role_with_component.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:component': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_component_ref](../models_1_0/invalid/7.4.3.1.role_with_component_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:component_ref': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:component_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_connection](../models_1_0/invalid/7.4.3.1.role_with_connection.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:connection': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:connection': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_group](../models_1_0/invalid/7.4.3.1.role_with_group.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:group': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:group': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_map_components](../models_1_0/invalid/7.4.3.1.role_with_map_components.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_components': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:map_components': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_map_variables](../models_1_0/invalid/7.4.3.1.role_with_map_variables.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:map_variables': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:map_variables': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_model](../models_1_0/invalid/7.4.3.1.role_with_model.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:model': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:model': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_reaction](../models_1_0/invalid/7.4.3.1.role_with_reaction.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:reaction': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 12: Element 'cellml:reaction': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_relationship_ref](../models_1_0/invalid/7.4.3.1.role_with_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:relationship_ref': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:relationship_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_role](../models_1_0/invalid/7.4.3.1.role_with_role.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 12: Element 'cellml:role': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_unit](../models_1_0/invalid/7.4.3.1.role_with_unit.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:unit': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_units](../models_1_0/invalid/7.4.3.1.role_with_units.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:units': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_variable](../models_1_0/invalid/7.4.3.1.role_with_variable.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable': This element is not expected```
-* Output: ```Error on line 10: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 11: Element 'cellml:variable': This element is not expected. Expected is ( ##othercellml:* ).```
 
 [7.4.3.1.role_with_variable_ref](../models_1_0/invalid/7.4.3.1.role_with_variable_ref.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:variable_ref': This element is not expected```
-* Output: ```Error on line 11: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
+* Output: ```Error on line 12: Element 'cellml:variable_ref': This element is not expected. Expected is ( ##othercellml:* ).```
 
 
 ---
@@ -2308,9 +2308,9 @@ Results per category
 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:species_role'```
 * Output:
-  * ```Error on line 9: Element 'cellml:role', attribute 'role': [facet 'enumeration'] The value 'mole' is not an element of the set {'reactant', 'product', 'catalyst', 'activator', 'inhibitor', 'modifier', 'rate'}.```
-  * ```Error on line 9: Element 'cellml:role', attribute 'role': 'mole' is not a valid value of the atomic type 'cellml:species_role'.```
-  * ```Error on line 9: Element 'cellml:role', attribute 'role': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 10: Element 'cellml:role', attribute 'role': [facet 'enumeration'] The value 'mole' is not an element of the set {'reactant', 'product', 'catalyst', 'activator', 'inhibitor', 'modifier', 'rate'}.```
+  * ```Error on line 10: Element 'cellml:role', attribute 'role': 'mole' is not a valid value of the atomic type 'cellml:species_role'.```
+  * ```Error on line 10: Element 'cellml:role', attribute 'role': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
 
 ---
@@ -2333,9 +2333,9 @@ Results per category
 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:reaction_direction'```
 * Output:
-  * ```Error on line 23: Element 'cellml:role', attribute 'direction': [facet 'enumeration'] The value 'backward' is not an element of the set {'forward', 'reverse', 'both'}.```
-  * ```Error on line 23: Element 'cellml:role', attribute 'direction': 'backward' is not a valid value of the atomic type 'cellml:reaction_direction'.```
-  * ```Error on line 23: Element 'cellml:role', attribute 'direction': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 24: Element 'cellml:role', attribute 'direction': [facet 'enumeration'] The value 'backward' is not an element of the set {'forward', 'reverse', 'both'}.```
+  * ```Error on line 24: Element 'cellml:role', attribute 'direction': 'backward' is not a valid value of the atomic type 'cellml:reaction_direction'.```
+  * ```Error on line 24: Element 'cellml:role', attribute 'direction': Warning: No precomputed value available, the value was either invalid or something strange happend.```
 
 
 ---
@@ -2360,7 +2360,7 @@ Results per category
 
 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': Duplicate key-sequence```
-* Output: ```Error on line 24: Element 'cellml:role': Duplicate key-sequence ['inhibitor', 'forward'] in unique identity-constraint 'cellml:unique_role_direction_pairs'.```
+* Output: ```Error on line 25: Element 'cellml:role': Duplicate key-sequence ['inhibitor', 'forward'] in unique identity-constraint 'cellml:unique_role_direction_pairs'.```
 
 
 ---
@@ -2370,8 +2370,8 @@ Results per category
 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
 * Output:
-  * ```Error on line 14: Element 'cellml:role', attribute 'stoichiometry': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 14: Element 'cellml:role', attribute 'stoichiometry': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
+  * ```Error on line 15: Element 'cellml:role', attribute 'stoichiometry': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+  * ```Error on line 15: Element 'cellml:role', attribute 'stoichiometry': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
 
 
 ---
@@ -2380,19 +2380,19 @@ Results per category
 
 [7.4.3.7.role_delta_variable_duplicate_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_1.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': Duplicate key-sequence```
-* Output: ```Error on line 17: Element 'cellml:role': Duplicate key-sequence ['dA'] in unique identity-constraint 'cellml:delta_variable'.```
+* Output: ```Error on line 18: Element 'cellml:role': Duplicate key-sequence ['dA'] in unique identity-constraint 'cellml:delta_variable'.```
 
 [7.4.3.7.role_delta_variable_duplicate_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_2.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': Duplicate key-sequence```
-* Output: ```Error on line 40: Element 'cellml:role': Duplicate key-sequence ['dA'] in unique identity-constraint 'cellml:delta_variable'.```
+* Output: ```Error on line 41: Element 'cellml:role': Duplicate key-sequence ['dA'] in unique identity-constraint 'cellml:delta_variable'.```
 
 [7.4.3.7.role_delta_variable_nonexistent_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_1.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': No match found for key-sequence```
-* Output: ```Error on line 13: Element 'cellml:role': No match found for key-sequence ['dA'] of keyref 'cellml:delta_variables'.```
+* Output: ```Error on line 14: Element 'cellml:role': No match found for key-sequence ['dA'] of keyref 'cellml:delta_variables'.```
 
 [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:role': No match found for key-sequence```
-* Output: ```Error on line 13: Element 'cellml:role': No match found for key-sequence ['dA'] of keyref 'cellml:delta_variables'.```
+* Output: ```Error on line 14: Element 'cellml:role': No match found for key-sequence ['dA'] of keyref 'cellml:delta_variables'.```
 
 
 ---
@@ -2440,7 +2440,7 @@ Results per category
 
 [8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
 * Expected: ```not a valid value of the atomic type 'xs:ID'```
-* Output: ```Error on line 11: Element 'cellml:component_ref', attribute '{http://www.cellml.org/metadata/1.0#}id': 'x' is not a valid value of the atomic type 'xs:ID'.```
+* Output: ```Error on line 12: Element 'cellml:component_ref', attribute '{http://www.cellml.org/metadata/1.0#}id': 'x' is not a valid value of the atomic type 'xs:ID'.```
 
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed validation.
 

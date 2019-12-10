@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 6.4.3.2: Children of a given component can only be declared in
                           one place -->
 <model name="component_ref_children_declared_twice_2"

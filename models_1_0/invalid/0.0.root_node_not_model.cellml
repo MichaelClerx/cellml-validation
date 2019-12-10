@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- Contrary to CellML 1.0, 3.2.1, we insist that the root node is a <model> -->
 <component name="root_node_not_model"
            xmlns="http://www.cellml.org/cellml/1.0#" />

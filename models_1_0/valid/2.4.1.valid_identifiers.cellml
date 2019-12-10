@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 2.4.1: Valid identifier contain letters, numbers, underscores,
      must have at least one letter or number -->
 <model name="valid_identifiers"

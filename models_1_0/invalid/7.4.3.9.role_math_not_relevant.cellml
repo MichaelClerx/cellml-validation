@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 7.4.3.9: The math in a role must be relevant to the variable_ref -->
 <model name="role_math_not_relevant"
        xmlns="http://www.cellml.org/cellml/1.0#"

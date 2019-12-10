@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 8.4.1: A units element can have a cmeta:id -->
 <model name="cmeta_id_in_units_2"
        xmlns="http://www.cellml.org/cellml/1.0#"

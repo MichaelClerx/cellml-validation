@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 3.4.5.1: A map_components cannot contain a unit -->
 <model name="map_components_with_unit"
        xmlns="http://www.cellml.org/cellml/1.0#">

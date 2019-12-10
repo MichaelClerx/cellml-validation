@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
 First-order derivatives: diff, bvar - with non-trivial units -->
 <model name="mathml_derivatives_with_units"

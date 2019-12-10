@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- Implied: Connections don't have a name -->
 <model name="connection_with_name_attribute"
        xmlns="http://www.cellml.org/cellml/1.0#">
