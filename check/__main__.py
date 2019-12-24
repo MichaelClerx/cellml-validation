@@ -23,8 +23,10 @@ def main():
     )
 
     # Add subparsers
+    from . import opencor_validation
     add_dtd_1_0_parser(subparsers)
-    add_opencor_parser(subparsers)
+    if opencor_validation.supported():
+        add_opencor_parser(subparsers)
     add_relaxng_1_0_parser(subparsers)
     add_schema_1_0_parser(subparsers)
 

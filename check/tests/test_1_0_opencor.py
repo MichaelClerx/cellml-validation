@@ -1188,6 +1188,7 @@ class TestOpenCOR(object):
         cls._report.render(
             os.path.join(check.REPORT_DIR, 'opencor_1_0.md'))
 
+    @pytest.mark.skipif(not opencor.supported(), reason='OpenCOR not found')
     @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
     def test_valid_model(self, name, path, log):
         report = self._report
@@ -1237,7 +1238,7 @@ class TestOpenCOR(object):
                 log.error(line)
             pytest.fail()
 
-
+    @pytest.mark.skipif(not opencor.supported(), reason='OpenCOR not found')
     @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
     def test_invalid_model(self, name, path, log):
         report = self._report

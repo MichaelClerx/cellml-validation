@@ -9,16 +9,24 @@ import subprocess
 
 
 # Location of OpenCOR binary
-OPENCOR = '/home/michael/dev/ext/opencor/OpenCOR-2019-02-01-Linux/bin/OpenCOR'
+OPENCOR = '/home/mizchael/dev/ext/opencor/OpenCOR-2019-02-01-Linux/bin/OpenCOR'
 
-if not os.path.isfile(OPENCOR):
-    raise Exception(
-        'Please update opencor_validation.py with the correct locaiton of the'
-        ' OpenCOR binary.')
+
+def supported():
+    """
+    Returns ``True`` iff OpenCOR validation is supported in this installation.
+    """
+    return os.path.isfile(OPENCOR)
 
 
 def parse(path):
     """ Runs a CellML file through OpenCOR. """
+
+    if not supported():
+        raise RuntimeError(
+            'No OpenCOR support detected. Please update opencor_validation.py'
+            ' with the correct location of an OpenCOR executable. Currently'
+            ' pointed at ' + OPENCOR)
 
     cmd = [OPENCOR] + [
         '-c',
