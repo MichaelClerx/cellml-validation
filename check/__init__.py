@@ -56,6 +56,7 @@ from ._loaders import (     # noqa
 )
 from ._validation import (  # noqa
     dtd_1_0,
+    opencor,
     relaxng_1_0,
     schema_1_0,
 )

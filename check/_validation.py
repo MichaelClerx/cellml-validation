@@ -51,6 +51,26 @@ def dtd_1_0(filename):
         sys.exit(1)
 
 
+def opencor(filename):
+    """
+    Validates ``filename`` against the CellML API by running it through
+    OpenCOR, prints the result and then exits.
+    """
+    from . import opencor_validation as opencor
+
+    ret, out, err = opencor.parse(filename)
+    if ret == 0:
+        print(
+            colored('warning', '[pass]')
+            + ' This file validates against OpenCOR.')
+        sys.exit(0)
+    else:
+        print(colored('fail', '[fail]'))
+        for line in out.splitlines() + err.splitlines():
+            print(line)
+        sys.exit(1)
+
+
 def relaxng_1_0(filename):
     """
     Validates ``filename`` against the CellML 1.0 RELAX NG schema, prints the
