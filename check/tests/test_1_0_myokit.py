@@ -12,6 +12,11 @@ import check
 from . import shared
 from .report import Report_1_0 as Report
 
+try:
+    import myokit
+    NO_MYOKIT = False
+except ImportError:
+    NO_MYOKIT = True
 
 # Known instances where Myokit says a valid file is invalid
 false_negatives = {
@@ -1083,22 +1088,13 @@ def log():
     return logging.getLogger(__name__)
 
 
-def no_myokit():
-    """ Returns True if Myokit can't be found. """
-    try:
-        import myokit
-    except ImportError:
-        return True
-    return False
-
-
 def parse(path):
     """ Parses the file at ``path``. """
-    from myokit.formats.cellml.parser_1 import CellMLParser, CellMLParsingError
-    p = CellMLParser()
+    import myokit.formats.cellml.v1 as cellml
+    p = cellml.CellMLParser()
     try:
         p.parse_file(path)
-    except CellMLParsingError as e:
+    except cellml.CellMLParsingError as e:
         return False, str(e)
     else:
         return True, 'OK'
@@ -1116,7 +1112,7 @@ class TestMyokit(object):
         cls._report.render(
             os.path.join(check.REPORT_DIR, 'myokit_1_0.md'))
 
-    @pytest.mark.skipif(no_myokit(), reason='Myokit not found')
+    @pytest.mark.skipif(NO_MYOKIT, reason='Myokit not found')
     @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0(True))
     def test_valid_model(self, name, path, log):
 
@@ -1155,7 +1151,7 @@ class TestMyokit(object):
             log.error(msg)
             pytest.fail()
 
-    @pytest.mark.skipif(no_myokit(), reason='Myokit not found')
+    @pytest.mark.skipif(NO_MYOKIT, reason='Myokit not found')
     @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
     def test_invalid_model(self, name, path, log):
 

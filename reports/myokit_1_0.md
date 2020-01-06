@@ -1,9 +1,9 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 83% according to spec (31 out of 37)
+* 84% according to spec (32 out of 38)
 * 1 out of 1 valid files passed
-* 30 out of 36 invalid files detected
+* 31 out of 37 invalid files detected
 
 Issues:
 * 0 valid files failed validation
@@ -11,7 +11,7 @@ Issues:
 * 4 invalid files failed validation for the wrong reason
 
 Test implementation issues
-* **727 tests not run**
+* **726 tests not run**
 
 Results per category
 
@@ -20,7 +20,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|1|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|0|20|0|2|4|76%|
+|[2. Fundamentals](#2-fundamentals)|0|21|0|2|4|77%|
 |[3. Model structure](#3-model-structure)|0|0|0|0|0|0%|
 |[4. Mathematics](#4-mathematics)|0|0|0|0|0|0%|
 |[5. Units](#5-units)|0|0|0|0|0|0%|
@@ -42,19 +42,19 @@ Results per category
 
 [0.0.root_node_namespace_wrong](../models_1_0/invalid/0.0.root_node_namespace_wrong.cellml): Error detected correctly.
 * Expected: ```Root node must be in CellML```
-* Output: ```Error on line 4. Root node must be in CellML 1.0 or 1.1 namespace.```
+* Output: ```Error on line 5. Root node must be in CellML 1.0 or 1.1 namespace.```
 
 [0.0.root_node_not_model](../models_1_0/invalid/0.0.root_node_not_model.cellml): Error detected correctly.
 * Expected: ```Root node must be a CellML model```
-* Output: ```Error on line 4. Root node must be a CellML model element.```
+* Output: ```Error on line 5. Root node must be a CellML model element.```
 
 [0.0.root_node_two_elements](../models_1_0/invalid/0.0.root_node_two_elements.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output: ```Unable to parse XML: Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_elements.cellml, line 5)```
+* Output: ```Unable to parse XML: Extra content at the end of the document, line 6, column 1 (0.0.root_node_two_elements.cellml, line 6)```
 
 [0.0.root_node_two_models](../models_1_0/invalid/0.0.root_node_two_models.cellml): Error detected correctly.
 * Expected: ```Extra content at the end of the document```
-* Output: ```Unable to parse XML: Extra content at the end of the document, line 5, column 1 (0.0.root_node_two_models.cellml, line 5)```
+* Output: ```Unable to parse XML: Extra content at the end of the document, line 6, column 1 (0.0.root_node_two_models.cellml, line 6)```
 
 
 ---
@@ -63,27 +63,27 @@ Results per category
 
 [0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): Error detected correctly.
 * Expected: ```must be a real number```
-* Output: ```Error on line 6. If given, a variable initial_value must be a real number (3.4.3.7).```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 [0.1.real_number_invalid_2](../models_1_0/invalid/0.1.real_number_invalid_2.cellml): Error detected correctly.
 * Expected: ```must be a real number```
-* Output: ```Error on line 6. If given, a variable initial_value must be a real number (3.4.3.7).```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 [0.1.real_number_invalid_3](../models_1_0/invalid/0.1.real_number_invalid_3.cellml): Error detected correctly.
 * Expected: ```must be a real number```
-* Output: ```Error on line 6. If given, a variable initial_value must be a real number (3.4.3.7).```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 [0.1.real_number_invalid_4](../models_1_0/invalid/0.1.real_number_invalid_4.cellml): Error detected correctly.
 * Expected: ```must be a real number```
-* Output: ```Error on line 6. If given, a variable initial_value must be a real number (3.4.3.7).```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 [0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): Error detected correctly.
 * Expected: ```must be a real number```
-* Output: ```Error on line 6. If given, a variable initial_value must be a real number (3.4.3.7).```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
 * Expected: ```must be a real number```
-* Output: ```Error on line 6. If given, a variable initial_value must be a real number (3.4.3.7).```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 ❗`0.1.real_numbers`: **Test not run**
 
@@ -102,23 +102,23 @@ Results per category
 
 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Error detected correctly.
 * Expected: ```valid CellML identifier```
-* Output: ```Error on line 5. Component name must be a valid CellML identifier (3.4.2.2).```
+* Output: ```Error on line 6. Component name must be a valid CellML identifier (3.4.2.2).```
 
 [2.4.1.identifier_only_underscore](../models_1_0/invalid/2.4.1.identifier_only_underscore.cellml): Error detected correctly.
 * Expected: ```valid CellML identifier```
-* Output: ```Error on line 5. Component name must be a valid CellML identifier (3.4.2.2).```
+* Output: ```Error on line 6. Component name must be a valid CellML identifier (3.4.2.2).```
 
 [2.4.1.identifier_unexpected_character_1](../models_1_0/invalid/2.4.1.identifier_unexpected_character_1.cellml): Error detected correctly.
 * Expected: ```valid CellML identifier```
-* Output: ```Error on line 5. Component name must be a valid CellML identifier (3.4.2.2).```
+* Output: ```Error on line 6. Component name must be a valid CellML identifier (3.4.2.2).```
 
 [2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): Error detected correctly.
 * Expected: ```valid CellML identifier```
-* Output: ```Error on line 5. Component name must be a valid CellML identifier (3.4.2.2).```
+* Output: ```Error on line 6. Component name must be a valid CellML identifier (3.4.2.2).```
 
 [2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): Error detected correctly.
 * Expected: ```valid CellML identifier```
-* Output: ```Error on line 5. Component name must be a valid CellML identifier (3.4.2.2).```
+* Output: ```Error on line 6. Component name must be a valid CellML identifier (3.4.2.2).```
 
 ❗`2.4.1.valid_identifiers`: **Test not run**
 
@@ -129,14 +129,14 @@ Results per category
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
 * Expected: ```Unexpected attribute "fruit"```
-* Output: ```Error on line 6. Unexpected attribute "fruit" found in cellml:model[@name="imaginary_attributes_1"].```
+* Output: ```Error on line 7. Unexpected attribute "fruit" found in cellml:model[@name="imaginary_attributes_1"].```
 
 🔵 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): **Error not detected.**
 * Output: ```OK```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
 * Expected: ```found element of type cellml:fruit```
-* Output: ```Error on line 5. Unexpected content type in cellml:model[@name="imaginary_elements"], found element of type cellml:fruit.```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="imaginary_elements"], found element of type cellml:fruit.```
 
 
 ---
@@ -148,7 +148,7 @@ Results per category
 
 [2.4.3.cellml_elements_inside_extensions](../models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml): Error detected correctly.
 * Expected: ```CellML element cellml:component found inside extension element```
-* Output: ```Error on line 8. CellML element cellml:component found inside extension element {http://fruit.org}banana (2.4.3).```
+* Output: ```Error on line 9. CellML element cellml:component found inside extension element {http://fruit.org}banana (2.4.3).```
 
 ❗`2.4.3.component_ref_with_extensions`: **Test not run**
 
@@ -193,74 +193,81 @@ Results per category
 
 [2.4.4.text_in_component](../models_1_0/invalid/2.4.4.text_in_component.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:component```
-* Output: ```Error on line 5. Text found in cellml:component[@name="c1"].```
+* Output: ```Error on line 6. Text found in cellml:component[@name="c1"].```
 
 [2.4.4.text_in_component_ref](../models_1_0/invalid/2.4.4.text_in_component_ref.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:component_ref```
-* Output: ```Error on line 10. Text found in cellml:component_ref.```
+* Output: ```Error on line 11. Text found in cellml:component_ref.```
 
 [2.4.4.text_in_connection](../models_1_0/invalid/2.4.4.text_in_connection.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:connection```
-* Output: ```Error on line 11. Text found in cellml:connection (after cellml:map_variables element).```
+* Output: ```Error on line 14. Text found in cellml:connection (after cellml:map_variables element).```
 
 [2.4.4.text_in_group](../models_1_0/invalid/2.4.4.text_in_group.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:group```
-* Output: ```Error on line 7. Text found in cellml:group (after cellml:component_ref element).```
+* Output: ```Error on line 10. Text found in cellml:group (after cellml:component_ref element).```
 
 [2.4.4.text_in_map_components](../models_1_0/invalid/2.4.4.text_in_map_components.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:map_components```
-* Output: ```Error on line 6. Text found in cellml:map_components.```
+* Output: ```Error on line 7. Text found in cellml:map_components.```
 
 [2.4.4.text_in_map_variables](../models_1_0/invalid/2.4.4.text_in_map_variables.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:map_variables```
-* Output: ```Error on line 13. Text found in cellml:map_variables.```
+* Output: ```Error on line 14. Text found in cellml:map_variables.```
 
 [2.4.4.text_in_model](../models_1_0/invalid/2.4.4.text_in_model.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:model```
-* Output: ```Error on line 4. Text found in cellml:model[@name="text_in_model"].```
+* Output: ```Error on line 5. Text found in cellml:model[@name="text_in_model"].```
 
 🔶 [2.4.4.text_in_reaction](../models_1_0/invalid/2.4.4.text_in_reaction.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```Expected error not set```
-* Output: ```Error on line 7. Reactions are not supported.```
+* Output: ```Error on line 8. Reactions are not supported.```
 
 [2.4.4.text_in_relationship_ref](../models_1_0/invalid/2.4.4.text_in_relationship_ref.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:relationship_ref```
-* Output: ```Error on line 8. Text found in cellml:relationship_ref.```
+* Output: ```Error on line 9. Text found in cellml:relationship_ref.```
 
 🔶 [2.4.4.text_in_role](../models_1_0/invalid/2.4.4.text_in_role.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```Expected error not set```
-* Output: ```Error on line 7. Reactions are not supported.```
+* Output: ```Error on line 8. Reactions are not supported.```
 
 [2.4.4.text_in_unit](../models_1_0/invalid/2.4.4.text_in_unit.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:unit```
-* Output: ```Error on line 6. Text found in cellml:unit.```
+* Output: ```Error on line 7. Text found in cellml:unit.```
 
 [2.4.4.text_in_units_1](../models_1_0/invalid/2.4.4.text_in_units_1.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:units```
-* Output: ```Error on line 5. Text found in cellml:units[@name="orange"] (after cellml:unit element).```
+* Output: ```Error on line 7. Text found in cellml:units[@name="orange"] (after cellml:unit element).```
 
 [2.4.4.text_in_units_2](../models_1_0/invalid/2.4.4.text_in_units_2.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:units```
-* Output: ```Error on line 6. Text found in cellml:units[@name="apple"] (after cellml:unit element).```
+* Output: ```Error on line 8. Text found in cellml:units[@name="apple"] (after cellml:unit element).```
 
 [2.4.4.text_in_variable](../models_1_0/invalid/2.4.4.text_in_variable.cellml): Error detected correctly.
 * Expected: ```Text found in cellml:variable```
-* Output: ```Error on line 6. Text found in cellml:variable[@name="a"].```
+* Output: ```Error on line 7. Text found in cellml:variable[@name="a"].```
 
 🔶 [2.4.4.text_in_variable_ref](../models_1_0/invalid/2.4.4.text_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```Expected error not set```
-* Output: ```Error on line 7. Reactions are not supported.```
+* Output: ```Error on line 8. Reactions are not supported.```
 
 
 ---
 
 #### 2.5.1
 
-🔶 [2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Expected error not set```
-* Output: ```Error on line 12. A map_components component_1 attribute must refer to a component in the current model, got "a" (3.4.5.2).```
+[2.5.1.identifiers_are_case_sensitive](../models_1_0/invalid/2.5.1.identifiers_are_case_sensitive.cellml): Error detected correctly.
+* Expected: ```must refer to a component in the current model```
+* Output: ```Error on line 13. A map_components component_1 attribute must refer to a component in the current model, got "a" (3.4.5.2).```
 
-❗`2.5.2.attribute_in_cellml_namespace`: **Test not run**
+
+---
+
+#### 2.5.2
+
+🔶 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Error on line 6. Model element must have a name attribute (3.4.1.1).```
 
 ❗`3.4.1.1.model_child_order_1`: **Test not run**
 
