@@ -157,35 +157,33 @@ expected_messages = {
     # 2.5.1 Identifiers are case sensitive
     '2.5.1.identifiers_are_case_sensitive':
         'must refer to a component in the current model',
-    # 2.5.2 There are no attributes in the CellML namespace
-    #'2.5.2.attribute_in_cellml_namespace',
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
-    #'3.4.1.1.model_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'3.4.1.1.model_with_map_components':
-    #    'Unexpected element map_components',
-    #'3.4.1.1.model_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'3.4.1.1.model_with_math':
-    #    'Unexpected element math',
-    #'3.4.1.1.model_with_model':
-    #    'Unexpected element model',
-    #'3.4.1.1.model_with_reaction':
-    #    'Unexpected element reaction',
-    #'3.4.1.1.model_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'3.4.1.1.model_with_role':
-    #    'Unexpected element role',
-    #'3.4.1.1.model_with_unit':
-    #    'Unexpected element unit',
-    #'3.4.1.1.model_with_variable_ref':
-    #    'Unexpected element variable_ref',
-    #'3.4.1.1.model_with_variable':
-    #    'Unexpected element variable',
+    '3.4.1.1.model_with_component_ref':
+        'found element of type cellml:component_ref',
+    '3.4.1.1.model_with_map_components':
+        'found element of type cellml:map_components',
+    '3.4.1.1.model_with_map_variables':
+        'found element of type cellml:map_variables',
+    '3.4.1.1.model_with_math':
+        'found element of type cellml:component_ref',
+    '3.4.1.1.model_with_model':
+        'found element of type cellml:model',
+    '3.4.1.1.model_with_reaction':
+        'found element of type cellml:reaction',
+    '3.4.1.1.model_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '3.4.1.1.model_with_role':
+        'found element of type cellml:role',
+    '3.4.1.1.model_with_unit':
+        'found element of type cellml:unit',
+    '3.4.1.1.model_with_variable_ref':
+        'found element of type cellml:variable_ref',
+    '3.4.1.1.model_with_variable':
+        'found element of type cellml:variable',
     # 3.4.1.1 Models must have a name
-    #'3.4.1.1.model_name_missing':
-    #    'name attribute is required',
+    '3.4.1.1.model_name_missing':
+        'must have a name attribute',
     # 3.4.1.2 A model name must be a valid identifier
     #'3.4.1.2.model_name_invalid':
     #    'A valid CellML identifier must contain at least one letter',
@@ -976,6 +974,8 @@ known_issues = {
     '2.4.4.text_in_reaction',
     '2.4.4.text_in_role',
     '2.4.4.text_in_variable_ref',
+    # 2.5.2 Attributes in the CellML namespace are not detected
+    '2.5.2.attribute_in_cellml_namespace'
 
 
 }

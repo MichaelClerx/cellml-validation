@@ -104,7 +104,7 @@ expected_messages = {
         'Element variable_ref content does not follow the DTD',
     # 2.5.2 There are no attributes in the CellML namespace
     '2.5.2.attribute_in_cellml_namespace':
-        'No declaration for attribute name',
+        'No declaration for attribute private_interface',
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
     '3.4.1.1.model_with_component_ref':

@@ -97,7 +97,7 @@ expected_messages = {
         "No match found for key-sequence",
     # 2.5.2 There are no attributes in the CellML namespace
     '2.5.2.attribute_in_cellml_namespace':
-        "The attribute 'cellml:name' is not allowed",
+        "The attribute 'cellml:private_interface' is not allowed",
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
     '3.4.1.1.model_with_component_ref':
