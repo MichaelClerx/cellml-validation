@@ -1,9 +1,9 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 95% according to spec (138 out of 144)
+* 96% according to spec (155 out of 161)
 * 1 out of 1 valid files passed
-* 137 out of 143 invalid files detected
+* 154 out of 160 invalid files detected
 
 Issues:
 * 0 valid files failed validation
@@ -11,7 +11,7 @@ Issues:
 * 5 invalid files failed validation for the wrong reason
 
 Test implementation issues
-* **620 tests not run**
+* **603 tests not run**
 
 Results per category
 
@@ -21,7 +21,7 @@ Results per category
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|1|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|0|22|0|1|4|81%|
-|[3. Model structure](#3-model-structure)|0|105|0|0|1|99%|
+|[3. Model structure](#3-model-structure)|0|122|0|0|1|99%|
 |[4. Mathematics](#4-mathematics)|0|0|0|0|0|0%|
 |[5. Units](#5-units)|0|0|0|0|0|0%|
 |[6. Grouping](#6-grouping)|0|0|0|0|0|0%|
@@ -850,47 +850,96 @@ Results per category
 * Expected: ```found element of type cellml:map_variables```
 * Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:map_variables.```
 
-🔶 [3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```found element of type cellml:math```
+[3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): Error detected correctly.
+* Expected: ```found element of type mathml:math```
 * Output: ```Error on line 10. Unexpected content type in cellml:map_variables, found element of type mathml:math.```
 
-❗`3.4.6.1.map_variables_with_model`: **Test not run**
+[3.4.6.1.map_variables_with_model](../models_1_0/invalid/3.4.6.1.map_variables_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:model.```
 
-❗`3.4.6.1.map_variables_with_reaction`: **Test not run**
+[3.4.6.1.map_variables_with_reaction](../models_1_0/invalid/3.4.6.1.map_variables_with_reaction.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:reaction```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:reaction.```
 
-❗`3.4.6.1.map_variables_with_relationship_ref`: **Test not run**
+[3.4.6.1.map_variables_with_relationship_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:relationship_ref.```
 
-❗`3.4.6.1.map_variables_with_role`: **Test not run**
+[3.4.6.1.map_variables_with_role](../models_1_0/invalid/3.4.6.1.map_variables_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:role.```
 
-❗`3.4.6.1.map_variables_with_unit`: **Test not run**
+[3.4.6.1.map_variables_with_unit](../models_1_0/invalid/3.4.6.1.map_variables_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:unit.```
 
-❗`3.4.6.1.map_variables_with_units`: **Test not run**
+[3.4.6.1.map_variables_with_units](../models_1_0/invalid/3.4.6.1.map_variables_with_units.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:units```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:units.```
 
-❗`3.4.6.1.map_variables_with_variable`: **Test not run**
+[3.4.6.1.map_variables_with_variable](../models_1_0/invalid/3.4.6.1.map_variables_with_variable.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:variable.```
 
-❗`3.4.6.1.map_variables_with_variable_ref`: **Test not run**
+[3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:variable_ref.```
 
-❗`3.4.6.2.map_variables_variable_1_nonexistent`: **Test not run**
 
-❗`3.4.6.3.map_variables_variable_2_nonexistent`: **Test not run**
+---
+
+##### 3.4.6.2
+
+[3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): Error detected correctly.
+* Expected: ```variable_1 attribute must refer to a variable```
+* Output: ```Error on line 12. A map_variables variable_1 attribute must refer to a variable in component_1, got "a" (3.4.6.2).```
+
+
+---
+
+##### 3.4.6.3
+
+[3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): Error detected correctly.
+* Expected: ```variable_2 attribute must refer to a variable```
+* Output: ```Error on line 12. A map_variables variable_2 attribute must refer to a variable in component_2, got "Variable[@name="a"] in Component[@name="c1"]" (3.4.6.3).```
 
 ❗`3.4.6.4.map_variables_chain_down`: **Test not run**
 
 ❗`3.4.6.4.map_variables_chain_up`: **Test not run**
 
-❗`3.4.6.4.map_variables_child_multiple_out_1`: **Test not run**
 
-❗`3.4.6.4.map_variables_child_multiple_out_2`: **Test not run**
+---
 
-❗`3.4.6.4.map_variables_child_out_to_out_1`: **Test not run**
+##### 3.4.6.4
 
-❗`3.4.6.4.map_variables_child_out_to_out_2`: **Test not run**
+[3.4.6.4.map_variables_child_multiple_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_1.cellml): Error detected correctly.
+* Expected: ```already connected```
+* Output: ```Error on line 24. Invalid connection: Variable[@name="x"] in Component[@name="A"] has a public_interface of "in" and is already connected to a variable with an interface of "out".```
 
-❗`3.4.6.4.map_variables_child_private_in`: **Test not run**
+[3.4.6.4.map_variables_child_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_2.cellml): Error detected correctly.
+* Expected: ```already connected```
+* Output: ```Error on line 30. Invalid connection: Variable[@name="x"] in Component[@name="A"] has a public_interface of "in" and is already connected to a variable with an interface of "out".```
 
-❗`3.4.6.4.map_variables_child_private_out`: **Test not run**
+[3.4.6.4.map_variables_child_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_1.cellml): Error detected correctly.
+* Expected: ```private_interface of "out", while```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "out", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "out" (3.4.6.4).```
 
-❗`3.4.6.4.map_variables_hidden_aunt_1`: **Test not run**
+[3.4.6.4.map_variables_child_out_to_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_2.cellml): Error detected correctly.
+* Expected: ```private_interface of "out", while```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "out", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "out" (3.4.6.4).```
+
+[3.4.6.4.map_variables_child_private_in](../models_1_0/invalid/3.4.6.4.map_variables_child_private_in.cellml): Error detected correctly.
+* Expected: ```public_interface of "none"```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "out", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "none" (3.4.6.4).```
+
+[3.4.6.4.map_variables_child_private_out](../models_1_0/invalid/3.4.6.4.map_variables_child_private_out.cellml): Error detected correctly.
+* Expected: ```public_interface of "none"```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "in", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "none" (3.4.6.4).```
+
+🔶 [3.4.6.4.map_variables_hidden_aunt_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_aunt_1.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Error on line 29. Connections can only be made between components that are siblings or have a parent-child (encapsulation) relationship (3.4.6.4).```
 
 ❗`3.4.6.4.map_variables_hidden_aunt_2`: **Test not run**
 

@@ -408,7 +408,7 @@ expected_messages = {
     '3.4.6.1.map_variables_with_map_variables':
         'found element of type cellml:map_variables',
     '3.4.6.1.map_variables_with_math':
-        'found element of type cellml:math',
+        'found element of type mathml:math',
     '3.4.6.1.map_variables_with_model':
         'found element of type cellml:model',
     '3.4.6.1.map_variables_with_reaction':
@@ -426,24 +426,24 @@ expected_messages = {
     '3.4.6.1.map_variables_with_variable_ref':
         'found element of type cellml:variable_ref',
     # 3.4.6.2 variable_1 must refer to an existing variable in component_1
-    #'3.4.6.2.map_variables_variable_1_nonexistent':
-    #    'Variable_1 attribute doesn\'t refer to a valid variable',
+    '3.4.6.2.map_variables_variable_1_nonexistent':
+        'variable_1 attribute must refer to a variable',
     # 3.4.6.3 variable_2 must refer to an existing variable in component_2
-    #'3.4.6.3.map_variables_variable_2_nonexistent':
-    #    'Variable_2 attribute doesn\'t refer to a valid variable',
+    '3.4.6.3.map_variables_variable_2_nonexistent':
+        'variable_2 attribute must refer to a variable',
     # 3.4.6.4 Interfaces and encapsulation
-    #'3.4.6.4.map_variables_child_multiple_out_1':
-    #    'More than one connection to in interface of variable',
-    #'3.4.6.4.map_variables_child_multiple_out_2':
-    #    'More than one connection to in interface of variable',
-    #'3.4.6.4.map_variables_child_out_to_out_1':
-    #    'also has public interface of out',
-    #'3.4.6.4.map_variables_child_out_to_out_2':
-    #    'also has public interface of out',
-    #'3.4.6.4.map_variables_child_private_in':
-    #    'Mapping variable_2 which has public interface of none',
-    #'3.4.6.4.map_variables_child_private_out':
-    #    'Mapping variable_2 which has public interface of none',
+    '3.4.6.4.map_variables_child_multiple_out_1':
+        'already connected',
+    '3.4.6.4.map_variables_child_multiple_out_2':
+        'already connected',
+    '3.4.6.4.map_variables_child_out_to_out_1':
+        'private_interface of "out", while',
+    '3.4.6.4.map_variables_child_out_to_out_2':
+        'private_interface of "out", while',
+    '3.4.6.4.map_variables_child_private_in':
+        'public_interface of "none"',
+    '3.4.6.4.map_variables_child_private_out':
+        'public_interface of "none"',
     #'3.4.6.4.map_variables_hidden_aunt_1':
     #    'in the hidden set of each other',
     #'3.4.6.4.map_variables_hidden_aunt_2':
