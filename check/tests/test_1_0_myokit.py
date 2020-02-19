@@ -123,7 +123,7 @@ expected_messages = {
         'valid CellML identifier',
     # 2.4.2. Allowable CellML elements and attributes
     '2.4.2.imaginary_attributes_1':
-        'Unexpected attribute "fruit"',
+        'Unexpected attribute fruit',
     '2.4.2.imaginary_elements':
         'found element of type cellml:fruit',
     # 2.4.3 Elements/attributes in extension namespaces
@@ -157,6 +157,9 @@ expected_messages = {
     # 2.5.1 Identifiers are case sensitive
     '2.5.1.identifiers_are_case_sensitive':
         'must refer to a component in the current model',
+    # 2.5.2 Attributes in the CellML namespace
+    '2.5.2.attribute_in_cellml_namespace':
+        'Unexpected attribute cellml:private_interface',
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
     '3.4.1.1.model_with_component_ref':
@@ -166,7 +169,7 @@ expected_messages = {
     '3.4.1.1.model_with_map_variables':
         'found element of type cellml:map_variables',
     '3.4.1.1.model_with_math':
-        'found element of type cellml:component_ref',
+        'found element of type mathml:math',
     '3.4.1.1.model_with_model':
         'found element of type cellml:model',
     '3.4.1.1.model_with_reaction':
@@ -185,243 +188,243 @@ expected_messages = {
     '3.4.1.1.model_name_missing':
         'must have a name attribute',
     # 3.4.1.2 A model name must be a valid identifier
-    #'3.4.1.2.model_name_invalid':
-    #    'A valid CellML identifier must contain at least one letter',
+    '3.4.1.2.model_name_invalid':
+        'Model name must be a valid CellML identifier',
     # 3.4.2.1 Components must have a name
-    #'3.4.2.1.component_name_missing':
-    #    'name attribute is required',
+    '3.4.2.1.component_name_missing':
+        'Component element must have a name attribute',
     # 3.4.2.1 Components contain only units, variable, reaction, math
-    #'3.4.2.1.component_with_component':
-    #    'Unexpected element component',
-    #'3.4.2.1.component_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'3.4.2.1.component_with_connection':
-    #    'Unexpected element connection',
-    #'3.4.2.1.component_with_group':
-    #    'Unexpected element group',
-    #'3.4.2.1.component_with_map_components':
-    #    'Unexpected element map_components',
-    #'3.4.2.1.component_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'3.4.2.1.component_with_model':
-    #    'Unexpected element model',
-    #'3.4.2.1.component_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'3.4.2.1.component_with_role':
-    #    'Unexpected element role',
-    #'3.4.2.1.component_with_unit':
-    #    'Unexpected element unit',
-    #'3.4.2.1.component_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '3.4.2.1.component_with_component':
+        'found element of type cellml:component',
+    '3.4.2.1.component_with_component_ref':
+        'found element of type cellml:component_ref',
+    '3.4.2.1.component_with_connection':
+        'found element of type cellml:connection',
+    '3.4.2.1.component_with_group':
+        'found element of type cellml:group',
+    '3.4.2.1.component_with_map_components':
+        'found element of type cellml:map_components',
+    '3.4.2.1.component_with_map_variables':
+        'found element of type cellml:map_variables',
+    '3.4.2.1.component_with_model':
+        'found element of type cellml:model',
+    '3.4.2.1.component_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '3.4.2.1.component_with_role':
+        'found element of type cellml:role',
+    '3.4.2.1.component_with_unit':
+        'found element of type cellml:unit',
+    '3.4.2.1.component_with_variable_ref':
+        'found element of type cellml:variable_ref',
     ## 3.4.2.2 Component names must be unique
-    #'3.4.2.2.component_name_duplicate':
-    #    'More than one component in the model named',
+    '3.4.2.2.component_name_duplicate':
+        'Component name must be unique',
     ## 3.4.2.2 A component name must be a valid identifier
-    #'3.4.2.2.component_name_invalid':
-    #    'A valid CellML identifier must contain at least one letter',
+    '3.4.2.2.component_name_invalid':
+        'Component name must be a valid CellML identifier',
     ## 3.4.3.1 Variables can't contain any elements
-    #'3.4.3.1.variable_with_component':
-    #    'Unexpected element component',
-    #'3.4.3.1.variable_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'3.4.3.1.variable_with_connection':
-    #    'Unexpected element connection',
-    #'3.4.3.1.variable_with_group':
-    #    'Unexpected element group',
-    #'3.4.3.1.variable_with_map_components':
-    #    'Unexpected element map_component',
-    #'3.4.3.1.variable_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'3.4.3.1.variable_with_math':
-    #'Unexpected element math',
-    #'3.4.3.1.variable_with_model':
-    #    'Unexpected element model',
-    #'3.4.3.1.variable_with_reaction':
-    #    'Unexpected element reaction',
-    #'3.4.3.1.variable_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'3.4.3.1.variable_with_role':
-    #    'Unexpected element role',
-    #'3.4.3.1.variable_with_unit':
-    #    'Unexpected element unit',
-    #'3.4.3.1.variable_with_units':
-    #    'Unexpected element units',
-    #'3.4.3.1.variable_with_variable':
-    #    'Unexpected element variable',
-    #'3.4.3.1.variable_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '3.4.3.1.variable_with_component':
+        'found element of type cellml:component',
+    '3.4.3.1.variable_with_component_ref':
+        'found element of type cellml:component_ref',
+    '3.4.3.1.variable_with_connection':
+        'found element of type cellml:connection',
+    '3.4.3.1.variable_with_group':
+        'found element of type cellml:group',
+    '3.4.3.1.variable_with_map_components':
+        'found element of type cellml:map_components',
+    '3.4.3.1.variable_with_map_variables':
+        'found element of type cellml:map_variables',
+    '3.4.3.1.variable_with_math':
+        'found element of type mathml:math',
+    '3.4.3.1.variable_with_model':
+        'found element of type cellml:model',
+    '3.4.3.1.variable_with_reaction':
+        'found element of type cellml:reaction',
+    '3.4.3.1.variable_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '3.4.3.1.variable_with_role':
+        'found element of type cellml:role',
+    '3.4.3.1.variable_with_unit':
+        'found element of type cellml:unit',
+    '3.4.3.1.variable_with_units':
+        'found element of type cellml:units',
+    '3.4.3.1.variable_with_variable':
+        'found element of type cellml:variable',
+    '3.4.3.1.variable_with_variable_ref':
+        'found element of type cellml:variable_ref',
     # 3.4.3.1 Variables must have a name attribute
-    #'3.4.3.1.variable_name_missing':
-    #    'name attribute is required',
+    '3.4.3.1.variable_name_missing':
+        'Variable element must have a name attribute',
     # 3.4.3.1 Variables must have a units attribute
-    #'3.4.3.1.variable_units_missing':
-    #    'MUST define a units attribute',
+    '3.4.3.1.variable_units_missing':
+        'Variable element must have a units attribute',
     # 3.4.3.2 A variable name must be an identifier
-    #'3.4.3.2.variable_name_invalid':
-    #    'A valid CellML identifier must only contain alphanumeric',
+    '3.4.3.2.variable_name_invalid':
+        'Variable name must be a valid CellML identifier',
     # 3.4.3.2 A variable name must be unique with the component
-    #'3.4.3.2.variable_name_duplicate':
-    #    'There is more than one variable in the same component called',
+    '3.4.3.2.variable_name_duplicate':
+        'Variable name must be unique',
     # 3.4.3.3 A variable must reference known units
-    #'3.4.3.3.variable_units_unknown':
-    #    'Invalid units on variable',
+    '3.4.3.3.variable_units_unknown':
+        'must reference a units element',
     # 3.4.3.3 A variable cannot reference another component's units
-    #'3.4.3.3.variable_units_other_component':
-    #    'Invalid units on variable',
+    '3.4.3.3.variable_units_other_component':
+        'must reference a units element',
     # 3.4.3.4 A public interface must be one of in/out/none
-    #'3.4.3.4.variable_interface_public_invalid':
-    #    'the value of the public_interface / private_interface attribute MUST',
+    '3.4.3.4.variable_interface_public_invalid':
+        'Public interface must be',
     # 3.4.3.5 A private interface must be one of in/out/none
-    #'3.4.3.5.variable_interface_private_invalid':
-    #    'the value of the public_interface / private_interface attribute MUST',
+    '3.4.3.5.variable_interface_private_invalid':
+        'Private interface must be',
     # 3.4.3.6 The private and public interface can't both be in
-    #'3.4.3.6.variable_interfaces_both_in':
-    #    'Cannot have two in interfaces on variable',
+    '3.4.3.6.variable_interfaces_both_in':
+        'can not both be "in"',
     # 3.4.3.7 The initial value (if present) must be a real number
-    #'3.4.3.7.variable_initial_value_empty':
-    #    'Expected a real number',
-    #'3.4.3.7.variable_initial_value_invalid':
-    #    'Expected a real number',
+    '3.4.3.7.variable_initial_value_empty':
+        'initial_value must be a real number',
+    '3.4.3.7.variable_initial_value_invalid':
+        'initial_value must be a real number',
     # 3.4.3.8 A variable can't have an initial value and an "in" interface
-    #'3.4.3.8.variable_interfaces_private_in_and_initial':
-    #    'cannot have initial value',
-    #'3.4.3.8.variable_interfaces_public_in_and_initial':
-    #    'cannot have initial value',
+    '3.4.3.8.variable_interfaces_private_in_and_initial':
+        'initial value cannot be set',
+    '3.4.3.8.variable_interfaces_public_in_and_initial':
+        'initial value cannot be set',
     # 3.4.4.1 A connection must contain exactly one map_components
-    #'3.4.4.1.connection_map_components_missing':
-    #    'MUST contain exactly one',
-    #'3.4.4.1.connection_map_components_multiple':
-    #    'MUST contain exactly one',
+    '3.4.4.1.connection_map_components_missing':
+        'exactly one map_components',
+    '3.4.4.1.connection_map_components_multiple':
+        'exactly one map_components',
     # 3.4.4.1 A component must contain at least one map_variables
-    #'3.4.4.1.connection_map_variables_missing_1':
-    #    'MUST contain at least one',
-    #'3.4.4.1.connection_map_variables_missing_2':
-    #    'MUST contain at least one',
+    '3.4.4.1.connection_map_variables_missing_1':
+        'at least one map_variables',
+    '3.4.4.1.connection_map_variables_missing_2':
+        'at least one map_variables',
     # 3.4.4.1 A connection must have map_components and map_variables
-    #'3.4.4.1.connection_only_extensions':
-    #    'MUST contain at least one',
-    #'3.4.4.1.connection_with_math':
-    #    'Unexpected element math',
-    #'3.4.4.1.connection_empty':
-    #    'element MUST contain at least one',
-    # 3.4.4.1 A coonnection cannot have attributes
-    #'3.4.4.1.connection_with_name_attribute':
-    #    'Unexpected attribute name',
+    '3.4.4.1.connection_only_extensions':
+        'exactly one map_components',
+    '3.4.4.1.connection_with_math':
+        'found element of type mathml:math',
+    '3.4.4.1.connection_empty':
+        'exactly one map_component',
+    # 3.4.4.1 A connection cannot have attributes
+    '3.4.4.1.connection_with_name_attribute':
+        'Unexpected attribute name',
     # 3.4.4.1 A connection can only contain map_components and map_variables
-    #'3.4.4.1.connection_with_component':
-    #    'Unexpected element component',
-    #'3.4.4.1.connection_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'3.4.4.1.connection_with_connection':
-    #    'Unexpected element connection',
-    #'3.4.4.1.connection_with_group':
-    #    'Unexpected element group',
-    #'3.4.4.1.connection_with_map_components':
-    #    'Unexpected element map_components',
-    #'3.4.4.1.connection_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'3.4.4.1.connection_with_model':
-    #    'Unexpected element model',
-    #'3.4.4.1.connection_with_reaction':
-    #    'Unexpected element reaction',
-    #'3.4.4.1.connection_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'3.4.4.1.connection_with_role':
-    #    'Unexpected element role',
-    #'3.4.4.1.connection_with_unit':
-    #    'Unexpected element unit',
-    #'3.4.4.1.connection_with_units':
-    #    'Unexpected element units',
-    #'3.4.4.1.connection_with_variable_ref':
-    #    'Unexpected element variable_ref',
-    #'3.4.4.1.connection_with_variable':
-    #    'Unexpected element variable',
+    '3.4.4.1.connection_with_component':
+        'found element of type cellml:component',
+    '3.4.4.1.connection_with_component_ref':
+        'found element of type cellml:component_ref',
+    '3.4.4.1.connection_with_connection':
+        'found element of type cellml:connection',
+    '3.4.4.1.connection_with_group':
+        'found element of type cellml:group',
+    '3.4.4.1.connection_with_map_components':
+        'found element of type cellml:map_components',
+    '3.4.4.1.connection_with_map_variables':
+        'found element of type cellml:map_variables',
+    '3.4.4.1.connection_with_model':
+        'found element of type cellml:model',
+    '3.4.4.1.connection_with_reaction':
+        'found element of type cellml:reaction',
+    '3.4.4.1.connection_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '3.4.4.1.connection_with_role':
+        'found element of type cellml:role',
+    '3.4.4.1.connection_with_unit':
+        'found element of type cellml:unit',
+    '3.4.4.1.connection_with_units':
+        'found element of type cellml:units',
+    '3.4.4.1.connection_with_variable_ref':
+        'found element of type cellml:variable_ref',
+    '3.4.4.1.connection_with_variable':
+        'found element of type cellml:variable',
     # 3.4.5.1 A map_components must declare component_1 and component_2
-    #'3.4.5.1.map_components_component_1_missing':
-    #    'element MUST define a component_1 attribute',
-    #'3.4.5.1.map_components_component_2_missing':
-    #    'element MUST define a component_2 attribute',
+    '3.4.5.1.map_components_component_1_missing':
+        'must define a component_1 attribute',
+    '3.4.5.1.map_components_component_2_missing':
+        'must define a component_2 attribute',
     # 3.4.5.1 A map_components cannot have cellml children or math
-    #'3.4.5.1.map_components_with_component':
-    #    'Unexpected element component',
-    #'3.4.5.1.map_components_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'3.4.5.1.map_components_with_connection':
-    #    'Unexpected element connection',
-    #'3.4.5.1.map_components_with_group':
-    #    'Unexpected element group',
-    #'3.4.5.1.map_components_with_map_components':
-    #    'Unexpected element map_components',
-    #'3.4.5.1.map_components_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'3.4.5.1.map_components_with_math':
-    #    'Unexpected element math',
-    #'3.4.5.1.map_components_with_model':
-    #    'Unexpected element model',
-    #'3.4.5.1.map_components_with_reaction':
-    #    'Unexpected element reaction',
-    #'3.4.5.1.map_components_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'3.4.5.1.map_components_with_role':
-    #    'Unexpected element role',
-    #'3.4.5.1.map_components_with_unit':
-    #    'Unexpected element unit',
-    #'3.4.5.1.map_components_with_units':
-    #    'Unexpected element units',
-    #'3.4.5.1.map_components_with_variable':
-    #    'Unexpected element variable',
-    #'3.4.5.1.map_components_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '3.4.5.1.map_components_with_component':
+        'found element of type cellml:component',
+    '3.4.5.1.map_components_with_component_ref':
+        'found element of type cellml:component_ref',
+    '3.4.5.1.map_components_with_connection':
+        'found element of type cellml:connection',
+    '3.4.5.1.map_components_with_group':
+        'found element of type cellml:group',
+    '3.4.5.1.map_components_with_map_components':
+        'found element of type cellml:map_components',
+    '3.4.5.1.map_components_with_map_variables':
+        'found element of type cellml:map_variables',
+    '3.4.5.1.map_components_with_math':
+        'found element of type mathml:math',
+    '3.4.5.1.map_components_with_model':
+        'found element of type cellml:model',
+    '3.4.5.1.map_components_with_reaction':
+        'found element of type cellml:reaction',
+    '3.4.5.1.map_components_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '3.4.5.1.map_components_with_role':
+        'found element of type cellml:role',
+    '3.4.5.1.map_components_with_unit':
+        'found element of type cellml:unit',
+    '3.4.5.1.map_components_with_units':
+        'found element of type cellml:units',
+    '3.4.5.1.map_components_with_variable':
+        'found element of type cellml:variable',
+    '3.4.5.1.map_components_with_variable_ref':
+        'found element of type cellml:variable_ref',
     # 3.4.5.2 component_1 must refer to an existing component
-    #'3.4.5.2.map_components_component_1_nonexistent':
-    #    'Component_1 attribute doesn\'t refer to a valid component',
+    '3.4.5.2.map_components_component_1_nonexistent':
+        'component_1 attribute must refer to a component in the current model',
     # 3.4.5.3 component_2 must refer to an existing component
-    #'3.4.5.3.map_components_component_2_nonexistent':
-    #    'Component_2 attribute doesn\'t refer to a valid component',
+    '3.4.5.3.map_components_component_2_nonexistent':
+        'component_2 attribute must refer to a component in the current model',
     # 3.4.5.4 component_1 cannot match component_2
-    #'3.4.5.4.map_components_component_1_equals_2':
-    #    'Cannot connect a component to itself',
+    '3.4.5.4.map_components_component_1_equals_2':
+        'must be different',
     # 3.4.5.4 Each map_components in a model must be unique
-    #'3.4.5.4.map_components_duplicate':
-    #    'There is more than one connection element for the same pair',
-    #'3.4.5.4.map_components_duplicate_mirrored':
-    #    'There is more than one connection element for the same pair',
+    '3.4.5.4.map_components_duplicate':
+        'Each connection in a model must connect a unique pair',
+    '3.4.5.4.map_components_duplicate_mirrored':
+        'Each connection in a model must connect a unique pair',
     # 3.4.6.1 A map_variables must declare variable_1 and variable_2
-    #'3.4.6.1.map_variables_variable_1_missing':
-    #    'MUST define a variable_1 attribute',
-    #'3.4.6.1.map_variables_variable_2_missing':
-    #    'MUST define a variable_2 attribute',
+    '3.4.6.1.map_variables_variable_1_missing':
+        'must define a variable_1 attribute',
+    '3.4.6.1.map_variables_variable_2_missing':
+        'must define a variable_2 attribute',
     # 3.4.6.1 A map_variables cannot have cellml children or math
-    #'3.4.6.1.map_variables_with_component':
-    #    'Unexpected element component',
-    #'3.4.6.1.map_variables_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'3.4.6.1.map_variables_with_connection':
-    #    'Unexpected element connection',
-    #'3.4.6.1.map_variables_with_group':
-    #    'Unexpected element group',
-    #'3.4.6.1.map_variables_with_map_components':
-    #    'Unexpected element map_components',
-    #'3.4.6.1.map_variables_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'3.4.6.1.map_variables_with_math':
-    #    'Unexpected element math',
-    #'3.4.6.1.map_variables_with_model':
-    #    'Unexpected element model',
-    #'3.4.6.1.map_variables_with_reaction':
-    #    'Unexpected element reaction',
-    #'3.4.6.1.map_variables_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'3.4.6.1.map_variables_with_role':
-    #    'Unexpected element role',
-    #'3.4.6.1.map_variables_with_unit':
-    #    'Unexpected element unit',
-    #'3.4.6.1.map_variables_with_units':
-    #    'Unexpected element units',
-    #'3.4.6.1.map_variables_with_variable':
-    #    'Unexpected element variable',
-    #'3.4.6.1.map_variables_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '3.4.6.1.map_variables_with_component':
+        'found element of type cellml:component',
+    '3.4.6.1.map_variables_with_component_ref':
+        'found element of type cellml:component_ref',
+    '3.4.6.1.map_variables_with_connection':
+        'found element of type cellml:connection',
+    '3.4.6.1.map_variables_with_group':
+        'found element of type cellml:group',
+    '3.4.6.1.map_variables_with_map_components':
+        'found element of type cellml:map_components',
+    '3.4.6.1.map_variables_with_map_variables':
+        'found element of type cellml:map_variables',
+    '3.4.6.1.map_variables_with_math':
+        'found element of type cellml:math',
+    '3.4.6.1.map_variables_with_model':
+        'found element of type cellml:model',
+    '3.4.6.1.map_variables_with_reaction':
+        'found element of type cellml:reaction',
+    '3.4.6.1.map_variables_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '3.4.6.1.map_variables_with_role':
+        'found element of type cellml:role',
+    '3.4.6.1.map_variables_with_unit':
+        'found element of type cellml:unit',
+    '3.4.6.1.map_variables_with_units':
+        'found element of type cellml:units',
+    '3.4.6.1.map_variables_with_variable':
+        'found element of type cellml:variable',
+    '3.4.6.1.map_variables_with_variable_ref':
+        'found element of type cellml:variable_ref',
     # 3.4.6.2 variable_1 must refer to an existing variable in component_1
     #'3.4.6.2.map_variables_variable_1_nonexistent':
     #    'Variable_1 attribute doesn\'t refer to a valid variable',
@@ -538,40 +541,40 @@ expected_messages = {
     #'4.4.4.modify_nonexistent':
     #    'ci element references variable which doesn\'t exist',
     # 5.4.1.1 Unitses must have a name
-    #'5.4.1.1.units_name_missing':
-    #    'the name attribute is required here',
+    '5.4.1.1.units_name_missing':
+        'Units element must have a name attribute',
     # 5.4.1.1 A units can only contain unit elements
-    #'5.4.1.1.units_with_component':
-    #    'Unexpected element component',
-    #'5.4.1.1.units_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'5.4.1.1.units_with_connection':
-    #    'Unexpected element connection',
-    #'5.4.1.1.units_with_group':
-    #    'Unexpected element group',
-    #'5.4.1.1.units_with_map_components':
-    #    'Unexpected element map_components',
-    #'5.4.1.1.units_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'5.4.1.1.units_with_math':
-    #    'Unexpected element math',
-    #'5.4.1.1.units_with_model':
-    #    'Unexpected element model',
-    #'5.4.1.1.units_with_reaction':
-    #    'Unexpected element reaction',
-    #'5.4.1.1.units_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'5.4.1.1.units_with_role':
-    #    'Unexpected element role',
-    #'5.4.1.1.units_with_units':
-    #    'Unexpected element units',
-    #'5.4.1.1.units_with_variable':
-    #    'Unexpected element variable',
-    #'5.4.1.1.units_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '5.4.1.1.units_with_component':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_component_ref':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_connection':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_group':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_map_components':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_map_variables':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_math':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_model':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_reaction':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_relationship_ref':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_role':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_units':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_variable':
+        'found element of type cellml:component_ref',
+    '5.4.1.1.units_with_variable_ref':
+        'found element of type cellml:component_ref',
     # 5.4.1.2 A units name must be a valid identifier
-    #'5.4.1.2.units_name_invalid':
-    #    'A valid CellML identifier must contain at least one letter',
+    '5.4.1.2.units_name_invalid':
+        'Units name must be a valid CellML identifier',
     # 5.4.1.2 Units names must be unique (within model or local component)
     #'5.4.1.2.units_name_duplicate_1':
     #    'More than one units in the model named',
@@ -656,36 +659,36 @@ expected_messages = {
     #'5.4.2.1.unit_units_missing':
     #    'MUST define a units attribute',
     # 5.4.2.1 A unit cannot have CellML children
-    #'5.4.2.1.unit_with_component':
-    #    'Unexpected element component',
-    #'5.4.2.1.unit_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'5.4.2.1.unit_with_connection':
-    #    'Unexpected element connection',
-    #'5.4.2.1.unit_with_group':
-    #    'Unexpected element group',
-    #'5.4.2.1.unit_with_map_components':
-    #    'Unexpected element map_components',
-    #'5.4.2.1.unit_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'5.4.2.1.unit_with_math':
-    #    'Unexpected element math',
-    #'5.4.2.1.unit_with_model':
-    #    'Unexpected element model',
-    #'5.4.2.1.unit_with_reaction':
-    #    'Unexpected element reaction',
-    #'5.4.2.1.unit_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'5.4.2.1.unit_with_role':
-    #    'Unexpected element role',
-    #'5.4.2.1.unit_with_unit':
-    #    'Unexpected element unit',
-    #'5.4.2.1.unit_with_units':
-    #    'Unexpected element units',
-    #'5.4.2.1.unit_with_variable':
-    #    'Unexpected element variable',
-    #'5.4.2.1.unit_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '5.4.2.1.unit_with_component':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_component_ref':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_connection':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_group':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_map_components':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_map_variables':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_math':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_model':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_reaction':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_relationship_ref':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_role':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_unit':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_units':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_variable':
+        'found element of type cellml:component_ref',
+    '5.4.2.1.unit_with_variable_ref':
+        'found element of type cellml:component_ref',
     # 5.4.2.2 A unit must refer to an existing units
     #'5.4.2.2.unit_units_invalid':
     #    'units could not be found',
@@ -712,71 +715,71 @@ expected_messages = {
     #'6.4.1.1.group_only_extensions':
     #    'MUST contain at least one',
     # 6.4.1.1 A group can only contain component_refs and relationship_refs
-    #'6.4.1.1.group_with_component':
-    #    'Unexpected element component',
-    #'6.4.1.1.group_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'6.4.1.1.group_with_connection':
-    #    'Unexpected element connection',
-    #'6.4.1.1.group_with_group':
-    #    'Unexpected element group',
-    #'6.4.1.1.group_with_map_components':
-    #    'Unexpected element map_components',
-    #'6.4.1.1.group_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'6.4.1.1.group_with_math':
-    #    'Unexpected element math',
-    #'6.4.1.1.group_with_model':
-    #    'Unexpected element model',
-    #'6.4.1.1.group_with_reaction':
-    #    'Unexpected element reaction',
-    #'6.4.1.1.group_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'6.4.1.1.group_with_role':
-    #    'Unexpected element role',
-    #'6.4.1.1.group_with_unit':
-    #    'Unexpected element unit',
-    #'6.4.1.1.group_with_units':
-    #    'Unexpected element units',
-    #'6.4.1.1.group_with_variable_ref':
-    #    'Unexpected element variable_ref',
-    #'6.4.1.1.group_with_variable':
-    #    'Unexpected element variable',
+    '6.4.1.1.group_with_component':
+        'found element of type cellml:component',
+    '6.4.1.1.group_with_component_ref':
+        'found element of type cellml:component_ref',
+    '6.4.1.1.group_with_connection':
+        'found element of type cellml:connection',
+    '6.4.1.1.group_with_group':
+        'found element of type cellml:group',
+    '6.4.1.1.group_with_map_components':
+        'found element of type cellml:map_components',
+    '6.4.1.1.group_with_map_variables':
+        'found element of type cellml:map_variables',
+    '6.4.1.1.group_with_math':
+        'found element of type mathml:math',
+    '6.4.1.1.group_with_model':
+        'found element of type cellml:model',
+    '6.4.1.1.group_with_reaction':
+        'found element of type cellml:reaction',
+    '6.4.1.1.group_with_relationship_ref':
+        'found element of type cellml:relationship_ref',
+    '6.4.1.1.group_with_role':
+        'found element of type cellml:role',
+    '6.4.1.1.group_with_unit':
+        'found element of type cellml:unit',
+    '6.4.1.1.group_with_units':
+        'found element of type cellml:units',
+    '6.4.1.1.group_with_variable_ref':
+        'found element of type cellml:variable_ref',
+    '6.4.1.1.group_with_variable':
+        'found element of type cellml:variable',
     # 6.4.2.1 A relationship_ref must define a relationship - although it can
     #         be either namespaceless, or in any extension namespace!
     #'6.4.2.1.relationship_ref_relationship_missing':
     #    'Relationship attribute is mandatory',
     # 6.4.2.1 A relationship_ref cannot have any CellML children
-    #'6.4.2.1.relationship_ref_with_component':
-    #    'Unexpected element component',
-    #'6.4.2.1.relationship_ref_with_component_ref':
-    #    'Unexpected element component_ref',
-    #'6.4.2.1.relationship_ref_with_connection':
-    #    'Unexpected element connection',
-    #'6.4.2.1.relationship_ref_with_group':
-    #    'Unexpected element group',
-    #'6.4.2.1.relationship_ref_with_map_components':
-    #    'Unexpected element map_components',
-    #'6.4.2.1.relationship_ref_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'6.4.2.1.relationship_ref_with_math':
-    #    'Unexpected element math',
-    #'6.4.2.1.relationship_ref_with_model':
-    #    'Unexpected element model',
-    #'6.4.2.1.relationship_ref_with_reaction':
-    #    'Unexpected element reaction',
-    #'6.4.2.1.relationship_ref_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'6.4.2.1.relationship_ref_with_role':
-    #    'Unexpected element role',
-    #'6.4.2.1.relationship_ref_with_unit':
-    #    'Unexpected element unit',
-    #'6.4.2.1.relationship_ref_with_units':
-    #    'Unexpected element units',
-    #'6.4.2.1.relationship_ref_with_variable':
-    #    'Unexpected element variable',
-    #'6.4.2.1.relationship_ref_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '6.4.2.1.relationship_ref_with_component':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_component_ref':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_connection':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_group':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_map_components':
+       'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_map_variables':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_math':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_model':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_reaction':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_relationship_ref':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_role':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_unit':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_units':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_variable':
+        'found element of type cellml:component_ref',
+    '6.4.2.1.relationship_ref_with_variable_ref':
+        'found element of type cellml:component_ref',
     # 6.4.2.2 When not in a namespace, a relationship_ref's relationship must
     # be either containment or encapsulation.
     #'6.4.2.2.relationship_ref_relationship_invalid':
@@ -800,34 +803,34 @@ expected_messages = {
     #'6.4.3.1.component_ref_component_missing':
     #    'must define a component attribute',
     # 6.4.3.1 A component_ref can only contain a component_ref
-    #'6.4.3.1.component_ref_with_component':
-    #    'Unexpected element component',
-    #'6.4.3.1.component_ref_with_connection':
-    #    'Unexpected element connection',
-    #'6.4.3.1.component_ref_with_group':
-    #    'Unexpected element group',
-    #'6.4.3.1.component_ref_with_map_components':
-    #    'Unexpected element map_components',
-    #'6.4.3.1.component_ref_with_map_variables':
-    #    'Unexpected element map_variables',
-    #'6.4.3.1.component_ref_with_math':
-    #    'Unexpected element math',
-    #'6.4.3.1.component_ref_with_model':
-    #    'Unexpected element model',
-    #'6.4.3.1.component_ref_with_reaction':
-    #    'Unexpected element reaction',
-    #'6.4.3.1.component_ref_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
-    #'6.4.3.1.component_ref_with_role':
-    #    'Unexpected element role',
-    #'6.4.3.1.component_ref_with_unit':
-    #    'Unexpected element unit',
-    #'6.4.3.1.component_ref_with_units':
-    #    'Unexpected element units',
-    #'6.4.3.1.component_ref_with_variable':
-    #    'Unexpected element variable',
-    #'6.4.3.1.component_ref_with_variable_ref':
-    #    'Unexpected element variable_ref',
+    '6.4.3.1.component_ref_with_component':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_connection':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_group':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_map_components':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_map_variables':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_math':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_model':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_reaction':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_relationship_ref':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_role':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_unit':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_units':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_variable':
+        'found element of type cellml:component_ref',
+    '6.4.3.1.component_ref_with_variable_ref':
+        'found element of type cellml:component_ref',
     # 6.4.3.2 A component's children cannot be declared two places
     #'6.4.3.2.component_ref_children_declared_twice_1':
     #    'elements that reference a given component may contain further',
@@ -854,33 +857,19 @@ expected_messages = {
     #    'must contain at least one',
     # 7.4.1.1 A reaction can only contain a variable_ref
     #'7.4.1.1.reaction_with_component':
-    #    'Unexpected element component',
     #'7.4.1.1.reaction_with_component_ref':
-    #    'Unexpected element component_ref',
     #'7.4.1.1.reaction_with_connection':
-    #    'Unexpected element connection',
     #'7.4.1.1.reaction_with_group':
-    #    'Unexpected element group',
     #'7.4.1.1.reaction_with_map_components':
-    #    'Unexpected element map_components',
     #'7.4.1.1.reaction_with_map_variables':
-    #    'Unexpected element map_variables',
     #'7.4.1.1.reaction_with_math':
-    #    'Unexpected element math',
     #'7.4.1.1.reaction_with_model':
-    #    'Unexpected element model',
     #'7.4.1.1.reaction_with_reaction':
-    #    'Unexpected element reaction',
     #'7.4.1.1.reaction_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
     #'7.4.1.1.reaction_with_role':
-    #    'Unexpected element role',
     #'7.4.1.1.reaction_with_unit':
-    #    'Unexpected element unit',
     #'7.4.1.1.reaction_with_units':
-    #    'Unexpected element units',
     #'7.4.1.1.reaction_with_variable':
-    #    'Unexpected element variable',
     # 7.4.1.2 The reversible attribute can only be yes or no
     #'7.4.1.2.reaction_reversible_invalid':
     #    'the reversible attribute must have a value of "yes" or "no"',
@@ -892,65 +881,37 @@ expected_messages = {
     #    'must define a variable attribute',
     # 7.4.2.1 A variable_ref can only contain a role
     #'7.4.2.1.variable_ref_with_component_ref':
-    #    'Unexpected element component_ref',
     #'7.4.2.1.variable_ref_with_component':
-    #    'Unexpected element component',
     #'7.4.2.1.variable_ref_with_connection':
-    #    'Unexpected element connection',
     #'7.4.2.1.variable_ref_with_group':
-    #    'Unexpected element group',
     #'7.4.2.1.variable_ref_with_map_components':
-    #    'Unexpected element map_components',
     #'7.4.2.1.variable_ref_with_map_variables':
-    #    'Unexpected element map_variables',
     #'7.4.2.1.variable_ref_with_math':
-    #    'Unexpected element math',
     #'7.4.2.1.variable_ref_with_model':
-    #    'Unexpected element model',
     #'7.4.2.1.variable_ref_with_reaction':
-    #    'Unexpected element reaction',
     #'7.4.2.1.variable_ref_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
     #'7.4.2.1.variable_ref_with_unit':
-    #    'Unexpected element unit',
     #'7.4.2.1.variable_ref_with_units':
-    #    'Unexpected element units',
     #'7.4.2.1.variable_ref_with_variable':
-    #    'Unexpected element variable',
     #'7.4.2.1.variable_ref_with_variable_ref':
-    #    'Unexpected element variable_ref',
     # 7.4.3.1 A role must define a role attribute
     #'7.4.3.1.role_role_missing':
     #    'must define a role attribute',
     # 7.4.3.1 A role cannot contain any CellML children (only math)
     #'7.4.3.1.role_with_component':
-    #    'Unexpected element component',
     #'7.4.3.1.role_with_component_ref':
-    #    'Unexpected element component_ref',
     #'7.4.3.1.role_with_connection':
-    #    'Unexpected element connection',
     #'7.4.3.1.role_with_group':
-    #    'Unexpected element group',
     #'7.4.3.1.role_with_map_components':
-    #    'Unexpected element map_components',
     #'7.4.3.1.role_with_map_variables':
-    #    'Unexpected element map_variables',
     #'7.4.3.1.role_with_model':
-    #    'Unexpected element model',
     #'7.4.3.1.role_with_reaction':
-    #    'Unexpected element reaction',
     #'7.4.3.1.role_with_relationship_ref':
-    #    'Unexpected element relationship_ref',
     #'7.4.3.1.role_with_role':
-    #    'Unexpected element role',
     #'7.4.3.1.role_with_unit':
-    #    'Unexpected element unit',
     #'7.4.3.1.role_with_units':
-    #    'Unexpected element units',
     #'7.4.3.1.role_with_variable_ref':
-    #    'Unexpected element variable_ref',
     #'7.4.3.1.role_with_variable':
-    #    'Unexpected element variable',
     # 7.4.3.2 A role must define a valid role attribute
     #'7.4.3.2.role_role_invalid':
     #    'must take one of the following seven values',
@@ -974,8 +935,6 @@ known_issues = {
     '2.4.4.text_in_reaction',
     '2.4.4.text_in_role',
     '2.4.4.text_in_variable_ref',
-    # 2.5.2 Attributes in the CellML namespace are not detected
-    '2.5.2.attribute_in_cellml_namespace'
 
 
 }

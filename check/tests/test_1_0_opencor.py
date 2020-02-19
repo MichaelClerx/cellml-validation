@@ -397,7 +397,7 @@ expected_messages = {
         'Unexpected element math',
     '3.4.4.1.connection_empty':
         'element MUST contain at least one',
-    # 3.4.4.1 A coonnection cannot have attributes
+    # 3.4.4.1 A connection cannot have attributes
     '3.4.4.1.connection_with_name_attribute':
         'Unexpected attribute name',
     # 3.4.4.1 A connection can only contain map_components and map_variables
