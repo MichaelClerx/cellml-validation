@@ -13,7 +13,7 @@ from . import shared
 from .report import Report_1_0 as Report
 
 try:
-    import myokit
+    import myokit   # noqa
     NO_MYOKIT = False
 except ImportError:
     NO_MYOKIT = True
@@ -25,62 +25,84 @@ false_negatives = {
         'must be a valid CellML identifier',
     # No reaction support
     '2.4.3.reaction_with_extensions':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '2.4.3.role_with_extensions':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '2.4.3.variable_ref_with_extensions':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
+    # No reaction support
     '3.4.2.1.component_child_order_1':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '3.4.2.1.component_child_order_2':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '3.4.2.1.component_with_one_reaction':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '3.4.2.1.component_with_reactions':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
+    # Bases other than 10
+    '4.2.3_2.3.mathml_numbers_real_base':
+        'bases other than 10',
+        # Factorial is not supported
+    '4.2.3_4.3_mathml_functions_factorial':
+        'Unsupported element in apply',
+    # Only likes assignment form
+    '4.algebraic_model':
+        'Invalid expression found on the left-hand side of an equation',
+    '4.algebraic_ode_model':
+        'Invalid expression found on the left-hand side of an equation',
+    # Celsius is not supported
+    '5.2.1.units_celsius':
+        'unsupported units "celsius"',
+    # New base units are not supported
+    '5.2.7.unit_conversion_new_base_units':
+        'Defining new base units is not supported.',
+    '5.2.7.unit_checking_functions_factorial':
+        'Unsupported element in apply',
     # Non-zero offsets are not supported
     '5.2.7.unit_conversion_dimensionless_offset':
         'non-zero offsets are not supported',
     '5.2.7.unit_conversion_offset':
         'non-zero offsets are not supported',
     # New base units are not supported
-    '5.2.7.unit_conversion_new_base_units':
-        'Defining new base units is not supported.',
-    # New base units are not supported
     '5.4.1.1.units_base_units':
         'Defining new base units is not supported.',
     # Non-zero offsets are not supported
     '5.4.2.1.unit_offset_non_zero':
         'non-zero offsets are not supported',
-    # Unit prefixes can't be too big for floats
     '5.4.2.1.unit_prefix_exponent_multiplier_huge':
         'Unit prefix too large',
-    # Non-zero offsets are not supported
+    # New base units are not supported
     '5.4.2.7.unit_offset_non_zero_and_exponent_one':
         'non-zero offsets are not supported.',
+    # Factorials are not supported
+    '5.5.2.boolean_function_factorial':
+        'Unsupported element in apply',
     # No reaction support
     '7.4.1.2.reaction_reversible_no':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '7.4.1.2.reaction_reversible_yes':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '7.4.3.reaction_all_roles_and_attributes':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '7.4.3.reaction_reversible_no':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '7.4.3.reaction_simple':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '8.4.1.cmeta_id_in_reaction':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '8.4.1.cmeta_id_in_role':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '8.4.1.cmeta_id_in_variable_ref':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '8.4.2.rdf_in_reaction':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '8.4.2.rdf_in_role':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
     '8.4.2.rdf_in_variable_ref':
-        'Reaction elements are not supported.',
+        'Reactions are not supported.',
+    # Factorial is not supported
+    'C.3.3.unit_checking_function_factorial_operand_error':
+        'Unsupported element in apply',
 }
 
 
@@ -221,13 +243,13 @@ expected_messages = {
         'found element of type cellml:unit',
     '3.4.2.1.component_with_variable_ref':
         'found element of type cellml:variable_ref',
-    ## 3.4.2.2 Component names must be unique
+    # 3.4.2.2 Component names must be unique
     '3.4.2.2.component_name_duplicate':
         'Component name must be unique',
-    ## 3.4.2.2 A component name must be a valid identifier
+    # 3.4.2.2 A component name must be a valid identifier
     '3.4.2.2.component_name_invalid':
         'Component name must be a valid CellML identifier',
-    ## 3.4.3.1 Variables can't contain any elements
+    # 3.4.3.1 Variables can't contain any elements
     '3.4.3.1.variable_with_component':
         'found element of type cellml:component',
     '3.4.3.1.variable_with_component_ref':
@@ -790,7 +812,7 @@ expected_messages = {
     '6.4.2.1.relationship_ref_with_group':
         'found element of type cellml:group',
     '6.4.2.1.relationship_ref_with_map_components':
-       'found element of type cellml:map_components',
+        'found element of type cellml:map_components',
     '6.4.2.1.relationship_ref_with_map_variables':
         'found element of type cellml:map_variables',
     '6.4.2.1.relationship_ref_with_math':
@@ -1041,7 +1063,7 @@ class TestMyokit(object):
             os.path.join(check.REPORT_DIR, 'myokit_1_0.md'))
 
     @pytest.mark.skipif(NO_MYOKIT, reason='Myokit not found')
-    @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0(True))
+    @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
     def test_valid_model(self, name, path, log):
 
         # Validate model

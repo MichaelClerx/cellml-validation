@@ -7,6 +7,6 @@
     <unit units="ampere" prefix="1" />
     <unit units="becquerel" prefix="2" />
     <unit units="candela" prefix="0" />
-    <unit units="celsius" prefix="-3" />
+    <unit units="weber" prefix="-3" />
   </units>
 </model>

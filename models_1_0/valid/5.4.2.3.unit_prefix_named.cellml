@@ -7,7 +7,7 @@
     <unit units="ampere" prefix="yotta" />
     <unit units="becquerel" prefix="zetta" />
     <unit units="candela" prefix="exa" />
-    <unit units="celsius" prefix="peta" />
+    <unit units="weber" prefix="peta" />
     <unit units="coulomb" prefix="tera" />
     <unit units="farad" prefix="giga" />
     <unit units="gram" prefix="mega" />

@@ -253,7 +253,7 @@ class Report(object):
 
         for key, label in self._categories.items():
             # Category, with link
-            a = '[' + label + '](#' + self._anchors[key]  + ')'
+            a = '[' + label + '](#' + self._anchors[key] + ')'
 
             # Body
             c = self.count(key)
