@@ -816,23 +816,23 @@ expected_messages = {
     '6.4.2.2.relationship_ref_relationship_invalid':
         'Unknown relationship type',
     # 6.4.2.3 A relationship_ref name must be a cellml identifier
-    #'6.4.2.3.relationship_ref_name_invalid':
-    #    'A valid CellML identifier must contain at least one letter',
+    '6.4.2.3.relationship_ref_name_invalid':
+        'must be a valid CellML identifier',
     # 6.4.2.4 An encapsulation can not be named
-    #'6.4.2.4.relationship_ref_encapsulation_duplicate':
-    #    'A name attribute must not be defined',
-    #'6.4.2.4.relationship_ref_encapsulation_named':
-    #    'A name attribute must not be defined',
+    '6.4.2.4.relationship_ref_encapsulation_duplicate':
+        'Encapsulation relationships may not define a name',
+    '6.4.2.4.relationship_ref_encapsulation_named':
+        'Encapsulation relationships may not define a name',
     # 6.4.2.5 name/relationship pairs must be unique
-    #'6.4.2.5.relationship_ref_duplicate_named':
-    #    'Duplicate relationship_ref within group',
-    #'6.4.2.5.relationship_ref_duplicate_unnamed_1':
-    #    'Duplicate relationship_ref within group',
-    #'6.4.2.5.relationship_ref_duplicate_unnamed_2':
-    #    'Duplicate relationship_ref within group',
+    '6.4.2.5.relationship_ref_duplicate_named':
+        'must have a unique pair',
+    '6.4.2.5.relationship_ref_duplicate_unnamed_1':
+        'must have a unique pair',
+    '6.4.2.5.relationship_ref_duplicate_unnamed_2':
+        'must have a unique pair',
     # 6.4.3.1 A component_ref must define a component
-    #'6.4.3.1.component_ref_component_missing':
-    #    'must define a component attribute',
+    '6.4.3.1.component_ref_component_missing':
+        'A component_ref must define a component attribute',
     # 6.4.3.1 A component_ref can only contain a component_ref
     '6.4.3.1.component_ref_with_component':
         'found element of type cellml:component',
@@ -862,22 +862,12 @@ expected_messages = {
         'found element of type cellml:variable',
     '6.4.3.1.component_ref_with_variable_ref':
         'found element of type cellml:variable_ref',
-    # 6.4.3.2 A component's children cannot be declared in two places
-    #'6.4.3.2.component_ref_children_declared_twice_1':
-    #    'elements that reference a given component may contain further',
-    #'6.4.3.2.component_ref_children_declared_twice_2':
-    #    'elements that reference a given component may contain further',
-    #'6.4.3.2.component_ref_children_declared_twice_3':
-    #    'elements that reference a given component may contain further',
     # 6.4.3.2 The first component_ref in a containment must have children
     '6.4.3.2.component_ref_no_children_containment':
         'must have at least one child',
     # 6.4.3.2 The first component_ref in an encapsulation must have children
     '6.4.3.2.component_ref_no_children_encapsulation':
         'must have at least one child',
-    # 6.4.3.2 A hierarchy cannot be circular
-    #'6.4.3.2.component_ref_cycle_4':
-    #    'Encapsulation hierarchy cannot be circular',
     '6.4.3.2.component_ref_cycle_5':
         'Encapsulation hierarchy cannot be circular',
     '6.4.3.2.component_ref_cycle_6':
@@ -933,6 +923,10 @@ known_issues = {
     '6.4.3.2.component_ref_cycle_4',
     '6.4.3.2.component_ref_duplicate_child_1',
     '6.4.3.2.component_ref_duplicate_child_2',
+    # Myokit doesn't mind if relationships are spread over multiple groups
+    '6.4.3.2.component_ref_children_declared_twice_1',
+    '6.4.3.2.component_ref_children_declared_twice_2',
+    '6.4.3.2.component_ref_children_declared_twice_3',
     # Reactions are not supported
     '7.4.1.1.reaction_variable_ref_missing',
     '7.4.1.1.reaction_with_component',
@@ -1086,7 +1080,7 @@ class TestMyokit(object):
             pytest.fail()
 
     @pytest.mark.skipif(NO_MYOKIT, reason='Myokit not found')
-    @pytest.mark.parametrize(('name', 'path'), reversed(shared.list_fails_1_0()))
+    @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
     def test_invalid_model(self, name, path, log):
 
         # See if there's an expected error for this model
