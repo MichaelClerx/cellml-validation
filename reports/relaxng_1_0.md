@@ -1,8 +1,8 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 81% according to spec (624 out of 763)
-* 312 out of 316 valid files passed
+* 81% according to spec (625 out of 764)
+* 313 out of 317 valid files passed
 * 312 out of 447 invalid files detected
 
 Issues:
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|19|26|0|1|0|97%|
 |[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5-units)|97|44|2|42|0|76%|
+|[5. Units](#5-units)|98|44|2|42|0|76%|
 |[6. Grouping](#6-grouping)|15|55|2|17|0|78%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
@@ -396,8 +396,11 @@ Results per category
 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 8: Invalid attribute private_interface for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---
@@ -2062,6 +2065,8 @@ Results per category
 [5.4.2.1.unit_offset_zero](../models_1_0/valid/5.4.2.1.unit_offset_zero.cellml): Valid file passed validation.
 
 [5.4.2.1.unit_prefix_exponent_multiplier](../models_1_0/valid/5.4.2.1.unit_prefix_exponent_multiplier.cellml): Valid file passed validation.
+
+[5.4.2.1.unit_prefix_exponent_multiplier_huge](../models_1_0/valid/5.4.2.1.unit_prefix_exponent_multiplier_huge.cellml): Valid file passed validation.
 
 [5.4.2.1.unit_units_missing](../models_1_0/invalid/5.4.2.1.unit_units_missing.cellml): Error detected correctly.
 * Expected: ```Element unit failed to validate attributes```

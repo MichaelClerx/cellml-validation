@@ -1,8 +1,8 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (594 out of 763)
-* 316 out of 316 valid files passed
+* 77% according to spec (595 out of 764)
+* 317 out of 317 valid files passed
 * 278 out of 447 invalid files detected
 
 Issues:
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|19|25|0|2|0|95%|
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|2|0|17|0|73%|
-|[5. Units](#5-units)|99|41|0|45|0|75%|
+|[5. Units](#5-units)|100|41|0|45|0|75%|
 |[6. Grouping](#6-grouping)|17|46|0|26|0|70%|
 |[7. Reactions](#7-reactions)|5|56|0|23|0|72%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
@@ -298,10 +298,8 @@ Results per category
 #### 2.5.2
 
 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Error detected correctly.
-* Expected: ```The attribute 'cellml:name' is not allowed```
-* Output:
-  * ```Error on line 6: Element 'cellml:model', attribute 'cellml:name': The attribute 'cellml:name' is not allowed.```
-  * ```Error on line 6: Element 'cellml:model': The attribute 'name' is required but missing.```
+* Expected: ```The attribute 'cellml:private_interface' is not allowed```
+* Output: ```Error on line 8: Element 'cellml:variable', attribute 'cellml:private_interface': The attribute 'cellml:private_interface' is not allowed.```
 
 
 ---
@@ -1464,6 +1462,8 @@ Results per category
 [5.4.2.1.unit_offset_zero](../models_1_0/valid/5.4.2.1.unit_offset_zero.cellml): Valid file passed validation.
 
 [5.4.2.1.unit_prefix_exponent_multiplier](../models_1_0/valid/5.4.2.1.unit_prefix_exponent_multiplier.cellml): Valid file passed validation.
+
+[5.4.2.1.unit_prefix_exponent_multiplier_huge](../models_1_0/valid/5.4.2.1.unit_prefix_exponent_multiplier_huge.cellml): Valid file passed validation.
 
 [5.4.2.1.unit_units_missing](../models_1_0/invalid/5.4.2.1.unit_units_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:unit': The attribute 'units' is required```

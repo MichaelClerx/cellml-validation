@@ -1,17 +1,17 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 84% according to spec (32 out of 38)
+* 96% according to spec (155 out of 161)
 * 1 out of 1 valid files passed
-* 31 out of 37 invalid files detected
+* 154 out of 160 invalid files detected
 
 Issues:
 * 0 valid files failed validation
-* 2 invalid files passed validation
-* 4 invalid files failed validation for the wrong reason
+* 1 invalid files passed validation
+* 5 invalid files failed validation for the wrong reason
 
 Test implementation issues
-* **726 tests not run**
+* **603 tests not run**
 
 Results per category
 
@@ -20,8 +20,8 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|1|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|0|21|0|2|4|77%|
-|[3. Model structure](#3-model-structure)|0|0|0|0|0|0%|
+|[2. Fundamentals](#2-fundamentals)|0|22|0|1|4|81%|
+|[3. Model structure](#3-model-structure)|0|122|0|0|1|99%|
 |[4. Mathematics](#4-mathematics)|0|0|0|0|0|0%|
 |[5. Units](#5-units)|0|0|0|0|0|0%|
 |[6. Grouping](#6-grouping)|0|0|0|0|0|0%|
@@ -128,11 +128,12 @@ Results per category
 #### 2.4.2
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
-* Expected: ```Unexpected attribute "fruit"```
-* Output: ```Error on line 7. Unexpected attribute "fruit" found in cellml:model[@name="imaginary_attributes_1"].```
+* Expected: ```Unexpected attribute fruit```
+* Output: ```Error on line 7. Unexpected attribute fruit found in cellml:model[@name="imaginary_attributes_1"].```
 
-🔵 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): **Error not detected.**
-* Output: ```OK```
+🔶 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Error on line 8. Unexpected attribute cellml:fruit found in cellml:model[@name="imaginary_attributes_2"].```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
 * Expected: ```found element of type cellml:fruit```
@@ -265,9 +266,9 @@ Results per category
 
 #### 2.5.2
 
-🔶 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Expected error not set```
-* Output: ```Error on line 6. Model element must have a name attribute (3.4.1.1).```
+[2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): Error detected correctly.
+* Expected: ```Unexpected attribute cellml:private_interface```
+* Output: ```Error on line 8. Unexpected attribute cellml:private_interface found in cellml:variable[@name="v"].```
 
 ❗`3.4.1.1.model_child_order_1`: **Test not run**
 
@@ -275,9 +276,20 @@ Results per category
 
 ❗`3.4.1.1.model_empty`: **Test not run**
 
-❗`3.4.1.1.model_name_missing`: **Test not run**
 
-❗`3.4.1.1.model_with_component_ref`: **Test not run**
+---
+
+## 3. Model structure
+
+##### 3.4.1.1
+
+[3.4.1.1.model_name_missing](../models_1_0/invalid/3.4.1.1.model_name_missing.cellml): Error detected correctly.
+* Expected: ```must have a name attribute```
+* Output: ```Error on line 4. Model element must have a name attribute (3.4.1.1).```
+
+[3.4.1.1.model_with_component_ref](../models_1_0/invalid/3.4.1.1.model_with_component_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component_ref```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_component_ref"], found element of type cellml:component_ref.```
 
 ❗`3.4.1.1.model_with_components`: **Test not run**
 
@@ -285,13 +297,21 @@ Results per category
 
 ❗`3.4.1.1.model_with_groups`: **Test not run**
 
-❗`3.4.1.1.model_with_map_components`: **Test not run**
+[3.4.1.1.model_with_map_components](../models_1_0/invalid/3.4.1.1.model_with_map_components.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_components```
+* Output: ```Error on line 8. Unexpected content type in cellml:model[@name="model_with_map_components"], found element of type cellml:map_components.```
 
-❗`3.4.1.1.model_with_map_variables`: **Test not run**
+[3.4.1.1.model_with_map_variables](../models_1_0/invalid/3.4.1.1.model_with_map_variables.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_variables```
+* Output: ```Error on line 12. Unexpected content type in cellml:model[@name="model_with_map_variables"], found element of type cellml:map_variables.```
 
-❗`3.4.1.1.model_with_math`: **Test not run**
+[3.4.1.1.model_with_math](../models_1_0/invalid/3.4.1.1.model_with_math.cellml): Error detected correctly.
+* Expected: ```found element of type mathml:math```
+* Output: ```Error on line 10. Unexpected content type in cellml:model[@name="model_with_math"], found element of type mathml:math.```
 
-❗`3.4.1.1.model_with_model`: **Test not run**
+[3.4.1.1.model_with_model](../models_1_0/invalid/3.4.1.1.model_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_model"], found element of type cellml:model.```
 
 ❗`3.4.1.1.model_with_one_component`: **Test not run**
 
@@ -301,21 +321,40 @@ Results per category
 
 ❗`3.4.1.1.model_with_one_units`: **Test not run**
 
-❗`3.4.1.1.model_with_reaction`: **Test not run**
+[3.4.1.1.model_with_reaction](../models_1_0/invalid/3.4.1.1.model_with_reaction.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:reaction```
+* Output: ```Error on line 9. Unexpected content type in cellml:model[@name="model_with_reaction"], found element of type cellml:reaction.```
 
-❗`3.4.1.1.model_with_relationship_ref`: **Test not run**
+[3.4.1.1.model_with_relationship_ref](../models_1_0/invalid/3.4.1.1.model_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_relationship_ref"], found element of type cellml:relationship_ref.```
 
-❗`3.4.1.1.model_with_role`: **Test not run**
+[3.4.1.1.model_with_role](../models_1_0/invalid/3.4.1.1.model_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_role"], found element of type cellml:role.```
 
-❗`3.4.1.1.model_with_unit`: **Test not run**
+[3.4.1.1.model_with_unit](../models_1_0/invalid/3.4.1.1.model_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_unit"], found element of type cellml:unit.```
 
 ❗`3.4.1.1.model_with_units`: **Test not run**
 
-❗`3.4.1.1.model_with_variable`: **Test not run**
+[3.4.1.1.model_with_variable](../models_1_0/invalid/3.4.1.1.model_with_variable.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_variable"], found element of type cellml:variable.```
 
-❗`3.4.1.1.model_with_variable_ref`: **Test not run**
+[3.4.1.1.model_with_variable_ref](../models_1_0/invalid/3.4.1.1.model_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 6. Unexpected content type in cellml:model[@name="model_with_variable_ref"], found element of type cellml:variable_ref.```
 
-❗`3.4.1.2.model_name_invalid`: **Test not run**
+
+---
+
+##### 3.4.1.2
+
+[3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
+* Expected: ```Model name must be a valid CellML identifier```
+* Output: ```Error on line 4. Model name must be a valid CellML identifier (3.4.1.2).```
 
 ❗`3.4.2.1.component_child_order_1`: **Test not run**
 
@@ -323,23 +362,44 @@ Results per category
 
 ❗`3.4.2.1.component_empty`: **Test not run**
 
-❗`3.4.2.1.component_name_missing`: **Test not run**
 
-❗`3.4.2.1.component_with_component`: **Test not run**
+---
 
-❗`3.4.2.1.component_with_component_ref`: **Test not run**
+##### 3.4.2.1
 
-❗`3.4.2.1.component_with_connection`: **Test not run**
+[3.4.2.1.component_name_missing](../models_1_0/invalid/3.4.2.1.component_name_missing.cellml): Error detected correctly.
+* Expected: ```Component element must have a name attribute```
+* Output: ```Error on line 6. Component element must have a name attribute (3.4.2.1).```
 
-❗`3.4.2.1.component_with_group`: **Test not run**
+[3.4.2.1.component_with_component](../models_1_0/invalid/3.4.2.1.component_with_component.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="c1"], found element of type cellml:component.```
 
-❗`3.4.2.1.component_with_map_components`: **Test not run**
+[3.4.2.1.component_with_component_ref](../models_1_0/invalid/3.4.2.1.component_with_component_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component_ref```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="component"], found element of type cellml:component_ref.```
 
-❗`3.4.2.1.component_with_map_variables`: **Test not run**
+[3.4.2.1.component_with_connection](../models_1_0/invalid/3.4.2.1.component_with_connection.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:connection```
+* Output: ```Error on line 13. Unexpected content type in cellml:component[@name="C"], found element of type cellml:connection.```
+
+[3.4.2.1.component_with_group](../models_1_0/invalid/3.4.2.1.component_with_group.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:group```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="A"], found element of type cellml:group.```
+
+[3.4.2.1.component_with_map_components](../models_1_0/invalid/3.4.2.1.component_with_map_components.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_components```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="c1"], found element of type cellml:map_components.```
+
+[3.4.2.1.component_with_map_variables](../models_1_0/invalid/3.4.2.1.component_with_map_variables.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_variables```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="c1"], found element of type cellml:map_variables.```
 
 ❗`3.4.2.1.component_with_maths`: **Test not run**
 
-❗`3.4.2.1.component_with_model`: **Test not run**
+[3.4.2.1.component_with_model](../models_1_0/invalid/3.4.2.1.component_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="c1"], found element of type cellml:model.```
 
 ❗`3.4.2.1.component_with_one_math`: **Test not run**
 
@@ -351,65 +411,130 @@ Results per category
 
 ❗`3.4.2.1.component_with_reactions`: **Test not run**
 
-❗`3.4.2.1.component_with_relationship_ref`: **Test not run**
+[3.4.2.1.component_with_relationship_ref](../models_1_0/invalid/3.4.2.1.component_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="component"], found element of type cellml:relationship_ref.```
 
-❗`3.4.2.1.component_with_role`: **Test not run**
+[3.4.2.1.component_with_role](../models_1_0/invalid/3.4.2.1.component_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="component"], found element of type cellml:role.```
 
-❗`3.4.2.1.component_with_unit`: **Test not run**
+[3.4.2.1.component_with_unit](../models_1_0/invalid/3.4.2.1.component_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="component"], found element of type cellml:unit.```
 
 ❗`3.4.2.1.component_with_units`: **Test not run**
 
-❗`3.4.2.1.component_with_variable_ref`: **Test not run**
+[3.4.2.1.component_with_variable_ref](../models_1_0/invalid/3.4.2.1.component_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 7. Unexpected content type in cellml:component[@name="component"], found element of type cellml:variable_ref.```
 
 ❗`3.4.2.1.component_with_variables`: **Test not run**
 
-❗`3.4.2.2.component_name_duplicate`: **Test not run**
 
-❗`3.4.2.2.component_name_invalid`: **Test not run**
+---
 
-❗`3.4.3.1.variable_name_missing`: **Test not run**
+##### 3.4.2.2
 
-❗`3.4.3.1.variable_units_missing`: **Test not run**
+[3.4.2.2.component_name_duplicate](../models_1_0/invalid/3.4.2.2.component_name_duplicate.cellml): Error detected correctly.
+* Expected: ```Component name must be unique```
+* Output: ```Error on line 7. Component name must be unique within model (3.4.2.2).```
 
-❗`3.4.3.1.variable_with_component`: **Test not run**
+[3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): Error detected correctly.
+* Expected: ```Component name must be a valid CellML identifier```
+* Output: ```Error on line 6. Component name must be a valid CellML identifier (3.4.2.2).```
 
-❗`3.4.3.1.variable_with_component_ref`: **Test not run**
 
-❗`3.4.3.1.variable_with_connection`: **Test not run**
+---
 
-❗`3.4.3.1.variable_with_group`: **Test not run**
+##### 3.4.3.1
+
+[3.4.3.1.variable_name_missing](../models_1_0/invalid/3.4.3.1.variable_name_missing.cellml): Error detected correctly.
+* Expected: ```Variable element must have a name attribute```
+* Output: ```Error on line 7. Variable element must have a name attribute (3.4.3.1).```
+
+[3.4.3.1.variable_units_missing](../models_1_0/invalid/3.4.3.1.variable_units_missing.cellml): Error detected correctly.
+* Expected: ```Variable element must have a units attribute```
+* Output: ```Error on line 7. Variable element must have a units attribute (3.4.3.1).```
+
+[3.4.3.1.variable_with_component](../models_1_0/invalid/3.4.3.1.variable_with_component.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:component.```
+
+[3.4.3.1.variable_with_component_ref](../models_1_0/invalid/3.4.3.1.variable_with_component_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component_ref```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:component_ref.```
+
+[3.4.3.1.variable_with_connection](../models_1_0/invalid/3.4.3.1.variable_with_connection.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:connection```
+* Output: ```Error on line 14. Unexpected content type in cellml:variable[@name="b"], found element of type cellml:connection.```
+
+[3.4.3.1.variable_with_group](../models_1_0/invalid/3.4.3.1.variable_with_group.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:group```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:group.```
 
 ❗`3.4.3.1.variable_with_initial_value`: **Test not run**
 
 ❗`3.4.3.1.variable_with_interfaces`: **Test not run**
 
-❗`3.4.3.1.variable_with_map_components`: **Test not run**
+[3.4.3.1.variable_with_map_components](../models_1_0/invalid/3.4.3.1.variable_with_map_components.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_components```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:map_components.```
 
-❗`3.4.3.1.variable_with_map_variables`: **Test not run**
+[3.4.3.1.variable_with_map_variables](../models_1_0/invalid/3.4.3.1.variable_with_map_variables.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_variables```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:map_variables.```
 
-❗`3.4.3.1.variable_with_math`: **Test not run**
+[3.4.3.1.variable_with_math](../models_1_0/invalid/3.4.3.1.variable_with_math.cellml): Error detected correctly.
+* Expected: ```found element of type mathml:math```
+* Output: ```Error on line 9. Unexpected content type in cellml:variable[@name="a"], found element of type mathml:math.```
 
-❗`3.4.3.1.variable_with_model`: **Test not run**
+[3.4.3.1.variable_with_model](../models_1_0/invalid/3.4.3.1.variable_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:model.```
 
-❗`3.4.3.1.variable_with_reaction`: **Test not run**
+[3.4.3.1.variable_with_reaction](../models_1_0/invalid/3.4.3.1.variable_with_reaction.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:reaction```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:reaction.```
 
-❗`3.4.3.1.variable_with_relationship_ref`: **Test not run**
+[3.4.3.1.variable_with_relationship_ref](../models_1_0/invalid/3.4.3.1.variable_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:relationship_ref.```
 
-❗`3.4.3.1.variable_with_role`: **Test not run**
+[3.4.3.1.variable_with_role](../models_1_0/invalid/3.4.3.1.variable_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:role.```
 
-❗`3.4.3.1.variable_with_unit`: **Test not run**
+[3.4.3.1.variable_with_unit](../models_1_0/invalid/3.4.3.1.variable_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:unit.```
 
-❗`3.4.3.1.variable_with_units`: **Test not run**
+[3.4.3.1.variable_with_units](../models_1_0/invalid/3.4.3.1.variable_with_units.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:units```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:units.```
 
-❗`3.4.3.1.variable_with_variable`: **Test not run**
+[3.4.3.1.variable_with_variable](../models_1_0/invalid/3.4.3.1.variable_with_variable.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:variable.```
 
-❗`3.4.3.1.variable_with_variable_ref`: **Test not run**
+[3.4.3.1.variable_with_variable_ref](../models_1_0/invalid/3.4.3.1.variable_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 8. Unexpected content type in cellml:variable[@name="x"], found element of type cellml:variable_ref.```
 
 ❗`3.4.3.1.variable_without_initial_value`: **Test not run**
 
-❗`3.4.3.2.variable_name_duplicate`: **Test not run**
 
-❗`3.4.3.2.variable_name_invalid`: **Test not run**
+---
+
+##### 3.4.3.2
+
+[3.4.3.2.variable_name_duplicate](../models_1_0/invalid/3.4.3.2.variable_name_duplicate.cellml): Error detected correctly.
+* Expected: ```Variable name must be unique```
+* Output: ```Error on line 8. Variable name must be unique within Component (3.4.3.2).```
+
+[3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): Error detected correctly.
+* Expected: ```Variable name must be a valid CellML identifier```
+* Output: ```Error on line 7. Variable name must be a valid CellML identifier (3.4.3.2).```
 
 ❗`3.4.3.2.variable_name_same_as_cousin`: **Test not run**
 
@@ -419,173 +544,402 @@ Results per category
 
 ❗`3.4.3.3.variable_units_model`: **Test not run**
 
-❗`3.4.3.3.variable_units_other_component`: **Test not run**
+
+---
+
+##### 3.4.3.3
+
+[3.4.3.3.variable_units_other_component](../models_1_0/invalid/3.4.3.3.variable_units_other_component.cellml): Error detected correctly.
+* Expected: ```must reference a units element```
+* Output: ```Error on line 7. Variable units attribute must reference a units element in the current component or model, or one of the predefined units (3.4.3.3).```
 
 ❗`3.4.3.3.variable_units_predefined`: **Test not run**
 
-❗`3.4.3.3.variable_units_unknown`: **Test not run**
+[3.4.3.3.variable_units_unknown](../models_1_0/invalid/3.4.3.3.variable_units_unknown.cellml): Error detected correctly.
+* Expected: ```must reference a units element```
+* Output: ```Error on line 7. Variable units attribute must reference a units element in the current component or model, or one of the predefined units (3.4.3.3).```
 
-❗`3.4.3.4.variable_interface_public_invalid`: **Test not run**
 
-❗`3.4.3.5.variable_interface_private_invalid`: **Test not run**
+---
 
-❗`3.4.3.6.variable_interfaces_both_in`: **Test not run**
+##### 3.4.3.4
 
-❗`3.4.3.7.variable_initial_value_empty`: **Test not run**
+[3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
+* Expected: ```Public interface must be```
+* Output: ```Error on line 7. Public interface must be "in", "out", or "none" (3.4.3.4).```
 
-❗`3.4.3.7.variable_initial_value_invalid`: **Test not run**
 
-❗`3.4.3.8.variable_interfaces_private_in_and_initial`: **Test not run**
+---
 
-❗`3.4.3.8.variable_interfaces_public_in_and_initial`: **Test not run**
+##### 3.4.3.5
 
-❗`3.4.4.1.connection_empty`: **Test not run**
+[3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Error detected correctly.
+* Expected: ```Private interface must be```
+* Output: ```Error on line 7. Private interface must be "in", "out", or "none" (3.4.3.5).```
 
-❗`3.4.4.1.connection_map_components_missing`: **Test not run**
 
-❗`3.4.4.1.connection_map_components_multiple`: **Test not run**
+---
 
-❗`3.4.4.1.connection_map_variables_missing_1`: **Test not run**
+##### 3.4.3.6
 
-❗`3.4.4.1.connection_map_variables_missing_2`: **Test not run**
+[3.4.3.6.variable_interfaces_both_in](../models_1_0/invalid/3.4.3.6.variable_interfaces_both_in.cellml): Error detected correctly.
+* Expected: ```can not both be "in"```
+* Output: ```Error on line 10. Public and private interface can not both be "in" (3.4.3.6).```
 
-❗`3.4.4.1.connection_only_extensions`: **Test not run**
 
-❗`3.4.4.1.connection_with_component`: **Test not run**
+---
 
-❗`3.4.4.1.connection_with_component_ref`: **Test not run**
+##### 3.4.3.7
 
-❗`3.4.4.1.connection_with_connection`: **Test not run**
+[3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): Error detected correctly.
+* Expected: ```initial_value must be a real number```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
-❗`3.4.4.1.connection_with_group`: **Test not run**
+[3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): Error detected correctly.
+* Expected: ```initial_value must be a real number```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
+
+
+---
+
+##### 3.4.3.8
+
+[3.4.3.8.variable_interfaces_private_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_private_in_and_initial.cellml): Error detected correctly.
+* Expected: ```initial value cannot be set```
+* Output: ```Error on line 11. An initial value cannot be set for Variable[@name="a"] in Component[@name="A"], which has private_interface="in" (3.4.3.8).```
+
+[3.4.3.8.variable_interfaces_public_in_and_initial](../models_1_0/invalid/3.4.3.8.variable_interfaces_public_in_and_initial.cellml): Error detected correctly.
+* Expected: ```initial value cannot be set```
+* Output: ```Error on line 11. An initial value cannot be set for Variable[@name="a"] in Component[@name="A"], which has public_interface="in" (3.4.3.8).```
+
+
+---
+
+##### 3.4.4.1
+
+[3.4.4.1.connection_empty](../models_1_0/invalid/3.4.4.1.connection_empty.cellml): Error detected correctly.
+* Expected: ```exactly one map_component```
+* Output: ```Error on line 6. A connection must contain exactly one map_components element, found 0 (3.4.4.1).```
+
+[3.4.4.1.connection_map_components_missing](../models_1_0/invalid/3.4.4.1.connection_map_components_missing.cellml): Error detected correctly.
+* Expected: ```exactly one map_components```
+* Output: ```Error on line 14. A connection must contain exactly one map_components element, found 0 (3.4.4.1).```
+
+[3.4.4.1.connection_map_components_multiple](../models_1_0/invalid/3.4.4.1.connection_map_components_multiple.cellml): Error detected correctly.
+* Expected: ```exactly one map_components```
+* Output: ```Error on line 17. A connection must contain exactly one map_components element, found 2 (3.4.4.1).```
+
+[3.4.4.1.connection_map_variables_missing_1](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_1.cellml): Error detected correctly.
+* Expected: ```at least one map_variables```
+* Output: ```Error on line 12. A connection must contain at least one map_variables element (3.4.4.1).```
+
+[3.4.4.1.connection_map_variables_missing_2](../models_1_0/invalid/3.4.4.1.connection_map_variables_missing_2.cellml): Error detected correctly.
+* Expected: ```at least one map_variables```
+* Output: ```Error on line 13. A connection must contain at least one map_variables element (3.4.4.1).```
+
+[3.4.4.1.connection_only_extensions](../models_1_0/invalid/3.4.4.1.connection_only_extensions.cellml): Error detected correctly.
+* Expected: ```exactly one map_components```
+* Output: ```Error on line 7. A connection must contain exactly one map_components element, found 0 (3.4.4.1).```
+
+[3.4.4.1.connection_with_component](../models_1_0/invalid/3.4.4.1.connection_with_component.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:component.```
+
+[3.4.4.1.connection_with_component_ref](../models_1_0/invalid/3.4.4.1.connection_with_component_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component_ref```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:component_ref.```
+
+[3.4.4.1.connection_with_connection](../models_1_0/invalid/3.4.4.1.connection_with_connection.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:connection```
+* Output: ```Error on line 19. Unexpected content type in cellml:connection, found element of type cellml:connection.```
+
+[3.4.4.1.connection_with_group](../models_1_0/invalid/3.4.4.1.connection_with_group.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:group```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:group.```
 
 ❗`3.4.4.1.connection_with_map_variables`: **Test not run**
 
-❗`3.4.4.1.connection_with_math`: **Test not run**
+[3.4.4.1.connection_with_math](../models_1_0/invalid/3.4.4.1.connection_with_math.cellml): Error detected correctly.
+* Expected: ```found element of type mathml:math```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type mathml:math.```
 
-❗`3.4.4.1.connection_with_model`: **Test not run**
+[3.4.4.1.connection_with_model](../models_1_0/invalid/3.4.4.1.connection_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:model.```
 
-❗`3.4.4.1.connection_with_name_attribute`: **Test not run**
+[3.4.4.1.connection_with_name_attribute](../models_1_0/invalid/3.4.4.1.connection_with_name_attribute.cellml): Error detected correctly.
+* Expected: ```Unexpected attribute name```
+* Output: ```Error on line 12. Unexpected attribute name found in cellml:connection.```
 
 ❗`3.4.4.1.connection_with_one_map_variables`: **Test not run**
 
-❗`3.4.4.1.connection_with_reaction`: **Test not run**
+[3.4.4.1.connection_with_reaction](../models_1_0/invalid/3.4.4.1.connection_with_reaction.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:reaction```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:reaction.```
 
-❗`3.4.4.1.connection_with_relationship_ref`: **Test not run**
+[3.4.4.1.connection_with_relationship_ref](../models_1_0/invalid/3.4.4.1.connection_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:relationship_ref.```
 
-❗`3.4.4.1.connection_with_role`: **Test not run**
+[3.4.4.1.connection_with_role](../models_1_0/invalid/3.4.4.1.connection_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:role.```
 
-❗`3.4.4.1.connection_with_unit`: **Test not run**
+[3.4.4.1.connection_with_unit](../models_1_0/invalid/3.4.4.1.connection_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:unit.```
 
-❗`3.4.4.1.connection_with_units`: **Test not run**
+[3.4.4.1.connection_with_units](../models_1_0/invalid/3.4.4.1.connection_with_units.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:units```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:units.```
 
-❗`3.4.4.1.connection_with_variable`: **Test not run**
+[3.4.4.1.connection_with_variable](../models_1_0/invalid/3.4.4.1.connection_with_variable.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:variable.```
 
-❗`3.4.4.1.connection_with_variable_ref`: **Test not run**
+[3.4.4.1.connection_with_variable_ref](../models_1_0/invalid/3.4.4.1.connection_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 16. Unexpected content type in cellml:connection, found element of type cellml:variable_ref.```
 
 ❗`3.4.5.1.connection_any_order_1`: **Test not run**
 
 ❗`3.4.5.1.connection_any_order_2`: **Test not run**
 
-❗`3.4.5.1.map_components_component_1_missing`: **Test not run**
 
-❗`3.4.5.1.map_components_component_2_missing`: **Test not run**
+---
 
-❗`3.4.5.1.map_components_with_component`: **Test not run**
+##### 3.4.5.1
 
-❗`3.4.5.1.map_components_with_component_ref`: **Test not run**
+[3.4.5.1.map_components_component_1_missing](../models_1_0/invalid/3.4.5.1.map_components_component_1_missing.cellml): Error detected correctly.
+* Expected: ```must define a component_1 attribute```
+* Output: ```Error on line 7. A map_components element must define a component_1 attribute (3.4.5.1).```
 
-❗`3.4.5.1.map_components_with_connection`: **Test not run**
+[3.4.5.1.map_components_component_2_missing](../models_1_0/invalid/3.4.5.1.map_components_component_2_missing.cellml): Error detected correctly.
+* Expected: ```must define a component_2 attribute```
+* Output: ```Error on line 7. A map_components element must define a component_2 attribute (3.4.5.1).```
 
-❗`3.4.5.1.map_components_with_group`: **Test not run**
+[3.4.5.1.map_components_with_component](../models_1_0/invalid/3.4.5.1.map_components_with_component.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:component.```
 
-❗`3.4.5.1.map_components_with_map_components`: **Test not run**
+[3.4.5.1.map_components_with_component_ref](../models_1_0/invalid/3.4.5.1.map_components_with_component_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component_ref```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:component_ref.```
 
-❗`3.4.5.1.map_components_with_map_variables`: **Test not run**
+[3.4.5.1.map_components_with_connection](../models_1_0/invalid/3.4.5.1.map_components_with_connection.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:connection```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:connection.```
 
-❗`3.4.5.1.map_components_with_math`: **Test not run**
+[3.4.5.1.map_components_with_group](../models_1_0/invalid/3.4.5.1.map_components_with_group.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:group```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:group.```
 
-❗`3.4.5.1.map_components_with_model`: **Test not run**
+[3.4.5.1.map_components_with_map_components](../models_1_0/invalid/3.4.5.1.map_components_with_map_components.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_components```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:map_components.```
 
-❗`3.4.5.1.map_components_with_reaction`: **Test not run**
+[3.4.5.1.map_components_with_map_variables](../models_1_0/invalid/3.4.5.1.map_components_with_map_variables.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_variables```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:map_variables.```
 
-❗`3.4.5.1.map_components_with_relationship_ref`: **Test not run**
+[3.4.5.1.map_components_with_math](../models_1_0/invalid/3.4.5.1.map_components_with_math.cellml): Error detected correctly.
+* Expected: ```found element of type mathml:math```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_components, found element of type mathml:math.```
 
-❗`3.4.5.1.map_components_with_role`: **Test not run**
+[3.4.5.1.map_components_with_model](../models_1_0/invalid/3.4.5.1.map_components_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:model.```
 
-❗`3.4.5.1.map_components_with_unit`: **Test not run**
+[3.4.5.1.map_components_with_reaction](../models_1_0/invalid/3.4.5.1.map_components_with_reaction.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:reaction```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:reaction.```
 
-❗`3.4.5.1.map_components_with_units`: **Test not run**
+[3.4.5.1.map_components_with_relationship_ref](../models_1_0/invalid/3.4.5.1.map_components_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:relationship_ref.```
 
-❗`3.4.5.1.map_components_with_variable`: **Test not run**
+[3.4.5.1.map_components_with_role](../models_1_0/invalid/3.4.5.1.map_components_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:role.```
 
-❗`3.4.5.1.map_components_with_variable_ref`: **Test not run**
+[3.4.5.1.map_components_with_unit](../models_1_0/invalid/3.4.5.1.map_components_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:unit.```
 
-❗`3.4.5.2.map_components_component_1_nonexistent`: **Test not run**
+[3.4.5.1.map_components_with_units](../models_1_0/invalid/3.4.5.1.map_components_with_units.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:units```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:units.```
 
-❗`3.4.5.3.map_components_component_2_nonexistent`: **Test not run**
+[3.4.5.1.map_components_with_variable](../models_1_0/invalid/3.4.5.1.map_components_with_variable.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:variable.```
 
-❗`3.4.5.4.map_components_component_1_equals_2`: **Test not run**
+[3.4.5.1.map_components_with_variable_ref](../models_1_0/invalid/3.4.5.1.map_components_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 8. Unexpected content type in cellml:map_components, found element of type cellml:variable_ref.```
 
-❗`3.4.5.4.map_components_duplicate`: **Test not run**
 
-❗`3.4.5.4.map_components_duplicate_mirrored`: **Test not run**
+---
 
-❗`3.4.6.1.map_variables_variable_1_missing`: **Test not run**
+##### 3.4.5.2
 
-❗`3.4.6.1.map_variables_variable_2_missing`: **Test not run**
+[3.4.5.2.map_components_component_1_nonexistent](../models_1_0/invalid/3.4.5.2.map_components_component_1_nonexistent.cellml): Error detected correctly.
+* Expected: ```component_1 attribute must refer to a component in the current model```
+* Output: ```Error on line 8. A map_components component_1 attribute must refer to a component in the current model, got "c" (3.4.5.2).```
 
-❗`3.4.6.1.map_variables_with_component`: **Test not run**
 
-❗`3.4.6.1.map_variables_with_component_ref`: **Test not run**
+---
 
-❗`3.4.6.1.map_variables_with_connection`: **Test not run**
+##### 3.4.5.3
 
-❗`3.4.6.1.map_variables_with_group`: **Test not run**
+[3.4.5.3.map_components_component_2_nonexistent](../models_1_0/invalid/3.4.5.3.map_components_component_2_nonexistent.cellml): Error detected correctly.
+* Expected: ```component_2 attribute must refer to a component in the current model```
+* Output: ```Error on line 8. A map_components component_2 attribute must refer to a component in the current model, got "c" (3.4.5.3).```
 
-❗`3.4.6.1.map_variables_with_map_components`: **Test not run**
 
-❗`3.4.6.1.map_variables_with_map_variables`: **Test not run**
+---
 
-❗`3.4.6.1.map_variables_with_math`: **Test not run**
+##### 3.4.5.4
 
-❗`3.4.6.1.map_variables_with_model`: **Test not run**
+[3.4.5.4.map_components_component_1_equals_2](../models_1_0/invalid/3.4.5.4.map_components_component_1_equals_2.cellml): Error detected correctly.
+* Expected: ```must be different```
+* Output: ```Error on line 7. The component_1 and component_2 attributes in a map_components element must be different, got "A" twice (3.4.5.4).```
 
-❗`3.4.6.1.map_variables_with_reaction`: **Test not run**
+[3.4.5.4.map_components_duplicate](../models_1_0/invalid/3.4.5.4.map_components_duplicate.cellml): Error detected correctly.
+* Expected: ```Each connection in a model must connect a unique pair```
+* Output: ```Error on line 11. Each connection in a model must connect a unique pair of components, found multiple for "a" and "b" (3.4.5.4).```
 
-❗`3.4.6.1.map_variables_with_relationship_ref`: **Test not run**
+[3.4.5.4.map_components_duplicate_mirrored](../models_1_0/invalid/3.4.5.4.map_components_duplicate_mirrored.cellml): Error detected correctly.
+* Expected: ```Each connection in a model must connect a unique pair```
+* Output: ```Error on line 11. Each connection in a model must connect a unique pair of components, found multiple for "b" and "a" (3.4.5.4).```
 
-❗`3.4.6.1.map_variables_with_role`: **Test not run**
 
-❗`3.4.6.1.map_variables_with_unit`: **Test not run**
+---
 
-❗`3.4.6.1.map_variables_with_units`: **Test not run**
+##### 3.4.6.1
 
-❗`3.4.6.1.map_variables_with_variable`: **Test not run**
+[3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
+* Expected: ```must define a variable_1 attribute```
+* Output: ```Error on line 14. A map_variables element must define a variable_1 attribute (3.4.6.1).```
 
-❗`3.4.6.1.map_variables_with_variable_ref`: **Test not run**
+[3.4.6.1.map_variables_variable_2_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_2_missing.cellml): Error detected correctly.
+* Expected: ```must define a variable_2 attribute```
+* Output: ```Error on line 14. A map_variables element must define a variable_2 attribute (3.4.6.1).```
 
-❗`3.4.6.2.map_variables_variable_1_nonexistent`: **Test not run**
+[3.4.6.1.map_variables_with_component](../models_1_0/invalid/3.4.6.1.map_variables_with_component.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:component.```
 
-❗`3.4.6.3.map_variables_variable_2_nonexistent`: **Test not run**
+[3.4.6.1.map_variables_with_component_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_component_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:component_ref```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:component_ref.```
+
+[3.4.6.1.map_variables_with_connection](../models_1_0/invalid/3.4.6.1.map_variables_with_connection.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:connection```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:connection.```
+
+[3.4.6.1.map_variables_with_group](../models_1_0/invalid/3.4.6.1.map_variables_with_group.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:group```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:group.```
+
+[3.4.6.1.map_variables_with_map_components](../models_1_0/invalid/3.4.6.1.map_variables_with_map_components.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_components```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:map_components.```
+
+[3.4.6.1.map_variables_with_map_variables](../models_1_0/invalid/3.4.6.1.map_variables_with_map_variables.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:map_variables```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:map_variables.```
+
+[3.4.6.1.map_variables_with_math](../models_1_0/invalid/3.4.6.1.map_variables_with_math.cellml): Error detected correctly.
+* Expected: ```found element of type mathml:math```
+* Output: ```Error on line 10. Unexpected content type in cellml:map_variables, found element of type mathml:math.```
+
+[3.4.6.1.map_variables_with_model](../models_1_0/invalid/3.4.6.1.map_variables_with_model.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:model```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:model.```
+
+[3.4.6.1.map_variables_with_reaction](../models_1_0/invalid/3.4.6.1.map_variables_with_reaction.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:reaction```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:reaction.```
+
+[3.4.6.1.map_variables_with_relationship_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_relationship_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:relationship_ref```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:relationship_ref.```
+
+[3.4.6.1.map_variables_with_role](../models_1_0/invalid/3.4.6.1.map_variables_with_role.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:role```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:role.```
+
+[3.4.6.1.map_variables_with_unit](../models_1_0/invalid/3.4.6.1.map_variables_with_unit.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:unit```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:unit.```
+
+[3.4.6.1.map_variables_with_units](../models_1_0/invalid/3.4.6.1.map_variables_with_units.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:units```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:units.```
+
+[3.4.6.1.map_variables_with_variable](../models_1_0/invalid/3.4.6.1.map_variables_with_variable.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:variable.```
+
+[3.4.6.1.map_variables_with_variable_ref](../models_1_0/invalid/3.4.6.1.map_variables_with_variable_ref.cellml): Error detected correctly.
+* Expected: ```found element of type cellml:variable_ref```
+* Output: ```Error on line 9. Unexpected content type in cellml:map_variables, found element of type cellml:variable_ref.```
+
+
+---
+
+##### 3.4.6.2
+
+[3.4.6.2.map_variables_variable_1_nonexistent](../models_1_0/invalid/3.4.6.2.map_variables_variable_1_nonexistent.cellml): Error detected correctly.
+* Expected: ```variable_1 attribute must refer to a variable```
+* Output: ```Error on line 12. A map_variables variable_1 attribute must refer to a variable in component_1, got "a" (3.4.6.2).```
+
+
+---
+
+##### 3.4.6.3
+
+[3.4.6.3.map_variables_variable_2_nonexistent](../models_1_0/invalid/3.4.6.3.map_variables_variable_2_nonexistent.cellml): Error detected correctly.
+* Expected: ```variable_2 attribute must refer to a variable```
+* Output: ```Error on line 12. A map_variables variable_2 attribute must refer to a variable in component_2, got "Variable[@name="a"] in Component[@name="c1"]" (3.4.6.3).```
 
 ❗`3.4.6.4.map_variables_chain_down`: **Test not run**
 
 ❗`3.4.6.4.map_variables_chain_up`: **Test not run**
 
-❗`3.4.6.4.map_variables_child_multiple_out_1`: **Test not run**
 
-❗`3.4.6.4.map_variables_child_multiple_out_2`: **Test not run**
+---
 
-❗`3.4.6.4.map_variables_child_out_to_out_1`: **Test not run**
+##### 3.4.6.4
 
-❗`3.4.6.4.map_variables_child_out_to_out_2`: **Test not run**
+[3.4.6.4.map_variables_child_multiple_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_1.cellml): Error detected correctly.
+* Expected: ```already connected```
+* Output: ```Error on line 24. Invalid connection: Variable[@name="x"] in Component[@name="A"] has a public_interface of "in" and is already connected to a variable with an interface of "out".```
 
-❗`3.4.6.4.map_variables_child_private_in`: **Test not run**
+[3.4.6.4.map_variables_child_multiple_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_multiple_out_2.cellml): Error detected correctly.
+* Expected: ```already connected```
+* Output: ```Error on line 30. Invalid connection: Variable[@name="x"] in Component[@name="A"] has a public_interface of "in" and is already connected to a variable with an interface of "out".```
 
-❗`3.4.6.4.map_variables_child_private_out`: **Test not run**
+[3.4.6.4.map_variables_child_out_to_out_1](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_1.cellml): Error detected correctly.
+* Expected: ```private_interface of "out", while```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "out", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "out" (3.4.6.4).```
 
-❗`3.4.6.4.map_variables_hidden_aunt_1`: **Test not run**
+[3.4.6.4.map_variables_child_out_to_out_2](../models_1_0/invalid/3.4.6.4.map_variables_child_out_to_out_2.cellml): Error detected correctly.
+* Expected: ```private_interface of "out", while```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "out", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "out" (3.4.6.4).```
+
+[3.4.6.4.map_variables_child_private_in](../models_1_0/invalid/3.4.6.4.map_variables_child_private_in.cellml): Error detected correctly.
+* Expected: ```public_interface of "none"```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "out", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "none" (3.4.6.4).```
+
+[3.4.6.4.map_variables_child_private_out](../models_1_0/invalid/3.4.6.4.map_variables_child_private_out.cellml): Error detected correctly.
+* Expected: ```public_interface of "none"```
+* Output: ```Error on line 23. Invalid connection: Variable[@name="a"] in Component[@name="A"] has a private_interface of "in", while Variable[@name="a"] in Component[@name="B"] has a public_interface of "none" (3.4.6.4).```
+
+🔶 [3.4.6.4.map_variables_hidden_aunt_1](../models_1_0/invalid/3.4.6.4.map_variables_hidden_aunt_1.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Error on line 29. Connections can only be made between components that are siblings or have a parent-child (encapsulation) relationship (3.4.6.4).```
 
 ❗`3.4.6.4.map_variables_hidden_aunt_2`: **Test not run**
 
