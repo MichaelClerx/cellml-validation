@@ -15,11 +15,12 @@ The reports listed below were automatically generated during testing. Some care 
 
 ## CellML 1.0
 
-- [DTD validation](dtd_1_0.md) (70%)
+- [DTD validation](dtd_1_0.md) (69%)
 - [Schema validation](schema_1_0.md) (77%)
 - [RelaxNG validation](relaxng_1_0.md) (81%)
 
 External tools (tests for these are located in branches)
 
-- [OpenCOR / CellML API](opencor_1_0.md) (89%)
+- [OpenCOR / CellML API](opencor_1_0.md) (88%)
+- [Myokit](myokit_1_0.md) (78%)
 - [Web Lab cellmlmanip](cellmlmanip_1_0.md) (39%)
