@@ -1,8 +1,8 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 81% according to spec (625 out of 770)
-* 313 out of 317 valid files passed
+* 81% according to spec (659 out of 804)
+* 347 out of 351 valid files passed
 * 312 out of 453 invalid files detected
 
 Issues:
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|19|26|0|1|0|97%|
 |[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5-units)|98|44|2|42|0|76%|
+|[5. Units](#5-units)|132|44|2|42|0|80%|
 |[6. Grouping](#6-grouping)|15|55|2|23|0|73%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
@@ -1731,6 +1731,79 @@ Results per category
 ---
 
 ## 5. Units
+
+#### 5.2.1
+
+[5.2.1.units_ampere](../models_1_0/valid/5.2.1.units_ampere.cellml): Valid file passed validation.
+
+[5.2.1.units_becquerel](../models_1_0/valid/5.2.1.units_becquerel.cellml): Valid file passed validation.
+
+[5.2.1.units_candela](../models_1_0/valid/5.2.1.units_candela.cellml): Valid file passed validation.
+
+[5.2.1.units_celsius](../models_1_0/valid/5.2.1.units_celsius.cellml): Valid file passed validation.
+
+[5.2.1.units_coulomb](../models_1_0/valid/5.2.1.units_coulomb.cellml): Valid file passed validation.
+
+[5.2.1.units_dimensionless](../models_1_0/valid/5.2.1.units_dimensionless.cellml): Valid file passed validation.
+
+[5.2.1.units_farad](../models_1_0/valid/5.2.1.units_farad.cellml): Valid file passed validation.
+
+[5.2.1.units_gram](../models_1_0/valid/5.2.1.units_gram.cellml): Valid file passed validation.
+
+[5.2.1.units_gray](../models_1_0/valid/5.2.1.units_gray.cellml): Valid file passed validation.
+
+[5.2.1.units_henry](../models_1_0/valid/5.2.1.units_henry.cellml): Valid file passed validation.
+
+[5.2.1.units_hertz](../models_1_0/valid/5.2.1.units_hertz.cellml): Valid file passed validation.
+
+[5.2.1.units_joule](../models_1_0/valid/5.2.1.units_joule.cellml): Valid file passed validation.
+
+[5.2.1.units_katal](../models_1_0/valid/5.2.1.units_katal.cellml): Valid file passed validation.
+
+[5.2.1.units_kelvin](../models_1_0/valid/5.2.1.units_kelvin.cellml): Valid file passed validation.
+
+[5.2.1.units_kilogram](../models_1_0/valid/5.2.1.units_kilogram.cellml): Valid file passed validation.
+
+[5.2.1.units_liter](../models_1_0/valid/5.2.1.units_liter.cellml): Valid file passed validation.
+
+[5.2.1.units_litre](../models_1_0/valid/5.2.1.units_litre.cellml): Valid file passed validation.
+
+[5.2.1.units_lumen](../models_1_0/valid/5.2.1.units_lumen.cellml): Valid file passed validation.
+
+[5.2.1.units_lux](../models_1_0/valid/5.2.1.units_lux.cellml): Valid file passed validation.
+
+[5.2.1.units_meter](../models_1_0/valid/5.2.1.units_meter.cellml): Valid file passed validation.
+
+[5.2.1.units_metre](../models_1_0/valid/5.2.1.units_metre.cellml): Valid file passed validation.
+
+[5.2.1.units_mole](../models_1_0/valid/5.2.1.units_mole.cellml): Valid file passed validation.
+
+[5.2.1.units_newton](../models_1_0/valid/5.2.1.units_newton.cellml): Valid file passed validation.
+
+[5.2.1.units_ohm](../models_1_0/valid/5.2.1.units_ohm.cellml): Valid file passed validation.
+
+[5.2.1.units_pascal](../models_1_0/valid/5.2.1.units_pascal.cellml): Valid file passed validation.
+
+[5.2.1.units_radian](../models_1_0/valid/5.2.1.units_radian.cellml): Valid file passed validation.
+
+[5.2.1.units_second](../models_1_0/valid/5.2.1.units_second.cellml): Valid file passed validation.
+
+[5.2.1.units_siemens](../models_1_0/valid/5.2.1.units_siemens.cellml): Valid file passed validation.
+
+[5.2.1.units_sievert](../models_1_0/valid/5.2.1.units_sievert.cellml): Valid file passed validation.
+
+[5.2.1.units_steradian](../models_1_0/valid/5.2.1.units_steradian.cellml): Valid file passed validation.
+
+[5.2.1.units_tesla](../models_1_0/valid/5.2.1.units_tesla.cellml): Valid file passed validation.
+
+[5.2.1.units_volt](../models_1_0/valid/5.2.1.units_volt.cellml): Valid file passed validation.
+
+[5.2.1.units_watt](../models_1_0/valid/5.2.1.units_watt.cellml): Valid file passed validation.
+
+[5.2.1.units_weber](../models_1_0/valid/5.2.1.units_weber.cellml): Valid file passed validation.
+
+
+---
 
 #### 5.2.2
 
