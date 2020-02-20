@@ -23,7 +23,7 @@ Numbers: Integers with a base attribute -->
       <apply>
         <eq/>
         <ci>integer_base_16</ci>
-        <cn cellml:units="dimensionless" type="integer" base="2">123DEF</cn>
+        <cn cellml:units="dimensionless" type="integer" base="16">123DEF</cn>
       </apply>
     </math>
   </component>

@@ -5,13 +5,13 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <variable name="eq" units="volt" initial_value="0" />
-    <variable name="neq" units="volt" initial_value="0" />
-    <variable name="gt" units="volt" initial_value="0" />
-    <variable name="lt" units="volt" initial_value="0" />
-    <variable name="geq" units="volt" initial_value="0" />
-    <variable name="leq" units="volt" initial_value="0" />
-    <variable name="y" units="ampere" initial_value="0" />
+    <variable name="eq" units="volt" />
+    <variable name="neq" units="volt" />
+    <variable name="gt" units="volt" />
+    <variable name="lt" units="volt"  />
+    <variable name="geq" units="volt" />
+    <variable name="leq" units="volt" />
+    <variable name="y" units="ampere" />
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <apply>
         <eq/>
