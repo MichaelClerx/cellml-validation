@@ -835,9 +835,15 @@ known_issues = {
     '6.4.3.2.component_ref_cycle_2',
     '6.4.3.2.component_ref_cycle_3',
     '6.4.3.2.component_ref_cycle_4',
+    '6.4.3.2.component_ref_cycle_5',
+    '6.4.3.2.component_ref_cycle_6',
+    '6.4.3.2.component_ref_cycle_7',
+    '6.4.3.2.component_ref_cycle_8',
     # 6.4.3.2 A component cannot be named twice in a single hierarchy
     '6.4.3.2.component_ref_duplicate_child_1',
     '6.4.3.2.component_ref_duplicate_child_2',
+    '6.4.3.2.component_ref_duplicate_child_3',
+    '6.4.3.2.component_ref_duplicate_child_4',
     # 6.4.3.2 The first component_ref in a containment must have children
     '6.4.3.2.component_ref_no_children_containment',
     # 6.4.3.2 The first component_ref in an encapsulation must have children

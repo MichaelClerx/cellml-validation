@@ -1,13 +1,13 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (595 out of 764)
+* 77% according to spec (595 out of 770)
 * 317 out of 317 valid files passed
-* 278 out of 447 invalid files detected
+* 278 out of 453 invalid files detected
 
 Issues:
 * 0 valid files failed validation
-* 169 invalid files passed validation
+* 175 invalid files passed validation
 * 0 invalid files failed validation for the wrong reason
 
 Results per category
@@ -21,7 +21,7 @@ Results per category
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|2|0|17|0|73%|
 |[5. Units](#5-units)|100|41|0|45|0|75%|
-|[6. Grouping](#6-grouping)|17|46|0|26|0|70%|
+|[6. Grouping](#6-grouping)|17|46|0|32|0|66%|
 |[7. Reactions](#7-reactions)|5|56|0|23|0|72%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
@@ -2027,9 +2027,21 @@ Results per category
 
 🔵 [6.4.3.2.component_ref_cycle_4](../models_1_0/invalid/6.4.3.2.component_ref_cycle_4.cellml): **Error not detected.**
 
+🔵 [6.4.3.2.component_ref_cycle_5](../models_1_0/invalid/6.4.3.2.component_ref_cycle_5.cellml): **Error not detected.**
+
+🔵 [6.4.3.2.component_ref_cycle_6](../models_1_0/invalid/6.4.3.2.component_ref_cycle_6.cellml): **Error not detected.**
+
+🔵 [6.4.3.2.component_ref_cycle_7](../models_1_0/invalid/6.4.3.2.component_ref_cycle_7.cellml): **Error not detected.**
+
+🔵 [6.4.3.2.component_ref_cycle_8](../models_1_0/invalid/6.4.3.2.component_ref_cycle_8.cellml): **Error not detected.**
+
 🔵 [6.4.3.2.component_ref_duplicate_child_1](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_1.cellml): **Error not detected.**
 
 🔵 [6.4.3.2.component_ref_duplicate_child_2](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_2.cellml): **Error not detected.**
+
+🔵 [6.4.3.2.component_ref_duplicate_child_3](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_3.cellml): **Error not detected.**
+
+🔵 [6.4.3.2.component_ref_duplicate_child_4](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_4.cellml): **Error not detected.**
 
 🔵 [6.4.3.2.component_ref_no_children_containment](../models_1_0/invalid/6.4.3.2.component_ref_no_children_containment.cellml): **Error not detected.**
 
