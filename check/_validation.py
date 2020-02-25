@@ -10,6 +10,10 @@ from lxml import etree
 
 import check
 
+from . import cellmlmanip_validation
+from . import myokit_validation
+from . import opencor_validation
+
 
 def colored(color, text):
     colors = {
@@ -26,8 +30,6 @@ def cellmlmanip(filename):
     """
     Validates ``filename`` in cellmlmanip, prints the result and then exits.
     """
-    from . import cellmlmanip_validation
-
     ok, msg = cellmlmanip_validation.parse(filename)
 
     if ok:
@@ -74,9 +76,7 @@ def myokit(filename):
     """
     Validates ``filename`` using Myokit, prints the result, and then exits.
     """
-    from . import myokit_validation as myokit
-
-    ok, msg = myokit.parse(filename)
+    ok, msg = myokit_validation.parse(filename)
     if ok:
         print(colored('warning', '[pass]') + ' This file validates in Myokit.')
         sys.exit(0)
@@ -91,9 +91,7 @@ def opencor(filename):
     Validates ``filename`` against the CellML API by running it through
     OpenCOR, prints the result and then exits.
     """
-    from . import opencor_validation as opencor
-
-    ret, out, err = opencor.parse(filename)
+    ret, out, err = opencor_validation.parse(filename)
     if ret == 0:
         print(
             colored('warning', '[pass]')

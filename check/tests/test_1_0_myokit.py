@@ -14,7 +14,6 @@ from .. import myokit_validation as myokit
 from .report import Report_1_0 as Report
 
 
-
 # Known instances where Myokit says a valid file is invalid
 false_negatives = {
     # Myokit uses stricter rules for identifiers

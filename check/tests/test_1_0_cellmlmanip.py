@@ -10,20 +10,25 @@ import pytest
 
 import check
 from . import shared
-from .. import cellmlmanip_validation
+from .. import cellmlmanip_validation as cm
 from .report import Report_1_0 as Report
 
 
 # Known instances where cellmlmanip says a valid file is invalid
 false_negatives = {
-    '4.algebraic_model': '',
-    '4.algebraic_ode_model': '',
+    # Unexpected error
+    '0.1.real_numbers_extreme': 'must be a sympy.Eq',
+
+}
+'''
     '2.4.3.connection_with_extensions': '',
     '2.4.3.units_with_extensions': 'units',
     '3.4.3.1.variable_with_interfaces': 'None',
     '3.4.3.3.variable_units_component':
         'Cannot find unit <oranges> in unit registry',
     '3.4.4.1.connection_with_one_map_variables': 'None',
+    '4.algebraic_model': '',
+    '4.algebraic_ode_model': '',
     '4.2.3_2.1.mathml_numbers_real':
         'Unimplemented type attribute for <cn>: real',
     '4.2.3_2.2.mathml_numbers_integer':
@@ -221,10 +226,13 @@ false_negatives = {
     '8.4.2.rdf_in_connection': '',
     '8.4.2.rdf_in_units_1': 'units',
 }
+'''
 
 
 # Expected error messages for invalid files.
 expected_messages = {
+}
+'''
     # Not in spec: Root node
     '0.0.root_node_two_elements': 'Extra content at the end of the document',
     '0.0.root_node_two_models': 'Extra content at the end of the document',
@@ -454,11 +462,13 @@ expected_messages = {
 
 
 }
-
+'''
 
 # Invalid models for which validation is not expected to pick up the (correct)
 # error.
 known_issues = {
+}
+'''
     # Not in spec: Root node
     '0.0.root_node_namespace_wrong',
     '0.0.root_node_not_model',
@@ -878,6 +888,7 @@ known_issues = {
     # 8.4.1 Cmeta id's are unique
     '8.4.1.cmeta_id_duplicate',
 }
+'''
 
 
 @pytest.fixture
@@ -898,11 +909,12 @@ class TestCellmlmanip(object):
         cls._report.render(
             os.path.join(check.REPORT_DIR, 'cellmlmanip_1_0.md'))
 
+    @pytest.mark.skipif(not cm.supported(), reason='Cellmlmanip not found')
     @pytest.mark.parametrize(('name', 'path'), shared.list_passes_1_0())
     def test_valid_model(self, name, path, log):
 
         # Validate
-        ok, msg = cellmlmanip_validation.parse(path)
+        ok, msg = cm.parse(path)
 
         # Report
         report = self._report
@@ -936,7 +948,8 @@ class TestCellmlmanip(object):
             log.error(msg)
             pytest.fail()
 
-
+    '''
+    @pytest.mark.skipif(not cm.supported(), reason='Cellmlmanip not found')
     @pytest.mark.parametrize(('name', 'path'), shared.list_fails_1_0())
     def test_invalid_model(self, name, path, log):
 
@@ -954,7 +967,7 @@ class TestCellmlmanip(object):
         expected_issue = name in known_issues
 
         # Validate model
-        ok, msg = cellmlmanip_validation.parse(path)
+        ok, msg = cm.parse(path)
 
         if ok:
             report.invalid_passed(name, path, expected_error or '')
@@ -1004,4 +1017,5 @@ class TestCellmlmanip(object):
                         log.error(msg)
                         log.error('Expected error: ' + expected_error)
                         pytest.fail()
+    '''
 
