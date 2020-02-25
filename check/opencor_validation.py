@@ -20,7 +20,13 @@ def supported():
 
 
 def parse(path):
-    """ Runs a CellML file through OpenCOR. """
+    """
+    Runs a CellML file through OpenCOR.
+
+    Returns a tuple ``(return_code, stdout, stderr)`` where ``return_code`` is
+    the return code from calling the OpenCOR process, while ``stdout`` and
+    ``stderr`` and the processes standard output and error output respectively.
+    """
 
     if not supported():
         raise RuntimeError(

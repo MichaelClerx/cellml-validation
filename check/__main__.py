@@ -22,13 +22,21 @@ def main():
         title='Commands',
     )
 
-    # Add subparsers
+    # Load tool dependent validation modules
+    from . import myokit_validation
     from . import opencor_validation
+
+    # Add subparsers, in alphabetical order
+    #add_cellmlmanip_parser(subparsers)
     add_dtd_1_0_parser(subparsers)
+    if myokit_validation.supported():
+        add_myokit_parser(subparsers)
     if opencor_validation.supported():
         add_opencor_parser(subparsers)
     add_relaxng_1_0_parser(subparsers)
     add_schema_1_0_parser(subparsers)
+
+
 
     # Parse!
     if len(sys.argv) == 1:
@@ -62,6 +70,23 @@ def add_dtd_1_0_parser(subparsers):
         help='The CellML file to validate.',
     )
     parser.set_defaults(func=dtd_1_0)
+
+
+def add_myokit_parser(subparsers):
+    """
+    Adds a subcommand parser for ``myokit``.
+    """
+    parser = subparsers.add_parser(
+        'myokit',
+        description='Validates a CellML file using Myokit.',
+        help='Validates a CellML file using Myokit.',
+    )
+    parser.add_argument(
+        'filename',
+        metavar='filename',
+        help='The CellML file to validate.',
+    )
+    parser.set_defaults(func=myokit)
 
 
 def add_opencor_parser(subparsers):
@@ -137,6 +162,25 @@ def dtd_1_0(filename):
 
     import check
     check.dtd_1_0(filename)
+
+
+def myokit(filename):
+    """
+    Validates a cellml file using Myokit.
+    """
+    filename = str(filename)
+
+    import os
+    import sys
+    if not os.path.exists(filename):
+        print('File not found: ' + filename)
+        sys.exit(1)
+    if not os.path.isfile(filename):
+        print('Not a file: ' + filename)
+        sys.exit(1)
+
+    import check
+    check.myokit(filename)
 
 
 def opencor(filename):

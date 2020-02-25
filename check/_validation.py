@@ -51,6 +51,22 @@ def dtd_1_0(filename):
         sys.exit(1)
 
 
+def myokit(filename):
+    """
+    Validates ``filename`` using Myokit, prints the result, and then exits.
+    """
+    from . import myokit_validation as myokit
+
+    ok, msg = myokit.parse(filename)
+    if ok:
+        print(colored('warning', '[pass]') + ' This file validates in Myokit.')
+        sys.exit(0)
+    else:
+        print(colored('fail', '[fail]'))
+        print(msg)
+        sys.exit(1)
+
+
 def opencor(filename):
     """
     Validates ``filename`` against the CellML API by running it through
