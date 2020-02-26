@@ -37,9 +37,6 @@ def parse(path):
     from cellmlmanip import load_model
     try:
         model = load_model(path)
-        # Do some manual checking
-        for e in model.equations:
-            model.check_left_right_units_equal(e)
     except Exception as e:
         msg = str(e)
         if not msg:
