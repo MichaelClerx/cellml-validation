@@ -41,6 +41,9 @@ def parse(path):
         for e in model.equations:
             model.check_left_right_units_equal(e)
     except Exception as e:
-        return False, str(e)
+        msg = str(e)
+        if not msg:
+            msg = str(type(e)) + ' with no error message set.'
+        return False, msg
     return True, 'ok'
 

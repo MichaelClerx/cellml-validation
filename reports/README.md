@@ -19,8 +19,11 @@ The reports listed below were automatically generated during testing. Some care 
 - [Schema validation](schema_1_0.md) (78%)
 - [RelaxNG validation](relaxng_1_0.md) (81%)
 
-External tools (tests for these are located in branches)
+External tools
 
 - [OpenCOR / CellML API](opencor_1_0.md) (89%)
 - [Myokit](myokit_1_0.md) (83%)
+
+Unfinished
+
 - [Web Lab cellmlmanip](cellmlmanip_1_0.md) (39%)

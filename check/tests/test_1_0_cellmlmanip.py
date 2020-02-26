@@ -16,217 +16,185 @@ from .report import Report_1_0 as Report
 
 # Known instances where cellmlmanip says a valid file is invalid
 false_negatives = {
-    # Unexpected error
-    '0.1.real_numbers_extreme': 'must be a sympy.Eq',
-
-}
-'''
-    '2.4.3.connection_with_extensions': '',
+    # TODO Unexpected error: Need fixing
+    '2.4.3.connection_with_extensions': 'Assertion',
+    # Reactions
+    '2.4.3.reaction_with_extensions': 'Reactions are not supported',
+    '2.4.3.role_with_extensions': 'Reactions are not supported',
+    '2.4.3.variable_ref_with_extensions': 'Reactions are not supported',
+    # TODO Extension elements: These errors are both not the right errors
+    '2.4.3.variable_with_extensions': 'unexpected keyword argument',
     '2.4.3.units_with_extensions': 'units',
-    '3.4.3.1.variable_with_interfaces': 'None',
-    '3.4.3.3.variable_units_component':
-        'Cannot find unit <oranges> in unit registry',
-    '3.4.4.1.connection_with_one_map_variables': 'None',
-    '4.algebraic_model': '',
-    '4.algebraic_ode_model': '',
-    '4.2.3_2.1.mathml_numbers_real':
-        'Unimplemented type attribute for <cn>: real',
-    '4.2.3_2.2.mathml_numbers_integer':
-        'Unimplemented type attribute for <cn>: integer',
-    '4.2.3_2.3.mathml_numbers_real_base':
-        'Unimplemented type attribute for <cn>: real',
-    '4.2.3_2.4.mathml_numbers_integer_base':
-        'Unimplemented type attribute for <cn>: integer',
-    '4.2.3_2.6.mathml_numbers_rational':
-        'Unimplemented type attribute for <cn>: rational',
-    '4.2.3_3.2_mathml_arithmetic_unary': '!= dimensionless',
-    '4.2.3_4.1_mathml_functions_basic': '',
-    '4.2.3_4.3_mathml_functions_factorial': '',
-    '4.2.3_5.2_mathml_derivatives_degree': '',
-    '4.2.3_5.4_mathml_derivatives_with_units_degree': '',
-    '4.2.3_6.6_mathml_logic_binary_operators': '',
-    '4.2.3_6.7_mathml_logic_constants':
-        'BooleanAtom not allowed in this context',
-    '4.2.3_7.1_mathml_pi': '',
-    '4.2.3_7.2_mathml_e': '',
-    '4.2.3_7.3_mathml_nan_inf': 'Equation expression must be equality',
+    # Reactions
+    '3.4.2.1.component_with_one_reaction': 'Reactions are not supported',
+    '3.4.2.1.component_with_reactions': 'Reactions are not supported',
+    # Component units are not supported
+    '3.4.2.1.component_child_order_1': 'units inside components',
+    '3.4.2.1.component_child_order_2': 'units inside components',
+    '3.4.2.1.component_with_units': 'units inside components',
+    '3.4.2.1.component_with_one_units': 'units inside components',
+    '3.4.3.3.variable_units_component': 'Unknown unit oranges',
+    # Algebraic models are not supported
+    '4.algebraic_model': 'LHS should be a derivative or variable',
+    '4.algebraic_ode_model': 'LHS should be a derivative or variable',
+    # Extended number types
+    '4.2.3_2.1.mathml_numbers_real': 'Unimplemented type attribute for <cn>',
+    '4.2.3_2.2.mathml_numbers_integer': 'Unimplemented type attribute for <c',
+    '4.2.3_2.3.mathml_numbers_real_base': 'Unimplemented type attribute for',
+    '4.2.3_2.4.mathml_numbers_integer_base': 'Unimplemented type attribute',
+    '4.2.3_2.6.mathml_numbers_rational': 'Unimplemented type attribute for <c',
+    # Factorial is not supported
+    '4.2.3_4.3_mathml_functions_factorial': 'element <factorial>',
+    # TODO Wrong error
+    '4.2.3_5.2_mathml_derivatives_degree': 'not 0',
+    '4.2.3_5.4_mathml_derivatives_with_units_degree': 'not 0',
+    # TODO Nan and Inf support
+    '4.2.3_7.3_mathml_nan_inf': 'must be a sympy.Eq',
+    # Semantics annotations are not supported
     '4.2.3_8.1_annotation': 'No handler for element <semantics>',
-    '4.2.3_8.2_annotation_xml': 'Cannot find unit <per_millisecond>',
-    '4.4.3.1.cn_component_units': 'Cannot find unit <wooster>',
-    '5.2.7.unit_checking_derivatives_degree': '',
-    '5.2.7.unit_checking_dimensionless': '',
-    '5.2.7.unit_checking_functions_factorial':
-        'No handler for element <factorial>',
-    '5.2.7.unit_checking_functions_non_smooth': 'TODO',
-    '5.2.7.unit_checking_functions_power_and_root':
-        'Cannot find unit <meter_cubic> in unit registry',
-    '5.2.7.unit_checking_name_differs':
-        'Cannot find unit <wooster> in unit registry',
+    '4.2.3_8.2_annotation_xml': 'Unknown unit per_millisecond',
+    # Component units are not supported
+    '4.4.3.1.cn_component_units': 'Unknown unit wooster',
+    # Celsius is not supported
+    '5.2.1.units_celsius': "'celsius' is not defined",
+    # Incompatible units
+    '5.2.7.unit_conversion_inconvertible_1': 'Cannot convert',
+    '5.2.7.unit_conversion_new_base_units': 'Cannot convert',
     '5.2.7.unit_checking_internal_mismatch_1': '!= ampere',
     '5.2.7.unit_checking_internal_mismatch_2': '!= ampere',
     '5.2.7.unit_checking_internal_mismatch_3': '!= dimensionless',
     '5.2.7.unit_checking_internal_mismatch_4': '!= millivolt',
-    '5.2.7.unit_checking_piecewise_multi_unit': '',
-    'C.3.3.unit_checking_arithmetic_minus_operand_error_1': '',
-    'C.3.3.unit_checking_arithmetic_minus_operand_error_2': '',
-    'C.3.3.unit_checking_arithmetic_minus_operand_error_3': '',
-    'C.3.3.unit_checking_arithmetic_plus_operand_error_1': '',
-    'C.3.3.unit_checking_arithmetic_plus_operand_error_2': '',
-    'C.3.3.unit_checking_arithmetic_plus_operand_error_3': '',
-    'C.3.3.unit_checking_arithmetic_plus_operand_error_4': '',
-    'C.3.3.unit_checking_arithmetic_power_operand_error': '',
-    'C.3.3.unit_checking_arithmetic_root_operand_error': '',
-    'C.3.3.unit_checking_derivative_operand_error': '',
-    'C.3.3.unit_checking_function_exp_operand_error': '',
+    '5.2.7.unit_checking_piecewise_multi_unit': 'Piecewise((',
+    # TODO Wrong error
+    '5.2.7.unit_checking_derivatives_degree': 'not 0',
+    # Factorial is not supported
+    '5.2.7.unit_checking_functions_factorial': 'for element <factorial>',
+    # TODO Improve error message (also, this is a contended issue)
+    '5.4.1.1.units_empty_1': 'Invalid or unsupported CellML file',
+    '5.4.1.1.units_empty_2': 'Invalid or unsupported CellML file',
+    # Component units are not supported
+    '5.4.1.2.units_names_and_other_names': 'units inside components',
+    '5.4.1.2.units_shadowing_1': 'units inside components',
+    '5.4.1.2.units_shadowing_2': 'units inside components',
+    '5.4.2.2.unit_units_local_1': 'units inside components',
+    '5.4.2.2.unit_units_local_2': 'units inside components',
+    # TODO Improve error message
+    '5.4.2.7.unit_offset_non_zero_and_exponent_one': 'units',
+    # Booleans are not allowed in equations
+    '5.5.2.boolean_arithmetic_divide': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_arithmetic_minus': 'BooleanAtom not allowed in this',
+    # '5.5.2.boolean_arithmetic_plus': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_arithmetic_power_1': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_arithmetic_power_2': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_arithmetic_root_1': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_arithmetic_root_2': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_arithmetic_times': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_function_abs': 'Bad argument type for Abs()',
+    '5.5.2.boolean_function_ceiling': 'BooleanAtom not allowed in this',
+    '5.5.2.boolean_function_floor': 'BooleanAtom not allowed ',
+    # TODO Improve error message
+    '5.5.2.boolean_derivatives_1': 'must be a sympy.Eq',
+    '5.5.2.boolean_derivatives_2': 'has no attribute \'is_scalar\'',
+    '5.5.2.boolean_derivatives_3': 'must be a sympy.Eq',
+    '5.5.2.boolean_function_ln': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_function_log_1': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_function_log_2': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arccos': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arccot': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arccoth': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arccsc': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arcsin': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arcsinh': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arctan': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_arctanh': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_cos': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_cosh': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_cot': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_coth': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_csc': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_csch': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_sec': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_sech': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_sin': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_sinh': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_tan': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_trig_tanh': "'BooleanTrue' object has no attribute",
+    '5.5.2.boolean_variable_1': 'True',
+    '5.5.2.boolean_variable_2': 'False',
+    '5.5.2.boolean_variable_3': 'Eq(_1.0',
+    # Factorial is not supported
+    '5.5.2.boolean_function_factorial': 'No handler for element <factorial>',
+    # TODO Unexpected error
+    '6.4.2.1.relationship_ref_relationship_2': 'Invalid or unsupported CellML',
+    '6.4.2.5.relationship_ref_multiple_1': 'Assertion',
+    '6.4.2.5.relationship_ref_multiple_2': 'Assertion',
+    '6.4.2.5.relationship_ref_multiple_3': 'Assertion',
+    '6.4.3.2.component_ref_no_children_extension': 'Invalid or unsupported',
+    # Reactions are not supported
+    '7.4.1.2.reaction_reversible_no': 'Reactions are not supported',
+    '7.4.1.2.reaction_reversible_yes': 'Reactions are not supported',
+    '7.4.3.reaction_all_roles_and_attributes': 'Reactions are not supported',
+    '7.4.3.reaction_reversible_no': 'Reactions are not supported',
+    '7.4.3.reaction_simple': 'Reactions are not supported',
+    '8.4.1.cmeta_id_in_reaction': 'Reactions are not supported',
+    '8.4.1.cmeta_id_in_role': 'Reactions are not supported',
+    '8.4.1.cmeta_id_in_variable_ref': 'Reactions are not supported',
+    # Component units are not supported
+    '8.4.1.cmeta_id_in_units_2': 'units inside components',
+    # TODO Unexpected error
+    '8.4.2.rdf_in_connection': 'AssertionError',
+    # Reactions are not supported
+    '8.4.2.rdf_in_reaction': 'Reactions are not supported',
+    '8.4.2.rdf_in_role': 'Reactions are not supported',
+    '8.4.2.rdf_in_variable_ref': 'Reactions are not supported',
+    # TODO Unexpected error
+    '8.4.2.rdf_in_units_1': 'units',
+    # Component units are not supported
+    '8.4.2.rdf_in_units_2': 'units inside components',
+    # Factorial is not supported
     'C.3.3.unit_checking_function_factorial_operand_error':
         'No handler for element <factorial>',
-    'C.3.3.unit_checking_function_ln_operand_error':
-        'log args not dimensionless',
-    'C.3.3.unit_checking_function_log_operand_error_1': '',
-    'C.3.3.unit_checking_function_log_operand_error_2':
-        'log args not dimensionless',
-    'C.3.3.unit_checking_trig_arccosh_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arccos_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arccoth_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arccot_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arccsch_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arccsc_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arcsech_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arcsec_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arcsinh_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arcsin_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arctanh_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_arctan_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_cosh_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_cos_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_coth_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_cot_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_csch_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_csc_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_sech_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_sec_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_sinh_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_sin_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_tanh_operand_error': 'TODO',
-    'C.3.3.unit_checking_trig_tan_operand_error': 'TODO',
-    '5.2.7.unit_conversion_dimensionless_multiplier_1': '!= dimensionless',
-    '5.2.7.unit_conversion_dimensionless_multiplier_2': '!= dimensionless',
-    '5.2.7.unit_conversion_less_obvious': '!= millijoule_per_meter',
-    '5.2.7.unit_conversion_multiplier': '!= imperial_volt',
-    '5.2.7.unit_conversion_offset': '!= uk_adult_shoe',
-    '5.2.7.unit_conversion_prefix': '!= millivolt',
-    '5.2.7.unit_conversion_inconvertible_1': '!= volt',
-    '5.2.7.unit_conversion_new_base_units': '!= wooster',
-    '5.4.1.2.units_shadowing_2': '!= newton',
-    '5.4.2.3.unit_prefix_integer':
-        'Cannot find unit <celsius> in unit registry',
-    '5.4.2.3.unit_prefix_named':
-        'Cannot find unit <celsius> in unit registry',
-    '5.4.2.7.unit_offset_non_zero_and_exponent_one': 'units',
-    '5.5.2.boolean_arithmetic_divide':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_minus':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_plus':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_power_1':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_power_2':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_root_1':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_root_2':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_arithmetic_times':
-        "'BooleanTrue' object has no attribute 'as_base_exp'",
-    '5.5.2.boolean_compare_eq_operand_error':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_compare_geq_operand_error':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_compare_gt_operand_error':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_compare_leq_operand_error':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_compare_lt_operand_error':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_derivatives_1': 'TODO',
-    '5.5.2.boolean_derivatives_2': '',
-    '5.5.2.boolean_function_abs':
-        'Bad argument type for Abs()',
-    '5.5.2.boolean_function_ceiling':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_function_exp':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_function_factorial':
-        'No handler for element <factorial>',
-    '5.5.2.boolean_function_floor':
-        'BooleanAtom not allowed in this context',
-    '5.5.2.boolean_function_ln':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_function_log_1':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_function_log_2':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_logic_and_operand_error':
-        'but must be a Relational',
-    '5.5.2.boolean_trig_arccos':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_arccosh':
-        "BooleanAtom not allowed in this context",
-    '5.5.2.boolean_trig_arccot':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_arccoth':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_trig_arccsc':
-        "BooleanAtom not allowed in this context",
-    '5.5.2.boolean_trig_arccsch':
-        "BooleanAtom not allowed in this context",
-    '5.5.2.boolean_trig_arcsec':
-        "BooleanAtom not allowed in this context",
-    '5.5.2.boolean_trig_arcsech':
-        "BooleanAtom not allowed in this context",
-    '5.5.2.boolean_trig_arcsin':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_arcsinh':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_trig_arctan':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_arctanh':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_trig_cos':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_cosh':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_trig_cot':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_coth':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_trig_csc':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_csch':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_sec':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_sech':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_sin':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_sinh':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_trig_tan':
-        "'BooleanTrue' object has no attribute 'could_extract_minus_sign'",
-    '5.5.2.boolean_trig_tanh':
-        "'BooleanTrue' object has no attribute 'as_coefficient'",
-    '5.5.2.boolean_variable_1': 'TODO',
-    '5.5.2.boolean_variable_2': 'TODO',
-    '5.5.2.boolean_variable_3': 'TODO',
-    '6.4.2.5.relationship_ref_multiple_1': '',
-    '6.4.2.5.relationship_ref_multiple_2': '',
-    '6.4.2.5.relationship_ref_multiple_3': '',
-    '8.4.2.rdf_in_connection': '',
-    '8.4.2.rdf_in_units_1': 'units',
+    # TODO Wrong error message
+    'C.3.3.unit_checking_derivative_operand_error': 'not 0',
+    # TODO Improve error message
+    'C.3.3.unit_checking_arithmetic_minus_operand_error_1': '_3.0 -',
+    'C.3.3.unit_checking_arithmetic_minus_operand_error_2': '-_1.2',
+    'C.3.3.unit_checking_arithmetic_minus_operand_error_3': '-_1.2',
+    'C.3.3.unit_checking_arithmetic_plus_operand_error_1': '_3.0 +',
+    'C.3.3.unit_checking_arithmetic_plus_operand_error_2': '_1.2 +',
+    'C.3.3.unit_checking_arithmetic_plus_operand_error_3': '_1.2 +',
+    'C.3.3.unit_checking_arithmetic_plus_operand_error_4': '_1.2 +',
+    'C.3.3.unit_checking_arithmetic_power_operand_error': '_3.4**_2.0',
+    'C.3.3.unit_checking_arithmetic_root_operand_error': '(\'_9.0**',
+    'C.3.3.unit_checking_function_exp_operand_error': 'exp(',
+    'C.3.3.unit_checking_function_ln_operand_error': 'log(',
+    'C.3.3.unit_checking_function_log_operand_error_1': 'log(',
+    'C.3.3.unit_checking_function_log_operand_error_2': 'log(',
+    'C.3.3.unit_checking_trig_arccos_operand_error': 'acos(',
+    'C.3.3.unit_checking_trig_arccosh_operand_error': 'acosh(',
+    'C.3.3.unit_checking_trig_arccot_operand_error': 'acot(',
+    'C.3.3.unit_checking_trig_arccoth_operand_error': 'acoth(',
+    'C.3.3.unit_checking_trig_arccsc_operand_error': 'acsc(',
+    'C.3.3.unit_checking_trig_arccsch_operand_error': 'acsch(',
+    'C.3.3.unit_checking_trig_arcsec_operand_error': 'asec(',
+    'C.3.3.unit_checking_trig_arcsech_operand_error': 'asech(',
+    'C.3.3.unit_checking_trig_arcsin_operand_error': 'asin(',
+    'C.3.3.unit_checking_trig_arcsinh_operand_error': 'asinh(',
+    'C.3.3.unit_checking_trig_arctan_operand_error': 'atan(',
+    'C.3.3.unit_checking_trig_arctanh_operand_error': 'atanh(',
+    'C.3.3.unit_checking_trig_cos_operand_error': 'cos(',
+    'C.3.3.unit_checking_trig_cosh_operand_error': 'cosh(',
+    'C.3.3.unit_checking_trig_cot_operand_error': 'cot(',
+    'C.3.3.unit_checking_trig_coth_operand_error': 'coth(',
+    'C.3.3.unit_checking_trig_csc_operand_error': 'csc(',
+    'C.3.3.unit_checking_trig_csch_operand_error': 'csch(',
+    'C.3.3.unit_checking_trig_sec_operand_error': 'sec(',
+    'C.3.3.unit_checking_trig_sech_operand_error': 'sech(',
+    'C.3.3.unit_checking_trig_sin_operand_error': 'sin(',
+    'C.3.3.unit_checking_trig_sinh_operand_error': 'sinh(',
+    'C.3.3.unit_checking_trig_tan_operand_error': 'tan(',
+    'C.3.3.unit_checking_trig_tanh_operand_error': 'tanh(',
 }
-'''
 
 
 # Expected error messages for invalid files.
@@ -451,16 +419,6 @@ expected_messages = {
     # 6.4.3.2 Encapsulation relationships cannot overlap
     '6.4.3.2.component_ref_overlapping_encapsulation':
         'Parent of component B already A.',
-
-
-
-
-
-
-
-
-
-
 }
 '''
 
@@ -928,7 +886,7 @@ class TestCellmlmanip(object):
             if ok:
                 # Expected fail, but passed
                 log.error('Unexpected pass for ' + name)
-                pytest.xpass()
+                pytest.fail()
             else:
                 # Failed, check if expected
                 expected = false_negatives[name]
