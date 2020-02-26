@@ -24,6 +24,6 @@ External tools
 - [OpenCOR / CellML API](opencor_1_0.md) (89%)
 - [Myokit](myokit_1_0.md) (83%)
 
-Unfinished
+Validation still in progress
 
-- [Web Lab cellmlmanip](cellmlmanip_1_0.md) (39%)
+- [Web Lab cellmlmanip](cellmlmanip_1_0.md) (??%)
