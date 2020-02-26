@@ -134,11 +134,11 @@ Results per category
 
 [2.4.2.imaginary_attributes_1](../models_1_0/invalid/2.4.2.imaginary_attributes_1.cellml): Error detected correctly.
 * Expected: ```Unexpected attribute fruit found```
-* Output: ```[Error] [2:258] Unexpected attribute fruit found - not valid here.```
+* Output: ```[Error] [2:251] Unexpected attribute fruit found - not valid here.```
 
 [2.4.2.imaginary_attributes_2](../models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml): Error detected correctly.
 * Expected: ```Unexpected attribute fruit found```
-* Output: ```[Error] [2:321] Unexpected attribute fruit found - not valid here.```
+* Output: ```[Error] [2:314] Unexpected attribute fruit found - not valid here.```
 
 [2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
 * Expected: ```Unexpected element fruit found```
@@ -358,7 +358,7 @@ Results per category
 
 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
 * Expected: ```A valid CellML identifier must contain at least one letter```
-* Output: ```[Error] [2:258] A valid CellML identifier must contain at least one letter (section 2.4.1).```
+* Output: ```[Error] [2:251] A valid CellML identifier must contain at least one letter (section 2.4.1).```
 
 
 ---

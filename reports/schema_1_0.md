@@ -1,14 +1,14 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 78% according to spec (629 out of 804)
+* 75% according to spec (603 out of 804)
 * 351 out of 351 valid files passed
-* 278 out of 453 invalid files detected
+* 252 out of 453 invalid files detected
 
 Issues:
 * 0 valid files failed validation
 * 175 invalid files passed validation
-* 0 invalid files failed validation for the wrong reason
+* 26 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -16,13 +16,13 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|19|25|0|2|0|95%|
-|[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|4|0|0|6|62%|
+|[2. Fundamentals](#2-fundamentals)|19|20|0|2|5|84%|
+|[3. Model structure](#3-model-structure)|50|92|0|56|5|69%|
 |[4. Mathematics](#4-mathematics)|45|2|0|17|0|73%|
-|[5. Units](#5-units)|134|41|0|45|0|79%|
-|[6. Grouping](#6-grouping)|17|46|0|32|0|66%|
-|[7. Reactions](#7-reactions)|5|56|0|23|0|72%|
+|[5. Units](#5-units)|134|37|0|45|4|77%|
+|[6. Grouping](#6-grouping)|17|43|0|32|3|63%|
+|[7. Reactions](#7-reactions)|5|53|0|23|3|69%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
@@ -58,41 +58,29 @@ Results per category
 
 ### 0.1
 
-[0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): Error detected correctly.
+🔶 [0.1.real_number_invalid_1](../models_1_0/invalid/0.1.real_number_invalid_1.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
-[0.1.real_number_invalid_2](../models_1_0/invalid/0.1.real_number_invalid_2.cellml): Error detected correctly.
+🔶 [0.1.real_number_invalid_2](../models_1_0/invalid/0.1.real_number_invalid_2.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1e12e12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1e12e12' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1e12e12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
-[0.1.real_number_invalid_3](../models_1_0/invalid/0.1.real_number_invalid_3.cellml): Error detected correctly.
+🔶 [0.1.real_number_invalid_3](../models_1_0/invalid/0.1.real_number_invalid_3.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1f12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1f12' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1f12' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
-[0.1.real_number_invalid_4](../models_1_0/invalid/0.1.real_number_invalid_4.cellml): Error detected correctly.
+🔶 [0.1.real_number_invalid_4](../models_1_0/invalid/0.1.real_number_invalid_4.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '--1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '--1' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '--1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
-[0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): Error detected correctly.
+🔶 [0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '++1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '++1' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '++1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
-[0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
+🔶 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'hello' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': 'hello' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'hello' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -114,44 +102,39 @@ Results per category
 
 #### 2.4.1
 
-[2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): Error detected correctly.
+🔶 [2.4.1.identifier_empty](../models_1_0/invalid/2.4.1.identifier_empty.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': '' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
-[2.4.1.identifier_only_underscore](../models_1_0/invalid/2.4.1.identifier_only_underscore.cellml): Error detected correctly.
+🔶 [2.4.1.identifier_only_underscore](../models_1_0/invalid/2.4.1.identifier_only_underscore.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
-[2.4.1.identifier_unexpected_character_1](../models_1_0/invalid/2.4.1.identifier_unexpected_character_1.cellml): Error detected correctly.
+🔶 [2.4.1.identifier_unexpected_character_1](../models_1_0/invalid/2.4.1.identifier_unexpected_character_1.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'Hello World' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': 'Hello World' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
-[2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): Error detected correctly.
+🔶 [2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'HelloJosé' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': 'HelloJosé' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
-[2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): Error detected correctly.
+🔶 [2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value 'Hello🥃' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': 'Hello🥃' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 [2.4.1.valid_identifiers](../models_1_0/valid/2.4.1.valid_identifiers.cellml): Valid file passed validation.
@@ -381,11 +364,9 @@ Results per category
 
 ##### 3.4.1.2
 
-[3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): Error detected correctly.
+🔶 [3.4.1.2.model_name_invalid](../models_1_0/invalid/3.4.1.2.model_name_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
-* Output:
-  * ```Error on line 4: Element 'cellml:model', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 4: Element 'cellml:model', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
+* Output: ```Error on line 4: Element 'cellml:model', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
 
 
 ---
@@ -473,12 +454,11 @@ Results per category
 * Expected: ```Duplicate key-sequence ['c1']```
 * Output: ```Error on line 7: Element 'cellml:component': Duplicate key-sequence ['c1'] in key identity-constraint 'cellml:component_name'.```
 
-[3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): Error detected correctly.
+🔶 [3.4.2.2.component_name_invalid](../models_1_0/invalid/3.4.2.2.component_name_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:component', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:component', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 6: Element 'cellml:component': Not all fields of key identity-constraint 'cellml:component_name' evaluate to a node.```
 
 
@@ -569,12 +549,11 @@ Results per category
 * Expected: ```Element 'cellml:variable': Duplicate key-sequence```
 * Output: ```Error on line 8: Element 'cellml:variable': Duplicate key-sequence ['x'] in key identity-constraint 'cellml:variable_name'.```
 
-[3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): Error detected correctly.
+🔶 [3.4.3.2.variable_name_invalid](../models_1_0/invalid/3.4.3.2.variable_name_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 7: Element 'cellml:variable', attribute 'name': [facet 'pattern'] The value 'Spaces are not allowed' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'name': 'Spaces are not allowed' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 7: Element 'cellml:variable', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
   * ```Error on line 7: Element 'cellml:variable': Not all fields of key identity-constraint 'cellml:variable_name' evaluate to a node.```
 
 [3.4.3.2.variable_name_same_as_cousin](../models_1_0/valid/3.4.3.2.variable_name_same_as_cousin.cellml): Valid file passed validation.
@@ -603,9 +582,7 @@ Results per category
 
 [3.4.3.4.variable_interface_public_invalid](../models_1_0/invalid/3.4.3.4.variable_interface_public_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'public_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'public_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'public_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
 
 
 ---
@@ -614,9 +591,7 @@ Results per category
 
 [3.4.3.5.variable_interface_private_invalid](../models_1_0/invalid/3.4.3.5.variable_interface_private_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'private_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'private_interface': 'apple' is not a valid value of the atomic type 'cellml:interface'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'private_interface': [facet 'enumeration'] The value 'apple' is not an element of the set {'in', 'out', 'none'}.```
 
 
 ---
@@ -630,17 +605,13 @@ Results per category
 
 ##### 3.4.3.7
 
-[3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): Error detected correctly.
+🔶 [3.4.3.7.variable_initial_value_empty](../models_1_0/invalid/3.4.3.7.variable_initial_value_empty.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
-[3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): Error detected correctly.
+🔶 [3.4.3.7.variable_initial_value_invalid](../models_1_0/invalid/3.4.3.7.variable_initial_value_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': '1+1' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '1+1' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 
 ---
@@ -1431,12 +1402,11 @@ Results per category
 * Expected: ```Element 'cellml:units': Duplicate key-sequence```
 * Output: ```Error on line 10: Element 'cellml:units': Duplicate key-sequence ['wooster'] in unique identity-constraint 'cellml:component_units_name'.```
 
-[5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): Error detected correctly.
+🔶 [5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 6: Element 'cellml:units', attribute 'name': [facet 'pattern'] The value '_' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 6: Element 'cellml:units', attribute 'name': '_' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 6: Element 'cellml:units', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 6: Element 'cellml:units', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
 
 🔵 [5.4.1.2.units_name_predefined_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_ampere.cellml): **Error not detected.**
 
@@ -1521,9 +1491,7 @@ Results per category
 
 [5.4.1.3.units_base_units_invalid](../models_1_0/invalid/5.4.1.3.units_base_units_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
-* Output:
-  * ```Error on line 6: Element 'cellml:units', attribute 'base_units': [facet 'enumeration'] The value 'certainly' is not an element of the set {'yes', 'no'}.```
-  * ```Error on line 6: Element 'cellml:units', attribute 'base_units': 'certainly' is not a valid value of the atomic type 'cellml:yes_no'.```
+* Output: ```Error on line 6: Element 'cellml:units', attribute 'base_units': [facet 'enumeration'] The value 'certainly' is not an element of the set {'yes', 'no'}.```
 
 
 ---
@@ -1647,33 +1615,27 @@ Results per category
 
 ##### 5.4.2.4
 
-[5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): Error detected correctly.
+🔶 [5.4.2.4.unit_exponent_invalid](../models_1_0/invalid/5.4.2.4.unit_exponent_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:unit', attribute 'exponent': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:unit', attribute 'exponent': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'exponent': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 
 ---
 
 ##### 5.4.2.5
 
-[5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): Error detected correctly.
+🔶 [5.4.2.5.unit_multiplier_invalid](../models_1_0/invalid/5.4.2.5.unit_multiplier_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:unit', attribute 'multiplier': [facet 'pattern'] The value 'three' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:unit', attribute 'multiplier': 'three' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'multiplier': [facet 'pattern'] The value 'three' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 
 ---
 
 ##### 5.4.2.6
 
-[5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): Error detected correctly.
+🔶 [5.4.2.6.unit_offset_invalid](../models_1_0/invalid/5.4.2.6.unit_offset_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 7: Element 'cellml:unit', attribute 'offset': [facet 'pattern'] The value 'no' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 7: Element 'cellml:unit', attribute 'offset': 'no' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 7: Element 'cellml:unit', attribute 'offset': [facet 'pattern'] The value 'no' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 
 ---
@@ -1967,24 +1929,22 @@ Results per category
 
 ##### 6.4.2.2
 
-[6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): Error detected correctly.
+🔶 [6.4.2.2.relationship_ref_relationship_invalid](../models_1_0/invalid/6.4.2.2.relationship_ref_relationship_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:relationship'```
 * Output:
   * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': [facet 'enumeration'] The value 'howdy' is not an element of the set {'containment', 'encapsulation'}.```
-  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': 'howdy' is not a valid value of the atomic type 'cellml:relationship'.```
-  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'relationship': Warning: No precomputed value available, the value was either invalid or something strange happened.```
 
 
 ---
 
 ##### 6.4.2.3
 
-[6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): Error detected correctly.
+🔶 [6.4.2.3.relationship_ref_name_invalid](../models_1_0/invalid/6.4.2.3.relationship_ref_name_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
 * Output:
   * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': [facet 'pattern'] The value '___' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': '___' is not a valid value of the atomic type 'cellml:identifier'.```
-  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 9: Element 'cellml:relationship_ref', attribute 'name': Warning: No precomputed value available, the value was either invalid or something strange happened.```
 
 [6.4.2.3.relationship_ref_name_not_unique_model_wide](../models_1_0/valid/6.4.2.3.relationship_ref_name_not_unique_model_wide.cellml): Valid file passed validation.
 
@@ -2137,11 +2097,9 @@ Results per category
 
 ##### 6.4.3.3
 
-[6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): Error detected correctly.
+🔶 [6.4.3.3.component_ref_component_invalid](../models_1_0/invalid/6.4.3.3.component_ref_component_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:identifier'```
-* Output:
-  * ```Error on line 11: Element 'cellml:component_ref', attribute 'component': [facet 'pattern'] The value '.' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
-  * ```Error on line 11: Element 'cellml:component_ref', attribute 'component': '.' is not a valid value of the atomic type 'cellml:identifier'.```
+* Output: ```Error on line 11: Element 'cellml:component_ref', attribute 'component': [facet 'pattern'] The value '.' is not accepted by the pattern '_*[a-zA-Z0-9][a-zA-Z0-9_]*'.```
 
 [6.4.3.3.component_ref_component_nonexistent_1](../models_1_0/invalid/6.4.3.3.component_ref_component_nonexistent_1.cellml): Error detected correctly.
 * Expected: ```'cellml:component_ref': No match found for key-sequence```
@@ -2221,9 +2179,7 @@ Results per category
 
 [7.4.1.2.reaction_reversible_invalid](../models_1_0/invalid/7.4.1.2.reaction_reversible_invalid.cellml): Error detected correctly.
 * Expected: ```not an element of the set```
-* Output:
-  * ```Error on line 8: Element 'cellml:reaction', attribute 'reversible': [facet 'enumeration'] The value 'definitely' is not an element of the set {'yes', 'no'}.```
-  * ```Error on line 8: Element 'cellml:reaction', attribute 'reversible': 'definitely' is not a valid value of the atomic type 'cellml:yes_no'.```
+* Output: ```Error on line 8: Element 'cellml:reaction', attribute 'reversible': [facet 'enumeration'] The value 'definitely' is not an element of the set {'yes', 'no'}.```
 
 [7.4.1.2.reaction_reversible_no](../models_1_0/valid/7.4.1.2.reaction_reversible_no.cellml): Valid file passed validation.
 
@@ -2390,12 +2346,11 @@ Results per category
 
 ##### 7.4.3.2
 
-[7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): Error detected correctly.
+🔶 [7.4.3.2.role_role_invalid](../models_1_0/invalid/7.4.3.2.role_role_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:species_role'```
 * Output:
   * ```Error on line 10: Element 'cellml:role', attribute 'role': [facet 'enumeration'] The value 'mole' is not an element of the set {'reactant', 'product', 'catalyst', 'activator', 'inhibitor', 'modifier', 'rate'}.```
-  * ```Error on line 10: Element 'cellml:role', attribute 'role': 'mole' is not a valid value of the atomic type 'cellml:species_role'.```
-  * ```Error on line 10: Element 'cellml:role', attribute 'role': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 10: Element 'cellml:role', attribute 'role': Warning: No precomputed value available, the value was either invalid or something strange happened.```
 
 
 ---
@@ -2415,12 +2370,11 @@ Results per category
 
 ##### 7.4.3.4
 
-[7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): Error detected correctly.
+🔶 [7.4.3.4.role_direction_invalid](../models_1_0/invalid/7.4.3.4.role_direction_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:reaction_direction'```
 * Output:
   * ```Error on line 24: Element 'cellml:role', attribute 'direction': [facet 'enumeration'] The value 'backward' is not an element of the set {'forward', 'reverse', 'both'}.```
-  * ```Error on line 24: Element 'cellml:role', attribute 'direction': 'backward' is not a valid value of the atomic type 'cellml:reaction_direction'.```
-  * ```Error on line 24: Element 'cellml:role', attribute 'direction': Warning: No precomputed value available, the value was either invalid or something strange happend.```
+  * ```Error on line 24: Element 'cellml:role', attribute 'direction': Warning: No precomputed value available, the value was either invalid or something strange happened.```
 
 
 ---
@@ -2452,11 +2406,9 @@ Results per category
 
 ##### 7.4.3.6
 
-[7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): Error detected correctly.
+🔶 [7.4.3.6.role_stoichiometry_invalid](../models_1_0/invalid/7.4.3.6.role_stoichiometry_invalid.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```not a valid value of the atomic type 'cellml:real_number'```
-* Output:
-  * ```Error on line 15: Element 'cellml:role', attribute 'stoichiometry': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
-  * ```Error on line 15: Element 'cellml:role', attribute 'stoichiometry': 'yes' is not a valid value of the atomic type 'cellml:real_number'.```
+* Output: ```Error on line 15: Element 'cellml:role', attribute 'stoichiometry': [facet 'pattern'] The value 'yes' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 
 ---
