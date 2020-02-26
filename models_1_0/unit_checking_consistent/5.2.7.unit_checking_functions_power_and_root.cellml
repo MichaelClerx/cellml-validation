@@ -4,13 +4,13 @@
 <model name="unit_checking_power_and_root"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="meter_squared">
+    <unit units="meter" exponent="2" />
+  </units>
+  <units name="meter_cubic">
+    <unit units="meter" exponent="3" />
+  </units>
   <component name="A">
-    <units name="meter_squared">
-      <unit units="meter" exponent="2" />
-    </units>
-    <units name="meter_cubic">
-      <unit units="meter" exponent="3" />
-    </units>
     <variable name="power" units="meter_cubic" />
     <variable name="root" units="meter" />
     <variable name="root_with_degree" units="meter" />
