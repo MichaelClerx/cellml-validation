@@ -19,11 +19,12 @@ The reports listed below were automatically generated during testing. Some care 
 - [Schema validation](schema_1_0.md) (78%)
 - [RelaxNG validation](relaxng_1_0.md) (81%)
 
-External tools
+### External tools
 
-- [OpenCOR / CellML API](opencor_1_0.md) (89%)
+- [Cellmlmanip](cellmlmanip_1_0.md) (82%)
 - [Myokit](myokit_1_0.md) (83%)
+- [OpenCOR / CellML API](opencor_1_0.md) (89%)
 
-Validation still in progress
-
-- [Web Lab cellmlmanip](cellmlmanip_1_0.md) (??%)
+Note that the differences between these tools are all clouded by reaction support.
+OpenCOR uses the CellML API for validation, which handles reactions very well (although OpenCOR itself does not supports reactions).
+Similarly, Cellmlmanip uses the RelaxNG schema for a first pass of validation, allowing it to catch a lot of reaction-related errors, despite not supporting reactions itself.
