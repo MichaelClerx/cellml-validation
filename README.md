@@ -56,6 +56,9 @@ Dependening on how you look at it, this constitutes a test of the test files, of
   pytest
   ```
   To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
-- Running all tests generates reports of which test files pass and fail with different validation tools.
-  [A list of pre-rendered reports can be viewed here](reports/README.md).
+
+## Reports
+
+The full suite of tests have been run on several validation and simulation tools.
+[Reports of the test results can be viewed here](reports/README.md).
 
