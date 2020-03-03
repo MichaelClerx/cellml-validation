@@ -2,16 +2,13 @@
 
 This repository hosts:
 
-- a large set of CellML models that each either break or exemplify a single rule in the CellML 1.0 specification,
-- XML validation tools (DTD, Schema, RelaxNG) for CellML 1.0,
-- code to apply each validation method to each model file, and generate a report showing the results.
+- A large set of CellML models that each either exemplify or break a rule in the CellML 1.0 specification
+- XML validation tools (DTD, Schema, RelaxNG) for CellML 1.0
+- Code to apply each validation method to each model file, and generate a report showing the results.
 
-Please not that
+Please note that this repo is still under development, meaning the validation tools have not yet been fully tested.
 
-1. XML technologies like Schema, DTD, RelaxNG, and Schematron can only provide *partial* validation for CellML files,
-2. this repo is still under development, meaning the validation tools have not yet been fully tested.
-
-The goal is to extend/modify the 1.0 tests and tools to 1.1, and then 2.0.
+The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 
 ## CellML 2.0 (Draft)
 
@@ -19,22 +16,28 @@ The goal is to extend/modify the 1.0 tests and tools to 1.1, and then 2.0.
 
 ## CellML 1.1
 
+* [A Markdown version of the CellML 1.1 spec](cellml_1_1/cellml_1_1_spec.md)
+  * This can be `diff`ed against the [1.0 spec]((cellml_1_0/cellml_1_0_spec.md))
+
 * Older files:
   * [CellML 1.1 Schema](cellml_1_1/todo/cellml_1_1.xsd) by Andrew Miller, Auckland Bioengineering Institute
 
 ## CellML 1.0
 
-* [A very brief overview of CellML 1.0](cellml_1_0/README.md)
+* [A very brief overview of CellML 1.0](cellml_1_0/cellml_1_0_quick.md)
+* [A Markdown version of the CellML 1.0 spec](cellml_1_0/cellml_1_0_spec.md)
 * [The CellML 1.0 test set](models_1_0)
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
 * [CellML 1.0 DTD](cellml_1_0/cellml_1_0.dtd) - based on the version by Warren Hedley
-* [CellML 1.0 RELAX NG schema (XML syntax)](cellml_1_0/cellml_1_0.rng) translated from the compact version by Jonathan Cooper
+* [CellML 1.0 RELAX NG schema (XML syntax)](cellml_1_0/cellml_1_0.rng) translated from the compact syntax version by Jonathan Cooper
 * [CellML 1.0 RELAX NG schema (compact syntax)](cellml_1_0/cellml_1_0.rnc) written by Jonathan Cooper
 
 * Older files:
   * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
   * [CellML 1.0 DTD](cellml_1_0/deprecated/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
- 
+
+
+## CellML 1.1 
 
 ## Tests
 
