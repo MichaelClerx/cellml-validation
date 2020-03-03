@@ -17,7 +17,6 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 ## CellML 1.1
 
 * [A Markdown version of the CellML 1.1 spec](cellml_1_1/cellml_1_1_spec.md)
-  * This can be `diff`ed against the [1.0 spec]((cellml_1_0/cellml_1_0_spec.md))
 
 * Older files:
   * [CellML 1.1 Schema](cellml_1_1/todo/cellml_1_1.xsd) by Andrew Miller, Auckland Bioengineering Institute
@@ -36,23 +35,36 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
   * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
   * [CellML 1.0 DTD](cellml_1_0/deprecated/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
 
-
-## CellML 1.1 
-
 ## Tests
 
-The validation files themselves can be tested using the following steps:
+The `check` directory contains a Python module that can run the test files through various validation tools.
+Dependening on how you look at it, this constitutes a test of the test files, of the tools, or both.
+
+### Installation
 
 1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venc/bin/activate`
 2. Install the requirements using pip: `$ pip install -r requirements.txt`
-3. Run the tests using pytest: `$ pytest`
 
+### Validating a single file
+
+Use e.g. 
+```
+$ python -m check schema_1_0 models_1_0/valid/empty-model.cellml
+```
+
+To see more options simply type
+```
+$ python -m check
+```
+
+### Running all tests
+
+```
+$ pytest
+```
 To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
 
-To validate a single file, use e.g. `$ python -m check schema_1_0 models_1_0/valid/empty-model.cellml`.
+### Reports
 
-
-## Reports
-
-Reports can be generated of which test files pass and fail with different validation tools.
+Running all tests generates reports of which test files pass and fail with different validation tools.
 A list of pre-rendered reports [can be viewed here](reports/README.md).

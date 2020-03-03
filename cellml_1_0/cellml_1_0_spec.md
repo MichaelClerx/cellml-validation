@@ -1,4 +1,4 @@
-This is an unofficial Markdown version of the 1.0 spec, used to diff against the 1.1 spec.
+_This is an unofficial Markdown version of the 1.0 spec, used to diff against the 1.1 spec._
 
 # CellML 1.0 Specification
 
