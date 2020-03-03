@@ -40,31 +40,22 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 The `check` directory contains a Python module that can run the test files through various validation tools.
 Dependening on how you look at it, this constitutes a test of the test files, of the tools, or both.
 
-### Installation
+- Installation
+  1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venc/bin/activate`
+  2. Install the requirements using pip: `$ pip install -r requirements.txt`
+- To validate a single file use e.g.
+  ```
+  python -m check schema_1_0 models_1_0/valid/empty-model.cellml
+  ```
+  To see more options simply type
+  ```
+  python -m check
+  ```
+- To run the full test suite type
+  ```
+  pytest
+  ```
+  To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
+- Running all tests generates reports of which test files pass and fail with different validation tools.
+  [A list of pre-rendered reports can be viewed here](reports/README.md).
 
-1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venc/bin/activate`
-2. Install the requirements using pip: `$ pip install -r requirements.txt`
-
-### Validating a single file
-
-Use e.g. 
-```
-$ python -m check schema_1_0 models_1_0/valid/empty-model.cellml
-```
-
-To see more options simply type
-```
-$ python -m check
-```
-
-### Running all tests
-
-```
-$ pytest
-```
-To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
-
-### Reports
-
-Running all tests generates reports of which test files pass and fail with different validation tools.
-A list of pre-rendered reports [can be viewed here](reports/README.md).
