@@ -12,7 +12,7 @@
       <variable_ref variable="a">
         <role role="reactant" />
       </variable_ref>
-      <rdf:RDF about="#x">
+      <rdf:RDF rdf:about="#x">
         <dc:description>It's a reaction</dc:description>
       </rdf:RDF>
     </reaction>

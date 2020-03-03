@@ -9,7 +9,7 @@
   <component name="A">
     <units name="apple" cmeta:id="apple">
       <unit units="dimensionless" />
-      <rdf:RDF about="#apple">
+      <rdf:RDF rdf:about="#apple">
         <dc:description>It's a units element</dc:description>
       </rdf:RDF>
     </units>

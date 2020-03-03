@@ -15,7 +15,7 @@
   <connection cmeta:id="x">
     <map_components component_1="A" component_2="B" />
     <map_variables variable_1="a" variable_2="b" />
-    <rdf:RDF about="#x">
+    <rdf:RDF rdf:about="#x">
       <dc:description>It's a role</dc:description>
     </rdf:RDF>
   </connection>

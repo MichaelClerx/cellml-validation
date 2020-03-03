@@ -11,7 +11,7 @@
     <reaction>
       <variable_ref variable="a">
         <role role="reactant" cmeta:id="x">
-          <rdf:RDF about="#x">
+          <rdf:RDF rdf:about="#x">
             <dc:description>It's a role</dc:description>
           </rdf:RDF>
         </role>

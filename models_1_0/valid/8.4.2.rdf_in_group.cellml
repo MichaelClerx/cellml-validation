@@ -13,7 +13,7 @@
     <component_ref component="A">
       <component_ref component="B" />
     </component_ref>
-    <rdf:RDF about="#x">
+    <rdf:RDF rdf:about="#x">
       <dc:description>It's a group</dc:description>
     </rdf:RDF>
   </group>

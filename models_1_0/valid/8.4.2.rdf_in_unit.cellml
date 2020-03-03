@@ -8,7 +8,7 @@
        xmlns:dc= "http://purl.org/dc/elements/1.1/">
   <units name="apple">
     <unit units="volt" cmeta:id="volt">
-      <rdf:RDF about="#volt">
+      <rdf:RDF rdf:about="#volt">
         <dc:description>It's a unit</dc:description>
       </rdf:RDF>
     </unit>

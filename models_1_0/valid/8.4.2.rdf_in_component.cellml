@@ -7,7 +7,7 @@
        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
        xmlns:dc= "http://purl.org/dc/elements/1.1/">
   <component name="A" cmeta:id="A">
-    <rdf:RDF about="#A">
+    <rdf:RDF rdf:about="#A">
       <dc:description>It's a component</dc:description>
     </rdf:RDF>
   </component>

@@ -10,7 +10,7 @@
     <variable name="a" units="mole" />
     <reaction>
       <variable_ref variable="a" cmeta:id="a">
-        <rdf:RDF about="#a">
+        <rdf:RDF rdf:about="#a">
           <dc:description>It's a variable</dc:description>
         </rdf:RDF>
         <role role="reactant" />

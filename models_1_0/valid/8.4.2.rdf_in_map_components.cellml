@@ -8,7 +8,7 @@
        xmlns:dc= "http://purl.org/dc/elements/1.1/">
   <connection>
     <map_components component_1="a" component_2="b" cmeta:id="x">
-      <rdf:RDF about="#x">
+      <rdf:RDF rdf:about="#x">
         <dc:description>It's a map_components</dc:description>
       </rdf:RDF>
     </map_components>

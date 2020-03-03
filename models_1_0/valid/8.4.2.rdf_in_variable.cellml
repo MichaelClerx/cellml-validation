@@ -8,7 +8,7 @@
        xmlns:dc="http://purl.org/dc/elements/1.1/">
   <component name="c1">
     <variable name="a" units="volt" cmeta:id="a">
-      <rdf:RDF about="#a">
+      <rdf:RDF rdf:about="#a">
         <dc:description>It's a variable</dc:description>
       </rdf:RDF>
     </variable>

@@ -10,7 +10,7 @@
   <component name="B" />
   <group>
     <relationship_ref relationship="containment" cmeta:id="x">
-      <rdf:RDF about="#x">
+      <rdf:RDF rdf:about="#x">
         <dc:description>It's a relationship_ref</dc:description>
       </rdf:RDF>
     </relationship_ref>

@@ -15,7 +15,7 @@
   <connection>
     <map_components component_1="A" component_2="B" />
     <map_variables variable_1="a" variable_2="a" cmeta:id="x">
-      <rdf:RDF about="#x">
+      <rdf:RDF rdf:about="#x">
         <dc:description>It's a map_variables</dc:description>
       </rdf:RDF>
     </map_variables>
