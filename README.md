@@ -12,7 +12,8 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 
 ## CellML 2.0 (Draft)
 
-* To-do
+* [A very brief overview of CellML 2.0](cellml_2_0/cellml_2_0_quick.md)
+* [An XSLT document to transform 1.0/1.1 models to 2.0](cellml_2_0/cellml1to2.xsl) by [David Nickerson, Jonathan Cooper, and Hugh Sorby](https://github.com/cellml/cellml1to2)
 
 ## CellML 1.1
 
