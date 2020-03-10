@@ -3,7 +3,7 @@
 ## These things exist in CellML 1.1:
 
 
-TODO
+# TODO
 
 
 
@@ -75,15 +75,11 @@ The third rule doesn't seem strictly necessary (as the second rule already preve
 
 Finally, users can add their own relationship types by using a `relationship` attribute on the `relationship_ref` element from any namespace other than cellml, mathml, cmeta, or rdf. In this case its value is unrestricted and there are no rules for the relationship's interpretation.
 
-
-
 ## Identifiers
 
 CellML 1.1 improves on the 1.0 rule by stating each identifier must contain at least one letter.
 Specifically, it asks for identifiers made up of letters, numbers, and underscores; but with at least one letter; and not starting with a number.
 It then suggests the "Extended Backus-Naur Form (EBNF) notation" of `('_')* ( letter ) ( letter | '_' | digit )**`, which would not match `_123e` although this matches the rules given above.
-
-
 
 ## Real numbers
 
@@ -137,11 +133,13 @@ CellML 1.0 does not define a notation for real numbers, but presumably this shou
 ## Namespaces
 
 ```
-cellml="http://www.cellml.org/cellml/1.0#"
+cellml="http://www.cellml.org/cellml/1.1#"
 cmeta="http://www.cellml.org/metadata/1.0#"
 mathml="http://www.w3.org/1998/Math/MathML"
 rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 ```
+
+| XLink           | "http://www.w3.org/1999/xlink"                | `xlink`            |
 
 The hash characters at the end seem to be so that [you can identify elements e.g. `rdf:type` as `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`](https://www.w3.org/TR/REC-rdf-syntax/#section-Namespace).
 
