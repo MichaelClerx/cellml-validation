@@ -62,4 +62,7 @@ from ._validation import (  # noqa
     relaxng_1_0,
     schema_1_0,
 )
+from ._conversion import (  # noqa
+    xslt_1_to_2,
+)
 
