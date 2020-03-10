@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
 #
-# Temporary script for inserting headers.
-# To be re-used as script to update headers
+# Add headers to files
 #
 import os
 
