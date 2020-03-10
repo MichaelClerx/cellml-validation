@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+XSLT to convert CellML 1.0 or 1.1 to CellML 2.0.
+
+-->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:mathml="http://www.w3.org/1998/Math/MathML"
 	xmlns:cellml10="http://www.cellml.org/cellml/1.0#"
@@ -30,7 +35,7 @@
 	<!-- Except for cellml:units attributes, which need to change namespace -->
 	<xsl:template match="@cellml10:units | @cellml11:units">
 		<xsl:attribute name="cellml:units">
-            <xsl:namespace name="cellml" select="http://www.cellml.org/cellml/1.1#" />
+			<xsl:namespace name="cellml" select="http://www.cellml.org/cellml/2.0#" />
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>
