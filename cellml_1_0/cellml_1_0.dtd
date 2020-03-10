@@ -4,10 +4,10 @@ CellML 1.0 DTD, based on the original by Warren Hedley.
 
 This version has a number of error corrections and uses a local MathML DTD.
 
-Some notes (see test results for full spec):
- - DTDs don't allow any kind of extension element or attribute
- - The DTDs don't do any checks involving content (e.g. valid identifier,
-   existing component etc.).
+For an overview of the capabilities and limitations of this validation method,
+please see
+
+  https://github.com/MichaelClerx/cellml-validation/tree/master/reports
 
 -->
 

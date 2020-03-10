@@ -1,0 +1,12 @@
+xlink is now a non-extension namespace
+2.4.1 identifier may not start with number
+3.4.1.1 A model can contain <import> elements
+3.4.2.1.1 --> 3.4.2.1.1
+3.4.2.1.2 --> 3.4.2.1.3
+3.4.2.1.2 An import component cannot have children
+3.4.2.1.4 An import component must define a component_ref
+3.4.2.2 names must be unique component and import component
+3.4.2.3 A component_ref must equal the name of a component in the imported component (directly or via an import)
+3.4.2.4 A model component has no component_ref attribute
+
+3
