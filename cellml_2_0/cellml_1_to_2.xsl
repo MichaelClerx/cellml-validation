@@ -29,7 +29,8 @@
 
 	<!-- Except for cellml:units attributes, which need to change namespace -->
 	<xsl:template match="@cellml10:units | @cellml11:units">
-		<xsl:attribute name="units" namespace="http://www.cellml.org/cellml/2.0#">
+		<xsl:attribute name="cellml:units">
+            <xsl:namespace name="cellml" select="http://www.cellml.org/cellml/1.1#" />
 			<xsl:value-of select="."/>
 		</xsl:attribute>
 	</xsl:template>

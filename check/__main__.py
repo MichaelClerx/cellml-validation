@@ -35,6 +35,7 @@ def main():
         add_opencor_parser(subparsers)
     add_relaxng_1_0_parser(subparsers)
     add_schema_1_0_parser(subparsers)
+    add_xslt_1_0_to_1_1_parser(subparsers)
     add_xslt_1_to_2_parser(subparsers)
 
     # Parse!
@@ -161,9 +162,31 @@ def add_schema_1_0_parser(subparsers):
     parser.set_defaults(func=schema_1_0)
 
 
+def add_xslt_1_0_to_1_1_parser(subparsers):
+    """
+    Adds a subcommand parser for `xslt_1_0_to_1_1`.
+    """
+    parser = subparsers.add_parser(
+        'xslt_1_0_to_1_1',
+        description='Converts from 1.0 to 1.1, using XSLT.',
+        help='Converts from 1.0 to 1.1, using XSLT.',
+    )
+    parser.add_argument(
+        'path1',
+        metavar='path1',
+        help='The CellML 1.0 file to convert.',
+    )
+    parser.add_argument(
+        'path2',
+        metavar='path2',
+        help='The path to write a CellML 1.1 file to.',
+    )
+    parser.set_defaults(func=xslt_1_0_to_1_1)
+
+
 def add_xslt_1_to_2_parser(subparsers):
     """
-
+    Adds a subcommand parser for `xslt_1_to_2`.
     """
     parser = subparsers.add_parser(
         'xslt_1_to_2',
@@ -297,6 +320,35 @@ def schema_1_0(filename):
     check.schema_1_0(filename)
 
 
+def xslt_1_0_to_1_1(path1, path2):
+    """
+    Converts a CellML 1.0 file to CellML 1.1 using XSLT.
+    """
+    path1 = str(path1)
+    path2 = str(path2)
+
+    import os
+    import sys
+    if not os.path.exists(path1):
+        print('File not found: ' + path1)
+        sys.exit(1)
+    if not os.path.isfile(path1):
+        print('Not a file: ' + path1)
+        sys.exit(1)
+    print('Looking for CellML 1.0 file at: ' + path1)
+
+    if os.path.exists(path2):
+        if not os.path.isfile(path2):
+            print('Cannot write to: ' + path2)
+            sys.exit(1)
+        else:
+            print('Overwriting file at: ' + path2)
+
+    import check
+    check.xslt_1_0_to_1_1(path1, path2)
+    print('CellML 1.1 written to: ' + path2)
+
+
 def xslt_1_to_2(path1, path2):
     """
     Converts a CellML 1 file to CellML 2 using XSLT.
@@ -312,6 +364,8 @@ def xslt_1_to_2(path1, path2):
     if not os.path.isfile(path1):
         print('Not a file: ' + path1)
         sys.exit(1)
+    print('Looking for CellML 1.0 or 1.1 file at: ' + path1)
+
     if os.path.exists(path2):
         if not os.path.isfile(path2):
             print('Cannot write to: ' + path2)
@@ -321,7 +375,7 @@ def xslt_1_to_2(path1, path2):
 
     import check
     check.xslt_1_to_2(path1, path2)
-    print('Output written to: ' + path2)
+    print('CellML 2.0 written to: ' + path2)
 
 
 if __name__ == '__main__':

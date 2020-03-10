@@ -63,6 +63,7 @@ from ._validation import (  # noqa
     schema_1_0,
 )
 from ._conversion import (  # noqa
+    xslt_1_0_to_1_1,
     xslt_1_to_2,
 )
 
