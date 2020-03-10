@@ -2,8 +2,8 @@
 
 Performance:
 * 83% according to spec (672 out of 804)
-* 317 out of 351 valid files passed
-* 355 out of 453 invalid files detected
+* 315 out of 349 valid files passed
+* 357 out of 455 invalid files detected
 
 Issues:
 * 34 valid files failed validation
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|15|24|4|0|3|84%|
 |[3. Model structure](#3-model-structure)|46|153|4|0|0|98%|
 |[4. Mathematics](#4-mathematics)|41|18|4|0|1|92%|
-|[5. Units](#5-units)|124|80|10|2|4|92%|
+|[5. Units](#5-units)|122|82|10|2|4|92%|
 |[6. Grouping](#6-grouping)|17|69|0|9|0|90%|
 |[7. Reactions](#7-reactions)|0|0|5|0|79|0%|
 |[8. Metadata framework](#8-metadata-framework)|24|1|6|0|0|80%|
@@ -1469,9 +1469,13 @@ Results per category
 * Expected: ```Expected error not set```
 * Output: ```Error on line 6. Defining new base units is not supported.```
 
-[5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): Valid file passed validation.
+[5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): Error detected correctly.
+* Expected: ```at least one child unit element```
+* Output: ```Units element with base_units="no" must contain at least one child unit element.```
 
-[5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): Valid file passed validation.
+[5.4.1.1.units_empty_2](../models_1_0/units_empty/5.4.1.1.units_empty_2.cellml): Error detected correctly.
+* Expected: ```at least one child unit element```
+* Output: ```Units element with base_units="no" must contain at least one child unit element.```
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Units element must have a name attribute```

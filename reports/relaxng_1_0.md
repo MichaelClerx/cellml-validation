@@ -1,12 +1,12 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 81% according to spec (659 out of 804)
-* 347 out of 351 valid files passed
-* 312 out of 453 invalid files detected
+* 82% according to spec (661 out of 804)
+* 347 out of 349 valid files passed
+* 314 out of 455 invalid files detected
 
 Issues:
-* 4 valid files failed validation
+* 2 valid files failed validation
 * 140 invalid files passed validation
 * 1 invalid files failed validation for the wrong reason
 
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|19|26|0|1|0|97%|
 |[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5-units)|132|44|2|42|0|80%|
+|[5. Units](#5-units)|132|46|0|42|0|80%|
 |[6. Grouping](#6-grouping)|15|55|2|23|0|73%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
@@ -1889,23 +1889,25 @@ Results per category
   * ```Error on line 0: Extra element units in interleave```
   * ```Error on line 6: Element model failed to validate content```
 
-🔴 [5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): **Valid file failed validation.**
-* Output:
-  * ```Error on line 6: Expecting an element unit, got nothing```
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element units failed to validate content```
-  * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element model failed to validate content```
-
-🔴 [5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): **Valid file failed validation.**
+[5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): Error detected correctly.
+* Expected: ```Expecting an element unit```
 * Output:
   * ```Error on line 7: Expecting an element unit, got nothing```
   * ```Error on line 7: Invalid sequence in interleave```
   * ```Error on line 7: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
+
+[5.4.1.1.units_empty_2](../models_1_0/units_empty/5.4.1.1.units_empty_2.cellml): Error detected correctly.
+* Expected: ```Expecting an element unit```
+* Output:
+  * ```Error on line 8: Expecting an element unit, got nothing```
+  * ```Error on line 8: Invalid sequence in interleave```
+  * ```Error on line 8: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 8: Element component failed to validate content```
   * ```Error on line 0: Extra element component in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 7: Element model failed to validate content```
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Element units failed to validate content```

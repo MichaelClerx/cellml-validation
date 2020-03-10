@@ -69,9 +69,6 @@ false_negatives = {
     '5.2.7.unit_checking_derivatives_degree': 'not 0',
     # Factorial is not supported
     '5.2.7.unit_checking_functions_factorial': 'for element <factorial>',
-    # TODO Improve error message (also, this is a contended issue)
-    '5.4.1.1.units_empty_1': 'Invalid or unsupported CellML file',
-    '5.4.1.1.units_empty_2': 'Invalid or unsupported CellML file',
     # Component units are not supported
     '5.4.1.2.units_names_and_other_names': 'units inside components',
     '5.4.1.2.units_shadowing_1': 'units inside components',
@@ -642,6 +639,9 @@ expected_messages = {
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children':
         'Invalid attribute base_units for element units',
+    # 5.4.1.1 A units with base_units="no" probably should have children
+    '5.4.1.1.units_empty_1': 'Invalid or unsupported CellML file',
+    '5.4.1.1.units_empty_2': 'Invalid or unsupported CellML file',
     # 5.4.1.1 A units can only contain unit elements
     '5.4.1.1.units_with_component':
         'Element units has extra content: component',

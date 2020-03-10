@@ -746,6 +746,9 @@ known_issues = {
     '5.2.2.unit_deca',
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children',
+    # 5.4.1.1 A units with base_units="no" probably should have children
+    '5.4.1.1.units_empty_1',
+    '5.4.1.1.units_empty_2',
     # 5.4.1.2 A units name must be a valid identifier
     '5.4.1.2.units_name_invalid',
     # 5.4.1.2 Units names must be unique (within model or local component)

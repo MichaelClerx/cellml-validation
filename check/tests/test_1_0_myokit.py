@@ -576,6 +576,9 @@ expected_messages = {
     # 5.4.1.1 Unitses must have a name
     '5.4.1.1.units_name_missing':
         'Units element must have a name attribute',
+    # 5.4.1.1 A units with base_units="no" probably should have children
+    '5.4.1.1.units_empty_1': 'at least one child unit element',
+    '5.4.1.1.units_empty_2': 'at least one child unit element',
     # 5.4.1.1 A units can only contain unit elements
     '5.4.1.1.units_with_component':
         'found element of type cellml:component',

@@ -72,6 +72,9 @@ def list_fails_1_0(debug=False):
     # Deca- is an official prefix, but CellML prefers deka-
     files += list_models_1_0('unit_deca')
 
+    # Units elements with base_units="no" should not be empty
+    files += list_models_1_0('units_empty')
+
     if debug:
         return files[:1]
     return files

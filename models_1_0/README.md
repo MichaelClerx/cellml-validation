@@ -2,6 +2,20 @@
 
 Please report any issues with these tests on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
 
+|= Folder                         |= Validity |
+|---------------------------------|-----------|
+| `valid`                         | Valid     |
+| `invalid`                       | Invalid   |
+|---------------------------------|-----------|
+| `booleans`                      | Valid     |
+| `numbers`                       | Ambiguous |
+| `unit_checking_consistent`      | Valid     |
+| `unit_checking_inconsistent`    | Valid     |
+| `unit_conversion_convertible`   | Valid     |
+| `unit_conversion_inconvertible` | Valid     |
+| `unit_deca`                     | Invalid   |
+| `units_empty`                   | Invalid   |
+
 ## Valid CellML 1.0 files
 
 The files in the `valid` subset should pass in all CellML 1.0 validators.
@@ -10,6 +24,13 @@ The files in the `valid` subset should pass in all CellML 1.0 validators.
 
 The files in the `invalid` subset should fail in all CellML 1.0 validators.
 Where possible, these files contain only a single error per file.
+
+## Booleans
+
+The CellML spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the other properties of a unit).
+In this test set, cases involving booleans are treated separately from unit checking conversion, as it seems likely many tools will treat booleans as a type, and e.g. implement type checking (`7 + false` is wrong) but not unit checking (`1 newton + 1 meter` is fine).
+The set `booleans` contains examples of misuse of booleans.
+Because the spec does not state otherwise, we assume that all these files are valid CellML.
 
 ## Advanced number types
 
@@ -37,6 +58,11 @@ The `unit_conversion_inconvertible` set contains models where connections betwee
 Note that all models from both sets should validate, but software is free to complain about models from `unit_conversion_inconvertible` on other grounds.
 None of the files in `valid` should require unit conversion.
 
+## Deka and deca
+
+Although `deca` is the SI unit spelling, and `deka` is the youessian spelling (which is actually closer to the original greek), CellML 1.0 only allows `deka`.
+However, as it allows the SI spelling for all predefined units it seems to make sense to allow `deca` too.
+
 ## Empty units elements
 
 The CellML spec says:
@@ -50,14 +76,7 @@ The CellML spec says:
 It is unclear from this text if a `<units>` with `base_units="no"` is required to have any `<unit>` elements.
 However, (1) it is certain that `RDF` elements are not required, so presumably neither are `unit` elements, and (2) the CellML 2.0 spec explicitly allows empty `<units>` elements.
 
-However, the spec does not say what an empty units _means_ (presumably dimensionless).
-
-In the test sets, there are two _valid_ files with empty units elements, but all other files avoid having empty unitses.
-
-
-## Booleans
-
-The CellML spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the other properties of a unit).
-In this test set, cases involving booleans are treated separately from unit checking conversion, as it seems likely many tools will treat booleans as a type, and e.g. implement type checking (`7 + false` is wrong) but not unit checking (`1 newton + 1 meter` is fine).
-The set `booleans` contains examples of misuse of booleans.
+However, the spec does not say what an empty units _means_.
+In CellML 2.0, an empty `<units>` element denotes a new base unit (CellML 2.0 doesn't have a `base_units` element).
+For compatibility with CellML 2.0, in this set we've assumed that empty unitses are not allowed.
 

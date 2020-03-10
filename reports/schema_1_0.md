@@ -1,13 +1,13 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 78% according to spec (629 out of 804)
-* 351 out of 351 valid files passed
-* 278 out of 453 invalid files detected
+* 77% according to spec (627 out of 804)
+* 349 out of 349 valid files passed
+* 278 out of 455 invalid files detected
 
 Issues:
 * 0 valid files failed validation
-* 175 invalid files passed validation
+* 177 invalid files passed validation
 * 0 invalid files failed validation for the wrong reason
 
 Results per category
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|19|25|0|2|0|95%|
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|2|0|17|0|73%|
-|[5. Units](#5-units)|134|41|0|45|0|79%|
+|[5. Units](#5-units)|132|41|0|47|0|78%|
 |[6. Grouping](#6-grouping)|17|46|0|32|0|66%|
 |[7. Reactions](#7-reactions)|5|56|0|23|0|72%|
 |[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
@@ -1325,9 +1325,9 @@ Results per category
 
 🔵 [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): **Error not detected.**
 
-[5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): Valid file passed validation.
+🔵 [5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): **Error not detected.**
 
-[5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): Valid file passed validation.
+🔵 [5.4.1.1.units_empty_2](../models_1_0/units_empty/5.4.1.1.units_empty_2.cellml): **Error not detected.**
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:units': The attribute 'name' is required```

@@ -17,11 +17,6 @@ from .report import Report_1_0 as Report
 # Known instances where the RelaxNG schema says a valid file is invalid
 # All to do with namespaces and extension elements
 false_negatives = {
-    # Units can probably be empty, even if not base units. The spec is not
-    # explicit, but CellML 2 allows it. The Relax NG schema doesn't like empty
-    # units elements though.
-    '5.4.1.1.units_empty_1': 'Expecting an element unit',
-    '5.4.1.1.units_empty_2': 'Expecting an element unit',
     # Extension relationship types
     '6.4.3.2.component_ref_no_children_extension': 'Invalid sequence',
     '6.4.2.1.relationship_ref_relationship_2': 'Invalid sequence',
@@ -369,6 +364,9 @@ expected_messages = {
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children':
         'Invalid attribute base_units for element units',
+    # 5.4.1.1 A units with base_units="no" probably should have children
+    '5.4.1.1.units_empty_1': 'Expecting an element unit',
+    '5.4.1.1.units_empty_2': 'Expecting an element unit',
     # 5.4.1.1 A units can only contain unit elements
     '5.4.1.1.units_with_component':
         'Element units has extra content: component',

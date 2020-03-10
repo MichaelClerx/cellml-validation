@@ -767,6 +767,9 @@ known_issues = {
     '4.4.4.modify_public_in',
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children',
+    # 5.4.1.1 A units with base_units="no" probably should have children
+    '5.4.1.1.units_empty_1',
+    '5.4.1.1.units_empty_2',
     # 5.4.1.1 A units can only contain unit elements
     '5.4.1.1.units_with_math',
     # 5.4.1.2 Units names cannot overlap with predefined ones

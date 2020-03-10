@@ -1,13 +1,13 @@
 # OpenCOR / CellML API Validation - CellML 1.0
 
 Performance:
-* 89% according to spec (719 out of 804)
-* 331 out of 351 valid files passed
-* 388 out of 453 invalid files detected
+* 89% according to spec (717 out of 804)
+* 329 out of 349 valid files passed
+* 388 out of 455 invalid files detected
 
 Issues:
 * 20 valid files failed validation
-* 57 invalid files passed validation
+* 59 invalid files passed validation
 * 8 invalid files failed validation for the wrong reason
 
 Results per category
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|18|22|1|5|0|86%|
 |[3. Model structure](#3-model-structure)|50|153|0|0|0|100%|
 |[4. Mathematics](#4-mathematics)|40|14|5|5|0|84%|
-|[5. Units](#5-units)|124|74|10|4|8|90%|
+|[5. Units](#5-units)|122|74|10|6|8|89%|
 |[6. Grouping](#6-grouping)|16|65|1|13|0|85%|
 |[7. Reactions](#7-reactions)|5|50|0|29|0|65%|
 |[8. Metadata framework](#8-metadata-framework)|30|0|0|1|0|96%|
@@ -1525,9 +1525,9 @@ Results per category
 
 🔵 [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): **Error not detected.**
 
-[5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): Valid file passed validation.
+🔵 [5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): **Error not detected.**
 
-[5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): Valid file passed validation.
+🔵 [5.4.1.1.units_empty_2](../models_1_0/units_empty/5.4.1.1.units_empty_2.cellml): **Error not detected.**
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```the name attribute is required here```

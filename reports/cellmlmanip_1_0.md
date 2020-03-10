@@ -1,12 +1,12 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 82% according to spec (664 out of 804)
-* 253 out of 351 valid files passed
-* 411 out of 453 invalid files detected
+* 82% according to spec (666 out of 804)
+* 253 out of 349 valid files passed
+* 413 out of 455 invalid files detected
 
 Issues:
-* 98 valid files failed validation
+* 96 valid files failed validation
 * 22 invalid files passed validation
 * 20 invalid files failed validation for the wrong reason
 
@@ -20,7 +20,7 @@ Results per category
 |[2. Fundamentals](#2-fundamentals)|13|26|6|0|1|84%|
 |[3. Model structure](#3-model-structure)|43|149|7|4|0|94%|
 |[4. Mathematics](#4-mathematics)|31|19|14|0|0|78%|
-|[5. Units](#5-units)|85|80|49|1|5|75%|
+|[5. Units](#5-units)|85|82|47|1|5|75%|
 |[6. Grouping](#6-grouping)|12|58|5|17|3|73%|
 |[7. Reactions](#7-reactions)|0|68|5|0|11|80%|
 |[8. Metadata framework](#8-metadata-framework)|20|1|10|0|0|67%|
@@ -1475,11 +1475,13 @@ Results per category
 * Expected: ```Invalid attribute base_units for element units```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute base_units for element units. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
-🔴 [5.4.1.1.units_empty_1](../models_1_0/valid/5.4.1.1.units_empty_1.cellml): **Valid file failed validation.**
-* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_1.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element unit, got nothing. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_1.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_1.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_1.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+[5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported CellML file```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_1.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element unit, got nothing. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_1.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_1.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_1.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
-🔴 [5.4.1.1.units_empty_2](../models_1_0/valid/5.4.1.1.units_empty_2.cellml): **Valid file failed validation.**
-* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element unit, got nothing. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/valid/5.4.1.1.units_empty_2.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+[5.4.1.1.units_empty_2](../models_1_0/units_empty/5.4.1.1.units_empty_2.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported CellML file```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element unit, got nothing. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/units_empty/5.4.1.1.units_empty_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
 [5.4.1.1.units_name_missing](../models_1_0/invalid/5.4.1.1.units_name_missing.cellml): Error detected correctly.
 * Expected: ```Element units failed to validate content```

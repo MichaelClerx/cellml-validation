@@ -1082,6 +1082,9 @@ known_issues = {
     '5.2.2.unit_deca',
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children',
+    # OpenCOR doesn't mind if base_units="no" don't have children
+    '5.4.1.1.units_empty_1',
+    '5.4.1.1.units_empty_2',
     # 5.4.2.3 Allowed values of the prefix attribute
     # Causes error message code to break
     '5.4.2.3.unit_prefix_real',
