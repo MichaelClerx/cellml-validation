@@ -192,12 +192,12 @@ I have personally never seen these in a model.
 
 ## Namespaces
 
-|= prefix  |= namespace                                    |
-|----------|-----------------------------------------------|
-| `cellml` | http://www.cellml.org/cellml/1.0#             |
-| `cmeta`  | "http://www.cellml.org/metadata/1.0#"         |
-| `mathml` | "http://www.w3.org/1998/Math/MathML"          |
-| `rdf`    | "http://www.w3.org/1999/02/22-rdf-syntax-ns#" |
+|= prefix  |= namespace                                  |
+|----------|---------------------------------------------|
+| `cellml` | http://www.cellml.org/cellml/1.0            |
+| `cmeta`  | http://www.cellml.org/metadata/1.0#         |
+| `mathml` | http://www.w3.org/1998/Math/MathML          |
+| `rdf`    | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 
 ### Namespace confusion
 

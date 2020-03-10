@@ -40,10 +40,6 @@ All CellML 1.0 elements can also contain:
  - a `cmeta:id` attribute.
  - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
 
-It's unclear from the spec whether a `<units>` element that's not a base unit can be empty.
-Implementers disagree.
-CellML 2.0 explicitly allows it.
-
 ## Grouping & public/private interfaces
 
 1. Containment means nothing
@@ -84,6 +80,144 @@ It then suggests the "Extended Backus-Naur Form (EBNF) notation" of `('_')* ( le
 ## Real numbers
 
 CellML 1.0 does not define a notation for real numbers, but presumably this should be something compatible with the MathML `real` number type.
+
+## Units and unit conversion
+
+### Empty units elements
+
+It's unclear from the spec whether a `<units>` element that's not a base unit can be empty, and implementers have disagreed.
+
+CellML 2.0 explicitly allows it, but as a way to define base units (removing the need for the `base_units` attribute).
+
+In these tests we've assumed that empty units elements are not allowed in CellML 1.0.
+
+### Unit checking and conversion
+
+Units come into play in two places in CellML 1.0: (1) when connecting variables; and (2) when writing equations.
+
+#### Units of connected variables
+
+Variables that are connected by `map_variables` elements need not necessarily have the same units.
+If the units differ only by a scaling factor and/or offset, they may be convertible, and section 3.5.1 of the CellML 1.0 spec suggests that CellML processing software should do so.
+The spec does **not** seem to say that having incompatible units on either side of a connection renders a model invalid.
+
+#### Units inside equations
+
+All variables and numbers that appear in equations must have units associated with them.
+While the spec suggests these can be used to check the equations dimensionality, it also states (in 5.2.7) that "_CellML processing software is free to ignore units in mathematics and assume that equations are consistent_".
+No rules exist saying that having invalid units in equations renders a model invalid.
+
+Finally, there is no concept of unit conversion _within_ equations (e.g. to make equations like `x = 1V + 1mV` work), and in fact doing so would violate the rule quoted above.
+
+## MathML and the CellML subset
+
+CellML 1.0 documents can use all of content MathML's capabilities.
+However, CellML 1.0 software only needs to be able to handle "the CellML subset".
+Documents using only this set are called "valid CellML subset documents".
+
+### MathML basics
+
+- `<cn>`, `<ci>`, `<apply>`, `<eq>`
+- CellML adds the rule that every `<cn>` must have a `cellml:units` attribute
+
+The Content MathML 2 spec has several types of number, which the CellML spec does not make any statements about.
+They are:
+- `real`, possibly in a non-decimal base.
+- `integer`, possibly in a non-decimal base.
+- `rational`, this uses the `<sep>` element and so is not in the CellML subset.
+- `complex-cartesian` and `complex-polar`, the spec makes no statements, but it seems unlikely CellML subset compliant software needs to handle these.
+- `constant`, this allows you to add unnamed constants.
+- `e-notation`, this was added in later versions, it uses the `<sep>` element and so is outside of the CellML subset but very useful!
+
+Going by the rules for `initial_value` attributes, it would seem CellML variables are real numbers.
+Presumably, integers should be treated as reals then.
+Although the spec makes no statement, it seems that `constant` introduces new variables and so shouldn't be allowed.
+Finally, `<cn>` has additional attributes `definitionURL` and `encoding`, which the spec makes no statement about but are presumably not part of the subset.
+
+The contents of a `<cn>` must be numbers, possibly a sign (`-`) and a period (`.`).
+The default type is real and
+
+### Arithmetic
+
+- Basic 1: `<plus>`, `<minus>`, `<times>`, `<divide>`
+- Basic 2: `<power>`, `<root>`, `<exp>`, `<ln>`, `<log>`, `<logbase>`
+- Non-smooth: `<abs>`, `<floor>`, `<ceiling>`
+- Non-negative integer only: `<factorial>`
+
+Note that the factorial element is slightly troublesome for CellML: There is no concept of integers in CellML, yet factorial operates on integers exclusively.
+In addition, values for x factorial quickly become larger than fit in most number types.
+
+### Calculus
+
+- First order: `<diff>`, `<bvar>`
+- Higher order: `<degree>`
+
+### Trig functions
+
+- Basic: `<sin>`, `<cos>`, `<tan>`, `<arcsin>`, `<arccos>`, `<arctan>`
+- Hyperbolic: `<sinh>`, `<cosh>`, `<tanh>`, `<arcsinh>`, `<arccosh>`, `<arctanh>`
+- Redundant `<sec>`, `<csc>`, `<cot>`, `<arcsec>`, `<arccsc>`, `<arccot>`
+- Hyperbolic redundant: `<sech>`, `<csch>`, `<coth>`, `<arcsech>`, `<arccsch>`, `<arccoth>`
+
+### Logic and Piecewise
+- Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
+- Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
+- Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
+- Logical constants: `<true>`, `<false>`
+
+Note 1: `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
+
+Note 2: The `<otherwise>` element is not required.
+This means that you can write a statement like `x = (y > 0) ? 1 : undefined`.
+The CellML spec doesn't define what implementations should do for these cases.
+
+Note 3: Variables can never have the value `true` or `false`.
+In light of this, it's a bit unclear what allowing `<true>` and `<false>` is intended to achieve, other than writing things like "if((x == 1) == true)".
+
+### Constants
+
+- `<pi>`
+- `<exponentiale>`
+- `<notanumber>`, `<infinity>`
+
+### Semantics and annotation
+
+- `<semantics>`, `<annotation>`, `<annotation-xml>`
+
+It's allowed to wrap a bit of Content MathML in a `<semantics>` element, which looks something like this:
+```
+<semantics>
+  <apply>
+    <eq /><ci>x</ci><cn cellml:units="dimensionless">1</cn>
+  </apply>
+  <annotation>
+    X is a really great variable.
+  </annotation>
+</semantics>
+```
+There can be multiple `<annotation>` elements (for non-xml annotation) or `<annotation-xml>` elements (for xml annotation).
+I have personally never seen these in a model.
+
+## Namespaces
+
+|= prefix  |= namespace                                  |
+|----------|---------------------------------------------|
+| `cellml` | http://www.cellml.org/cellml/1.0            |
+| `cmeta`  | http://www.cellml.org/metadata/1.0#         |
+| `mathml` | http://www.w3.org/1998/Math/MathML          |
+| `rdf`    | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| `xlink`  | http://www.w3.org/1999/xlink                |
+
+### Namespace confusion
+
+In XML, elements can specify a namespace just for themselves (`<ns:element xmlns:ns="http://example.org" />`) or for themselves and all their children (`<element xmlns="http://example.org" />`).
+Attributes are not in a namespace unless explicitly stated using the `namespace:attribute="attribute_value"` syntax.
+In general, attributes do not _need_ to be namespaced, because they are already uniquely identifiable from their namespaced parent element.
+The one case where namespaced attributes are useful is when they appear in an element from a different namespace.
+For example, in `<mathml:cn cellml:units="volt">1</mathml:cn>` we have a MathML element using a CellML attribute.
+
+The spec unfortunately gets this wrong (2001 is early days for XML namespaces), and consistently refers to attributes in the `cellml` namespace, when what is meant is un-namespaced attributes.
+Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), when wat is meant is an unnamespaced `id` attribute.
 
 ## Lists
 
@@ -129,30 +263,6 @@ CellML 1.0 does not define a notation for real numbers, but presumably this shou
 - variable
 - variable_1
 - variable_2
-
-## Namespaces
-
-```
-cellml="http://www.cellml.org/cellml/1.1#"
-cmeta="http://www.cellml.org/metadata/1.0#"
-mathml="http://www.w3.org/1998/Math/MathML"
-rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-```
-
-| XLink           | "http://www.w3.org/1999/xlink"                | `xlink`            |
-
-The hash characters at the end seem to be so that [you can identify elements e.g. `rdf:type` as `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`](https://www.w3.org/TR/REC-rdf-syntax/#section-Namespace).
-
-### Confusion
-
-In XML, elements can specify a namespace just for themselves (`<ns:element xmlns:ns="http://example.org" />`) or for themselves and all their children (`<element xmlns="http://example.org" />`).
-Attributes are not in a namespace unless explicitly stated using the `namespace:attribute="attribute_value"` syntax.
-In general, attributes do not _need_ to be namespaced, because they are already uniquely identifiable from their namespaced parent element.
-The one case where namespaced attributes are useful is when they appear in an element from a different namespace.
-For example, in `<mathml:cn cellml:units="volt">1</mathml:cn>` we have a MathML element using a CellML attribute.
-
-The spec unfortunately gets this wrong (2001 is early days for XML namespaces), and consistently refers to attributes in the `cellml` namespace, when what is meant is un-namespaced attributes.
-Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), when wat is meant is an unnamespaced `id` attribute.
 
 ### Predefined units
 
@@ -247,88 +357,4 @@ Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), wh
 
 - yes
 - no
-
-### MathML subset
-
-CellML 1.0 documents can use all of content MathML's capabilities.
-However, CellML 1.0 software only needs to be able to handle "the CellML subset".
-Documents using only this set are called "valid CellML subset documents".
-
-#### MathML basics
-
-- `<cn>`, `<ci>`, `<apply>`, `<eq>`
-- CellML adds the rule that every `<cn>` must have a `cellml:units` attribute
-
-The Content MathML 2 spec has several types of number, which the CellML spec does not make any statements about.
-They are:
-- `real`, possibly in a non-decimal base.
-- `integer`, possibly in a non-decimal base.
-- `rational`, this uses the `<sep>` element and so is not in the CellML subset.
-- `complex-cartesian` and `complex-polar`, the spec makes no statements, but it seems unlikely CellML subset compliant software needs to handle these.
-- `constant`, this allows you to add unnamed constants.
-- `e-notation`, this was added in later versions, it uses the `<sep>` element and so is outside of the CellML subset but very useful!
-
-Going by the rules for `initial_value` attributes, it would seem CellML variables are real numbers.
-Presumably, integers should be treated as reals then.
-Although the spec makes no statement, it seems that `constant` introduces new variables and so shouldn't be allowed.
-Finally, `<cn>` has additional attributes `definitionURL` and `encoding`, which the spec makes no statement about but are presumably not part of the subset.
-
-The contents of a `<cn>` must be numbers, possibly a sign (`-`) and a period (`.`).
-The default type is real and
-
-#### Arithmetic
-- Basic 1: `<plus>`, `<minus>`, `<times>`, `<divide>`
-- Basic 2: `<power>`, `<root>`, `<exp>`, `<ln>`, `<log>`, `<logbase>`
-- Non-smooth: `<abs>`, `<floor>`, `<ceiling>`
-- Non-negative integer only: `<factorial>`
-
-Note that the factorial element is slightly troublesome for CellML: There is no concept of integers in CellML, yet factorial operates on integers exclusively.
-In addition, values for x factorial quickly become larger than fit in most number types.
-
-#### Calculus
-- First order: `<diff>`, `<bvar>`
-- Higher order: `<degree>`
-
-#### Trig functions
-- Basic: `<sin>`, `<cos>`, `<tan>`, `<arcsin>`, `<arccos>`, `<arctan>`
-- Hyperbolic: `<sinh>`, `<cosh>`, `<tanh>`, `<arcsinh>`, `<arccosh>`, `<arctanh>`
-- Redundant `<sec>`, `<csc>`, `<cot>`, `<arcsec>`, `<arccsc>`, `<arccot>`
-- Hyperbolic redundant: `<sech>`, `<csch>`, `<coth>`, `<arcsech>`, `<arccsch>`, `<arccoth>`
-
-#### Logic and Piecewise
-- Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
-- Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
-- Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
-- Logical constants: `<true>`, `<false>`
-
-Note 1: `<eq>` is a relation in CellML, so the statement `x = 5` is treated as fact about `x`, not an assignment.
-
-Note 2: The `<otherwise>` element is not required.
-This means that you can write a statement like `x = (y > 0) ? 1 : undefined`.
-The CellML spec doesn't define what implementations should do for these cases.
-
-Note 3: Variables can never have the value `true` or `false`.
-In light of this, it's a bit unclear what allowing `<true>` and `<false>` is intended to achieve, other than writing things like "if((x == 1) == true)".
-
-#### Constants
-- `<pi>`
-- `<exponentiale>`
-- `<notanumber>`, `<infinity>`
-
-### Semantics and annotation
-- `<semantics>`, `<annotation>`, `<annotation-xml>`
-
-It's allowed to wrap a bit of Content MathML in a `<semantics>` element, which looks something like this:
-```
-<semantics>
-  <apply>
-    <eq /><ci>x</ci><cn cellml:units="dimensionless">1</cn>
-  </apply>
-  <annotation>
-    X is a really great variable.
-  </annotation>
-</semantics>
-```
-There can be multiple `<annotation>` elements (for non-xml annotation) or `<annotation-xml>` elements (for xml annotation).
-I have personally never seen these in a model.
 
