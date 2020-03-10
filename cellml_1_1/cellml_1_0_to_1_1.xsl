@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
 XSLT to convert CellML 1.0 to 1.1.
@@ -9,7 +9,7 @@ XSLT to convert CellML 1.0 to 1.1.
     xmlns:cellml10="http://www.cellml.org/cellml/1.0#"
     exclude-result-prefixes="cellml10 mathml">
 
-    <xsl:output method="xml" version="1.0" encoding="utf-8" indent="no"/>
+    <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
 
     <!-- Any elements or attributes not specified below will be copied -->
     <xsl:template match="@* | node()" priority="-1.0">
