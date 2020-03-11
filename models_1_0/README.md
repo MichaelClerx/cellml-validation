@@ -6,6 +6,8 @@ Please report any issues with these tests on the [issues page](https://github.co
 |---------------------------------|-----------|
 | `valid`                         | Valid     |
 | `invalid`                       | Invalid   |
+
+|= Folder                         |= Validity |
 |---------------------------------|-----------|
 | `booleans`                      | Valid     |
 | `numbers`                       | Ambiguous |
