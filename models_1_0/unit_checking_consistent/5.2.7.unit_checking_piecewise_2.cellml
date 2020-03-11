@@ -66,6 +66,7 @@
               <cn cellml:units="second">0</cn>
             </otherwise>
           </piecewise>
+        </apply>
       </apply>
     </math>
   </component>

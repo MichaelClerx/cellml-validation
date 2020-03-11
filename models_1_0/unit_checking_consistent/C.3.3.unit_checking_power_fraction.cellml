@@ -11,7 +11,7 @@
         <eq/>
         <ci>x</ci>
         <apply>
-          <pow />
+          <power />
           <cn cellml:units="meter">3</cn>
           <cn cellml:units="dimensionless">0.235</cn>
         </apply>
