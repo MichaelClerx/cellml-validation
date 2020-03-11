@@ -1,9 +1,9 @@
 # OpenCOR / CellML API Validation - CellML 1.0
 
 Performance:
-* 80% according to spec (735 out of 911)
-* 332 out of 366 valid files passed
-* 403 out of 545 invalid files detected
+* 80% according to spec (744 out of 920)
+* 339 out of 373 valid files passed
+* 405 out of 547 invalid files detected
 
 Issues:
 * 34 valid files failed validation
@@ -18,13 +18,13 @@ Results per category
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|19|37|15|66|0|40%|
-|[3. Model structure](#3-model-structure)|50|153|0|0|0|100%|
-|[4. Mathematics](#4-mathematics)|40|14|5|5|0|84%|
-|[5. Units](#5-units)|124|74|10|6|8|89%|
+|[3. Model structure](#3-model-structure)|50|155|0|0|0|100%|
+|[4. Mathematics](#4-mathematics)|44|14|5|5|0|85%|
+|[5. Units](#5-units)|125|74|10|6|8|89%|
 |[6. Grouping](#6-grouping)|16|65|1|13|0|85%|
 |[7. Reactions](#7-reactions)|5|50|0|29|0|65%|
 |[8. Metadata framework](#8-metadata-framework)|30|0|0|15|0|66%|
-|[C. Advanced units functionality](#c-advanced-units-functionality)|42|0|3|0|0|93%|
+|[C. Advanced units functionality](#c-advanced-units-functionality)|44|0|3|0|0|93%|
 
 
 ---
@@ -1075,6 +1075,18 @@ Results per category
 
 ##### 3.4.6.1
 
+[3.4.6.1.map_variables_duplicate_1](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_1.cellml): Error detected correctly.
+* Expected: ```Connection of the same two variables more than once.```
+* Output:
+  * ```[Error] [8:6] More than one connection to in interface of variable.```
+  * ```[Error] [13:6] Connection of the same two variables more than once.```
+
+[3.4.6.1.map_variables_duplicate_2](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_2.cellml): Error detected correctly.
+* Expected: ```Connection of the same two variables more than once.```
+* Output:
+  * ```[Error] [5:6] More than one connection to in interface of variable.```
+  * ```[Error] [13:6] Connection of the same two variables more than once.```
+
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```MUST define a variable_1 attribute```
 * Output:
@@ -1595,6 +1607,14 @@ Results per category
 
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
+[4.overdefined_direct_and_direct](../models_1_0/overdefined/4.overdefined_direct_and_direct.cellml): Valid file passed validation.
+
+[4.overdefined_direct_and_initial](../models_1_0/overdefined/4.overdefined_direct_and_initial.cellml): Valid file passed validation.
+
+[4.overdefined_direct_and_ode](../models_1_0/overdefined/4.overdefined_direct_and_ode.cellml): Valid file passed validation.
+
+[4.overdefined_ode_and_ode](../models_1_0/overdefined/4.overdefined_ode_and_ode.cellml): Valid file passed validation.
+
 
 ---
 
@@ -1712,7 +1732,9 @@ Results per category
 
 [5.2.7.unit_checking_name_differs](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_name_differs.cellml): Valid file passed validation.
 
-[5.2.7.unit_checking_piecewise](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise.cellml): Valid file passed validation.
+[5.2.7.unit_checking_piecewise_1](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_1.cellml): Valid file passed validation.
+
+[5.2.7.unit_checking_piecewise_2](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_2.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_piecewise_multi_unit](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_piecewise_multi_unit.cellml): Valid file passed validation.
 
@@ -3205,6 +3227,10 @@ Results per category
 [C.3.3.unit_checking_function_log_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_1.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_function_log_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_2.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_fraction](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_fraction.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_half](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_half.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): Valid file passed validation.
 

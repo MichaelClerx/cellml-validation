@@ -1,13 +1,13 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (708 out of 911)
-* 364 out of 366 valid files passed
-* 344 out of 545 invalid files detected
+* 77% according to spec (715 out of 920)
+* 371 out of 373 valid files passed
+* 344 out of 547 invalid files detected
 
 Issues:
 * 2 valid files failed validation
-* 200 invalid files passed validation
+* 202 invalid files passed validation
 * 1 invalid files failed validation for the wrong reason
 
 Results per category
@@ -18,13 +18,13 @@ Results per category
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|42|0|61|0|55%|
-|[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
-|[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5-units)|134|46|0|42|0|81%|
+|[3. Model structure](#3-model-structure)|50|105|0|50|0|75%|
+|[4. Mathematics](#4-mathematics)|49|3|0|16|0|76%|
+|[5. Units](#5-units)|135|46|0|42|0|81%|
 |[6. Grouping](#6-grouping)|15|55|2|23|0|73%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|15|0|0|0|100%|
-|[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
+|[C. Advanced units functionality](#c-advanced-units-functionality)|47|0|0|0|0|100%|
 
 
 ---
@@ -1540,6 +1540,10 @@ Results per category
 
 ##### 3.4.6.1
 
+🔵 [3.4.6.1.map_variables_duplicate_1](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_1.cellml): **Error not detected.**
+
+🔵 [3.4.6.1.map_variables_duplicate_2](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_2.cellml): **Error not detected.**
+
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables failed to validate attributes```
 * Output:
@@ -2009,6 +2013,14 @@ Results per category
 
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 
+[4.overdefined_direct_and_direct](../models_1_0/overdefined/4.overdefined_direct_and_direct.cellml): Valid file passed validation.
+
+[4.overdefined_direct_and_initial](../models_1_0/overdefined/4.overdefined_direct_and_initial.cellml): Valid file passed validation.
+
+[4.overdefined_direct_and_ode](../models_1_0/overdefined/4.overdefined_direct_and_ode.cellml): Valid file passed validation.
+
+[4.overdefined_ode_and_ode](../models_1_0/overdefined/4.overdefined_ode_and_ode.cellml): Valid file passed validation.
+
 
 ---
 
@@ -2129,7 +2141,9 @@ Results per category
 
 [5.2.7.unit_checking_name_differs](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_name_differs.cellml): Valid file passed validation.
 
-[5.2.7.unit_checking_piecewise](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise.cellml): Valid file passed validation.
+[5.2.7.unit_checking_piecewise_1](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_1.cellml): Valid file passed validation.
+
+[5.2.7.unit_checking_piecewise_2](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_2.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_piecewise_multi_unit](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_piecewise_multi_unit.cellml): Valid file passed validation.
 
@@ -4539,6 +4553,10 @@ Results per category
 [C.3.3.unit_checking_function_log_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_1.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_function_log_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_2.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_fraction](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_fraction.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_half](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_half.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): Valid file passed validation.
 
