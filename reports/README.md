@@ -22,6 +22,6 @@ The reports listed below were automatically generated during testing. Some care 
 ### External tools
 
 - [Cellmlmanip](cellmlmanip_1_0.md) (77%)
-- [Myokit](myokit_1_0.md) (83%)
+- [Myokit](myokit_1_0.md) (82%)
 - [OpenCOR / CellML API](opencor_1_0.md) (80%)
 
