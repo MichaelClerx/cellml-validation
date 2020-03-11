@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 5.2.7: Unit checking: piecewise with different unit branches.
+     This should probably not be allowed. -->
+<model name="unit_checking_piecewise_2"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <units name="m_per_s">
+    <unit units="meter" />
+    <unit units="second" exponent="-1" />
+  </units>
+  <units name="mm">
+    <unit units="meter" prefix="milli" />
+  </units>
+  <units name="ms">
+    <unit units="second" prefix="milli" />
+  </units>
+  <component name="A">
+    <variable name="x" units="dimensionless" initial_value="0" />
+    <variable name="y" units="m_per_s" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>y</ci>
+        <apply>
+          <divide />
+          <piecewise>
+            <piece>
+              <cn cellml:units="meter">123</cn>
+              <apply>
+                <eq />
+                <ci>x</ci>
+                <cn cellml:units="dimensionless">0</cn>
+              </apply>
+            </piece>
+            <piece>
+              <cn cellml:units="mm">456</cn>
+              <apply>
+                <eq />
+                <ci>x</ci>
+                <cn cellml:units="dimensionless">1</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn cellml:units="meter">0</cn>
+            </otherwise>
+          </piecewise>
+          <piecewise>
+            <piece>
+              <cn cellml:units="second">2</cn>
+              <apply>
+                <eq />
+                <ci>x</ci>
+                <cn cellml:units="dimensionless">0</cn>
+              </apply>
+            </piece>
+            <piece>
+              <cn cellml:units="ms">4</cn>
+              <apply>
+                <eq />
+                <ci>x</ci>
+                <cn cellml:units="dimensionless">1</cn>
+              </apply>
+            </piece>
+            <otherwise>
+              <cn cellml:units="second">0</cn>
+            </otherwise>
+          </piecewise>
+      </apply>
+    </math>
+  </component>
+</model>
