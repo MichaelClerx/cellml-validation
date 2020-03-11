@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 4: CellML does not say a model can't be overdefined. -->
+<model name="overdefined_direct_and_direct"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <cn cellml:units="volt">1</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <cn cellml:units="volt">-1</cn>
+      </apply>
+    </math>
+  </component>
+</model>

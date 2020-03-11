@@ -11,6 +11,7 @@ Ambiguity in the spec regarding the validity of a folder is marked with an aster
 | `invalid`                       | Invalid   |
 | `booleans`                      | Valid     |
 | `duplicate_connections`         | Invalid*  |
+| `overdefined`                   | Valid     |
 | `numbers`                       | Valid*    |
 | `unit_checking_consistent`      | Valid     |
 | `unit_checking_inconsistent`    | Valid     |
@@ -41,11 +42,15 @@ There is no rule in the CellML 1.0 specification that stops you from connecting 
 The spec does contain rules such as "a component X can only list its children in one place", suggesting that the spec was intended to be quite strict.
 In CellML 2.0 it is explicitly not allowed to connect two variables twice, so in this test set we have assumed doing so is invalid.
 
-## Advanced number types*
+## Number types*
 
 MathML 2 defines several number types, none of which are mentioned in the CellML 1.0 spec.
 However, all examples in the spec conform to the `real` type, which is also the MathML 2 default, so in the `valid` test files we have used only `real` type numbers.
 The `numbers` test set includes valid files using other number types, including the `e-notation` type which was added to MathML 2 after CellML 1.0 was published, and became one of two supported types (along with `real`) in CellML 2.0.
+
+## Overdefined models
+
+Models can be overdefined and still syntactically valid.
 
 ## Unit checking
 
