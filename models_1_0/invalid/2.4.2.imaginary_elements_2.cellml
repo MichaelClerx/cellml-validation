@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.2 we can't use elements that haven't been invented yet -->
+<model name="imaginary_elements"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       >
+  <import xlink:href="../valid/5.4.1.1.units_with_unit_children">
+    <units name="fluther" units_ref="fluther" />
+  </import>
+</model>

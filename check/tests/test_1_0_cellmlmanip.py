@@ -219,7 +219,9 @@ expected_messages = {
         'Invalid attribute fruit for element model',
     '2.4.2.imaginary_attributes_2':
         'Invalid attribute fruit for element model',
-    '2.4.2.imaginary_elements':
+    '2.4.2.imaginary_elements_1':
+        'Element model has extra content',
+    '2.4.2.imaginary_elements_2':
         'Element model has extra content',
     # 2.4.3 Elements/attributes in extension namespaces
     '2.4.3.cellml_attributes_inside_extensions':

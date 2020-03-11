@@ -1,9 +1,9 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 82% according to spec (666 out of 804)
+* 82% according to spec (667 out of 805)
 * 253 out of 349 valid files passed
-* 413 out of 455 invalid files detected
+* 414 out of 456 invalid files detected
 
 Issues:
 * 96 valid files failed validation
@@ -17,7 +17,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|13|26|6|0|1|84%|
+|[2. Fundamentals](#2-fundamentals)|13|27|6|0|1|85%|
 |[3. Model structure](#3-model-structure)|43|149|7|4|0|94%|
 |[4. Mathematics](#4-mathematics)|31|19|14|0|0|78%|
 |[5. Units](#5-units)|85|82|47|1|5|75%|
@@ -137,9 +137,13 @@ Results per category
 * Expected: ```Invalid attribute fruit for element model```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.2.imaginary_attributes_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute fruit for element model```
 
-[2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
+[2.4.2.imaginary_elements_1](../models_1_0/invalid/2.4.2.imaginary_elements_1.cellml): Error detected correctly.
 * Expected: ```Element model has extra content```
-* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.2.imaginary_elements.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element model has extra content: fruit```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.2.imaginary_elements_1.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element model has extra content: fruit```
+
+[2.4.2.imaginary_elements_2](../models_1_0/invalid/2.4.2.imaginary_elements_2.cellml): Error detected correctly.
+* Expected: ```Element model has extra content```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.2.imaginary_elements_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element model has extra content: import```
 
 
 ---

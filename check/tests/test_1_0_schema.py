@@ -59,8 +59,10 @@ expected_messages = {
         "The attribute 'fruit' is not allowed",
     '2.4.2.imaginary_attributes_2':
         "The attribute 'cellml:fruit' is not allowed",
-    '2.4.2.imaginary_elements':
+    '2.4.2.imaginary_elements_1':
         "Element 'cellml:fruit': This element is not expected",
+    '2.4.2.imaginary_elements_2':
+        "Element 'cellml:import': This element is not expected",
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         "Element 'cellml:component': Character content other than white",

@@ -1,9 +1,9 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (627 out of 804)
+* 78% according to spec (628 out of 805)
 * 349 out of 349 valid files passed
-* 278 out of 455 invalid files detected
+* 279 out of 456 invalid files detected
 
 Issues:
 * 0 valid files failed validation
@@ -17,7 +17,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|19|25|0|2|0|95%|
+|[2. Fundamentals](#2-fundamentals)|19|26|0|2|0|95%|
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|2|0|17|0|73%|
 |[5. Units](#5-units)|132|41|0|47|0|78%|
@@ -152,9 +152,13 @@ Results per category
 * Expected: ```The attribute 'cellml:fruit' is not allowed```
 * Output: ```Error on line 8: Element 'cellml:model', attribute 'cellml:fruit': The attribute 'cellml:fruit' is not allowed.```
 
-[2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
+[2.4.2.imaginary_elements_1](../models_1_0/invalid/2.4.2.imaginary_elements_1.cellml): Error detected correctly.
 * Expected: ```Element 'cellml:fruit': This element is not expected```
 * Output: ```Error on line 6: Element 'cellml:fruit': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
+
+[2.4.2.imaginary_elements_2](../models_1_0/invalid/2.4.2.imaginary_elements_2.cellml): Error detected correctly.
+* Expected: ```Element 'cellml:import': This element is not expected```
+* Output: ```Error on line 8: Element 'cellml:import': This element is not expected. Expected is one of ( cellml:units, cellml:component, cellml:group, cellml:connection, ##othercellml:* ).```
 
 
 ---

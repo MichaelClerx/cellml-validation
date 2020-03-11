@@ -1,9 +1,9 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 83% according to spec (672 out of 804)
+* 83% according to spec (673 out of 805)
 * 315 out of 349 valid files passed
-* 357 out of 455 invalid files detected
+* 358 out of 456 invalid files detected
 
 Issues:
 * 34 valid files failed validation
@@ -17,7 +17,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|15|24|4|0|3|84%|
+|[2. Fundamentals](#2-fundamentals)|15|25|4|0|3|85%|
 |[3. Model structure](#3-model-structure)|46|153|4|0|0|98%|
 |[4. Mathematics](#4-mathematics)|41|18|4|0|1|92%|
 |[5. Units](#5-units)|122|82|10|2|4|92%|
@@ -138,9 +138,13 @@ Results per category
 * Expected: ```Unexpected attribute cellml:fruit```
 * Output: ```Error on line 8. Unexpected attribute cellml:fruit found in cellml:model[@name="imaginary_attributes_2"].```
 
-[2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
+[2.4.2.imaginary_elements_1](../models_1_0/invalid/2.4.2.imaginary_elements_1.cellml): Error detected correctly.
 * Expected: ```found element of type cellml:fruit```
 * Output: ```Error on line 6. Unexpected content type in cellml:model[@name="imaginary_elements"], found element of type cellml:fruit.```
+
+[2.4.2.imaginary_elements_2](../models_1_0/invalid/2.4.2.imaginary_elements_2.cellml): Error detected correctly.
+* Expected: ```Imports are not allowed in CellML 1.0```
+* Output: ```Error on line 8. Imports are not allowed in CellML 1.0.```
 
 
 ---

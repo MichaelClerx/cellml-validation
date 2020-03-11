@@ -1,9 +1,9 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 70% according to spec (569 out of 804)
+* 70% according to spec (570 out of 805)
 * 318 out of 349 valid files passed
-* 251 out of 455 invalid files detected
+* 252 out of 456 invalid files detected
 
 Issues:
 * 31 valid files failed validation
@@ -17,7 +17,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|8|0|50%|
-|[2. Fundamentals](#2-fundamentals)|5|19|14|6|2|52%|
+|[2. Fundamentals](#2-fundamentals)|5|20|14|6|2|53%|
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
 |[5. Units](#5-units)|132|32|0|56|0|74%|
@@ -111,11 +111,20 @@ Results per category
 * Expected: ```No declaration for attribute fruit```
 * Output: ```Error on line 8: No declaration for attribute fruit of element model```
 
-[2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
+[2.4.2.imaginary_elements_1](../models_1_0/invalid/2.4.2.imaginary_elements_1.cellml): Error detected correctly.
 * Expected: ```No declaration for element fruit```
 * Output:
   * ```Error on line 5: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (fruit )```
   * ```Error on line 6: No declaration for element fruit```
+
+[2.4.2.imaginary_elements_2](../models_1_0/invalid/2.4.2.imaginary_elements_2.cellml): Error detected correctly.
+* Expected: ```No declaration for element import```
+* Output:
+  * ```Error on line 7: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (import )```
+  * ```Error on line 7: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 8: No declaration for element import```
+  * ```Error on line 8: No declaration for attribute href of element import```
+  * ```Error on line 9: No declaration for attribute units_ref of element units```
 
 
 ---

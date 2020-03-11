@@ -1,9 +1,9 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 82% according to spec (661 out of 804)
+* 82% according to spec (662 out of 805)
 * 347 out of 349 valid files passed
-* 314 out of 455 invalid files detected
+* 315 out of 456 invalid files detected
 
 Issues:
 * 2 valid files failed validation
@@ -17,7 +17,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|19|26|0|1|0|97%|
+|[2. Fundamentals](#2-fundamentals)|19|27|0|1|0|97%|
 |[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
 |[5. Units](#5-units)|132|46|0|42|0|80%|
@@ -187,9 +187,13 @@ Results per category
 * Expected: ```Invalid attribute fruit for element model```
 * Output: ```Error on line 8: Invalid attribute fruit for element model```
 
-[2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
+[2.4.2.imaginary_elements_1](../models_1_0/invalid/2.4.2.imaginary_elements_1.cellml): Error detected correctly.
 * Expected: ```Element model has extra content```
 * Output: ```Error on line 6: Element model has extra content: fruit```
+
+[2.4.2.imaginary_elements_2](../models_1_0/invalid/2.4.2.imaginary_elements_2.cellml): Error detected correctly.
+* Expected: ```Element model has extra content```
+* Output: ```Error on line 8: Element model has extra content: import```
 
 
 ---

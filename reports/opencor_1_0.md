@@ -1,9 +1,9 @@
 # OpenCOR / CellML API Validation - CellML 1.0
 
 Performance:
-* 89% according to spec (717 out of 804)
+* 89% according to spec (718 out of 805)
 * 329 out of 349 valid files passed
-* 388 out of 455 invalid files detected
+* 389 out of 456 invalid files detected
 
 Issues:
 * 20 valid files failed validation
@@ -17,7 +17,7 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|18|22|1|5|0|86%|
+|[2. Fundamentals](#2-fundamentals)|18|23|1|5|0|87%|
 |[3. Model structure](#3-model-structure)|50|153|0|0|0|100%|
 |[4. Mathematics](#4-mathematics)|40|14|5|5|0|84%|
 |[5. Units](#5-units)|122|74|10|6|8|89%|
@@ -140,9 +140,17 @@ Results per category
 * Expected: ```Unexpected attribute fruit found```
 * Output: ```[Error] [2:314] Unexpected attribute fruit found - not valid here.```
 
-[2.4.2.imaginary_elements](../models_1_0/invalid/2.4.2.imaginary_elements.cellml): Error detected correctly.
+[2.4.2.imaginary_elements_1](../models_1_0/invalid/2.4.2.imaginary_elements_1.cellml): Error detected correctly.
 * Expected: ```Unexpected element fruit found```
 * Output: ```[Error] [3:4] Unexpected element fruit found - not valid here.```
+
+[2.4.2.imaginary_elements_2](../models_1_0/invalid/2.4.2.imaginary_elements_2.cellml): Error detected correctly.
+* Expected: ```Element import is invalid in this version of CellML```
+* Output:
+  * ```[Error] [2:158] Could not load all imports;.```
+  * ```[Warning] [2:158] Cannot perform any further checking of unit names due to problems processing the model units.```
+  * ```[Error] [3:4] Element import is invalid in this version of CellML.```
+  * ```[Error] [4:6] Element units is invalid in this version of CellML.```
 
 
 ---

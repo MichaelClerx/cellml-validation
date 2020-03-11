@@ -63,8 +63,10 @@ expected_messages = {
         'No declaration for attribute fruit',
     '2.4.2.imaginary_attributes_2':
         'No declaration for attribute fruit',
-    '2.4.2.imaginary_elements':
+    '2.4.2.imaginary_elements_1':
         'No declaration for element fruit',
+    '2.4.2.imaginary_elements_2':
+        'No declaration for element import',
     # 2.4.3 Elements/attributes in extension namespaces
     # Error is raised about extension elements, which are allowed
     '2.4.3.cellml_attributes_inside_extensions':

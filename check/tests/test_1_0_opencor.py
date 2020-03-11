@@ -212,8 +212,10 @@ expected_messages = {
         'Unexpected attribute fruit found',
     '2.4.2.imaginary_attributes_2':
         'Unexpected attribute fruit found',
-    '2.4.2.imaginary_elements':
+    '2.4.2.imaginary_elements_1':
         'Unexpected element fruit found',
+    '2.4.2.imaginary_elements_2':
+        'Element import is invalid in this version of CellML',
     # 2.4.3 Elements/attributes in extension namespaces
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
