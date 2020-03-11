@@ -27,6 +27,13 @@ false_negatives = {
     '2.4.3.variable_ref_with_extensions':
         'Reactions are not supported.',
     # No reaction support
+    '2.4.3.xlink_href_in_reaction':
+        'Reactions are not supported.',
+    '2.4.3.xlink_href_in_role':
+        'Reactions are not supported.',
+    '2.4.3.xlink_href_in_variable_ref':
+        'Reactions are not supported.',
+    # No reaction support
     '3.4.2.1.component_child_order_1':
         'Reactions are not supported.',
     '3.4.2.1.component_child_order_2':
@@ -151,9 +158,134 @@ expected_messages = {
     # 2.4.3 Elements/attributes in extension namespaces
     '2.4.3.cellml_elements_inside_extensions':
         'CellML element cellml:component found inside extension element',
-    # CellML namespace attributes inside extensions are not detected
-        '2.4.3.cellml_attributes_inside_extensions':
+    '2.4.3.cellml_attributes_inside_extensions':
         'CellML attribute cellml:name found in extension element',
+    # 2.4.3 cellml elements cannot contain cmeta attributes other than cmeta:id
+    '2.4.3.bad_cmeta_attribute_in_component':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_component_ref':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_connection':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_group':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_map_components':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_map_variables':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_model':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_relationship_ref':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_unit':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_units_1':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_units_2':
+        'Unexpected attribute cmeta:bob',
+    '2.4.3.bad_cmeta_attribute_in_variable':
+        'Unexpected attribute cmeta:bob',
+    # 2.4.3 cellml elements cannot contain rdf elements other than rdf:RDF
+    '2.4.3.bad_rdf_element_in_component':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_component_ref':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_connection':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_group':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_map_components':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_map_variables':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_model':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_relationship_ref':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_unit':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_units_1':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_units_2':
+        'found element of type rdf:Description',
+    '2.4.3.bad_rdf_element_in_variable':
+        'found element of type rdf:Description',
+    # 2.4.3 cellml elements cannot contain cmeta elements
+    '2.4.3.cmeta_element_in_component':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_component_ref':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_connection':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_group':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_map_components':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_map_variables':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_model':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_relationship_ref':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_unit':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_units_1':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_units_2':
+        'found element of type cmeta:species',
+    '2.4.3.cmeta_element_in_variable':
+        'found element of type cmeta:species',
+    # 2.4.3 cellml elements cannot have mathml attributes
+    '2.4.3.mathml_attribute_in_component':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_component_ref':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_connection':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_group':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_map_components':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_map_variables':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_model':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_relationship_ref':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_unit':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_units_1':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_units_2':
+        'Unexpected attribute mathml:sum',
+    '2.4.3.mathml_attribute_in_variable':
+        'Unexpected attribute mathml:sum',
+    # 2.4.3 cellml elements cannot have rdf attributes
+    '2.4.3.rdf_attribute_in_component':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_component_ref':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_connection':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_group':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_map_components':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_map_variables':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_model':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_relationship_ref':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_unit':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_units_1':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_units_2':
+        'Unexpected attribute rdf:parseType',
+    '2.4.3.rdf_attribute_in_variable':
+        'Unexpected attribute rdf:parseType',
+
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         'Text found in cellml:component',
@@ -915,8 +1047,30 @@ expected_messages = {
         'component attribute must reference a component in the same model',
     '6.4.3.3.component_ref_component_nonexistent_2':
         'component attribute must reference a component in the same model',
-    # 8.4.1 Cmeta id's are unique
-    '8.4.1.cmeta_id_duplicate':
+    # 8.4.1 cmeta:id attributes must have unique values
+    '8.4.1.duplicate_cmeta_id_in_component':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_component_ref':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_connection':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_group':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_map_components':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_map_variables':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_model':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_relationship_ref':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_unit':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_units_1':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_units_2':
+        'Duplicate cmeta:id',
+    '8.4.1.duplicate_cmeta_id_in_variable':
         'Duplicate cmeta:id',
 }
 
@@ -924,10 +1078,32 @@ expected_messages = {
 # Invalid models for which validation is not expected to pick up the (correct)
 # error.
 known_issues = {
+    # Reactions are not supported
+    # No reaction support
+    '2.4.3.bad_cmeta_attribute_in_reaction',
+    '2.4.3.bad_cmeta_attribute_in_role',
+    '2.4.3.bad_cmeta_attribute_in_variable_ref',
+    # No reaction support
+    '2.4.3.bad_rdf_element_in_reaction',
+    '2.4.3.bad_rdf_element_in_role',
+    '2.4.3.bad_rdf_element_in_variable_ref',
+    # No reaction support
+    '2.4.3.cmeta_element_in_reaction',
+    '2.4.3.cmeta_element_in_role',
+    '2.4.3.cmeta_element_in_variable_ref',
+    # No reaction support
+    '2.4.3.mathml_attribute_in_reaction',
+    '2.4.3.mathml_attribute_in_role',
+    '2.4.3.mathml_attribute_in_variable_ref',
+    # No reaction support
+    '2.4.3.rdf_attribute_in_reaction',
+    '2.4.3.rdf_attribute_in_role',
+    '2.4.3.rdf_attribute_in_variable_ref',
     # Text in reactions is not detected
     '2.4.4.text_in_reaction',
     '2.4.4.text_in_role',
     '2.4.4.text_in_variable_ref',
+    # Reactions
     '4.4.1.math_not_math_reaction',
     # Myokit accepts both deca and deka
     '5.2.2.unit_deca',
@@ -1030,6 +1206,10 @@ known_issues = {
     '7.4.3.8.role_delta_variable_with_rate_and_math',
     '7.4.3.8.role_delta_variable_with_stoichiometry_no_rate',
     '7.4.3.9.role_math_not_relevant',
+    # Reactions
+    '8.4.1.duplicate_cmeta_id_in_reaction',
+    '8.4.1.duplicate_cmeta_id_in_role',
+    '8.4.1.duplicate_cmeta_id_in_variable_ref',
 }
 
 

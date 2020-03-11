@@ -8,6 +8,7 @@ import os
 
 n = 0
 
+
 def convert(root1, root2):
 
     global n
@@ -51,6 +52,7 @@ def convert(root1, root2):
 
             except lxml.etree.XMLSyntaxError:
                 print(f'Unable to convert {path1}: XML error in input file.')
+
 
 if __name__ == '__main__':
     print('Converting', end='')

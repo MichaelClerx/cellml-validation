@@ -72,6 +72,24 @@ expected_messages = {
         'Element model failed to validate content',
     '2.4.3.cellml_elements_inside_extensions':
         'Element model failed to validate content',
+    # 2.4.3 cellml elements cannot contain rdf elements other than rdf:RDF
+    '2.4.3.bad_rdf_element_in_component': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_component_ref': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_connection': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_group': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_map_components': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_map_variables': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_model': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_reaction': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_relationship_ref': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_role': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_unit': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_units_1': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_units_2': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_variable': 'xtra content: Description',
+    '2.4.3.bad_rdf_element_in_variable_ref': 'Invalid sequence in interleave',
+
+
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         'Element component has extra content: text',
@@ -753,15 +771,112 @@ expected_messages = {
     # 7.4.3.8 A delta_variable must have either a stoichiometry or math
     '7.4.3.8.role_delta_variable_without_rate_or_math':
         'Invalid attribute delta_variable',
-    # 8.4.1 Cmeta id's are unique
-    '8.4.1.cmeta_id_duplicate':
+    # 8.4.1 cmeta:id attributes must have unique values
+    '8.4.1.duplicate_cmeta_id_in_component':
+        'Invalid attribute id for element component',
+    '8.4.1.duplicate_cmeta_id_in_component_ref':
         'Invalid attribute id for element component_ref',
+    '8.4.1.duplicate_cmeta_id_in_connection':
+        'Invalid attribute id for element connection',
+    '8.4.1.duplicate_cmeta_id_in_group':
+        'Invalid attribute id for element group',
+    '8.4.1.duplicate_cmeta_id_in_map_components':
+        'Invalid attribute id for element map_components',
+    '8.4.1.duplicate_cmeta_id_in_map_variables':
+        'Invalid attribute id for element map_variables',
+    '8.4.1.duplicate_cmeta_id_in_model':
+        'Invalid attribute id for element model',
+    '8.4.1.duplicate_cmeta_id_in_reaction':
+        'Invalid attribute id for element reaction',
+    '8.4.1.duplicate_cmeta_id_in_relationship_ref':
+        'Invalid attribute id for element relationship_ref',
+    '8.4.1.duplicate_cmeta_id_in_role':
+        'Invalid attribute id for element role',
+    '8.4.1.duplicate_cmeta_id_in_unit':
+        'Invalid attribute id for element variable',
+    '8.4.1.duplicate_cmeta_id_in_units_1':
+        'Invalid attribute id for element variable',
+    '8.4.1.duplicate_cmeta_id_in_units_2':
+        'Invalid attribute id for element variable',
+    '8.4.1.duplicate_cmeta_id_in_variable':
+        'Invalid attribute id for element variable',
+    '8.4.1.duplicate_cmeta_id_in_variable_ref':
+        'Invalid attribute id for element variable_ref',
 }
 
 
 # Invalid models for which validation is not expected to pick up the (correct)
 # error.
 known_issues = {
+    # 2.4.3 cellml elements cannot contain cmeta attributes other than cmeta:id
+    '2.4.3.bad_cmeta_attribute_in_component',
+    '2.4.3.bad_cmeta_attribute_in_component_ref',
+    '2.4.3.bad_cmeta_attribute_in_connection',
+    '2.4.3.bad_cmeta_attribute_in_group',
+    '2.4.3.bad_cmeta_attribute_in_map_components',
+    '2.4.3.bad_cmeta_attribute_in_map_variables',
+    '2.4.3.bad_cmeta_attribute_in_model',
+    '2.4.3.bad_cmeta_attribute_in_reaction',
+    '2.4.3.bad_cmeta_attribute_in_relationship_ref',
+    '2.4.3.bad_cmeta_attribute_in_role',
+    '2.4.3.bad_cmeta_attribute_in_unit',
+    '2.4.3.bad_cmeta_attribute_in_units_1',
+    '2.4.3.bad_cmeta_attribute_in_units_2',
+    '2.4.3.bad_cmeta_attribute_in_variable',
+    '2.4.3.bad_cmeta_attribute_in_variable_ref',
+    # 2.4.3 cellml elements cannot contain cmeta elements
+    '2.4.3.cmeta_element_in_component',
+    '2.4.3.cmeta_element_in_component_ref',
+    '2.4.3.cmeta_element_in_connection',
+    '2.4.3.cmeta_element_in_group',
+    '2.4.3.cmeta_element_in_map_components',
+    '2.4.3.cmeta_element_in_map_variables',
+    '2.4.3.cmeta_element_in_model',
+    '2.4.3.cmeta_element_in_reaction',
+    '2.4.3.cmeta_element_in_relationship_ref',
+    '2.4.3.cmeta_element_in_role',
+    '2.4.3.cmeta_element_in_unit',
+    '2.4.3.cmeta_element_in_units_1',
+    '2.4.3.cmeta_element_in_units_2',
+    '2.4.3.cmeta_element_in_variable',
+    '2.4.3.cmeta_element_in_variable_ref',
+    # 2.4.3 cellml elements cannot have mathml attributes
+    '2.4.3.mathml_attribute_in_component',
+    '2.4.3.mathml_attribute_in_component_ref',
+    '2.4.3.mathml_attribute_in_connection',
+    '2.4.3.mathml_attribute_in_group',
+    '2.4.3.mathml_attribute_in_map_components',
+    '2.4.3.mathml_attribute_in_map_variables',
+    '2.4.3.mathml_attribute_in_model',
+    '2.4.3.mathml_attribute_in_reaction',
+    '2.4.3.mathml_attribute_in_relationship_ref',
+    '2.4.3.mathml_attribute_in_role',
+    '2.4.3.mathml_attribute_in_unit',
+    '2.4.3.mathml_attribute_in_units_1',
+    '2.4.3.mathml_attribute_in_units_2',
+    '2.4.3.mathml_attribute_in_variable',
+    '2.4.3.mathml_attribute_in_variable_ref',
+    # 2.4.3 cellml elements cannot have rdf attributes
+    '2.4.3.rdf_attribute_in_component',
+    '2.4.3.rdf_attribute_in_component_ref',
+    '2.4.3.rdf_attribute_in_connection',
+    '2.4.3.rdf_attribute_in_group',
+    '2.4.3.rdf_attribute_in_map_components',
+    '2.4.3.rdf_attribute_in_map_variables',
+    '2.4.3.rdf_attribute_in_model',
+    '2.4.3.rdf_attribute_in_reaction',
+    '2.4.3.rdf_attribute_in_relationship_ref',
+    '2.4.3.rdf_attribute_in_role',
+    '2.4.3.rdf_attribute_in_unit',
+    '2.4.3.rdf_attribute_in_units_1',
+    '2.4.3.rdf_attribute_in_units_2',
+    '2.4.3.rdf_attribute_in_variable',
+    '2.4.3.rdf_attribute_in_variable_ref',
+
+
+
+
+
     # 2.5.1 Identifiers are case sensitive
     '2.5.1.identifiers_are_case_sensitive',
     # 3.4.2.2 Component names must be unique

@@ -658,9 +658,36 @@ expected_messages = {
     '7.4.3.7.role_delta_variable_duplicate_2':
         "Element 'cellml:role': Duplicate key-sequence",
     # 8.4.1 Cmeta id's are unique
-    # This is a bit odd, but is apparently the expected message, as the
-    # uniqueness constraint is considered part of the atomic type xs:ID
-    '8.4.1.cmeta_id_duplicate':
+    # 8.4.1 cmeta:id attributes must have unique values
+    '8.4.1.duplicate_cmeta_id_in_component':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_component_ref':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_connection':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_group':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_map_components':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_map_variables':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_model':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_reaction':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_relationship_ref':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_role':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_unit':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_units_1':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_units_2':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_variable':
+        'not a valid value of the atomic type',
+    '8.4.1.duplicate_cmeta_id_in_variable_ref':
         'not a valid value of the atomic type',
 }
 
@@ -671,6 +698,86 @@ known_issues = {
     # 2.4.3 Elements/attributes in extension namespaces
     '2.4.3.cellml_attributes_inside_extensions',
     '2.4.3.cellml_elements_inside_extensions',
+    # 2.4.3 cellml elements cannot contain cmeta attributes other than cmeta:id
+    '2.4.3.bad_cmeta_attribute_in_component',
+    '2.4.3.bad_cmeta_attribute_in_component_ref',
+    '2.4.3.bad_cmeta_attribute_in_connection',
+    '2.4.3.bad_cmeta_attribute_in_group',
+    '2.4.3.bad_cmeta_attribute_in_map_components',
+    '2.4.3.bad_cmeta_attribute_in_map_variables',
+    '2.4.3.bad_cmeta_attribute_in_model',
+    '2.4.3.bad_cmeta_attribute_in_reaction',
+    '2.4.3.bad_cmeta_attribute_in_relationship_ref',
+    '2.4.3.bad_cmeta_attribute_in_role',
+    '2.4.3.bad_cmeta_attribute_in_unit',
+    '2.4.3.bad_cmeta_attribute_in_units_1',
+    '2.4.3.bad_cmeta_attribute_in_units_2',
+    '2.4.3.bad_cmeta_attribute_in_variable',
+    '2.4.3.bad_cmeta_attribute_in_variable_ref',
+    # 2.4.3 cellml elements cannot contain rdf elements other than rdf:RDF
+    '2.4.3.bad_rdf_element_in_component',
+    '2.4.3.bad_rdf_element_in_component_ref',
+    '2.4.3.bad_rdf_element_in_connection',
+    '2.4.3.bad_rdf_element_in_group',
+    '2.4.3.bad_rdf_element_in_map_components',
+    '2.4.3.bad_rdf_element_in_map_variables',
+    '2.4.3.bad_rdf_element_in_model',
+    '2.4.3.bad_rdf_element_in_reaction',
+    '2.4.3.bad_rdf_element_in_relationship_ref',
+    '2.4.3.bad_rdf_element_in_role',
+    '2.4.3.bad_rdf_element_in_unit',
+    '2.4.3.bad_rdf_element_in_units_1',
+    '2.4.3.bad_rdf_element_in_units_2',
+    '2.4.3.bad_rdf_element_in_variable',
+    '2.4.3.bad_rdf_element_in_variable_ref',
+    # 2.4.3 cellml elements cannot contain cmeta elements
+    '2.4.3.cmeta_element_in_component',
+    '2.4.3.cmeta_element_in_component_ref',
+    '2.4.3.cmeta_element_in_connection',
+    '2.4.3.cmeta_element_in_group',
+    '2.4.3.cmeta_element_in_map_components',
+    '2.4.3.cmeta_element_in_map_variables',
+    '2.4.3.cmeta_element_in_model',
+    '2.4.3.cmeta_element_in_reaction',
+    '2.4.3.cmeta_element_in_relationship_ref',
+    '2.4.3.cmeta_element_in_role',
+    '2.4.3.cmeta_element_in_unit',
+    '2.4.3.cmeta_element_in_units_1',
+    '2.4.3.cmeta_element_in_units_2',
+    '2.4.3.cmeta_element_in_variable',
+    '2.4.3.cmeta_element_in_variable_ref',
+    # 2.4.3 cellml elements cannot have mathml attributes
+    '2.4.3.mathml_attribute_in_component',
+    '2.4.3.mathml_attribute_in_component_ref',
+    '2.4.3.mathml_attribute_in_connection',
+    '2.4.3.mathml_attribute_in_group',
+    '2.4.3.mathml_attribute_in_map_components',
+    '2.4.3.mathml_attribute_in_map_variables',
+    '2.4.3.mathml_attribute_in_model',
+    '2.4.3.mathml_attribute_in_reaction',
+    '2.4.3.mathml_attribute_in_relationship_ref',
+    '2.4.3.mathml_attribute_in_role',
+    '2.4.3.mathml_attribute_in_unit',
+    '2.4.3.mathml_attribute_in_units_1',
+    '2.4.3.mathml_attribute_in_units_2',
+    '2.4.3.mathml_attribute_in_variable',
+    '2.4.3.mathml_attribute_in_variable_ref',
+    # 2.4.3 cellml elements cannot have rdf attributes
+    '2.4.3.rdf_attribute_in_component',
+    '2.4.3.rdf_attribute_in_component_ref',
+    '2.4.3.rdf_attribute_in_connection',
+    '2.4.3.rdf_attribute_in_group',
+    '2.4.3.rdf_attribute_in_map_components',
+    '2.4.3.rdf_attribute_in_map_variables',
+    '2.4.3.rdf_attribute_in_model',
+    '2.4.3.rdf_attribute_in_reaction',
+    '2.4.3.rdf_attribute_in_relationship_ref',
+    '2.4.3.rdf_attribute_in_role',
+    '2.4.3.rdf_attribute_in_unit',
+    '2.4.3.rdf_attribute_in_units_1',
+    '2.4.3.rdf_attribute_in_units_2',
+    '2.4.3.rdf_attribute_in_variable',
+    '2.4.3.rdf_attribute_in_variable_ref',
     # 2.5.3 Extension namespaces again
     # 3.4.1.1 Models contain only units, component, group, connection
     '3.4.1.1.model_with_math',

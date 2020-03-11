@@ -3,6 +3,7 @@
 #
 import os
 
+
 def scan(root, found=[]):
     for name in os.listdir(root):
         if name in ['.' or '..']:
@@ -15,9 +16,13 @@ def scan(root, found=[]):
             found.append(path)
     return found
 
+
 files = scan('./')
 
-header = '<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->\n'
+header = (
+    '<!-- CellML Test Suite.'
+    ' https://github.com/MichaelClerx/cellml-validation -->\n'
+)
 
 for path in files:
     with open(path, 'r') as f:
