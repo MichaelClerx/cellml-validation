@@ -1,13 +1,13 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 82% according to spec (662 out of 805)
-* 347 out of 349 valid files passed
-* 315 out of 456 invalid files detected
+* 77% according to spec (708 out of 911)
+* 364 out of 366 valid files passed
+* 344 out of 545 invalid files detected
 
 Issues:
 * 2 valid files failed validation
-* 140 invalid files passed validation
+* 200 invalid files passed validation
 * 1 invalid files failed validation for the wrong reason
 
 Results per category
@@ -17,13 +17,13 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|19|27|0|1|0|97%|
+|[2. Fundamentals](#2-fundamentals)|34|42|0|61|0|55%|
 |[3. Model structure](#3-model-structure)|50|105|0|48|0|76%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5-units)|132|46|0|42|0|80%|
+|[5. Units](#5-units)|134|46|0|42|0|81%|
 |[6. Grouping](#6-grouping)|15|55|2|23|0|73%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
-|[8. Metadata framework](#8-metadata-framework)|30|1|0|0|0|100%|
+|[8. Metadata framework](#8-metadata-framework)|30|15|0|0|0|100%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
 
@@ -200,6 +200,164 @@ Results per category
 
 #### 2.4.3
 
+🔵 [2.4.3.bad_cmeta_attribute_in_component](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_component_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_connection](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_group](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_map_components](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_map_variables](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_model](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_model.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_reaction](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_reaction.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_relationship_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_role](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_role.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_unit](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_units_1](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_1.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_units_2](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_2.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_variable](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable_ref.cellml): **Error not detected.**
+
+[2.4.3.bad_rdf_element_in_component](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 8: Element component has extra content: Description```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_component_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 13: Element component_ref has extra content: Description```
+  * ```Error on line 0: Extra element component_ref in interleave```
+  * ```Error on line 12: Element component_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 9: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_connection](../models_1_0/invalid/2.4.3.bad_rdf_element_in_connection.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 16: Element connection has extra content: Description```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 13: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_group](../models_1_0/invalid/2.4.3.bad_rdf_element_in_group.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 14: Element group has extra content: Description```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 9: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_map_components](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 9: Element map_components has extra content: Description```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_map_variables](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 16: Element map_variables has extra content: Description```
+  * ```Error on line 13: Invalid sequence in interleave```
+  * ```Error on line 13: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 13: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_model](../models_1_0/invalid/2.4.3.bad_rdf_element_in_model.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output: ```Error on line 7: Element model has extra content: Description```
+
+[2.4.3.bad_rdf_element_in_reaction](../models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 13: Element reaction has extra content: Description```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 11: Element relationship_ref has extra content: Description```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 9: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_role](../models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 12: Element role has extra content: Description```
+  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element variable_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_unit](../models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 9: Element unit has extra content: Description```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_units_1](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_1.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 9: Element units has extra content: Description```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_units_2](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 10: Element units has extra content: Description```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_variable](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml): Error detected correctly.
+* Expected: ```xtra content: Description```
+* Output:
+  * ```Error on line 9: Element variable has extra content: Description```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_variable_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```Invalid sequence in interleave```
+* Output:
+  * ```Error on line 10: Expecting an element role, got nothing```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element variable_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
 [2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output:
@@ -216,6 +374,36 @@ Results per category
   * ```Error on line 7: Invalid sequence in interleave```
   * ```Error on line 7: Element model failed to validate content```
 
+🔵 [2.4.3.cmeta_element_in_component](../models_1_0/invalid/2.4.3.cmeta_element_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_component_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_connection](../models_1_0/invalid/2.4.3.cmeta_element_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_group](../models_1_0/invalid/2.4.3.cmeta_element_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_map_components](../models_1_0/invalid/2.4.3.cmeta_element_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_map_variables](../models_1_0/invalid/2.4.3.cmeta_element_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_model](../models_1_0/invalid/2.4.3.cmeta_element_in_model.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_reaction](../models_1_0/invalid/2.4.3.cmeta_element_in_reaction.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_relationship_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_relationship_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_role](../models_1_0/invalid/2.4.3.cmeta_element_in_role.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_unit](../models_1_0/invalid/2.4.3.cmeta_element_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_units_1](../models_1_0/invalid/2.4.3.cmeta_element_in_units_1.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_units_2](../models_1_0/invalid/2.4.3.cmeta_element_in_units_2.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_variable](../models_1_0/invalid/2.4.3.cmeta_element_in_variable.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_variable_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_variable_ref.cellml): **Error not detected.**
+
 [2.4.3.component_ref_with_extensions](../models_1_0/valid/2.4.3.component_ref_with_extensions.cellml): Valid file passed validation.
 
 [2.4.3.component_with_extensions](../models_1_0/valid/2.4.3.component_with_extensions.cellml): Valid file passed validation.
@@ -228,7 +416,67 @@ Results per category
 
 [2.4.3.map_variables_with_extensions](../models_1_0/valid/2.4.3.map_variables_with_extensions.cellml): Valid file passed validation.
 
+🔵 [2.4.3.mathml_attribute_in_component](../models_1_0/invalid/2.4.3.mathml_attribute_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_component_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_connection](../models_1_0/invalid/2.4.3.mathml_attribute_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_group](../models_1_0/invalid/2.4.3.mathml_attribute_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_map_components](../models_1_0/invalid/2.4.3.mathml_attribute_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_map_variables](../models_1_0/invalid/2.4.3.mathml_attribute_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_model](../models_1_0/invalid/2.4.3.mathml_attribute_in_model.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_reaction](../models_1_0/invalid/2.4.3.mathml_attribute_in_reaction.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_relationship_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_role](../models_1_0/invalid/2.4.3.mathml_attribute_in_role.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_unit](../models_1_0/invalid/2.4.3.mathml_attribute_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_units_1](../models_1_0/invalid/2.4.3.mathml_attribute_in_units_1.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_units_2](../models_1_0/invalid/2.4.3.mathml_attribute_in_units_2.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_variable](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable_ref.cellml): **Error not detected.**
+
 [2.4.3.model_with_extensions](../models_1_0/valid/2.4.3.model_with_extensions.cellml): Valid file passed validation.
+
+🔵 [2.4.3.rdf_attribute_in_component](../models_1_0/invalid/2.4.3.rdf_attribute_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_component_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_connection](../models_1_0/invalid/2.4.3.rdf_attribute_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_group](../models_1_0/invalid/2.4.3.rdf_attribute_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_map_components](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_map_variables](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_model](../models_1_0/invalid/2.4.3.rdf_attribute_in_model.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_reaction](../models_1_0/invalid/2.4.3.rdf_attribute_in_reaction.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_relationship_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_role](../models_1_0/invalid/2.4.3.rdf_attribute_in_role.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_unit](../models_1_0/invalid/2.4.3.rdf_attribute_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_units_1](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_1.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_units_2](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_2.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_variable](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable_ref.cellml): **Error not detected.**
 
 [2.4.3.reaction_with_extensions](../models_1_0/valid/2.4.3.reaction_with_extensions.cellml): Valid file passed validation.
 
@@ -243,6 +491,36 @@ Results per category
 [2.4.3.variable_ref_with_extensions](../models_1_0/valid/2.4.3.variable_ref_with_extensions.cellml): Valid file passed validation.
 
 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_component](../models_1_0/valid/2.4.3.xlink_href_in_component.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_component_ref](../models_1_0/valid/2.4.3.xlink_href_in_component_ref.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_connection](../models_1_0/valid/2.4.3.xlink_href_in_connection.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_group](../models_1_0/valid/2.4.3.xlink_href_in_group.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_map_components](../models_1_0/valid/2.4.3.xlink_href_in_map_components.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_map_variables](../models_1_0/valid/2.4.3.xlink_href_in_map_variables.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_model](../models_1_0/valid/2.4.3.xlink_href_in_model.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_reaction](../models_1_0/valid/2.4.3.xlink_href_in_reaction.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_relationship_ref](../models_1_0/valid/2.4.3.xlink_href_in_relationship_ref.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_role](../models_1_0/valid/2.4.3.xlink_href_in_role.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_unit](../models_1_0/valid/2.4.3.xlink_href_in_unit.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_units_1](../models_1_0/valid/2.4.3.xlink_href_in_units_1.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_units_2](../models_1_0/valid/2.4.3.xlink_href_in_units_2.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_variable](../models_1_0/valid/2.4.3.xlink_href_in_variable.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_variable_ref](../models_1_0/valid/2.4.3.xlink_href_in_variable_ref.cellml): Valid file passed validation.
 
 
 ---
@@ -2314,6 +2592,10 @@ Results per category
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+[5.4.2.2.unit_units_local_3](../models_1_0/valid/5.4.2.2.unit_units_local_3.cellml): Valid file passed validation.
+
+[5.4.2.2.unit_units_local_4](../models_1_0/valid/5.4.2.2.unit_units_local_4.cellml): Valid file passed validation.
+
 
 ---
 
@@ -4014,15 +4296,6 @@ Results per category
 
 #### 8.4.1
 
-[8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
-* Expected: ```Invalid attribute id for element component_ref```
-* Output:
-  * ```Error on line 11: Invalid attribute id for element component_ref```
-  * ```Error on line 9: Invalid sequence in interleave```
-  * ```Error on line 9: Element group failed to validate content```
-  * ```Error on line 0: Extra element group in interleave```
-  * ```Error on line 9: Element model failed to validate content```
-
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed validation.
 
 [8.4.1.cmeta_id_in_component_ref](../models_1_0/valid/8.4.1.cmeta_id_in_component_ref.cellml): Valid file passed validation.
@@ -4052,6 +4325,136 @@ Results per category
 [8.4.1.cmeta_id_in_variable](../models_1_0/valid/8.4.1.cmeta_id_in_variable.cellml): Valid file passed validation.
 
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
+
+[8.4.1.duplicate_cmeta_id_in_component](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element component```
+* Output:
+  * ```Error on line 7: Invalid attribute id for element component```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_component_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element component_ref```
+* Output:
+  * ```Error on line 14: Invalid attribute id for element component_ref```
+  * ```Error on line 0: Extra element component_ref in interleave```
+  * ```Error on line 14: Element component_ref failed to validate content```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 11: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_connection](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_connection.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element connection```
+* Output:
+  * ```Error on line 13: Invalid attribute id for element connection```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 13: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_group](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_group.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element group```
+* Output:
+  * ```Error on line 11: Invalid attribute id for element group```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 11: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_map_components](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element map_components```
+* Output:
+  * ```Error on line 8: Invalid attribute id for element map_components```
+  * ```Error on line 7: Invalid sequence in interleave```
+  * ```Error on line 7: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_map_variables](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element map_variables```
+* Output:
+  * ```Error on line 15: Invalid attribute id for element map_variables```
+  * ```Error on line 13: Invalid sequence in interleave```
+  * ```Error on line 13: Element connection failed to validate content```
+  * ```Error on line 0: Extra element connection in interleave```
+  * ```Error on line 13: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_model](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_model.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element model```
+* Output: ```Error on line 7: Invalid attribute id for element model```
+
+[8.4.1.duplicate_cmeta_id_in_reaction](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element reaction```
+* Output:
+  * ```Error on line 9: Invalid attribute id for element reaction```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_relationship_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element relationship_ref```
+* Output:
+  * ```Error on line 12: Invalid attribute id for element relationship_ref```
+  * ```Error on line 11: Invalid sequence in interleave```
+  * ```Error on line 11: Element group failed to validate content```
+  * ```Error on line 0: Extra element group in interleave```
+  * ```Error on line 11: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_role](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element role```
+* Output:
+  * ```Error on line 11: Invalid attribute id for element role```
+  * ```Error on line 11: Element role failed to validate attributes```
+  * ```Error on line 10: Invalid sequence in interleave```
+  * ```Error on line 10: Element variable_ref failed to validate content```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_unit](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element variable```
+* Output:
+  * ```Error on line 8: Invalid attribute id for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_units_1](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element variable```
+* Output:
+  * ```Error on line 8: Invalid attribute id for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_units_2](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element variable```
+* Output:
+  * ```Error on line 8: Invalid attribute id for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 8: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_variable](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element variable```
+* Output:
+  * ```Error on line 9: Invalid attribute id for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_variable_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id for element variable_ref```
+* Output:
+  * ```Error on line 10: Invalid attribute id for element variable_ref```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element reaction failed to validate content```
+  * ```Error on line 0: Extra element reaction in interleave```
+  * ```Error on line 9: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 7: Element model failed to validate content```
 
 
 ---

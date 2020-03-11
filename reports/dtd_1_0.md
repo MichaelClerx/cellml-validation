@@ -1,12 +1,12 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 70% according to spec (570 out of 805)
-* 318 out of 349 valid files passed
-* 252 out of 456 invalid files detected
+* 72% according to spec (661 out of 911)
+* 320 out of 366 valid files passed
+* 341 out of 545 invalid files detected
 
 Issues:
-* 31 valid files failed validation
+* 46 valid files failed validation
 * 202 invalid files passed validation
 * 2 invalid files failed validation for the wrong reason
 
@@ -17,13 +17,13 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|8|0|50%|
-|[2. Fundamentals](#2-fundamentals)|5|20|14|6|2|53%|
+|[2. Fundamentals](#2-fundamentals)|5|95|29|6|2|72%|
 |[3. Model structure](#3-model-structure)|50|97|0|56|0|72%|
 |[4. Mathematics](#4-mathematics)|45|3|0|16|0|75%|
-|[5. Units](#5-units)|132|32|0|56|0|74%|
+|[5. Units](#5-units)|134|32|0|56|0|74%|
 |[6. Grouping](#6-grouping)|15|48|2|30|0|66%|
 |[7. Reactions](#7-reactions)|5|49|0|30|0|64%|
-|[8. Metadata framework](#8-metadata-framework)|15|1|15|0|0|51%|
+|[8. Metadata framework](#8-metadata-framework)|15|15|15|0|0|66%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|0|0|0|100%|
 
 
@@ -131,6 +131,186 @@ Results per category
 
 #### 2.4.3
 
+[2.4.3.bad_cmeta_attribute_in_component](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 8: No declaration for attribute bob of element component```
+
+[2.4.3.bad_cmeta_attribute_in_component_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 13: No declaration for attribute bob of element component_ref```
+
+[2.4.3.bad_cmeta_attribute_in_connection](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_connection.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 14: No declaration for attribute bob of element connection```
+
+[2.4.3.bad_cmeta_attribute_in_group](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_group.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 10: No declaration for attribute bob of element group```
+
+[2.4.3.bad_cmeta_attribute_in_map_components](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_components.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 9: No declaration for attribute bob of element map_components```
+
+[2.4.3.bad_cmeta_attribute_in_map_variables](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_variables.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 16: No declaration for attribute bob of element map_variables```
+
+[2.4.3.bad_cmeta_attribute_in_model](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_model.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 8: No declaration for attribute bob of element model```
+
+[2.4.3.bad_cmeta_attribute_in_reaction](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_reaction.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 10: No declaration for attribute bob of element reaction```
+
+[2.4.3.bad_cmeta_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 11: No declaration for attribute bob of element relationship_ref```
+
+[2.4.3.bad_cmeta_attribute_in_role](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_role.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 12: No declaration for attribute bob of element role```
+
+[2.4.3.bad_cmeta_attribute_in_unit](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_unit.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 9: No declaration for attribute bob of element unit```
+
+[2.4.3.bad_cmeta_attribute_in_units_1](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_1.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 8: No declaration for attribute bob of element units```
+
+[2.4.3.bad_cmeta_attribute_in_units_2](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_2.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 9: No declaration for attribute bob of element units```
+
+[2.4.3.bad_cmeta_attribute_in_variable](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 9: No declaration for attribute bob of element variable```
+
+[2.4.3.bad_cmeta_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output: ```Error on line 11: No declaration for attribute bob of element variable_ref```
+
+[2.4.3.bad_rdf_element_in_component](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 7: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (rdf:Description )```
+  * ```Error on line 8: No declaration for element Description```
+  * ```Error on line 8: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_component_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 12: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (rdf:Description )```
+  * ```Error on line 13: No declaration for element Description```
+  * ```Error on line 13: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_connection](../models_1_0/invalid/2.4.3.bad_rdf_element_in_connection.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 13: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables rdf:Description )```
+  * ```Error on line 16: No declaration for element Description```
+  * ```Error on line 16: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_group](../models_1_0/invalid/2.4.3.bad_rdf_element_in_group.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref rdf:Description )```
+  * ```Error on line 14: No declaration for element Description```
+  * ```Error on line 14: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_map_components](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: Element map_components was declared EMPTY this one has content```
+  * ```Error on line 9: No declaration for element Description```
+  * ```Error on line 9: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_map_variables](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 15: Element map_variables was declared EMPTY this one has content```
+  * ```Error on line 16: No declaration for element Description```
+  * ```Error on line 16: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_model](../models_1_0/invalid/2.4.3.bad_rdf_element_in_model.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (rdf:Description )```
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 7: No declaration for element Description```
+  * ```Error on line 7: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_reaction](../models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 9: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref rdf:Description )```
+  * ```Error on line 13: No declaration for element Description```
+  * ```Error on line 13: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
+  * ```Error on line 11: No declaration for element Description```
+  * ```Error on line 11: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_role](../models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 11: Element role content does not follow the DTD, expecting (math)?, got (rdf:Description )```
+  * ```Error on line 12: No declaration for element Description```
+  * ```Error on line 12: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_unit](../models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: Element unit was declared EMPTY this one has content```
+  * ```Error on line 9: No declaration for element Description```
+  * ```Error on line 9: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_units_1](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_1.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 7: Element units content does not follow the DTD, expecting (unit)*, got (unit rdf:Description )```
+  * ```Error on line 9: No declaration for element Description```
+  * ```Error on line 9: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_units_2](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: Element units content does not follow the DTD, expecting (unit)*, got (unit rdf:Description )```
+  * ```Error on line 10: No declaration for element Description```
+  * ```Error on line 10: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_variable](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: Element variable was declared EMPTY this one has content```
+  * ```Error on line 9: No declaration for element Description```
+  * ```Error on line 9: No declaration for attribute about of element Description```
+
+[2.4.3.bad_rdf_element_in_variable_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 10: Element variable_ref content does not follow the DTD, expecting (role)+, got (rdf:Description role )```
+  * ```Error on line 11: No declaration for element Description```
+  * ```Error on line 11: No declaration for attribute about of element Description```
+
 🔶 [2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): **Invalid file failed for unexpected reason.**
 * Expected: ```CellML attributes may not appears inside extension elements```
 * Output:
@@ -145,6 +325,96 @@ Results per category
   * ```Error on line 7: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (fruit:banana )```
   * ```Error on line 7: No declaration for attribute xmlns:fruit of element model```
   * ```Error on line 8: No declaration for element banana```
+
+[2.4.3.cmeta_element_in_component](../models_1_0/invalid/2.4.3.cmeta_element_in_component.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 7: Element component content does not follow the DTD, expecting (units | variable | reaction | math)*, got (cmeta:species )```
+  * ```Error on line 8: No declaration for element species```
+
+[2.4.3.cmeta_element_in_component_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_component_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 12: Element component_ref content does not follow the DTD, expecting (component_ref)*, got (cmeta:species )```
+  * ```Error on line 13: No declaration for element species```
+
+[2.4.3.cmeta_element_in_connection](../models_1_0/invalid/2.4.3.cmeta_element_in_connection.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 13: Element connection content does not follow the DTD, expecting (map_components , map_variables+), got (map_components map_variables cmeta:species )```
+  * ```Error on line 16: No declaration for element species```
+
+[2.4.3.cmeta_element_in_group](../models_1_0/invalid/2.4.3.cmeta_element_in_group.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 9: Element group content does not follow the DTD, expecting (relationship_ref | component_ref)+, got (relationship_ref component_ref cmeta:species )```
+  * ```Error on line 14: No declaration for element species```
+
+[2.4.3.cmeta_element_in_map_components](../models_1_0/invalid/2.4.3.cmeta_element_in_map_components.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 8: Element map_components was declared EMPTY this one has content```
+  * ```Error on line 9: No declaration for element species```
+
+[2.4.3.cmeta_element_in_map_variables](../models_1_0/invalid/2.4.3.cmeta_element_in_map_variables.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 15: Element map_variables was declared EMPTY this one has content```
+  * ```Error on line 16: No declaration for element species```
+
+[2.4.3.cmeta_element_in_model](../models_1_0/invalid/2.4.3.cmeta_element_in_model.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (cmeta:species )```
+  * ```Error on line 7: No declaration for element species```
+
+[2.4.3.cmeta_element_in_reaction](../models_1_0/invalid/2.4.3.cmeta_element_in_reaction.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 9: Element reaction content does not follow the DTD, expecting (variable_ref)+, got (variable_ref cmeta:species )```
+  * ```Error on line 13: No declaration for element species```
+
+[2.4.3.cmeta_element_in_relationship_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 10: Element relationship_ref was declared EMPTY this one has content```
+  * ```Error on line 11: No declaration for element species```
+
+[2.4.3.cmeta_element_in_role](../models_1_0/invalid/2.4.3.cmeta_element_in_role.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 11: Element role content does not follow the DTD, expecting (math)?, got (cmeta:species )```
+  * ```Error on line 12: No declaration for element species```
+
+[2.4.3.cmeta_element_in_unit](../models_1_0/invalid/2.4.3.cmeta_element_in_unit.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 8: Element unit was declared EMPTY this one has content```
+  * ```Error on line 9: No declaration for element species```
+
+[2.4.3.cmeta_element_in_units_1](../models_1_0/invalid/2.4.3.cmeta_element_in_units_1.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 7: Element units content does not follow the DTD, expecting (unit)*, got (unit cmeta:species )```
+  * ```Error on line 9: No declaration for element species```
+
+[2.4.3.cmeta_element_in_units_2](../models_1_0/invalid/2.4.3.cmeta_element_in_units_2.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 8: Element units content does not follow the DTD, expecting (unit)*, got (unit cmeta:species )```
+  * ```Error on line 10: No declaration for element species```
+
+[2.4.3.cmeta_element_in_variable](../models_1_0/invalid/2.4.3.cmeta_element_in_variable.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 8: Element variable was declared EMPTY this one has content```
+  * ```Error on line 9: No declaration for element species```
+
+[2.4.3.cmeta_element_in_variable_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 10: Element variable_ref content does not follow the DTD, expecting (role)+, got (cmeta:species role )```
+  * ```Error on line 11: No declaration for element species```
 
 🔴 [2.4.3.component_ref_with_extensions](../models_1_0/valid/2.4.3.component_ref_with_extensions.cellml): **Valid file failed validation.**
 * Output:
@@ -206,6 +476,96 @@ Results per category
   * ```Error on line 11: No declaration for element clementine```
   * ```Error on line 13: No declaration for element pear```
 
+[2.4.3.mathml_attribute_in_component](../models_1_0/invalid/2.4.3.mathml_attribute_in_component.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 7: No declaration for attribute sum of element component```
+
+[2.4.3.mathml_attribute_in_component_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_component_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 12: No declaration for attribute sum of element component_ref```
+
+[2.4.3.mathml_attribute_in_connection](../models_1_0/invalid/2.4.3.mathml_attribute_in_connection.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 13: No declaration for attribute sum of element connection```
+
+[2.4.3.mathml_attribute_in_group](../models_1_0/invalid/2.4.3.mathml_attribute_in_group.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 9: No declaration for attribute sum of element group```
+
+[2.4.3.mathml_attribute_in_map_components](../models_1_0/invalid/2.4.3.mathml_attribute_in_map_components.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 8: No declaration for attribute sum of element map_components```
+
+[2.4.3.mathml_attribute_in_map_variables](../models_1_0/invalid/2.4.3.mathml_attribute_in_map_variables.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 15: No declaration for attribute sum of element map_variables```
+
+[2.4.3.mathml_attribute_in_model](../models_1_0/invalid/2.4.3.mathml_attribute_in_model.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 7: No declaration for attribute sum of element model```
+  * ```Error on line 7: No declaration for attribute xmlns:mathml of element model```
+
+[2.4.3.mathml_attribute_in_reaction](../models_1_0/invalid/2.4.3.mathml_attribute_in_reaction.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 9: No declaration for attribute sum of element reaction```
+
+[2.4.3.mathml_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 10: No declaration for attribute sum of element relationship_ref```
+
+[2.4.3.mathml_attribute_in_role](../models_1_0/invalid/2.4.3.mathml_attribute_in_role.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 11: No declaration for attribute sum of element role```
+
+[2.4.3.mathml_attribute_in_unit](../models_1_0/invalid/2.4.3.mathml_attribute_in_unit.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 8: No declaration for attribute sum of element unit```
+
+[2.4.3.mathml_attribute_in_units_1](../models_1_0/invalid/2.4.3.mathml_attribute_in_units_1.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 7: No declaration for attribute sum of element units```
+
+[2.4.3.mathml_attribute_in_units_2](../models_1_0/invalid/2.4.3.mathml_attribute_in_units_2.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 8: No declaration for attribute sum of element units```
+
+[2.4.3.mathml_attribute_in_variable](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 8: No declaration for attribute sum of element variable```
+
+[2.4.3.mathml_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:mathml of element model```
+  * ```Error on line 10: No declaration for attribute sum of element variable_ref```
+
 🔴 [2.4.3.model_with_extensions](../models_1_0/valid/2.4.3.model_with_extensions.cellml): **Valid file failed validation.**
 * Output:
   * ```Error on line 7: Element model content does not follow the DTD, expecting (units | component | group | connection)*, got (fruit:orange fruit:pear )```
@@ -215,6 +575,96 @@ Results per category
   * ```Error on line 8: No declaration for attribute peel of element orange```
   * ```Error on line 9: No declaration for element clementine```
   * ```Error on line 11: No declaration for element pear```
+
+[2.4.3.rdf_attribute_in_component](../models_1_0/invalid/2.4.3.rdf_attribute_in_component.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 7: No declaration for attribute parseType of element component```
+
+[2.4.3.rdf_attribute_in_component_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_component_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 12: No declaration for attribute parseType of element component_ref```
+
+[2.4.3.rdf_attribute_in_connection](../models_1_0/invalid/2.4.3.rdf_attribute_in_connection.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 13: No declaration for attribute parseType of element connection```
+
+[2.4.3.rdf_attribute_in_group](../models_1_0/invalid/2.4.3.rdf_attribute_in_group.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 9: No declaration for attribute parseType of element group```
+
+[2.4.3.rdf_attribute_in_map_components](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_components.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: No declaration for attribute parseType of element map_components```
+
+[2.4.3.rdf_attribute_in_map_variables](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_variables.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 15: No declaration for attribute parseType of element map_variables```
+
+[2.4.3.rdf_attribute_in_model](../models_1_0/invalid/2.4.3.rdf_attribute_in_model.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 7: No declaration for attribute parseType of element model```
+  * ```Error on line 7: No declaration for attribute xmlns:rdf of element model```
+
+[2.4.3.rdf_attribute_in_reaction](../models_1_0/invalid/2.4.3.rdf_attribute_in_reaction.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 9: No declaration for attribute parseType of element reaction```
+
+[2.4.3.rdf_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 10: No declaration for attribute parseType of element relationship_ref```
+
+[2.4.3.rdf_attribute_in_role](../models_1_0/invalid/2.4.3.rdf_attribute_in_role.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 11: No declaration for attribute parseType of element role```
+
+[2.4.3.rdf_attribute_in_unit](../models_1_0/invalid/2.4.3.rdf_attribute_in_unit.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: No declaration for attribute parseType of element unit```
+
+[2.4.3.rdf_attribute_in_units_1](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_1.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 7: No declaration for attribute parseType of element units```
+
+[2.4.3.rdf_attribute_in_units_2](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_2.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: No declaration for attribute parseType of element units```
+
+[2.4.3.rdf_attribute_in_variable](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 8: No declaration for attribute parseType of element variable```
+
+[2.4.3.rdf_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```No declaration```
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:rdf of element model```
+  * ```Error on line 10: No declaration for attribute parseType of element variable_ref```
 
 🔴 [2.4.3.reaction_with_extensions](../models_1_0/valid/2.4.3.reaction_with_extensions.cellml): **Valid file failed validation.**
 * Output:
@@ -291,6 +741,82 @@ Results per category
   * ```Error on line 9: No declaration for attribute peel of element orange```
   * ```Error on line 10: No declaration for element clementine```
   * ```Error on line 12: No declaration for element pear```
+
+🔴 [2.4.3.xlink_href_in_component](../models_1_0/valid/2.4.3.xlink_href_in_component.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 7: No declaration for attribute href of element component```
+
+🔴 [2.4.3.xlink_href_in_component_ref](../models_1_0/valid/2.4.3.xlink_href_in_component_ref.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 12: No declaration for attribute href of element component_ref```
+
+🔴 [2.4.3.xlink_href_in_connection](../models_1_0/valid/2.4.3.xlink_href_in_connection.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 13: No declaration for attribute href of element connection```
+
+🔴 [2.4.3.xlink_href_in_group](../models_1_0/valid/2.4.3.xlink_href_in_group.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 9: No declaration for attribute href of element group```
+
+🔴 [2.4.3.xlink_href_in_map_components](../models_1_0/valid/2.4.3.xlink_href_in_map_components.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 10: Element map_components was declared EMPTY this one has content```
+  * ```Error on line 10: No declaration for attribute href of element map_components```
+
+🔴 [2.4.3.xlink_href_in_map_variables](../models_1_0/valid/2.4.3.xlink_href_in_map_variables.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 17: No declaration for attribute href of element map_variables```
+
+🔴 [2.4.3.xlink_href_in_model](../models_1_0/valid/2.4.3.xlink_href_in_model.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 7: No declaration for attribute href of element model```
+  * ```Error on line 7: No declaration for attribute xmlns:xlink of element model```
+
+🔴 [2.4.3.xlink_href_in_reaction](../models_1_0/valid/2.4.3.xlink_href_in_reaction.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 9: No declaration for attribute href of element reaction```
+
+🔴 [2.4.3.xlink_href_in_relationship_ref](../models_1_0/valid/2.4.3.xlink_href_in_relationship_ref.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 11: No declaration for attribute href of element relationship_ref```
+
+🔴 [2.4.3.xlink_href_in_role](../models_1_0/valid/2.4.3.xlink_href_in_role.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 11: No declaration for attribute href of element role```
+
+🔴 [2.4.3.xlink_href_in_unit](../models_1_0/valid/2.4.3.xlink_href_in_unit.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 8: No declaration for attribute href of element unit```
+
+🔴 [2.4.3.xlink_href_in_units_1](../models_1_0/valid/2.4.3.xlink_href_in_units_1.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 8: No declaration for attribute href of element unit```
+
+🔴 [2.4.3.xlink_href_in_units_2](../models_1_0/valid/2.4.3.xlink_href_in_units_2.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 8: No declaration for attribute href of element units```
+
+🔴 [2.4.3.xlink_href_in_variable](../models_1_0/valid/2.4.3.xlink_href_in_variable.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 8: No declaration for attribute href of element variable```
+
+🔴 [2.4.3.xlink_href_in_variable_ref](../models_1_0/valid/2.4.3.xlink_href_in_variable_ref.cellml): **Valid file failed validation.**
+* Output:
+  * ```Error on line 6: No declaration for attribute xmlns:xlink of element model```
+  * ```Error on line 10: No declaration for attribute href of element variable_ref```
 
 
 ---
@@ -1687,6 +2213,10 @@ Results per category
 
 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): Valid file passed validation.
 
+[5.4.2.2.unit_units_local_3](../models_1_0/valid/5.4.2.2.unit_units_local_3.cellml): Valid file passed validation.
+
+[5.4.2.2.unit_units_local_4](../models_1_0/valid/5.4.2.2.unit_units_local_4.cellml): Valid file passed validation.
+
 
 ---
 
@@ -2567,10 +3097,6 @@ Results per category
 
 #### 8.4.1
 
-[8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
-* Expected: ```ID x already defined```
-* Output: ```Error on line 12: ID x already defined```
-
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed validation.
 
 [8.4.1.cmeta_id_in_component_ref](../models_1_0/valid/8.4.1.cmeta_id_in_component_ref.cellml): Valid file passed validation.
@@ -2600,6 +3126,66 @@ Results per category
 [8.4.1.cmeta_id_in_variable](../models_1_0/valid/8.4.1.cmeta_id_in_variable.cellml): Valid file passed validation.
 
 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): Valid file passed validation.
+
+[8.4.1.duplicate_cmeta_id_in_component](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component.cellml): Error detected correctly.
+* Expected: ```ID a already defined```
+* Output: ```Error on line 8: ID a already defined```
+
+[8.4.1.duplicate_cmeta_id_in_component_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml): Error detected correctly.
+* Expected: ```ID y already defined```
+* Output: ```Error on line 14: ID y already defined```
+
+[8.4.1.duplicate_cmeta_id_in_connection](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_connection.cellml): Error detected correctly.
+* Expected: ```ID hello already defined```
+* Output: ```Error on line 13: ID hello already defined```
+
+[8.4.1.duplicate_cmeta_id_in_group](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_group.cellml): Error detected correctly.
+* Expected: ```ID x already defined```
+* Output: ```Error on line 11: ID x already defined```
+
+[8.4.1.duplicate_cmeta_id_in_map_components](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml): Error detected correctly.
+* Expected: ```ID x already defined```
+* Output: ```Error on line 12: ID x already defined```
+
+[8.4.1.duplicate_cmeta_id_in_map_variables](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml): Error detected correctly.
+* Expected: ```ID x already defined```
+* Output: ```Error on line 15: ID x already defined```
+
+[8.4.1.duplicate_cmeta_id_in_model](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_model.cellml): Error detected correctly.
+* Expected: ```ID x already defined```
+* Output: ```Error on line 9: ID x already defined```
+
+[8.4.1.duplicate_cmeta_id_in_reaction](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml): Error detected correctly.
+* Expected: ```ID x already defined```
+* Output: ```Error on line 9: ID x already defined```
+
+[8.4.1.duplicate_cmeta_id_in_relationship_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```ID x already defined```
+* Output: ```Error on line 12: ID x already defined```
+
+[8.4.1.duplicate_cmeta_id_in_role](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml): Error detected correctly.
+* Expected: ```ID a already defined```
+* Output: ```Error on line 11: ID a already defined```
+
+[8.4.1.duplicate_cmeta_id_in_unit](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml): Error detected correctly.
+* Expected: ```ID apple already defined```
+* Output: ```Error on line 11: ID apple already defined```
+
+[8.4.1.duplicate_cmeta_id_in_units_1](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml): Error detected correctly.
+* Expected: ```ID orange already defined```
+* Output: ```Error on line 10: ID orange already defined```
+
+[8.4.1.duplicate_cmeta_id_in_units_2](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml): Error detected correctly.
+* Expected: ```ID apple already defined```
+* Output: ```Error on line 9: ID apple already defined```
+
+[8.4.1.duplicate_cmeta_id_in_variable](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml): Error detected correctly.
+* Expected: ```ID a already defined```
+* Output: ```Error on line 9: ID a already defined```
+
+[8.4.1.duplicate_cmeta_id_in_variable_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```ID a already defined```
+* Output: ```Error on line 10: ID a already defined```
 
 
 ---

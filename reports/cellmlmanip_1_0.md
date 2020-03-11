@@ -1,14 +1,14 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 82% according to spec (667 out of 805)
-* 253 out of 349 valid files passed
-* 414 out of 456 invalid files detected
+* 77% according to spec (704 out of 911)
+* 264 out of 366 valid files passed
+* 440 out of 545 invalid files detected
 
 Issues:
-* 96 valid files failed validation
-* 22 invalid files passed validation
-* 20 invalid files failed validation for the wrong reason
+* 102 valid files failed validation
+* 61 invalid files passed validation
+* 44 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -17,13 +17,13 @@ Results per category
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
-|[2. Fundamentals](#2-fundamentals)|13|27|6|0|1|85%|
+|[2. Fundamentals](#2-fundamentals)|23|42|11|39|22|47%|
 |[3. Model structure](#3-model-structure)|43|149|7|4|0|94%|
-|[4. Mathematics](#4-mathematics)|31|19|14|0|0|78%|
-|[5. Units](#5-units)|85|82|47|1|5|75%|
+|[4. Mathematics](#4-mathematics)|31|18|14|0|1|76%|
+|[5. Units](#5-units)|86|80|48|1|7|74%|
 |[6. Grouping](#6-grouping)|12|58|5|17|3|73%|
 |[7. Reactions](#7-reactions)|0|68|5|0|11|80%|
-|[8. Metadata framework](#8-metadata-framework)|20|1|10|0|0|67%|
+|[8. Metadata framework](#8-metadata-framework)|20|15|10|0|0|77%|
 |[C. Advanced units functionality](#c-advanced-units-functionality)|43|0|2|0|0|95%|
 
 
@@ -150,6 +150,101 @@ Results per category
 
 #### 2.4.3
 
+🔵 [2.4.3.bad_cmeta_attribute_in_component](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_component_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_connection](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_group](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_map_components](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_map_variables](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_model](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_model.cellml): **Error not detected.**
+
+🔶 [2.4.3.bad_cmeta_attribute_in_reaction](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_reaction.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.bad_cmeta_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_relationship_ref.cellml): **Error not detected.**
+
+🔶 [2.4.3.bad_cmeta_attribute_in_role](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_role.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.bad_cmeta_attribute_in_unit](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.bad_cmeta_attribute_in_units_1](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_1.cellml): **Error not detected.**
+
+🔶 [2.4.3.bad_cmeta_attribute_in_units_2](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_2.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Defining units inside components is not supported (found in component A).```
+
+🔶 [2.4.3.bad_cmeta_attribute_in_variable](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```add_variable() got an unexpected keyword argument '{http://www.cellml.org/metadata/1.0#}bob'```
+
+🔶 [2.4.3.bad_cmeta_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+[2.4.3.bad_rdf_element_in_component](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element component has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_component_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element component_ref has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component_ref in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml:12:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component_ref failed to validate content. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element group failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_connection](../models_1_0/invalid/2.4.3.bad_rdf_element_in_connection.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_connection.cellml:16:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element connection has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_connection.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_group](../models_1_0/invalid/2.4.3.bad_rdf_element_in_group.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_group.cellml:14:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element group has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_group.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_map_components](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element map_components has extra content: Description. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element connection failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_map_variables](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml:16:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element map_variables has extra content: Description. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element connection failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_model](../models_1_0/invalid/2.4.3.bad_rdf_element_in_model.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_model.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element model has extra content: Description```
+
+[2.4.3.bad_rdf_element_in_reaction](../models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element reaction has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element reaction in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element relationship_ref has extra content: Description. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element group failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_role](../models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml:12:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element role has extra content: Description. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_ATTRVALID: Element role failed to validate attributes. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element variable_ref failed to validate content. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_unit](../models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element unit has extra content: Description. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_units_1](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_1.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_units_1.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element units has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_units_1.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_units_2](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element units has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_variable](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element variable has extra content: Description. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[2.4.3.bad_rdf_element_in_variable_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element role, got nothing. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element variable_ref failed to validate content. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element reaction failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
 [2.4.3.cellml_attributes_inside_extensions](../models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element units, got nothing. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element banana in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.cellml_attributes_inside_extensions.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
@@ -157,6 +252,42 @@ Results per category
 [2.4.3.cellml_elements_inside_extensions](../models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml): Error detected correctly.
 * Expected: ```Element model failed to validate content```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element units, got nothing. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element banana in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/2.4.3.cellml_elements_inside_extensions.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+🔵 [2.4.3.cmeta_element_in_component](../models_1_0/invalid/2.4.3.cmeta_element_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_component_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_component_ref.cellml): **Error not detected.**
+
+🔶 [2.4.3.cmeta_element_in_connection](../models_1_0/invalid/2.4.3.cmeta_element_in_connection.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```<class 'AssertionError'> with no error message set.```
+
+🔵 [2.4.3.cmeta_element_in_group](../models_1_0/invalid/2.4.3.cmeta_element_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_map_components](../models_1_0/invalid/2.4.3.cmeta_element_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_map_variables](../models_1_0/invalid/2.4.3.cmeta_element_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.cmeta_element_in_model](../models_1_0/invalid/2.4.3.cmeta_element_in_model.cellml): **Error not detected.**
+
+🔶 [2.4.3.cmeta_element_in_reaction](../models_1_0/invalid/2.4.3.cmeta_element_in_reaction.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.cmeta_element_in_relationship_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_relationship_ref.cellml): **Error not detected.**
+
+🔶 [2.4.3.cmeta_element_in_role](../models_1_0/invalid/2.4.3.cmeta_element_in_role.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.cmeta_element_in_unit](../models_1_0/invalid/2.4.3.cmeta_element_in_unit.cellml): **Error not detected.**
+
+🔶 [2.4.3.cmeta_element_in_units_1](../models_1_0/invalid/2.4.3.cmeta_element_in_units_1.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```'units'```
+
+🔶 [2.4.3.cmeta_element_in_units_2](../models_1_0/invalid/2.4.3.cmeta_element_in_units_2.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Defining units inside components is not supported (found in component A).```
+
+🔵 [2.4.3.cmeta_element_in_variable](../models_1_0/invalid/2.4.3.cmeta_element_in_variable.cellml): **Error not detected.**
+
+🔶 [2.4.3.cmeta_element_in_variable_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
 
 [2.4.3.component_ref_with_extensions](../models_1_0/valid/2.4.3.component_ref_with_extensions.cellml): Valid file passed validation.
 
@@ -171,7 +302,77 @@ Results per category
 
 [2.4.3.map_variables_with_extensions](../models_1_0/valid/2.4.3.map_variables_with_extensions.cellml): Valid file passed validation.
 
+🔵 [2.4.3.mathml_attribute_in_component](../models_1_0/invalid/2.4.3.mathml_attribute_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_component_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_connection](../models_1_0/invalid/2.4.3.mathml_attribute_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_group](../models_1_0/invalid/2.4.3.mathml_attribute_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_map_components](../models_1_0/invalid/2.4.3.mathml_attribute_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_map_variables](../models_1_0/invalid/2.4.3.mathml_attribute_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_model](../models_1_0/invalid/2.4.3.mathml_attribute_in_model.cellml): **Error not detected.**
+
+🔶 [2.4.3.mathml_attribute_in_reaction](../models_1_0/invalid/2.4.3.mathml_attribute_in_reaction.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.mathml_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_relationship_ref.cellml): **Error not detected.**
+
+🔶 [2.4.3.mathml_attribute_in_role](../models_1_0/invalid/2.4.3.mathml_attribute_in_role.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.mathml_attribute_in_unit](../models_1_0/invalid/2.4.3.mathml_attribute_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.mathml_attribute_in_units_1](../models_1_0/invalid/2.4.3.mathml_attribute_in_units_1.cellml): **Error not detected.**
+
+🔶 [2.4.3.mathml_attribute_in_units_2](../models_1_0/invalid/2.4.3.mathml_attribute_in_units_2.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Defining units inside components is not supported (found in component A).```
+
+🔶 [2.4.3.mathml_attribute_in_variable](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```add_variable() got an unexpected keyword argument '{http://www.w3.org/1998/Math/MathML}sum'```
+
+🔶 [2.4.3.mathml_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
 [2.4.3.model_with_extensions](../models_1_0/valid/2.4.3.model_with_extensions.cellml): Valid file passed validation.
+
+🔵 [2.4.3.rdf_attribute_in_component](../models_1_0/invalid/2.4.3.rdf_attribute_in_component.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_component_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_component_ref.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_connection](../models_1_0/invalid/2.4.3.rdf_attribute_in_connection.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_group](../models_1_0/invalid/2.4.3.rdf_attribute_in_group.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_map_components](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_components.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_map_variables](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_variables.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_model](../models_1_0/invalid/2.4.3.rdf_attribute_in_model.cellml): **Error not detected.**
+
+🔶 [2.4.3.rdf_attribute_in_reaction](../models_1_0/invalid/2.4.3.rdf_attribute_in_reaction.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.rdf_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_relationship_ref.cellml): **Error not detected.**
+
+🔶 [2.4.3.rdf_attribute_in_role](../models_1_0/invalid/2.4.3.rdf_attribute_in_role.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
+
+🔵 [2.4.3.rdf_attribute_in_unit](../models_1_0/invalid/2.4.3.rdf_attribute_in_unit.cellml): **Error not detected.**
+
+🔵 [2.4.3.rdf_attribute_in_units_1](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_1.cellml): **Error not detected.**
+
+🔶 [2.4.3.rdf_attribute_in_units_2](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_2.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Defining units inside components is not supported (found in component A).```
+
+🔶 [2.4.3.rdf_attribute_in_variable](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```add_variable() got an unexpected keyword argument '{http://www.w3.org/1999/02/22-rdf-syntax-ns#}parseType'```
+
+🔶 [2.4.3.rdf_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Reactions are not supported (found in component A).```
 
 🔴 [2.4.3.reaction_with_extensions](../models_1_0/valid/2.4.3.reaction_with_extensions.cellml): **Valid file failed validation.**
 * Output: ```Reactions are not supported (found in component A).```
@@ -191,6 +392,41 @@ Results per category
 
 🔴 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): **Valid file failed validation.**
 * Output: ```add_variable() got an unexpected keyword argument '{http://fruit.org}x_a_day'```
+
+[2.4.3.xlink_href_in_component](../models_1_0/valid/2.4.3.xlink_href_in_component.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_component_ref](../models_1_0/valid/2.4.3.xlink_href_in_component_ref.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_connection](../models_1_0/valid/2.4.3.xlink_href_in_connection.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_group](../models_1_0/valid/2.4.3.xlink_href_in_group.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_map_components](../models_1_0/valid/2.4.3.xlink_href_in_map_components.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_map_variables](../models_1_0/valid/2.4.3.xlink_href_in_map_variables.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_model](../models_1_0/valid/2.4.3.xlink_href_in_model.cellml): Valid file passed validation.
+
+🔴 [2.4.3.xlink_href_in_reaction](../models_1_0/valid/2.4.3.xlink_href_in_reaction.cellml): **Valid file failed validation.**
+* Output: ```Reactions are not supported (found in component A).```
+
+[2.4.3.xlink_href_in_relationship_ref](../models_1_0/valid/2.4.3.xlink_href_in_relationship_ref.cellml): Valid file passed validation.
+
+🔴 [2.4.3.xlink_href_in_role](../models_1_0/valid/2.4.3.xlink_href_in_role.cellml): **Valid file failed validation.**
+* Output: ```Reactions are not supported (found in component A).```
+
+[2.4.3.xlink_href_in_unit](../models_1_0/valid/2.4.3.xlink_href_in_unit.cellml): Valid file passed validation.
+
+[2.4.3.xlink_href_in_units_1](../models_1_0/valid/2.4.3.xlink_href_in_units_1.cellml): Valid file passed validation.
+
+🔴 [2.4.3.xlink_href_in_units_2](../models_1_0/valid/2.4.3.xlink_href_in_units_2.cellml): **Valid file failed validation.**
+* Output: ```Defining units inside components is not supported (found in component A).```
+
+🔴 [2.4.3.xlink_href_in_variable](../models_1_0/valid/2.4.3.xlink_href_in_variable.cellml): **Valid file failed validation.**
+* Output: ```add_variable() got an unexpected keyword argument '{http://www.w3.org/1999/xlink}href'```
+
+🔴 [2.4.3.xlink_href_in_variable_ref](../models_1_0/valid/2.4.3.xlink_href_in_variable_ref.cellml): **Valid file failed validation.**
+* Output: ```Reactions are not supported (found in component A).```
 
 
 ---
@@ -1271,8 +1507,7 @@ Results per category
 * Expected: ```Unknown unit```
 * Output: ```'Unknown unit wooster.'```
 
-[4.4.3.2.cn_units_parent_component](../models_1_0/invalid/4.4.3.2.cn_units_parent_component.cellml): Error detected correctly.
-* Expected: ```units inside components```
+🔶 [4.4.3.2.cn_units_parent_component](../models_1_0/invalid/4.4.3.2.cn_units_parent_component.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 
@@ -1462,7 +1697,7 @@ Results per category
 [5.2.7.unit_conversion_multiplier](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_multiplier.cellml): Valid file passed validation.
 
 🔴 [5.2.7.unit_conversion_new_base_units](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_new_base_units.cellml): **Valid file failed validation.**
-* Output: ```Cannot convert from 'store346_wooster' ([store346_wooster]) to 'dimensionless' (dimensionless)```
+* Output: ```Cannot convert from 'store363_wooster' ([store363_wooster]) to 'dimensionless' (dimensionless)```
 
 [5.2.7.unit_conversion_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_offset.cellml): Valid file passed validation.
 
@@ -1556,8 +1791,7 @@ Results per category
 
 🔵 [5.4.1.2.units_name_duplicate_1](../models_1_0/invalid/5.4.1.2.units_name_duplicate_1.cellml): **Error not detected.**
 
-[5.4.1.2.units_name_duplicate_2](../models_1_0/invalid/5.4.1.2.units_name_duplicate_2.cellml): Error detected correctly.
-* Expected: ```units inside components```
+🔶 [5.4.1.2.units_name_duplicate_2](../models_1_0/invalid/5.4.1.2.units_name_duplicate_2.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 [5.4.1.2.units_name_invalid](../models_1_0/invalid/5.4.1.2.units_name_invalid.cellml): Error detected correctly.
@@ -1580,8 +1814,7 @@ Results per category
 * Expected: ```Cannot redefine CellML unit```
 * Output: ```Cannot redefine CellML unit <celsius>.```
 
-[5.4.1.2.units_name_predefined_component_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_component_ampere.cellml): Error detected correctly.
-* Expected: ```units inside component```
+🔶 [5.4.1.2.units_name_predefined_component_ampere](../models_1_0/invalid/5.4.1.2.units_name_predefined_component_ampere.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 [5.4.1.2.units_name_predefined_coulomb](../models_1_0/invalid/5.4.1.2.units_name_predefined_coulomb.cellml): Error detected correctly.
@@ -1825,6 +2058,11 @@ Results per category
 
 🔴 [5.4.2.2.unit_units_local_2](../models_1_0/valid/5.4.2.2.unit_units_local_2.cellml): **Valid file failed validation.**
 * Output: ```Defining units inside components is not supported (found in component A).```
+
+[5.4.2.2.unit_units_local_3](../models_1_0/valid/5.4.2.2.unit_units_local_3.cellml): Valid file passed validation.
+
+🔴 [5.4.2.2.unit_units_local_4](../models_1_0/valid/5.4.2.2.unit_units_local_4.cellml): **Valid file failed validation.**
+* Output: ```'Unknown unit meter_per_second.'```
 
 
 ---
@@ -2822,10 +3060,6 @@ Results per category
 
 #### 8.4.1
 
-[8.4.1.cmeta_id_duplicate](../models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml): Error detected correctly.
-* Expected: ```Invalid attribute id for element component_ref```
-* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element component_ref. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element group failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.cmeta_id_duplicate.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
-
 [8.4.1.cmeta_id_in_component](../models_1_0/valid/8.4.1.cmeta_id_in_component.cellml): Valid file passed validation.
 
 [8.4.1.cmeta_id_in_component_ref](../models_1_0/valid/8.4.1.cmeta_id_in_component_ref.cellml): Valid file passed validation.
@@ -2859,6 +3093,66 @@ Results per category
 
 🔴 [8.4.1.cmeta_id_in_variable_ref](../models_1_0/valid/8.4.1.cmeta_id_in_variable_ref.cellml): **Valid file failed validation.**
 * Output: ```Reactions are not supported (found in component A).```
+
+[8.4.1.duplicate_cmeta_id_in_component](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element component. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_component_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml:14:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element component_ref. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component_ref in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml:14:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component_ref failed to validate content. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element group failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_connection](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_connection.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_connection.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element connection. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_connection.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_group](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_group.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_group.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element group. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_group.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_map_components](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element map_components. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element connection failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_map_variables](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml:15:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element map_variables. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element connection failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml:13:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_model](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_model.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_model.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element model```
+
+[8.4.1.duplicate_cmeta_id_in_reaction](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element reaction. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element reaction in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_relationship_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml:12:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element relationship_ref. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element group failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element group in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_role](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element role. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml:11:0:ERROR:RELAXNGV:RELAXNG_ERR_ATTRVALID: Element role failed to validate attributes. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element variable_ref failed to validate content. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_unit](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_units_1](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_units_2](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_variable](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[8.4.1.duplicate_cmeta_id_in_variable_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml): Error detected correctly.
+* Expected: ```Invalid attribute id```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute id for element variable_ref. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element reaction failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element reaction in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
 
 ---
