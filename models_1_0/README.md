@@ -5,11 +5,10 @@ Please report any issues with these tests on the [issues page](https://github.co
 The table below shows the different folders in the test set, and indicates whether these files are regarded as valid or invalid.
 Ambiguity in the spec regarding the validity of a folder is marked with an asterisk (*).
 
-|= Folder                         |= Validity |
+| Folder                          | Validity  |
 |---------------------------------|-----------|
 | `valid`                         | Valid     |
 | `invalid`                       | Invalid   |
-|---------------------------------|-----------|
 | `booleans`                      | Valid     |
 | `duplicate_connections`         | Invalid*  |
 | `numbers`                       | Valid*    |
