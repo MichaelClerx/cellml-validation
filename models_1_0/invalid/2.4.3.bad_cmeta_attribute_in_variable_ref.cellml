@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: cmeta attributes other than id may not appear in a
+     variable_ref -->
+<model name="bad_cmeta_attribute_in_variable_ref"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction>
+      <variable_ref variable="a" cmeta:bob="burger">
+        <role role="reactant" />
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

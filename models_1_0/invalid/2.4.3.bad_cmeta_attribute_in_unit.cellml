@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: cmeta attributes other than id may not appear in a
+     unit -->
+<model name="bad_cmeta_attribute_in_unit"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <units name="apple">
+    <unit units="volt" cmeta:bob="burger" />
+  </units>
+</model>

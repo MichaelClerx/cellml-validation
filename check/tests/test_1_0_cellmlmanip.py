@@ -22,9 +22,15 @@ false_negatives = {
     '2.4.3.reaction_with_extensions': 'Reactions are not supported',
     '2.4.3.role_with_extensions': 'Reactions are not supported',
     '2.4.3.variable_ref_with_extensions': 'Reactions are not supported',
+    '2.4.3.xlink_href_in_reaction': 'Reactions are not supported',
+    '2.4.3.xlink_href_in_role': 'Reactions are not supported',
+    '2.4.3.xlink_href_in_variable_ref': 'Reactions are not supported',
+    # Component units
+    '2.4.3.xlink_href_in_units_2': 'units inside components',
     # TODO Extension elements: These errors are both not the right errors
     '2.4.3.variable_with_extensions': 'unexpected keyword argument',
     '2.4.3.units_with_extensions': 'units',
+    '2.4.3.xlink_href_in_variable': 'unexpected keyword argument',
     # Reactions
     '3.4.2.1.component_with_one_reaction': 'Reactions are not supported',
     '3.4.2.1.component_with_reactions': 'Reactions are not supported',
@@ -75,6 +81,7 @@ false_negatives = {
     '5.4.1.2.units_shadowing_2': 'units inside components',
     '5.4.2.2.unit_units_local_1': 'units inside components',
     '5.4.2.2.unit_units_local_2': 'units inside components',
+    '5.4.2.2.unit_units_local_4': 'nknown unit',
     # TODO Improve error message
     '5.4.2.7.unit_offset_non_zero_and_exponent_one': 'units',
     # Booleans are not allowed in equations
@@ -223,6 +230,22 @@ expected_messages = {
         'Element model has extra content',
     '2.4.2.imaginary_elements_2':
         'Element model has extra content',
+    # 2.4.3 cellml elements cannot contain rdf elements other than rdf:RDF
+    '2.4.3.bad_rdf_element_in_component': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_component_ref': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_connection': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_group': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_map_components': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_map_variables': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_model': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_reaction': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_relationship_ref': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_role': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_unit': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_units_1': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_units_2': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_variable': 'Invalid or unsupported',
+    '2.4.3.bad_rdf_element_in_variable_ref': 'Invalid or unsupported',
     # 2.4.3 Elements/attributes in extension namespaces
     '2.4.3.cellml_attributes_inside_extensions':
         'Element model failed to validate content',
@@ -627,7 +650,6 @@ expected_messages = {
     #         predefined unit
     '4.4.3.2.cn_units_nonexistent_1': 'Unknown unit',
     '4.4.3.2.cn_units_nonexistent_2': 'Unknown unit',
-    '4.4.3.2.cn_units_parent_component': 'units inside components',
     # 4.4.4 A mathml:math can only modify 'owned' variables
     '4.4.4.modify_nonexistent': 'A$x not found',
     '4.4.4.modify_private_in': 'Multiple definitions',
@@ -676,9 +698,6 @@ expected_messages = {
     # 5.4.1.2 A units name must be a valid identifier
     '5.4.1.2.units_name_invalid':
         'Element units failed to validate content',
-    # 5.4.1.2 Units names must be unique (within model or local component)
-    #TODO This should be fixed
-    '5.4.1.2.units_name_duplicate_2': 'units inside components',
     # 5.4.1.2 Units names cannot overlap with predefined ones
     '5.4.1.2.units_name_predefined_ampere': 'Cannot redefine CellML unit',
     '5.4.1.2.units_name_predefined_becquerel': 'Cannot redefine CellML unit',
@@ -714,8 +733,6 @@ expected_messages = {
     '5.4.1.2.units_name_predefined_volt': 'Cannot redefine CellML unit',
     '5.4.1.2.units_name_predefined_watt': 'Cannot redefine CellML unit',
     '5.4.1.2.units_name_predefined_weber': 'Cannot redefine CellML unit',
-    # 5.4.1.2 Component units names cannot overlap with predefined ones
-    '5.4.1.2.units_name_predefined_component_ampere': 'units inside component',
     # 5.4.1.3 Units base_units attribute can only be yes or no
     '5.4.1.3.units_base_units_invalid':
         'Invalid attribute base_units',
@@ -1074,12 +1091,104 @@ expected_messages = {
     # 8.4.1 Cmeta id's are unique
     '8.4.1.cmeta_id_duplicate':
         'Invalid attribute id for element component_ref',
+    # 8.4.1 cmeta:id attributes must have unique values
+    '8.4.1.duplicate_cmeta_id_in_component': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_component_ref': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_connection': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_group': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_map_components': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_map_variables': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_model': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_reaction': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_relationship_ref': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_role': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_unit': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_units_1': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_units_2': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_variable': 'Invalid attribute id',
+    '8.4.1.duplicate_cmeta_id_in_variable_ref': 'Invalid attribute id',
 }
 
 
 # Invalid models for which validation is not expected to pick up the (correct)
 # error.
 known_issues = {
+    # 2.4.3 cellml elements cannot contain cmeta attributes other than cmeta:id
+    '2.4.3.bad_cmeta_attribute_in_component',
+    '2.4.3.bad_cmeta_attribute_in_component_ref',
+    '2.4.3.bad_cmeta_attribute_in_connection',
+    '2.4.3.bad_cmeta_attribute_in_group',
+    '2.4.3.bad_cmeta_attribute_in_map_components',
+    '2.4.3.bad_cmeta_attribute_in_map_variables',
+    '2.4.3.bad_cmeta_attribute_in_model',
+    '2.4.3.bad_cmeta_attribute_in_relationship_ref',
+    '2.4.3.bad_cmeta_attribute_in_unit',
+    '2.4.3.bad_cmeta_attribute_in_units_1',
+    '2.4.3.bad_cmeta_attribute_in_units_2',
+    #TODO Fix error message
+    '2.4.3.bad_cmeta_attribute_in_variable',
+    # Reactions
+    '2.4.3.bad_cmeta_attribute_in_reaction',
+    '2.4.3.bad_cmeta_attribute_in_role',
+    '2.4.3.bad_cmeta_attribute_in_variable_ref',
+    # 2.4.3 cellml elements cannot contain cmeta elements
+    '2.4.3.cmeta_element_in_component',
+    '2.4.3.cmeta_element_in_component_ref',
+    '2.4.3.cmeta_element_in_group',
+    '2.4.3.cmeta_element_in_map_components',
+    '2.4.3.cmeta_element_in_map_variables',
+    '2.4.3.cmeta_element_in_model',
+    '2.4.3.cmeta_element_in_relationship_ref',
+    '2.4.3.cmeta_element_in_unit',
+    '2.4.3.cmeta_element_in_variable',
+    #TODO Fix error message ('units')
+    '2.4.3.cmeta_element_in_units_1',
+    # Reactions
+    '2.4.3.cmeta_element_in_reaction',
+    '2.4.3.cmeta_element_in_role',
+    '2.4.3.cmeta_element_in_variable_ref',
+    # Component units
+    '2.4.3.cmeta_element_in_units_2',
+    #TODO: Fix error message (assertion error)
+    '2.4.3.cmeta_element_in_connection',
+    # 2.4.3 cellml elements cannot have mathml attributes
+    '2.4.3.mathml_attribute_in_component',
+    '2.4.3.mathml_attribute_in_component_ref',
+    '2.4.3.mathml_attribute_in_connection',
+    '2.4.3.mathml_attribute_in_group',
+    '2.4.3.mathml_attribute_in_map_components',
+    '2.4.3.mathml_attribute_in_map_variables',
+    '2.4.3.mathml_attribute_in_model',
+    '2.4.3.mathml_attribute_in_relationship_ref',
+    '2.4.3.mathml_attribute_in_unit',
+    '2.4.3.mathml_attribute_in_units_1',
+    #TODO: Fix error message
+    '2.4.3.mathml_attribute_in_variable',
+    # Reactions
+    '2.4.3.mathml_attribute_in_reaction',
+    '2.4.3.mathml_attribute_in_role',
+    '2.4.3.mathml_attribute_in_variable_ref',
+    # Component units
+    '2.4.3.mathml_attribute_in_units_2',
+    # 2.4.3 cellml elements cannot have rdf attributes
+    '2.4.3.rdf_attribute_in_component',
+    '2.4.3.rdf_attribute_in_component_ref',
+    '2.4.3.rdf_attribute_in_connection',
+    '2.4.3.rdf_attribute_in_group',
+    '2.4.3.rdf_attribute_in_map_components',
+    '2.4.3.rdf_attribute_in_map_variables',
+    '2.4.3.rdf_attribute_in_model',
+    '2.4.3.rdf_attribute_in_relationship_ref',
+    '2.4.3.rdf_attribute_in_unit',
+    '2.4.3.rdf_attribute_in_units_1',
+    #TODO: Fix error message
+    '2.4.3.rdf_attribute_in_variable',
+    # Reactions
+    '2.4.3.rdf_attribute_in_reaction',
+    '2.4.3.rdf_attribute_in_role',
+    '2.4.3.rdf_attribute_in_variable_ref',
+    # Component units
+    '2.4.3.rdf_attribute_in_units_2',
     # 2.5.1 Identifiers are case sensitive
     #TODO Fix error message
     '2.5.1.identifiers_are_case_sensitive',
@@ -1092,9 +1201,16 @@ known_issues = {
     # 3.4.6.4 Interfaces and encapsulation
     #TODO This should be fixed
     '3.4.6.4.map_variables_hidden_cousins_3',
+    # Component units
+    '4.4.3.2.cn_units_parent_component',
     # 5.4.1.2 Units names must be unique (within model or local component)
     #TODO This should be fixed
     '5.4.1.2.units_name_duplicate_1',
+    # Component units
+    '5.4.1.2.units_name_duplicate_2',
+    # 5.4.1.2 Component units names cannot overlap with predefined ones
+    # Component units
+    '5.4.1.2.units_name_predefined_component_ampere',
     # TODO Fix error message
     '5.4.2.3.unit_prefix_spaces',
     # 6.2.4.5 name/relationship pairs must be unique

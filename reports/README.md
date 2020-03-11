@@ -15,16 +15,18 @@ The reports listed below were automatically generated during testing. Some care 
 
 ## CellML 1.0
 
-- [DTD validation](dtd_1_0.md) (70%)
-- [Schema validation](schema_1_0.md) (78%)
-- [RelaxNG validation](relaxng_1_0.md) (82%)
+- [DTD validation](dtd_1_0.md) (72%)
+- [Schema validation](schema_1_0.md) (72%)
+- [RelaxNG validation](relaxng_1_0.md) (77%)
 
 ### External tools
 
-- [Cellmlmanip](cellmlmanip_1_0.md) (82%)
+- [Cellmlmanip](cellmlmanip_1_0.md) (77%)
 - [Myokit](myokit_1_0.md) (83%)
-- [OpenCOR / CellML API](opencor_1_0.md) (89%)
+- [OpenCOR / CellML API](opencor_1_0.md) (80%)
 
 Note that the differences between these tools are all clouded somewhat by reaction support.
 OpenCOR uses the CellML API for validation, which handles reactions very well (although OpenCOR itself does not support reactions).
 Similarly, Cellmlmanip uses the RelaxNG schema for a first pass of validation, allowing it to catch a lot of reaction-related errors, despite not supporting reactions itself.
+
+Another issue that clouds the results is handling of extension elements, about which the spec is quite specific, but which is hard to implement.

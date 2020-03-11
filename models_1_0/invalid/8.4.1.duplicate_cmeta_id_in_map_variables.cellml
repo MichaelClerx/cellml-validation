@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 8.4.1: Duplicate cmeta:id in map_variables element -->
+<model name="duplicate_cmeta_id_in_map_variables"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="A">
+    <variable name="a" units="volt" public_interface="out" cmeta:id="x" />
+  </component>
+  <component name="B">
+    <variable name="a" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="a" cmeta:id="x" />
+  </connection>
+</model>

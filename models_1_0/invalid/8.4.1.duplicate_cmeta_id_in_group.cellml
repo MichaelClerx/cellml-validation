@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 8.4.1: Duplicate cmeta:id in group element -->
+<model name="duplicate_cmeta_id_in_group"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="A">
+    <variable name="a" units="volt" cmeta:id="x" initial_value="1" />
+  </component>
+  <component name="B" />
+  <group cmeta:id="x">
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

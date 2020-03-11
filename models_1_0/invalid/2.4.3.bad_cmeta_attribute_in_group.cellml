@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: cmeta attributes other than id may not appear in a
+     group -->
+<model name="bad_cmeta_attribute_in_group"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="A" />
+  <component name="B" />
+  <group cmeta:bob="burger">
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

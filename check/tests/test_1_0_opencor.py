@@ -16,6 +16,22 @@ from .report import Report_1_0 as Report
 
 # Known instances where OpenCOR says a valid file is invalid
 false_negatives = {
+    # These are valid in 1.0 and invalid 1.1, but OpenCOR doesn't make a
+    # distinction in this case
+    '2.4.3.xlink_href_in_component': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_component_ref': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_connection': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_group': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_map_components': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_map_variables': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_model': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_reaction': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_role': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_unit': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_units_1': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_units_2': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_variable': 'Unexpected attribute',
+    '2.4.3.xlink_href_in_variable_ref': 'Unexpected attribute',
     # CellML API uses 1.1 rule about having to have at least one letter
     '2.4.1.valid_identifiers':
         'identifier must contain at least one letter',
@@ -217,6 +233,21 @@ expected_messages = {
     '2.4.2.imaginary_elements_2':
         'Element import is invalid in this version of CellML',
     # 2.4.3 Elements/attributes in extension namespaces
+    '2.4.3.mathml_attribute_in_component': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_component_ref': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_connection': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_group': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_map_components': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_map_variables': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_model': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_reaction': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_relationship_ref': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_role': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_unit': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_units_1': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_units_2': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_variable': 'Unexpected attribute',
+    '2.4.3.mathml_attribute_in_variable_ref': 'Unexpected attribute',
     # 2.4.4 Text in CellML elements
     '2.4.4.text_in_component':
         'any characters that occur immediately within elements in the CellML',
@@ -1069,6 +1100,72 @@ known_issues = {
     '2.4.3.cellml_attributes_inside_extensions',
     # CellML elements inside extensions are not detected
     '2.4.3.cellml_elements_inside_extensions',
+    # Invalid cmeta attributes are not detected
+    '2.4.3.bad_cmeta_attribute_in_component',
+    '2.4.3.bad_cmeta_attribute_in_component_ref',
+    '2.4.3.bad_cmeta_attribute_in_connection',
+    '2.4.3.bad_cmeta_attribute_in_group',
+    '2.4.3.bad_cmeta_attribute_in_map_components',
+    '2.4.3.bad_cmeta_attribute_in_map_variables',
+    '2.4.3.bad_cmeta_attribute_in_model',
+    '2.4.3.bad_cmeta_attribute_in_reaction',
+    '2.4.3.bad_cmeta_attribute_in_relationship_ref',
+    '2.4.3.bad_cmeta_attribute_in_role',
+    '2.4.3.bad_cmeta_attribute_in_unit',
+    '2.4.3.bad_cmeta_attribute_in_units_1',
+    '2.4.3.bad_cmeta_attribute_in_units_2',
+    '2.4.3.bad_cmeta_attribute_in_variable',
+    '2.4.3.bad_cmeta_attribute_in_variable_ref',
+    # Invalid rdf elements are not detected
+    '2.4.3.bad_rdf_element_in_component',
+    '2.4.3.bad_rdf_element_in_component_ref',
+    '2.4.3.bad_rdf_element_in_connection',
+    '2.4.3.bad_rdf_element_in_group',
+    '2.4.3.bad_rdf_element_in_map_components',
+    '2.4.3.bad_rdf_element_in_map_variables',
+    '2.4.3.bad_rdf_element_in_model',
+    '2.4.3.bad_rdf_element_in_reaction',
+    '2.4.3.bad_rdf_element_in_relationship_ref',
+    '2.4.3.bad_rdf_element_in_role',
+    '2.4.3.bad_rdf_element_in_unit',
+    '2.4.3.bad_rdf_element_in_units_1',
+    '2.4.3.bad_rdf_element_in_units_2',
+    '2.4.3.bad_rdf_element_in_variable',
+    '2.4.3.bad_rdf_element_in_variable_ref',
+    # Invalid cmeta elements are not detected
+    '2.4.3.cmeta_element_in_component',
+    '2.4.3.cmeta_element_in_component_ref',
+    '2.4.3.cmeta_element_in_connection',
+    '2.4.3.cmeta_element_in_group',
+    '2.4.3.cmeta_element_in_map_components',
+    '2.4.3.cmeta_element_in_map_variables',
+    '2.4.3.cmeta_element_in_model',
+    '2.4.3.cmeta_element_in_reaction',
+    '2.4.3.cmeta_element_in_relationship_ref',
+    '2.4.3.cmeta_element_in_role',
+    '2.4.3.cmeta_element_in_unit',
+    '2.4.3.cmeta_element_in_units_1',
+    '2.4.3.cmeta_element_in_units_2',
+    '2.4.3.cmeta_element_in_variable',
+    '2.4.3.cmeta_element_in_variable_ref',
+    # Unexpected pass for bad mathml attribute
+    '2.4.3.mathml_attribute_in_relationship_ref',
+    # Bad top-level RDF elements are not detected
+    '2.4.3.rdf_attribute_in_component',
+    '2.4.3.rdf_attribute_in_component_ref',
+    '2.4.3.rdf_attribute_in_connection',
+    '2.4.3.rdf_attribute_in_group',
+    '2.4.3.rdf_attribute_in_map_components',
+    '2.4.3.rdf_attribute_in_map_variables',
+    '2.4.3.rdf_attribute_in_model',
+    '2.4.3.rdf_attribute_in_reaction',
+    '2.4.3.rdf_attribute_in_relationship_ref',
+    '2.4.3.rdf_attribute_in_role',
+    '2.4.3.rdf_attribute_in_unit',
+    '2.4.3.rdf_attribute_in_units_1',
+    '2.4.3.rdf_attribute_in_units_2',
+    '2.4.3.rdf_attribute_in_variable',
+    '2.4.3.rdf_attribute_in_variable_ref',
     # API doesn't complain about attributes in the CellML namespace
     '2.5.2.attribute_in_cellml_namespace',
     # 4.4.1 Bad math
@@ -1173,11 +1270,22 @@ known_issues = {
     '7.4.3.8.role_delta_variable_with_stoichiometry_no_rate',
     # 7.4.3.9 The math in a role must be relevant to the variable_ref
     '7.4.3.9.role_math_not_relevant',
-    # 8.4.1 Cmeta id's are unique
-    '8.4.1.cmeta_id_duplicate',
-    # Bad messsage (there are no attributes in the CellML namespace):
-    # The value of a relationship attribute in the CellML namespace must be
-    # "containment" or "encapsulation" (section 6.4.2.2).
+    # 8.4.1 cmeta ids are not checked for uniqueness
+    '8.4.1.duplicate_cmeta_id_in_component',
+    '8.4.1.duplicate_cmeta_id_in_component_ref',
+    '8.4.1.duplicate_cmeta_id_in_connection',
+    '8.4.1.duplicate_cmeta_id_in_group',
+    '8.4.1.duplicate_cmeta_id_in_map_components',
+    '8.4.1.duplicate_cmeta_id_in_map_variables',
+    '8.4.1.duplicate_cmeta_id_in_model',
+    '8.4.1.duplicate_cmeta_id_in_reaction',
+    '8.4.1.duplicate_cmeta_id_in_relationship_ref',
+    '8.4.1.duplicate_cmeta_id_in_role',
+    '8.4.1.duplicate_cmeta_id_in_unit',
+    '8.4.1.duplicate_cmeta_id_in_units_1',
+    '8.4.1.duplicate_cmeta_id_in_units_2',
+    '8.4.1.duplicate_cmeta_id_in_variable',
+    '8.4.1.duplicate_cmeta_id_in_variable_ref',
 }
 
 
@@ -1220,7 +1328,7 @@ class TestOpenCOR(object):
             if ret == 0:
                 # Expected fail, but passed
                 log.error('Unexpected pass for ' + name)
-                for line in msg.splitlines():
+                for line in msg:
                     log.error(line)
                 pytest.xpass()
             else:
@@ -1245,7 +1353,7 @@ class TestOpenCOR(object):
         elif ret != 0:
             # Unexpected fail
             log.error('Unexpected error in ' + name)
-            for line in msg.splitlines():
+            for line in msg:
                 log.error(line)
             pytest.fail()
 

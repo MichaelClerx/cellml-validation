@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 5.4.2.2: A unit can reference local units: and unit trees can
+     be quite complicated and specified in any order.
+     This test case can be used to check if meter_per_second really comes out
+     as meter per second, and not as meter per kilogram.
+     -->
+<model name="unit_units_local_1"
+       xmlns="http://www.cellml.org/cellml/1.0#">
+  <units name="bob">
+    <unit units="kilogram" />
+  </units>
+  <component name="A">
+    <variable name="x"
+              units="meter_per_second"
+              initial_value="2"
+              public_interface="out" />
+    <units name="meter_per_second">
+      <unit units="meter" />
+      <unit units="bob" exponent="-1" />
+    </units>
+    <units name="bob">
+      <unit units="second" />
+    </units>
+  </component>
+  <component name="B">
+    <variable name="x" units="m_per_s" public_interface="in" />
+    <units name="m_per_s">
+      <unit units="meter" />
+      <unit units="second" exponent="-1" />
+    </units>
+  </component>
+</model>

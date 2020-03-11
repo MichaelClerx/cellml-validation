@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: Only rdf:RDF may appear in a map_variables -->
+<model name="cmeta_element_in_map_variables"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <component name="A">
+    <variable name="a" units="volt" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="a" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="a">
+      <rdf:Description rdf:about="http://example.com" />
+    </map_variables>
+  </connection>
+</model>

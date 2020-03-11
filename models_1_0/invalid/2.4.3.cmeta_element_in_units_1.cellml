@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: cmeta elements may not appear in a units element -->
+<model name="cmeta_element_in_units_1"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <units name="orange">
+    <unit units="dimensionless" />
+    <cmeta:species>dog</cmeta:species>
+  </units>
+</model>
