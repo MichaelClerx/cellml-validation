@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 8.4.1: Duplicate cmeta:id in component element -->
+<model name="duplicate_cmeta_id_in_component"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="a" cmeta:id="a">
+    <variable name="b" units="volt" cmeta:id="a" initial_value="2" />
+  </component>
+</model>
