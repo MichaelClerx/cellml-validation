@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: CMeta elements may not appear in a variable -->
+<model name="cmeta_element_in_variable"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="c1">
+    <variable name="a" units="volt">
+      <cmeta:species>dog</cmeta:species>
+    </variable>
+  </component>
+</model>
