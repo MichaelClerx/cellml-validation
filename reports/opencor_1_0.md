@@ -1,13 +1,13 @@
 # OpenCOR / CellML API Validation - CellML 1.0
 
 Performance:
-* 80% according to spec (744 out of 920)
+* 80% according to spec (744 out of 921)
 * 339 out of 373 valid files passed
-* 405 out of 547 invalid files detected
+* 405 out of 548 invalid files detected
 
 Issues:
 * 34 valid files failed validation
-* 134 invalid files passed validation
+* 135 invalid files passed validation
 * 8 invalid files failed validation for the wrong reason
 
 Results per category
@@ -19,7 +19,7 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|19|37|15|66|0|40%|
 |[3. Model structure](#3-model-structure)|50|155|0|0|0|100%|
-|[4. Mathematics](#4-mathematics)|44|14|5|5|0|85%|
+|[4. Mathematics](#4-mathematics)|44|14|5|6|0|84%|
 |[5. Units](#5-units)|125|74|10|6|8|89%|
 |[6. Grouping](#6-grouping)|16|65|1|13|0|85%|
 |[7. Reactions](#7-reactions)|5|50|0|29|0|65%|
@@ -1576,6 +1576,8 @@ Results per category
 ---
 
 #### 4.4.4
+
+🔵 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Error not detected.**
 
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
 * Expected: ```ci element references variable which doesn't exist```

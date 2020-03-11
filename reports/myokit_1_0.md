@@ -1,14 +1,14 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 82% according to spec (763 out of 920)
+* 82% according to spec (763 out of 921)
 * 332 out of 373 valid files passed
-* 431 out of 547 invalid files detected
+* 431 out of 548 invalid files detected
 
 Issues:
 * 41 valid files failed validation
 * 11 invalid files passed validation
-* 105 invalid files failed validation for the wrong reason
+* 106 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -19,7 +19,7 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|27|85|7|0|18|81%|
 |[3. Model structure](#3-model-structure)|46|155|4|0|0|98%|
-|[4. Mathematics](#4-mathematics)|41|18|8|0|1|86%|
+|[4. Mathematics](#4-mathematics)|41|18|8|0|2|85%|
 |[5. Units](#5-units)|125|82|10|2|4|92%|
 |[6. Grouping](#6-grouping)|17|69|0|9|0|90%|
 |[7. Reactions](#7-reactions)|0|0|5|0|79|0%|
@@ -1614,6 +1614,10 @@ Results per category
 ---
 
 #### 4.4.4
+
+🔶 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Error on line 31. Invalid expression found on the left-hand side of an equation: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
 
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
 * Expected: ```references in equation must name a variable from the local component```

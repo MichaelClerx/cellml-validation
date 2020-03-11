@@ -1,14 +1,14 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (709 out of 920)
+* 76% according to spec (709 out of 921)
 * 267 out of 373 valid files passed
-* 442 out of 547 invalid files detected
+* 442 out of 548 invalid files detected
 
 Issues:
 * 106 valid files failed validation
 * 61 invalid files passed validation
-* 44 invalid files failed validation for the wrong reason
+* 45 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -19,7 +19,7 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|23|42|11|39|22|47%|
 |[3. Model structure](#3-model-structure)|43|151|7|4|0|94%|
-|[4. Mathematics](#4-mathematics)|31|18|18|0|1|72%|
+|[4. Mathematics](#4-mathematics)|31|18|18|0|2|71%|
 |[5. Units](#5-units)|87|80|48|1|7|74%|
 |[6. Grouping](#6-grouping)|12|58|5|17|3|73%|
 |[7. Reactions](#7-reactions)|0|68|5|0|11|80%|
@@ -1522,6 +1522,9 @@ Results per category
 ---
 
 #### 4.4.4
+
+🔶 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Equation LHS should be a derivative or variable, not _a$x + _a$y```
 
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
 * Expected: ```A$x not found```

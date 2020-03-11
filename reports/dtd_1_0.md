@@ -1,13 +1,13 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 72% according to spec (668 out of 920)
+* 72% according to spec (668 out of 921)
 * 327 out of 373 valid files passed
-* 341 out of 547 invalid files detected
+* 341 out of 548 invalid files detected
 
 Issues:
 * 46 valid files failed validation
-* 204 invalid files passed validation
+* 205 invalid files passed validation
 * 2 invalid files failed validation for the wrong reason
 
 Results per category
@@ -19,7 +19,7 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|8|0|50%|
 |[2. Fundamentals](#2-fundamentals)|5|95|29|6|2|72%|
 |[3. Model structure](#3-model-structure)|50|97|0|58|0|71%|
-|[4. Mathematics](#4-mathematics)|49|3|0|16|0|76%|
+|[4. Mathematics](#4-mathematics)|49|3|0|17|0|75%|
 |[5. Units](#5-units)|135|32|0|56|0|74%|
 |[6. Grouping](#6-grouping)|15|48|2|30|0|66%|
 |[7. Reactions](#7-reactions)|5|49|0|30|0|64%|
@@ -1782,6 +1782,8 @@ Results per category
 ---
 
 #### 4.4.4
+
+🔵 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Error not detected.**
 
 🔵 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): **Error not detected.**
 
