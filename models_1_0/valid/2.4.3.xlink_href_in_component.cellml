@@ -5,5 +5,4 @@
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:xlink="http://www.w3.org/1999/xlink">
   <component name="A" xlink:href="http://example.com" />
-  </component>
 </model>

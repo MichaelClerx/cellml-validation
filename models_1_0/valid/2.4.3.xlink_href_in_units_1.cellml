@@ -4,7 +4,7 @@
 <model name="xlink_href_in_units_1"
        xmlns="http://www.cellml.org/cellml/1.0#"
        xmlns:xlink="http://www.w3.org/1999/xlink">
-  <units name="orange" cmeta:id="orange">
+  <units name="orange">
     <unit units="dimensionless" xlink:href="http://example.com" />
   </units>
 </model>
