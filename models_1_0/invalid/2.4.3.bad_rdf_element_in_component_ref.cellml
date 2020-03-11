@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: Only rdf:RDF may appear in a component_ref -->
+<model name="cmeta_element_in_component_ref"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B">
+        <rdf:Description rdf:about="http://example.com" />
+      </component_ref>
+    </component_ref>
+  </group>
+</model>
