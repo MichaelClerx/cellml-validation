@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.4.1: Connections must have map_components and map_variables -->
+<model name="connection_only_extensions"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:fruit="http://fruit.org">
+  <connection>
+    <fruit:apple />
+    <fruit:banana />
+    <fruit:cherry />
+  </connection>
+</model>

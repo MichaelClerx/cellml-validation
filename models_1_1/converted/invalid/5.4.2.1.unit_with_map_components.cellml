@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.1: A unit cannot contain a map_components -->
+<model name="unit_with_map_components"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="volt">
+      <map_components component_1="A" component_2="B" />
+    </unit>
+  </units>
+  <component name="A" />
+  <component name="B" />
+</model>

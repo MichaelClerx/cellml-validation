@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.1: A unit can have a non-zero offset attribute -->
+<model name="units_offset_non_zero"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="fluther">
+    <unit units="litre" offset="0.5" />
+  </units>
+</model>

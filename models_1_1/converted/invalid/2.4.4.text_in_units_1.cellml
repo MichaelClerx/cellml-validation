@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.4 A units element cannot have text -->
+<model name="text_in_units_1"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="orange">
+    <unit units="volt" />
+    Clementine
+  </units>
+</model>

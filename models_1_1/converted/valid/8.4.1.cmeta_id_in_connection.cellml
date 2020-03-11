@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 8.4.1: A connection can have a cmeta:id -->
+<model name="cmeta_id_in_connection"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="c1">
+    <variable name="a" units="volt" public_interface="out" />
+  </component>
+  <component name="c2">
+    <variable name="b" units="volt" public_interface="in" />
+  </component>
+  <connection cmeta:id="hello">
+    <map_components component_1="c1" component_2="c2" />
+    <map_variables variable_1="a" variable_2="b" />
+  </connection>
+</model>

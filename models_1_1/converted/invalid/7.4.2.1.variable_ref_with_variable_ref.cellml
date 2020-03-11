@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.2.1: A variable_ref cannot contain a variable_ref -->
+<model name="variable_ref_with_variable_ref"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+    <variable name="b" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="a">
+        <role role="reactant" />
+        <variable_ref variable="b">
+          <role role="reactant" />
+        </variable_ref>
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

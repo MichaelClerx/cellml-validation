@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 8.4.1: A units element can have a cmeta:id -->
+<model name="cmeta_id_in_units_2"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+  <component name="A">
+    <units name="apple" cmeta:id="apple">
+      <unit units="dimensionless" />
+    </units>
+  </component>
+</model>

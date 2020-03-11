@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.4.4: A mathml:math can only modify 'owned' variables.
+
+This rule gets a bit dodgy for algebraically defined models:
+
+[component a]
+variable x (in)
+variable y (in)
+y + x = 3
+
+[component b]
+variable x (out)
+variable y (out)
+variable z (in)
+x + y + z = 10
+
+[variable c]
+variable z (out)
+z = 2
+
+Presuming here that this is invalid, because the equation in component a
+"modifies" x and/or y. -->
+<model name="dae_public_in"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="a">
+    <variable name="x" units="dimensionless" public_interface="in" />
+    <variable name="y" units="dimensionless" public_interface="in" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq />
+        <apply>
+          <plus />
+          <ci>x</ci>
+          <ci>y</ci>
+        </apply>
+        <cn cellml:units="dimensionless">3</cn>
+      </apply>
+    </math>
+  </component>
+  <component name="b">
+    <variable name="x" units="dimensionless" public_interface="out" />
+    <variable name="y" units="dimensionless" public_interface="out" />
+    <variable name="z" units="dimensionless" public_interface="in" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq />
+        <apply>
+          <plus />
+          <ci>x</ci>
+          <ci>y</ci>
+          <ci>z</ci>
+        </apply>
+        <cn cellml:units="dimensionless">10</cn>
+      </apply>
+    </math>
+  </component>
+  <component name="c">
+    <variable name="z" units="dimensionless" public_interface="out" initial_value="2" />
+  </component>
+  <connection>
+    <map_components component_1="a" component_2="b" />
+    <map_variables variable_1="x" variable_2="x" />
+    <map_variables variable_1="y" variable_2="y" />
+  </connection>
+  <connection>
+    <map_components component_1="b" component_2="c" />
+    <map_variables variable_1="z" variable_2="z" />
+  </connection>
+</model>

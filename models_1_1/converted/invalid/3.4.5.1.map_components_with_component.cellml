@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.5.1: A map_components cannot contain a component -->
+<model name="map_components_with_component"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <connection>
+    <map_components component_1="a" component_2="b">
+      <component name="hello" />
+    </map_components>
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+  <component name="a">
+    <variable name="x" units="newton" public_interface="out" />
+  </component>
+  <component name="b">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+</model>

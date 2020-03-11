@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.3: A unit prefix can be any of these names -->
+<model name="unit_prefix_named"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="ampere" prefix="yotta" />
+    <unit units="becquerel" prefix="zetta" />
+    <unit units="candela" prefix="exa" />
+    <unit units="weber" prefix="peta" />
+    <unit units="coulomb" prefix="tera" />
+    <unit units="farad" prefix="giga" />
+    <unit units="gram" prefix="mega" />
+    <unit units="gray" prefix="kilo" />
+    <unit units="henry" prefix="hecto" />
+    <unit units="hertz" prefix="deka" />
+    <unit units="joule" prefix="deci" />
+    <unit units="katal" prefix="centi" />
+    <unit units="kelvin" prefix="milli" />
+    <unit units="kilogram" prefix="micro" />
+    <unit units="liter" prefix="nano" />
+    <unit units="lumen" prefix="pico" />
+    <unit units="lux" prefix="femto" />
+    <unit units="meter" prefix="atto" />
+    <unit units="mole" prefix="zepto" />
+    <unit units="newton" prefix="yocto" />
+  </units>
+</model>

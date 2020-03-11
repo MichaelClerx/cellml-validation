@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 8.4.2: A component_ref can have an rdf:RDF -->
+<model name="rdf_in_component_ref"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cmeta="http://www.cellml.org/metadata/1.0#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:dc= "http://purl.org/dc/elements/1.1/">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B" cmeta:id="x">
+        <rdf:RDF rdf:about="#x">
+          <dc:description>It's a component_ref</dc:description>
+        </rdf:RDF>
+      </component_ref>
+    </component_ref>
+  </group>
+</model>

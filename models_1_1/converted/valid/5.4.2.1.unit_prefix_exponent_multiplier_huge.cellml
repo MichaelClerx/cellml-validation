@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML 1.1, 5.4.3.1: A unit can have prefix, exponent, and multiplier attributes -->
+<model name="unit_prefix_exponent_multiplier"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="fluther">
+    <unit units="litre" />
+    <unit units="newton" exponent="-1" />
+    <unit units="second" exponent="2" prefix="milli" />
+    <unit units="kilogram" exponent="-3" prefix="10000" multiplier="1.4" />
+  </units>
+</model>

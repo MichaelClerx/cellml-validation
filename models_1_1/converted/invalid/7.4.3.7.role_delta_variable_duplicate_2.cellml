@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.3.7: The delta variable must be unique component-wide -->
+<model name="role_delta_variable_duplicate_2"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="x">
+    <variable name="dA" units="dimensionless" initial_value="1" />
+    <variable name="A1" units="dimensionless" initial_value="20" />
+    <variable name="B1" units="dimensionless" initial_value="20" />
+    <variable name="C1" units="dimensionless" initial_value="5" />
+    <variable name="r1" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="A1">
+        <role role="reactant" delta_variable="dA" />
+      </variable_ref>
+      <variable_ref variable="B1">
+        <role role="reactant" />
+      </variable_ref>
+      <variable_ref variable="C1">
+        <role role="product" />
+      </variable_ref>
+      <variable_ref variable="r1">
+        <role role="rate">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci>r1</ci>
+              <cn cellml:units="dimensionless">1</cn>
+            </apply>
+          </math>
+        </role>
+      </variable_ref>
+    </reaction>
+    <variable name="A2" units="dimensionless" initial_value="20" />
+    <variable name="B2" units="dimensionless" initial_value="20" />
+    <variable name="C2" units="dimensionless" initial_value="5" />
+    <variable name="r2" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="A2">
+        <role role="reactant" delta_variable="dA" />
+      </variable_ref>
+      <variable_ref variable="B2">
+        <role role="reactant" />
+      </variable_ref>
+      <variable_ref variable="C2">
+        <role role="product" />
+      </variable_ref>
+      <variable_ref variable="r2">
+        <role role="rate">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci>r2</ci>
+              <cn cellml:units="dimensionless">1</cn>
+            </apply>
+          </math>
+        </role>
+      </variable_ref>
+    </reaction>
+  </component>
+
+</model>

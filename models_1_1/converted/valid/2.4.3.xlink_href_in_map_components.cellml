@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.3: In CellML 1.1 xlink is an extension namespace. -->
+<model name="xlink_href_in_map_components"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+  <connection>
+    <map_components component_1="a"
+                    component_2="b"
+                    xlink:href="http://example.com">
+    </map_components>
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+  <component name="a">
+    <variable name="x" units="newton" public_interface="out" />
+  </component>
+  <component name="b">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+</model>

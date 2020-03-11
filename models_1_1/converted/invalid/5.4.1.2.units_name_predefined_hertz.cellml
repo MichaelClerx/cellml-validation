@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.1.2: A units name must not overlap with the predefined names -->
+<model name="units_name_predefined_hertz"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="hertz">
+    <unit units="newton" />
+  </units>
+</model>

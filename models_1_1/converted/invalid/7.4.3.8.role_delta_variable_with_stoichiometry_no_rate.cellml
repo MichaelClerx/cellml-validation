@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.3.8: A delta_variable with a stoichiometry must have a rate -->
+<model name="role_delta_variable_with_stoichiometry_no_rate"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="x">
+    <variable name="A" units="dimensionless" initial_value="20" />
+    <variable name="dA" units="dimensionless" />
+    <variable name="B" units="dimensionless" initial_value="20" />
+    <variable name="C" units="dimensionless" initial_value="5" />
+    <reaction>
+      <variable_ref variable="A">
+        <role role="reactant" delta_variable="dA" stoichiometry="1" />
+      </variable_ref>
+      <variable_ref variable="B">
+        <role role="reactant" />
+      </variable_ref>
+      <variable_ref variable="C">
+        <role role="product" />
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

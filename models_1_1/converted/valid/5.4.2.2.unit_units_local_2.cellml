@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.2: A unit can reference local units; in any order -->
+<model name="unit_units_local_2"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="megawooster">
+    <unit units="wooster" prefix="mega" />
+  </units>
+  <component name="A">
+    <units name="milliwooster_per_fluther">
+      <unit units="wooster" prefix="milli" />
+      <unit units="fluther" exponent="-1" />
+    </units>
+    <units name="fluther">
+      <unit units="second" />
+    </units>
+  </component>
+  <units name="wooster">
+    <unit units="volt" />
+  </units>
+</model>

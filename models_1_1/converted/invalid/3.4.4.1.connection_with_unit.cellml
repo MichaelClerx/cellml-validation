@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.4.1: A connection cannot contain a unit element -->
+<model name="connection_with_unit"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="volt" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="a" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="a" />
+    <unit units="dimensionless" />
+  </connection>
+</model>

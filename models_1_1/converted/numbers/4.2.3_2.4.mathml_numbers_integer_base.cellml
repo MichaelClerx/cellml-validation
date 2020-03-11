@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
+Numbers: Integers with a base attribute -->
+<model name="mathml_numbers_integer_base"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="integer_base_10" units="dimensionless" />
+    <variable name="integer_base_2" units="dimensionless" />
+    <variable name="integer_base_16" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>integer_base_10</ci>
+        <cn cellml:units="dimensionless" type="integer" base="10">9</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>integer_base_2</ci>
+        <cn cellml:units="dimensionless" type="integer" base="2">11011</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>integer_base_16</ci>
+        <cn cellml:units="dimensionless" type="integer" base="16">123DEF</cn>
+      </apply>
+    </math>
+  </component>
+</model>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: A variable in volts with an expression in millivolts -->
+<model name="unit_checking_equation_has_wrong_units_4"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <units name="millivolt">
+    <unit units="volt" prefix="milli" />
+  </units>
+  <component name="A">
+    <variable name="a" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>a</ci>
+        <cn cellml:units="millivolt">1000</cn>
+      </apply>
+    </math>
+  </component>
+</model>

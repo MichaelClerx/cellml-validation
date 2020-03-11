@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.2.1: A component cannot contain a group -->
+<model name="component_with_group"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <group>
+      <relationship_ref relationship="containment" />
+      <component_ref component="A" />
+    </group>
+  </component>
+</model>

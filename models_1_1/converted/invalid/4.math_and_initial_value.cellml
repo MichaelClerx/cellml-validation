@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- Not in spec: A mathml:math can't be given with an initial value (unless it's a derivative) -->
+<model name="math_and_initial_value"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="x" units="dimensionless" initial_value="1" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <cn cellml:units="dimensionless">1</cn>
+      </apply>
+    </math>
+  </component>
+</model>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4: CellML does not say a model can't be overdefined. -->
+<model name="overdefined_ode_and_ode"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <units name="volt_per_second">
+    <unit units="volt" />
+    <unit units="second" exponent="-1" />
+  </units>
+  <component name="A">
+    <variable name="x" units="volt" initial_value="3" />
+    <variable name="t" units="second" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>t</ci>
+          </bvar>
+          <ci>x</ci>
+        </apply>
+        <cn cellml:units="volt_per_second">0.001</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>t</ci>
+          </bvar>
+          <ci>x</ci>
+        </apply>
+        <cn cellml:units="volt_per_second">2</cn>
+      </apply>
+    </math>
+  </component>
+</model>

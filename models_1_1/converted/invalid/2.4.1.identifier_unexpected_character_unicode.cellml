@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.1: Identifier is not allowed use all Unicode characters -->
+<model name="identifier_unexpected_character_unicode"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="Hello🥃" />
+</model>

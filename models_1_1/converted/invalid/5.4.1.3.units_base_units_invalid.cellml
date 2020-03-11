@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.1.3: A units base_units attribute must be yes or no -->
+<model name="units_base_units_invalid"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster" base_units="certainly">
+    <unit units="newton" />
+  </units>
+</model>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.4.4: A mathml:math can modify 'owned' variables -->
+<model name="modify_non_local_child"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="x" units="dimensionless" private_interface="out" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <cn cellml:units="dimensionless">1</cn>
+      </apply>
+    </math>
+  </component>
+  <component name="AA">
+    <variable name="x" units="dimensionless" public_interface="in" />
+  </component>
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A">
+      <component_ref component="AA" />
+    </component_ref>
+  </group>
+  <connection>
+    <map_components component_1="A" component_2="AA" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+</model>

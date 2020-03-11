@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Unit checking: First-order derivatives -->
+<model name="unit_checking_derivatives"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <units name="volt_per_second">
+    <unit units="volt" />
+    <unit units="second" exponent="-1" />
+  </units>
+  <component name="A">
+    <variable name="time" units="second" initial_value="0" />
+    <variable name="V" units="volt" initial_value = "-0.08" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>time</ci>
+          </bvar>
+          <ci>V</ci>
+        </apply>
+        <cn cellml:units="volt_per_second">0.001</cn>
+      </apply>
+    </math>
+  </component>
+</model>

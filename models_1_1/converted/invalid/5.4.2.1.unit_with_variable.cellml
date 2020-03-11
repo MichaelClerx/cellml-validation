@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.1: A unit cannot contain a variable -->
+<model name="unit_with_variable"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <units name="wooster">
+      <unit units="volt">
+        <variable name="x" units="newton" />
+      </unit>
+    </units>
+  </component>
+</model>

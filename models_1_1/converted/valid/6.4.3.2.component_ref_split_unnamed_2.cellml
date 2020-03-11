@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 6.4.3.2: An unnamed relationship hierarchy can not be split
+                          over multiple groups -->
+<model name="component_ref_split_2"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A" />
+  <component name="B" />
+  <component name="C" />
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref relationship="encapsulation" />
+    <component_ref component="B" >
+      <component_ref component="C" />
+    </component_ref>
+  </group>
+</model>

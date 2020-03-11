@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Units with a different prefix are convertible -->
+<model name="unit_conversion_different_names_same_unit"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="volt" />
+  </units>
+  <units name="fluther">
+    <unit units="volt" />
+  </units>
+  <component name="A">
+    <variable name="x" units="wooster" initial_value="3" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="x" units="fluther" public_interface="in" />
+  </component>
+  <component name="C">
+    <variable name="x" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+  <connection>
+    <map_components component_1="A" component_2="C" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+</model>

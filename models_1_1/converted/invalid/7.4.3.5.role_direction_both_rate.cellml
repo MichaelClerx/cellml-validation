@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.3.5: A rate must have direction forward -->
+<model name="role_direction_both_rate"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="x">
+    <variable name="A" units="dimensionless" initial_value="20" />
+    <variable name="B" units="dimensionless" initial_value="20" />
+    <variable name="C" units="dimensionless" initial_value="5" />
+    <variable name="r" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="A">
+        <role role="reactant" />
+      </variable_ref>
+      <variable_ref variable="B">
+        <role role="reactant" />
+      </variable_ref>
+      <variable_ref variable="C">
+        <role role="product" />
+      </variable_ref>
+      <variable_ref variable="r">
+        <role role="rate" direction="both">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci>r</ci>
+              <cn cellml:units="dimensionless">1</cn>
+            </apply>
+          </math>
+        </role>
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.4 A component_ref cannot have text -->
+<model name="text_in_component_ref"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B">
+        Banana
+      </component_ref>
+    </component_ref>
+  </group>
+</model>

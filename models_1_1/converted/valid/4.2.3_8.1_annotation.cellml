@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
+MathML can be wrapped in a <semantics> element, that defines non-xml <annotation> -->
+<model name="mathml_semantics"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <semantics>
+        <apply>
+          <eq/>
+          <ci>a</ci>
+          <cn cellml:units="volt">-0.085</cn>
+        </apply>
+        <annotation encoding="application/x-tex">
+          a = -0.085
+        </annotation>
+      </semantics>
+    </math>
+  </component>
+</model>

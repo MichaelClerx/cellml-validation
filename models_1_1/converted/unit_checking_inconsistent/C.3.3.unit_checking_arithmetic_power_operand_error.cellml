@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.3.3: Power 2nd operand must be dimensionless -->
+<model name="unit_checking_arithmetic_power_operand_error"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <units name="volt_squared">
+    <unit units="volt" exponent="2" />
+  </units>
+  <component name="A">
+    <variable name="x" units="volt_squared" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <power />
+          <cn cellml:units="volt">3.4</cn>
+          <cn cellml:units="ampere">2</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

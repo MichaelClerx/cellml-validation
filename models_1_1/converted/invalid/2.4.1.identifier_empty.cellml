@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.1: Identifier cannot be empty -->
+<model name="identifier_empty_name"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="" />
+</model>

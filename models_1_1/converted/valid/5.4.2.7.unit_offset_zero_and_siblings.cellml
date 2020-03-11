@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.7: A unit with offset 0 can have siblings -->
+<model name="unit_offset_zero_and_siblings"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="weber" />
+    <unit units="volt" offset="0" />
+    <unit units="second" offset="0" />
+    <unit units="henry" />
+  </units>
+</model>

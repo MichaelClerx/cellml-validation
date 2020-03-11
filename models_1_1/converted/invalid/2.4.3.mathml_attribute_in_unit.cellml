@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.3: mathml attributes may not appear in a unit -->
+<model name="mathml_attribute_in_unit"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:mathml="http://www.w3.org/1998/Math/MathML">
+  <units name="apple">
+    <unit units="volt" mathml:sum="plus" />
+  </units>
+</model>
