@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.3 Extension elements can go in a component -->
+<model name="component_with_extensions"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:fruit="http://fruit.org">
+  <component name="A" fruit:banana="True">
+    <fruit:orange peel="yes">
+      <fruit:clementine />
+    </fruit:orange>
+    <fruit:pear>Tinned</fruit:pear>
+  </component>
+</model>

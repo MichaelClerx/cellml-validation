@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1 does not define the format of a "real number" -->
+<model name="real_numbers"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" initial_value="0" />
+    <variable name="b" units="dimensionless" initial_value="1" />
+    <variable name="c" units="dimensionless" initial_value="-0" />
+    <variable name="d" units="dimensionless" initial_value="-1" />
+    <variable name="e" units="dimensionless" initial_value="0.0" />
+    <variable name="f" units="dimensionless" initial_value="-0.0" />
+    <variable name="g" units="dimensionless" initial_value="1.0" />
+    <variable name="h" units="dimensionless" initial_value="-1.0" />
+    <variable name="i" units="dimensionless" initial_value="1e2" />
+    <variable name="j" units="dimensionless" initial_value="-1e2" />
+    <variable name="k" units="dimensionless" initial_value="1e12" />
+    <variable name="l" units="dimensionless" initial_value="12e12" />
+    <variable name="m" units="dimensionless" initial_value="-12e-12" />
+    <variable name="n" units="dimensionless" initial_value="1.2e23" />
+    <variable name="o" units="dimensionless" initial_value="1.2e-23" />
+    <variable name="p" units="dimensionless" initial_value="-1.2e23" />
+    <variable name="q" units="dimensionless" initial_value="-1.2e-23" />
+  </component>
+</model>

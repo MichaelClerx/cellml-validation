@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1 does not define the format of a "real number" -->
+<model name="real_numbers_extreme"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" initial_value="999e999" />
+    <variable name="b" units="dimensionless" initial_value="999e-999" />
+  </component>
+</model>

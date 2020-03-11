@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.1: Valid identifier contain letters, numbers, underscores,
+     must have at least one letter or number -->
+<model name="valid_identifiers"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="HelloThere" />
+  <component name="hi" />
+  <component name="HOWAREYOU" />
+  <component name="x" />
+  <component name="V" />
+  <component name="Hello123" />
+  <component name="hello123" />
+  <component name="hello_123" />
+  <component name="_x" />
+  <component name="_2a" />
+  <component name="__init__" />
+</model>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.3 Extension attributes & elements can go in a reaction -->
+<model name="reaction_with_extensions"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:fruit="http://fruit.org">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction fruit:x_a_day="5">
+      <fruit:orange peel="yes">
+        <fruit:clementine />
+      </fruit:orange>
+      <fruit:pear>Tinned</fruit:pear>
+      <variable_ref variable="a">
+        <role role="reactant" />
+      </variable_ref>
+    </reaction>
+  </component>
+</model>
