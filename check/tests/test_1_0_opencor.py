@@ -517,6 +517,11 @@ expected_messages = {
         'MUST define a variable_1 attribute',
     '3.4.6.1.map_variables_variable_2_missing':
         'MUST define a variable_2 attribute',
+    # Duplicate connections are not allowed
+    '3.4.6.1.map_variables_duplicate_1':
+        'Connection of the same two variables more than once.',
+    '3.4.6.1.map_variables_duplicate_2':
+        'Connection of the same two variables more than once.',
     # 3.4.6.1 A map_variables cannot have cellml children or math
     '3.4.6.1.map_variables_with_component':
         'Unexpected element component',
