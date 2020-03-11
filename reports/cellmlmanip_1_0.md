@@ -1,14 +1,14 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (704 out of 911)
-* 264 out of 366 valid files passed
-* 440 out of 545 invalid files detected
+* 76% according to spec (709 out of 921)
+* 267 out of 373 valid files passed
+* 442 out of 548 invalid files detected
 
 Issues:
-* 102 valid files failed validation
+* 106 valid files failed validation
 * 61 invalid files passed validation
-* 44 invalid files failed validation for the wrong reason
+* 45 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -18,13 +18,13 @@ Results per category
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|23|42|11|39|22|47%|
-|[3. Model structure](#3-model-structure)|43|149|7|4|0|94%|
-|[4. Mathematics](#4-mathematics)|31|18|14|0|1|76%|
-|[5. Units](#5-units)|86|80|48|1|7|74%|
+|[3. Model structure](#3-model-structure)|43|151|7|4|0|94%|
+|[4. Mathematics](#4-mathematics)|31|18|18|0|2|71%|
+|[5. Units](#5-units)|87|80|48|1|7|74%|
 |[6. Grouping](#6-grouping)|12|58|5|17|3|73%|
 |[7. Reactions](#7-reactions)|0|68|5|0|11|80%|
 |[8. Metadata framework](#8-metadata-framework)|20|15|10|0|0|77%|
-|[C. Advanced units functionality](#c-advanced-units-functionality)|43|0|2|0|0|95%|
+|[C. Advanced units functionality](#c-advanced-units-functionality)|45|0|2|0|0|95%|
 
 
 ---
@@ -1067,6 +1067,14 @@ Results per category
 
 ##### 3.4.6.1
 
+[3.4.6.1.map_variables_duplicate_1](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_1.cellml): Error detected correctly.
+* Expected: ```Target already assigned```
+* Output: ```Target already assigned to A$a before assignment to A$a```
+
+[3.4.6.1.map_variables_duplicate_2](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_2.cellml): Error detected correctly.
+* Expected: ```Target already assigned```
+* Output: ```Target already assigned to B$b before assignment to B$b```
+
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```Element map_variables failed to validate attributes```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml:14:0:ERROR:RELAXNGV:RELAXNG_ERR_ATTRVALID: Element map_variables failed to validate attributes. /home/michael/dev/cellml/validation/models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml:12:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml:12:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element connection failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element connection in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml:12:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
@@ -1515,6 +1523,9 @@ Results per category
 
 #### 4.4.4
 
+🔶 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Invalid file failed for unexpected reason.**
+* Output: ```Equation LHS should be a derivative or variable, not _a$x + _a$y```
+
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
 * Expected: ```A$x not found```
 * Output: ```A$x not found in symbol dict```
@@ -1554,6 +1565,18 @@ Results per category
 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): Error detected correctly.
 * Expected: ```defined twice```
 * Output: ```The variable A$x is defined twice (Eq(_A$x, _1.0) and Eq(_A$x, _1.0))```
+
+🔴 [4.overdefined_direct_and_direct](../models_1_0/overdefined/4.overdefined_direct_and_direct.cellml): **Valid file failed validation.**
+* Output: ```The variable A$x is defined twice (Eq(_A$x, _-1.0) and Eq(_A$x, _1.0))```
+
+🔴 [4.overdefined_direct_and_initial](../models_1_0/overdefined/4.overdefined_direct_and_initial.cellml): **Valid file failed validation.**
+* Output: ```The variable A$x is defined twice (Eq(_A$x, _3.0) and Eq(_A$x, _2000.0))```
+
+🔴 [4.overdefined_direct_and_ode](../models_1_0/overdefined/4.overdefined_direct_and_ode.cellml): **Valid file failed validation.**
+* Output: ```The variable A$x is defined twice (Eq(Derivative(_A$x, _A$t), _0.001) and Eq(_A$x, _1.0))```
+
+🔴 [4.overdefined_ode_and_ode](../models_1_0/overdefined/4.overdefined_ode_and_ode.cellml): **Valid file failed validation.**
+* Output: ```The variable A$x is defined twice (Eq(Derivative(_A$x, _A$t), _2.0) and Eq(Derivative(_A$x, _A$t), _0.001))```
 
 
 ---
@@ -1673,7 +1696,9 @@ Results per category
 
 [5.2.7.unit_checking_name_differs](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_name_differs.cellml): Valid file passed validation.
 
-[5.2.7.unit_checking_piecewise](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise.cellml): Valid file passed validation.
+[5.2.7.unit_checking_piecewise_1](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_1.cellml): Valid file passed validation.
+
+[5.2.7.unit_checking_piecewise_2](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_2.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_piecewise_multi_unit](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_piecewise_multi_unit.cellml): Valid file passed validation.
 
@@ -1697,7 +1722,7 @@ Results per category
 [5.2.7.unit_conversion_multiplier](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_multiplier.cellml): Valid file passed validation.
 
 🔴 [5.2.7.unit_conversion_new_base_units](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_new_base_units.cellml): **Valid file failed validation.**
-* Output: ```Cannot convert from 'store363_wooster' ([store363_wooster]) to 'dimensionless' (dimensionless)```
+* Output: ```Cannot convert from 'store370_wooster' ([store370_wooster]) to 'dimensionless' (dimensionless)```
 
 [5.2.7.unit_conversion_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_offset.cellml): Valid file passed validation.
 
@@ -3245,6 +3270,10 @@ Results per category
 [C.3.3.unit_checking_function_log_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_1.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_function_log_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_2.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_fraction](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_fraction.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_half](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_half.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): Valid file passed validation.
 

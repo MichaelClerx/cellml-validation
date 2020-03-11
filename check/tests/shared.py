@@ -43,11 +43,14 @@ def list_passes_1_0(debug=False):
     # Valid models
     files = list_models_1_0('valid')
 
-    # Numbers are all valid MathML2, so should pass schema validation
-    files += list_models_1_0('numbers')
-
     # There are no strict rules about bools (in the spec), so these should pass
     files += list_models_1_0('booleans')
+
+    # Models are allowed to be overdefined
+    files += list_models_1_0('overdefined')
+
+    # Numbers are all valid MathML2, so should pass schema validation
+    files += list_models_1_0('numbers')
 
     # Units do not affect validity, so these should all pass
     files += list_models_1_0('unit_checking_consistent')
@@ -68,6 +71,9 @@ def list_fails_1_0(debug=False):
     If ``debug=False`` is set, only a single model is returned.
     """
     files = list_models_1_0('invalid')
+
+    # Duplicate connections should probably be disallowed
+    files += list_models_1_0('duplicate_connections')
 
     # Deca- is an official prefix, but CellML prefers deka-
     files += list_models_1_0('unit_deca')

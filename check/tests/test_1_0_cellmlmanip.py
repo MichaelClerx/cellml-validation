@@ -43,6 +43,11 @@ false_negatives = {
     # Algebraic models are not supported
     '4.algebraic_model': 'LHS should be a derivative or variable',
     '4.algebraic_ode_model': 'LHS should be a derivative or variable',
+    # Overdefined models are not supported
+    '4.overdefined_direct_and_direct': 'defined twice',
+    '4.overdefined_direct_and_initial': 'defined twice',
+    '4.overdefined_direct_and_ode': 'defined twice',
+    '4.overdefined_ode_and_ode': 'defined twice',
     # Extended number types
     '4.2.3_2.1.mathml_numbers_real': 'Unimplemented type attribute for <cn>',
     '4.2.3_2.2.mathml_numbers_integer': 'Unimplemented type attribute for <c',
@@ -511,6 +516,11 @@ expected_messages = {
         'Element map_variables failed to validate attributes',
     '3.4.6.1.map_variables_variable_2_missing':
         'Element map_variables failed to validate attributes',
+    # Duplicate connections are not allowed
+    '3.4.6.1.map_variables_duplicate_1':
+        'Target already assigned',
+    '3.4.6.1.map_variables_duplicate_2':
+        'Target already assigned',
     # 3.4.6.1 A map_variables cannot have cellml children or math
     '3.4.6.1.map_variables_with_component':
         'Element map_variables has extra content: component',
@@ -1203,6 +1213,8 @@ known_issues = {
     '3.4.6.4.map_variables_hidden_cousins_3',
     # Component units
     '4.4.3.2.cn_units_parent_component',
+    # DAEs are not supported
+    '4.4.4.dae_public_in',
     # 5.4.1.2 Units names must be unique (within model or local component)
     #TODO This should be fixed
     '5.4.1.2.units_name_duplicate_1',

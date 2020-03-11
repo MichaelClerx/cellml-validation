@@ -1,14 +1,14 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 83% according to spec (758 out of 911)
-* 329 out of 366 valid files passed
-* 429 out of 545 invalid files detected
+* 82% according to spec (763 out of 921)
+* 332 out of 373 valid files passed
+* 431 out of 548 invalid files detected
 
 Issues:
-* 37 valid files failed validation
+* 41 valid files failed validation
 * 11 invalid files passed validation
-* 105 invalid files failed validation for the wrong reason
+* 106 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -18,13 +18,13 @@ Results per category
 |-|-|-|-|-|-|-|
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|27|85|7|0|18|81%|
-|[3. Model structure](#3-model-structure)|46|153|4|0|0|98%|
-|[4. Mathematics](#4-mathematics)|41|18|4|0|1|92%|
-|[5. Units](#5-units)|124|82|10|2|4|92%|
+|[3. Model structure](#3-model-structure)|46|155|4|0|0|98%|
+|[4. Mathematics](#4-mathematics)|41|18|8|0|2|85%|
+|[5. Units](#5-units)|125|82|10|2|4|92%|
 |[6. Grouping](#6-grouping)|17|69|0|9|0|90%|
 |[7. Reactions](#7-reactions)|0|0|5|0|79|0%|
 |[8. Metadata framework](#8-metadata-framework)|24|12|6|0|3|80%|
-|[C. Advanced units functionality](#c-advanced-units-functionality)|44|0|1|0|0|97%|
+|[C. Advanced units functionality](#c-advanced-units-functionality)|46|0|1|0|0|97%|
 
 
 ---
@@ -1166,6 +1166,14 @@ Results per category
 
 ##### 3.4.6.1
 
+[3.4.6.1.map_variables_duplicate_1](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_1.cellml): Error detected correctly.
+* Expected: ```already connected```
+* Output: ```Error on line 16. Invalid connection: Variable[@name="b"] in Component[@name="B"] is already connected to Variable[@name="a"] in Component[@name="A"].```
+
+[3.4.6.1.map_variables_duplicate_2](../models_1_0/duplicate_connections/3.4.6.1.map_variables_duplicate_2.cellml): Error detected correctly.
+* Expected: ```already connected```
+* Output: ```Error on line 16. Invalid connection: Variable[@name="a"] in Component[@name="A"] is already connected to Variable[@name="b"] in Component[@name="B"].```
+
 [3.4.6.1.map_variables_variable_1_missing](../models_1_0/invalid/3.4.6.1.map_variables_variable_1_missing.cellml): Error detected correctly.
 * Expected: ```must define a variable_1 attribute```
 * Output: ```Error on line 14. A map_variables element must define a variable_1 attribute (3.4.6.1).```
@@ -1607,6 +1615,10 @@ Results per category
 
 #### 4.4.4
 
+🔶 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Error on line 31. Invalid expression found on the left-hand side of an equation: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
+
 [4.4.4.modify_nonexistent](../models_1_0/invalid/4.4.4.modify_nonexistent.cellml): Error detected correctly.
 * Expected: ```references in equation must name a variable from the local component```
 * Output: ```Error on line 11. Unable to create Name: Error on line 11. Variable references in equation must name a variable from the local component (4.4.2.1).```
@@ -1646,6 +1658,18 @@ Results per category
 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): Error detected correctly.
 * Expected: ```appear on a left-hand side once```
 * Output: ```Error on line 15. Two defining equations found for Variable[@name="x"] in Component[@name="A"]: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
+
+🔴 [4.overdefined_direct_and_direct](../models_1_0/overdefined/4.overdefined_direct_and_direct.cellml): **Valid file failed validation.**
+* Output: ```Error on line 15. Two defining equations found for Variable[@name="x"] in Component[@name="A"]: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
+
+🔴 [4.overdefined_direct_and_initial](../models_1_0/overdefined/4.overdefined_direct_and_initial.cellml): **Valid file failed validation.**
+* Output: ```Error on line 10. Initial value and a defining equation found for non-state Variable[@name="x"] in Component[@name="A"]: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
+
+🔴 [4.overdefined_direct_and_ode](../models_1_0/overdefined/4.overdefined_direct_and_ode.cellml): **Valid file failed validation.**
+* Output: ```Error on line 20. Two defining equations found for Variable[@name="x"] in Component[@name="A"]: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
+
+🔴 [4.overdefined_ode_and_ode](../models_1_0/overdefined/4.overdefined_ode_and_ode.cellml): **Valid file failed validation.**
+* Output: ```Error on line 26. Two defining equations found for Variable[@name="x"] in Component[@name="A"]: Each equation must have either a single variable or a derivative of a single variable as its left-hand side, and each variable may only appear on a left-hand side once.```
 
 
 ---
@@ -1763,7 +1787,9 @@ Results per category
 
 [5.2.7.unit_checking_name_differs](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_name_differs.cellml): Valid file passed validation.
 
-[5.2.7.unit_checking_piecewise](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise.cellml): Valid file passed validation.
+[5.2.7.unit_checking_piecewise_1](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_1.cellml): Valid file passed validation.
+
+[5.2.7.unit_checking_piecewise_2](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_piecewise_2.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_piecewise_multi_unit](../models_1_0/unit_checking_inconsistent/5.2.7.unit_checking_piecewise_multi_unit.cellml): Valid file passed validation.
 
@@ -3331,6 +3357,10 @@ Results per category
 [C.3.3.unit_checking_function_log_operand_error_1](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_1.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_function_log_operand_error_2](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_function_log_operand_error_2.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_fraction](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_fraction.cellml): Valid file passed validation.
+
+[C.3.3.unit_checking_power_half](../models_1_0/unit_checking_consistent/C.3.3.unit_checking_power_half.cellml): Valid file passed validation.
 
 [C.3.3.unit_checking_trig_arccos_operand_error](../models_1_0/unit_checking_inconsistent/C.3.3.unit_checking_trig_arccos_operand_error.cellml): Valid file passed validation.
 

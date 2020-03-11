@@ -790,6 +790,9 @@ known_issues = {
     # 3.4.5.4 Each map_components in a model must be unique
     '3.4.5.4.map_components_duplicate_mirrored',
     '3.4.5.4.map_components_duplicate',
+    # Variables can only be connected once
+    '3.4.6.1.map_variables_duplicate_1',
+    '3.4.6.1.map_variables_duplicate_2',
     # 3.4.6.2 variable_1 must refer to an existing variable in component_1
     '3.4.6.2.map_variables_variable_1_nonexistent',
     # 3.4.6.3 variable_2 must refer to an existing variable in component_2
@@ -853,6 +856,7 @@ known_issues = {
     '4.4.4.modify_nonexistent',
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 5.2.2 CellML uses "deka" not "deca"
     '5.2.2.unit_deca',
     # 5.4.1.1 A units with base_units="yes" can't have children

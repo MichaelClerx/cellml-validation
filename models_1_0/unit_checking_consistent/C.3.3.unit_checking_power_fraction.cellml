@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 5.2.7: Unit checking: 1m ^ 0.235 -->
+<model name="unit_checking_power_fraction"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="x" units="meter" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <power />
+          <cn cellml:units="meter">3</cn>
+          <cn cellml:units="dimensionless">0.235</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

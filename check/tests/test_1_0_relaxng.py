@@ -872,11 +872,6 @@ known_issues = {
     '2.4.3.rdf_attribute_in_units_2',
     '2.4.3.rdf_attribute_in_variable',
     '2.4.3.rdf_attribute_in_variable_ref',
-
-
-
-
-
     # 2.5.1 Identifiers are case sensitive
     '2.5.1.identifiers_are_case_sensitive',
     # 3.4.2.2 Component names must be unique
@@ -896,6 +891,9 @@ known_issues = {
     # 3.4.5.4 Each map_components in a model must be unique
     '3.4.5.4.map_components_duplicate',
     '3.4.5.4.map_components_duplicate_mirrored',
+    # Variables can only be connected once
+    '3.4.6.1.map_variables_duplicate_1',
+    '3.4.6.1.map_variables_duplicate_2',
     # 3.4.6.2 variable_1 must refer to an existing variable in component_1
     '3.4.6.2.map_variables_variable_1_nonexistent',
     # 3.4.6.3 variable_2 must refer to an existing variable in component_2
@@ -959,6 +957,7 @@ known_issues = {
     '4.4.4.modify_nonexistent',
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 5.4.1.2 Units names must be unique (within model or local component)
     '5.4.1.2.units_name_duplicate_1',
     '5.4.1.2.units_name_duplicate_2',

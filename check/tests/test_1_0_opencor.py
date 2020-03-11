@@ -517,6 +517,11 @@ expected_messages = {
         'MUST define a variable_1 attribute',
     '3.4.6.1.map_variables_variable_2_missing':
         'MUST define a variable_2 attribute',
+    # Duplicate connections are not allowed
+    '3.4.6.1.map_variables_duplicate_1':
+        'Connection of the same two variables more than once.',
+    '3.4.6.1.map_variables_duplicate_2':
+        'Connection of the same two variables more than once.',
     # 3.4.6.1 A map_variables cannot have cellml children or math
     '3.4.6.1.map_variables_with_component':
         'Unexpected element component',
@@ -1173,6 +1178,7 @@ known_issues = {
     # 4.4.4 A mathml:math can only modify 'owned' variables
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 4 Math can't be overdefined
     '4.math_and_initial_value',
     '4.math_overdefined',

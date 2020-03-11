@@ -45,7 +45,7 @@ false_negatives = {
     # Bases other than 10
     '4.2.3_2.3.mathml_numbers_real_base':
         'bases other than 10',
-        # Factorial is not supported
+    # Factorial is not supported
     '4.2.3_4.3_mathml_functions_factorial':
         'Unsupported element in apply',
     # Only likes assignment form
@@ -53,12 +53,22 @@ false_negatives = {
         'Invalid expression found on the left-hand side of an equation',
     '4.algebraic_ode_model':
         'Invalid expression found on the left-hand side of an equation',
+    # Overdefined models
+    '4.overdefined_direct_and_direct':
+        'Two defining equations',
+    '4.overdefined_direct_and_initial':
+        'Initial value and a defining equation',
+    '4.overdefined_direct_and_ode':
+        'Two defining equations',
+    '4.overdefined_ode_and_ode':
+        'Two defining equations',
     # Celsius is not supported
     '5.2.1.units_celsius':
         'unsupported units "celsius"',
     # New base units are not supported
     '5.2.7.unit_conversion_new_base_units':
         'Defining new base units is not supported.',
+    # Factorial is not supported
     '5.2.7.unit_checking_functions_factorial':
         'Unsupported element in apply',
     # Non-zero offsets are not supported
@@ -551,6 +561,11 @@ expected_messages = {
         'must define a variable_1 attribute',
     '3.4.6.1.map_variables_variable_2_missing':
         'must define a variable_2 attribute',
+    # Duplicate connections are not allowed
+    '3.4.6.1.map_variables_duplicate_1':
+        'already connected',
+    '3.4.6.1.map_variables_duplicate_2':
+        'already connected',
     # 3.4.6.1 A map_variables cannot have cellml children or math
     '3.4.6.1.map_variables_with_component':
         'found element of type cellml:component',
@@ -1105,6 +1120,8 @@ known_issues = {
     '2.4.4.text_in_variable_ref',
     # Reactions
     '4.4.1.math_not_math_reaction',
+    # DAEs
+    '4.4.4.dae_public_in',
     # Myokit accepts both deca and deka
     '5.2.2.unit_deca',
     # New base units are not supported

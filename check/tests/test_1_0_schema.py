@@ -809,6 +809,9 @@ known_issues = {
     '3.4.5.4.map_components_duplicate_mirrored',
     # 3.4.6.1 A map_variables cannot have cellml children or math
     '3.4.6.1.map_variables_with_math',
+    # Variables detected twice are not detected
+    '3.4.6.1.map_variables_duplicate_1',
+    '3.4.6.1.map_variables_duplicate_2',
     # 3.4.6.2 variable_1 must refer to an existing variable in component_1
     '3.4.6.2.map_variables_variable_1_nonexistent',
     # 3.4.6.3 variable_2 must refer to an existing variable in component_2
@@ -874,6 +877,7 @@ known_issues = {
     '4.4.4.modify_nonexistent',
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children',
     # 5.4.1.1 A units with base_units="no" probably should have children
