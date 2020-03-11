@@ -2,19 +2,23 @@
 
 Please report any issues with these tests on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
 
+The table below shows the different folders in the test set, and indicates whether these files are regarded as valid or invalid.
+Ambiguity in the spec regarding the validity of a folder is marked with an asterisk (*).
+
 |= Folder                         |= Validity |
 |---------------------------------|-----------|
 | `valid`                         | Valid     |
 | `invalid`                       | Invalid   |
 |---------------------------------|-----------|
 | `booleans`                      | Valid     |
-| `numbers`                       | Ambiguous |
+| `duplicate_connections`         | Invalid*  |
+| `numbers`                       | Valid*    |
 | `unit_checking_consistent`      | Valid     |
 | `unit_checking_inconsistent`    | Valid     |
 | `unit_conversion_convertible`   | Valid     |
 | `unit_conversion_inconvertible` | Valid     |
 | `unit_deca`                     | Invalid   |
-| `units_empty`                   | Invalid   |
+| `units_empty`                   | Invalid*  |
 
 ## Valid CellML 1.0 files
 
@@ -27,12 +31,18 @@ Where possible, these files contain only a single error per file.
 
 ## Booleans
 
-The CellML spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the other properties of a unit).
+The CellML 1.0 spec makes only confusing statements about booleans (occasionally mentioning the unit `cellml:boolean`, which cannot be assigned to any number or variable and has none of the other properties of a unit).
 In this test set, cases involving booleans are treated separately from unit checking conversion, as it seems likely many tools will treat booleans as a type, and e.g. implement type checking (`7 + false` is wrong) but not unit checking (`1 newton + 1 meter` is fine).
 The set `booleans` contains examples of misuse of booleans.
 Because the spec does not state otherwise, we assume that all these files are valid CellML.
 
-## Advanced number types
+## Duplicate connections*
+
+There is no rule in the CellML 1.0 specification that stops you from connecting the same two variables twice.
+The spec does contain rules such as "a component X can only list its children in one place", suggesting that the spec was intended to be quite strict.
+In CellML 2.0 it is explicitly not allowed to connect two variables twice, so in this test set we have assumed doing so is invalid.
+
+## Advanced number types*
 
 MathML 2 defines several number types, none of which are mentioned in the CellML 1.0 spec.
 However, all examples in the spec conform to the `real` type, which is also the MathML 2 default, so in the `valid` test files we have used only `real` type numbers.
@@ -63,7 +73,7 @@ None of the files in `valid` should require unit conversion.
 Although `deca` is the SI unit spelling, and `deka` is the youessian spelling (which is actually closer to the original greek), CellML 1.0 only allows `deka`.
 However, as it allows the SI spelling for all predefined units it seems to make sense to allow `deca` too.
 
-## Empty units elements
+## Empty units elements*
 
 The CellML spec says:
 
