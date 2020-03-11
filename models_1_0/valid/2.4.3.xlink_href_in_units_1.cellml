@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 2.4.3: In CellML 1.0 xlink is an extension namespace. -->
+<model name="xlink_href_in_units_1"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+  <units name="orange" cmeta:id="orange">
+    <unit units="dimensionless" xlink:href="http://example.com" />
+  </units>
+</model>
