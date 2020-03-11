@@ -2,13 +2,10 @@
 
 Please report any issues with these tests on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
 
-|= Folder                         |= Validity |
+| Folder                          | Validity  |
 |---------------------------------|-----------|
 | `valid`                         | Valid     |
 | `invalid`                       | Invalid   |
-
-|= Folder                         |= Validity |
-|---------------------------------|-----------|
 | `booleans`                      | Valid     |
 | `numbers`                       | Ambiguous |
 | `unit_checking_consistent`      | Valid     |
