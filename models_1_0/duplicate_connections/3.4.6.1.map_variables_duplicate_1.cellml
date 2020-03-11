@@ -2,10 +2,10 @@
 <!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- CellML 1.0, 3.4.6.1: A map_variables must define a unique connection.
      This is **not** specified in the CellML 1.0 spec. -->
-<model name="map_variables_duplicate"
+<model name="map_variables_duplicate_1"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <component name="A">
-    <variable name="a" units="volt" public_interface="out" />
+    <variable name="a" units="volt" public_interface="out" initial_value="1" />
   </component>
   <component name="B">
     <variable name="b" units="volt" public_interface="in" />
