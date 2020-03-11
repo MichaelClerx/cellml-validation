@@ -1213,6 +1213,8 @@ known_issues = {
     '3.4.6.4.map_variables_hidden_cousins_3',
     # Component units
     '4.4.3.2.cn_units_parent_component',
+    # DAEs are not supported
+    '4.4.4.dae_public_in',
     # 5.4.1.2 Units names must be unique (within model or local component)
     #TODO This should be fixed
     '5.4.1.2.units_name_duplicate_1',

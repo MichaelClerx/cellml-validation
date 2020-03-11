@@ -856,6 +856,7 @@ known_issues = {
     '4.4.4.modify_nonexistent',
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 5.2.2 CellML uses "deka" not "deca"
     '5.2.2.unit_deca',
     # 5.4.1.1 A units with base_units="yes" can't have children

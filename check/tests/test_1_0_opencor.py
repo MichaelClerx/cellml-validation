@@ -1178,6 +1178,7 @@ known_issues = {
     # 4.4.4 A mathml:math can only modify 'owned' variables
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 4 Math can't be overdefined
     '4.math_and_initial_value',
     '4.math_overdefined',

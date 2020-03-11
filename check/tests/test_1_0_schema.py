@@ -877,6 +877,7 @@ known_issues = {
     '4.4.4.modify_nonexistent',
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 5.4.1.1 A units with base_units="yes" can't have children
     '5.4.1.1.units_base_units_with_children',
     # 5.4.1.1 A units with base_units="no" probably should have children

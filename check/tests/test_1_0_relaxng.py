@@ -957,6 +957,7 @@ known_issues = {
     '4.4.4.modify_nonexistent',
     '4.4.4.modify_private_in',
     '4.4.4.modify_public_in',
+    '4.4.4.dae_public_in',
     # 5.4.1.2 Units names must be unique (within model or local component)
     '5.4.1.2.units_name_duplicate_1',
     '5.4.1.2.units_name_duplicate_2',

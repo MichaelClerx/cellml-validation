@@ -1120,6 +1120,8 @@ known_issues = {
     '2.4.4.text_in_variable_ref',
     # Reactions
     '4.4.1.math_not_math_reaction',
+    # DAEs
+    '4.4.4.dae_public_in',
     # Myokit accepts both deca and deka
     '5.2.2.unit_deca',
     # New base units are not supported
