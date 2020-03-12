@@ -41,7 +41,7 @@ All CellML 1.1 elements can also contain:
 1. Containment means nothing
 2. Encapsulation means parent/child relationships, which affect how connections are made.
 
-![Encapsulation example](encapsulation.svg)
+![Encapsulation example](../cellml_1_0/encapsulation.svg)
 
 In CellML 1.1, components can't refer to each other's variables.
 Instead, if a component X wants to use a value from Y, it defines a _new variable_ in X and gives it an interface of "in". It then makes a _connection_ to the variable in Y, which must have an interface of "out".
