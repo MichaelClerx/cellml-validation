@@ -2,4 +2,4 @@
 <!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
 <!-- The root element must be in the CellML namespace -->
 <model name="root_namespace_1"
-       xmlns="http://www.cellml.org/cellml/1.0#"/>
+       xmlns="http://www.cellml.org/cellml/2.0#"/>

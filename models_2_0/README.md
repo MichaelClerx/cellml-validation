@@ -11,13 +11,3 @@ The files in the `valid` subset should pass in all CellML 2.0 validators.
 The files in the `invalid` subset should fail in all CellML 2.0 validators.
 Where possible, these files contain only a single error per file.
 
-## Advanced number types
-
-## Unit checking
-
-## Unit conversion
-
-## Empty units elements
-
-## Booleans
-
