@@ -31,7 +31,7 @@ The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, 
 All CellML 1.0 elements can also contain:
  - any element from the `rdf` namespace
  - a `cmeta:id` attribute.
- - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
+ - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `mathml`, and `rdf`.
 
 ## Grouping & public/private interfaces
 
@@ -81,7 +81,7 @@ It's unclear from the spec whether a `<units>` element that's not a base unit ca
 
 CellML 2.0 explicitly allows it, but as a way to define base units (removing the need for the `base_units` attribute).
 
-In these tests we've assumed that empty units elements are not allowed in CellML 1.0.
+In these tests we've assumed that empty units elements with `base_units="no"` are not allowed in CellML 1.0.
 
 ### Unit checking and conversion
 
@@ -100,6 +100,12 @@ While the spec suggests these can be used to check the equations dimensionality,
 No rules exist saying that having invalid units in equations renders a model invalid.
 
 Finally, there is no concept of unit conversion _within_ equations (e.g. to make equations like `x = 1V + 1mV` work), and in fact doing so would violate the rule quoted above.
+
+#### Meter and metre
+
+Technically, table 2 defines both meter and metre as base units, implying you can't convert between metres and meters.
+This is pointed out in the [errata to 1.1](https://www.cellml.org/specifications/cellml_1.1/errata).
+In these tests we assume they are simply aliases.
 
 ## MathML and the CellML subset
 

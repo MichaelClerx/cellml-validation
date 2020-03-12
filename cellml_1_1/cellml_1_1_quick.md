@@ -2,17 +2,13 @@
 
 ## These things exist in CellML 1.1:
 
-
-# TODO
-
-
-
 Elements are shown with their attributes in brackets.
 Required elements/attributes are indicated in italics.
 
 - model(*name*)
-  - import(**********)
-
+  - import(*xlink:href*)
+    - component(*name*, *component_ref*)
+    - units(*name*, *units_ref*)
   - units(*name*,base_units)
     - unit(*units*,prefix,exponent,multiplier,offset)
   - component(*name*)
@@ -32,13 +28,13 @@ Required elements/attributes are indicated in italics.
     - *map_components*(*component_1*,*component_2*)
     - *map_variables*(*variable_1*,*variable_2*)
 
-Note that (contrary to what the spec says), most attributes listed above are _not_ in the CellML 1.0 namespace.
-The only attribute in the CellML 1.0 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.
+Note that (contrary to what the spec says), most attributes listed above are _not_ in the CellML 1.1 namespace.
+The only attribute in the CellML 1.1 namespace is the `cellml:units` attribute, which appears _only_ inside `mathml:cn` elements.
 
-All CellML 1.0 elements can also contain:
+All CellML 1.1 elements can also contain:
  - any element from the `rdf` namespace
  - a `cmeta:id` attribute.
- - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `rdf` and `mathml`.
+ - _Any elements and attributes from any namespace_ other than `cellml`, `cmeta`, `mathml`, `rdf`, and `xlink`.
 
 ## Grouping & public/private interfaces
 
@@ -47,27 +43,27 @@ All CellML 1.0 elements can also contain:
 
 ![Encapsulation example](encapsulation.svg)
 
-In CellML 1.0, components can't refer to each other's variables.
+In CellML 1.1, components can't refer to each other's variables.
 Instead, if a component X wants to use a value from Y, it defines a _new variable_ in X and gives it an interface of "in". It then makes a _connection_ to the variable in Y, which must have an interface of "out".
 
 - Connections can only be made between siblings, or between parent and child.
 - Sibling connections are governed by the _public_ interfaces.
 - Parent-child relationships are defined by the _parent's private_ interface, and the _child's public interface_.
 
-Note that CellML 1.0 refers to children as "components in the encapsulated set".
+Note that CellML 1.1 refers to children as "components in the encapsulated set".
 The following things follow from the rules above:
 
 - There are no relationsips that are private on both ends.
 - A parent can obtain a variable from a child (via the parent's private interface "in") and then share it with a sibling (via the parent's public interface "out").
 - A parent can obtain a variable from a sibling (via the parent's public interface "in") and then share it with its children (via the parent's private interface "out").
 
-Because a variable can only get its value from one source, CellML 1.0 has additional rules saying:
+Because a variable can only get its value from one source, CellML 1.1 has additional rules saying:
 
 - A variable with an "in" interface can't be changed by its component's maths (or reactions).
 - A variable with an "in" interface can only be mapped to a single other variable with an "out" interface.
 - A variable cannot have public _and_ private interface "in".
 
-The third rule doesn't seem strictly necessary (as the second rule already prevents any abuse), but is present in CellML 1.0 anyway.
+The third rule doesn't seem strictly necessary (as the second rule already prevents any abuse), but is present in CellML 1.1 anyway.
 
 Finally, users can add their own relationship types by using a `relationship` attribute on the `relationship_ref` element from any namespace other than cellml, mathml, cmeta, or rdf. In this case its value is unrestricted and there are no rules for the relationship's interpretation.
 
@@ -79,7 +75,7 @@ It then suggests the "Extended Backus-Naur Form (EBNF) notation" of `('_')* ( le
 
 ## Real numbers
 
-CellML 1.0 does not define a notation for real numbers, but presumably this should be something compatible with the MathML `real` number type.
+CellML 1.1 does not define a notation for real numbers, but presumably this should be something compatible with the MathML `real` number type.
 
 ## Units and unit conversion
 
@@ -89,16 +85,16 @@ It's unclear from the spec whether a `<units>` element that's not a base unit ca
 
 CellML 2.0 explicitly allows it, but as a way to define base units (removing the need for the `base_units` attribute).
 
-In these tests we've assumed that empty units elements are not allowed in CellML 1.0.
+In these tests we've assumed that empty units elements with `base_units="no"` are not allowed in CellML 1.1.
 
 ### Unit checking and conversion
 
-Units come into play in two places in CellML 1.0: (1) when connecting variables; and (2) when writing equations.
+Units come into play in two places in CellML 1.1: (1) when connecting variables; and (2) when writing equations.
 
 #### Units of connected variables
 
 Variables that are connected by `map_variables` elements need not necessarily have the same units.
-If the units differ only by a scaling factor and/or offset, they may be convertible, and section 3.5.1 of the CellML 1.0 spec suggests that CellML processing software should do so.
+If the units differ only by a scaling factor and/or offset, they may be convertible, and section 3.5.1 of the CellML 1.1 spec suggests that CellML processing software should do so.
 The spec does **not** seem to say that having incompatible units on either side of a connection renders a model invalid.
 
 #### Units inside equations
@@ -109,10 +105,16 @@ No rules exist saying that having invalid units in equations renders a model inv
 
 Finally, there is no concept of unit conversion _within_ equations (e.g. to make equations like `x = 1V + 1mV` work), and in fact doing so would violate the rule quoted above.
 
+#### Meter and metre
+
+Technically, table 2 defines both meter and metre as base units, implying you can't convert between metres and meters.
+This is pointed out in the [errata to 1.1](https://www.cellml.org/specifications/cellml_1.1/errata).
+In these tests we assume they are simply aliases.
+
 ## MathML and the CellML subset
 
-CellML 1.0 documents can use all of content MathML's capabilities.
-However, CellML 1.0 software only needs to be able to handle "the CellML subset".
+CellML 1.1 documents can use all of content MathML's capabilities.
+However, CellML 1.1 software only needs to be able to handle "the CellML subset".
 Documents using only this set are called "valid CellML subset documents".
 
 ### MathML basics
@@ -202,7 +204,7 @@ I have personally never seen these in a model.
 
 |= prefix  |= namespace                                  |
 |----------|---------------------------------------------|
-| `cellml` | http://www.cellml.org/cellml/1.0            |
+| `cellml` | http://www.cellml.org/cellml/1.1            |
 | `cmeta`  | http://www.cellml.org/metadata/1.0#         |
 | `mathml` | http://www.w3.org/1998/Math/MathML          |
 | `rdf`    | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
