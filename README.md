@@ -20,8 +20,10 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 * [A very brief overview of CellML 1.1](cellml_1_1/cellml_1_1_quick.md)
 * [A Markdown version of the CellML 1.1 spec](cellml_1_1/cellml_1_1_spec.md)
 * [An XSLT document to transform 1.0 models to 1.1](cellml_1_1/cellml_1_0_to_1_1.xsl)
-* Older files:
-  * [CellML 1.1 Schema](cellml_1_1/todo/cellml_1_1.xsd) by Andrew Miller, Auckland Bioengineering Institute
+
+Older files:
+
+* [CellML 1.1 Schema](cellml_1_1/todo/cellml_1_1.xsd) by Andrew Miller, Auckland Bioengineering Institute
 
 ## CellML 1.0
 
@@ -32,9 +34,11 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 * [CellML 1.0 DTD](cellml_1_0/cellml_1_0.dtd) - based on the version by Warren Hedley
 * [CellML 1.0 RELAX NG schema (XML syntax)](cellml_1_0/cellml_1_0.rng) translated from the compact syntax version by Jonathan Cooper
 * [CellML 1.0 RELAX NG schema (compact syntax)](cellml_1_0/cellml_1_0.rnc) written by Jonathan Cooper
-* Older files:
-  * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
-  * [CellML 1.0 DTD](cellml_1_0/deprecated/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
+
+Older files:
+
+* [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
+* [CellML 1.0 DTD](cellml_1_0/deprecated/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
 
 ## Tests
 
