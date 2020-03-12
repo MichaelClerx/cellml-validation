@@ -1,9 +1,5 @@
 # Changes between CellML 1.1 and 1.0
 
-
-TODO: Use 9. for import related rules, so that they can be categorised
-
-
 The namespace is updated to
 
     2.2.2 xmlns:cellml="http://www.cellml.org/cellml/1.1#"
@@ -78,27 +74,9 @@ Imports were introduced
 
     9.4.1.3 An `xlink:href` attribute must be a valid URI.
     
- 
- 
- 
-#   TODO FINISH THIS
+    9.5.1 Imported units may depend on other units in the source model (but these do get imported too).
     
+    9.5.2.2 If imported components are connected, their connections are imported too.
+    9.5.2.3 If imported components have encapsulated components, these are imported too, along with their connections (note that each component is a tree, cousins can't interact!).
+    9.5.2.4 Component units may depend on other units in the source model (but these do not get imported too).
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-.
