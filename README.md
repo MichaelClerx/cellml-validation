@@ -10,7 +10,7 @@ Please note that this repo is still under development, meaning the validation to
 
 The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 
-## CellML 2.0 (Draft)
+## CellML 2.0 (Draft specification)
 
 * [A very brief overview of CellML 2.0](cellml_2_0/cellml_2_0_quick.md) (DRAFT)
 * [An XSLT document to transform 1.0/1.1 models to 2.0](cellml_2_0/cellml_1_to_2.xsl) by [various authors](https://github.com/cellml/cellml1to2)
@@ -18,8 +18,9 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 ## CellML 1.1
 
 * [A very brief overview of CellML 1.1](cellml_1_1/cellml_1_1_quick.md)
-* [A Markdown version of the CellML 1.1 spec](cellml_1_1/cellml_1_1_spec.md)
 * [An XSLT document to transform 1.0 models to 1.1](cellml_1_1/cellml_1_0_to_1_1.xsl)
+* [A Markdown version of the CellML 1.1 spec](cellml_1_1/cellml_1_1_spec.md)
+* [A document showing the changes from 1.0](cellml_1_1/cellml_1_1_changes.md)
 
 Older files:
 
@@ -28,12 +29,12 @@ Older files:
 ## CellML 1.0
 
 * [A very brief overview of CellML 1.0](cellml_1_0/cellml_1_0_quick.md)
-* [A Markdown version of the CellML 1.0 spec](cellml_1_0/cellml_1_0_spec.md)
 * [The CellML 1.0 test set](models_1_0)
 * [CellML 1.0 XML Schema](cellml_1_0/cellml_1_0.xsd)
 * [CellML 1.0 DTD](cellml_1_0/cellml_1_0.dtd) - based on the version by Warren Hedley
 * [CellML 1.0 RELAX NG schema (XML syntax)](cellml_1_0/cellml_1_0.rng) translated from the compact syntax version by Jonathan Cooper
 * [CellML 1.0 RELAX NG schema (compact syntax)](cellml_1_0/cellml_1_0.rnc) written by Jonathan Cooper
+* [A Markdown version of the CellML 1.0 spec](cellml_1_0/cellml_1_0_spec.md)
 
 Older files:
 
