@@ -12,11 +12,12 @@ The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 
 ## CellML 2.0 (Draft)
 
-* [A very brief overview of CellML 2.0](cellml_2_0/cellml_2_0_quick.md)
+* [A very brief overview of CellML 2.0 (DRAFT)](cellml_2_0/cellml_2_0_quick.md)
 * [An XSLT document to transform 1.0/1.1 models to 2.0](cellml_2_0/cellml_1_to_2.xsl) by [various authors](https://github.com/cellml/cellml1to2)
 
 ## CellML 1.1
 
+* [A very brief overview of CellML 1.1](cellml_1_1/cellml_1_1_quick.md)
 * [A Markdown version of the CellML 1.1 spec](cellml_1_1/cellml_1_1_spec.md)
 * [An XSLT document to transform 1.0 models to 1.1](cellml_1_1/cellml_1_0_to_1_1.xsl)
 
