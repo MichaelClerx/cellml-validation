@@ -18,9 +18,9 @@ Required elements/attributes are indicated in italics.
     - mathml:math
       - All mathml:cn elements must have a cellml:units attribute
   - encapsulation
-    - *component_ref*(*component*)
-      - *component_ref*(*component*)
-        - component_ref(*component*)
+    - component_ref(*component*)
+      - component_ref(*component*)
+        - ...
   - connection(*component_1*, *component_2*)
     - *map_variables*(*variable_1*, *variable_2*)
   - import(*xlink:href*)
@@ -160,56 +160,32 @@ CellML 2.0 documents can use MathML, but must only elements from the Supported M
 
 #### MathML basics
 
-- `<cn>`, `<ci>`, `<apply>`, `<eq>`
+- `<cn>`, `<ci>`, `<apply>`, `<eq>`, `<sep />`
 - Every `<cn>` must have a `cellml:units` attribute
 - The `type` of a `<cn>` must be either `real` or `e-notation`
 - Every `<ci>` must refer to a variable from the same component
 
-
-
-
-
-# TODO
-# THIS IS STILL BEING CONVERTED FROM THE 1.0 QUICK DOC
-
-
-
-
-
-
-
-
-#### MathML basics
-
-
-Going by the rules for `initial_value` attributes, it would seem CellML variables are real numbers.
-Presumably, integers should be treated as reals then.
-Although the spec makes no statement, it seems that `constant` introduces new variables and so shouldn't be allowed.
-Finally, `<cn>` has additional attributes `definitionURL` and `encoding`, which the spec makes no statement about but are presumably not part of the subset.
-
-The contents of a `<cn>` must be numbers, possibly a sign (`-`) and a period (`.`).
-The default type is real and
-
 #### Arithmetic
+
 - Basic 1: `<plus>`, `<minus>`, `<times>`, `<divide>`
 - Basic 2: `<power>`, `<root>`, `<exp>`, `<ln>`, `<log>`, `<logbase>`
-- Non-smooth: `<abs>`, `<floor>`, `<ceiling>`
-- Non-negative integer only: `<factorial>`
-
-Note that the factorial element is slightly troublesome for CellML: There is no concept of integers in CellML, yet factorial operates on integers exclusively.
-In addition, values for x factorial quickly become larger than fit in most number types.
+- Non-smooth: `<abs>`, `<floor>`, `<ceiling>`, `<rem>`
+- N-ary comparison: `<max>`, `<min>`
 
 #### Calculus
+
 - First order: `<diff>`, `<bvar>`
 - Higher order: `<degree>`
 
 #### Trig functions
+
 - Basic: `<sin>`, `<cos>`, `<tan>`, `<arcsin>`, `<arccos>`, `<arctan>`
 - Hyperbolic: `<sinh>`, `<cosh>`, `<tanh>`, `<arcsinh>`, `<arccosh>`, `<arctanh>`
 - Redundant `<sec>`, `<csc>`, `<cot>`, `<arcsec>`, `<arccsc>`, `<arccot>`
 - Hyperbolic redundant: `<sech>`, `<csch>`, `<coth>`, `<arcsech>`, `<arccsch>`, `<arccoth>`
 
 #### Logic and Piecewise
+
 - Piecewise: `<piecewise>`, `<piece>`, `<otherwise>`
 - Relations: `<eq>`, `<neq>`, `<gt>`, `<lt>`, `<geq>`, `<leq>`
 - Logical operators: `<and>`, `<or>`, `<xor>`, `<not>`
@@ -222,27 +198,11 @@ This means that you can write a statement like `x = (y > 0) ? 1 : undefined`.
 The CellML spec doesn't define what implementations should do for these cases.
 
 Note 3: Variables can never have the value `true` or `false`.
-In light of this, it's a bit unclear what allowing `<true>` and `<false>` is intended to achieve, other than writing things like "if((x == 1) == true)".
 
 #### Constants
+
 - `<pi>`
 - `<exponentiale>`
-- `<notanumber>`, `<infinity>`
-
-### Semantics and annotation
-- `<semantics>`, `<annotation>`, `<annotation-xml>`
-
-It's allowed to wrap a bit of Content MathML in a `<semantics>` element, which looks something like this:
-```
-<semantics>
-  <apply>
-    <eq /><ci>x</ci><cn cellml:units="dimensionless">1</cn>
-  </apply>
-  <annotation>
-    X is a really great variable.
-  </annotation>
-</semantics>
-```
-There can be multiple `<annotation>` elements (for non-xml annotation) or `<annotation-xml>` elements (for xml annotation).
-I have personally never seen these in a model.
+- `<notanumber>`
+- `<infinity>`
 
