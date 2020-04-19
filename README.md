@@ -10,9 +10,10 @@ Please note that this repo is still under development, meaning the validation to
 
 The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 
-## CellML 2.0 (Draft specification)
+## CellML 2.0
 
-* [A very brief overview of CellML 2.0](cellml_2_0/cellml_2_0_quick.md) (DRAFT)
+* [A very brief overview of CellML 2.0](cellml_2_0/cellml_2_0_quick.md)
+* [A condensed list of CellML 2.0 rules](cellml_2_0/cellml_2_0_rules.md)
 * [An XSLT document to transform 1.0/1.1 models to 2.0](cellml_2_0/cellml_1_to_2.xsl) by [various authors](https://github.com/cellml/cellml1to2)
 
 ## CellML 1.1

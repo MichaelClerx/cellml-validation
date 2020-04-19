@@ -27,7 +27,7 @@ Required elements/attributes are indicated in italics.
     - units(*name*, *units_ref*)
     - component(*name*, *component_ref*)
 
-All CellML 2.0 elements can also contain an `id` attribute.
+All CellML 2.0 elements can also contain an unnamespaced `id` attribute.
   
 ## Encapsulation & public/private interfaces
 
@@ -197,7 +197,7 @@ Note 2: The `<otherwise>` element is not required.
 This means that you can write a statement like `x = (y > 0) ? 1 : undefined`.
 The CellML spec doesn't define what implementations should do for these cases.
 
-Note 3: Variables can never have the value `true` or `false`.
+Note 3: The initial 2.0 spec doesn't rule out that variables can have the value `true` or `false`.
 
 #### Constants
 
