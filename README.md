@@ -48,7 +48,7 @@ The `check` directory contains a Python module that can run the test files throu
 Dependening on how you look at it, this constitutes a test of the test files, of the tools, or both.
 
 - Installation
-  1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venc/bin/activate`
+  1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venv/bin/activate`
   2. Install the requirements using pip: `$ pip install -r requirements.txt`
 - To validate a single file use e.g.
   ```
