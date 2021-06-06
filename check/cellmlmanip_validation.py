@@ -30,9 +30,8 @@ def parse(path):
 
     if not supported():
         raise RuntimeError(
-            'No Myokit support detected (or outdated version of Myokit found).'
-            ' Please install a recent version of Myokit into this Python'
-            ' system.')
+            'No cellmlmanip support detected.'
+            ' Please install cellmlmanip into this Python system.')
 
     from cellmlmanip import load_model
     try:

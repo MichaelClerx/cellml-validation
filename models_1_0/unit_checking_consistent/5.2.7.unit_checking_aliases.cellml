@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 5.2.7: Unit checking: Metre=meter, Litre=liter -->
+<model name="unit_checking_aliases"
+       xmlns="http://www.cellml.org/cellml/1.0#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+  <component name="A">
+    <variable name="p" units="metre" />
+    <variable name="q" units="litre" />
+    <variable name="r" units="metre" />
+    <variable name="s" units="litre" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>p</ci>
+        <cn cellml:units="meter">5</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>q</ci>
+        <cn cellml:units="liter">4</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>r</ci>
+        <apply>
+          <plus />
+          <cn cellml:units="metre">1</cn>
+          <cn cellml:units="meter">2</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>s</ci>
+        <apply>
+          <plus />
+          <cn cellml:units="litre">1</cn>
+          <cn cellml:units="liter">2</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>
