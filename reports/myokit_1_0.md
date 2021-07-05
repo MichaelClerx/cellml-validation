@@ -1,14 +1,14 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 82% according to spec (763 out of 921)
-* 332 out of 373 valid files passed
+* 83% according to spec (772 out of 923)
+* 341 out of 375 valid files passed
 * 431 out of 548 invalid files detected
 
 Issues:
-* 41 valid files failed validation
-* 11 invalid files passed validation
-* 106 invalid files failed validation for the wrong reason
+* 34 valid files failed validation
+* 15 invalid files passed validation
+* 102 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -19,8 +19,8 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|27|85|7|0|18|81%|
 |[3. Model structure](#3-model-structure)|46|155|4|0|0|98%|
-|[4. Mathematics](#4-mathematics)|41|18|8|0|2|85%|
-|[5. Units](#5-units)|125|82|10|2|4|92%|
+|[4. Mathematics](#4-mathematics)|42|18|8|0|2|85%|
+|[5. Units](#5-units)|133|82|3|6|0|95%|
 |[6. Grouping](#6-grouping)|17|69|0|9|0|90%|
 |[7. Reactions](#7-reactions)|0|0|5|0|79|0%|
 |[8. Metadata framework](#8-metadata-framework)|24|12|6|0|3|80%|
@@ -1510,6 +1510,8 @@ Results per category
 
 [4.2.3_6.7_mathml_logic_constants](../models_1_0/valid/4.2.3_6.7_mathml_logic_constants.cellml): Valid file passed validation.
 
+[4.2.3_6.8_mathml_logic_embedded](../models_1_0/valid/4.2.3_6.8_mathml_logic_embedded.cellml): Valid file passed validation.
+
 [4.2.3_7.1_mathml_pi](../models_1_0/valid/4.2.3_7.1_mathml_pi.cellml): Valid file passed validation.
 
 [4.2.3_7.2_mathml_e](../models_1_0/valid/4.2.3_7.2_mathml_e.cellml): Valid file passed validation.
@@ -1684,8 +1686,7 @@ Results per category
 
 [5.2.1.units_candela](../models_1_0/valid/5.2.1.units_candela.cellml): Valid file passed validation.
 
-🔴 [5.2.1.units_celsius](../models_1_0/valid/5.2.1.units_celsius.cellml): **Valid file failed validation.**
-* Output: ```Error on line 8. Unsupported units "Variable units attribute references the unsupported units "celsius".".```
+[5.2.1.units_celsius](../models_1_0/valid/5.2.1.units_celsius.cellml): Valid file passed validation.
 
 [5.2.1.units_coulomb](../models_1_0/valid/5.2.1.units_coulomb.cellml): Valid file passed validation.
 
@@ -1760,6 +1761,8 @@ Results per category
 
 #### 5.2.7
 
+[5.2.7.unit_checking_aliases](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_aliases.cellml): Valid file passed validation.
+
 [5.2.7.unit_checking_arithmetic](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_arithmetic.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_comparisons](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_comparisons.cellml): Valid file passed validation.
@@ -1803,8 +1806,7 @@ Results per category
 
 [5.2.7.unit_conversion_dimensionless_multiplier_2](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_multiplier_2.cellml): Valid file passed validation.
 
-🔴 [5.2.7.unit_conversion_dimensionless_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_offset.cellml): **Valid file failed validation.**
-* Output: ```Error on line 7. Units with non-zero offsets are not supported.```
+[5.2.7.unit_conversion_dimensionless_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_offset.cellml): Valid file passed validation.
 
 [5.2.7.unit_conversion_inconvertible_1](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_inconvertible_1.cellml): Valid file passed validation.
 
@@ -1812,11 +1814,9 @@ Results per category
 
 [5.2.7.unit_conversion_multiplier](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_multiplier.cellml): Valid file passed validation.
 
-🔴 [5.2.7.unit_conversion_new_base_units](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_new_base_units.cellml): **Valid file failed validation.**
-* Output: ```Error on line 6. Defining new base units is not supported.```
+[5.2.7.unit_conversion_new_base_units](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_new_base_units.cellml): Valid file passed validation.
 
-🔴 [5.2.7.unit_conversion_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_offset.cellml): **Valid file failed validation.**
-* Output: ```Error on line 16. Units with non-zero offsets are not supported.```
+[5.2.7.unit_conversion_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_offset.cellml): Valid file passed validation.
 
 [5.2.7.unit_conversion_prefix](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_prefix.cellml): Valid file passed validation.
 
@@ -1825,12 +1825,10 @@ Results per category
 
 ##### 5.4.1.1
 
-🔴 [5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): **Valid file failed validation.**
-* Output: ```Error on line 6. Defining new base units is not supported.```
+[5.4.1.1.units_base_units](../models_1_0/valid/5.4.1.1.units_base_units.cellml): Valid file passed validation.
 
-🔶 [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Expected error not set```
-* Output: ```Error on line 6. Defining new base units is not supported.```
+🔵 [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): **Error not detected.**
+* Output: ```OK```
 
 [5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): Error detected correctly.
 * Expected: ```at least one child unit element```
@@ -2079,8 +2077,7 @@ Results per category
 
 ##### 5.4.2.1
 
-🔴 [5.4.2.1.unit_offset_non_zero](../models_1_0/valid/5.4.2.1.unit_offset_non_zero.cellml): **Valid file failed validation.**
-* Output: ```Error on line 7. Units with non-zero offsets are not supported.```
+[5.4.2.1.unit_offset_non_zero](../models_1_0/valid/5.4.2.1.unit_offset_non_zero.cellml): Valid file passed validation.
 
 [5.4.2.1.unit_offset_zero](../models_1_0/valid/5.4.2.1.unit_offset_zero.cellml): Valid file passed validation.
 
@@ -2238,20 +2235,16 @@ Results per category
 
 ##### 5.4.2.7
 
-🔶 [5.4.2.7.unit_offset_and_exponent](../models_1_0/invalid/5.4.2.7.unit_offset_and_exponent.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Expected error not set```
-* Output: ```Error on line 7. Units with non-zero offsets are not supported.```
+🔵 [5.4.2.7.unit_offset_and_exponent](../models_1_0/invalid/5.4.2.7.unit_offset_and_exponent.cellml): **Error not detected.**
+* Output: ```OK```
 
-🔶 [5.4.2.7.unit_offset_and_siblings_1](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_1.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Expected error not set```
-* Output: ```Error on line 7. Units with non-zero offsets are not supported.```
+🔵 [5.4.2.7.unit_offset_and_siblings_1](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_1.cellml): **Error not detected.**
+* Output: ```OK```
 
-🔶 [5.4.2.7.unit_offset_and_siblings_2](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_2.cellml): **Invalid file failed for unexpected reason.**
-* Expected: ```Expected error not set```
-* Output: ```Error on line 8. Units with non-zero offsets are not supported.```
+🔵 [5.4.2.7.unit_offset_and_siblings_2](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_2.cellml): **Error not detected.**
+* Output: ```OK```
 
-🔴 [5.4.2.7.unit_offset_non_zero_and_exponent_one](../models_1_0/valid/5.4.2.7.unit_offset_non_zero_and_exponent_one.cellml): **Valid file failed validation.**
-* Output: ```Error on line 7. Units with non-zero offsets are not supported.```
+[5.4.2.7.unit_offset_non_zero_and_exponent_one](../models_1_0/valid/5.4.2.7.unit_offset_non_zero_and_exponent_one.cellml): Valid file passed validation.
 
 [5.4.2.7.unit_offset_zero_and_exponent](../models_1_0/valid/5.4.2.7.unit_offset_zero_and_exponent.cellml): Valid file passed validation.
 

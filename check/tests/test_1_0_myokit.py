@@ -62,31 +62,12 @@ false_negatives = {
         'Two defining equations',
     '4.overdefined_ode_and_ode':
         'Two defining equations',
-    # Celsius is not supported
-    '5.2.1.units_celsius':
-        'unsupported units "celsius"',
-    # New base units are not supported
-    '5.2.7.unit_conversion_new_base_units':
-        'Defining new base units is not supported.',
     # Factorial is not supported
     '5.2.7.unit_checking_functions_factorial':
         'Unsupported element in apply',
     # Non-zero offsets are not supported
-    '5.2.7.unit_conversion_dimensionless_offset':
-        'non-zero offsets are not supported',
-    '5.2.7.unit_conversion_offset':
-        'non-zero offsets are not supported',
-    # New base units are not supported
-    '5.4.1.1.units_base_units':
-        'Defining new base units is not supported.',
-    # Non-zero offsets are not supported
-    '5.4.2.1.unit_offset_non_zero':
-        'non-zero offsets are not supported',
     '5.4.2.1.unit_prefix_exponent_multiplier_huge':
         'Unit prefix too large',
-    # New base units are not supported
-    '5.4.2.7.unit_offset_non_zero_and_exponent_one':
-        'non-zero offsets are not supported.',
     # Factorials are not supported
     '5.5.2.boolean_function_factorial':
         'Unsupported element in apply',
