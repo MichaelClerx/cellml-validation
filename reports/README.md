@@ -23,6 +23,6 @@ Some care needs to be taken when interpreting them:
 ### External tools
 
 - [Cellmlmanip](cellmlmanip_1_0.md) (76%)
-- [Myokit](myokit_1_0.md) (82%)
+- [Myokit](myokit_1_0.md) (83%)
 - [OpenCOR / CellML API](opencor_1_0.md) (80%)
 
