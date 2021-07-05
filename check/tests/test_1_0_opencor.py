@@ -196,9 +196,9 @@ false_negatives = {
 expected_messages = {
     # Not in spec: Root node
     '0.0.root_node_namespace_wrong':
-        'model is not CellML (wrong namespace)',
+        'model is not CellML',
     '0.0.root_node_not_model':
-        'model is not CellML (wrong element name)',
+        'model is not CellML',
     '0.0.root_node_two_elements':
         'The model could not be loaded (badxml',
     '0.0.root_node_two_models':
