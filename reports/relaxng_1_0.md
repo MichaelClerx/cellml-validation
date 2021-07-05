@@ -1,8 +1,8 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (715 out of 921)
-* 371 out of 373 valid files passed
+* 77% according to spec (717 out of 923)
+* 373 out of 375 valid files passed
 * 344 out of 548 invalid files detected
 
 Issues:
@@ -19,8 +19,8 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|42|0|61|0|55%|
 |[3. Model structure](#3-model-structure)|50|105|0|50|0|75%|
-|[4. Mathematics](#4-mathematics)|49|3|0|17|0|75%|
-|[5. Units](#5-units)|135|46|0|42|0|81%|
+|[4. Mathematics](#4-mathematics)|50|3|0|17|0|75%|
+|[5. Units](#5-units)|136|46|0|42|0|81%|
 |[6. Grouping](#6-grouping)|15|55|2|23|0|73%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|15|0|0|0|100%|
@@ -1885,6 +1885,8 @@ Results per category
 
 [4.2.3_6.7_mathml_logic_constants](../models_1_0/valid/4.2.3_6.7_mathml_logic_constants.cellml): Valid file passed validation.
 
+[4.2.3_6.8_mathml_logic_embedded](../models_1_0/valid/4.2.3_6.8_mathml_logic_embedded.cellml): Valid file passed validation.
+
 [4.2.3_7.1_mathml_pi](../models_1_0/valid/4.2.3_7.1_mathml_pi.cellml): Valid file passed validation.
 
 [4.2.3_7.2_mathml_e](../models_1_0/valid/4.2.3_7.2_mathml_e.cellml): Valid file passed validation.
@@ -2116,6 +2118,8 @@ Results per category
 ---
 
 #### 5.2.7
+
+[5.2.7.unit_checking_aliases](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_aliases.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_arithmetic](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_arithmetic.cellml): Valid file passed validation.
 

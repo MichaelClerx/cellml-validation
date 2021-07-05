@@ -1,8 +1,8 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 72% according to spec (666 out of 921)
-* 373 out of 373 valid files passed
+* 72% according to spec (668 out of 923)
+* 375 out of 375 valid files passed
 * 293 out of 548 invalid files detected
 
 Issues:
@@ -19,8 +19,8 @@ Results per category
 |[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|26|0|77|0|43%|
 |[3. Model structure](#3-model-structure)|50|97|0|58|0|71%|
-|[4. Mathematics](#4-mathematics)|49|2|0|18|0|73%|
-|[5. Units](#5-units)|135|41|0|47|0|78%|
+|[4. Mathematics](#4-mathematics)|50|2|0|18|0|74%|
+|[5. Units](#5-units)|136|41|0|47|0|79%|
 |[6. Grouping](#6-grouping)|17|46|0|32|0|66%|
 |[7. Reactions](#7-reactions)|5|56|0|23|0|72%|
 |[8. Metadata framework](#8-metadata-framework)|30|15|0|0|0|100%|
@@ -1252,6 +1252,8 @@ Results per category
 
 [4.2.3_6.7_mathml_logic_constants](../models_1_0/valid/4.2.3_6.7_mathml_logic_constants.cellml): Valid file passed validation.
 
+[4.2.3_6.8_mathml_logic_embedded](../models_1_0/valid/4.2.3_6.8_mathml_logic_embedded.cellml): Valid file passed validation.
+
 [4.2.3_7.1_mathml_pi](../models_1_0/valid/4.2.3_7.1_mathml_pi.cellml): Valid file passed validation.
 
 [4.2.3_7.2_mathml_e](../models_1_0/valid/4.2.3_7.2_mathml_e.cellml): Valid file passed validation.
@@ -1459,6 +1461,8 @@ Results per category
 ---
 
 #### 5.2.7
+
+[5.2.7.unit_checking_aliases](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_aliases.cellml): Valid file passed validation.
 
 [5.2.7.unit_checking_arithmetic](../models_1_0/unit_checking_consistent/5.2.7.unit_checking_arithmetic.cellml): Valid file passed validation.
 
