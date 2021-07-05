@@ -9,7 +9,7 @@ import subprocess
 
 
 # Location of OpenCOR binary
-OPENCOR = '/home/michael/dev/ext/opencor/OpenCOR-2019-02-01-Linux/bin/OpenCOR'
+OPENCOR = '/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/bin/OpenCOR'
 
 
 def supported():

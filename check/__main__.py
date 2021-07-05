@@ -23,11 +23,15 @@ def main():
     )
 
     # Load tool dependent validation modules
-    from . import myokit_validation
-    from . import opencor_validation
+    from . import (
+        cellmlmanip_validation,
+        myokit_validation,
+        opencor_validation,
+    )
 
     # Add subparsers, in alphabetical order
-    add_cellmlmanip_parser(subparsers)
+    if cellmlmanip_validation.supported():
+        add_cellmlmanip_parser(subparsers)
     add_dtd_1_0_parser(subparsers)
     if myokit_validation.supported():
         add_myokit_parser(subparsers)
