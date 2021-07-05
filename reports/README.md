@@ -1,6 +1,7 @@
 # Reports
 
-The reports listed below were automatically generated during testing. Some care needs to be taken when interpreting them:
+The reports listed below were automatically generated during testing.
+Some care needs to be taken when interpreting them:
 
 - Percentages shown are for the number of test files that were classified correctly
   - This does not necessarily correlate with the "percentage of the spec" a validation method tests

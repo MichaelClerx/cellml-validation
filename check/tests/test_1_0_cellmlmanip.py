@@ -16,8 +16,6 @@ from .report import Report_1_0 as Report
 
 # Known instances where cellmlmanip says a valid file is invalid
 false_negatives = {
-    # TODO Unexpected error: Need fixing
-    '2.4.3.connection_with_extensions': 'Assertion',
     # Reactions
     '2.4.3.reaction_with_extensions': 'Reactions are not supported',
     '2.4.3.role_with_extensions': 'Reactions are not supported',
@@ -67,7 +65,7 @@ false_negatives = {
     # Component units are not supported
     '4.4.3.1.cn_component_units': 'Unknown unit wooster',
     # Celsius is not supported
-    '5.2.1.units_celsius': "'celsius' is not defined",
+    '5.2.1.units_celsius': 'celsius',
     # Incompatible units
     '5.2.7.unit_conversion_inconvertible_1': 'Cannot convert',
     '5.2.7.unit_conversion_new_base_units': 'Cannot convert',
@@ -98,16 +96,21 @@ false_negatives = {
     '5.5.2.boolean_arithmetic_root_1': 'BooleanAtom not allowed in this',
     '5.5.2.boolean_arithmetic_root_2': 'BooleanAtom not allowed in this',
     '5.5.2.boolean_arithmetic_times': "'BooleanTrue' object has no attribute",
+    #'5.5.2.boolean_compare_eq_operand_error: '',
+    #'5.5.2.boolean_compare_neq_operand_error: '',
+    '5.5.2.boolean_compare_geq_operand_error': 'inequalities',
+    '5.5.2.boolean_compare_gt_operand_error': 'inequalities',
+    '5.5.2.boolean_compare_leq_operand_error': 'inequalities',
+    '5.5.2.boolean_compare_lt_operand_error': 'inequalities',
     '5.5.2.boolean_function_abs': 'Bad argument type for Abs()',
-    '5.5.2.boolean_function_ceiling': 'BooleanAtom not allowed in this',
-    '5.5.2.boolean_function_floor': 'BooleanAtom not allowed ',
-    # TODO Improve error message
-    '5.5.2.boolean_derivatives_1': 'must be a sympy.Eq',
-    '5.5.2.boolean_derivatives_2': 'has no attribute \'is_scalar\'',
-    '5.5.2.boolean_derivatives_3': 'must be a sympy.Eq',
+    '5.5.2.boolean_function_ceiling': 'bad operand type',
+    '5.5.2.boolean_function_floor': 'bad operand type',
     '5.5.2.boolean_function_ln': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_function_log_1': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_function_log_2': "'BooleanTrue' object has no attribute",
+    # TODO Improve error message
+    '5.5.2.boolean_derivatives_1': 'must be a sympy.Eq',
+    '5.5.2.boolean_derivatives_2': 'should be a derivative or variable',
     '5.5.2.boolean_trig_arccos': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arccot': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arccoth': "'BooleanTrue' object has no attribute",
@@ -135,9 +138,9 @@ false_negatives = {
     '5.5.2.boolean_function_factorial': 'No handler for element <factorial>',
     # TODO Unexpected error
     '6.4.2.1.relationship_ref_relationship_2': 'Invalid or unsupported CellML',
-    '6.4.2.5.relationship_ref_multiple_1': 'Assertion',
-    '6.4.2.5.relationship_ref_multiple_2': 'Assertion',
-    '6.4.2.5.relationship_ref_multiple_3': 'Assertion',
+    '6.4.2.5.relationship_ref_multiple_1': 'exactly 1 relationship_ref tag',
+    '6.4.2.5.relationship_ref_multiple_2': 'exactly 1 relationship_ref tag',
+    '6.4.2.5.relationship_ref_multiple_3': 'exactly 1 relationship_ref tag',
     '6.4.3.2.component_ref_no_children_extension': 'Invalid or unsupported',
     # Reactions are not supported
     '7.4.1.2.reaction_reversible_no': 'Reactions are not supported',
@@ -150,8 +153,6 @@ false_negatives = {
     '8.4.1.cmeta_id_in_variable_ref': 'Reactions are not supported',
     # Component units are not supported
     '8.4.1.cmeta_id_in_units_2': 'units inside components',
-    # TODO Unexpected error
-    '8.4.2.rdf_in_connection': 'AssertionError',
     # Reactions are not supported
     '8.4.2.rdf_in_reaction': 'Reactions are not supported',
     '8.4.2.rdf_in_role': 'Reactions are not supported',
@@ -510,7 +511,7 @@ expected_messages = {
         'c$x',
     # 3.4.5.4 component_1 cannot match component_2
     '3.4.5.4.map_components_component_1_equals_2':
-        'Cannot determine the source & target for connection',
+        'Target already assigned to',
     # 3.4.6.1 A map_variables must declare variable_1 and variable_2
     '3.4.6.1.map_variables_variable_1_missing':
         'Element map_variables failed to validate attributes',
@@ -595,12 +596,12 @@ expected_messages = {
         'Cannot determine the source & target for connection',
     '3.4.6.4.map_variables_hidden_niece_2':
         'Cannot determine the source & target for connection',
-    '3.4.6.4.map_variables_nested_sibling_private_in':
-        'Cannot determine the source & target for connection',
+    #'3.4.6.4.map_variables_nested_sibling_private_in':
+    #    'Cannot determine the source & target for connection',
     '3.4.6.4.map_variables_nested_sibling_private_in_and_out':
-        'Cannot determine the source & target for connection',
+        'Target already assigned',
     '3.4.6.4.map_variables_nested_sibling_private_out':
-        'Cannot determine the source & target for connection',
+        'Target already assigned',
     '3.4.6.4.map_variables_parent_in_to_in_1':
         'Cannot determine the source & target for connection',
     '3.4.6.4.map_variables_parent_in_to_in_2':
@@ -616,23 +617,23 @@ expected_messages = {
     '3.4.6.4.map_variables_parent_public_out':
         'Cannot determine the source & target for connection',
     '3.4.6.4.map_variables_sibling_in_to_in':
-        'Cannot determine the source & target for connection',
+        'Unable to add connections to the model',
     '3.4.6.4.map_variables_sibling_multiple_out_1':
         'Target already assigned',
     '3.4.6.4.map_variables_sibling_multiple_out_2':
         'Target already assigned',
     '3.4.6.4.map_variables_sibling_out_to_out':
-        'Cannot determine the source & target for connection',
-    '3.4.6.4.map_variables_sibling_private_in_1':
-        'Cannot determine the source & target for connection',
+        'Target already assigned',
+    #'3.4.6.4.map_variables_sibling_private_in_1':
+    #    'Cannot determine the source & target for connection',
     '3.4.6.4.map_variables_sibling_private_in_2':
-        'Cannot determine the source & target for connection',
-    '3.4.6.4.map_variables_sibling_private_in_and_out':
-        'Cannot determine the source & target for connection',
-    '3.4.6.4.map_variables_sibling_private_out_1':
-        'Cannot determine the source & target for connection',
+        'Target already assigned',
+    #'3.4.6.4.map_variables_sibling_private_in_and_out':
+    #    'Cannot determine the source & target for connection',
+    #'3.4.6.4.map_variables_sibling_private_out_1':
+    #    'Cannot determine the source & target for connection',
     '3.4.6.4.map_variables_sibling_private_out_2':
-        'Cannot determine the source & target for connection',
+        'Unable to add connections',
     # 4 Math can't be overdefined
     '4.math_and_initial_value': 'defined twice',
     '4.math_overdefined': 'defined twice',
@@ -659,11 +660,12 @@ expected_messages = {
     # 4.4.3.2 A cn unit attribute must refer to a model, local component, or
     #         predefined unit
     '4.4.3.2.cn_units_nonexistent_1': 'Unknown unit',
-    '4.4.3.2.cn_units_nonexistent_2': 'Unknown unit',
+    '4.4.3.2.cn_units_nonexistent_2':
+        'Defining units inside components is not supported',
     # 4.4.4 A mathml:math can only modify 'owned' variables
     '4.4.4.modify_nonexistent': 'A$x not found',
-    '4.4.4.modify_private_in': 'Multiple definitions',
-    '4.4.4.modify_public_in': 'Multiple definitions',
+    #'4.4.4.modify_private_in': 'Multiple definitions',
+    #'4.4.4.modify_public_in': 'Multiple definitions',
     # 5.2.2 CellML prefers "deka" to "deca"
     '5.2.2.unit_deca':
         'Invalid attribute prefix for element unit',
@@ -712,7 +714,7 @@ expected_messages = {
     '5.4.1.2.units_name_predefined_ampere': 'Cannot redefine CellML unit',
     '5.4.1.2.units_name_predefined_becquerel': 'Cannot redefine CellML unit',
     '5.4.1.2.units_name_predefined_candela': 'Cannot redefine CellML unit',
-    '5.4.1.2.units_name_predefined_celsius': 'Cannot redefine CellML unit',
+    '5.4.1.2.units_name_predefined_celsius': 'Unit <celsius> is not currently',
     '5.4.1.2.units_name_predefined_coulomb': 'Cannot redefine CellML unit',
     '5.4.1.2.units_name_predefined_dimensionless': 'Cannot redefine CellML',
     '5.4.1.2.units_name_predefined_farad': 'Cannot redefine CellML unit',
@@ -1210,11 +1212,19 @@ known_issues = {
     '3.4.5.4.map_components_duplicate_mirrored',
     # 3.4.6.4 Interfaces and encapsulation
     #TODO This should be fixed
+    '3.4.6.4.map_variables_nested_sibling_private_in',
+    '3.4.6.4.map_variables_sibling_private_in_1',
+    '3.4.6.4.map_variables_sibling_private_in_and_out',
+    '3.4.6.4.map_variables_sibling_private_out_1',
+    #TODO This should be fixed
     '3.4.6.4.map_variables_hidden_cousins_3',
     # Component units
     '4.4.3.2.cn_units_parent_component',
     # DAEs are not supported
     '4.4.4.dae_public_in',
+    #TODO This should be fixed
+    '4.4.4.modify_private_in',
+    '4.4.4.modify_public_in',
     # 5.4.1.2 Units names must be unique (within model or local component)
     #TODO This should be fixed
     '5.4.1.2.units_name_duplicate_1',
