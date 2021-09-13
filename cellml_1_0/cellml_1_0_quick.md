@@ -263,9 +263,11 @@ Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), wh
 
 ### Predefined units
 
-- ampere
+With base units in **bold**.
+
+- **ampere**
 - becquerel
-- candela
+- **candela**
 - celsius
 - coulomb
 - dimensionless
@@ -276,20 +278,20 @@ Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), wh
 - hertz
 - joule
 - katal
-- kelvin
-- kilogram
+- **kelvin**
+- **kilogram**
 - liter
 - litre
 - lumen
 - lux
-- meter
-- metre
-- mole
+- **meter**
+- **metre**
+- **mole**
 - newton
 - ohm
 - pascal
 - radian
-- second
+- **second**
 - siemens
 - sievert
 - steradian
