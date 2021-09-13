@@ -67,7 +67,7 @@ Finally, users can add their own relationship types by using a `relationship` at
 ## Identifiers
 
 CellML 1.0 defines identifiers as strings matching `('_')* ( letter | digit ) ( letter | '_' | digit )*`.
-Note that this includes strings such as "_", "0", and "1e12".
+Note that this includes strings such as "0", "12", and "3e4".
 
 ## Real numbers
 
