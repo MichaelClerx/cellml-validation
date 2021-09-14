@@ -74,7 +74,7 @@ Imports were introduced
 
     9.4.1.3 An `xlink:href` attribute must be a valid URI.
     
-    9.5.1 Imported units may depend on other units in the source model (but these do get imported too).
+    9.5.1 Imported units may depend on other units in the source model (but these do not automatically get imported too).
     
     9.5.2.2 If imported components are connected, their connections are imported too.
     9.5.2.3 If imported components have encapsulated components, these are imported too, along with their connections (note that each component is a tree, cousins can't interact!).
