@@ -98,7 +98,6 @@ def assert_valid(report, name, path, parser, validator, false_negatives, log):
     - If the validator does not pass the file, in an unexpected way, the test
       result is a ``fail``.
 
-
     Arguments:
 
     ``name``
