@@ -4,9 +4,9 @@
      Although CellML 1.0 does not specify what an integer string looks like, we
      probably shouldn't expect it to accept floats that evaluate to integers.
  -->
-<model name="unit_prefix_real_int"
+<model name="unit_prefix_e_notation_int"
        xmlns="http://www.cellml.org/cellml/1.0#">
   <units name="wooster">
-    <unit units="ampere" prefix="1.0" />
+    <unit units="ampere" prefix="1e3" />
   </units>
 </model>
