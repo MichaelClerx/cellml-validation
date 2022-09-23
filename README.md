@@ -10,6 +10,9 @@ Please note that this repo is still under development, meaning the validation to
 
 The goal is to extend the 1.0 tests and tools to 1.1, and then 2.0.
 
+The full suite of tests have been run on several validation and simulation tools.
+[Reports of the test results can be viewed here](reports/README.md).
+
 ## CellML 2.0
 
 * [A very brief overview of CellML 2.0](cellml_2_0/cellml_2_0_quick.md)
@@ -87,9 +90,3 @@ To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-lev
 Test output should consist of `passes` (the validator is correct, and we expected this) and `xfails` (the validator is wrong, and we expected this).
 An error or `fail` result indicates the test is behaving in an unexpected way (suggesting that the `check` module should be updated).
 For a full guide to interpreting the results, see the docstrings for `assert_valid` and `assert_invalid` in `check/tests/shared.py`.
-
-## Reports
-
-The full suite of tests have been run on several validation and simulation tools.
-[Reports of the test results can be viewed here](reports/README.md).
-
