@@ -1,9 +1,9 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 72% according to spec (668 out of 923)
+* 72% according to spec (671 out of 926)
 * 375 out of 375 valid files passed
-* 293 out of 548 invalid files detected
+* 296 out of 551 invalid files detected
 
 Issues:
 * 0 valid files failed validation
@@ -16,11 +16,11 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|26|0|77|0|43%|
 |[3. Model structure](#3-model-structure)|50|97|0|58|0|71%|
 |[4. Mathematics](#4-mathematics)|50|2|0|18|0|74%|
-|[5. Units](#5-units)|136|41|0|47|0|79%|
+|[5. Units](#5-units)|136|42|0|47|0|79%|
 |[6. Grouping](#6-grouping)|17|46|0|32|0|66%|
 |[7. Reactions](#7-reactions)|5|56|0|23|0|72%|
 |[8. Metadata framework](#8-metadata-framework)|30|15|0|0|0|100%|
@@ -81,6 +81,14 @@ Results per category
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
 * Expected: ```not accepted by the pattern```
 * Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'hello' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+
+[0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): Error detected correctly.
+* Expected: ```not accepted by the pattern```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'nan' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+
+[0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
+* Expected: ```not accepted by the pattern```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'inf' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -1798,6 +1806,10 @@ Results per category
 
 ##### 5.4.2.3
 
+[5.4.2.3.unit_prefix_e_notation_int](../models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml): Error detected correctly.
+* Expected: ```not a valid value of the union type 'cellml:unit_prefix'```
+* Output: ```Error on line 10: Element 'cellml:unit', attribute 'prefix': '1e3' is not a valid value of the union type 'cellml:unit_prefix'.```
+
 [5.4.2.3.unit_prefix_integer](../models_1_0/valid/5.4.2.3.unit_prefix_integer.cellml): Valid file passed validation.
 
 [5.4.2.3.unit_prefix_named](../models_1_0/valid/5.4.2.3.unit_prefix_named.cellml): Valid file passed validation.
@@ -1808,7 +1820,7 @@ Results per category
 
 [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): Error detected correctly.
 * Expected: ```not a valid value of the union type 'cellml:unit_prefix'```
-* Output: ```Error on line 7: Element 'cellml:unit', attribute 'prefix': '1.0' is not a valid value of the union type 'cellml:unit_prefix'.```
+* Output: ```Error on line 10: Element 'cellml:unit', attribute 'prefix': '1.0' is not a valid value of the union type 'cellml:unit_prefix'.```
 
 [5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): Error detected correctly.
 * Expected: ```not a valid value of the union type 'cellml:unit_prefix'```

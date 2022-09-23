@@ -42,6 +42,10 @@ expected_messages = {
         'not accepted by the pattern',
     '0.1.real_number_invalid_6':
         'not accepted by the pattern',
+    '0.1.real_number_invalid_7':
+        'not accepted by the pattern',
+    '0.1.real_number_invalid_8':
+        'not accepted by the pattern',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         #"'name': '' is not a valid value",
@@ -412,6 +416,8 @@ expected_messages = {
     '5.4.2.3.unit_prefix_spaces':
         "not a valid value of the union type 'cellml:unit_prefix'",
     '5.4.2.3.unit_prefix_unknown':
+        "not a valid value of the union type 'cellml:unit_prefix'",
+    '5.4.2.3.unit_prefix_e_notation_int':
         "not a valid value of the union type 'cellml:unit_prefix'",
     # 5.4.2.4 A unit exponent must be a real number
     '5.4.2.4.unit_exponent_invalid':
