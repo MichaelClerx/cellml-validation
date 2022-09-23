@@ -1,12 +1,12 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 76% according to spec (703 out of 923)
-* 267 out of 375 valid files passed
-* 436 out of 548 invalid files detected
+* 75% according to spec (703 out of 926)
+* 264 out of 375 valid files passed
+* 439 out of 551 invalid files detected
 
 Issues:
-* 108 valid files failed validation
+* 111 valid files failed validation
 * 67 invalid files passed validation
 * 45 invalid files failed validation for the wrong reason
 
@@ -16,11 +16,11 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|24|42|10|40|21|48%|
 |[3. Model structure](#3-model-structure)|43|147|7|8|0|92%|
-|[4. Mathematics](#4-mathematics)|32|16|18|2|2|68%|
-|[5. Units](#5-units)|84|80|52|0|8|73%|
+|[4. Mathematics](#4-mathematics)|31|16|19|2|2|67%|
+|[5. Units](#5-units)|82|81|54|0|8|72%|
 |[6. Grouping](#6-grouping)|12|58|5|17|3|73%|
 |[7. Reactions](#7-reactions)|0|68|5|0|11|80%|
 |[8. Metadata framework](#8-metadata-framework)|21|15|9|0|0|80%|
@@ -81,6 +81,14 @@ Results per category
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
 * Expected: ```Invalid or unsupported```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_6.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute initial_value for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_6.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_6.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_7.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute initial_value for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_7.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_7.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_8.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute initial_value for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_8.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_8.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -180,7 +188,7 @@ Results per category
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 🔶 [2.4.3.bad_cmeta_attribute_in_variable](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable.cellml): **Invalid file failed for unexpected reason.**
-* Output: ```add_variable() got an unexpected keyword argument '{http://www.cellml.org/metadata/1.0#}bob'```
+* Output: ```Model.add_variable() got an unexpected keyword argument '{http://www.cellml.org/metadata/1.0#}bob'```
 
 🔶 [2.4.3.bad_cmeta_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```Reactions are not supported (found in component A).```
@@ -330,7 +338,7 @@ Results per category
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 🔶 [2.4.3.mathml_attribute_in_variable](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable.cellml): **Invalid file failed for unexpected reason.**
-* Output: ```add_variable() got an unexpected keyword argument '{http://www.w3.org/1998/Math/MathML}sum'```
+* Output: ```Model.add_variable() got an unexpected keyword argument '{http://www.w3.org/1998/Math/MathML}sum'```
 
 🔶 [2.4.3.mathml_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.mathml_attribute_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```Reactions are not supported (found in component A).```
@@ -367,7 +375,7 @@ Results per category
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 🔶 [2.4.3.rdf_attribute_in_variable](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable.cellml): **Invalid file failed for unexpected reason.**
-* Output: ```add_variable() got an unexpected keyword argument '{http://www.w3.org/1999/02/22-rdf-syntax-ns#}parseType'```
+* Output: ```Model.add_variable() got an unexpected keyword argument '{http://www.w3.org/1999/02/22-rdf-syntax-ns#}parseType'```
 
 🔶 [2.4.3.rdf_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable_ref.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```Reactions are not supported (found in component A).```
@@ -389,7 +397,7 @@ Results per category
 * Output: ```Reactions are not supported (found in component A).```
 
 🔴 [2.4.3.variable_with_extensions](../models_1_0/valid/2.4.3.variable_with_extensions.cellml): **Valid file failed validation.**
-* Output: ```add_variable() got an unexpected keyword argument '{http://fruit.org}x_a_day'```
+* Output: ```Model.add_variable() got an unexpected keyword argument '{http://fruit.org}x_a_day'```
 
 [2.4.3.xlink_href_in_component](../models_1_0/valid/2.4.3.xlink_href_in_component.cellml): Valid file passed validation.
 
@@ -421,7 +429,7 @@ Results per category
 * Output: ```Defining units inside components is not supported (found in component A).```
 
 🔴 [2.4.3.xlink_href_in_variable](../models_1_0/valid/2.4.3.xlink_href_in_variable.cellml): **Valid file failed validation.**
-* Output: ```add_variable() got an unexpected keyword argument '{http://www.w3.org/1999/xlink}href'```
+* Output: ```Model.add_variable() got an unexpected keyword argument '{http://www.w3.org/1999/xlink}href'```
 
 🔴 [2.4.3.xlink_href_in_variable_ref](../models_1_0/valid/2.4.3.xlink_href_in_variable_ref.cellml): **Valid file failed validation.**
 * Output: ```Reactions are not supported (found in component A).```
@@ -796,19 +804,19 @@ Results per category
 ##### 3.4.3.3
 
 🔴 [3.4.3.3.variable_units_component](../models_1_0/valid/3.4.3.3.variable_units_component.cellml): **Valid file failed validation.**
-* Output: ```'Unknown unit oranges.'```
+* Output: ```'Unknown unit <oranges>.'```
 
 [3.4.3.3.variable_units_model](../models_1_0/valid/3.4.3.3.variable_units_model.cellml): Valid file passed validation.
 
 [3.4.3.3.variable_units_other_component](../models_1_0/invalid/3.4.3.3.variable_units_other_component.cellml): Error detected correctly.
-* Expected: ```Unknown unit oranges```
-* Output: ```'Unknown unit oranges.'```
+* Expected: ```Unknown unit <oranges>```
+* Output: ```'Unknown unit <oranges>.'```
 
 [3.4.3.3.variable_units_predefined](../models_1_0/valid/3.4.3.3.variable_units_predefined.cellml): Valid file passed validation.
 
 [3.4.3.3.variable_units_unknown](../models_1_0/invalid/3.4.3.3.variable_units_unknown.cellml): Error detected correctly.
-* Expected: ```Unknown unit oranges```
-* Output: ```'Unknown unit oranges.'```
+* Expected: ```Unknown unit <oranges>```
+* Output: ```'Unknown unit <oranges>.'```
 
 
 ---
@@ -1403,7 +1411,8 @@ Results per category
 
 [4.2.3_6.6_mathml_logic_binary_operators](../models_1_0/valid/4.2.3_6.6_mathml_logic_binary_operators.cellml): Valid file passed validation.
 
-[4.2.3_6.7_mathml_logic_constants](../models_1_0/valid/4.2.3_6.7_mathml_logic_constants.cellml): Valid file passed validation.
+🔴 [4.2.3_6.7_mathml_logic_constants](../models_1_0/valid/4.2.3_6.7_mathml_logic_constants.cellml): **Valid file failed validation.**
+* Output: ```'BooleanTrue' object has no attribute 'as_coeff_Add'```
 
 [4.2.3_6.8_mathml_logic_embedded](../models_1_0/valid/4.2.3_6.8_mathml_logic_embedded.cellml): Valid file passed validation.
 
@@ -1418,7 +1427,7 @@ Results per category
 * Output: ```No handler for element <semantics>```
 
 🔴 [4.2.3_8.2_annotation_xml](../models_1_0/valid/4.2.3_8.2_annotation_xml.cellml): **Valid file failed validation.**
-* Output: ```'Unknown unit per_millisecond.'```
+* Output: ```'Unknown unit <per_millisecond>.'```
 
 
 ---
@@ -1484,7 +1493,7 @@ Results per category
 ##### 4.4.3.1
 
 🔴 [4.4.3.1.cn_component_units](../models_1_0/valid/4.4.3.1.cn_component_units.cellml): **Valid file failed validation.**
-* Output: ```'Unknown unit wooster.'```
+* Output: ```'Unknown unit <wooster>.'```
 
 [4.4.3.1.cn_model_units](../models_1_0/valid/4.4.3.1.cn_model_units.cellml): Valid file passed validation.
 
@@ -1501,7 +1510,7 @@ Results per category
 
 [4.4.3.2.cn_units_nonexistent_1](../models_1_0/invalid/4.4.3.2.cn_units_nonexistent_1.cellml): Error detected correctly.
 * Expected: ```Unknown unit```
-* Output: ```'Unknown unit wooster.'```
+* Output: ```'Unknown unit <wooster>.'```
 
 [4.4.3.2.cn_units_nonexistent_2](../models_1_0/invalid/4.4.3.2.cn_units_nonexistent_2.cellml): Error detected correctly.
 * Expected: ```Defining units inside components is not supported```
@@ -1580,7 +1589,7 @@ Results per category
 [5.2.1.units_candela](../models_1_0/valid/5.2.1.units_candela.cellml): Valid file passed validation.
 
 🔴 [5.2.1.units_celsius](../models_1_0/valid/5.2.1.units_celsius.cellml): **Valid file failed validation.**
-* Output: ```'Unit celsiusis not currently supported by cellmlmanip.'```
+* Output: ```'Unit <celsius> is not currently supported by cellmlmanip.'```
 
 [5.2.1.units_coulomb](../models_1_0/valid/5.2.1.units_coulomb.cellml): Valid file passed validation.
 
@@ -1696,13 +1705,16 @@ Results per category
 
 [5.2.7.unit_conversion_different_names_same_unit](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_different_names_same_unit.cellml): Valid file passed validation.
 
-[5.2.7.unit_conversion_dimensionless_exponent](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_exponent.cellml): Valid file passed validation.
+🔴 [5.2.7.unit_conversion_dimensionless_exponent](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_exponent.cellml): **Valid file failed validation.**
+* Output: ```maximum recursion depth exceeded while calling a Python object```
 
-[5.2.7.unit_conversion_dimensionless_multiplier_1](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_multiplier_1.cellml): Valid file passed validation.
+🔴 [5.2.7.unit_conversion_dimensionless_multiplier_1](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_multiplier_1.cellml): **Valid file failed validation.**
+* Output: ```maximum recursion depth exceeded while calling a Python object```
 
 [5.2.7.unit_conversion_dimensionless_multiplier_2](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_multiplier_2.cellml): Valid file passed validation.
 
-[5.2.7.unit_conversion_dimensionless_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_offset.cellml): Valid file passed validation.
+🔴 [5.2.7.unit_conversion_dimensionless_offset](../models_1_0/unit_conversion_convertible/5.2.7.unit_conversion_dimensionless_offset.cellml): **Valid file failed validation.**
+* Output: ```maximum recursion depth exceeded while calling a Python object```
 
 🔴 [5.2.7.unit_conversion_inconvertible_1](../models_1_0/unit_conversion_inconvertible/5.2.7.unit_conversion_inconvertible_1.cellml): **Valid file failed validation.**
 * Output: ```Cannot convert from 'volt' ([length] ** 2 * [mass] / [current] / [time] ** 3) to 'meter' ([length])```
@@ -2078,12 +2090,16 @@ Results per category
 [5.4.2.2.unit_units_local_3](../models_1_0/valid/5.4.2.2.unit_units_local_3.cellml): Valid file passed validation.
 
 🔴 [5.4.2.2.unit_units_local_4](../models_1_0/valid/5.4.2.2.unit_units_local_4.cellml): **Valid file failed validation.**
-* Output: ```'Unknown unit meter_per_second.'```
+* Output: ```'Unknown unit <meter_per_second>.'```
 
 
 ---
 
 ##### 5.4.2.3
+
+[5.4.2.3.unit_prefix_e_notation_int](../models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml): Error detected correctly.
+* Expected: ```Invalid attribute prefix```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute prefix for element unit. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
 [5.4.2.3.unit_prefix_integer](../models_1_0/valid/5.4.2.3.unit_prefix_integer.cellml): Valid file passed validation.
 
@@ -2095,7 +2111,7 @@ Results per category
 
 [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix```
-* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute prefix for element unit. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:10:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute prefix for element unit. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_INTERSEQ: Invalid sequence in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element units failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element units in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml:9:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
 🔶 [5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): **Invalid file failed for unexpected reason.**
 * Output: ```'e' is not defined in the unit registry```
@@ -2237,18 +2253,17 @@ Results per category
 [5.5.2.boolean_logic_xor_operand_error](../models_1_0/booleans/5.5.2.boolean_logic_xor_operand_error.cellml): Valid file passed validation.
 
 🔴 [5.5.2.boolean_trig_arccos](../models_1_0/booleans/5.5.2.boolean_trig_arccos.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 [5.5.2.boolean_trig_arccosh](../models_1_0/booleans/5.5.2.boolean_trig_arccosh.cellml): Valid file passed validation.
 
 🔴 [5.5.2.boolean_trig_arccot](../models_1_0/booleans/5.5.2.boolean_trig_arccot.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_arccoth](../models_1_0/booleans/5.5.2.boolean_trig_arccoth.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
-🔴 [5.5.2.boolean_trig_arccsc](../models_1_0/booleans/5.5.2.boolean_trig_arccsc.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+[5.5.2.boolean_trig_arccsc](../models_1_0/booleans/5.5.2.boolean_trig_arccsc.cellml): Valid file passed validation.
 
 [5.5.2.boolean_trig_arccsch](../models_1_0/booleans/5.5.2.boolean_trig_arccsch.cellml): Valid file passed validation.
 
@@ -2257,49 +2272,49 @@ Results per category
 [5.5.2.boolean_trig_arcsech](../models_1_0/booleans/5.5.2.boolean_trig_arcsech.cellml): Valid file passed validation.
 
 🔴 [5.5.2.boolean_trig_arcsin](../models_1_0/booleans/5.5.2.boolean_trig_arcsin.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_arcsinh](../models_1_0/booleans/5.5.2.boolean_trig_arcsinh.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_arctan](../models_1_0/booleans/5.5.2.boolean_trig_arctan.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_arctanh](../models_1_0/booleans/5.5.2.boolean_trig_arctanh.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_cos](../models_1_0/booleans/5.5.2.boolean_trig_cos.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_cosh](../models_1_0/booleans/5.5.2.boolean_trig_cosh.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_cot](../models_1_0/booleans/5.5.2.boolean_trig_cot.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_coth](../models_1_0/booleans/5.5.2.boolean_trig_coth.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_csc](../models_1_0/booleans/5.5.2.boolean_trig_csc.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_csch](../models_1_0/booleans/5.5.2.boolean_trig_csch.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_sec](../models_1_0/booleans/5.5.2.boolean_trig_sec.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_sech](../models_1_0/booleans/5.5.2.boolean_trig_sech.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_sin](../models_1_0/booleans/5.5.2.boolean_trig_sin.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_sinh](../models_1_0/booleans/5.5.2.boolean_trig_sinh.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_tan](../models_1_0/booleans/5.5.2.boolean_trig_tan.cellml): **Valid file failed validation.**
-* Output: ```'BooleanTrue' object has no attribute 'could_extract_minus_sign'```
+* Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```
 
 🔴 [5.5.2.boolean_trig_tanh](../models_1_0/booleans/5.5.2.boolean_trig_tanh.cellml): **Valid file failed validation.**
 * Output: ```'BooleanTrue' object has no attribute 'as_coefficient'```

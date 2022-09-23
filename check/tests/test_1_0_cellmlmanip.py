@@ -7,6 +7,7 @@ from __future__ import print_function, unicode_literals
 import logging
 import os
 import pytest
+import warnings
 
 import check
 from . import shared
@@ -14,7 +15,8 @@ from .. import cellmlmanip_validation as cm
 from .report import Report_1_0 as Report
 
 
-# Known instances where cellmlmanip says a valid file is invalid
+# Known instances where cellmlmanip says a valid file is invalid (or where
+# errors occur)
 false_negatives = {
     # Reactions
     '2.4.3.reaction_with_extensions': 'Reactions are not supported',
@@ -37,7 +39,7 @@ false_negatives = {
     '3.4.2.1.component_child_order_2': 'units inside components',
     '3.4.2.1.component_with_units': 'units inside components',
     '3.4.2.1.component_with_one_units': 'units inside components',
-    '3.4.3.3.variable_units_component': 'Unknown unit oranges',
+    '3.4.3.3.variable_units_component': 'Unknown unit <oranges>',
     # Algebraic models are not supported
     '4.algebraic_model': 'LHS should be a derivative or variable',
     '4.algebraic_ode_model': 'LHS should be a derivative or variable',
@@ -57,15 +59,21 @@ false_negatives = {
     # TODO Wrong error
     '4.2.3_5.2_mathml_derivatives_degree': 'not 0',
     '4.2.3_5.4_mathml_derivatives_with_units_degree': 'not 0',
+    # Boolean literals    
+    '4.2.3_6.7_mathml_logic_constants': "'BooleanTrue' object has no attr",
     # TODO Nan and Inf support
     '4.2.3_7.3_mathml_nan_inf': 'must be a sympy.Eq',
     # Semantics annotations are not supported
     '4.2.3_8.1_annotation': 'No handler for element <semantics>',
-    '4.2.3_8.2_annotation_xml': 'Unknown unit per_millisecond',
+    '4.2.3_8.2_annotation_xml': 'Unknown unit <per_millisecond>',
     # Component units are not supported
-    '4.4.3.1.cn_component_units': 'Unknown unit wooster',
+    '4.4.3.1.cn_component_units': 'Unknown unit <wooster>',
     # Celsius is not supported
     '5.2.1.units_celsius': 'celsius',
+    # Compatible units
+    '5.2.7.unit_conversion_dimensionless_exponent': 'maximum recursion depth',    
+    '5.2.7.unit_conversion_dimensionless_multiplier_1': 'maximum recursion',    
+    '5.2.7.unit_conversion_dimensionless_offset': 'maximum recursion depth',    
     # Incompatible units
     '5.2.7.unit_conversion_inconvertible_1': 'Cannot convert',
     '5.2.7.unit_conversion_new_base_units': 'Cannot convert',
@@ -114,7 +122,7 @@ false_negatives = {
     '5.5.2.boolean_trig_arccos': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arccot': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arccoth': "'BooleanTrue' object has no attribute",
-    '5.5.2.boolean_trig_arccsc': "'BooleanTrue' object has no attribute",
+    #'5.5.2.boolean_trig_arccsc': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arcsin': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arcsinh': "'BooleanTrue' object has no attribute",
     '5.5.2.boolean_trig_arctan': "'BooleanTrue' object has no attribute",
@@ -221,6 +229,8 @@ expected_messages = {
     '0.1.real_number_invalid_4': 'Invalid or unsupported',
     '0.1.real_number_invalid_5': 'Invalid or unsupported',
     '0.1.real_number_invalid_6': 'Invalid or unsupported',
+    '0.1.real_number_invalid_7': 'Invalid or unsupported',
+    '0.1.real_number_invalid_8': 'Invalid or unsupported',
     # Malformed identifier
     '2.4.1.identifier_empty': 'Invalid or unsupported',
     '2.4.1.identifier_only_underscore': 'Invalid or unsupported',
@@ -394,10 +404,10 @@ expected_messages = {
     '3.4.3.2.variable_name_duplicate': 'already exists',
     # 3.4.3.3 A variable must reference known units
     '3.4.3.3.variable_units_unknown':
-        'Unknown unit oranges',
+        'Unknown unit <oranges>',
     # 3.4.3.3 A variable cannot reference another component's units
     '3.4.3.3.variable_units_other_component':
-        'Unknown unit oranges',
+        'Unknown unit <oranges>',
     # 3.4.3.4 A public interface must be one of in/out/none
     '3.4.3.4.variable_interface_public_invalid':
         'Invalid attribute public_interface for element variable',
@@ -786,6 +796,8 @@ expected_messages = {
     '5.4.2.3.unit_prefix_real':
         'Invalid attribute prefix',
     '5.4.2.3.unit_prefix_real_int':
+        'Invalid attribute prefix',
+    '5.4.2.3.unit_prefix_e_notation_int':
         'Invalid attribute prefix',
     '5.4.2.3.unit_prefix_unknown':
         'Invalid attribute prefix',
@@ -1315,7 +1327,9 @@ class TestCellmlmanip(object):
     def test_valid_model(self, name, path, log):
 
         # Validate
-        ok, msg = cm.parse(path)
+        with warnings.catch_warnings() as w:
+            warnings.filterwarnings('ignore', category=DeprecationWarning)
+            ok, msg = cm.parse(path)
 
         # Report
         report = self._report
