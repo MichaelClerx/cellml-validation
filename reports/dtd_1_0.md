@@ -1,13 +1,13 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 72% according to spec (670 out of 926)
+* 72% according to spec (670 out of 927)
 * 329 out of 375 valid files passed
-* 341 out of 551 invalid files detected
+* 341 out of 552 invalid files detected
 
 Issues:
 * 46 valid files failed validation
-* 208 invalid files passed validation
+* 209 invalid files passed validation
 * 2 invalid files failed validation for the wrong reason
 
 Results per category
@@ -16,7 +16,7 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|10|0|44%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|11|0|42%|
 |[2. Fundamentals](#2-fundamentals)|5|95|29|6|2|72%|
 |[3. Model structure](#3-model-structure)|50|97|0|58|0|71%|
 |[4. Mathematics](#4-mathematics)|50|3|0|17|0|75%|
@@ -69,6 +69,8 @@ Results per category
 🔵 [0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): **Error not detected.**
 
 🔵 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): **Error not detected.**
+
+🔵 [0.1.real_number_invalid_9](../models_1_0/invalid/0.1.real_number_invalid_9.cellml): **Error not detected.**
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 

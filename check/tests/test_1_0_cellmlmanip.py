@@ -231,6 +231,7 @@ expected_messages = {
     '0.1.real_number_invalid_6': 'Invalid or unsupported',
     '0.1.real_number_invalid_7': 'Invalid or unsupported',
     '0.1.real_number_invalid_8': 'Invalid or unsupported',
+    '0.1.real_number_invalid_9': 'Invalid or unsupported',
     # Malformed identifier
     '2.4.1.identifier_empty': 'Invalid or unsupported',
     '2.4.1.identifier_only_underscore': 'Invalid or unsupported',

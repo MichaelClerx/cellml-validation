@@ -750,6 +750,7 @@ known_issues = {
     '0.1.real_number_invalid_6',
     '0.1.real_number_invalid_7',
     '0.1.real_number_invalid_8',
+    '0.1.real_number_invalid_9',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty',
     '2.4.1.identifier_only_underscore',

@@ -1,9 +1,9 @@
 # Cellmlmanip Validation - CellML 1.0
 
 Performance:
-* 75% according to spec (703 out of 926)
+* 75% according to spec (704 out of 927)
 * 264 out of 375 valid files passed
-* 439 out of 551 invalid files detected
+* 440 out of 552 invalid files detected
 
 Issues:
 * 111 valid files failed validation
@@ -16,7 +16,7 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|13|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|24|42|10|40|21|48%|
 |[3. Model structure](#3-model-structure)|43|147|7|8|0|92%|
 |[4. Mathematics](#4-mathematics)|31|16|19|2|2|67%|
@@ -89,6 +89,10 @@ Results per category
 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
 * Expected: ```Invalid or unsupported```
 * Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_8.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute initial_value for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_8.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_8.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
+
+[0.1.real_number_invalid_9](../models_1_0/invalid/0.1.real_number_invalid_9.cellml): Error detected correctly.
+* Expected: ```Invalid or unsupported```
+* Output: ```Invalid or unsupported CellML file. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_9.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_INVALIDATTR: Invalid attribute initial_value for element variable. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element variable in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_9.cellml:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element component failed to validate content. <string>:0:0:ERROR:RELAXNGV:RELAXNG_ERR_INTEREXTRA: Extra element component in interleave. /home/michael/dev/cellml/validation/models_1_0/invalid/0.1.real_number_invalid_9.cellml:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element model failed to validate content```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 

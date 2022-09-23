@@ -51,6 +51,8 @@ expected_messages = {
         'Invalid attribute initial_value for element variable',
     '0.1.real_number_invalid_8':
         'Invalid attribute initial_value for element variable',
+    '0.1.real_number_invalid_9':
+        'Invalid attribute initial_value for element variable',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         'Element component failed to validate',

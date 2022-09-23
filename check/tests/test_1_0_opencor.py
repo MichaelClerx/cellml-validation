@@ -220,6 +220,8 @@ expected_messages = {
         'Expected a real number, but didn\'t get one in a valid format',
     '0.1.real_number_invalid_8':
         'Expected a real number, but didn\'t get one in a valid format',
+    '0.1.real_number_invalid_9':
+        'variable in the same component',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         'A valid CellML identifier must contain at least one letter',

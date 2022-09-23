@@ -127,6 +127,8 @@ expected_messages = {
         'must be a real number',
     '0.1.real_number_invalid_6':
         'must be a real number',
+    '0.1.real_number_invalid_9':
+        'must be a real number',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         'valid CellML identifier',

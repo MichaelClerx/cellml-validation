@@ -1,9 +1,9 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 83% according to spec (772 out of 926)
+* 83% according to spec (773 out of 927)
 * 341 out of 375 valid files passed
-* 431 out of 551 invalid files detected
+* 432 out of 552 invalid files detected
 
 Issues:
 * 34 valid files failed validation
@@ -16,7 +16,7 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|2|0|88%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|11|0|2|0|89%|
 |[2. Fundamentals](#2-fundamentals)|27|85|7|0|18|81%|
 |[3. Model structure](#3-model-structure)|46|155|4|0|0|98%|
 |[4. Mathematics](#4-mathematics)|42|18|8|0|2|85%|
@@ -87,6 +87,10 @@ Results per category
 
 🔵 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): **Error not detected.**
 * Output: ```OK```
+
+[0.1.real_number_invalid_9](../models_1_0/invalid/0.1.real_number_invalid_9.cellml): Error detected correctly.
+* Expected: ```must be a real number```
+* Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 

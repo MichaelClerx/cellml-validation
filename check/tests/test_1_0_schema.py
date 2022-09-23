@@ -46,6 +46,8 @@ expected_messages = {
         'not accepted by the pattern',
     '0.1.real_number_invalid_8':
         'not accepted by the pattern',
+    '0.1.real_number_invalid_9':
+        'not accepted by the pattern',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         #"'name': '' is not a valid value",

@@ -1,9 +1,9 @@
 # Schema Validation - CellML 1.0
 
 Performance:
-* 72% according to spec (671 out of 926)
+* 72% according to spec (672 out of 927)
 * 375 out of 375 valid files passed
-* 296 out of 551 invalid files detected
+* 297 out of 552 invalid files detected
 
 Issues:
 * 0 valid files failed validation
@@ -16,7 +16,7 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|13|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|26|0|77|0|43%|
 |[3. Model structure](#3-model-structure)|50|97|0|58|0|71%|
 |[4. Mathematics](#4-mathematics)|50|2|0|18|0|74%|
@@ -89,6 +89,10 @@ Results per category
 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
 * Expected: ```not accepted by the pattern```
 * Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value 'inf' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
+
+[0.1.real_number_invalid_9](../models_1_0/invalid/0.1.real_number_invalid_9.cellml): Error detected correctly.
+* Expected: ```not accepted by the pattern```
+* Output: ```Error on line 7: Element 'cellml:variable', attribute 'initial_value': [facet 'pattern'] The value '.' is not accepted by the pattern '[+-]?((\.[0-9]+)|([0-9]+\.?[0-9]*))([eE][+-]?[0-9]+)?'.```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 

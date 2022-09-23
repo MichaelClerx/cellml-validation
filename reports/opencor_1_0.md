@@ -1,9 +1,9 @@
 # OpenCOR / CellML API Validation - CellML 1.0
 
 Performance:
-* 80% according to spec (748 out of 926)
+* 80% according to spec (749 out of 927)
 * 341 out of 375 valid files passed
-* 407 out of 551 invalid files detected
+* 408 out of 552 invalid files detected
 
 Issues:
 * 34 valid files failed validation
@@ -16,7 +16,7 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|13|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|19|37|15|66|0|40%|
 |[3. Model structure](#3-model-structure)|50|155|0|0|0|100%|
 |[4. Mathematics](#4-mathematics)|45|14|5|6|0|84%|
@@ -193,6 +193,19 @@ Results per category
 * Output:
   * ```[Error] [4:6] Variable has initial_value attribute which is a CellML identifier which does not name a variable in the same component.```
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
+  * ```Traceback (most recent call last):```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```    from . import core```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```    from . import _dtype_ctypes```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```    import _ctypes```
+  * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
+
+[0.1.real_number_invalid_9](../models_1_0/invalid/0.1.real_number_invalid_9.cellml): Error detected correctly.
+* Expected: ```variable in the same component```
+* Output:
+  * ```[Error] [4:6] Variable has initial_value attribute which is a CellML identifier which does not name a variable in the same component.```
   * ```Traceback (most recent call last):```
   * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```

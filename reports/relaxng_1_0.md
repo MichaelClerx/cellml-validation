@@ -1,9 +1,9 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (720 out of 926)
+* 77% according to spec (721 out of 927)
 * 373 out of 375 valid files passed
-* 347 out of 551 invalid files detected
+* 348 out of 552 invalid files detected
 
 Issues:
 * 2 valid files failed validation
@@ -16,7 +16,7 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|13|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|42|0|61|0|55%|
 |[3. Model structure](#3-model-structure)|50|105|0|50|0|75%|
 |[4. Mathematics](#4-mathematics)|50|3|0|17|0|75%|
@@ -122,6 +122,15 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
+* Expected: ```Invalid attribute initial_value for element variable```
+* Output:
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[0.1.real_number_invalid_9](../models_1_0/invalid/0.1.real_number_invalid_9.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
   * ```Error on line 7: Invalid attribute initial_value for element variable```
