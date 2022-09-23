@@ -1,13 +1,13 @@
 # DTD Validation - CellML 1.0
 
 Performance:
-* 72% according to spec (670 out of 923)
+* 72% according to spec (670 out of 926)
 * 329 out of 375 valid files passed
-* 341 out of 548 invalid files detected
+* 341 out of 551 invalid files detected
 
 Issues:
 * 46 valid files failed validation
-* 205 invalid files passed validation
+* 208 invalid files passed validation
 * 2 invalid files failed validation for the wrong reason
 
 Results per category
@@ -16,11 +16,11 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|8|0|50%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|2|0|10|0|44%|
 |[2. Fundamentals](#2-fundamentals)|5|95|29|6|2|72%|
 |[3. Model structure](#3-model-structure)|50|97|0|58|0|71%|
 |[4. Mathematics](#4-mathematics)|50|3|0|17|0|75%|
-|[5. Units](#5-units)|136|32|0|56|0|75%|
+|[5. Units](#5-units)|136|32|0|57|0|74%|
 |[6. Grouping](#6-grouping)|15|48|2|30|0|66%|
 |[7. Reactions](#7-reactions)|5|49|0|30|0|64%|
 |[8. Metadata framework](#8-metadata-framework)|15|15|15|0|0|66%|
@@ -65,6 +65,10 @@ Results per category
 🔵 [0.1.real_number_invalid_5](../models_1_0/invalid/0.1.real_number_invalid_5.cellml): **Error not detected.**
 
 🔵 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): **Error not detected.**
+
+🔵 [0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): **Error not detected.**
+
+🔵 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): **Error not detected.**
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -2241,6 +2245,8 @@ Results per category
 ---
 
 ##### 5.4.2.3
+
+🔵 [5.4.2.3.unit_prefix_e_notation_int](../models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml): **Error not detected.**
 
 [5.4.2.3.unit_prefix_integer](../models_1_0/valid/5.4.2.3.unit_prefix_integer.cellml): Valid file passed validation.
 

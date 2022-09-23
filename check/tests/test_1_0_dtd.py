@@ -748,6 +748,8 @@ known_issues = {
     '0.1.real_number_invalid_4',
     '0.1.real_number_invalid_5',
     '0.1.real_number_invalid_6',
+    '0.1.real_number_invalid_7',
+    '0.1.real_number_invalid_8',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty',
     '2.4.1.identifier_only_underscore',
@@ -917,6 +919,7 @@ known_issues = {
     '5.4.2.3.unit_prefix_real_int',
     '5.4.2.3.unit_prefix_spaces',
     '5.4.2.3.unit_prefix_unknown',
+    '5.4.2.3.unit_prefix_e_notation_int',
     # 5.4.2.4 A unit exponent must be a real number
     '5.4.2.4.unit_exponent_invalid',
     # 5.4.2.5 A unit multiplier must be a real number
