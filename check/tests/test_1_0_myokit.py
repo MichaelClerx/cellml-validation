@@ -7,6 +7,7 @@ from __future__ import print_function, unicode_literals
 import logging
 import os
 import pytest
+import warnings
 
 import check
 from . import shared
@@ -1074,6 +1075,9 @@ expected_messages = {
 # Invalid models for which validation is not expected to pick up the (correct)
 # error.
 known_issues = {
+    # Myokit accepts 'nan' and 'inf' as floats
+    '0.1.real_number_invalid_7',
+    '0.1.real_number_invalid_8',
     # Reactions are not supported
     # No reaction support
     '2.4.3.bad_cmeta_attribute_in_reaction',
@@ -1109,6 +1113,7 @@ known_issues = {
     '5.4.1.1.units_base_units_with_children',
     # Myokit accepts integers in real notation
     '5.4.2.3.unit_prefix_real_int',
+    '5.4.2.3.unit_prefix_e_notation_int',
     # Unit offsets are not supported
     '5.4.2.7.unit_offset_and_exponent',
     '5.4.2.7.unit_offset_and_siblings_1',
@@ -1234,7 +1239,9 @@ class TestMyokit(object):
     def test_valid_model(self, name, path, log):
 
         # Validate model
-        ok, msg = myokit.parse(path)
+        with warnings.catch_warnings() as w:
+            warnings.filterwarnings('ignore', module='myokit')
+            ok, msg = myokit.parse(path)
 
         # Report
         if ok:

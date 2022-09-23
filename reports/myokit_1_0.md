@@ -1,14 +1,14 @@
 # Myokit - CellML 1.0
 
 Performance:
-* 83% according to spec (772 out of 923)
+* 83% according to spec (772 out of 926)
 * 341 out of 375 valid files passed
-* 431 out of 548 invalid files detected
+* 431 out of 551 invalid files detected
 
 Issues:
 * 34 valid files failed validation
-* 15 invalid files passed validation
-* 102 invalid files failed validation for the wrong reason
+* 17 invalid files passed validation
+* 103 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -16,11 +16,11 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|2|0|88%|
 |[2. Fundamentals](#2-fundamentals)|27|85|7|0|18|81%|
 |[3. Model structure](#3-model-structure)|46|155|4|0|0|98%|
 |[4. Mathematics](#4-mathematics)|42|18|8|0|2|85%|
-|[5. Units](#5-units)|133|82|3|6|0|95%|
+|[5. Units](#5-units)|133|82|3|6|1|95%|
 |[6. Grouping](#6-grouping)|17|69|0|9|0|90%|
 |[7. Reactions](#7-reactions)|0|0|5|0|79|0%|
 |[8. Metadata framework](#8-metadata-framework)|24|12|6|0|3|80%|
@@ -81,6 +81,12 @@ Results per category
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
 * Expected: ```must be a real number```
 * Output: ```Error on line 7. If given, a variable initial_value must be a real number (3.4.3.7).```
+
+🔵 [0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): **Error not detected.**
+* Output: ```OK```
+
+🔵 [0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): **Error not detected.**
+* Output: ```OK```
 
 [0.1.real_numbers](../models_1_0/valid/0.1.real_numbers.cellml): Valid file passed validation.
 
@@ -2183,6 +2189,10 @@ Results per category
 ---
 
 ##### 5.4.2.3
+
+🔶 [5.4.2.3.unit_prefix_e_notation_int](../models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output: ```Unit prefix too large: 10^1000.0```
 
 [5.4.2.3.unit_prefix_integer](../models_1_0/valid/5.4.2.3.unit_prefix_integer.cellml): Valid file passed validation.
 
