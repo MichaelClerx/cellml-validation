@@ -42,27 +42,51 @@ Older files:
 * [CellML 1.0 XML Schema](cellml_1_0/deprecated/cellml_1_0_simple.xsd) written by Autumn Cuellar, Auckland Bioengineering Institute
 * [CellML 1.0 DTD](cellml_1_0/deprecated/cellml_1_0.dtd) by Warren Hedley, Auckland Bioengineering Institute
 
-## Tests
+## The `check` utility
 
-The `check` directory contains a Python module that can run the test files through various validation tools.
+The `check` directory contains a Python module that can validate or convert CellML files, and which contains unit tests for various tools.
+
+### Installation
+
+1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venv/bin/activate`
+2. Install the requirements using pip: `$ pip install -r requirements.txt`
+
+To add validation tools:
+- Use `pip` to install Myokit
+- Use `pip` to install cellmlmanip
+- Download and install OpenCOR, and update `check/opencor_validation.py` with the path to your OpenCOR installation.
+
+### Command-line use
+
+To validate a single file use e.g.
+```
+python -m check schema_1_0 path/to/file.cellml
+```
+
+To convert a CellML file using XSLT use e.g.
+```
+python -m check xslt_1_to_2 original.cellml converted.cellml
+```
+
+For a full list of options use
+```
+python -m check
+```
+
+### Unit tests
+
+The `check/tests` directory contains `pytest` tests that run all the test files through the supported validation tools, check the result, and generate reports (see below).
 Dependening on how you look at it, this constitutes a test of the test files, of the tools, or both.
 
-- Installation
-  1. Create a virtual environment for python 3: `$ virtualenv venv -p python3` and activate it with `$ source venv/bin/activate`
-  2. Install the requirements using pip: `$ pip install -r requirements.txt`
-- To validate a single file use e.g.
-  ```
-  python -m check schema_1_0 models_1_0/valid/empty-model.cellml
-  ```
-  To see more options simply type
-  ```
-  python -m check
-  ```
-- To run the full test suite type
-  ```
-  pytest
-  ```
-  To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
+To run the full test suite type
+```
+pytest
+```
+To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
+
+Test output should consist of `passes` (the validator is correct, and we expected this) and `xfails` (the validator is wrong, and we expected this).
+An error or `fail` result indicates the test is behaving in an unexpected way (suggesting that the `check` module should be updated).
+For a full guide to interpreting the results, see the docstrings for `assert_valid` and `assert_invalid` in `check/tests/shared.py`.
 
 ## Reports
 
