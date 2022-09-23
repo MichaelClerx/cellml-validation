@@ -216,6 +216,10 @@ expected_messages = {
         'Expected a real number, but didn\'t get one in a valid format',
     '0.1.real_number_invalid_6':
         'Expected a real number, but didn\'t get one in a valid format',
+    '0.1.real_number_invalid_7':
+        'Expected a real number, but didn\'t get one in a valid format',
+    '0.1.real_number_invalid_8':
+        'Expected a real number, but didn\'t get one in a valid format',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         'A valid CellML identifier must contain at least one letter',
@@ -1196,6 +1200,7 @@ known_issues = {
     '5.4.2.3.unit_prefix_real_int',
     '5.4.2.3.unit_prefix_spaces',
     '5.4.2.3.unit_prefix_unknown',
+    '5.4.2.3.unit_prefix_e_notation_int',
     # 5.4.2.4 A unit exponent must be a real number
     # Causes error message code to break
     '5.4.2.4.unit_exponent_invalid',

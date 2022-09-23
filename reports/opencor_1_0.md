@@ -1,14 +1,14 @@
 # OpenCOR / CellML API Validation - CellML 1.0
 
 Performance:
-* 80% according to spec (746 out of 923)
+* 80% according to spec (748 out of 926)
 * 341 out of 375 valid files passed
-* 405 out of 548 invalid files detected
+* 407 out of 551 invalid files detected
 
 Issues:
 * 34 valid files failed validation
 * 135 invalid files passed validation
-* 8 invalid files failed validation for the wrong reason
+* 9 invalid files failed validation for the wrong reason
 
 Results per category
 
@@ -16,11 +16,11 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|19|37|15|66|0|40%|
 |[3. Model structure](#3-model-structure)|50|155|0|0|0|100%|
 |[4. Mathematics](#4-mathematics)|45|14|5|6|0|84%|
-|[5. Units](#5-units)|126|74|10|6|8|89%|
+|[5. Units](#5-units)|126|74|10|6|9|88%|
 |[6. Grouping](#6-grouping)|16|65|1|13|0|85%|
 |[7. Reactions](#7-reactions)|5|50|0|29|0|65%|
 |[8. Metadata framework](#8-metadata-framework)|30|0|0|15|0|66%|
@@ -42,11 +42,11 @@ Results per category
 * Output:
   * ```[Error] [0:0] The model could not be loaded (model is not CellML).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -55,11 +55,11 @@ Results per category
 * Output:
   * ```[Error] [0:0] The model could not be loaded (model is not CellML).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -68,11 +68,11 @@ Results per category
 * Output:
   * ```[Error] [0:0] The model could not be loaded (badxml/6/0//).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -81,11 +81,11 @@ Results per category
 * Output:
   * ```[Error] [0:0] The model could not be loaded (badxml/6/0//).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -99,11 +99,11 @@ Results per category
 * Output:
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -112,11 +112,11 @@ Results per category
 * Output:
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -125,11 +125,11 @@ Results per category
 * Output:
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -138,11 +138,11 @@ Results per category
 * Output:
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -152,11 +152,11 @@ Results per category
   * ```[Error] [4:6] Variable has initial_value attribute which is a CellML identifier which does not name a variable in the same component.```
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -166,11 +166,39 @@ Results per category
   * ```[Error] [4:6] Variable has initial_value attribute which is a CellML identifier which does not name a variable in the same component.```
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```    import _ctypes```
+  * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
+
+[0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): Error detected correctly.
+* Expected: ```Expected a real number, but didn't get one in a valid format```
+* Output:
+  * ```[Error] [4:6] Variable has initial_value attribute which is a CellML identifier which does not name a variable in the same component.```
+  * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
+  * ```Traceback (most recent call last):```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```    from . import core```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```    from . import _dtype_ctypes```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```    import _ctypes```
+  * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
+
+[0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
+* Expected: ```Expected a real number, but didn't get one in a valid format```
+* Output:
+  * ```[Error] [4:6] Variable has initial_value attribute which is a CellML identifier which does not name a variable in the same component.```
+  * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
+  * ```Traceback (most recent call last):```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```    from . import core```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```    from . import _dtype_ctypes```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -199,11 +227,11 @@ Results per category
 * Output:
   * ```[Error] [3:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -212,11 +240,11 @@ Results per category
 * Output:
   * ```[Error] [3:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -225,33 +253,33 @@ Results per category
 * Output:
   * ```[Error] [3:9] A valid CellML identifier must only contain alphanumeric characters from the US-ASCII character set and the underscore character (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.1.identifier_unexpected_character_2](../models_1_0/invalid/2.4.1.identifier_unexpected_character_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.1.identifier_unexpected_character_unicode](../models_1_0/invalid/2.4.1.identifier_unexpected_character_unicode.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -260,11 +288,11 @@ Results per category
   * ```[Error] [13:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```[Error] [15:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -278,11 +306,11 @@ Results per category
 * Output:
   * ```[Error] [2:142] Unexpected attribute fruit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -291,11 +319,11 @@ Results per category
 * Output:
   * ```[Error] [2:205] Unexpected attribute fruit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -304,11 +332,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element fruit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -320,11 +348,11 @@ Results per category
   * ```[Error] [3:4] Element import is invalid in this version of CellML.```
   * ```[Error] [4:6] Element units is invalid in this version of CellML.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -336,330 +364,330 @@ Results per category
 🔵 [2.4.3.bad_cmeta_attribute_in_component](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_component_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_component_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_connection](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_connection.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_group](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_group.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_map_components](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_components.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_map_variables](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_map_variables.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_model](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_model.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_reaction](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_reaction.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_relationship_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_role](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_role.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_unit](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_unit.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_units_1](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_units_2](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_units_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_variable](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_cmeta_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.bad_cmeta_attribute_in_variable_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_component](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_component_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_component_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_connection](../models_1_0/invalid/2.4.3.bad_rdf_element_in_connection.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_group](../models_1_0/invalid/2.4.3.bad_rdf_element_in_group.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_map_components](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_components.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_map_variables](../models_1_0/invalid/2.4.3.bad_rdf_element_in_map_variables.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_model](../models_1_0/invalid/2.4.3.bad_rdf_element_in_model.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_reaction](../models_1_0/invalid/2.4.3.bad_rdf_element_in_reaction.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_relationship_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_relationship_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_role](../models_1_0/invalid/2.4.3.bad_rdf_element_in_role.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_unit](../models_1_0/invalid/2.4.3.bad_rdf_element_in_unit.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_units_1](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_units_2](../models_1_0/invalid/2.4.3.bad_rdf_element_in_units_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_variable](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.bad_rdf_element_in_variable_ref](../models_1_0/invalid/2.4.3.bad_rdf_element_in_variable_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -667,11 +695,11 @@ Results per category
 * Output:
   * ```[Warning] [3:4] Attribute name in namespace http://www.cellml.org/cellml/1.0#is not allowed in extension elements.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -679,176 +707,176 @@ Results per category
 * Output:
   * ```[Warning] [3:4] Element cellml:component in namespace http://www.cellml.org/cellml/1.0#is not allowed in extension elements.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_component](../models_1_0/invalid/2.4.3.cmeta_element_in_component.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_component_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_component_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_connection](../models_1_0/invalid/2.4.3.cmeta_element_in_connection.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_group](../models_1_0/invalid/2.4.3.cmeta_element_in_group.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_map_components](../models_1_0/invalid/2.4.3.cmeta_element_in_map_components.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_map_variables](../models_1_0/invalid/2.4.3.cmeta_element_in_map_variables.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_model](../models_1_0/invalid/2.4.3.cmeta_element_in_model.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_reaction](../models_1_0/invalid/2.4.3.cmeta_element_in_reaction.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_relationship_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_relationship_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_role](../models_1_0/invalid/2.4.3.cmeta_element_in_role.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_unit](../models_1_0/invalid/2.4.3.cmeta_element_in_unit.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_units_1](../models_1_0/invalid/2.4.3.cmeta_element_in_units_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_units_2](../models_1_0/invalid/2.4.3.cmeta_element_in_units_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_variable](../models_1_0/invalid/2.4.3.cmeta_element_in_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.cmeta_element_in_variable_ref](../models_1_0/invalid/2.4.3.cmeta_element_in_variable_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -869,11 +897,11 @@ Results per category
 * Output:
   * ```[Error] [3:24] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -882,11 +910,11 @@ Results per category
 * Output:
   * ```[Error] [8:33] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -895,11 +923,11 @@ Results per category
 * Output:
   * ```[Error] [9:15] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -908,11 +936,11 @@ Results per category
 * Output:
   * ```[Error] [5:15] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -921,11 +949,11 @@ Results per category
 * Output:
   * ```[Error] [4:49] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -934,11 +962,11 @@ Results per category
 * Output:
   * ```[Error] [11:17] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -947,11 +975,11 @@ Results per category
 * Output:
   * ```[Error] [2:244] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -960,11 +988,11 @@ Results per category
 * Output:
   * ```[Error] [5:17] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -972,11 +1000,11 @@ Results per category
 * Expected: ```Unexpected attribute```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -985,11 +1013,11 @@ Results per category
 * Output:
   * ```[Error] [7:37] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -998,11 +1026,11 @@ Results per category
 * Output:
   * ```[Error] [4:17] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1011,11 +1039,11 @@ Results per category
 * Output:
   * ```[Error] [3:29] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1024,11 +1052,11 @@ Results per category
 * Output:
   * ```[Error] [4:30] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1037,11 +1065,11 @@ Results per category
 * Output:
   * ```[Error] [4:26] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1050,11 +1078,11 @@ Results per category
 * Output:
   * ```[Error] [6:19] Unexpected attribute sum found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1063,165 +1091,165 @@ Results per category
 🔵 [2.4.3.rdf_attribute_in_component](../models_1_0/invalid/2.4.3.rdf_attribute_in_component.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_component_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_component_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_connection](../models_1_0/invalid/2.4.3.rdf_attribute_in_connection.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_group](../models_1_0/invalid/2.4.3.rdf_attribute_in_group.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_map_components](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_components.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_map_variables](../models_1_0/invalid/2.4.3.rdf_attribute_in_map_variables.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_model](../models_1_0/invalid/2.4.3.rdf_attribute_in_model.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_reaction](../models_1_0/invalid/2.4.3.rdf_attribute_in_reaction.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_relationship_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_relationship_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_role](../models_1_0/invalid/2.4.3.rdf_attribute_in_role.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_unit](../models_1_0/invalid/2.4.3.rdf_attribute_in_unit.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_units_1](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_units_2](../models_1_0/invalid/2.4.3.rdf_attribute_in_units_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_variable](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [2.4.3.rdf_attribute_in_variable_ref](../models_1_0/invalid/2.4.3.rdf_attribute_in_variable_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1243,11 +1271,11 @@ Results per category
 * Output:
   * ```[Error] [3:15] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1255,11 +1283,11 @@ Results per category
 * Output:
   * ```[Error] [8:33] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1267,11 +1295,11 @@ Results per category
 * Output:
   * ```[Error] [9:15] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1279,11 +1307,11 @@ Results per category
 * Output:
   * ```[Error] [5:15] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1291,11 +1319,11 @@ Results per category
 * Output:
   * ```[Error] [4:49] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1303,11 +1331,11 @@ Results per category
 * Output:
   * ```[Error] [11:17] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1315,11 +1343,11 @@ Results per category
 * Output:
   * ```[Error] [2:164] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1327,11 +1355,11 @@ Results per category
 * Output:
   * ```[Error] [5:17] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1341,11 +1369,11 @@ Results per category
 * Output:
   * ```[Error] [7:21] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1353,11 +1381,11 @@ Results per category
 * Output:
   * ```[Error] [4:17] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1365,11 +1393,11 @@ Results per category
 * Output:
   * ```[Error] [4:17] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1377,11 +1405,11 @@ Results per category
 * Output:
   * ```[Error] [4:17] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1389,11 +1417,11 @@ Results per category
 * Output:
   * ```[Error] [4:17] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1401,11 +1429,11 @@ Results per category
 * Output:
   * ```[Error] [6:19] Unexpected attribute href found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1427,11 +1455,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1440,11 +1468,11 @@ Results per category
 * Output:
   * ```[Error] [8:8] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1453,11 +1481,11 @@ Results per category
 * Output:
   * ```[Error] [9:4] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1466,11 +1494,11 @@ Results per category
 * Output:
   * ```[Error] [5:4] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1479,11 +1507,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1492,11 +1520,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1505,11 +1533,11 @@ Results per category
 * Output:
   * ```[Error] [2:131] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1518,11 +1546,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1531,11 +1559,11 @@ Results per category
 * Output:
   * ```[Error] [6:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1544,11 +1572,11 @@ Results per category
 * Output:
   * ```[Error] [7:10] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1557,11 +1585,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1570,11 +1598,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1583,11 +1611,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1596,11 +1624,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1609,11 +1637,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1628,11 +1656,11 @@ Results per category
   * ```[Error] [10:6] Component_1 attribute doesn't refer to a valid component.```
   * ```[Error] [10:6] Invalid component referenced by component_1 attribute.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1644,11 +1672,11 @@ Results per category
 🔵 [2.5.2.attribute_in_cellml_namespace](../models_1_0/invalid/2.5.2.attribute_in_cellml_namespace.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1670,11 +1698,11 @@ Results per category
 * Output:
   * ```[Error] [2:131] The CellML specification says the name attribute is required here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1683,11 +1711,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1702,11 +1730,11 @@ Results per category
 * Output:
   * ```[Error] [5:4] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1715,11 +1743,11 @@ Results per category
 * Output:
   * ```[Error] [9:4] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1728,11 +1756,11 @@ Results per category
 * Output:
   * ```[Error] [6:4] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1741,11 +1769,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1762,11 +1790,11 @@ Results per category
 * Output:
   * ```[Error] [6:4] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1775,11 +1803,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1788,11 +1816,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1801,11 +1829,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1816,11 +1844,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1829,11 +1857,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1847,11 +1875,11 @@ Results per category
 * Output:
   * ```[Error] [2:144] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1871,11 +1899,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] The CellML specification says the name attribute is required here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1884,11 +1912,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1897,11 +1925,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1910,11 +1938,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1923,11 +1951,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1936,11 +1964,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1949,11 +1977,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1964,11 +1992,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -1987,11 +2015,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2000,11 +2028,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2013,11 +2041,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2028,11 +2056,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2048,11 +2076,11 @@ Results per category
 * Output:
   * ```[Error] [4:4] More than one component in the model named c1.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2061,11 +2089,11 @@ Results per category
 * Output:
   * ```[Error] [3:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2079,11 +2107,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] The CellML specification says the name attribute is required here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2093,11 +2121,11 @@ Results per category
   * ```[Error] [4:6] Each  /  element MUST define a units attribute (section 3.4.3.1 / 5.4.3.1).```
   * ```[Error] [4:6] Invalid units on variable: .```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2106,11 +2134,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2119,11 +2147,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2132,11 +2160,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2145,11 +2173,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2162,11 +2190,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2175,11 +2203,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2188,11 +2216,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2201,11 +2229,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2214,11 +2242,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2227,11 +2255,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2240,11 +2268,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2253,11 +2281,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2266,11 +2294,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2279,11 +2307,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2292,11 +2320,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2312,11 +2340,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] There is more than one variable in the same component called x.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2325,11 +2353,11 @@ Results per category
 * Output:
   * ```[Error] [4:11] A valid CellML identifier must only contain alphanumeric characters from the US-ASCII character set and the underscore character (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2351,11 +2379,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Invalid units on variable: oranges.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2366,11 +2394,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Invalid units on variable: oranges.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2384,11 +2412,11 @@ Results per category
 * Output:
   * ```[Error] [4:32] If present, the value of the public_interface / private_interface attribute MUST be "in", "out", or "none" (section 3.4.3.4 / 3.4.3.5).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2402,11 +2430,11 @@ Results per category
 * Output:
   * ```[Error] [4:33] If present, the value of the public_interface / private_interface attribute MUST be "in", "out", or "none" (section 3.4.3.4 / 3.4.3.5).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2420,11 +2448,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Cannot have two in interfaces on variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2438,11 +2466,11 @@ Results per category
 * Output:
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2451,11 +2479,11 @@ Results per category
 * Output:
   * ```[Error] [4:20] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2469,11 +2497,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Variables with public or private interfaces of in cannot have initial value attributes.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2482,11 +2510,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Variables with public or private interfaces of in cannot have initial value attributes.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2501,11 +2529,11 @@ Results per category
   * ```[Error] [3:4] Each  element MUST contain at least one  element (section 3.4.4.1).```
   * ```[Error] [3:4] Each  element MUST contain exactly one  element (section 3.4.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2514,11 +2542,11 @@ Results per category
 * Output:
   * ```[Error] [11:4] Each  element MUST contain exactly one  element (section 3.4.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2528,11 +2556,11 @@ Results per category
   * ```[Error] [16:6] Each  element MUST contain exactly one  element (section 3.4.4.1).```
   * ```[Error] [18:6] Variable_2 attribute doesn't refer to a valid variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2541,11 +2569,11 @@ Results per category
 * Output:
   * ```[Error] [9:4] Each  element MUST contain at least one  element (section 3.4.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2554,11 +2582,11 @@ Results per category
 * Output:
   * ```[Error] [9:4] Each  element MUST contain at least one  element (section 3.4.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2568,11 +2596,11 @@ Results per category
   * ```[Error] [3:4] Each  element MUST contain at least one  element (section 3.4.4.1).```
   * ```[Error] [3:4] Each  element MUST contain exactly one  element (section 3.4.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2581,11 +2609,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2594,11 +2622,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2607,11 +2635,11 @@ Results per category
 * Output:
   * ```[Error] [15:6] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2620,11 +2648,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2635,11 +2663,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2648,11 +2676,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2661,11 +2689,11 @@ Results per category
 * Output:
   * ```[Error] [9:9] Unexpected attribute name found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2676,11 +2704,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2689,11 +2717,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2702,11 +2730,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2715,11 +2743,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2728,11 +2756,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2741,11 +2769,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2754,11 +2782,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2776,11 +2804,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Each  element MUST define a component_1 attribute (section 3.4.5.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2789,11 +2817,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Each  element MUST define a component_2 attribute (section 3.4.5.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2802,11 +2830,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2815,11 +2843,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2828,11 +2856,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2841,11 +2869,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2854,11 +2882,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2867,11 +2895,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2880,11 +2908,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2893,11 +2921,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2906,11 +2934,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2919,11 +2947,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2932,11 +2960,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2945,11 +2973,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2958,11 +2986,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2971,11 +2999,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -2984,11 +3012,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3003,11 +3031,11 @@ Results per category
   * ```[Error] [5:6] Component_1 attribute doesn't refer to a valid component.```
   * ```[Error] [5:6] Invalid component referenced by component_1 attribute.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3022,11 +3050,11 @@ Results per category
   * ```[Error] [5:6] Component_2 attribute doesn't refer to a valid component.```
   * ```[Error] [5:6] Invalid component referenced by component_2 attribute.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3042,11 +3070,11 @@ Results per category
   * ```[Error] [4:6] It is not valid to map a component to itself.```
   * ```[Error] [5:6] Mapping variable_1 has public interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3056,11 +3084,11 @@ Results per category
   * ```[Error] [8:6] The can only be a single connection element for each pair of components in the model.```
   * ```[Error] [8:6] There is more than one connection element for the same pair of components.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3070,11 +3098,11 @@ Results per category
   * ```[Error] [8:6] The can only be a single connection element for each pair of components in the model.```
   * ```[Error] [8:6] There is more than one connection element for the same pair of components.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3089,11 +3117,11 @@ Results per category
   * ```[Error] [8:6] More than one connection to in interface of variable.```
   * ```[Error] [13:6] Connection of the same two variables more than once.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3103,11 +3131,11 @@ Results per category
   * ```[Error] [5:6] More than one connection to in interface of variable.```
   * ```[Error] [13:6] Connection of the same two variables more than once.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3117,11 +3145,11 @@ Results per category
   * ```[Error] [11:6] Each  element MUST define a variable_1 attribute (section 3.4.6.1).```
   * ```[Error] [11:6] Variable_1 attribute doesn't refer to a valid variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3131,11 +3159,11 @@ Results per category
   * ```[Error] [11:6] Each  element MUST define a variable_2 attribute (section 3.4.6.1).```
   * ```[Error] [11:6] Variable_2 attribute doesn't refer to a valid variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3144,11 +3172,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3157,11 +3185,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3170,11 +3198,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3183,11 +3211,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3196,11 +3224,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3209,11 +3237,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3222,11 +3250,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3235,11 +3263,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3248,11 +3276,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3261,11 +3289,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3274,11 +3302,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3287,11 +3315,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3300,11 +3328,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3313,11 +3341,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3326,11 +3354,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3344,11 +3372,11 @@ Results per category
 * Output:
   * ```[Error] [9:6] Variable_1 attribute doesn't refer to a valid variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3362,11 +3390,11 @@ Results per category
 * Output:
   * ```[Error] [9:6] Variable_2 attribute doesn't refer to a valid variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3384,11 +3412,11 @@ Results per category
 * Output:
   * ```[Error] [6:6] More than one connection to in interface of variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3397,11 +3425,11 @@ Results per category
 * Output:
   * ```[Error] [6:6] More than one connection to in interface of variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3410,11 +3438,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 has private interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3423,11 +3451,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 has private interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3436,11 +3464,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_2 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3449,11 +3477,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_2 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3463,11 +3491,11 @@ Results per category
   * ```[Error] [24:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```[Error] [25:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3479,11 +3507,11 @@ Results per category
   * ```[Error] [25:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [25:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3493,11 +3521,11 @@ Results per category
   * ```[Error] [26:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```[Error] [27:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3509,11 +3537,11 @@ Results per category
   * ```[Error] [27:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [27:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3522,11 +3550,11 @@ Results per category
 * Output:
   * ```[Error] [26:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3536,11 +3564,11 @@ Results per category
   * ```[Error] [26:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```[Error] [27:6] Mapping variable_1 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3550,11 +3578,11 @@ Results per category
   * ```[Error] [21:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```[Error] [22:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3566,11 +3594,11 @@ Results per category
   * ```[Error] [22:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [22:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3580,11 +3608,11 @@ Results per category
   * ```[Error] [21:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```[Error] [22:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3596,11 +3624,11 @@ Results per category
   * ```[Error] [22:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [22:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3610,11 +3638,11 @@ Results per category
   * ```[Error] [24:6] Connection of components which are encapsulated in the hidden set of each other.```
   * ```[Error] [25:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3626,11 +3654,11 @@ Results per category
   * ```[Error] [25:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [25:6] Mapping variable_2 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3641,11 +3669,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_2 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3656,11 +3684,11 @@ Results per category
   * ```[Error] [19:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [19:6] Mapping variable_2 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3669,11 +3697,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3686,11 +3714,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 has private interface of in but variable_2 also has public interface of in.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3699,11 +3727,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 has private interface of in but variable_2 also has public interface of in.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3716,11 +3744,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] More than one connection to in interface of variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3729,11 +3757,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 has private interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3742,11 +3770,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 has private interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3755,11 +3783,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3768,11 +3796,11 @@ Results per category
 * Output:
   * ```[Error] [19:6] Mapping variable_1 which has private interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3787,11 +3815,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Mapping variable_1 has public interface of in but variable_2 also has public interface of in.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3804,11 +3832,11 @@ Results per category
 * Output:
   * ```[Error] [8:6] More than one connection to in interface of variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3817,11 +3845,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] More than one connection to in interface of variable.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3832,11 +3860,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Mapping variable_1 has public interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3845,11 +3873,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Mapping variable_1 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3858,11 +3886,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Mapping variable_1 has public interface of out but variable_2 also has public interface of out.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3873,11 +3901,11 @@ Results per category
   * ```[Error] [11:6] Mapping variable_1 which has public interface of none.```
   * ```[Error] [11:6] Mapping variable_2 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3886,11 +3914,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Mapping variable_2 which has public interface of none.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3899,11 +3927,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Mapping variable_1 has public interface of in but variable_2 also has public interface of in.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3930,11 +3958,11 @@ Results per category
 * Output:
   * ```[Error] [22:10] MathML cn element contains an invalid constant representation.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3942,11 +3970,11 @@ Results per category
 * Output:
   * ```[Error] [22:10] MathML cn element contains an invalid constant representation.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -3956,11 +3984,11 @@ Results per category
 * Output:
   * ```[Error] [10:10] MathML cn elements without the attribute type=e-notation shouldn't have element children.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4020,11 +4048,11 @@ Results per category
   * ```[Error] [12:17] Text should not be present directly inside a MathML semantics element.```
   * ```[Error] [15:22] Text should not be present directly inside a MathML semantics element.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4034,11 +4062,11 @@ Results per category
   * ```[Error] [55:17] Text should not be present directly inside a MathML semantics element.```
   * ```[Error] [85:26] Text should not be present directly inside a MathML semantics element.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4052,22 +4080,22 @@ Results per category
 * Output:
   * ```[Error] [9:10] MathML element cake was not expected in this context.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [4.4.1.math_not_math_reaction](../models_1_0/invalid/4.4.1.math_not_math_reaction.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4083,11 +4111,11 @@ Results per category
 * Output:
   * ```[Error] [13:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4096,11 +4124,11 @@ Results per category
 * Output:
   * ```[Error] [12:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4109,11 +4137,11 @@ Results per category
 * Output:
   * ```[Error] [13:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4122,11 +4150,11 @@ Results per category
 * Output:
   * ```[Error] [13:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4135,11 +4163,11 @@ Results per category
 * Output:
   * ```[Error] [16:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4148,11 +4176,11 @@ Results per category
 * Output:
   * ```[Error] [15:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4161,11 +4189,11 @@ Results per category
 * Output:
   * ```[Error] [15:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4174,11 +4202,11 @@ Results per category
 * Output:
   * ```[Error] [12:12] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4204,11 +4232,11 @@ Results per category
 * Output:
   * ```[Error] [9:10] MathML cn elements must have CellML units attribute.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4222,11 +4250,11 @@ Results per category
 * Output:
   * ```[Error] [11:12] MathML cn element has invalid units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4235,11 +4263,11 @@ Results per category
 * Output:
   * ```[Error] [13:12] MathML cn element has invalid units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4248,11 +4276,11 @@ Results per category
 * Output:
   * ```[Error] [17:12] MathML cn element has invalid units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4264,11 +4292,11 @@ Results per category
 🔵 [4.4.4.dae_public_in](../models_1_0/invalid/4.4.4.dae_public_in.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4277,22 +4305,22 @@ Results per category
 * Output:
   * ```[Error] [7:10] MathML ci element references variable which doesn't exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [4.4.4.modify_private_in](../models_1_0/invalid/4.4.4.modify_private_in.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4301,11 +4329,11 @@ Results per category
 🔵 [4.4.4.modify_public_in](../models_1_0/invalid/4.4.4.modify_public_in.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4328,22 +4356,22 @@ Results per category
 🔵 [4.math_and_initial_value](../models_1_0/invalid/4.math_and_initial_value.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [4.math_overdefined](../models_1_0/invalid/4.math_overdefined.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4439,11 +4467,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -4500,11 +4528,11 @@ Results per category
 * Output:
   * ```[Error] [21:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4514,11 +4542,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4526,11 +4554,11 @@ Results per category
 * Output:
   * ```[Error] [21:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4538,11 +4566,11 @@ Results per category
 * Output:
   * ```[Error] [14:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4550,11 +4578,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4562,11 +4590,11 @@ Results per category
 * Output:
   * ```[Error] [23:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4574,11 +4602,11 @@ Results per category
 * Output:
   * ```[Error] [17:6] Connection of two variables which have dimensionally inconsistent units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4592,33 +4620,33 @@ Results per category
 🔵 [5.4.1.1.units_base_units_with_children](../models_1_0/invalid/5.4.1.1.units_base_units_with_children.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [5.4.1.1.units_empty_1](../models_1_0/units_empty/5.4.1.1.units_empty_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [5.4.1.1.units_empty_2](../models_1_0/units_empty/5.4.1.1.units_empty_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4627,11 +4655,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] The CellML specification says the name attribute is required here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4640,11 +4668,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4653,11 +4681,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4666,11 +4694,11 @@ Results per category
 * Output:
   * ```[Error] [11:6] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4679,11 +4707,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4692,11 +4720,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4705,11 +4733,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4718,11 +4746,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4731,11 +4759,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4744,11 +4772,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4757,11 +4785,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4770,11 +4798,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4785,11 +4813,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4798,11 +4826,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4811,11 +4839,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4829,11 +4857,11 @@ Results per category
 * Output:
   * ```[Error] [6:4] More than one units in the model named wooster.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4842,11 +4870,11 @@ Results per category
 * Output:
   * ```[Error] [7:6] More than one units in the component named wooster.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4855,11 +4883,11 @@ Results per category
 * Output:
   * ```[Error] [3:9] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4868,11 +4896,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name ampere.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4881,11 +4909,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name becquerel.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4894,11 +4922,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name candela.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4907,11 +4935,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name celsius.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4920,11 +4948,11 @@ Results per category
 * Output:
   * ```[Error] [4:6] Units in the component uses reserved name ampere.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4933,11 +4961,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name coulomb.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4946,11 +4974,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name dimensionless.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4959,11 +4987,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name farad.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4972,11 +5000,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name gram.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4985,11 +5013,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name gray.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -4998,11 +5026,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name henry.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5011,11 +5039,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name hertz.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5024,11 +5052,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name joule.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5037,11 +5065,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name katal.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5050,11 +5078,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name kelvin.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5063,11 +5091,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name kilogram.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5076,11 +5104,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name liter.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5089,11 +5117,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name litre.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5102,11 +5130,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name lumen.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5115,11 +5143,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name lux.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5128,11 +5156,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name meter.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5141,11 +5169,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name metre.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5154,11 +5182,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name mole.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5167,11 +5195,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name newton.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5180,11 +5208,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name ohm.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5193,11 +5221,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name pascal.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5206,11 +5234,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name radian.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5219,11 +5247,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name second.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5232,11 +5260,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name siemens.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5245,11 +5273,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name sievert.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5258,11 +5286,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name steradian.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5271,11 +5299,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name tesla.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5284,11 +5312,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name volt.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5297,11 +5325,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name watt.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5310,11 +5338,11 @@ Results per category
 * Output:
   * ```[Error] [3:4] Units in the model uses reserved name weber.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5334,11 +5362,11 @@ Results per category
 * Output:
   * ```[Error] [3:15] If present, the value of the base_units attribute MUST be "yes" or "no" (section 5.4.1.3).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5362,11 +5390,11 @@ Results per category
   * ```[Warning] [2:143] Cannot perform any further checking of unit names due to problems processing the model units.```
   * ```[Error] [4:6] Each  /  element MUST define a units attribute (section 3.4.3.1 / 5.4.3.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5375,11 +5403,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5388,11 +5416,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5401,11 +5429,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5414,11 +5442,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5427,11 +5455,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5440,11 +5468,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5453,11 +5481,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5466,11 +5494,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5479,11 +5507,11 @@ Results per category
 * Output:
   * ```[Error] [7:10] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5492,11 +5520,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5505,11 +5533,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5518,11 +5546,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5531,11 +5559,11 @@ Results per category
 * Output:
   * ```[Error] [5:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5544,11 +5572,11 @@ Results per category
 * Output:
   * ```[Error] [6:10] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5557,11 +5585,11 @@ Results per category
 * Output:
   * ```[Error] [7:10] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5576,11 +5604,11 @@ Results per category
   * ```[Error] [2:139] Units are defined circularly. One unit in the cycle is wooster; .```
   * ```[Warning] [2:139] Cannot perform any further checking of unit names due to problems processing the model units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5590,11 +5618,11 @@ Results per category
   * ```[Error] [2:150] Units are defined circularly. One unit in the cycle is fluther; .```
   * ```[Warning] [2:150] Cannot perform any further checking of unit names due to problems processing the model units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5604,11 +5632,11 @@ Results per category
   * ```[Error] [2:150] Units are defined circularly. One unit in the cycle is fluther; .```
   * ```[Warning] [2:150] Cannot perform any further checking of unit names due to problems processing the model units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5618,11 +5646,11 @@ Results per category
   * ```[Error] [2:144] Units wooster references units ribbles but the latter units could not be found; .```
   * ```[Warning] [2:144] Cannot perform any further checking of unit names due to problems processing the model units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5639,6 +5667,20 @@ Results per category
 
 ##### 5.4.2.3
 
+🔶 [5.4.2.3.unit_prefix_e_notation_int](../models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml): **Invalid file failed for unexpected reason.**
+* Expected: ```Expected error not set```
+* Output:
+  * ```Traceback (most recent call last):```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```    from . import core```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```    from . import _dtype_ctypes```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```    import _ctypes```
+  * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
+  * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
+  * ```  what():  std::exception```
+
 [5.4.2.3.unit_prefix_integer](../models_1_0/valid/5.4.2.3.unit_prefix_integer.cellml): Valid file passed validation.
 
 [5.4.2.3.unit_prefix_named](../models_1_0/valid/5.4.2.3.unit_prefix_named.cellml): Valid file passed validation.
@@ -5647,11 +5689,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5661,11 +5703,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5675,11 +5717,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5689,11 +5731,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5708,11 +5750,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5727,11 +5769,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5746,11 +5788,11 @@ Results per category
 * Expected: ```Expected error not set```
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
   * ```terminate called after throwing an instance of 'iface::cellml_api::CellMLException'```
@@ -5764,33 +5806,33 @@ Results per category
 🔵 [5.4.2.7.unit_offset_and_exponent](../models_1_0/invalid/5.4.2.7.unit_offset_and_exponent.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [5.4.2.7.unit_offset_and_siblings_1](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [5.4.2.7.unit_offset_and_siblings_2](../models_1_0/invalid/5.4.2.7.unit_offset_and_siblings_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5818,11 +5860,11 @@ Results per category
   * ```[Warning] [13:16] Expected all arguments to operator "eq" to have the same units.```
   * ```[Error] [15:18] Expected exponent to pow operator to be dimensionless.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5834,11 +5876,11 @@ Results per category
   * ```[Warning] [16:18] Units validation results may be incorrect because the degree of root is not a constant.```
   * ```[Warning] [17:20] Units validation results may be incorrect because the degree of root is not a constant.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5864,11 +5906,11 @@ Results per category
   * ```[Warning] [14:12] Units validation results may be incorrect because the degree of differentiation is not a constant.```
   * ```[Warning] [15:14] Units validation results may be incorrect because the degree of differentiation is not a constant.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5962,11 +6004,11 @@ Results per category
 * Output:
   * ```[Error] [5:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5975,11 +6017,11 @@ Results per category
 * Output:
   * ```[Error] [5:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -5993,11 +6035,11 @@ Results per category
   * ```[Error] [3:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```[Error] [3:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6008,11 +6050,11 @@ Results per category
   * ```[Error] [3:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```[Warning] [4:6] Element howareyou in namespace http://www.cellml.org/cellml/1.0#is not allowed in extension elements.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6021,11 +6063,11 @@ Results per category
 * Output:
   * ```[Error] [5:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6034,11 +6076,11 @@ Results per category
 * Output:
   * ```[Error] [5:4] A  element MUST contain at least one  element (section 6.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6047,11 +6089,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6060,11 +6102,11 @@ Results per category
 * Output:
   * ```[Error] [14:6] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6073,11 +6115,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6086,11 +6128,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6099,11 +6141,11 @@ Results per category
 * Output:
   * ```[Error] [14:6] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6112,11 +6154,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6125,11 +6167,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6138,11 +6180,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6151,11 +6193,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6164,11 +6206,11 @@ Results per category
 * Output:
   * ```[Error] [7:6] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6177,11 +6219,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6190,11 +6232,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6203,11 +6245,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6236,11 +6278,11 @@ Results per category
 * Output:
   * ```[Error] [7:6] Relationship attribute is mandatory on relationship_ref (section 6.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6249,11 +6291,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6262,11 +6304,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6275,11 +6317,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6288,11 +6330,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6301,11 +6343,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6314,11 +6356,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6327,11 +6369,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6340,11 +6382,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6353,11 +6395,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6366,11 +6408,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6379,11 +6421,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6392,11 +6434,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6405,11 +6447,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6418,11 +6460,11 @@ Results per category
 * Output:
   * ```[Error] [7:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6431,11 +6473,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6449,11 +6491,11 @@ Results per category
 * Output:
   * ```[Error] [6:19] The value of a relationship attribute in the CellML namespace must be "containment" or "encapsulation" (section 6.4.2.2).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6467,11 +6509,11 @@ Results per category
 * Output:
   * ```[Error] [6:11] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6488,11 +6530,11 @@ Results per category
   * ```[Error] [9:6] A name attribute must not be defined on a  element with a relationship attribute value of "encapsulation" (section 6.4.2.4).```
   * ```[Error] [10:6] A name attribute must not be defined on a  element with a relationship attribute value of "encapsulation" (section 6.4.2.4).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6501,11 +6543,11 @@ Results per category
 * Output:
   * ```[Error] [6:6] A name attribute must not be defined on a  element with a relationship attribute value of "encapsulation" (section 6.4.2.4).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6519,11 +6561,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Duplicate relationship_ref within group.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6532,11 +6574,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Duplicate relationship_ref within group.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6545,11 +6587,11 @@ Results per category
 * Output:
   * ```[Error] [10:6] Duplicate relationship_ref within group.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6570,11 +6612,11 @@ Results per category
   * ```[Error] [8:8] A  element must define a component attribute (section 6.4.3.1).```
   * ```[Error] [8:8] Component_ref element references component which does not exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6585,11 +6627,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6598,11 +6640,11 @@ Results per category
 * Output:
   * ```[Error] [13:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6611,11 +6653,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6624,11 +6666,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6637,11 +6679,11 @@ Results per category
 * Output:
   * ```[Error] [13:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6650,11 +6692,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6663,11 +6705,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6676,11 +6718,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6689,11 +6731,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6702,11 +6744,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6715,11 +6757,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6728,11 +6770,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6741,11 +6783,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6754,11 +6796,11 @@ Results per category
 * Output:
   * ```[Error] [11:8] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6772,11 +6814,11 @@ Results per category
 * Output:
   * ```[Error] [12:6] In a given hierarchy, only one of the  elements that reference a given component may contain further  elements, but the containment hierarchy has more than one non-terminal component_ref to A.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6785,11 +6827,11 @@ Results per category
 * Output:
   * ```[Error] [15:6] In a given hierarchy, only one of the  elements that reference a given component may contain further  elements, but the containment hierarchy has more than one non-terminal component_ref to A.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6798,143 +6840,143 @@ Results per category
 * Output:
   * ```[Error] [15:6] In a given hierarchy, only one of the  elements that reference a given component may contain further  elements, but the containment hierarchy with name A has more than one non-terminal component_ref to A.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_1](../models_1_0/invalid/6.4.3.2.component_ref_cycle_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_2](../models_1_0/invalid/6.4.3.2.component_ref_cycle_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_3](../models_1_0/invalid/6.4.3.2.component_ref_cycle_3.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_4](../models_1_0/invalid/6.4.3.2.component_ref_cycle_4.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_5](../models_1_0/invalid/6.4.3.2.component_ref_cycle_5.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_6](../models_1_0/invalid/6.4.3.2.component_ref_cycle_6.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_7](../models_1_0/invalid/6.4.3.2.component_ref_cycle_7.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_cycle_8](../models_1_0/invalid/6.4.3.2.component_ref_cycle_8.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_duplicate_child_1](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_duplicate_child_2](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_duplicate_child_3](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_3.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [6.4.3.2.component_ref_duplicate_child_4](../models_1_0/invalid/6.4.3.2.component_ref_duplicate_child_4.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6943,11 +6985,11 @@ Results per category
 * Output:
   * ```[Error] [7:6] Component_ref element appears as child of a group element but does not have any child component_ref elements.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6956,11 +6998,11 @@ Results per category
 * Output:
   * ```[Error] [7:6] Component_ref element appears as child of a group element but does not have any child component_ref elements.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6968,11 +7010,11 @@ Results per category
 * Output:
   * ```[Error] [9:6] Component_ref element appears as child of a group element but does not have any child component_ref elements.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -6981,11 +7023,11 @@ Results per category
 🔵 [6.4.3.2.component_ref_overlapping_encapsulation](../models_1_0/invalid/6.4.3.2.component_ref_overlapping_encapsulation.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7007,11 +7049,11 @@ Results per category
   * ```[Error] [8:18] A valid CellML identifier must contain at least one letter (section 2.4.1).```
   * ```[Error] [8:18] A valid CellML identifier must only contain alphanumeric characters from the US-ASCII character set and the underscore character (section 2.4.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7020,11 +7062,11 @@ Results per category
 * Output:
   * ```[Error] [7:6] Component_ref element references component which does not exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7033,11 +7075,11 @@ Results per category
 * Output:
   * ```[Error] [8:8] Component_ref element references component which does not exist.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7053,11 +7095,11 @@ Results per category
 * Output:
   * ```[Error] [5:6] Each  element must contain at least one  element (section 7.4.1.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7066,11 +7108,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7079,11 +7121,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7092,11 +7134,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7105,11 +7147,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7118,11 +7160,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7131,11 +7173,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7144,11 +7186,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7157,11 +7199,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7170,11 +7212,11 @@ Results per category
 * Output:
   * ```[Error] [10:8] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7183,11 +7225,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7196,11 +7238,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7209,11 +7251,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7222,11 +7264,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7235,11 +7277,11 @@ Results per category
 * Output:
   * ```[Error] [9:8] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7253,11 +7295,11 @@ Results per category
 * Output:
   * ```[Error] [5:17] If present, the reversible attribute must have a value of "yes" or "no" (section 7.4.1.2).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7273,11 +7315,11 @@ Results per category
 🔵 [7.4.1.3.reaction_encapsulating_delta_variable](../models_1_0/invalid/7.4.1.3.reaction_encapsulating_delta_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7291,11 +7333,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Each  element must contain at least one  element (section 7.4.2.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7304,11 +7346,11 @@ Results per category
 * Output:
   * ```[Error] [6:8] Each  element must define a variable attribute (section 7.4.2.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7317,11 +7359,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7330,11 +7372,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7343,11 +7385,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7356,11 +7398,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7369,11 +7411,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7382,11 +7424,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7395,11 +7437,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element math found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7408,11 +7450,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7421,11 +7463,11 @@ Results per category
 * Output:
   * ```[Error] [9:10] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7434,11 +7476,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7447,11 +7489,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7460,11 +7502,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7473,11 +7515,11 @@ Results per category
 * Output:
   * ```[Error] [8:10] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7486,11 +7528,11 @@ Results per category
 * Output:
   * ```[Error] [9:10] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7502,33 +7544,33 @@ Results per category
 🔵 [7.4.2.2.variable_ref_variable_duplicate](../models_1_0/invalid/7.4.2.2.variable_ref_variable_duplicate.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.2.2.variable_ref_variable_hidden](../models_1_0/invalid/7.4.2.2.variable_ref_variable_hidden.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.2.2.variable_ref_variable_nonexistent](../models_1_0/invalid/7.4.2.2.variable_ref_variable_nonexistent.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7542,11 +7584,11 @@ Results per category
 * Output:
   * ```[Error] [7:10] Each  element must define a role attribute (section 7.4.3.1).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7555,11 +7597,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element component found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7568,11 +7610,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element component_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7581,11 +7623,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element connection found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7594,11 +7636,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element group found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7607,11 +7649,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element map_components found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7620,11 +7662,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element map_variables found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7633,11 +7675,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element model found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7646,11 +7688,11 @@ Results per category
 * Output:
   * ```[Error] [9:12] Unexpected element reaction found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7659,11 +7701,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element relationship_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7672,11 +7714,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element role found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7685,11 +7727,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element unit found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7698,11 +7740,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element units found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7711,11 +7753,11 @@ Results per category
 * Output:
   * ```[Error] [8:12] Unexpected element variable found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7724,11 +7766,11 @@ Results per category
 * Output:
   * ```[Error] [9:12] Unexpected element variable_ref found - not valid here.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7742,11 +7784,11 @@ Results per category
 * Output:
   * ```[Error] [7:15] The role attribute must take one of the following seven values: reactant, product, catalyst, activator, inhibitor, modifier, rate (section 7.4.3.2).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7758,44 +7800,44 @@ Results per category
 🔵 [7.4.3.3.reaction_multiple_rates](../models_1_0/invalid/7.4.3.3.reaction_multiple_rates.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.3.role_rate_with_delta_variable](../models_1_0/invalid/7.4.3.3.role_rate_with_delta_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.3.role_rate_with_multiple_roles](../models_1_0/invalid/7.4.3.3.role_rate_with_multiple_roles.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.3.role_rate_with_stoichiometry](../models_1_0/invalid/7.4.3.3.role_rate_with_stoichiometry.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7809,11 +7851,11 @@ Results per category
 * Output:
   * ```[Error] [20:20] If present, the direction attribute must take one of the following three values: forward, reverse, both (section 7.4.3.4).```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7825,99 +7867,99 @@ Results per category
 🔵 [7.4.3.5.role_direction_both_irreversible](../models_1_0/invalid/7.4.3.5.role_direction_both_irreversible.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_both_product](../models_1_0/invalid/7.4.3.5.role_direction_both_product.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_both_rate](../models_1_0/invalid/7.4.3.5.role_direction_both_rate.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_both_reactant](../models_1_0/invalid/7.4.3.5.role_direction_both_reactant.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_reverse_irreversible](../models_1_0/invalid/7.4.3.5.role_direction_reverse_irreversible.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_reverse_product](../models_1_0/invalid/7.4.3.5.role_direction_reverse_product.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_reverse_rate](../models_1_0/invalid/7.4.3.5.role_direction_reverse_rate.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_reverse_reactant](../models_1_0/invalid/7.4.3.5.role_direction_reverse_reactant.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.5.role_direction_role_duplicate](../models_1_0/invalid/7.4.3.5.role_direction_role_duplicate.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7931,11 +7973,11 @@ Results per category
 * Output:
   * ```[Error] [11:60] Expected a real number, but didn't get one in a valid format.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7947,44 +7989,44 @@ Results per category
 🔵 [7.4.3.7.role_delta_variable_duplicate_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.7.role_delta_variable_duplicate_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_duplicate_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.7.role_delta_variable_nonexistent_1](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.7.role_delta_variable_nonexistent_2](../models_1_0/invalid/7.4.3.7.role_delta_variable_nonexistent_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -7996,77 +8038,77 @@ Results per category
 🔵 [7.4.3.8.role_delta_variable_activator](../models_1_0/invalid/7.4.3.8.role_delta_variable_activator.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.8.role_delta_variable_catalyst](../models_1_0/invalid/7.4.3.8.role_delta_variable_catalyst.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.8.role_delta_variable_inhibitor](../models_1_0/invalid/7.4.3.8.role_delta_variable_inhibitor.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.8.role_delta_variable_modifier](../models_1_0/invalid/7.4.3.8.role_delta_variable_modifier.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.8.role_delta_variable_with_rate_and_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_with_rate_and_math.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.8.role_delta_variable_with_stoichiometry_no_rate](../models_1_0/invalid/7.4.3.8.role_delta_variable_with_stoichiometry_no_rate.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [7.4.3.8.role_delta_variable_without_rate_or_math](../models_1_0/invalid/7.4.3.8.role_delta_variable_without_rate_or_math.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -8078,11 +8120,11 @@ Results per category
 🔵 [7.4.3.9.role_math_not_relevant](../models_1_0/invalid/7.4.3.9.role_math_not_relevant.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -8137,165 +8179,165 @@ Results per category
 🔵 [8.4.1.duplicate_cmeta_id_in_component](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_component_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_component_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_connection](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_connection.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_group](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_group.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_map_components](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_components.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_map_variables](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_map_variables.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_model](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_model.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_reaction](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_reaction.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_relationship_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_relationship_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_role](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_role.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_unit](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_unit.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_units_1](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_1.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_units_2](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_units_2.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_variable](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
 🔵 [8.4.1.duplicate_cmeta_id_in_variable_ref](../models_1_0/invalid/8.4.1.duplicate_cmeta_id_in_variable_ref.cellml): **Error not detected.**
 * Output:
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -8359,11 +8401,11 @@ Results per category
 * Output:
   * ```[Error] [13:12] Expected exponent to pow operator to be dimensionless.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -8371,11 +8413,11 @@ Results per category
 * Output:
   * ```[Error] [11:12] Degree qualifier should be in dimensionless units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
@@ -8395,11 +8437,11 @@ Results per category
 * Output:
   * ```[Error] [14:12] Degree qualifier should be in dimensionless units.```
   * ```Traceback (most recent call last):```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>```
   * ```    from . import core```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/__init__.py", line 99, in <module>```
   * ```    from . import _dtype_ctypes```
-  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-05-19-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
+  * ```  File "/home/michael/dev/ext/opencor/OpenCOR-2021-10-05-Linux/python/lib/python3.7/site-packages/numpy/core/_dtype_ctypes.py", line 25, in <module>```
   * ```    import _ctypes```
   * ```ImportError: libffi.so.7: cannot open shared object file: No such file or directory```
 
