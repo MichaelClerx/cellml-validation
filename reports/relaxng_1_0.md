@@ -1,9 +1,9 @@
 # RelaxNG Validation - CellML 1.0
 
 Performance:
-* 77% according to spec (717 out of 923)
+* 77% according to spec (720 out of 926)
 * 373 out of 375 valid files passed
-* 344 out of 548 invalid files detected
+* 347 out of 551 invalid files detected
 
 Issues:
 * 2 valid files failed validation
@@ -16,11 +16,11 @@ Results per category
 
 |Category|V Pass|I Fail|🔴 V Fail|🔵 I Pass|🔶 I Bad|Score|
 |-|-|-|-|-|-|-|
-|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|10|0|0|0|100%|
+|[0. Not mentioned in spec](#0-not-mentioned-in-spec)|6|12|0|0|0|100%|
 |[2. Fundamentals](#2-fundamentals)|34|42|0|61|0|55%|
 |[3. Model structure](#3-model-structure)|50|105|0|50|0|75%|
 |[4. Mathematics](#4-mathematics)|50|3|0|17|0|75%|
-|[5. Units](#5-units)|136|46|0|42|0|81%|
+|[5. Units](#5-units)|136|47|0|42|0|81%|
 |[6. Grouping](#6-grouping)|15|55|2|23|0|73%|
 |[7. Reactions](#7-reactions)|5|68|0|10|1|86%|
 |[8. Metadata framework](#8-metadata-framework)|30|15|0|0|0|100%|
@@ -104,6 +104,24 @@ Results per category
   * ```Error on line 6: Element model failed to validate content```
 
 [0.1.real_number_invalid_6](../models_1_0/invalid/0.1.real_number_invalid_6.cellml): Error detected correctly.
+* Expected: ```Invalid attribute initial_value for element variable```
+* Output:
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[0.1.real_number_invalid_7](../models_1_0/invalid/0.1.real_number_invalid_7.cellml): Error detected correctly.
+* Expected: ```Invalid attribute initial_value for element variable```
+* Output:
+  * ```Error on line 7: Invalid attribute initial_value for element variable```
+  * ```Error on line 0: Extra element variable in interleave```
+  * ```Error on line 7: Element component failed to validate content```
+  * ```Error on line 0: Extra element component in interleave```
+  * ```Error on line 6: Element model failed to validate content```
+
+[0.1.real_number_invalid_8](../models_1_0/invalid/0.1.real_number_invalid_8.cellml): Error detected correctly.
 * Expected: ```Invalid attribute initial_value for element variable```
 * Output:
   * ```Error on line 7: Invalid attribute initial_value for element variable```
@@ -2621,6 +2639,15 @@ Results per category
 
 ##### 5.4.2.3
 
+[5.4.2.3.unit_prefix_e_notation_int](../models_1_0/invalid/5.4.2.3.unit_prefix_e_notation_int.cellml): Error detected correctly.
+* Expected: ```Invalid attribute prefix```
+* Output:
+  * ```Error on line 10: Invalid attribute prefix for element unit```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element units failed to validate content```
+  * ```Error on line 0: Extra element units in interleave```
+  * ```Error on line 9: Element model failed to validate content```
+
 [5.4.2.3.unit_prefix_integer](../models_1_0/valid/5.4.2.3.unit_prefix_integer.cellml): Valid file passed validation.
 
 [5.4.2.3.unit_prefix_named](../models_1_0/valid/5.4.2.3.unit_prefix_named.cellml): Valid file passed validation.
@@ -2637,11 +2664,11 @@ Results per category
 [5.4.2.3.unit_prefix_real_int](../models_1_0/invalid/5.4.2.3.unit_prefix_real_int.cellml): Error detected correctly.
 * Expected: ```Invalid attribute prefix```
 * Output:
-  * ```Error on line 7: Invalid attribute prefix for element unit```
-  * ```Error on line 6: Invalid sequence in interleave```
-  * ```Error on line 6: Element units failed to validate content```
+  * ```Error on line 10: Invalid attribute prefix for element unit```
+  * ```Error on line 9: Invalid sequence in interleave```
+  * ```Error on line 9: Element units failed to validate content```
   * ```Error on line 0: Extra element units in interleave```
-  * ```Error on line 6: Element model failed to validate content```
+  * ```Error on line 9: Element model failed to validate content```
 
 🔵 [5.4.2.3.unit_prefix_spaces](../models_1_0/invalid/5.4.2.3.unit_prefix_spaces.cellml): **Error not detected.**
 

@@ -47,6 +47,10 @@ expected_messages = {
         'Invalid attribute initial_value for element variable',
     '0.1.real_number_invalid_6':
         'Invalid attribute initial_value for element variable',
+    '0.1.real_number_invalid_7':
+        'Invalid attribute initial_value for element variable',
+    '0.1.real_number_invalid_8':
+        'Invalid attribute initial_value for element variable',
     # 2.4.1 CellML Identifiers
     '2.4.1.identifier_empty':
         'Element component failed to validate',
@@ -463,6 +467,8 @@ expected_messages = {
         'Invalid attribute prefix',
     '5.4.2.3.unit_prefix_unknown':
         'Invalid attribute prefix',
+    '5.4.2.3.unit_prefix_e_notation_int':
+        'Invalid attribute prefix',        
     # 5.4.2.4 A unit exponent must be a real number
     '5.4.2.4.unit_exponent_invalid':
         'Invalid attribute exponent',
