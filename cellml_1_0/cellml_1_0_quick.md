@@ -196,6 +196,11 @@ It's allowed to wrap a bit of Content MathML in a `<semantics>` element, which l
 There can be multiple `<annotation>` elements (for non-xml annotation) or `<annotation-xml>` elements (for xml annotation).
 I have personally never seen these in a model.
 
+### Interpretation
+
+The CellML 1.0 specification does not make any statements about how the maths should be interpreted, or whether it should make sense in any way.
+For example, documents that state "x = y" and "y = x" are perfectly acceptable, as are statements that "x = x", or that "x = 1", "y = 2", and "x = y".
+
 ## Namespaces
 
 |= prefix  |= namespace                                  |
