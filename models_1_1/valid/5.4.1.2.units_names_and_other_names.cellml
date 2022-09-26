@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.1.2: Component units can shadow model unit names -->
+<model name="units_names_and_other_names"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="units_names_and_other_names">
+    <unit units="volt" />
+  </units>
+  <component name="units_names_and_other_names">
+    <units name="units_names_and_other_names">
+      <unit units="volt" />
+    </units>
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" />
+  </component>
+  <component name="B">
+    <units name="units_names_and_other_names">
+      <unit units="volt" />
+    </units>
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" />
+  </component>
+</model>

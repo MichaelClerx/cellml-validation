@@ -348,7 +348,7 @@ TODO
 - containment
 - encapsulation
 
-(Note that a relationship may also be defined in an extension namespace, in which case any value is allowable).
+(Note that a relationship may also be defined in an "extension namespace", in which case any value is allowable).
 
 ### Interface types
 

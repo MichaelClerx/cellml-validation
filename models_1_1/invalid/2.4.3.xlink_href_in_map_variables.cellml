@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
-<!-- CellML 1.1, 2.4.3: In CellML 1.1 xlink is an extension namespace. -->
-<model name="xlink_href_in_connection"
+<!-- CellML 1.1, 2.4.3: In CellML 1.1 xlink is not an extension namespace. -->
+<model name="xlink_href_in_map_variables"
        xmlns="http://www.cellml.org/cellml/1.1#"
        xmlns:xlink="http://www.w3.org/1999/xlink">
   <component name="A">
     <variable name="a" units="volt" public_interface="out" />
   </component>
   <component name="B">
-    <variable name="b" units="volt" public_interface="in" />
+    <variable name="a" units="volt" public_interface="in" />
   </component>
-  <connection xlink:href="http://example.com">
+  <connection>
     <map_components component_1="A" component_2="B" />
-    <map_variables variable_1="a" variable_2="b" />
+    <map_variables variable_1="a"
+                   variable_2="a"
+                   xlink:href="http://example.com" />
   </connection>
 </model>

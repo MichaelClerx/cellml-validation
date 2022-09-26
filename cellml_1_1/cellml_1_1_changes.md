@@ -2,13 +2,14 @@
 
 This is a list of changes from CellML 1.0 to 1.1, based on a `diff` of the Markdown versions of both specs.
 
-## Namespace
+## Namespaces
 
 The namespace is updated to
 
     2.2.2 xmlns:cellml="http://www.cellml.org/cellml/1.1#"
 
-The xlink namespace is added to the list of non-extension namespaces
+The xlink namespace is added to the list of non-extension namespaces.
+This means that xlink attributes and elements may no longer appear randomly throughout a document.
 
     2.2.2 xmlns:xlink="http://www.w3.org/1999/xlink"
 
