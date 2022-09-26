@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #
 # Perform XSLT transformations on a directory tree
 #
