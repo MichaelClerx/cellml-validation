@@ -73,6 +73,8 @@ CellML 1.1 improves on the 1.0 rule by stating each identifier must contain at l
 Specifically, it asks for identifiers made up of letters, numbers, and underscores; but with at least one letter; and not starting with a number.
 It then suggests the "Extended Backus-Naur Form (EBNF) notation" of `('_')* ( letter ) ( letter | '_' | digit )**`, which would not match `_123e` although this matches the rules given above.
 
+Letters in CellML 1.1 identifiers can only be from the [simple ASCII set](https://en.wikipedia.org/wiki/ASCII#Printable_characters): letters such as ç or ê are not included.
+
 ## Real numbers
 
 CellML 1.1 does not define a notation for real numbers, but presumably this should be something compatible with the MathML `real` number type.
@@ -110,6 +112,12 @@ Finally, there is no concept of unit conversion _within_ equations (e.g. to make
 Technically, table 2 defines both meter and metre as base units, implying you can't convert between metres and meters.
 This is pointed out in the [errata to 1.1](https://www.cellml.org/specifications/cellml_1.1/errata).
 In these tests we assume they are simply aliases.
+
+(Note that this problem does not arise for liter and litre, because these are both derived units.)
+
+#### Deka and deca
+
+Although "deca" is the SI spelling, the CellML 1.1 spec only allows "deka".
 
 ## MathML and the CellML subset
 
@@ -225,6 +233,10 @@ For example, in `<mathml:cn cellml:units="volt">1</mathml:cn>` we have a MathML 
 
 The spec unfortunately gets this wrong (2001 is early days for XML namespaces), and consistently refers to attributes in the `cellml` namespace, when what is meant is un-namespaced attributes.
 Similarly, rule 8.4.1 mentions a `mathml:id` attribute (which doesn't exist), when wat is meant is an unnamespaced `id` attribute.
+
+## Imports
+
+TODO
 
 ## Lists
 

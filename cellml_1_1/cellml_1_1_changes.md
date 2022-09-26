@@ -1,5 +1,9 @@
 # Changes between CellML 1.1 and 1.0
 
+This is a list of changes from CellML 1.0 to 1.1, based on a `diff` of the Markdown versions of both specs.
+
+## Namespace
+
 The namespace is updated to
 
     2.2.2 xmlns:cellml="http://www.cellml.org/cellml/1.1#"
@@ -8,15 +12,39 @@ The xlink namespace is added to the list of non-extension namespaces
 
     2.2.2 xmlns:xlink="http://www.w3.org/1999/xlink"
 
+## Identifiers
+
 The rules for identifiers are changed:
 
     2.4.1 identifiers consist of numbers, letters, and underscores
     2.4.1 identifiers must contain at least one letter
     2.4.1 identifiers may not start with number
 
+## Initial values
+
+Initial values can now be variables
+
+    3.4.3.7 An initial value can be a number or a local variable name
+
+## Imports
+
 Models can now contain `<import>` elements
 
     3.4.1.1 A model can contain <import> elements
+
+    9.4.1.1.1 An `<import>` element can contain only `<component>`, `<units>`, and `<rdf:RDF>` elements
+    9.4.1.1.2 An `<import>` element must define an `xlink:href` attribute
+    
+    9.4.1.2.1 A model must not directly or indirectly import itself.
+    9.4.1.2.2 Component units cannot be imported
+
+    9.4.1.3 An `xlink:href` attribute must be a valid URI.
+    
+    9.5.1 Imported units may depend on other units in the source model (but these do not automatically get imported too).
+    
+    9.5.2.2 If imported components are connected, their connections are imported too.
+    9.5.2.3 If imported components have encapsulated components, these are imported too, along with their connections (note that each component is a tree, cousins can't interact!).
+    9.5.2.4 Component units may depend on other units in the source model (but these do not get imported too).
 
 The rules for `<component>` now cover "model components" (defined locally) and "import components".
 
@@ -30,10 +58,6 @@ The numbering of rules for models has changed, and there are new rules for "impo
     3.4.2.2.2 A component name must be unique (over model _and_ import components)
     3.4.2.3 A component_ref must equal the name of a component in the imported model (directly or via an import)
     3.4.2.4 A model component must not have a component_ref attribute
-
-Initial values can now be variables
-
-    3.4.3.7 An initial value can be a number or a local variable name
 
 Units can now be imported
 
@@ -63,20 +87,4 @@ Units can now be imported
 The unit element numbering has changed
 
     5.4.3 used to be 5.4.2
-    
-Imports were introduced
 
-    9.4.1.1.1 An `<import>` element can contain only `<component>`, `<units>`, and `<rdf:RDF>` elements
-    9.4.1.1.2 An `<import>` element must define an `xlink:href` attribute
-    
-    9.4.1.2.1 A model must not directly or indirectly import itself.
-    9.4.1.2.2 Component units cannot be imported
-
-    9.4.1.3 An `xlink:href` attribute must be a valid URI.
-    
-    9.5.1 Imported units may depend on other units in the source model (but these do not automatically get imported too).
-    
-    9.5.2.2 If imported components are connected, their connections are imported too.
-    9.5.2.3 If imported components have encapsulated components, these are imported too, along with their connections (note that each component is a tree, cousins can't interact!).
-    9.5.2.4 Component units may depend on other units in the source model (but these do not get imported too).
-    

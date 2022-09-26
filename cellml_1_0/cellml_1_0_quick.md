@@ -69,6 +69,8 @@ Finally, users can add their own relationship types by using a `relationship` at
 CellML 1.0 defines identifiers as strings matching `('_')* ( letter | digit ) ( letter | '_' | digit )*`.
 Note that this includes strings such as "0", "12", and "3e4".
 
+Letters in CellML 1.0 identifiers can only be from the [simple ASCII set](https://en.wikipedia.org/wiki/ASCII#Printable_characters): letters such as ç or ê are not included.
+
 ## Real numbers
 
 CellML 1.0 does not define a notation for real numbers, but presumably this should be something compatible with the MathML `real` number type.
@@ -106,6 +108,12 @@ Finally, there is no concept of unit conversion _within_ equations (e.g. to make
 Technically, table 2 defines both meter and metre as base units, implying you can't convert between metres and meters.
 This is pointed out in the [errata to 1.1](https://www.cellml.org/specifications/cellml_1.1/errata).
 In these tests we assume they are simply aliases.
+
+(Note that this problem does not arise for liter and litre, because these are both derived units.)
+
+#### Deka and deca
+
+Although "deca" is the SI spelling, the CellML 1.1 spec only allows "deka".
 
 ## MathML and the CellML subset
 
