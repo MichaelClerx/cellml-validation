@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.1.1: A model may contain units elements -->
+<model name="model_with_units"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="A">
+    <unit units="volt" />
+  </units>
+  <units name="B">
+    <unit units="volt" />
+  </units>
+</model>

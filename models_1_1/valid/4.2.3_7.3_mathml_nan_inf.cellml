@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
+Special values: not a number and infinity -->
+<model name="mathml_nan_inf"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="nan" units="dimensionless" />
+    <variable name="inf" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>nan</ci>
+        <notanumber />
+      </apply>
+      <apply>
+        <eq/>
+        <ci>inf</ci>
+        <infinity />
+      </apply>
+    </math>
+  </component>
+</model>

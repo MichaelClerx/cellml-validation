@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
+Unary plus and minus -->
+<model name="mathml_arithmetic_unary"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="plus" units="volt" />
+    <variable name="minus" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>plus</ci>
+        <apply>
+          <plus />
+          <cn cellml:units="volt">1</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>minus</ci>
+        <apply>
+          <minus />
+          <cn cellml:units="volt">2</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

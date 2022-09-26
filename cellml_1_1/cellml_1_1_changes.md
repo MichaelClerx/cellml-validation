@@ -26,6 +26,12 @@ Initial values can now be variables
 
     3.4.3.7 An initial value can be a number or a local variable name
 
+## Section numbering
+
+The unit element numbering has changed
+
+    The section that was numbered 5.4.2 in CellML 1.0 is now numbered 5.4.3 in CellML 1.1
+
 ## Imports
 
 Models can now contain `<import>` elements
@@ -34,14 +40,14 @@ Models can now contain `<import>` elements
 
     9.4.1.1.1 An `<import>` element can contain only `<component>`, `<units>`, and `<rdf:RDF>` elements
     9.4.1.1.2 An `<import>` element must define an `xlink:href` attribute
-    
+
     9.4.1.2.1 A model must not directly or indirectly import itself.
     9.4.1.2.2 Component units cannot be imported
 
     9.4.1.3 An `xlink:href` attribute must be a valid URI.
-    
+
     9.5.1 Imported units may depend on other units in the source model (but these do not automatically get imported too).
-    
+
     9.5.2.2 If imported components are connected, their connections are imported too.
     9.5.2.3 If imported components have encapsulated components, these are imported too, along with their connections (note that each component is a tree, cousins can't interact!).
     9.5.2.4 Component units may depend on other units in the source model (but these do not get imported too).
@@ -78,13 +84,8 @@ Units can now be imported
 
     5.4.1.3.1 A base_units attribute must be yes or no
     5.4.1.3.2 A base units attribute defaults to no
-    
+
     5.4.1.4 An import units may not have a base_units attribute
 
     5.4.2.1 The units_ref attribute must equal the name of a model units in the imported model
     5.4.2.2 A model units or component units may not have a units_ref attribute
-    
-The unit element numbering has changed
-
-    5.4.3 used to be 5.4.2
-

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.4: A map_variables cannot have text -->
+<model name="text_in_map_variables"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="volt" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="a" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="a">
+      Oranges
+    </map_variables>
+  </connection>
+</model>

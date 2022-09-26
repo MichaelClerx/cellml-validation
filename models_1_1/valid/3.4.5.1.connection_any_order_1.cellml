@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- Implied: There is no rule for who gets to be component_1 -->
+<model name="connection_any_order_1"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="c" />
+    <map_variables variable_1="b" variable_2="d" />
+  </connection>
+  <component name="A">
+    <variable name="a" units="dimensionless" public_interface="out" />
+    <variable name="b" units="dimensionless" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="c" units="dimensionless" public_interface="in" />
+    <variable name="d" units="dimensionless" public_interface="in" />
+  </component>
+</model>

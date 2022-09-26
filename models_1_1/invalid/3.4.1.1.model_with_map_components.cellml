@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.1.1: A model cannot contain a map_components -->
+<model name="model_with_map_components"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="c1" />
+  <component name="c2" />
+  <map_components component_1="c1" component_2="c2" />
+</model>

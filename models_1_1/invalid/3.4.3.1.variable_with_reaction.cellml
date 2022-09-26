@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.3.1: A variable cannot contain a reaction -->
+<model name="variable_with_reaction"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="c1">
+    <variable name="x" units="dimensionless">
+      <reaction>
+        <variable_ref variable="x">
+          <role role="reactant" />
+        </variable_ref>
+      </reaction>
+    </variable>
+  </component>
+</model>

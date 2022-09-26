@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.2.1: Components can contain variables -->
+<model name="component_with_variables"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+    <variable name="b" units="dimensionless" />
+  </component>
+</model>

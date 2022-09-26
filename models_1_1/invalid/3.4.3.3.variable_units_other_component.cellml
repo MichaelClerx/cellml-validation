@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.3.3: A variable can't have a unit from another component -->
+<model name="variable_units_other_component"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="oranges" />
+  </component>
+  <component name="B">
+    <units name="oranges">
+      <unit units="volt" />
+    </units>
+  </component>
+</model>

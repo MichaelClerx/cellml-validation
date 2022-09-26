@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.3: Only rdf:RDF may appear in a variable_ref -->
+<model name="cmeta_element_in_variable_ref"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction>
+      <variable_ref variable="a">
+        <rdf:Description rdf:about="http://example.com" />
+        <role role="reactant" />
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

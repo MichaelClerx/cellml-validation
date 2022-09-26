@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
+Unary logical operator: not -->
+<model name="mathml_logic_unary_operators"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="x" units="dimensionless" initial_value="0" />
+    <variable name="not" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>not</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="dimensionless">1</cn>
+            <apply>
+              <not />
+              <apply>
+                <eq />
+                <ci>x</ci>
+                <cn cellml:units="dimensionless">0</cn>
+              </apply>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="dimensionless">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+    </math>
+  </component>
+</model>

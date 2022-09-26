@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.4.1 Connections can have one or multiple map_variables -->
+<model name="connection_with_map_variables"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="a" variable_2="a" />
+    <map_variables variable_1="b" variable_2="b" />
+  </connection>
+  <component name="A">
+    <variable name="a" units="dimensionless" public_interface="out" />
+    <variable name="b" units="dimensionless" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="a" units="dimensionless" public_interface="in" />
+    <variable name="b" units="dimensionless" public_interface="in" />
+  </component>
+</model>
