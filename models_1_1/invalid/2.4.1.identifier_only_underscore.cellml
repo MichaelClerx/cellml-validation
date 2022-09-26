@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.1: Identifier must include at least one letter or number -->
+<model name="identifier_only_underscore"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="_" />
+</model>

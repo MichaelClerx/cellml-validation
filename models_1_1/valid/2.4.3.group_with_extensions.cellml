@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 2.4.3 Extension elements can go in a group -->
+<model name="group_with_extensions"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:fruit="http://fruit.org">
+  <component name="A" />
+  <component name="B" />
+  <group fruit:banana="True">
+    <fruit:orange peel="yes">
+      <fruit:clementine />
+    </fruit:orange>
+    <fruit:pear>Tinned</fruit:pear>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A">
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>
