@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Units with a different multiplier are convertible -->
+<model name="unit_conversion_multiplier"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="imperial_volt">
+    <unit units="volt" multiplier="2.54" />
+  </units>
+  <component name="A">
+    <variable name="x" units="imperial_volt" initial_value="3" public_interface="out" />
+  </component>
+  <component name="B">
+    <variable name="x" units="volt" public_interface="in" />
+  </component>
+  <connection>
+    <map_components component_1="A" component_2="B" />
+    <map_variables variable_1="x" variable_2="x" />
+  </connection>
+</model>

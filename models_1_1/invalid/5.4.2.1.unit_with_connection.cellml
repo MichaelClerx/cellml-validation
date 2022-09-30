@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.1: A unit cannot contain a connection -->
+<model name="unit_with_connection"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="volt">
+      <connection>
+        <map_components component_1="A" component_2="B" />
+        <map_variables variable_1="x" variable_2="x" />
+      </connection>
+    </unit>
+  </units>
+  <component name="A">
+    <variable name="x" units="newton" public_interface="out" initial_value="0" />
+  </component>
+  <component name="B">
+    <variable name="x" units="newton" public_interface="in" />
+  </component>
+</model>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.1: Not mentioned explicitly, but units elements with
+     base_units="no" should not be empty. -->
+<model name="units_empty"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="units" />
+</model>

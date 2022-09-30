@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 6.4.2.5, A named relationship_ref within a group must have a unique name -->
+<model name="relationship_ref_duplicate_named"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+    <relationship_ref relationship="containment" name="x" />
+    <relationship_ref relationship="containment" name="x" />
+  </group>
+</model>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Unit checking: eq, neq, gt, lt, geq, leq -->
+<model name="unit_checking_comparisons"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="eq" units="volt" />
+    <variable name="neq" units="volt" />
+    <variable name="gt" units="volt" />
+    <variable name="lt" units="volt"  />
+    <variable name="geq" units="volt" />
+    <variable name="leq" units="volt" />
+    <variable name="y" units="ampere" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>eq</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">1</cn>
+            <apply>
+              <eq />
+              <ci>y</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>neq</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">1</cn>
+            <apply>
+              <neq />
+              <ci>y</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>gt</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">1</cn>
+            <apply>
+              <gt />
+              <ci>y</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>lt</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">1</cn>
+            <apply>
+              <lt />
+              <ci>y</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>geq</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">1</cn>
+            <apply>
+              <geq />
+              <ci>y</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>leq</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">1</cn>
+            <apply>
+              <leq />
+              <ci>y</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+    </math>
+  </component>
+</model>

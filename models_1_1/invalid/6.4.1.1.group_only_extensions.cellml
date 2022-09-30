@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 6.4.1.1: Groups must contain a relationship_ref and component_ref attribute -->
+<model name="group_only_extensions"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:hi="http://hello.com">
+  <group>
+    <hi:hello>
+      <howareyou />
+    </hi:hello>
+    <hi:bonjour name="du monde" />
+    <hi:hola />
+    <hi:hallo />
+  </group>
+</model>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.5.2: Booleans can't appear as a sin operand -->
+<model name="boolean_trig_sin"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>a</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="dimensionless">0</cn>
+            <apply>
+              <eq />
+              <apply>
+                <sin />
+                <true />
+              </apply>
+              <true />
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="dimensionless">1</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+    </math>
+  </component>
+</model>

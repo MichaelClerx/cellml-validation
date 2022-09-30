@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.4.1: MathML inside a reaction must be valid -->
+<model name="math_not_math_reaction"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" />
+    <reaction>
+      <variable_ref variable="a">
+        <role role="reactant">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq />
+              <ci>a</ci>
+              <cake>
+                <fruit />
+                <cream type="full-fat" />
+              </cake>
+            </apply>
+          </math>
+        </role>
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

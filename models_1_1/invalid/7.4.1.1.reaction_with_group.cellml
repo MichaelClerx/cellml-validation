@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.1.1: A reaction cannot contain a group -->
+<model name="reaction_with_component"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction>
+      <variable_ref variable="a">
+        <role role="reactant" />
+      </variable_ref>
+      <group>
+        <relationship_ref relationship="containment" />
+        <component_ref component="A">
+          <component_ref component="B" />
+        </component_ref>
+      </group>
+    </reaction>
+  </component>
+  <component name="B" />
+</model>

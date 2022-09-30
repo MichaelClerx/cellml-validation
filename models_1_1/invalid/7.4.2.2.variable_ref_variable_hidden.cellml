@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.2.2: A variable_ref must refer to a local variable -->
+<model name="variable_ref_variable_hidden"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction>
+      <variable_ref variable="b">
+        <role role="modifier" />
+      </variable_ref>
+    </reaction>
+  </component>
+  <component name="B">
+    <variable name="b" units="mole" />
+  </component>
+</model>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 6.4.3.1: Component_refs component attribute must be a valid identifier -->
+<model name="component_ref_component_invalid"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A" />
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment" />
+    <component_ref component="A" >
+      <component_ref component="." />
+    </component_ref>
+  </group>
+</model>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
+Numbers: Integer with type attribute -->
+<model name="mathml_numbers_integer"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="integer" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>integer</ci>
+        <cn cellml:units="dimensionless" type="integer">12</cn>
+      </apply>
+    </math>
+  </component>
+</model>

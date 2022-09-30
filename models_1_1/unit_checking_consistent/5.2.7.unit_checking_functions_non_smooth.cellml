@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Unit checking: floor, ceiling, abs -->
+<model name="unit_checking_functions_non_smooth"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="floor" units="newton" />
+    <variable name="ceiling" units="newton" />
+    <variable name="abs" units="newton" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>floor</ci>
+        <cn cellml:units="newton">1.2</cn>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>ceiling</ci>
+        <apply>
+          <ceiling />
+          <cn cellml:units="newton">3</cn>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>abs</ci>
+        <apply>
+          <abs />
+          <cn cellml:units="newton">3</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

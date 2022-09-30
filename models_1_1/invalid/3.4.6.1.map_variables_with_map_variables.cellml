@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.6.1: A map_variables cannot contain a map_variables -->
+<model name="map_variables_with_map_variables"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <connection>
+    <map_components component_1="a" component_2="b" />
+    <map_variables variable_1="x" variable_2="x">
+      <map_variables variable_1="y" variable_2="y" />
+    </map_variables>
+  </connection>
+  <component name="a">
+    <variable name="x" units="volt" public_interface="out" />
+    <variable name="y" units="volt" public_interface="in" />
+  </component>
+  <component name="b">
+    <variable name="x" units="volt" public_interface="in" />
+    <variable name="y" units="volt" public_interface="out" />
+  </component>
+</model>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Unit checking: factorial -->
+<model name="unit_checking_functions_factorial"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="factorial" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>factorial</ci>
+        <apply>
+          <factorial />
+          <cn cellml:units="dimensionless">2</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>

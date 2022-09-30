@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.7: Unit checking: piecewise -->
+<model name="unit_checking_piecewise_1"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="x" units="ampere" initial_value="0" />
+    <variable name="y" units="volt" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>y</ci>
+        <piecewise>
+          <piece>
+            <cn cellml:units="volt">123</cn>
+            <apply>
+              <eq />
+              <ci>x</ci>
+              <cn cellml:units="ampere">0</cn>
+            </apply>
+          </piece>
+          <piece>
+            <cn cellml:units="volt">456</cn>
+            <apply>
+              <eq />
+              <ci>x</ci>
+              <cn cellml:units="ampere">1</cn>
+            </apply>
+          </piece>
+          <otherwise>
+            <cn cellml:units="volt">0</cn>
+          </otherwise>
+        </piecewise>
+      </apply>
+    </math>
+  </component>
+</model>

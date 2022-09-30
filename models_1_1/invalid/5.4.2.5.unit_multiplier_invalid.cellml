@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.5: A unit multiplier must be a real number -->
+<model name="unit_multiplier_invalid"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="volt" multiplier="three" />
+  </units>
+</model>

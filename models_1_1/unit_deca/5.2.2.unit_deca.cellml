@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.2.2: CellML 1.1 defines "deka", not "deca", see
+     https://en.wikipedia.org/wiki/Deca-
+-->
+<model name="unit_deca"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <units name="decameter">
+    <unit units="meter" prefix="deca" />
+  </units>
+</model>

@@ -8,14 +8,17 @@
   </units>
   <component name="units_names_and_other_names">
     <units name="units_names_and_other_names">
-      <unit units="volt" />
+      <unit units="meter" />
     </units>
-    <variable name="units_names_and_other_names" units="units_names_and_other_names" />
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" initial_value="1" />
   </component>
   <component name="B">
     <units name="units_names_and_other_names">
-      <unit units="volt" />
+      <unit units="ampere" />
     </units>
-    <variable name="units_names_and_other_names" units="units_names_and_other_names" />
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" initial_value="1" />
+  </component>
+  <component name="C">
+    <variable name="units_names_and_other_names" units="units_names_and_other_names" initial_value="1" />
   </component>
 </model>

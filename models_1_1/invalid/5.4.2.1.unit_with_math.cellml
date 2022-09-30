@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 5.4.3.1: A unit cannot contain mathml:math -->
+<model name="unit_with_math"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <units name="wooster">
+    <unit units="volt">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <eq/>
+          <cn cellml:units="dimensionless">1</cn>
+          <cn cellml:units="dimensionless">1</cn>
+        </apply>
+      </math>
+    </unit>
+  </units>
+</model>

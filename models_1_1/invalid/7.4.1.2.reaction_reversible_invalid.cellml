@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 7.4.1.2 A reaction's reversible attribute must be yes/no -->
+<model name="reaction_reversible_invalid"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="mole" />
+    <reaction reversible="definitely">
+      <variable_ref variable="a">
+        <role role="reactant" />
+      </variable_ref>
+    </reaction>
+  </component>
+</model>

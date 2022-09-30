@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 6.4.2.1: A relationship_ref cannot contain a variable_ref -->
+<model name="relationship_ref_with_variable_ref"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+  </component>
+  <component name="B" />
+  <group>
+    <relationship_ref relationship="containment">
+      <variable_ref variable="x">
+        <role role="reactant" />
+      </variable_ref>
+    </relationship_ref>
+    <component_ref component="A" >
+      <component_ref component="B" />
+    </component_ref>
+  </group>
+</model>

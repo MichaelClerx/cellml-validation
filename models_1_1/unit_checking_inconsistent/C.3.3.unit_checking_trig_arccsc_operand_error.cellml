@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, C.3.3: The operand to arccsc must be dimensionless -->
+<model name="unit_checking_trig_arccsc_operand_error"
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="x" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>x</ci>
+        <apply>
+          <arccsc />
+          <cn cellml:units="meter">0.5</cn>
+        </apply>
+      </apply>
+    </math>
+  </component>
+</model>
