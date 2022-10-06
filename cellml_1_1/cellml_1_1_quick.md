@@ -91,13 +91,18 @@ In these tests we've assumed that empty units elements with `base_units="no"` ar
 
 ### Unit checking and conversion
 
-Units come into play in two places in CellML 1.1: (1) when connecting variables; and (2) when writing equations.
+Units come into play in two places in CellML 1.1: (1) when connecting variables; (2) when referring to other variables' initial values'; (3) when writing equations.
 
 #### Units of connected variables
 
 Variables that are connected by `map_variables` elements need not necessarily have the same units.
 If the units differ only by a scaling factor and/or offset, they may be convertible, and section 3.5.1 of the CellML 1.1 spec suggests that CellML processing software should do so.
 The spec does **not** seem to say that having incompatible units on either side of a connection renders a model invalid.
+
+#### Units of variables that are initial values
+
+The 1.1 spec allows a variable's `initial_value` attribute to reference another variable in the same component.
+It does not specify whether they need to have the same units, or if unit conversion should be performed.
 
 #### Units inside equations
 

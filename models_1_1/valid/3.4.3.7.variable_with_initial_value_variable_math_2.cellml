@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.1, 3.4.3.7: A variable's initial value can reference a variable
+     in the same component, even if it's defined with maths. -->
+<model name="variable_with_initial_value_variable_math_2"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" initial_value="b" />
+    <variable name="b" units="dimensionless" />
+    <variable name="c" units="dimensionless" />
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>b</ci>
+        <apply>
+          <plus />
+          <cn cellml:units="dimensionless">2</cn>
+          <ci>c</ci>
+        </apply>
+      </apply>
+      <apply>
+        <eq/>
+        <ci>c</ci>
+        <cn cellml:units="dimensionless">3</cn>
+      </apply>
+    </math>
+  </component>
+</model>

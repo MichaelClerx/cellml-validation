@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
+<!-- CellML 1.0, 3.4.3.7: In 1.0, a variable's initial value can not be a
+     variable yet. -->
+<model name="variable_with_initial_value_variable"
+       xmlns="http://www.cellml.org/cellml/1.1#">
+  <component name="A">
+    <variable name="a" units="dimensionless" initial_value="3.4" />
+    <variable name="b" units="dimensionless" initial_value="a" />
+  </component>
+</model>

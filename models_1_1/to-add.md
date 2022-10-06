@@ -1,14 +1,10 @@
 # Tests yet to be added
 
-New elements: `<import>`.
-New attributes: no new CellML imports, although there are now rules for `xlink:href`.
-
 ## Valid
 
 - [ ] 2.4.3.import_with_extensions
 - [ ] 2.4.3.xlink_href_in_import
 - [ ] 3.4.1.1.model_with_import
-- [ ] 3.4.3.7.variable_with_initial_value_variable --> And add to invalid 1.0
 - [ ] 3.4.3.7 same but with 1 or 2 imported components
 - [ ] 5.? Unit shadowing: Component overrides model unit
 - [ ] 6.x connections to imported components (and interfaces etc.)
@@ -27,10 +23,16 @@ New attributes: no new CellML imports, although there are now rules for `xlink:h
 - [ ] unit_checking_inconsistent w imports
 - [ ] unit_conversion_convertible w imports
 
+### Valid, more complex import cases
+
+- [ ] import an unrelated component
+- [ ] import a component and use one of its variables
+- [ ] import a unit
+- [ ] import a unit and use it
+- [ ] variable_with_initial_value_imported_var (reffed via in same comp)
 
 ## Invalid
 
-- [ ] xlink is no longer valid anywhere
 - [ ] 2.4.3.bad_cmeta_attribute_in_import
 - [ ] 2.4.3.bad_rdf_element_in_import
 - [ ] 2.4.3.cmeta_element_in_import
