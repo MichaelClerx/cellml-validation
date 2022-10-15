@@ -29,3 +29,31 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+-------------------------------------------------------------------------------
+
+The above license applies to all files in this repository, except:
+
+    - All files in the directory "catalog" and its subdirectories.
+
+    - The files containing the CellML and CellML meta data specifications:
+        - cellml_1.0.pdf
+        - cellml_1_0_spec.md
+        - cellml_metadata_1_0.pdf
+        - cellml_1.1.pdf
+        - cellml_1_1_spec.md
+        - cellml_2_0.pdf
+
+    - Jonathan Cooper's relax ng files:
+        - cellml_1_0.rnc
+        - cellml_1_0.rng
+
+    - The CellML 1-to-2 conversion XSLT file:
+        - cellml_1_to_2.xsl
+
+    - All files in the directory "cellml_1_0/deprecated".
+    - All files in the directory "cellml_1_1/todo".
+    - All files in the directory "cellml_2_0/todo".
+
+    - All CellML files in the directories "models_1_0", "models_1_1", and
+      "models_2_0" and their subdirectories (see the LICENSE.md file in these
+      directories).

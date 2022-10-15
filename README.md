@@ -90,3 +90,13 @@ To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-lev
 Test output should consist of `passes` (the validator is correct, and we expected this) and `xfails` (the validator is wrong, and we expected this).
 An error or `fail` result indicates the test is behaving in an unexpected way (suggesting that the `check` module should be updated).
 For a full guide to interpreting the results, see the docstrings for `assert_valid` and `assert_invalid` in `check/tests/shared.py`.
+
+## Licensing
+
+For details of licensing, see the file [LICENSE](./LICENSE).
+
+In short:
+ - The CellML test files included in this repository are all available under a BSD Zero Clause License (no attribution required).
+ - Files by other authors (e.g. the CellML spec, related documents like the MathML schema, some validation methods) are either not copyrighted or contain a statement explaining their copyright.
+ - All remaining files are covered by a BSD 3-Clause License.
+
