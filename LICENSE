@@ -1,7 +1,9 @@
 BSD 3-Clause License
 
 Copyright (c) 2019-2020 University of Oxford. All rights reserved.
-(University of Oxford means the Chancellor, Masters and Scholars of the University of Oxford, having an administrative office at Wellington Square, Oxford OX1 2JD, UK).
+(University of Oxford means the Chancellor, Masters and Scholars of the 
+ University of Oxford, having an administrative office at Wellington Square,
+ Oxford OX1 2JD, UK).
 Copyright (c) 2020-2022 University of Nottingham. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -36,24 +38,27 @@ The above license applies to all files in this repository, except:
     - All files in the directory "catalog" and its subdirectories.
 
     - The files containing the CellML and CellML meta data specifications:
-        - cellml_1.0.pdf
-        - cellml_1_0_spec.md
-        - cellml_metadata_1_0.pdf
-        - cellml_1.1.pdf
-        - cellml_1_1_spec.md
-        - cellml_2_0.pdf
+        - cellml_1_0/cellml_1.0.pdf
+        - cellml_1_0/cellml_1_0_spec.md
+        - cellml_1_0/cellml_metadata_1_0.pdf
+        - cellml_1_1/cellml_1.1.pdf
+        - cellml_1_1/cellml_1_1_spec.md
+        - cellml_2_0/cellml_2_0.pdf
 
     - Jonathan Cooper's relax ng files:
-        - cellml_1_0.rnc
-        - cellml_1_0.rng
+        - cellml_1_0/cellml_1_0.rnc
+        - cellml_1_0/cellml_1_0.rng
 
     - The CellML 1-to-2 conversion XSLT file:
-        - cellml_1_to_2.xsl
+        - cellml_2_0/cellml_1_to_2.xsl
 
-    - All files in the directory "cellml_1_0/deprecated".
-    - All files in the directory "cellml_1_1/todo".
-    - All files in the directory "cellml_2_0/todo".
+    - All files in the directories
+        - cellml_1_0/deprecated
+        - cellml_1_1/todo
+        - cellml_2_0/todo
 
-    - All CellML files in the directories "models_1_0", "models_1_1", and
-      "models_2_0" and their subdirectories (see the LICENSE.md file in these
-      directories).
+    - All CellML files in the following directories and their subdirectories
+      (see the LICENSE file in these directories).
+        - models_1_0
+        - models_1_1
+        - models_2_0
