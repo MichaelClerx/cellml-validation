@@ -226,6 +226,7 @@ def diff_dir(path1, path2, root):
     try:
         p1, q1, r1 = nxt(path1, paths1)
         p2, q2, r2 = nxt(path2, paths2, True)
+        one_more_p1 = False
 
         while True:
             if p1 == p2:
@@ -238,7 +239,9 @@ def diff_dir(path1, path2, root):
                     w(p1, os.path.isdir(q1), os.path.isdir(q2))
 
                 p1, q1, r1 = nxt(path1, paths1)
+                one_more_p1 = True
                 p2, q2, r2 = nxt(path2, paths2, True)
+                one_more_p1 = False
 
             elif p1 < p2:
                 while p1 < p2:
@@ -253,10 +256,14 @@ def diff_dir(path1, path2, root):
         pass
 
     # Handle remaining files (if any)
-    for p1 in paths1:
+    if one_more_p1:
         q1 = os.path.join(path1, p1)
         r1 = os.path.relpath(q1, root)
         only_0(r1)
+        for p1 in paths1:
+            q1 = os.path.join(path1, p1)
+            r1 = os.path.relpath(q1, root)
+            only_0(r1)
 
     for p2 in paths2:
         q2 = os.path.join(path2, p2)
