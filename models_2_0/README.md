@@ -1,6 +1,8 @@
 # CellML 2.0 Test set
 
-Please report any issues with these tests on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
+The CellML files in this directory can be re-used without attribution, see [LICENSE](./LICENSE) for details.
+
+Please report any issues with the test files on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
 
 ## Valid CellML 2.0 files
 

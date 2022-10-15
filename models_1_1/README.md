@@ -1,6 +1,8 @@
 # CellML 1.1 Test set
 
-Please report any issues with these tests on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
+The CellML files in this directory can be re-used without attribution, see [LICENSE](./LICENSE) for details.
+
+Please report any issues with the test files on the [issues page](https://github.com/MichaelClerx/cellml-validation/issues).
 
 The table below shows the different folders in the test set, and indicates whether these files are regarded as valid or invalid.
 Ambiguity in the spec regarding the validity of a folder is marked with an asterisk (*).
