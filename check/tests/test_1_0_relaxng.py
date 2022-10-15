@@ -470,7 +470,7 @@ expected_messages = {
     '5.4.2.3.unit_prefix_unknown':
         'Invalid attribute prefix',
     '5.4.2.3.unit_prefix_e_notation_int':
-        'Invalid attribute prefix',        
+        'Invalid attribute prefix',
     # 5.4.2.4 A unit exponent must be a real number
     '5.4.2.4.unit_exponent_invalid':
         'Invalid attribute exponent',

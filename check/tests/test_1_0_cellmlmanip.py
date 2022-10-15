@@ -59,7 +59,7 @@ false_negatives = {
     # TODO Wrong error
     '4.2.3_5.2_mathml_derivatives_degree': 'not 0',
     '4.2.3_5.4_mathml_derivatives_with_units_degree': 'not 0',
-    # Boolean literals    
+    # Boolean literals
     '4.2.3_6.7_mathml_logic_constants': "'BooleanTrue' object has no attr",
     # TODO Nan and Inf support
     '4.2.3_7.3_mathml_nan_inf': 'must be a sympy.Eq',
@@ -71,9 +71,9 @@ false_negatives = {
     # Celsius is not supported
     '5.2.1.units_celsius': 'celsius',
     # Compatible units
-    '5.2.7.unit_conversion_dimensionless_exponent': 'maximum recursion depth',    
-    '5.2.7.unit_conversion_dimensionless_multiplier_1': 'maximum recursion',    
-    '5.2.7.unit_conversion_dimensionless_offset': 'maximum recursion depth',    
+    '5.2.7.unit_conversion_dimensionless_exponent': 'maximum recursion depth',
+    '5.2.7.unit_conversion_dimensionless_multiplier_1': 'maximum recursion',
+    '5.2.7.unit_conversion_dimensionless_offset': 'maximum recursion depth',
     # Incompatible units
     '5.2.7.unit_conversion_inconvertible_1': 'Cannot convert',
     '5.2.7.unit_conversion_new_base_units': 'Cannot convert',
