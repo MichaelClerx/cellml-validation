@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
-<!-- CellML 1.0, 4.2.3: The MathML "CellML subset"
+<!-- CellML 1.1, 4.2.3: The MathML "CellML subset"
      Piecewise used within an equation (instead of at top level) -->
 <model name="mathml_logic_two_pieces"
-       xmlns="http://www.cellml.org/cellml/1.0#"
-       xmlns:cellml="http://www.cellml.org/cellml/1.0#">
+       xmlns="http://www.cellml.org/cellml/1.1#"
+       xmlns:cellml="http://www.cellml.org/cellml/1.1#">
   <component name="A">
     <variable name="x" units="dimensionless" initial_value="0" />
     <variable name="y" units="dimensionless" />
