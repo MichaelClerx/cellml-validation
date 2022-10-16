@@ -143,6 +143,11 @@ def diff(path1, name1, path2, name2):
         skipped += 1
         return
 
+    # 5.4.2 files should not be the same in both versions
+    if '5.4.2' in name2:
+        w(s(red, 'x 5.4.2 not updated to 5.4.3: ' + name2))
+        return
+
     # Read full contents
     with open(path1) as f:
         a = a0 = f.read()
