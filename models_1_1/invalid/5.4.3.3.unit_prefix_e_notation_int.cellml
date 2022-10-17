@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CellML Test Suite. https://github.com/MichaelClerx/cellml-validation -->
-<!-- CellML 1.1, 5.4.2.3: A numerical unit prefix must be an integer.
+<!-- CellML 1.1, 5.4.3.3: A numerical unit prefix must be an integer.
      Although CellML 1.1 does not specify what an integer string looks like, we
      probably shouldn't expect it to accept floats that evaluate to integers.
  -->
