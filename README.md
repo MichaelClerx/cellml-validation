@@ -79,13 +79,18 @@ python -m check
 ### Unit tests
 
 The `check/tests` directory contains `pytest` tests that run all the test files through the supported validation tools, check the result, and generate reports (see below).
-Dependening on how you look at it, this constitutes a test of the test files, of the tools, or both.
+This can be viewed as a test of the test files, of the tools, or both.
 
 To run the full test suite type
 ```
 pytest
 ```
 To get more test output, use `$ pytest -v` or even `$ pytest -v -s --log-cli-level=INFO`.
+
+To run a specific test, type e.g.
+```
+pytest check/tests/test_1_0_myokit.py
+```
 
 Test output should consist of `passes` (the validator is correct, and we expected this) and `xfails` (the validator is wrong, and we expected this).
 An error or `fail` result indicates the test is behaving in an unexpected way (suggesting that the `check` module should be updated).
